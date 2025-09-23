@@ -242,8 +242,8 @@ export default function LocalBusinessSchema() {
         "@type": "ReserveAction",
         target: {
           "@type": "EntryPoint",
-          urlTemplate": "https://truerankdigital.com/contact",
-          actionPlatform": ["https://schema.org/DesktopWebPlatform", "https://schema.org/MobileWebPlatform"]
+          urlTemplate: "https://truerankdigital.com/contact",
+          actionPlatform: ["https://schema.org/DesktopWebPlatform", "https://schema.org/MobileWebPlatform"]
         },
         result: {
           "@type": "Reservation",

@@ -3,14 +3,16 @@
 import Script from 'next/script';
 
 interface SchemaMarkupProps {
-  type?: 'organization' | 'local-business' | 'website' | 'person' | 'service';
+  type?: 'organization' | 'local-business' | 'website' | 'person' | 'service' | 'breadcrumb';
   pageData?: Record<string, unknown>;
+  breadcrumbs?: Array<{name: string; url: string}>;
 }
 
-export default function SchemaMarkup({ type = 'organization' }: SchemaMarkupProps) {
+export default function SchemaMarkup({ type = 'organization', breadcrumbs }: SchemaMarkupProps) {
   // NAP Data (Name, Address, Phone) - consistent across all schemas
   const napData = {
-    name: "True Rank Digital",
+    name: "True Rank Digital LLC",
+    legalName: "True Rank Digital LLC",
     address: {
       streetAddress: "East Brunswick",
       addressLocality: "East Brunswick",
@@ -23,25 +25,31 @@ export default function SchemaMarkup({ type = 'organization' }: SchemaMarkupProp
       "+1-732-215-6319"
     ],
     email: "jon@truerankdigital.com",
-    url: "https://truerankdigital.com"
+    url: "https://truerankdigital.com",
+    logo: "https://truerankdigital.com/images/logos/trd-logo1.avif",
+    image: "https://truerankdigital.com/images/logos/trdlogoblue.webp"
   };
 
   // Organization Schema
   const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
     "@id": "https://truerankdigital.com/#organization",
     name: napData.name,
-    legalName: "True Rank Digital LLC",
+    legalName: napData.legalName,
+    alternateName: "True Rank Digital",
     url: napData.url,
-    logo: "https://truerankdigital.com/images/logo.png",
-    description: "Enterprise digital marketing solutions and SEO services helping businesses dominate search rankings with proprietary AI technology and expert automation.",
+    logo: napData.logo,
+    image: napData.image,
+    description: "Professional SEO and digital marketing services with custom in-house technology. We build proprietary software solutions including schema markup engineering, LLM.txt optimization, and problem detection systems that competitors don't offer.",
     foundingDate: "2020",
+    slogan: "Built by True Rank Digital - Custom Tech Solutions for SEO Success",
+    keywords: "SEO, Digital Marketing, Schema Markup, LLM.txt, Local SEO, Google Business Profile, AI SEO, Custom Software Development",
     founder: {
       "@type": "Person",
-      name: "Jon J Korkowski",
-      jobTitle: "CEO & Founder",
-      description: "Visionary leader driving True Rank Digital's innovation and growth strategy with a full-speed approach to digital marketing excellence."
+      name: "Jon Karkowski",
+      jobTitle: "Founder",
+      description: "Founder of True Rank Digital, leading custom software development for SEO and digital marketing solutions."
     },
     address: {
       "@type": "PostalAddress",
@@ -75,65 +83,129 @@ export default function SchemaMarkup({ type = 'organization' }: SchemaMarkupProp
       "https://www.tiktok.com/@truerankdigital",
       "https://www.pinterest.com/truerankdigital"
     ],
-    serviceArea: {
-      "@type": "GeoCircle",
-      geoMidpoint: {
-        "@type": "GeoCoordinates",
-        latitude: "40.4862",
-        longitude: "-74.4518"
+    serviceArea: [
+      {
+        "@type": "Country",
+        name: "United States"
       },
-      geoRadius: "50000"
-    },
+      {
+        "@type": "State",
+        name: "New Jersey"
+      },
+      {
+        "@type": "State", 
+        name: "New York"
+      },
+      {
+        "@type": "State",
+        name: "Pennsylvania"
+      }
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Digital Marketing Services",
+      name: "Professional SEO & Digital Marketing Services",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "AI-Enhanced Semantic Optimization",
-            description: "Proprietary AI engine that creates semantic contextual data and processes it through expert-built indexing API for optimal Google algorithm readability."
-          }
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service", 
-            name: "Expert-Built Script Automation",
-            description: "Proprietary scripts leverage AI to enhance and create semantic contextual data, running 24/7 through specialized indexing API."
-          }
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Local SEO & Google Maps",
-            description: "Appear in local searches and attract nearby customers with AI-powered local optimization."
+            "@id": "https://truerankdigital.com/services/local-seo",
+            name: "Local SEO & Google Maps Optimization",
+            description: "Professional local SEO services to help businesses appear in local searches and attract nearby customers with expert optimization strategies.",
+            provider: {
+              "@id": "https://truerankdigital.com/#organization"
+            },
+            serviceType: "SEO",
+            category: "Local SEO"
           }
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
+            "@id": "https://truerankdigital.com/services/google-business-profile",
             name: "Google Business Profile Management", 
-            description: "Stand out with optimized business listings, automated review management, and enhanced local visibility."
+            description: "Complete Google Business Profile optimization and management services including listing optimization, review management, and local visibility enhancement.",
+            provider: {
+              "@id": "https://truerankdigital.com/#organization"
+            },
+            serviceType: "Digital Marketing",
+            category: "Google Business Profile"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            "@id": "https://truerankdigital.com/services/ai-seo",
+            name: "Schema Markup Engineering",
+            description: "Custom structured data implementation and schema markup engineering services to help search engines understand your content better than competitors.",
+            provider: {
+              "@id": "https://truerankdigital.com/#organization"
+            },
+            serviceType: "Technical SEO",
+            category: "Schema Markup"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            "@id": "https://truerankdigital.com/learn-aio",
+            name: "LLM.txt Creation & Optimization",
+            description: "Advanced LLM.txt file creation and optimization specifically designed for AI search engines like ChatGPT, Claude, and Perplexity to improve AI search visibility.",
+            provider: {
+              "@id": "https://truerankdigital.com/#organization"
+            },
+            serviceType: "AI SEO",
+            category: "LLM Optimization"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            "@id": "https://truerankdigital.com/services/website-development",
+            name: "Website Development & Optimization",
+            description: "Professional website development and technical optimization services focused on SEO performance and user experience.",
+            provider: {
+              "@id": "https://truerankdigital.com/#organization"
+            },
+            serviceType: "Web Development",
+            category: "Website Development"
           }
         }
       ]
+    },
+    numberOfEmployees: "3-10",
+    knowsAbout: [
+      "Search Engine Optimization",
+      "Local SEO",
+      "Google Business Profile Optimization", 
+      "Schema Markup Engineering",
+      "LLM.txt Creation",
+      "Technical SEO",
+      "Digital Marketing",
+      "Website Development",
+      "Custom Software Development"
+    ],
+    areaServed: {
+      "@type": "Country",
+      name: "United States"
     }
   };
 
-  // Local Business Schema
+  // Local Business Schema with Real Data
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://truerankdigital.com/#localbusiness",
     name: napData.name,
-    image: "https://truerankdigital.com/images/true-rank-digital-office.jpg",
-    telephone: napData.telephone[0],
+    image: napData.image,
+    telephone: napData.telephone,
     email: napData.email,
     url: napData.url,
+    description: "Professional SEO and digital marketing services with custom in-house technology solutions.",
     address: {
       "@type": "PostalAddress",
       streetAddress: napData.address.streetAddress,
@@ -153,14 +225,31 @@ export default function SchemaMarkup({ type = 'organization' }: SchemaMarkupProp
         "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
       ],
       opens: "00:00",
-      closes: "23:59"
+      closes: "23:59",
+      description: "24/7 availability for digital services and support"
     },
-    priceRange: "$$$",
+    priceRange: "$$-$$$",
+    paymentAccepted: ["Cash", "Credit Card", "Check", "Invoice"],
+    currenciesAccepted: "USD",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.9",
+      ratingValue: "5.0",
       bestRating: "5",
-      ratingCount: "127"
+      worstRating: "1",
+      ratingCount: "12"
+    },
+    review: {
+      "@type": "Review",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5"
+      },
+      author: {
+        "@type": "Person",
+        name: "Sebastian Vargas"
+      },
+      reviewBody: "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Karkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!"
     }
   };
 
@@ -182,84 +271,85 @@ export default function SchemaMarkup({ type = 'organization' }: SchemaMarkupProp
     }
   };
 
-  // Team Members Schema
+  // Team Members Schema (Real Team)
   const teamMembersSchema = [
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "@id": "https://truerankdigital.com/team/jon-korkowski",
-      name: "Jon J Korkowski",
-      jobTitle: "CEO & Founder",
+      "@id": "https://truerankdigital.com/staff/matt-bishop",
+      name: "Matt Bishop",
+      jobTitle: "Tech Developer",
       worksFor: {
         "@id": "https://truerankdigital.com/#organization"
       },
-      description: "Visionary leader driving True Rank Digital's innovation and growth strategy. 'This isn't just another agency—it's a full-speed freight train. There are no brakes here, no walls that can't be broken, no mountain too steep. We move fast, we move loud, and we move together.'",
-      image: "https://truerankdigital.com/images/team/jon-korkowski.jpg",
-      url: "https://truerankdigital.com/team/jon-korkowski"
+      description: "Technical developer handling website development and custom software solutions for True Rank Digital's proprietary SEO technology stack.",
+      image: "https://truerankdigital.com/images/team/matt-bishop.jpg",
+      url: "https://truerankdigital.com/staff",
+      knowsAbout: [
+        "Web Development",
+        "Technical Implementation", 
+        "Website Optimization",
+        "Custom Software Development"
+      ]
     },
     {
       "@context": "https://schema.org", 
       "@type": "Person",
-      "@id": "https://truerankdigital.com/team/jesse-mathews",
-      name: "Jesse Mathews",
-      jobTitle: "President",
+      "@id": "https://truerankdigital.com/staff/sean-oniel",
+      name: "Sean O'Neil",
+      jobTitle: "SEO Specialist",
       worksFor: {
         "@id": "https://truerankdigital.com/#organization"
       },
-      description: "Overseeing company operations and strategic development initiatives at True Rank Digital.",
-      image: "https://truerankdigital.com/images/team/jesse-mathews.jpg",
-      url: "https://truerankdigital.com/team/jesse-mathews"
+      description: "SEO specialist focused on optimization strategies and search engine performance for True Rank Digital's client campaigns.",
+      image: "https://truerankdigital.com/images/team/sean-oniel.jpg",
+      url: "https://truerankdigital.com/staff",
+      knowsAbout: [
+        "SEO Optimization",
+        "Search Strategy",
+        "Performance Analysis",
+        "Local SEO"
+      ]
     },
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "@id": "https://truerankdigital.com/team/jose-perdomo", 
-      name: "Jose Perdomo",
-      jobTitle: "Executive Vice President",
+      "@id": "https://truerankdigital.com/staff/sebastian-lopez", 
+      name: "Sebastian Lopez",
+      jobTitle: "SEO Specialist",
       worksFor: {
         "@id": "https://truerankdigital.com/#organization"
       },
-      description: "Managing key client relationships and driving business growth at True Rank Digital.",
-      image: "https://truerankdigital.com/images/team/jose-perdomo.jpg",
-      url: "https://truerankdigital.com/team/jose-perdomo",
-      sameAs: [
-        "https://www.linkedin.com/in/jose-perdomo"
+      description: "SEO specialist working on search optimization and digital marketing campaigns with focus on technical SEO implementations.",
+      image: "https://truerankdigital.com/images/team/sebastian-lopez.jpg",
+      url: "https://truerankdigital.com/staff",
+      knowsAbout: [
+        "SEO Optimization",
+        "Digital Marketing",
+        "Search Analysis",
+        "Technical SEO"
       ]
     }
   ];
 
-  // Reviews Schema
+  // Reviews Schema with Authentic Google Reviews
   const reviewsSchema = [
     {
       "@context": "https://schema.org",
       "@type": "Review",
-      reviewBody: "True Rank Digital doubled our online leads in 60 days! Easy, straightforward, and effective.",
+      "@id": "https://truerankdigital.com/reviews/sebastian-vargas",
+      reviewBody: "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Karkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!",
       author: {
         "@type": "Person",
-        name: "Local Auto Shop Owner"
+        name: "Sebastian Vargas"
       },
       reviewRating: {
         "@type": "Rating",
         ratingValue: "5",
-        bestRating: "5"
+        bestRating: "5",
+        worstRating: "1"
       },
-      itemReviewed: {
-        "@id": "https://truerankdigital.com/#organization"
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Review", 
-      reviewBody: "Finally, digital marketing that makes sense for small business. Great results, fair pricing.",
-      author: {
-        "@type": "Person",
-        name: "Restaurant Manager"
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5", 
-        bestRating: "5"
-      },
+      datePublished: "2024",
       itemReviewed: {
         "@id": "https://truerankdigital.com/#organization"
       }
@@ -267,65 +357,331 @@ export default function SchemaMarkup({ type = 'organization' }: SchemaMarkupProp
     {
       "@context": "https://schema.org",
       "@type": "Review",
-      reviewBody: "They helped us show up on Google Maps. Now customers find us instead of our competitors.",
+      "@id": "https://truerankdigital.com/reviews/jeffrey-fraley",
+      reviewBody: "I've been in cars sales for over 17 years. Had a lot of vendors. John and his team at truerank are one of the only seo and gbp vendors that actually showed progress and are on point with there work.",
       author: {
         "@type": "Person",
-        name: "Plumbing Contractor"
+        name: "Jeffrey Fraley"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5", 
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024",
+      itemReviewed: {
+        "@id": "https://truerankdigital.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "@id": "https://truerankdigital.com/reviews/estrella-rojas",
+      reviewBody: "Jose was great to work with! He really understood what my business needed and helped get it on the right track. Thanks to his expertise, our online presence improved, and we saw real results. I highly recommend him and his team!",
+      author: {
+        "@type": "Person",
+        name: "Estrella Rojas"
       },
       reviewRating: {
         "@type": "Rating",
         ratingValue: "5",
-        bestRating: "5"
+        bestRating: "5",
+        worstRating: "1"
       },
+      datePublished: "2024",
+      itemReviewed: {
+        "@id": "https://truerankdigital.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "@id": "https://truerankdigital.com/reviews/jessica-perez",
+      reviewBody: "True rank digital isn't a company it's a family they got my business back on track. Constant follow ups they treated me like family god bless y'all",
+      author: {
+        "@type": "Person",
+        name: "Jessica Perez"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024",
+      itemReviewed: {
+        "@id": "https://truerankdigital.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "@id": "https://truerankdigital.com/reviews/jose-perdomo", 
+      reviewBody: "They increased my business profit by increasing traffic and leads within 30 days @ half the price I was paying for before. Very knowledgeable people",
+      author: {
+        "@type": "Person",
+        name: "Jose Perdomo"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024",
       itemReviewed: {
         "@id": "https://truerankdigital.com/#organization"
       }
     }
   ];
 
-  // FAQ Schema
+  // FAQ Schema with Real Service Information
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://truerankdigital.com/#faq",
     mainEntity: [
       {
         "@type": "Question",
-        name: "What makes True Rank Digital's AI technology different?",
+        name: "What makes True Rank Digital different from other SEO companies?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Our proprietary AI engine creates semantic contextual data and processes it through our expert-built indexing API, ensuring optimal readability and scraping by Google's algorithms for maximum search visibility."
+          text: "We build custom software solutions in-house. While other agencies use off-the-shelf tools, we create proprietary technology including custom schema markup engineering, LLM.txt optimization files, and problem detection systems that find SEO issues other companies completely miss."
         }
       },
       {
         "@type": "Question",
-        name: "How quickly can I see results from your SEO services?",
+        name: "What is schema markup engineering?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Many clients see initial improvements within 30-60 days, with significant ranking improvements typically occurring within 3-6 months of implementing our AI-enhanced optimization strategies."
+          text: "Schema markup engineering is our process of creating custom structured data schemas for each business type. We hand-craft schema markup that helps search engines understand your content better than any competitor, leading to improved search visibility and rich snippets."
         }
       },
       {
-        "@type": "Question", 
+        "@type": "Question",
+        name: "What is LLM.txt and why do I need it?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "LLM.txt is a cutting-edge optimization technique we pioneered specifically for AI search engines like ChatGPT, Claude, and Perplexity. We create and optimize these files to help your content rank in AI-powered search results, giving you a competitive advantage that most businesses don't have."
+        }
+      },
+      {
+        "@type": "Question",
         name: "Do you provide 24/7 support?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, True Rank Digital provides 24/7 availability for digital services and support. Our expert-built automation scripts run continuously to maintain optimal Google performance standards."
+          text: "Yes, True Rank Digital provides 24/7 availability for our services. We understand that digital marketing never sleeps, and our custom software solutions monitor and optimize your online presence around the clock."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "How do you find problems other SEO companies miss?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Our proprietary problem detection software scans websites at the code level to identify SEO issues that standard auditing tools overlook. When we find problems, we don't just report them – we build custom solutions to fix them permanently."
         }
       }
     ]
   };
 
-  // Combine all schemas into a graph
+  // Breadcrumb Schema
+  const breadcrumbSchema = breadcrumbs ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://truerankdigital.com/#breadcrumb",
+    itemListElement: breadcrumbs.map((crumb, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: crumb.name,
+      item: crumb.url
+    }))
+  } : null;
+
+  // HowTo Schema for SEO Process
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "@id": "https://truerankdigital.com/#howto-seo-process",
+    name: "How True Rank Digital Improves Your SEO Rankings",
+    description: "Our proven process for improving search engine rankings using custom software and advanced SEO techniques.",
+    totalTime: "PT90D",
+    estimatedCost: {
+      "@type": "MonetaryAmount",
+      currency: "USD",
+      value: "1000"
+    },
+    supply: [
+      {
+        "@type": "HowToSupply",
+        name: "Website Access"
+      },
+      {
+        "@type": "HowToSupply", 
+        name: "Google Analytics Account"
+      },
+      {
+        "@type": "HowToSupply",
+        name: "Google Search Console Access"
+      }
+    ],
+    tool: [
+      {
+        "@type": "HowToTool",
+        name: "Custom Schema Markup Engineering Software"
+      },
+      {
+        "@type": "HowToTool",
+        name: "LLM.txt Optimization Tools"
+      },
+      {
+        "@type": "HowToTool",
+        name: "Proprietary Problem Detection System"
+      }
+    ],
+    step: [
+      {
+        "@type": "HowToStep",
+        position: 1,
+        name: "Technical SEO Audit",
+        text: "We scan your website with our proprietary problem detection software to find issues other SEO companies miss at the code level.",
+        image: "https://truerankdigital.com/images/process/technical-audit.jpg"
+      },
+      {
+        "@type": "HowToStep",
+        position: 2,
+        name: "Custom Schema Markup Engineering",
+        text: "We create hand-crafted structured data schemas specifically for your business type to help search engines understand your content better than competitors.",
+        image: "https://truerankdigital.com/images/process/schema-markup.jpg"
+      },
+      {
+        "@type": "HowToStep",
+        position: 3,
+        name: "LLM.txt Creation & Optimization",
+        text: "We develop and optimize LLM.txt files designed for AI search engines like ChatGPT, Claude, and Perplexity to improve your AI search visibility.",
+        image: "https://truerankdigital.com/images/process/llm-optimization.jpg"
+      },
+      {
+        "@type": "HowToStep",
+        position: 4,
+        name: "Custom Solution Implementation",
+        text: "We build and implement custom software solutions to fix identified problems and optimize your website's search engine performance.",
+        image: "https://truerankdigital.com/images/process/custom-solutions.jpg"
+      },
+      {
+        "@type": "HowToStep",
+        position: 5,
+        name: "Ongoing Monitoring & Optimization",
+        text: "Our custom software continuously monitors and optimizes your website's performance, making real-time adjustments for maximum search visibility.",
+        image: "https://truerankdigital.com/images/process/ongoing-monitoring.jpg"
+      }
+    ]
+  };
+
+  // Professional Service Schema
+  const professionalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://truerankdigital.com/#professional-service",
+    name: napData.name,
+    alternateName: "True Rank Digital",
+    description: "Professional SEO and digital marketing services specializing in custom software development, schema markup engineering, and LLM.txt optimization for superior search engine visibility.",
+    url: napData.url,
+    telephone: napData.telephone,
+    email: napData.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: napData.address.streetAddress,
+      addressLocality: napData.address.addressLocality,
+      addressRegion: napData.address.addressRegion,
+      postalCode: napData.address.postalCode,
+      addressCountry: napData.address.addressCountry
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "40.4862",
+      longitude: "-74.4518"
+    },
+    priceRange: "$$-$$$",
+    openingHours: "Mo-Su 00:00-23:59",
+    serviceType: "SEO and Digital Marketing",
+    provider: {
+      "@id": "https://truerankdigital.com/#organization"
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "United States"
+    },
+    hasOfferCatalog: {
+      "@id": "https://truerankdigital.com/#organization"
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: "12"
+    }
+  };
+
+  // Software Application Schema for Custom Tools
+  const softwareApplicationSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": "https://truerankdigital.com/#custom-seo-software",
+    name: "True Rank Digital Custom SEO Software Suite",
+    description: "Proprietary software suite including schema markup engineering tools, LLM.txt optimization systems, and problem detection software for advanced SEO implementations.",
+    applicationCategory: "SEO Software",
+    operatingSystem: "Web-based",
+    offers: {
+      "@type": "Offer",
+      price: "Custom Pricing",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      seller: {
+        "@id": "https://truerankdigital.com/#organization"
+      }
+    },
+    creator: {
+      "@id": "https://truerankdigital.com/#organization"
+    },
+    publisher: {
+      "@id": "https://truerankdigital.com/#organization"
+    },
+    softwareHelp: {
+      "@type": "CreativeWork",
+      url: "https://truerankdigital.com/learn-aio"
+    },
+    featureList: [
+      "Custom Schema Markup Engineering",
+      "LLM.txt Creation and Optimization",
+      "Proprietary Problem Detection",
+      "AI Search Engine Optimization",
+      "Technical SEO Automation",
+      "Real-time Performance Monitoring"
+    ]
+  };
+
+  // Combine all schemas into a comprehensive graph
+  const allSchemas = [
+    organizationSchema,
+    localBusinessSchema, 
+    websiteSchema,
+    faqSchema,
+    howToSchema,
+    professionalServiceSchema,
+    softwareApplicationSchema,
+    ...teamMembersSchema,
+    ...reviewsSchema
+  ];
+
+  if (breadcrumbSchema) {
+    allSchemas.push(breadcrumbSchema);
+  }
+
   const schemaGraph = {
     "@context": "https://schema.org",
-    "@graph": [
-      organizationSchema,
-      localBusinessSchema, 
-      websiteSchema,
-      faqSchema,
-      ...teamMembersSchema,
-      ...reviewsSchema
-    ]
+    "@graph": allSchemas
   };
 
   return (

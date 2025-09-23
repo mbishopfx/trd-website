@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Search, MapPin, TrendingUp, CheckCircle } from 'lucide-react';
+import PageSpecificSchema from '@/components/seo/PageSpecificSchema';
 
 export const metadata: Metadata = {
   title: 'Local SEO Services - True Rank Digital',
@@ -18,13 +19,29 @@ export default function LocalSEOPage() {
   ];
 
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-b from-green-50 to-white">
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-green-100 rounded-full mb-6">
-            <Search className="w-5 h-5 text-green-600" />
-            <span className="text-green-600 font-semibold text-sm">Local SEO</span>
-          </div>
+    <>
+      {/* Enhanced Schema Markup for Local SEO Service Page */}
+      <PageSpecificSchema 
+        pageType="service"
+        pageTitle="Local SEO Services"
+        pageDescription="Professional local SEO services to help your business dominate local search results and get found by nearby customers on Google Maps."
+        serviceName="Local SEO & Google Maps Optimization"
+        serviceDescription="Comprehensive local search optimization including Google Maps optimization, local keyword targeting, citation building, review management, and local content strategy."
+        servicePrice="Contact for custom pricing"
+        breadcrumbs={[
+          { name: "Home", url: "https://truerankdigital.com" },
+          { name: "Services", url: "https://truerankdigital.com/services" },
+          { name: "Local SEO", url: "https://truerankdigital.com/services/local-seo" }
+        ]}
+      />
+      
+      <div className="pt-16 min-h-screen bg-gradient-to-b from-green-50 to-white">
+        <section className="py-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-green-100 rounded-full mb-6">
+              <Search className="w-5 h-5 text-green-600" />
+              <span className="text-green-600 font-semibold text-sm">Local SEO</span>
+            </div>
           
           <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
             Local SEO Services
@@ -63,6 +80,7 @@ export default function LocalSEOPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

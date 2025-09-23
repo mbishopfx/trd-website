@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import ContactHeroSection from '@/components/sections/ContactHeroSection';
 import ContactInfoSection from '@/components/sections/ContactInfoSection';
 import ContactFormSection from '@/components/sections/ContactFormSection';
+import PageSpecificSchema from '@/components/seo/PageSpecificSchema';
 
 export const metadata: Metadata = {
   title: 'Contact True Rank Digital - Get Your Free SEO Audit Today',
@@ -17,15 +18,28 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="pt-20">
-      {/* Contact Hero Section */}
-      <ContactHeroSection />
+    <>
+      {/* Enhanced Schema Markup for Contact Page */}
+      <PageSpecificSchema 
+        pageType="contact"
+        pageTitle="Contact True Rank Digital"
+        pageDescription="Get in touch with True Rank Digital for professional SEO and digital marketing services. Free consultations available."
+        breadcrumbs={[
+          { name: "Home", url: "https://truerankdigital.com" },
+          { name: "Contact", url: "https://truerankdigital.com/contact" }
+        ]}
+      />
       
-      {/* Contact Info Section */}
-      <ContactInfoSection />
-      
-      {/* Contact Form Section */}
-      <ContactFormSection />
-    </div>
+      <div className="pt-20">
+        {/* Contact Hero Section */}
+        <ContactHeroSection />
+        
+        {/* Contact Info Section */}
+        <ContactInfoSection />
+        
+        {/* Contact Form Section */}
+        <ContactFormSection />
+      </div>
+    </>
   );
 }

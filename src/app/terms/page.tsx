@@ -97,7 +97,7 @@ export default function TermsPage() {
               <div>
                 <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">8. Limitation of Liability</h2>
                 <p className="text-brand-dark/70 leading-relaxed">
-                  True Rank Digital's liability is limited to the amount paid for services. We are not liable for 
+                  True Rank Digital&apos;s liability is limited to the amount paid for services. We are not liable for 
                   indirect, consequential, or punitive damages. Our maximum liability shall not exceed the total 
                   amount paid by the client for services.
                 </p>

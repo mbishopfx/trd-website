@@ -34,7 +34,7 @@ export default function AIOHeroSection() {
             </h1>
             
             <p className="text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-              Discover True Rank Digital's proprietary in-house technology platform. We don't just implement solutions—we FIND the problems and BUILD the custom tech to solve them. No other digital marketing team creates their own software.
+              Discover True Rank Digital&apos;s proprietary in-house technology platform. We don&apos;t just implement solutions—we FIND the problems and BUILD the custom tech to solve them. No other digital marketing team creates their own software.
             </p>
           </motion.div>
         </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote, ArrowRight } from 'lucide-react';
 
@@ -24,7 +24,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    quote: "I've been in cars sales for over 17 years. Had a lot of vendors. John and his team at truerank are one of the only seo and gbp vendors that actually showed progress and are on point with there work.",
+        quote: "I&apos;ve been in cars sales for over 17 years. Had a lot of vendors. John and his team at truerank are one of the only seo and gbp vendors that actually showed progress and are on point with there work.",
     author: "Jeffrey Fraley",
     company: "4 reviews",
     rating: 5,
@@ -56,7 +56,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 6,
-    quote: "True rank digital isn't a company it's a family they got my business back on track. Constant follow ups they treated me like family god bless y'all",
+        quote: "True rank digital isn&apos;t a company it&apos;s a family they got my business back on track. Constant follow ups they treated me like family god bless y&apos;all",
     author: "Jessica Perez",
     company: "1 review",
     rating: 5,

@@ -31,7 +31,7 @@ export default function ContactHeroSection() {
             </h1>
             
             <p className="text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-              Ready to scale your business globally with our enterprise-level digital solutions? We'd love to hear from you!
+              Ready to scale your business globally with our enterprise-level digital solutions? We&apos;d love to hear from you!
             </p>
           </motion.div>
         </div>

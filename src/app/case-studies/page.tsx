@@ -151,7 +151,7 @@ export default function CaseStudiesPage() {
               Success Stories
             </h2>
             <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-              Examples of how we've helped businesses across different industries achieve their digital marketing goals.
+              Examples of how we&apos;ve helped businesses across different industries achieve their digital marketing goals.
             </p>
           </motion.div>
 
@@ -239,7 +239,7 @@ export default function CaseStudiesPage() {
               Ready to Write Your Success Story?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Let's discuss how our custom solutions can help your business achieve its digital marketing goals.
+              Let&apos;s discuss how our custom solutions can help your business achieve its digital marketing goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a

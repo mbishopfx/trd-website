@@ -71,7 +71,7 @@ export default function AIOTechnologySection() {
             viewport={{ once: true }}
           >
             <h3 className="text-3xl font-heading font-bold text-brand-dark mb-6">
-              We BUILD What Others Can't
+              We BUILD What Others Can&apos;t
             </h3>
             
             <div className="space-y-6">

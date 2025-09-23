@@ -27,7 +27,7 @@ export default function AIOFeaturesSection() {
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Custom Solution Building',
-      description: 'We don\'t use off-the-shelf tools. When we find a problem, we build custom software solutions to fix it. No other marketing team does this.',
+            description: 'We don&apos;t use off-the-shelf tools. When we find a problem, we build custom software solutions to fix it. No other marketing team does this.',
       color: 'from-yellow-500 to-orange-500'
     },
     {

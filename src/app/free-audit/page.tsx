@@ -71,7 +71,7 @@ export default function FreeAuditPage() {
 
       if (response.ok) {
         setSubmitStatus('success');
-        setSubmitMessage('Thank you! Your free SEO audit request has been submitted. We\'ll analyze your website and send you a comprehensive report within 24-48 hours.');
+          setSubmitMessage('Thank you! Your free SEO audit request has been submitted. We&apos;ll analyze your website and send you a comprehensive report within 24-48 hours.');
         // Reset form
         setFormData({
           name: '',
@@ -304,7 +304,7 @@ export default function FreeAuditPage() {
                     value={formData.currentMarketing}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 resize-none"
-                    placeholder="Tell us about any SEO or marketing you're currently doing..."
+                        placeholder="Tell us about any SEO or marketing you&apos;re currently doing..."
                   />
                 </div>
 
@@ -353,7 +353,7 @@ export default function FreeAuditPage() {
                   
                   {submitStatus === 'idle' && (
                     <p className="text-brand-dark/60 text-sm text-center mt-4">
-                      We'll analyze your website and send you a detailed report within 24-48 hours.
+                      We&apos;ll analyze your website and send you a detailed report within 24-48 hours.
                     </p>
                   )}
                 </div>

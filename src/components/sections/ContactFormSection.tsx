@@ -64,7 +64,7 @@ export default function ContactFormSection() {
 
       if (response.ok) {
         setSubmitStatus('success');
-        setSubmitMessage('Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.');
+            setSubmitMessage('Thank you! Your message has been sent successfully. We&apos;ll get back to you within 24 hours.');
         // Reset form
         setFormData({
           name: '',
@@ -263,7 +263,7 @@ export default function ContactFormSection() {
               
               {submitStatus === 'idle' && (
                 <p className="text-brand-dark/60 text-sm mt-4">
-                  We'll respond within 24 hours with a customized strategy for your business.
+                      We&apos;ll respond within 24 hours with a customized strategy for your business.
                 </p>
               )}
             </div>
@@ -300,7 +300,7 @@ export default function ContactFormSection() {
           className="mt-12 text-center"
         >
           <p className="text-brand-dark/70 mb-6">
-            Prefer to talk directly? We're here to help!
+                    Prefer to talk directly? We&apos;re here to help!
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">

@@ -4,10 +4,10 @@ import Script from 'next/script';
 
 interface SchemaMarkupProps {
   type?: 'organization' | 'local-business' | 'website' | 'person' | 'service';
-  pageData?: any;
+  pageData?: Record<string, unknown>;
 }
 
-export default function SchemaMarkup({ type = 'organization', pageData }: SchemaMarkupProps) {
+export default function SchemaMarkup({ type = 'organization' }: SchemaMarkupProps) {
   // NAP Data (Name, Address, Phone) - consistent across all schemas
   const napData = {
     name: "True Rank Digital",

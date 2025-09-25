@@ -3,12 +3,15 @@
 import Script from 'next/script';
 
 interface PageSpecificSchemaProps {
-  pageType: 'service' | 'about' | 'contact' | 'staff' | 'homepage';
+  pageType: 'service' | 'about' | 'contact' | 'staff' | 'homepage' | 'location' | 'service-areas';
   pageTitle?: string;
   pageDescription?: string;
   serviceName?: string;
   serviceDescription?: string;
   servicePrice?: string;
+  locationName?: string;
+  locationZipCode?: string;
+  locationCounty?: string;
   breadcrumbs?: Array<{name: string; url: string}>;
 }
 
@@ -19,6 +22,9 @@ export default function PageSpecificSchema({
   serviceName, 
   serviceDescription, 
   servicePrice,
+  locationName,
+  locationZipCode,
+  locationCounty,
   breadcrumbs 
 }: PageSpecificSchemaProps) {
   
@@ -213,6 +219,185 @@ export default function PageSpecificSchema({
     ]
   });
 
+  // Location Page Schema
+  const createLocationSchema = () => ({
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "@id": `${baseUrl}/locations/${locationName?.toLowerCase().replace(/\s+/g, '-')}#location`,
+    name: `True Rank Digital - ${locationName}`,
+    alternateName: `SEO Services ${locationName}`,
+    description: pageDescription || `Professional SEO and digital marketing services in ${locationName}. Get your business found on Google with expert local SEO strategies.`,
+    url: `${baseUrl}/locations/${locationName?.toLowerCase().replace(/\s+/g, '-')}`,
+    
+    // Parent Organization
+    parentOrganization: {
+      "@id": `${baseUrl}/#organization`
+    },
+    
+    // Service Area
+    areaServed: [
+      {
+        "@type": "City",
+        name: locationName,
+        containedInPlace: {
+          "@type": "AdministrativeArea",
+          name: locationCounty || "Middlesex County"
+        }
+      },
+      {
+        "@type": "PostalAddress",
+        addressLocality: locationName,
+        addressRegion: "NJ",
+        postalCode: locationZipCode,
+        addressCountry: "US"
+      }
+    ],
+    
+    // Services for this location
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `SEO Services in ${locationName}`,
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: `Local SEO ${locationName}`,
+            description: `Professional local SEO services specifically for ${locationName} businesses.`,
+            serviceType: "Local SEO"
+          },
+          areaServed: {
+            "@type": "City",
+            name: locationName
+          },
+          provider: {
+            "@id": `${baseUrl}/#organization`
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: `Google Business Profile ${locationName}`,
+            description: `Google Business Profile optimization for ${locationName} local businesses.`,
+            serviceType: "Google Business Profile Management"
+          },
+          areaServed: {
+            "@type": "City",
+            name: locationName
+          },
+          provider: {
+            "@id": `${baseUrl}/#organization`
+          }
+        }
+      ]
+    },
+    
+    // Contact Information
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-732-475-0139",
+      contactType: "customer service",
+      areaServed: locationName,
+      availableLanguage: ["English"]
+    },
+    
+    // Actions
+    potentialAction: [
+      {
+        "@type": "ReserveAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${baseUrl}/contact`,
+          actionPlatform: ["https://schema.org/DesktopWebPlatform", "https://schema.org/MobileWebPlatform"]
+        },
+        result: {
+          "@type": "Reservation",
+          name: `SEO Consultation - ${locationName}`
+        }
+      },
+      {
+        "@type": "OrderAction", 
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${baseUrl}/free-audit`,
+          actionPlatform: ["https://schema.org/DesktopWebPlatform", "https://schema.org/MobileWebPlatform"]
+        },
+        result: {
+          "@type": "Order",
+          name: `Free SEO Audit - ${locationName}`
+        }
+      }
+    ]
+  });
+
+  // Service Areas Overview Schema
+  const createServiceAreasSchema = () => ({
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${baseUrl}/locations#serviceareas`,
+    name: pageTitle || "True Rank Digital Service Areas",
+    description: pageDescription || "Professional SEO and digital marketing services across Central New Jersey",
+    url: `${baseUrl}/locations`,
+    
+    mainEntity: {
+      "@type": "Organization",
+      "@id": `${baseUrl}/#organization`
+    },
+    
+    // Areas served
+    about: [
+      {
+        "@type": "Place",
+        name: "East Brunswick, NJ",
+        url: `${baseUrl}/locations/east-brunswick`
+      },
+      {
+        "@type": "Place", 
+        name: "Edison, NJ",
+        url: `${baseUrl}/locations/edison`
+      },
+      {
+        "@type": "Place",
+        name: "New Brunswick, NJ", 
+        url: `${baseUrl}/locations/new-brunswick`
+      },
+      {
+        "@type": "Place",
+        name: "North Brunswick, NJ",
+        url: `${baseUrl}/locations/north-brunswick`
+      },
+      {
+        "@type": "Place",
+        name: "Sayreville, NJ",
+        url: `${baseUrl}/locations/sayreville`
+      },
+      {
+        "@type": "Place",
+        name: "South River, NJ",
+        url: `${baseUrl}/locations/south-river`
+      }
+    ],
+    
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: baseUrl
+        },
+        {
+          "@type": "ListItem", 
+          position: 2,
+          name: "Service Areas",
+          item: `${baseUrl}/locations`
+        }
+      ]
+    }
+  });
+
   // Select appropriate schema based on page type
   let pageSchema;
   switch (pageType) {
@@ -231,6 +416,12 @@ export default function PageSpecificSchema({
     case 'homepage':
       pageSchema = createHomepageSchema();
       break;
+    case 'location':
+      pageSchema = createLocationSchema();
+      break;
+    case 'service-areas':
+      pageSchema = createServiceAreasSchema();
+      break;
     default:
       pageSchema = null;
   }
@@ -247,3 +438,4 @@ export default function PageSpecificSchema({
     />
   );
 }
+

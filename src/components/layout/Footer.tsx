@@ -54,6 +54,18 @@ const footerSections: FooterSection[] = [
     ]
   },
   {
+    title: 'Service Areas',
+    links: [
+      { name: 'East Brunswick, NJ', href: '/locations/east-brunswick' },
+      { name: 'Edison, NJ', href: '/locations/edison' },
+      { name: 'New Brunswick, NJ', href: '/locations/new-brunswick' },
+      { name: 'North Brunswick, NJ', href: '/locations/north-brunswick' },
+      { name: 'Sayreville, NJ', href: '/locations/sayreville' },
+      { name: 'South River, NJ', href: '/locations/south-river' },
+      { name: 'View All Areas', href: '/locations' }
+    ]
+  },
+  {
     title: 'Company',
     links: [
       { name: 'About Us', href: '/about' },
@@ -142,7 +154,7 @@ export default function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-7 gap-8">
           
           {/* Company Info */}
           <div className="lg:col-span-2">

@@ -71,7 +71,7 @@ export default function FullTeamSection() {
       experience: "SEO Expert"
     },
     {
-      name: "Sebastian Lopez",
+      name: "Sebastian Vargas",
       role: "SEO Specialist",
       department: "SEO Team",
       bio: "SEO specialist working on search optimization and digital marketing campaigns.",

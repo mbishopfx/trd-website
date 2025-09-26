@@ -33,7 +33,7 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs }: Sch
   // Organization Schema
   const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+    "@type": ["Organization", "LocalBusiness"],
     "@id": "https://truerankdigital.com/#organization",
     name: napData.name,
     legalName: napData.legalName,
@@ -679,23 +679,29 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs }: Sch
     },
     priceRange: "$$-$$$",
     openingHours: "Mo-Su 00:00-23:59",
-    serviceType: "SEO and Digital Marketing",
-    provider: {
-      "@id": "https://truerankdigital.com/#organization"
-    },
+    areaOfExpertise: [
+      "Search Engine Optimization",
+      "Digital Marketing",
+      "Schema Markup Engineering",
+      "Custom Software Development",
+      "Technical SEO"
+    ],
     areaServed: {
       "@type": "Country",
       name: "United States"
     },
-    hasOfferCatalog: {
-      "@id": "https://truerankdigital.com/#organization"
-    },
+    providerMobility: "https://schema.org/StaticService",
+    serviceOutput: "Improved search engine rankings and online visibility",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
       bestRating: "5",
       worstRating: "1",
       ratingCount: "12"
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://truerankdigital.com/#webpage"
     }
   };
 

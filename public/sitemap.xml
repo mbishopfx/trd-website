@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://truerankdigital.com/</loc>
-    <lastmod>2024-12-24T00:00:00+00:00</lastmod>
+    <lastmod>2025-09-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -207,6 +207,29 @@
     <lastmod>2024-12-24T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Location-Specific Services -->
+  <url>
+    <loc>https://truerankdigital.com/east-brunswick-services</loc>
+    <lastmod>2025-01-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Legacy URL Support (404 Prevention) -->
+  <url>
+    <loc>https://truerankdigital.com/tech-services/team-platform-software</loc>
+    <lastmod>2025-01-20T00:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://truerankdigital.com/gbp-pro/search-grid-ranking</loc>
+    <lastmod>2025-01-20T00:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>

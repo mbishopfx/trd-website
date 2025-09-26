@@ -154,7 +154,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-xl sm:text-2xl text-brand-dark/80 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Simple, Powerful, Affordable SEO & Marketing to Grow Your Local Presence.
+            Master proven Google optimization tactics with our proprietary SEO dashboard platform featuring grid map ranking analysis, competitor intelligence tools, and automated Google knowledge graph consistency monitoring. Get faster search engine result page positioning with our in-house algorithm-proof digital marketing strategies.
           </motion.p>
 
           {/* Primary CTA Button */}

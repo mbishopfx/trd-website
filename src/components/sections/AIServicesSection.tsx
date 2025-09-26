@@ -30,62 +30,62 @@ interface AIService {
 
 const aiServices: AIService[] = [
   {
-    title: 'AI-Enhanced Semantic Optimization',
-    badge: 'Advanced Optimization',
+    title: 'Proprietary SEO Dashboard Platform',
+    badge: 'Custom Software Solution',
     badgeColor: 'bg-brand-accent',
     icon: <Sparkles className="w-8 h-8 text-white" />,
     iconBg: 'bg-gradient-to-br from-brand-accent to-purple-600',
-    description: 'Our proprietary AI engine creates semantic contextual data and processes it through our expert-built indexing API, ensuring optimal readability and scraping by Google\'s algorithms.',
+    description: 'Access our exclusive client dashboard platform featuring advanced grid map ranking verification, comprehensive keyword search volume analysis tools, and real-time competitor intelligence monitoring. Our proprietary software automatically tracks Google knowledge graph consistency and website optimization metrics, ensuring your local search engine optimization maintains peak performance across all digital marketing channels.',
     features: [
       {
         icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Semantic contextual data generation'
+        text: 'Grid map ranking analysis dashboard'
       },
       {
         icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Proprietary indexing API processing'
+        text: 'Keyword search volume research tools'
       },
       {
         icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Google algorithm optimization'
+        text: 'Competitor analysis intelligence platform'
       },
       {
         icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'AI-enhanced content structuring'
+        text: 'Google knowledge graph consistency monitoring'
       },
       {
         icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Intelligent markup generation'
+        text: 'Website optimization tracking automation'
       }
     ]
   },
   {
-    title: 'Expert-Built Script Automation',
-    badge: 'Expert Automation',
+    title: 'Custom Algorithm Adaptation Scripts',
+    badge: 'In-House Technology Framework',
     badgeColor: 'bg-brand-primary',
     icon: <Settings className="w-8 h-8 text-white" />,
     iconBg: 'bg-gradient-to-br from-brand-primary to-blue-600',
-    description: 'Our proprietary scripts leverage AI to enhance and create semantic contextual data, running 24/7 through our specialized indexing API to maintain Google\'s peak readability standards.',
+    description: 'Our expert-developed custom scripts and solution building frameworks keep you ahead of Google algorithm changes with proven digital marketing tactics mastered by SEO professionals. These proprietary automation tools work 24/7 to maintain your search engine result page positioning, especially when combined with our custom web builds that allow deeper search algorithm manipulation and advanced local search engine optimization strategies.',
     features: [
       {
         icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Expert-built automation scripts'
+        text: 'Algorithm-proof SEO automation scripts'
       },
       {
         icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'AI-enhanced data processing'
+        text: 'Custom web build optimization advantages'
       },
       {
         icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Proprietary indexing API integration'
+        text: 'Professional Google tactics implementation'
       },
       {
         icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Continuous Google optimization'
+        text: 'Advanced local search positioning tools'
       },
       {
         icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Fluid markup control'
+        text: 'Solution framework technology advantage'
       }
     ]
   }
@@ -137,12 +137,11 @@ export default function AIServicesSection() {
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
-            Advanced AI-Powered Solutions
+            Proprietary SEO Software & Digital Marketing Platform
           </h2>
           
           <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-            Our cutting-edge artificial intelligence technology transforms how your business 
-            appears in search results with unprecedented precision and automation.
+            Transform your organic search traffic generation with our exclusive client dashboard platform and in-house technology solutions. Our proven Google optimization tactics and algorithm-proof digital marketing strategies deliver faster search engine result page positioning through advanced local search engine optimization techniques mastered by industry professionals.
           </p>
         </motion.div>
 
@@ -240,26 +239,43 @@ export default function AIServicesSection() {
           ))}
         </motion.div>
 
-        {/* Bottom CTA */}
+        {/* Platform Access Information */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mt-16"
+          className="mt-16 glass-card p-8 lg:p-12"
         >
-          <p className="text-lg text-brand-dark/70 mb-6">
-            Ready to experience the power of AI-enhanced SEO optimization?
-          </p>
-          <motion.a
-            href="/learn-aio"
-            className="inline-flex items-center space-x-2 px-8 py-4 glass-button bg-brand-primary/10 hover:bg-brand-primary hover:text-white text-brand-primary font-semibold rounded-full transition-all duration-300 group"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Bot className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-            <span>Learn About Our AI Technology</span>
-          </motion.a>
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              Access Our Proprietary SEO Dashboard Platform
+            </h3>
+            <p className="text-lg text-brand-dark/70 max-w-4xl mx-auto leading-relaxed">
+              Every client receives access to our exclusive digital marketing platform featuring grid map ranking analysis, keyword search volume research tools, and competitor intelligence monitoring. While our dashboard platform works with any website, clients who choose our custom web builds unlock advanced algorithm manipulation capabilities and deeper local search engine optimization control through our proprietary script integration.
+            </p>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <motion.a
+              href="/free-audit"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-brand-primary text-white font-semibold rounded-full hover:bg-brand-primary/90 transition-all duration-300 group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Bot className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+              <span>Access Free SEO Platform Demo</span>
+            </motion.a>
+            <motion.a
+              href="/learn-aio"
+              className="inline-flex items-center space-x-2 px-8 py-4 glass-button bg-brand-primary/10 hover:bg-brand-primary hover:text-white text-brand-primary font-semibold rounded-full transition-all duration-300 group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Target className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
+              <span>Learn About Custom Web Builds</span>
+            </motion.a>
+          </div>
         </motion.div>
 
       </div>

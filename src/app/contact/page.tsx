@@ -3,6 +3,7 @@ import ContactHeroSection from '@/components/sections/ContactHeroSection';
 import ContactInfoSection from '@/components/sections/ContactInfoSection';
 import ContactFormSection from '@/components/sections/ContactFormSection';
 import PageSpecificSchema from '@/components/seo/PageSpecificSchema';
+import ComprehensiveSchema from '@/components/seo/ComprehensiveSchema';
 
 export const metadata: Metadata = {
   title: 'Contact True Rank Digital - Get Your Free SEO Audit Today',
@@ -24,6 +25,22 @@ export default function ContactPage() {
         pageType="contact"
         pageTitle="Contact True Rank Digital"
         pageDescription="Get in touch with True Rank Digital for professional SEO and digital marketing services. Free consultations available."
+        breadcrumbs={[
+          { name: "Home", url: "https://truerankdigital.com" },
+          { name: "Contact", url: "https://truerankdigital.com/contact" }
+        ]}
+      />
+      
+      {/* Additional Comprehensive Schema */}
+      <ComprehensiveSchema
+        type="contact"
+        pageData={{
+          title: "Contact True Rank Digital - Get Professional SEO & Digital Marketing Help",
+          description: "Contact True Rank Digital for professional SEO and digital marketing services. Get in touch with our expert team for custom solutions and strategic consultation.",
+          url: "https://truerankdigital.com/contact",
+          keywords: ["contact True Rank Digital", "SEO consultation", "digital marketing help", "professional SEO services", "get in touch", "SEO experts contact"],
+          category: "Contact Information"
+        }}
         breadcrumbs={[
           { name: "Home", url: "https://truerankdigital.com" },
           { name: "Contact", url: "https://truerankdigital.com/contact" }

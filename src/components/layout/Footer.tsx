@@ -71,8 +71,18 @@ const footerSections: FooterSection[] = [
       { name: 'About Us', href: '/about' },
       { name: 'Our Team', href: '/staff' },
       { name: 'Learn About AIO', href: '/learn-aio' },
-      { name: 'Markets We Serve', href: '/markets' },
+      { name: 'SEO Platform', href: '/platform' },
       { name: 'Contact Us', href: '/contact' }
+    ]
+  },
+  {
+    title: 'Platform Tools',
+    links: [
+      { name: 'Grid Ranking System', href: '/platform/grid-ranking' },
+      { name: 'E-E-A-T Analysis', href: '/platform/eeat-analysis' },
+      { name: 'Indexability Analysis', href: '/platform/indexability' },
+      { name: 'Knowledge Graph', href: '/platform/knowledge-graph' },
+      { name: 'Overwatch System', href: '/platform/overwatch' }
     ]
   },
   {
@@ -80,6 +90,16 @@ const footerSections: FooterSection[] = [
     links: [
       { name: 'Free SEO Audit', href: '/free-audit' },
       { name: 'AI Technology', href: '/learn-aio' }
+    ]
+  },
+  {
+    title: 'Education',
+    links: [
+      { name: 'AI Search Preparation', href: '/education/ai-search-preparation' },
+      { name: 'Algorithm Adaptation', href: '/education/algorithm-adaptation' },
+      { name: 'Custom vs Cookie-Cutter', href: '/education/custom-vs-cookie-cutter' },
+      { name: 'Future-Proofing SEO', href: '/education/future-proofing-seo' },
+      { name: 'All Education Guides', href: '/education' }
     ]
   },
   {
@@ -154,7 +174,7 @@ export default function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-7 gap-8">
+        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 xl:grid-cols-8 gap-8">
           
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -179,8 +199,7 @@ export default function Footer() {
               </div>
               
               <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                Enterprise digital marketing solutions with proprietary AI technology. 
-                Get your business found on Google fast with our expert-built automation and semantic optimization.
+                Professional digital marketing services featuring proprietary SEO dashboard platform with grid map ranking analysis, competitor intelligence monitoring, and algorithm-proof optimization strategies. Master proven Google tactics with our in-house technology solutions and advanced educational resources.
               </p>
 
               {/* Contact Info */}

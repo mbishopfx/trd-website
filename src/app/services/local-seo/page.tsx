@@ -3,19 +3,25 @@ import { Search, MapPin, TrendingUp, CheckCircle } from 'lucide-react';
 import PageSpecificSchema from '@/components/seo/PageSpecificSchema';
 
 export const metadata: Metadata = {
-  title: 'Local SEO Services - True Rank Digital',
-  description: 'Dominate local search results with True Rank Digital\'s advanced local SEO strategies. Get found by nearby customers on Google Maps.',
-  keywords: 'local SEO, Google Maps optimization, local search marketing, nearby customers',
+  title: 'Professional Local Search Engine Optimization Services | Grid Map Ranking Analysis | True Rank Digital',
+  description: 'Master local search engine optimization with our proprietary SEO dashboard platform. Advanced Google Maps optimization, grid map ranking verification, competitor analysis tools, and automated Google knowledge graph consistency monitoring for faster local search positioning.',
+  keywords: 'local search engine optimization, Google Maps optimization services, grid map ranking analysis, local SEO dashboard platform, competitor analysis tools, Google knowledge graph optimization, local search positioning strategies, professional local SEO services, Google Business Profile optimization, local keyword research tools',
 };
 
 export default function LocalSEOPage() {
   const benefits = [
-    'Google Maps dominance',
-    'Local keyword optimization', 
-    'Citation building & management',
-    'Review management system',
-    'Local content strategy',
-    'Competitor analysis'
+    'Grid map ranking verification dashboard access',
+    'Advanced local keyword search volume analysis', 
+    'Google knowledge graph consistency automation',
+    'Competitor intelligence monitoring platform',
+    'Local search engine result page positioning',
+    'Professional Google Business Profile optimization',
+    'Google Maps optimization with ranking tracking',
+    'Local citation building and management automation',
+    'Review response automation and monitoring',
+    'Local content strategy with semantic optimization',
+    'Algorithm-proof local SEO tactics implementation',
+    'Custom script integration for enhanced performance'
   ];
 
   return (
@@ -44,12 +50,23 @@ export default function LocalSEOPage() {
             </div>
           
           <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
-            Local SEO Services
+            Professional Local Search Engine Optimization Services
           </h1>
           
-          <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto mb-12">
-            Dominate local search results and attract nearby customers with our advanced local SEO strategies powered by AI technology.
+          <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-8">
+            Master local search engine optimization with our proven Google optimization tactics and proprietary SEO dashboard platform. Our in-house technology solutions deliver faster local search positioning through advanced grid map ranking analysis, competitor intelligence monitoring, and automated Google knowledge graph consistency tracking.
           </p>
+
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="glass-card p-6 lg:p-8 mb-8">
+              <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
+                Our Local SEO Process: Getting Your Business Found on Google—Fast!
+              </h2>
+              <p className="text-brand-dark/70 leading-relaxed">
+                Every local SEO client gains access to our exclusive digital marketing platform featuring real-time grid map ranking verification, comprehensive keyword search volume research tools, and automated competitor analysis monitoring. Our algorithm-proof strategies combine proven Google tactics mastered by professionals with custom solution building frameworks that keep you ahead of search algorithm changes. While our dashboard platform works with any website, clients choosing our custom web builds unlock enhanced algorithm manipulation capabilities through proprietary script integration.
+              </p>
+            </div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {benefits.map((benefit, index) => (
@@ -60,23 +77,32 @@ export default function LocalSEOPage() {
             ))}
           </div>
 
-          <div className="glass-card p-8">
+          <div className="glass-card p-8 lg:p-10">
             <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <MapPin className="w-10 h-10 text-white" />
             </div>
             <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
-              Ready to Dominate Local Search?
+              Access Your Proprietary Local SEO Dashboard Platform
             </h2>
-            <p className="text-brand-dark/70 mb-6">
-              Get found by customers in your area with our proven local SEO strategies.
+            <p className="text-brand-dark/70 mb-6 leading-relaxed">
+              Start dominating local search engine results with our proven Google optimization tactics and exclusive client dashboard featuring grid map ranking analysis, keyword search volume research tools, and automated Google knowledge graph consistency monitoring. Our professional local search positioning strategies are designed to get your business found on Google faster through advanced algorithm-proof digital marketing techniques.
             </p>
-            <a
-              href="/contact"
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-green-600 text-white font-semibold text-lg rounded-full hover:bg-green-700 transition-colors duration-300"
-            >
-              <TrendingUp className="w-5 h-5" />
-              <span>Get Started Today</span>
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/free-audit"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-green-600 text-white font-semibold text-lg rounded-full hover:bg-green-700 transition-colors duration-300"
+              >
+                <TrendingUp className="w-5 h-5" />
+                <span>Get Free Local SEO Dashboard Demo</span>
+              </a>
+              <a
+                href="/contact"
+                className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-green-600 text-green-600 font-semibold text-lg rounded-full hover:bg-green-600 hover:text-white transition-all duration-300"
+              >
+                <MapPin className="w-5 h-5" />
+                <span>Start Local SEO Strategy</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

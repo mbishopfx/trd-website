@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ComprehensiveSchema from '@/components/seo/ComprehensiveSchema';
 import AboutHeroSection from '@/components/sections/AboutHeroSection';
 import MissionSection from '@/components/sections/MissionSection';
 import CoreValuesSection from '@/components/sections/CoreValuesSection';
@@ -30,6 +31,22 @@ export default function AboutPage() {
       
       {/* Location & Reach Section */}
       <LocationReachSection />
+    
+      {/* Comprehensive Schema Markup */}
+      <ComprehensiveSchema
+        type="about"
+        pageData={{
+          title: "About True Rank Digital - Professional SEO & Digital Marketing Experts",
+          description: "Learn about True Rank Digital's mission, values, and expert team providing professional SEO and digital marketing services with custom proprietary technology solutions.",
+          url: "https://truerankdigital.com/about",
+          keywords: ["True Rank Digital", "about us", "SEO experts", "digital marketing team", "company mission", "professional services", "proprietary technology"],
+          category: "Company Information"
+        }}
+        breadcrumbs={[
+          { name: "Home", url: "https://truerankdigital.com" },
+          { name: "About", url: "https://truerankdigital.com/about" }
+        ]}
+      />
     </div>
   );
 }

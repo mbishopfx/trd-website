@@ -276,58 +276,133 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs }: Sch
     {
       "@context": "https://schema.org",
       "@type": "Person",
+      "@id": "https://truerankdigital.com/staff/jon-korkowski",
+      name: "Jon J Korkowski",
+      jobTitle: "CEO & Founder",
+      worksFor: {
+        "@id": "https://truerankdigital.com/#organization"
+      },
+      description: "Founder and CEO leading True Rank Digital's vision and strategy for digital marketing excellence and proprietary SEO technology development.",
+      email: "jon@truerankdigital.com",
+      url: "https://truerankdigital.com/staff",
+      knowsAbout: [
+        "Business Strategy",
+        "Client Relations", 
+        "SEO Leadership",
+        "Digital Marketing Strategy"
+      ],
+      sameAs: [
+        "https://www.linkedin.com/in/jon-korkowski"
+      ]
+    },
+    {
+      "@context": "https://schema.org", 
+      "@type": "Person",
+      "@id": "https://truerankdigital.com/staff/jesse-mathews",
+      name: "Jesse Mathews",
+      jobTitle: "President",
+      worksFor: {
+        "@id": "https://truerankdigital.com/#organization"
+      },
+      description: "President overseeing operations and ensuring quality service delivery for all True Rank Digital clients.",
+      email: "jesse@truerankdigital.com",
+      url: "https://truerankdigital.com/staff",
+      knowsAbout: [
+        "Operations",
+        "Team Leadership",
+        "Quality Management",
+        "Client Services"
+      ],
+      sameAs: [
+        "https://www.linkedin.com/in/jesse-mathews"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://truerankdigital.com/staff/jose-perdomo", 
+      name: "Jose Perdomo",
+      jobTitle: "Executive Vice President",
+      worksFor: {
+        "@id": "https://truerankdigital.com/#organization"
+      },
+      description: "Executive Vice President focused on strategic growth and business development for True Rank Digital's expansion.",
+      email: "jose@truerankdigital.com",
+      url: "https://truerankdigital.com/staff",
+      knowsAbout: [
+        "Strategic Planning",
+        "Business Development",
+        "Market Expansion",
+        "Sales Strategy"
+      ],
+      sameAs: [
+        "https://www.linkedin.com/in/jose-perdomo"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
       "@id": "https://truerankdigital.com/staff/matt-bishop",
       name: "Matt Bishop",
       jobTitle: "Tech Developer",
       worksFor: {
         "@id": "https://truerankdigital.com/#organization"
       },
-      description: "Technical developer handling website development and custom software solutions for True Rank Digital's proprietary SEO technology stack.",
-      image: "https://truerankdigital.com/images/team/matt-bishop.jpg",
+      description: "Technical developer handling website development and technical implementation for client projects using True Rank Digital's proprietary technology stack.",
+      email: "bishop@truerankdigital.com",
       url: "https://truerankdigital.com/staff",
       knowsAbout: [
         "Web Development",
         "Technical Implementation", 
         "Website Optimization",
         "Custom Software Development"
+      ],
+      sameAs: [
+        "https://www.linkedin.com/in/matt-bishop"
       ]
     },
     {
       "@context": "https://schema.org", 
       "@type": "Person",
       "@id": "https://truerankdigital.com/staff/sean-oniel",
-      name: "Sean O'Neil",
+      name: "Sean O'Niel",
       jobTitle: "SEO Specialist",
       worksFor: {
         "@id": "https://truerankdigital.com/#organization"
       },
       description: "SEO specialist focused on optimization strategies and search engine performance for True Rank Digital's client campaigns.",
-      image: "https://truerankdigital.com/images/team/sean-oniel.jpg",
+      email: "sean@truerankdigital.com",
       url: "https://truerankdigital.com/staff",
       knowsAbout: [
         "SEO Optimization",
         "Search Strategy",
         "Performance Analysis",
         "Local SEO"
+      ],
+      sameAs: [
+        "https://www.linkedin.com/in/sean-oniel"
       ]
     },
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "@id": "https://truerankdigital.com/staff/sebastian-lopez", 
-      name: "Sebastian Lopez",
+      "@id": "https://truerankdigital.com/staff/sebastian-vargas", 
+      name: "Sebastian Vargas",
       jobTitle: "SEO Specialist",
       worksFor: {
         "@id": "https://truerankdigital.com/#organization"
       },
       description: "SEO specialist working on search optimization and digital marketing campaigns with focus on technical SEO implementations.",
-      image: "https://truerankdigital.com/images/team/sebastian-lopez.jpg",
+      email: "sebastian@truerankdigital.com",
       url: "https://truerankdigital.com/staff",
       knowsAbout: [
         "SEO Optimization",
         "Digital Marketing",
         "Search Analysis",
         "Technical SEO"
+      ],
+      sameAs: [
+        "https://www.linkedin.com/in/sebastian-vargas"
       ]
     }
   ];

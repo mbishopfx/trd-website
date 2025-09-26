@@ -17,7 +17,14 @@ import {
   Search,
   Globe,
   Building,
-  Settings
+  Settings,
+  BarChart3,
+  Shield,
+  Database,
+  Network,
+  MessageSquare,
+  Target,
+  Zap
 } from 'lucide-react';
 
 interface NavItem {
@@ -73,35 +80,6 @@ const navigationItems: NavItem[] = [
     ]
   },
   {
-    name: 'Learn About AIO',
-    href: '/learn-aio',
-    icon: <Bot className="w-4 h-4" />,
-    badge: 'AI',
-    description: 'Discover our AI-powered optimization technology'
-  },
-  {
-    name: 'Markets',
-    href: '/markets',
-    icon: <Globe className="w-4 h-4" />,
-    items: [
-      {
-        name: 'Local Business',
-        href: '/markets/local-business',
-        description: 'Small businesses seeking local dominance'
-      },
-      {
-        name: 'Ecommerce Enterprise',
-        href: '/markets/ecommerce-enterprise', 
-        description: 'Large-scale ecommerce operations'
-      },
-      {
-        name: 'Multi-Location',
-        href: '/markets/multi-location',
-        description: 'Businesses with multiple locations'
-      }
-    ]
-  },
-  {
     name: 'Staff',
     href: '/staff',
     icon: <Users className="w-4 h-4" />,
@@ -110,6 +88,63 @@ const navigationItems: NavItem[] = [
     name: 'Contact',
     href: '/contact',
     icon: <Phone className="w-4 h-4" />,
+  },
+  {
+    name: 'Learn About AIO',
+    href: '/learn-aio',
+    icon: <Bot className="w-4 h-4" />,
+    badge: 'AI',
+    description: 'Discover our AI-powered optimization technology'
+  },
+  {
+    name: 'Platform',
+    href: '/platform',
+    icon: <Zap className="w-4 h-4" />,
+    badge: 'Exclusive',
+    items: [
+      {
+        name: 'Grid Ranking System',
+        href: '/platform/grid-ranking',
+        icon: <BarChart3 className="w-4 h-4" />,
+        description: 'Geographic search intelligence and heat map visualization'
+      },
+      {
+        name: 'E-E-A-T Analysis Engine',
+        href: '/platform/eeat-analysis',
+        icon: <Target className="w-4 h-4" />,
+        description: 'Expertise, Experience, Authoritativeness & Trustworthiness optimization'
+      },
+      {
+        name: 'Indexability Analysis',
+        href: '/platform/indexability',
+        icon: <Search className="w-4 h-4" />,
+        description: 'Ensure Google discovers and indexes every valuable page'
+      },
+      {
+        name: 'Knowledge Graph Optimization',
+        href: '/platform/knowledge-graph',
+        icon: <Network className="w-4 h-4" />,
+        description: 'Transform your business into a recognized digital entity'
+      },
+      {
+        name: 'Digital Overwatch System',
+        href: '/platform/overwatch',
+        icon: <Shield className="w-4 h-4" />,
+        description: '24/7 intelligent monitoring and threat detection'
+      },
+      {
+        name: 'Competitor Analysis',
+        href: '/platform/competitor-analysis',
+        icon: <Users className="w-4 h-4" />,
+        description: 'Decode competitor strategies and find market opportunities'
+      },
+      {
+        name: 'Lead Generation Intelligence',
+        href: '/platform/lead-generation',
+        icon: <TrendingUp className="w-4 h-4" />,
+        description: 'Predict markets before they emerge and find fresh prospects'
+      }
+    ]
   }
 ];
 
@@ -204,14 +239,14 @@ export default function Navigation() {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-80 glass-card rounded-xl shadow-glass-lg overflow-hidden"
+                          className="absolute top-full left-0 mt-2 w-96 bg-white/95 backdrop-blur-md border border-white/30 rounded-xl shadow-xl overflow-hidden"
                         >
-                          <div className="p-2">
+                          <div className="p-2 grid grid-cols-2 gap-1">
                             {item.items.map((subItem) => (
                               <Link
                                 key={subItem.name}
                                 href={subItem.href}
-                                className="flex items-start space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors duration-200 group/item"
+                                className="flex items-start space-x-2 p-2 rounded-lg hover:bg-white/25 transition-colors duration-200 group/item"
                               >
                                 <div className="flex-shrink-0 mt-0.5 text-brand-primary group-hover/item:text-brand-accent transition-colors duration-200">
                                   {subItem.icon}
@@ -287,7 +322,7 @@ export default function Navigation() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white/95 backdrop-blur-md border-t border-white/20 shadow-glass"
+            className="lg:hidden bg-white/98 backdrop-blur-md border-t border-white/30 shadow-xl"
           >
             <div className="max-w-7xl mx-auto px-4 py-4 space-y-2">
               {navigationItems.map((item) => (
@@ -297,7 +332,7 @@ export default function Navigation() {
                     <div>
                       <button
                         onClick={() => handleDropdownToggle(item.name)}
-                        className="w-full flex items-center justify-between p-3 text-left text-brand-dark hover:text-brand-primary transition-colors duration-200 font-medium rounded-lg hover:bg-white/10"
+                        className="w-full flex items-center justify-between p-3 text-left text-brand-dark hover:text-brand-primary transition-colors duration-200 font-medium rounded-lg hover:bg-white/20"
                       >
                         <div className="flex items-center space-x-2">
                           {item.icon}
@@ -327,7 +362,7 @@ export default function Navigation() {
                                 key={subItem.name}
                                 href={subItem.href}
                                 onClick={() => setIsMenuOpen(false)}
-                                className="flex items-start space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors duration-200"
+                                className="flex items-start space-x-3 p-3 rounded-lg hover:bg-white/25 transition-colors duration-200"
                               >
                                 <div className="flex-shrink-0 mt-0.5 text-brand-primary">
                                   {subItem.icon}
@@ -349,7 +384,7 @@ export default function Navigation() {
                     <Link
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="flex items-center space-x-2 p-3 text-brand-dark hover:text-brand-primary transition-colors duration-200 font-medium rounded-lg hover:bg-white/10"
+                      className="flex items-center space-x-2 p-3 text-brand-dark hover:text-brand-primary transition-colors duration-200 font-medium rounded-lg hover:bg-white/20"
                     >
                       {item.icon}
                       <span>{item.name}</span>

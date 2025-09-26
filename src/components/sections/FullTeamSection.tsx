@@ -13,6 +13,7 @@ interface TeamMember {
   icon: React.ReactNode;
   color: string;
   experience: string;
+  email: string;
 }
 
 export default function FullTeamSection() {
@@ -25,7 +26,8 @@ export default function FullTeamSection() {
       specialties: ["Business Strategy", "Client Relations", "SEO Leadership"],
       icon: <Award className="w-8 h-8" />,
       color: "from-brand-primary to-brand-secondary",
-      experience: "Leadership"
+      experience: "Leadership",
+      email: "jon@truerankdigital.com"
     },
     {
       name: "Jesse Mathews",
@@ -35,7 +37,8 @@ export default function FullTeamSection() {
       specialties: ["Operations", "Team Leadership", "Quality Management"],
       icon: <Target className="w-8 h-8" />,
       color: "from-brand-secondary to-brand-accent",
-      experience: "Leadership"
+      experience: "Leadership",
+      email: "jesse@truerankdigital.com"
     },
     {
       name: "Jose Perdomo",
@@ -45,7 +48,8 @@ export default function FullTeamSection() {
       specialties: ["Strategic Planning", "Business Development", "Market Expansion"],
       icon: <BarChart3 className="w-8 h-8" />,
       color: "from-brand-accent to-purple-600",
-      experience: "Leadership"
+      experience: "Leadership",
+      email: "jose@truerankdigital.com"
     }
   ];
 
@@ -58,7 +62,8 @@ export default function FullTeamSection() {
       specialties: ["Web Development", "Technical Implementation", "Website Optimization"],
       icon: <Code className="w-8 h-8" />,
       color: "from-blue-500 to-indigo-500",
-      experience: "Developer"
+      experience: "Developer",
+      email: "bishop@truerankdigital.com"
     },
     {
       name: "Sean O'Niel",
@@ -68,7 +73,8 @@ export default function FullTeamSection() {
       specialties: ["SEO Optimization", "Search Strategy", "Performance Analysis"],
       icon: <Search className="w-8 h-8" />,
       color: "from-green-500 to-blue-500",
-      experience: "SEO Expert"
+      experience: "SEO Expert",
+      email: "sean@truerankdigital.com"
     },
     {
       name: "Sebastian Vargas",
@@ -78,7 +84,8 @@ export default function FullTeamSection() {
       specialties: ["SEO Optimization", "Digital Marketing", "Search Analysis"],
       icon: <Search className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      experience: "SEO Expert"
+      experience: "SEO Expert",
+      email: "sebastian@truerankdigital.com"
     }
   ];
 
@@ -141,10 +148,13 @@ export default function FullTeamSection() {
 
             {/* Contact */}
             <div className="flex items-center space-x-3 pt-4 border-t border-brand-dark/10">
-              <button className="flex items-center space-x-2 text-brand-secondary hover:text-brand-primary transition-colors text-sm">
+              <a 
+                href={`mailto:${member.email}`}
+                className="flex items-center space-x-2 text-brand-secondary hover:text-brand-primary transition-colors text-sm"
+              >
                 <Mail className="w-4 h-4" />
                 <span>Contact</span>
-              </button>
+              </a>
               <button className="flex items-center space-x-2 text-brand-secondary hover:text-brand-primary transition-colors text-sm">
                 <Linkedin className="w-4 h-4" />
                 <span>LinkedIn</span>

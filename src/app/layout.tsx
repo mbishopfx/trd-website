@@ -25,6 +25,15 @@ export const metadata: Metadata = {
   authors: [{ name: "Jon J Korkowski", url: "https://truerankdigital.com" }],
   creator: "True Rank Digital",
   publisher: "True Rank Digital",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/logo-vector.svg', type: 'image/svg+xml', sizes: '32x32' },
+      { url: '/logo-checkmark.svg', type: 'image/svg+xml', sizes: '32x32' }
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/logo-vector.svg',
+  },
   formatDetection: {
     email: false,
     address: false,

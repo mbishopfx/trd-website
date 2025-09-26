@@ -78,13 +78,13 @@ export default function FullTeamSection() {
     },
     {
       name: "Sebastian Vargas",
-      role: "SEO Specialist",
-      department: "SEO Team",
-      bio: "SEO specialist working on search optimization and digital marketing campaigns.",
-      specialties: ["SEO Optimization", "Digital Marketing", "Search Analysis"],
-      icon: <Search className="w-8 h-8" />,
+      role: "Sales Director",
+      department: "Sales",
+      bio: "Sales Director focused on client development and relationship management.",
+      specialties: ["Client Relations", "Sales Strategy", "Business Development"],
+      icon: <Target className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      experience: "SEO Expert",
+      experience: "Sales Director",
       email: "sebastian@truerankdigital.com"
     }
   ];

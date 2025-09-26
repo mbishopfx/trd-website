@@ -424,3 +424,4 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
     />
   );
 }
+

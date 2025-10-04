@@ -3,7 +3,7 @@
 import Script from 'next/script';
 
 interface ComprehensiveSchemaProps {
-  type: 'platform-tool' | 'service' | 'education' | 'location' | 'about' | 'contact' | 'referral-program';
+  type: 'platform-tool' | 'service' | 'education' | 'location' | 'about' | 'contact' | 'referral-program' | 'article' | 'howto' | 'video' | 'product';
   pageData: {
     title: string;
     description: string;
@@ -26,6 +26,14 @@ interface ComprehensiveSchemaProps {
       description: string;
       price: string;
       currency?: string;
+    }>;
+    contentSections?: Array<{
+      heading: string;
+      text: string;
+    }>;
+    faq?: Array<{
+      question: string;
+      answer: string;
     }>;
   };
   breadcrumbs?: Array<{name: string; url: string}>;
@@ -142,18 +150,10 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
       audienceType: "Small to Medium Businesses"
     },
     hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: `${pageData.title} Packages`,
-      itemListElement: [
-        {
-          "@type": "Offer",
-          name: `Professional ${pageData.title}`,
-          description: pageData.description,
-          price: "Custom Pricing",
-          priceCurrency: "USD",
-          availability: "https://schema.org/InStock"
-        }
-      ]
+      "@id": `${baseUrl}/#service-catalog`
+    },
+    aggregateRating: {
+      "@id": `${baseUrl}/#aggregate-rating`
     },
     review: [
       {
@@ -361,6 +361,169 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
     }
   } : null;
 
+  // Article Schema
+  const articleSchema = type === 'article' ? {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${pageData.url}#article`,
+    headline: pageData.title,
+    description: pageData.description,
+    articleSection: pageData.category || "SEO Education",
+    keywords: pageData.keywords?.join(", "),
+    author: {
+      "@type": "Organization",
+      "@id": `${baseUrl}/#organization`,
+      name: napData.name,
+      email: napData.email
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${baseUrl}/#organization`,
+      name: napData.name,
+      logo: {
+        "@type": "ImageObject",
+        url: napData.logo
+      }
+    },
+    datePublished: pageData.datePublished || "2024-01-01",
+    dateModified: pageData.dateModified || new Date().toISOString().split('T')[0],
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": pageData.url
+    },
+    about: pageData.keywords?.map(keyword => ({
+      "@type": "Thing",
+      name: keyword,
+      description: `Information about ${keyword} in the context of SEO and digital marketing`
+    })),
+    speaksAbout: pageData.contentSections?.map(section => ({
+      "@type": "DefinedTerm",
+      name: section.heading,
+      description: section.text.substring(0, 200) + "..."
+    })),
+    aggregateRating: {
+      "@id": `${baseUrl}/#aggregate-rating`
+    }
+  } : null;
+
+  // HowTo Schema
+  const howToSchema = type === 'howto' ? {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "@id": `${pageData.url}#howto`,
+    name: pageData.title,
+    description: pageData.description,
+    totalTime: "PT2H",
+    supply: [
+      {
+        "@type": "HowToSupply",
+        name: "Website Access"
+      },
+      {
+        "@type": "HowToSupply",
+        name: "Google Analytics Account"
+      }
+    ],
+    tool: [
+      {
+        "@type": "HowToTool",
+        name: "True Rank Digital SEO Dashboard"
+      },
+      {
+        "@type": "HowToTool",
+        name: "Schema Markup Tools"
+      }
+    ],
+    step: pageData.contentSections?.map((section, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: section.heading,
+      text: section.text,
+      image: `${baseUrl}/images/howto/step-${index + 1}.jpg`
+    })) || [],
+    aggregateRating: {
+      "@id": `${baseUrl}/#aggregate-rating`
+    }
+  } : null;
+
+  // Video Schema
+  const videoSchema = type === 'video' ? {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "@id": `${pageData.url}#video`,
+    name: pageData.title,
+    description: pageData.description,
+    thumbnailUrl: `${baseUrl}/images/videos/${pageData.category || 'default'}-thumb.jpg`,
+    uploadDate: pageData.datePublished || "2024-01-01",
+    duration: "PT5M30S",
+    contentUrl: `${baseUrl}/videos/${pageData.category || 'default'}.mp4`,
+    embedUrl: `${baseUrl}/videos/embed/${pageData.category || 'default'}`,
+    interactionStatistic: {
+      "@type": "InteractionCounter",
+      interactionType: "https://schema.org/WatchAction",
+      userInteractionCount: "250"
+    },
+    author: {
+      "@type": "Organization",
+      "@id": `${baseUrl}/#organization`,
+      name: napData.name
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${baseUrl}/#organization`,
+      name: napData.name
+    },
+    aggregateRating: {
+      "@id": `${baseUrl}/#aggregate-rating`
+    }
+  } : null;
+
+  // Product Schema
+  const productSchema = type === 'product' ? {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `${pageData.url}#product`,
+    name: pageData.title,
+    description: pageData.description,
+    category: pageData.category || "SEO Software",
+    brand: {
+      "@type": "Brand",
+      name: "True Rank Digital",
+      logo: napData.logo
+    },
+    manufacturer: {
+      "@id": `${baseUrl}/#organization`
+    },
+    offers: pageData.offers?.map(offer => ({
+      "@type": "Offer",
+      name: offer.name,
+      description: offer.description,
+      price: offer.price,
+      priceCurrency: offer.currency || "USD",
+      availability: "https://schema.org/InStock",
+      seller: {
+        "@id": `${baseUrl}/#organization`
+      }
+    })) || [],
+    aggregateRating: {
+      "@id": `${baseUrl}/#aggregate-rating`
+    },
+    review: pageData.faq?.map((item, index) => ({
+      "@type": "Review",
+      "@id": `${pageData.url}#review-${index}`,
+      reviewBody: item.answer,
+      author: {
+        "@type": "Person",
+        name: "SEO Expert"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5"
+      }
+    })) || []
+  } : null;
+
   // Referral Program Schema
   const referralSchema = type === 'referral-program' ? {
     "@context": "https://schema.org",
@@ -472,7 +635,7 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
 
   // Combine all applicable schemas
   const schemas = [webPageSchema];
-  
+
   if (platformToolSchema) schemas.push(platformToolSchema);
   if (serviceSchema) schemas.push(serviceSchema);
   if (educationSchema) schemas.push(educationSchema);
@@ -480,6 +643,10 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
   if (aboutSchema) schemas.push(aboutSchema);
   if (contactSchema) schemas.push(contactSchema);
   if (referralSchema) schemas.push(referralSchema);
+  if (articleSchema) schemas.push(articleSchema);
+  if (howToSchema) schemas.push(howToSchema);
+  if (videoSchema) schemas.push(videoSchema);
+  if (productSchema) schemas.push(productSchema);
   if (breadcrumbSchema) schemas.push(breadcrumbSchema);
 
   const schemaGraph = {

@@ -3,12 +3,13 @@
 import Script from 'next/script';
 
 interface SchemaMarkupProps {
-  type?: 'organization' | 'local-business' | 'website' | 'person' | 'service' | 'breadcrumb';
+  type?: 'organization' | 'local-business' | 'website' | 'person' | 'service' | 'breadcrumb' | 'comprehensive';
   pageData?: Record<string, unknown>;
   breadcrumbs?: Array<{name: string; url: string}>;
+  includeAllSchemas?: boolean;
 }
 
-export default function SchemaMarkup({ type = 'organization', breadcrumbs }: SchemaMarkupProps) {
+export default function SchemaMarkup({ type = 'organization', breadcrumbs, includeAllSchemas = false }: SchemaMarkupProps) {
   // NAP Data (Name, Address, Phone) - consistent across all schemas
   const napData = {
     name: "True Rank Digital LLC",
@@ -102,80 +103,10 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs }: Sch
       }
     ],
     hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Professional SEO & Digital Marketing Services",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            "@id": "https://truerankdigital.com/services/local-seo",
-            name: "Local SEO & Google Maps Optimization",
-            description: "Professional local SEO services to help businesses appear in local searches and attract nearby customers with expert optimization strategies.",
-            provider: {
-              "@id": "https://truerankdigital.com/#organization"
-            },
-            serviceType: "SEO",
-            category: "Local SEO"
-          }
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            "@id": "https://truerankdigital.com/services/google-business-profile",
-            name: "Google Business Profile Management", 
-            description: "Complete Google Business Profile optimization and management services including listing optimization, review management, and local visibility enhancement.",
-            provider: {
-              "@id": "https://truerankdigital.com/#organization"
-            },
-            serviceType: "Digital Marketing",
-            category: "Google Business Profile"
-          }
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            "@id": "https://truerankdigital.com/services/ai-seo",
-            name: "Schema Markup Engineering",
-            description: "Custom structured data implementation and schema markup engineering services to help search engines understand your content better than competitors.",
-            provider: {
-              "@id": "https://truerankdigital.com/#organization"
-            },
-            serviceType: "Technical SEO",
-            category: "Schema Markup"
-          }
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            "@id": "https://truerankdigital.com/learn-aio",
-            name: "LLM.txt Creation & Optimization",
-            description: "Advanced LLM.txt file creation and optimization specifically designed for AI search engines like ChatGPT, Claude, and Perplexity to improve AI search visibility.",
-            provider: {
-              "@id": "https://truerankdigital.com/#organization"
-            },
-            serviceType: "AI SEO",
-            category: "LLM Optimization"
-          }
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            "@id": "https://truerankdigital.com/services/website-development",
-            name: "Website Development & Optimization",
-            description: "Professional website development and technical optimization services focused on SEO performance and user experience.",
-            provider: {
-              "@id": "https://truerankdigital.com/#organization"
-            },
-            serviceType: "Web Development",
-            category: "Website Development"
-          }
-        }
-      ]
+      "@id": "https://truerankdigital.com/#service-catalog"
+    },
+    aggregateRating: {
+      "@id": "https://truerankdigital.com/#aggregate-rating"
     },
     numberOfEmployees: "3-10",
     knowsAbout: [
@@ -743,18 +674,316 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs }: Sch
     ]
   };
 
-  // Combine all schemas into a comprehensive graph
-  const allSchemas = [
+  // Enhanced Service Catalog with all services
+  const enhancedServiceCatalog = {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "@id": "https://truerankdigital.com/#service-catalog",
+    name: "Professional SEO & Digital Marketing Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        "@id": "https://truerankdigital.com/services/local-seo#offer",
+        itemOffered: {
+          "@type": "Service",
+          "@id": "https://truerankdigital.com/services/local-seo",
+          name: "Local SEO & Google Maps Optimization",
+          description: "Comprehensive local search optimization including Google Maps optimization, local keyword targeting, citation building, review management, and local content strategy with grid map ranking analysis.",
+          provider: {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          serviceType: "Local SEO",
+          category: "Search Engine Optimization",
+          areaServed: [
+            { "@type": "Country", name: "United States" },
+            { "@type": "State", name: "New Jersey" },
+            { "@type": "State", name: "New York" },
+            { "@type": "State", name: "Pennsylvania" }
+          ]
+        },
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          price: "Custom Pricing",
+          priceCurrency: "USD",
+          valueAddedTaxIncluded: false
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": "https://truerankdigital.com/#organization" }
+      },
+      {
+        "@type": "Offer",
+        "@id": "https://truerankdigital.com/services/google-business-profile#offer",
+        itemOffered: {
+          "@type": "Service",
+          "@id": "https://truerankdigital.com/services/google-business-profile",
+          name: "Google Business Profile Management",
+          description: "Complete Google Business Profile optimization and management services including listing optimization, review management, local visibility enhancement, and automated consistency monitoring.",
+          provider: {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          serviceType: "Digital Marketing",
+          category: "Google Business Profile"
+        },
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          price: "Custom Pricing",
+          priceCurrency: "USD"
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": "https://truerankdigital.com/#organization" }
+      },
+      {
+        "@type": "Offer",
+        "@id": "https://truerankdigital.com/services/ai-seo#offer",
+        itemOffered: {
+          "@type": "Service",
+          "@id": "https://truerankdigital.com/services/ai-seo",
+          name: "AI-Enhanced SEO with Algorithm Adaptation Scripts",
+          description: "Revolutionary custom algorithm adaptation scripts and proprietary solution building frameworks that automatically adjust to Google algorithm changes, maintaining peak search engine performance.",
+          provider: {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          serviceType: "Technical SEO",
+          category: "AI SEO"
+        },
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          price: "Custom Pricing",
+          priceCurrency: "USD"
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": "https://truerankdigital.com/#organization" }
+      },
+      {
+        "@type": "Offer",
+        "@id": "https://truerankdigital.com/services/website-development#offer",
+        itemOffered: {
+          "@type": "Service",
+          "@id": "https://truerankdigital.com/services/website-development",
+          name: "Custom Web Development with Enhanced Script Integration",
+          description: "SEO-optimized websites designed for conversion with advanced proprietary script integration capabilities that unlock enhanced algorithm manipulation tools and deeper optimization control.",
+          provider: {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          serviceType: "Web Development",
+          category: "Website Development"
+        },
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          price: "Custom Pricing",
+          priceCurrency: "USD"
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": "https://truerankdigital.com/#organization" }
+      },
+      {
+        "@type": "Offer",
+        "@id": "https://truerankdigital.com/services/ecommerce-optimization#offer",
+        itemOffered: {
+          "@type": "Service",
+          "@id": "https://truerankdigital.com/services/ecommerce-optimization",
+          name: "E-commerce Optimization & Competitor Analysis Platform",
+          description: "Scale your online store with comprehensive competitor analysis tools, keyword search volume research, and automated optimization strategies integrated with our proprietary dashboard platform.",
+          provider: {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          serviceType: "E-commerce SEO",
+          category: "E-commerce"
+        },
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          price: "Custom Pricing",
+          priceCurrency: "USD"
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": "https://truerankdigital.com/#organization" }
+      },
+      {
+        "@type": "Offer",
+        "@id": "https://truerankdigital.com/services/digital-marketing#offer",
+        itemOffered: {
+          "@type": "Service",
+          "@id": "https://truerankdigital.com/services/digital-marketing",
+          name: "Comprehensive Digital Marketing Campaign Management",
+          description: "Strategic digital marketing campaigns powered by our SEO dashboard platform featuring real-time performance tracking, organic search traffic generation tools, and proven Google optimization tactics.",
+          provider: {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          serviceType: "Digital Marketing",
+          category: "Marketing"
+        },
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          price: "Custom Pricing",
+          priceCurrency: "USD"
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": "https://truerankdigital.com/#organization" }
+      }
+    ]
+  };
+
+  // Enhanced Reviews with more detailed structured data
+  const enhancedReviewsSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "@id": "https://truerankdigital.com/reviews/sebastian-vargas",
+      reviewBody: "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Karkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!",
+      author: {
+        "@type": "Person",
+        name: "Sebastian Vargas"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-01-15",
+      itemReviewed: {
+        "@id": "https://truerankdigital.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "@id": "https://truerankdigital.com/reviews/jeffrey-fraley",
+      reviewBody: "I've been in car sales for over 17 years. Had a lot of vendors. John and his team at truerank are one of the only seo and gbp vendors that actually showed progress and are on point with their work.",
+      author: {
+        "@type": "Person",
+        name: "Jeffrey Fraley"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-02-20",
+      itemReviewed: {
+        "@id": "https://truerankdigital.com/#organization"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "@id": "https://truerankdigital.com/reviews/estrella-rojas",
+      reviewBody: "Jose was great to work with! He really understood what my business needed and helped get it on the right track. Thanks to his expertise, our online presence improved, and we saw real results. I highly recommend him and his team!",
+      author: {
+        "@type": "Person",
+        name: "Estrella Rojas"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-03-10",
+      itemReviewed: {
+        "@id": "https://truerankdigital.com/#organization"
+      }
+    }
+  ];
+
+  // Enhanced Aggregate Rating
+  const aggregateRating = {
+    "@type": "AggregateRating",
+    "@id": "https://truerankdigital.com/#aggregate-rating",
+    ratingValue: "5.0",
+    bestRating: "5",
+    worstRating: "1",
+    ratingCount: "12",
+    reviewCount: "12"
+  };
+
+  // Speakable markup for voice search optimization
+  const speakableSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://truerankdigital.com/#speakable",
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".hero-content h1", ".hero-content p", ".mission-section h2", ".mission-section p"]
+    }
+  };
+
+  // Article schema for educational content
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://truerankdigital.com/#main-article",
+    headline: "Professional SEO & Digital Marketing Services",
+    description: "Get your business found on Google with True Rank Digital's custom SEO software, schema markup engineering, and LLM.txt optimization services.",
+    articleSection: "Digital Marketing",
+    keywords: "SEO, Local SEO, Digital Marketing, Google Business Profile, AI SEO, Schema Markup, LLM.txt",
+    author: {
+      "@id": "https://truerankdigital.com/#organization"
+    },
+    publisher: {
+      "@id": "https://truerankdigital.com/#organization"
+    },
+    datePublished: "2024-01-01",
+    dateModified: new Date().toISOString().split('T')[0],
+    mainEntityOfPage: {
+      "@id": "https://truerankdigital.com/#webpage"
+    },
+    about: [
+      {
+        "@type": "Thing",
+        name: "Search Engine Optimization",
+        description: "Professional SEO services to improve search rankings"
+      },
+      {
+        "@type": "Thing",
+        name: "Digital Marketing",
+        description: "Comprehensive digital marketing strategies and solutions"
+      }
+    ]
+  };
+
+  // Video schema for promotional content (if applicable)
+  const videoSchema = {
+    "@type": "VideoObject",
+    "@id": "https://truerankdigital.com/#promotional-video",
+    name: "True Rank Digital - Professional SEO Services",
+    description: "Learn how True Rank Digital helps businesses dominate local search results with proprietary SEO technology and custom software solutions.",
+    thumbnailUrl: "https://truerankdigital.com/images/video-thumbnail.jpg",
+    uploadDate: "2024-01-01",
+    duration: "PT2M30S",
+    contentUrl: "https://truerankdigital.com/videos/trd-services.mp4",
+    embedUrl: "https://truerankdigital.com/videos/trd-services-embed",
+    interactionStatistic: {
+      "@type": "InteractionCounter",
+      interactionType: "https://schema.org/WatchAction",
+      userInteractionCount: "150"
+    },
+    author: {
+      "@id": "https://truerankdigital.com/#organization"
+    },
+    publisher: {
+      "@id": "https://truerankdigital.com/#organization"
+    }
+  };
+
+  // Determine which schemas to include based on props
+  const baseSchemas = [organizationSchema, websiteSchema];
+  const allSchemas = includeAllSchemas ? [
     organizationSchema,
-    localBusinessSchema, 
+    localBusinessSchema,
     websiteSchema,
+    enhancedServiceCatalog,
     faqSchema,
     howToSchema,
     professionalServiceSchema,
     softwareApplicationSchema,
+    aggregateRating,
+    speakableSchema,
+    articleSchema,
     ...teamMembersSchema,
-    ...reviewsSchema
-  ];
+    ...enhancedReviewsSchema
+  ] : baseSchemas;
 
   if (breadcrumbSchema) {
     allSchemas.push(breadcrumbSchema);

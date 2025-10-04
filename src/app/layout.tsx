@@ -90,7 +90,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
-        <SchemaMarkup />
+        <SchemaMarkup includeAllSchemas={false} />
       </head>
       <body className="font-sans">
         <div className="min-h-screen flex flex-col animated-bg">

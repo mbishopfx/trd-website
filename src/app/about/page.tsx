@@ -32,15 +32,31 @@ export default function AboutPage() {
       {/* Location & Reach Section */}
       <LocationReachSection />
     
-      {/* Comprehensive Schema Markup */}
+      {/* Enhanced Schema Markup for About Page */}
       <ComprehensiveSchema
-        type="about"
+        type="article"
         pageData={{
           title: "About True Rank Digital - Professional SEO & Digital Marketing Experts",
           description: "Learn about True Rank Digital's mission, values, and expert team providing professional SEO and digital marketing services with custom proprietary technology solutions.",
           url: "https://truerankdigital.com/about",
-          keywords: ["True Rank Digital", "about us", "SEO experts", "digital marketing team", "company mission", "professional services", "proprietary technology"],
-          category: "Company Information"
+          keywords: ["True Rank Digital", "about us", "SEO experts", "digital marketing team", "company mission", "professional services", "proprietary technology", "Jon Korkowski", "Jesse Mathews", "Jose Perdomo"],
+          category: "Company Information",
+          datePublished: "2024-01-01",
+          dateModified: new Date().toISOString().split('T')[0],
+          contentSections: [
+            {
+              heading: "Our Mission",
+              text: "True Rank Digital is dedicated to helping businesses succeed through innovative SEO and digital marketing solutions. We build custom technology that gives our clients a competitive advantage in search rankings."
+            },
+            {
+              heading: "Our Team",
+              text: "Led by industry experts including Jon Korkowski, Jesse Mathews, and Jose Perdomo, our team combines deep technical knowledge with proven marketing strategies to deliver exceptional results."
+            },
+            {
+              heading: "Our Technology",
+              text: "We develop proprietary software solutions including custom schema markup engineering, LLM.txt optimization, and advanced problem detection systems that competitors simply don't offer."
+            }
+          ]
         }}
         breadcrumbs={[
           { name: "Home", url: "https://truerankdigital.com" },

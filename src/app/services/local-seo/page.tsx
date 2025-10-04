@@ -27,13 +27,39 @@ export default function LocalSEOPage() {
   return (
     <>
       {/* Enhanced Schema Markup for Local SEO Service Page */}
-      <PageSpecificSchema 
-        pageType="service"
-        pageTitle="Local SEO Services"
-        pageDescription="Professional local SEO services to help your business dominate local search results and get found by nearby customers on Google Maps."
-        serviceName="Local SEO & Google Maps Optimization"
-        serviceDescription="Comprehensive local search optimization including Google Maps optimization, local keyword targeting, citation building, review management, and local content strategy."
-        servicePrice="Contact for custom pricing"
+      <ComprehensiveSchema
+        type="howto"
+        pageData={{
+          title: "Professional Local SEO Services - How to Dominate Local Search",
+          description: "Learn how True Rank Digital's proven local SEO process helps businesses dominate local search results and get found by nearby customers on Google Maps.",
+          url: "https://truerankdigital.com/services/local-seo",
+          keywords: ["local SEO", "Google Maps optimization", "local search ranking", "Google Business Profile", "local citations", "review management", "local content strategy"],
+          category: "Local SEO",
+          datePublished: "2024-01-01",
+          dateModified: new Date().toISOString().split('T')[0],
+          contentSections: [
+            {
+              heading: "Technical SEO Audit",
+              text: "We scan your website with our proprietary problem detection software to find issues other SEO companies miss at the code level. This comprehensive audit identifies technical barriers that could be hurting your local search visibility."
+            },
+            {
+              heading: "Custom Schema Markup Engineering",
+              text: "We create hand-crafted structured data schemas specifically for your business type to help search engines understand your content better than competitors. This includes local business schema, service schema, and review markup."
+            },
+            {
+              heading: "LLM.txt Creation & Optimization",
+              text: "We develop and optimize LLM.txt files designed for AI search engines like ChatGPT, Claude, and Perplexity to improve your AI search visibility. This cutting-edge optimization gives you a competitive advantage in AI-powered search results."
+            },
+            {
+              heading: "Custom Solution Implementation",
+              text: "We build and implement custom software solutions to fix identified problems and optimize your website's search engine performance. Our proprietary tools ensure your local SEO strategy adapts to algorithm changes automatically."
+            },
+            {
+              heading: "Ongoing Monitoring & Optimization",
+              text: "Our custom software continuously monitors and optimizes your website's performance, making real-time adjustments for maximum search visibility. This includes tracking local keyword rankings, Google Business Profile insights, and competitor analysis."
+            }
+          ]
+        }}
         breadcrumbs={[
           { name: "Home", url: "https://truerankdigital.com" },
           { name: "Services", url: "https://truerankdigital.com/services" },

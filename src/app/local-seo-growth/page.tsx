@@ -17,7 +17,8 @@ import {
   ArrowRight,
   Target,
   Zap,
-  BarChart3
+  BarChart3,
+  Award
 } from 'lucide-react';
 import { 
   LineChart, 

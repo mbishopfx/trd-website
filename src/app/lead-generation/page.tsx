@@ -215,9 +215,8 @@ export default function LeadGenerationPage() {
                   </h1>
                   
                   <p className="text-xl text-white/90 leading-relaxed mb-8 max-w-xl">
-                    Stop chasing unqualified prospects. Our proven lead generation system helps businesses 
-                    generate <strong className="text-yellow-300">{animatedLeads}%</strong> more qualified leads 
-                    in just 90 days.
+                    Stop chasing unqualified prospects. Our team of lead generation specialists creates 
+                    custom strategies to help your business generate more qualified leads consistently.
                   </p>
 
                   <div className="grid grid-cols-3 gap-6 mb-8">
@@ -227,8 +226,8 @@ export default function LeadGenerationPage() {
                       transition={{ duration: 0.6, delay: 0.2 }}
                       className="text-center"
                     >
-                      <div className="text-3xl font-bold text-yellow-300">6.3x</div>
-                      <div className="text-sm text-white/80">More Leads</div>
+                      <div className="text-3xl font-bold text-yellow-300">Expert</div>
+                      <div className="text-sm text-white/80">Specialists</div>
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8 }}
@@ -236,8 +235,8 @@ export default function LeadGenerationPage() {
                       transition={{ duration: 0.6, delay: 0.3 }}
                       className="text-center"
                     >
-                      <div className="text-3xl font-bold text-yellow-300">78%</div>
-                      <div className="text-sm text-white/80">Higher Quality</div>
+                      <div className="text-3xl font-bold text-yellow-300">Custom</div>
+                      <div className="text-sm text-white/80">Approach</div>
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8 }}
@@ -245,8 +244,8 @@ export default function LeadGenerationPage() {
                       transition={{ duration: 0.6, delay: 0.4 }}
                       className="text-center"
                     >
-                      <div className="text-3xl font-bold text-yellow-300">30</div>
-                      <div className="text-sm text-white/80">Days Average</div>
+                      <div className="text-3xl font-bold text-yellow-300">Proven</div>
+                      <div className="text-sm text-white/80">Methods</div>
                     </motion.div>
                   </div>
 

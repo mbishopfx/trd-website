@@ -28,9 +28,9 @@ export async function POST(request: NextRequest) {
     // Verify transporter configuration
     await transporter.verify();
 
-    // Email content for audit request
+    // Email content for custom playbook request
     const emailContent = `
-      <h2>New Free SEO Audit Request - True Rank Digital</h2>
+      <h2>New Free Custom Playbook Request - True Rank Digital</h2>
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>Email:</strong> ${email}</p>
       ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
@@ -57,33 +57,33 @@ export async function POST(request: NextRequest) {
       <div style="background-color: #fff3cd; padding: 15px; border: 1px solid #ffeaa7; border-radius: 5px; margin: 20px 0;">
         <h3 style="color: #856404; margin-top: 0;">Action Required:</h3>
         <p style="color: #856404; margin-bottom: 0;">
-          <strong>Free SEO Audit requested for:</strong> <a href="${website}" target="_blank">${website}</a><br>
-          Please conduct the audit and send the results to the client.
+          <strong>Free Custom Playbook requested for:</strong> <a href="${website}" target="_blank">${website}</a><br>
+          Please conduct the analysis and send the custom playbook to the client.
         </p>
       </div>
       
-      <p><small>This audit request was submitted at ${new Date().toLocaleString()}</small></p>
+      <p><small>This custom playbook request was submitted at ${new Date().toLocaleString()}</small></p>
     `;
 
     // Send email
     const mailOptions = {
-      from: `"True Rank Digital Audit Request" <${process.env.SMTP_USER}>`,
+      from: `"True Rank Digital Custom Playbook Request" <${process.env.SMTP_USER}>`,
       to: process.env.RECIPIENT_EMAIL,
       replyTo: email,
-      subject: `🔍 Free SEO Audit Request - ${website} (${name})`,
+      subject: `🎯 Free Custom Playbook Request - ${website} (${name})`,
       html: emailContent,
     };
 
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json(
-      { message: 'Audit request sent successfully' },
+      { message: 'Custom playbook request sent successfully' },
       { status: 200 }
     );
   } catch (error) {
-    console.error('Audit request error:', error);
+    console.error('Custom playbook request error:', error);
     return NextResponse.json(
-      { error: 'Failed to send audit request. Please try again later or contact us directly.' },
+      { error: 'Failed to send custom playbook request. Please try again later or contact us directly.' },
       { status: 500 }
     );
   }

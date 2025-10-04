@@ -6,11 +6,11 @@ import PageSpecificSchema from '@/components/seo/PageSpecificSchema';
 import ComprehensiveSchema from '@/components/seo/ComprehensiveSchema';
 
 export const metadata: Metadata = {
-  title: 'Contact True Rank Digital - Get Your Free SEO Audit Today',
+  title: 'Contact True Rank Digital - Get Your Free Custom Playbook Today',
   description: 'Ready to scale your business with AI-enhanced digital marketing? Contact True Rank Digital for enterprise-level SEO solutions. 24/7 support available.',
-  keywords: 'contact true rank digital, free seo audit, digital marketing consultation, AI SEO services, New Jersey SEO company',
+  keywords: 'contact true rank digital, free custom playbook, digital marketing consultation, AI SEO services, New Jersey SEO company',
   openGraph: {
-    title: 'Contact True Rank Digital - Get Your Free SEO Audit Today',
+    title: 'Contact True Rank Digital - Get Your Free Custom Playbook Today',
     description: 'Ready to scale your business with AI-enhanced digital marketing? Contact us for enterprise-level SEO solutions.',
     url: 'https://truerankdigital.com/contact',
     type: 'website',

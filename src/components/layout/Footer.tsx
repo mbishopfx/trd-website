@@ -88,7 +88,7 @@ const footerSections: FooterSection[] = [
   {
     title: 'Resources',
     links: [
-      { name: 'Free SEO Audit', href: '/free-audit' },
+      { name: 'Free Custom Playbook', href: '/free-audit' },
       { name: 'AI Technology', href: '/learn-aio' },
       { name: 'Referral Program', href: '/referral' }
     ]
@@ -332,7 +332,7 @@ export default function Footer() {
               Ready to Dominate Your Market?
             </h4>
             <p className="text-gray-400 mb-6">
-              Get your free SEO audit and discover how our AI technology can transform your business.
+              Get your free custom playbook and discover how our AI technology can transform your business.
             </p>
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -342,7 +342,7 @@ export default function Footer() {
                 href="/free-audit"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-brand-primary text-white font-semibold rounded-full hover:bg-brand-primary/90 transition-all duration-300 shadow-glow hover:shadow-glow-lg"
               >
-                <span>Get Your Free Audit</span>
+                <span>Get Your Free Custom Playbook</span>
                 <ExternalLink className="w-4 h-4" />
               </Link>
             </motion.div>

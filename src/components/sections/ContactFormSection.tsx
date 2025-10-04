@@ -24,7 +24,7 @@ export default function ContactFormSection() {
     'AI-Enhanced SEO',
     'Website Development',
     'Ecommerce Optimization',
-    'Free SEO Audit',
+    'Free Custom Playbook',
     'General Inquiry'
   ];
 

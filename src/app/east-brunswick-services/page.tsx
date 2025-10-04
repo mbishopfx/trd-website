@@ -112,7 +112,7 @@ export default function EastBrunswickServicesPage() {
     'Google-certified and schema markup specialists',
     'Custom proprietary SEO software platform',
     'Same-day response and dedicated support',
-    'Free comprehensive SEO audit included'
+    'Free comprehensive custom playbook included'
   ];
 
   const testimonials = [
@@ -165,7 +165,7 @@ export default function EastBrunswickServicesPage() {
                   className="inline-flex items-center space-x-2 bg-white text-brand-primary px-8 py-4 rounded-full font-semibold hover:bg-brand-light transition-colors duration-300"
                 >
                   <Search className="w-5 h-5" />
-                  <span>Free East Brunswick SEO Audit</span>
+                  <span>Free East Brunswick Custom Playbook</span>
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -420,7 +420,7 @@ export default function EastBrunswickServicesPage() {
               Ready to Dominate East Brunswick Search Results?
             </h2>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Get your free SEO audit and discover how we can help your East Brunswick business outrank the competition and attract more local customers.
+              Get your free custom playbook and discover how we can help your East Brunswick business outrank the competition and attract more local customers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -429,7 +429,7 @@ export default function EastBrunswickServicesPage() {
                   className="inline-flex items-center space-x-2 bg-white text-brand-primary px-8 py-4 rounded-full font-semibold hover:bg-brand-light transition-colors duration-300"
                 >
                   <Search className="w-5 h-5" />
-                  <span>Get Free SEO Audit</span>
+                  <span>Get Free Custom Playbook</span>
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

@@ -126,7 +126,7 @@ export default function KnowledgeGraphPage() {
       description: 'Comprehensive analysis of current entity recognition and identification of optimization opportunities',
       deliverables: [
         'Current knowledge graph assessment and competitive analysis',
-        'Entity recognition audit across all major search engines and platforms',
+        'Entity recognition analysis across all major search engines and platforms',
         'Strategic roadmap for knowledge graph optimization and authority building',
         'Priority implementation plan with expected impact timelines'
       ],

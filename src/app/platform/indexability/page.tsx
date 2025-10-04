@@ -39,7 +39,7 @@ export default function IndexabilityAnalysisPage() {
       impact: 'Complete content discovery and efficient crawl budget usage'
     },
     {
-      category: 'Technical Infrastructure Audit',
+      category: 'Technical Infrastructure Analysis',
       icon: <Server className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-500',
       features: [
@@ -181,7 +181,7 @@ export default function IndexabilityAnalysisPage() {
                     className="inline-flex items-center space-x-2 px-8 py-4 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition-all duration-300"
                   >
                     <Eye className="w-5 h-5" />
-                    <span>Get Indexability Audit</span>
+                    <span>Get Indexability Analysis</span>
                   </Link>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

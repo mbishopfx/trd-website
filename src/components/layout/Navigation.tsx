@@ -299,7 +299,7 @@ export default function Navigation() {
                 className="glass-button px-6 py-3 bg-brand-primary text-white font-semibold rounded-full flex items-center space-x-2 hover:bg-brand-primary/90 transition-all duration-300"
               >
                 <Rocket className="w-4 h-4" />
-                <span>Free Audit</span>
+                <span>Free Custom Playbook</span>
               </Link>
             </motion.div>
           </div>
@@ -406,7 +406,7 @@ export default function Navigation() {
                   className="w-full glass-button px-6 py-3 bg-brand-primary text-white font-semibold rounded-full flex items-center justify-center space-x-2 hover:bg-brand-primary/90 transition-all duration-300"
                 >
                   <Rocket className="w-4 h-4" />
-                  <span>Free Audit</span>
+                  <span>Free Custom Playbook</span>
                 </Link>
               </div>
             </div>

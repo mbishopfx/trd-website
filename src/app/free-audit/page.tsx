@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Search, CheckCircle, Zap, User, Mail, Building, Globe, MessageSquare, DollarSign, Send, AlertCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-export default function FreeAuditPage() {
+export default function FreeCustomPlaybookPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -56,7 +56,7 @@ export default function FreeAuditPage() {
     setSubmitMessage('');
 
     try {
-      const response = await fetch('/api/audit', {
+      const response = await fetch('/api/custom-playbook', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ export default function FreeAuditPage() {
 
       if (response.ok) {
         setSubmitStatus('success');
-          setSubmitMessage('Thank you! Your free SEO audit request has been submitted. We&apos;ll analyze your website and send you a comprehensive report within 24-48 hours.');
+          setSubmitMessage('Thank you! Your free custom playbook request has been submitted. We&apos;ll analyze your website and send you a comprehensive report within 24-48 hours.');
         // Reset form
         setFormData({
           name: '',
@@ -88,9 +88,9 @@ export default function FreeAuditPage() {
         setSubmitMessage(data.error || 'Something went wrong. Please try again or contact us directly.');
       }
     } catch (error) {
-      console.error('Audit request error:', error);
+      console.error('Custom playbook request error:', error);
       setSubmitStatus('error');
-      setSubmitMessage('Failed to submit audit request. Please check your internet connection and try again.');
+      setSubmitMessage('Failed to submit custom playbook request. Please check your internet connection and try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -110,7 +110,7 @@ export default function FreeAuditPage() {
               className="inline-flex items-center space-x-2 px-4 py-2 bg-brand-primary/10 rounded-full mb-6"
             >
               <Search className="w-5 h-5 text-brand-primary" />
-              <span className="text-brand-primary font-semibold text-sm">Free SEO Audit</span>
+              <span className="text-brand-primary font-semibold text-sm">Free Custom Playbook</span>
             </motion.div>
             
             <motion.h1
@@ -119,7 +119,7 @@ export default function FreeAuditPage() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6"
             >
-              Get Your Free SEO Audit
+              Get Your Free Custom Playbook
             </motion.h1>
             
             <motion.p
@@ -128,7 +128,7 @@ export default function FreeAuditPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl text-brand-dark/70 max-w-3xl mx-auto mb-12"
             >
-              Discover exactly what's holding your website back with our comprehensive SEO audit. Get actionable insights and recommendations at no cost.
+              Discover exactly what's holding your website back with our comprehensive custom playbook. Get actionable insights and recommendations at no cost.
             </motion.p>
           </div>
 
@@ -167,7 +167,7 @@ export default function FreeAuditPage() {
               </div>
             </motion.div>
 
-            {/* Audit Form */}
+            {/* Custom Playbook Form */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -175,7 +175,7 @@ export default function FreeAuditPage() {
               className="glass-card p-8"
             >
               <h2 className="text-2xl font-heading font-bold text-brand-dark mb-6">
-                Request Your Free Audit
+                Request Your Free Custom Playbook
               </h2>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -346,7 +346,7 @@ export default function FreeAuditPage() {
                     ) : (
                       <>
                         <Send className="w-5 h-5" />
-                        <span>Get My Free Audit</span>
+                        <span>Get My Free Custom Playbook</span>
                       </>
                     )}
                   </motion.button>

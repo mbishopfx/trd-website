@@ -21,7 +21,7 @@ import {
   Shield,
   Zap
 } from 'lucide-react';
-import { ComprehensiveSchema } from '@/components/seo/ComprehensiveSchema';
+import ComprehensiveSchema from '@/components/seo/ComprehensiveSchema';
 
 interface FormData {
   name: string;

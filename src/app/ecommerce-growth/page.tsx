@@ -596,7 +596,7 @@ export default function EcommerceGrowthPage() {
                           value={formData.name}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="Your full name"
                         />
                       </div>
@@ -615,7 +615,7 @@ export default function EcommerceGrowthPage() {
                           value={formData.email}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="your.email@example.com"
                         />
                       </div>
@@ -635,7 +635,7 @@ export default function EcommerceGrowthPage() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="(555) 123-4567"
                         />
                       </div>
@@ -654,7 +654,7 @@ export default function EcommerceGrowthPage() {
                           value={formData.company}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="Your store name"
                         />
                       </div>
@@ -693,7 +693,7 @@ export default function EcommerceGrowthPage() {
                         value={formData.challenges}
                         onChange={handleInputChange}
                         rows={4}
-                        className="form-input pl-11 resize-none"
+                        className="form-input pl-11 text-gray-900 placeholder-gray-500 resize-none"
                         placeholder="What challenges is your online store facing? (low conversion rates, cart abandonment, traffic issues, etc.)"
                       />
                     </div>

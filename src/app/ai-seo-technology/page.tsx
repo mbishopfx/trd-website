@@ -611,7 +611,7 @@ export default function AISeOTechnologyPage() {
                           value={formData.name}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="Your full name"
                         />
                       </div>
@@ -630,7 +630,7 @@ export default function AISeOTechnologyPage() {
                           value={formData.email}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="your.email@example.com"
                         />
                       </div>
@@ -650,7 +650,7 @@ export default function AISeOTechnologyPage() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="(555) 123-4567"
                         />
                       </div>
@@ -669,7 +669,7 @@ export default function AISeOTechnologyPage() {
                           value={formData.company}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="Your company name"
                         />
                       </div>
@@ -708,7 +708,7 @@ export default function AISeOTechnologyPage() {
                         value={formData.currentTech}
                         onChange={handleInputChange}
                         rows={3}
-                        className="form-input pl-11 resize-none"
+                        className="form-input pl-11 text-gray-900 placeholder-gray-500 resize-none"
                         placeholder="What SEO tools and technologies are you currently using?"
                       />
                     </div>
@@ -726,7 +726,7 @@ export default function AISeOTechnologyPage() {
                         value={formData.goals}
                         onChange={handleInputChange}
                         rows={3}
-                        className="form-input pl-11 resize-none"
+                        className="form-input pl-11 text-gray-900 placeholder-gray-500 resize-none"
                         placeholder="What do you hope to achieve with AI-powered SEO? (automation, efficiency, better results, etc.)"
                       />
                     </div>

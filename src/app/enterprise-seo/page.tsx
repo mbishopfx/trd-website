@@ -602,7 +602,7 @@ export default function EnterpriseSEOPage() {
                           value={formData.name}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="Your full name"
                         />
                       </div>
@@ -621,7 +621,7 @@ export default function EnterpriseSEOPage() {
                           value={formData.email}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="your.email@company.com"
                         />
                       </div>
@@ -641,7 +641,7 @@ export default function EnterpriseSEOPage() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="(555) 123-4567"
                         />
                       </div>
@@ -660,7 +660,7 @@ export default function EnterpriseSEOPage() {
                           value={formData.company}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="Your company name"
                         />
                       </div>
@@ -699,7 +699,7 @@ export default function EnterpriseSEOPage() {
                         value={formData.currentChallenges}
                         onChange={handleInputChange}
                         rows={3}
-                        className="form-input pl-11 resize-none"
+                        className="form-input pl-11 text-gray-900 placeholder-gray-500 resize-none"
                         placeholder="What SEO challenges is your enterprise facing? (technical issues, competitive pressure, scaling problems, etc.)"
                       />
                     </div>
@@ -717,7 +717,7 @@ export default function EnterpriseSEOPage() {
                         value={formData.goals}
                         onChange={handleInputChange}
                         rows={3}
-                        className="form-input pl-11 resize-none"
+                        className="form-input pl-11 text-gray-900 placeholder-gray-500 resize-none"
                         placeholder="What are your enterprise SEO goals? (traffic targets, market expansion, competitive dominance, etc.)"
                       />
                     </div>

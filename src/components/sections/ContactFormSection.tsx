@@ -137,7 +137,7 @@ export default function ContactFormSection() {
                   required
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm"
+                  className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm text-gray-900 placeholder-gray-500"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -154,7 +154,7 @@ export default function ContactFormSection() {
                   required
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm"
+                  className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm text-gray-900 placeholder-gray-500"
                   placeholder="Enter your email address"
                 />
               </div>
@@ -173,7 +173,7 @@ export default function ContactFormSection() {
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm"
+                  className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm text-gray-900 placeholder-gray-500"
                   placeholder="Your business name"
                 />
               </div>
@@ -191,7 +191,7 @@ export default function ContactFormSection() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm"
+                  className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm text-gray-900 placeholder-gray-500"
                   placeholder="(555) 123-4567"
                 />
               </div>
@@ -208,7 +208,7 @@ export default function ContactFormSection() {
                 name="service"
                 value={formData.service}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm"
+                className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm text-gray-900 placeholder-gray-500"
               >
                 <option value="">Select a service</option>
                 {serviceOptions.map((service) => (
@@ -230,7 +230,7 @@ export default function ContactFormSection() {
                 rows={5}
                 value={formData.message}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm resize-none"
+                className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm text-gray-900 placeholder-gray-500 resize-none"
                 placeholder="Tell us about your business goals and how we can help you achieve them..."
               />
             </div>

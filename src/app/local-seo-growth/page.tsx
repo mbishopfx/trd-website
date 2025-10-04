@@ -574,7 +574,7 @@ export default function LocalSEOGrowthPage() {
                           value={formData.name}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="Your full name"
                         />
                       </div>
@@ -593,7 +593,7 @@ export default function LocalSEOGrowthPage() {
                           value={formData.email}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="your.email@example.com"
                         />
                       </div>
@@ -613,7 +613,7 @@ export default function LocalSEOGrowthPage() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="(555) 123-4567"
                         />
                       </div>
@@ -632,7 +632,7 @@ export default function LocalSEOGrowthPage() {
                           value={formData.company}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="Your business name"
                         />
                       </div>
@@ -651,7 +651,7 @@ export default function LocalSEOGrowthPage() {
                         value={formData.currentChallenges}
                         onChange={handleInputChange}
                         rows={3}
-                        className="form-input pl-11 resize-none"
+                        className="form-input pl-11 text-gray-900 placeholder-gray-500 resize-none"
                         placeholder="What local SEO challenges is your business facing?"
                       />
                     </div>
@@ -669,7 +669,7 @@ export default function LocalSEOGrowthPage() {
                         value={formData.goals}
                         onChange={handleInputChange}
                         rows={3}
-                        className="form-input pl-11 resize-none"
+                        className="form-input pl-11 text-gray-900 placeholder-gray-500 resize-none"
                         placeholder="What are your main business goals for the next 6-12 months?"
                       />
                     </div>

@@ -193,7 +193,7 @@ export default function FreeCustomPlaybookPage() {
                       required
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80"
+                      className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 text-gray-900 placeholder-gray-500"
                       placeholder="Your name"
                     />
                   </div>
@@ -210,7 +210,7 @@ export default function FreeCustomPlaybookPage() {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80"
+                      className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 text-gray-900 placeholder-gray-500"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -231,7 +231,7 @@ export default function FreeCustomPlaybookPage() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80"
+                      className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 text-gray-900 placeholder-gray-500"
                       placeholder="(555) 123-4567"
                     />
                   </div>
@@ -247,7 +247,7 @@ export default function FreeCustomPlaybookPage() {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80"
+                      className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 text-gray-900 placeholder-gray-500"
                       placeholder="Your business name"
                     />
                   </div>
@@ -266,7 +266,7 @@ export default function FreeCustomPlaybookPage() {
                     required
                     value={formData.website}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80"
+                    className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 text-gray-900 placeholder-gray-500"
                     placeholder="https://yourwebsite.com"
                   />
                 </div>
@@ -282,7 +282,7 @@ export default function FreeCustomPlaybookPage() {
                     name="budget"
                     value={formData.budget}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80"
+                    className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 text-gray-900 placeholder-gray-500"
                   >
                     <option value="">Select budget range</option>
                     {budgetOptions.map((option) => (
@@ -303,7 +303,7 @@ export default function FreeCustomPlaybookPage() {
                     rows={3}
                     value={formData.currentMarketing}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 resize-none"
+                    className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 text-gray-900 placeholder-gray-500 resize-none"
                         placeholder="Tell us about any SEO or marketing you&apos;re currently doing..."
                   />
                 </div>
@@ -320,7 +320,7 @@ export default function FreeCustomPlaybookPage() {
                     rows={3}
                     value={formData.goals}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 resize-none"
+                    className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 text-gray-900 placeholder-gray-500 resize-none"
                     placeholder="What are your main business goals and how can SEO help achieve them?"
                   />
                 </div>

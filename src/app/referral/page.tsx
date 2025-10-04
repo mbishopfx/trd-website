@@ -431,7 +431,7 @@ export default function ReferralPage() {
                           value={formData.name}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="Your full name"
                         />
                       </div>
@@ -450,7 +450,7 @@ export default function ReferralPage() {
                           value={formData.email}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="your.email@example.com"
                         />
                       </div>
@@ -470,7 +470,7 @@ export default function ReferralPage() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="(555) 123-4567"
                         />
                       </div>
@@ -488,7 +488,7 @@ export default function ReferralPage() {
                           name="company"
                           value={formData.company}
                           onChange={handleInputChange}
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="Your company name"
                         />
                       </div>
@@ -545,7 +545,7 @@ export default function ReferralPage() {
                         value={formData.message}
                         onChange={handleInputChange}
                         rows={4}
-                        className="form-input pl-11 resize-none"
+                        className="form-input pl-11 text-gray-900 placeholder-gray-500 resize-none"
                         placeholder="Tell us about your referral network, target audience, or any questions you have..."
                       />
                     </div>

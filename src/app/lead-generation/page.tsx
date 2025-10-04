@@ -607,7 +607,7 @@ export default function LeadGenerationPage() {
                           value={formData.name}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="Your full name"
                         />
                       </div>
@@ -626,7 +626,7 @@ export default function LeadGenerationPage() {
                           value={formData.email}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="your.email@example.com"
                         />
                       </div>
@@ -646,7 +646,7 @@ export default function LeadGenerationPage() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="(555) 123-4567"
                         />
                       </div>
@@ -665,7 +665,7 @@ export default function LeadGenerationPage() {
                           value={formData.company}
                           onChange={handleInputChange}
                           required
-                          className="form-input pl-11"
+                          className="form-input pl-11 text-gray-900 placeholder-gray-500"
                           placeholder="Your company name"
                         />
                       </div>
@@ -704,7 +704,7 @@ export default function LeadGenerationPage() {
                         value={formData.currentLeadGen}
                         onChange={handleInputChange}
                         rows={3}
-                        className="form-input pl-11 resize-none"
+                        className="form-input pl-11 text-gray-900 placeholder-gray-500 resize-none"
                         placeholder="What lead generation methods are you currently using? (referrals, ads, SEO, etc.)"
                       />
                     </div>
@@ -722,7 +722,7 @@ export default function LeadGenerationPage() {
                         value={formData.goals}
                         onChange={handleInputChange}
                         rows={3}
-                        className="form-input pl-11 resize-none"
+                        className="form-input pl-11 text-gray-900 placeholder-gray-500 resize-none"
                         placeholder="What are your lead generation goals? (number of leads, quality improvements, etc.)"
                       />
                     </div>

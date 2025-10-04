@@ -296,10 +296,10 @@ export default function Navigation() {
             >
               <Link
                 href="/free-audit"
-                className="glass-button px-6 py-3 bg-brand-primary text-white font-semibold rounded-full flex items-center space-x-2 hover:bg-brand-primary/90 transition-all duration-300"
+                className="glass-button px-4 py-2.5 bg-brand-primary text-white font-semibold rounded-full flex items-center space-x-1.5 hover:bg-brand-primary/90 transition-all duration-300 text-sm whitespace-nowrap"
               >
-                <Rocket className="w-4 h-4" />
-                <span>Free Custom Playbook</span>
+                <Rocket className="w-3.5 h-3.5" />
+                <span>Custom Playbook</span>
               </Link>
             </motion.div>
           </div>
@@ -403,10 +403,10 @@ export default function Navigation() {
                 <Link
                   href="/free-audit"
                   onClick={() => setIsMenuOpen(false)}
-                  className="w-full glass-button px-6 py-3 bg-brand-primary text-white font-semibold rounded-full flex items-center justify-center space-x-2 hover:bg-brand-primary/90 transition-all duration-300"
+                  className="w-full glass-button px-4 py-2.5 bg-brand-primary text-white font-semibold rounded-full flex items-center justify-center space-x-1.5 hover:bg-brand-primary/90 transition-all duration-300 text-sm"
                 >
-                  <Rocket className="w-4 h-4" />
-                  <span>Free Custom Playbook</span>
+                  <Rocket className="w-3.5 h-3.5" />
+                  <span>Custom Playbook</span>
                 </Link>
               </div>
             </div>

@@ -506,7 +506,7 @@ export default function ReferralPage() {
                       value={formData.referralType}
                       onChange={handleInputChange}
                       required
-                      className="form-input"
+                      className="form-input text-brand-dark font-medium"
                     >
                       <option value="">Select partnership type</option>
                       {referralTypes.map((type) => (
@@ -586,7 +586,9 @@ export default function ReferralPage() {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       className={`
-                        btn btn-primary text-lg px-12 py-4
+                        bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold
+                        px-12 py-4 text-lg rounded-full shadow-lg hover:shadow-xl
+                        transition-all duration-300 transform hover:scale-105
                         ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}
                       `}
                     >

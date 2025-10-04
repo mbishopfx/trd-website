@@ -61,7 +61,7 @@ export default function LocalSEOGrowthPage() {
   const [submitMessage, setSubmitMessage] = useState('');
   const [animatedData, setAnimatedData] = useState(0);
 
-  // Animated counter for hero metrics
+  // Animated counter for hero visual appeal
   useEffect(() => {
     const timer = setInterval(() => {
       setAnimatedData(prev => {
@@ -73,33 +73,17 @@ export default function LocalSEOGrowthPage() {
     return () => clearInterval(timer);
   }, []);
 
-  // Growth chart data
-  const trafficGrowthData = [
-    { month: 'Jan', organic: 1200, local: 800, calls: 25 },
-    { month: 'Feb', organic: 1800, local: 1400, calls: 35 },
-    { month: 'Mar', organic: 2400, local: 2100, calls: 45 },
-    { month: 'Apr', organic: 3200, local: 2800, calls: 60 },
-    { month: 'May', organic: 4100, local: 3600, calls: 75 },
-    { month: 'Jun', organic: 5200, local: 4500, calls: 95 }
-  ];
-
-  const rankingData = [
-    { keyword: 'Local Restaurant', before: 45, after: 3 },
-    { keyword: 'Best Pizza Near Me', before: 78, after: 1 },
-    { keyword: 'Italian Food Delivery', before: 89, after: 2 },
-    { keyword: 'Family Restaurant', before: 52, after: 4 },
-    { keyword: 'Authentic Cuisine', before: 67, after: 5 }
-  ];
-
-  const conversionData = [
-    { name: 'Website Traffic', value: 85, color: '#3b82f6' },
-    { name: 'Phone Calls', value: 92, color: '#10b981' },
-    { name: 'Foot Traffic', value: 78, color: '#f59e0b' },
-    { name: 'Online Orders', value: 89, color: '#8b5cf6' }
+  // Sample data for visual demonstration only
+  const sampleGrowthData = [
+    { month: 'Month 1', visitors: 1000 },
+    { month: 'Month 2', visitors: 1400 },
+    { month: 'Month 3', visitors: 2100 },
+    { month: 'Month 4', visitors: 2800 },
+    { month: 'Month 5', visitors: 3600 },
+    { month: 'Month 6', visitors: 4500 }
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -204,9 +188,8 @@ export default function LocalSEOGrowthPage() {
                   </h1>
                   
                   <p className="text-xl text-white/90 leading-relaxed mb-8 max-w-xl">
-                    Stop losing customers to competitors. Our proven local SEO strategies help businesses 
-                    increase foot traffic by <strong className="text-yellow-300">{animatedData}%</strong> in 
-                    just 90 days.
+                    Stop losing customers to competitors. Our team of Google-certified professionals creates 
+                    custom local SEO strategies to help your business get found by more customers in your area.
                   </p>
 
                   <div className="grid grid-cols-3 gap-6 mb-8">
@@ -216,8 +199,8 @@ export default function LocalSEOGrowthPage() {
                       transition={{ duration: 0.6, delay: 0.2 }}
                       className="text-center"
                     >
-                      <div className="text-3xl font-bold text-yellow-300">95%</div>
-                      <div className="text-sm text-white/80">First Page Rankings</div>
+                      <div className="text-3xl font-bold text-yellow-300">Google</div>
+                      <div className="text-sm text-white/80">Certified Team</div>
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8 }}
@@ -225,8 +208,8 @@ export default function LocalSEOGrowthPage() {
                       transition={{ duration: 0.6, delay: 0.3 }}
                       className="text-center"
                     >
-                      <div className="text-3xl font-bold text-yellow-300">3x</div>
-                      <div className="text-sm text-white/80">More Phone Calls</div>
+                      <div className="text-3xl font-bold text-yellow-300">Custom</div>
+                      <div className="text-sm text-white/80">Strategies</div>
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8 }}
@@ -234,8 +217,8 @@ export default function LocalSEOGrowthPage() {
                       transition={{ duration: 0.6, delay: 0.4 }}
                       className="text-center"
                     >
-                      <div className="text-3xl font-bold text-yellow-300">60</div>
-                      <div className="text-sm text-white/80">Days Average</div>
+                      <div className="text-3xl font-bold text-yellow-300">Local</div>
+                      <div className="text-sm text-white/80">Focus</div>
                     </motion.div>
                   </div>
 
@@ -254,16 +237,17 @@ export default function LocalSEOGrowthPage() {
                 </motion.div>
               </div>
 
-              {/* Animated Growth Chart */}
+              {/* Sample Growth Visualization */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6"
               >
-                <h3 className="text-xl font-semibold text-white mb-4">Local Traffic Growth</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">Local Traffic Growth Potential</h3>
+                <p className="text-sm text-white/70 mb-4">*Visualization for demonstration purposes</p>
                 <ResponsiveContainer width="100%" height={300}>
-                  <AreaChart data={trafficGrowthData}>
+                  <AreaChart data={sampleGrowthData}>
                     <defs>
                       <linearGradient id="trafficGradient" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="5%" stopColor="#fbbf24" stopOpacity={0.8}/>
@@ -272,7 +256,7 @@ export default function LocalSEOGrowthPage() {
                     </defs>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.2)" />
                     <XAxis dataKey="month" stroke="rgba(255,255,255,0.8)" />
-                    <YAxis stroke="rgba(255,255,255,0.8)" />
+                    <YAxis stroke="rgba(255,255,255,0.8)" tickFormatter={(value) => `${(value/1000).toFixed(1)}K`} />
                     <Tooltip 
                       contentStyle={{ 
                         backgroundColor: 'rgba(0,0,0,0.8)', 
@@ -280,10 +264,11 @@ export default function LocalSEOGrowthPage() {
                         borderRadius: '8px',
                         color: 'white'
                       }} 
+                      formatter={(value) => [`${value.toLocaleString()} visitors`, 'Monthly Visitors']}
                     />
                     <Area
                       type="monotone"
-                      dataKey="organic"
+                      dataKey="visitors"
                       stroke="#fbbf24"
                       strokeWidth={3}
                       fill="url(#trafficGradient)"
@@ -296,7 +281,7 @@ export default function LocalSEOGrowthPage() {
           </div>
         </section>
 
-        {/* Results Section with Advanced Charts */}
+        {/* Expert Team & Services Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -307,84 +292,98 @@ export default function LocalSEOGrowthPage() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
-                Real Results from Real Local Businesses
+                Expert Google Professionals Ready to Strategize
               </h2>
               <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-                See how our local SEO strategies transformed these businesses and drove measurable growth.
+                Our team of certified Google professionals has helped hundreds of local businesses dominate their markets through proven strategies and personalized approach.
               </p>
             </motion.div>
 
             <div className="grid lg:grid-cols-2 gap-12 mb-16">
-              {/* Ranking Improvement Chart */}
+              {/* Our Local SEO Expertise */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="glass-card p-6"
+                className="glass-card p-8"
               >
-                <h3 className="text-xl font-semibold text-brand-dark mb-4 flex items-center">
-                  <TrendingUp className="w-6 h-6 text-green-600 mr-2" />
-                  Keyword Ranking Improvements
+                <h3 className="text-2xl font-semibold text-brand-dark mb-6 flex items-center">
+                  <MapPin className="w-6 h-6 text-green-600 mr-3" />
+                  Local SEO Mastery
                 </h3>
-                <ResponsiveContainer width="100%" height={300}>
-                  <BarChart data={rankingData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="keyword" angle={-45} textAnchor="end" height={100} interval={0} fontSize={10} />
-                    <YAxis />
-                    <Tooltip />
-                    <Bar dataKey="before" fill="#ef4444" name="Before" animationDuration={1500} />
-                    <Bar dataKey="after" fill="#10b981" name="After" animationDuration={1500} animationDelay={500} />
-                  </BarChart>
-                </ResponsiveContainer>
+                <div className="space-y-4">
+                  {[
+                    'Google Business Profile optimization and management',
+                    'Local citation building and NAP consistency',
+                    'Google Maps ranking improvement strategies',
+                    'Review generation and reputation management',
+                    'Local keyword research and content optimization',
+                    'Mobile and voice search optimization'
+                  ].map((service, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="flex items-start space-x-3"
+                    >
+                      <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
+                      <span className="text-brand-dark/80">{service}</span>
+                    </motion.div>
+                  ))}
+                </div>
               </motion.div>
 
-              {/* Conversion Metrics */}
+              {/* Our Strategic Approach */}
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="glass-card p-6"
+                className="glass-card p-8"
               >
-                <h3 className="text-xl font-semibold text-brand-dark mb-4 flex items-center">
-                  <Target className="w-6 h-6 text-blue-600 mr-2" />
-                  Business Growth Metrics
+                <h3 className="text-2xl font-semibold text-brand-dark mb-6 flex items-center">
+                  <Target className="w-6 h-6 text-blue-600 mr-3" />
+                  Strategic Planning Process
                 </h3>
-                <ResponsiveContainer width="100%" height={300}>
-                  <PieChart>
-                    <Pie
-                      data={conversionData}
-                      cx="50%"
-                      cy="50%"
-                      innerRadius={60}
-                      outerRadius={120}
-                      paddingAngle={5}
-                      dataKey="value"
-                      animationDuration={2000}
+                <div className="space-y-6">
+                  {[
+                    {
+                      phase: 'Discovery & Analysis',
+                      description: 'Complete audit of your current local presence and competitor landscape'
+                    },
+                    {
+                      phase: 'Custom Strategy Development',
+                      description: 'Tailored action plan based on your business goals and market opportunities'
+                    },
+                    {
+                      phase: 'Implementation & Optimization',
+                      description: 'Execute proven tactics while continuously monitoring and adjusting for best results'
+                    },
+                    {
+                      phase: 'Ongoing Growth & Reporting',
+                      description: 'Regular performance reviews and strategy refinements to maintain competitive edge'
+                    }
+                  ].map((phase, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="border-l-4 border-blue-500 pl-4"
                     >
-                      {conversionData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.color} />
-                      ))}
-                    </Pie>
-                    <Tooltip formatter={(value) => [`${value}% increase`, 'Growth']} />
-                  </PieChart>
-                </ResponsiveContainer>
-                <div className="grid grid-cols-2 gap-4 mt-4">
-                  {conversionData.map((item, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <div 
-                        className="w-3 h-3 rounded-full"
-                        style={{ backgroundColor: item.color }}
-                      ></div>
-                      <span className="text-sm text-brand-dark/70">{item.name}</span>
-                    </div>
+                      <h4 className="font-semibold text-brand-dark mb-2">{phase.phase}</h4>
+                      <p className="text-brand-dark/70 text-sm">{phase.description}</p>
+                    </motion.div>
                   ))}
                 </div>
               </motion.div>
             </div>
 
-            {/* Traffic Growth Timeline */}
+            {/* Team Expertise */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -393,42 +392,44 @@ export default function LocalSEOGrowthPage() {
               className="glass-card p-8"
             >
               <h3 className="text-2xl font-semibold text-brand-dark mb-6 text-center">
-                6-Month Growth Trajectory
+                Why Choose Our Local SEO Experts?
               </h3>
-              <ResponsiveContainer width="100%" height={400}>
-                <LineChart data={trafficGrowthData}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="month" />
-                  <YAxis />
-                  <Tooltip />
-                  <Line 
-                    type="monotone" 
-                    dataKey="organic" 
-                    stroke="#3b82f6" 
-                    strokeWidth={3}
-                    name="Organic Traffic"
-                    animationDuration={2000}
-                  />
-                  <Line 
-                    type="monotone" 
-                    dataKey="local" 
-                    stroke="#10b981" 
-                    strokeWidth={3}
-                    name="Local Searches"
-                    animationDuration={2000}
-                    animationDelay={500}
-                  />
-                  <Line 
-                    type="monotone" 
-                    dataKey="calls" 
-                    stroke="#f59e0b" 
-                    strokeWidth={3}
-                    name="Phone Calls"
-                    animationDuration={2000}
-                    animationDelay={1000}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
+              <div className="grid md:grid-cols-3 gap-8">
+                {[
+                  {
+                    title: 'Google Certified Professionals',
+                    description: 'Our team holds current Google certifications and stays updated with the latest algorithm changes.',
+                    icon: <Award className="w-8 h-8" />
+                  },
+                  {
+                    title: 'Local Market Knowledge',
+                    description: 'Deep understanding of local search behavior and regional business dynamics.',
+                    icon: <MapPin className="w-8 h-8" />
+                  },
+                  {
+                    title: 'Proven Track Record',
+                    description: 'Years of experience helping local businesses achieve sustainable growth and visibility.',
+                    icon: <TrendingUp className="w-8 h-8" />
+                  }
+                ].map((expertise, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="text-center"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-brand-secondary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <div className="text-white">
+                        {expertise.icon}
+                      </div>
+                    </div>
+                    <h4 className="text-lg font-semibold text-brand-dark mb-3">{expertise.title}</h4>
+                    <p className="text-brand-dark/70 text-sm leading-relaxed">{expertise.description}</p>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           </div>
         </section>
@@ -728,7 +729,7 @@ export default function LocalSEOGrowthPage() {
                 Ready to Dominate Your Local Market?
               </h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join hundreds of local businesses who are already seeing 3x more customers with our proven local SEO strategies.
+                Work with Google-certified professionals who understand local search and can create a custom strategy for your business goals.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">

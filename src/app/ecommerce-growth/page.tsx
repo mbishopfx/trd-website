@@ -201,9 +201,8 @@ export default function EcommerceGrowthPage() {
                   </h1>
                   
                   <p className="text-xl text-white/90 leading-relaxed mb-8 max-w-xl">
-                    Stop losing sales to competitors. Our proven e-commerce optimization strategies help 
-                    online stores increase revenue by <strong className="text-yellow-300">{animatedRevenue}%</strong> in 
-                    just 120 days.
+                    Stop losing sales to competitors. Our team of e-commerce specialists creates 
+                    custom optimization strategies to help your online store increase revenue and conversions.
                   </p>
 
                   <div className="grid grid-cols-3 gap-6 mb-8">
@@ -213,8 +212,8 @@ export default function EcommerceGrowthPage() {
                       transition={{ duration: 0.6, delay: 0.2 }}
                       className="text-center"
                     >
-                      <div className="text-3xl font-bold text-yellow-300">5.2x</div>
-                      <div className="text-sm text-white/80">Revenue Growth</div>
+                      <div className="text-3xl font-bold text-yellow-300">Expert</div>
+                      <div className="text-sm text-white/80">Team</div>
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8 }}
@@ -222,8 +221,8 @@ export default function EcommerceGrowthPage() {
                       transition={{ duration: 0.6, delay: 0.3 }}
                       className="text-center"
                     >
-                      <div className="text-3xl font-bold text-yellow-300">89%</div>
-                      <div className="text-sm text-white/80">More Conversions</div>
+                      <div className="text-3xl font-bold text-yellow-300">Custom</div>
+                      <div className="text-sm text-white/80">Strategy</div>
                     </motion.div>
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8 }}
@@ -231,8 +230,8 @@ export default function EcommerceGrowthPage() {
                       transition={{ duration: 0.6, delay: 0.4 }}
                       className="text-center"
                     >
-                      <div className="text-3xl font-bold text-yellow-300">90</div>
-                      <div className="text-sm text-white/80">Days Average</div>
+                      <div className="text-3xl font-bold text-yellow-300">Results</div>
+                      <div className="text-sm text-white/80">Focused</div>
                     </motion.div>
                   </div>
 
@@ -306,7 +305,7 @@ export default function EcommerceGrowthPage() {
           </div>
         </section>
 
-        {/* Results Section */}
+        {/* Expert Team & Services Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
@@ -317,94 +316,145 @@ export default function EcommerceGrowthPage() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
-                Real E-commerce Success Stories
+                E-commerce Specialists Ready to Scale Your Store
               </h2>
               <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-                See how our e-commerce optimization strategies transformed these online stores and drove exponential revenue growth.
+                Our team of e-commerce optimization experts specializes in helping online stores increase sales through proven SEO and conversion strategies.
               </p>
             </motion.div>
 
-            {/* Channel Performance Chart */}
+            <div className="grid lg:grid-cols-2 gap-12 mb-16">
+              {/* E-commerce SEO Services */}
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="glass-card p-8"
+              >
+                <h3 className="text-2xl font-semibold text-brand-dark mb-6 flex items-center">
+                  <ShoppingCart className="w-6 h-6 text-emerald-600 mr-3" />
+                  E-commerce SEO Expertise
+                </h3>
+                <div className="space-y-4">
+                  {[
+                    'Product page optimization for better search visibility',
+                    'Category page structure and internal linking',
+                    'Technical SEO for e-commerce platforms',
+                    'Shopping feed optimization for Google Shopping',
+                    'Schema markup for products and reviews',
+                    'Site speed optimization for better conversions'
+                  ].map((service, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="flex items-start space-x-3"
+                    >
+                      <CheckCircle className="w-5 h-5 text-emerald-600 mt-1 flex-shrink-0" />
+                      <span className="text-brand-dark/80">{service}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Strategic Growth Process */}
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="glass-card p-8"
+              >
+                <h3 className="text-2xl font-semibold text-brand-dark mb-6 flex items-center">
+                  <TrendingUp className="w-6 h-6 text-blue-600 mr-3" />
+                  Growth Strategy Process
+                </h3>
+                <div className="space-y-6">
+                  {[
+                    {
+                      phase: 'Store Analysis & Audit',
+                      description: 'Comprehensive review of your current SEO performance and conversion bottlenecks'
+                    },
+                    {
+                      phase: 'Competitive Research',
+                      description: 'Analysis of top competitors to identify opportunities and market gaps'
+                    },
+                    {
+                      phase: 'Optimization Implementation',
+                      description: 'Execute proven e-commerce SEO strategies tailored to your platform and products'
+                    },
+                    {
+                      phase: 'Performance Monitoring',
+                      description: 'Ongoing tracking and optimization to maximize your return on investment'
+                    }
+                  ].map((phase, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="border-l-4 border-emerald-500 pl-4"
+                    >
+                      <h4 className="font-semibold text-brand-dark mb-2">{phase.phase}</h4>
+                      <p className="text-brand-dark/70 text-sm">{phase.description}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Team Expertise */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="glass-card p-8 mb-12"
+              className="glass-card p-8"
             >
-              <h3 className="text-2xl font-semibold text-brand-dark mb-6 text-center flex items-center justify-center">
-                <TrendingUp className="w-6 h-6 text-emerald-600 mr-2" />
-                Revenue Channel Performance
+              <h3 className="text-2xl font-semibold text-brand-dark mb-6 text-center">
+                Why Choose Our E-commerce Experts?
               </h3>
-              <ResponsiveContainer width="100%" height={400}>
-                <BarChart data={channelPerformanceData} margin={{ top: 20, right: 30, left: 20, bottom: 60 }}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis 
-                    dataKey="channel" 
-                    angle={-45} 
-                    textAnchor="end" 
-                    height={100} 
-                    interval={0} 
-                  />
-                  <YAxis tickFormatter={(value) => `$${(value/1000).toFixed(0)}K`} />
-                  <Tooltip 
-                    formatter={(value, name) => [
-                      `$${value.toLocaleString()}`,
-                      name === 'before' ? 'Before Optimization' : 'After Optimization'
-                    ]}
-                  />
-                  <Bar dataKey="before" fill="#94a3b8" name="before" animationDuration={1500} />
-                  <Bar dataKey="after" fill="#10b981" name="after" animationDuration={1500} animationDelay={500} />
-                </BarChart>
-              </ResponsiveContainer>
-            </motion.div>
-
-            {/* Key Metrics Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  icon: <DollarSign className="w-8 h-8" />,
-                  metric: "$2.3M+",
-                  label: "Revenue Generated",
-                  color: "from-green-500 to-emerald-500"
-                },
-                {
-                  icon: <ShoppingCart className="w-8 h-8" />,
-                  metric: "847%",
-                  label: "Avg Order Value",
-                  color: "from-blue-500 to-cyan-500"
-                },
-                {
-                  icon: <Users className="w-8 h-8" />,
-                  metric: "5.8x",
-                  label: "Conversion Rate",
-                  color: "from-purple-500 to-pink-500"
-                },
-                {
-                  icon: <Target className="w-8 h-8" />,
-                  metric: "312%",
-                  label: "ROAS Improvement",
-                  color: "from-orange-500 to-red-500"
-                }
-              ].map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="glass-card p-6 text-center"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                    <div className="text-white">
-                      {stat.icon}
+              <div className="grid md:grid-cols-3 gap-8">
+                {[
+                  {
+                    title: 'E-commerce Platform Specialists',
+                    description: 'Deep expertise across Shopify, WooCommerce, Magento, and other major platforms.',
+                    icon: <ShoppingCart className="w-8 h-8" />
+                  },
+                  {
+                    title: 'Conversion-Focused Approach',
+                    description: 'Every optimization strategy is designed to not just bring traffic but convert visitors into customers.',
+                    icon: <Target className="w-8 h-8" />
+                  },
+                  {
+                    title: 'Data-Driven Results',
+                    description: 'All strategies are based on thorough analysis and continuous performance monitoring.',
+                    icon: <TrendingUp className="w-8 h-8" />
+                  }
+                ].map((expertise, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="text-center"
+                  >
+                    <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <div className="text-white">
+                        {expertise.icon}
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-3xl font-bold text-brand-dark mb-2">{stat.metric}</div>
-                  <div className="text-brand-dark/60">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
+                    <h4 className="text-lg font-semibold text-brand-dark mb-3">{expertise.title}</h4>
+                    <p className="text-brand-dark/70 text-sm leading-relaxed">{expertise.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </section>
 

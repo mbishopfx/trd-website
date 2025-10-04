@@ -61,7 +61,7 @@ export default function NotFound() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-brand-light via-white to-brand-light/50 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-brand-light via-white to-brand-light/50 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
       <div className="max-w-6xl w-full">
         {/* Main Content */}
         <div className="text-center mb-12">

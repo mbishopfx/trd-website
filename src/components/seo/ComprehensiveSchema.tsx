@@ -3,7 +3,7 @@
 import Script from 'next/script';
 
 interface ComprehensiveSchemaProps {
-  type: 'platform-tool' | 'service' | 'education' | 'location' | 'about' | 'contact';
+  type: 'platform-tool' | 'service' | 'education' | 'location' | 'about' | 'contact' | 'referral-program';
   pageData: {
     title: string;
     description: string;
@@ -21,6 +21,12 @@ interface ComprehensiveSchemaProps {
       zipCode: string;
       coordinates?: { lat: string; lng: string };
     };
+    offers?: Array<{
+      name: string;
+      description: string;
+      price: string;
+      currency?: string;
+    }>;
   };
   breadcrumbs?: Array<{name: string; url: string}>;
 }
@@ -355,6 +361,72 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
     }
   } : null;
 
+  // Referral Program Schema
+  const referralSchema = type === 'referral-program' ? {
+    "@context": "https://schema.org",
+    "@type": ["WebPage", "Service"],
+    "@id": `${pageData.url}#referral-program`,
+    name: pageData.title,
+    description: pageData.description,
+    url: pageData.url,
+    provider: {
+      "@type": "Organization",
+      "@id": `${baseUrl}/#organization`,
+      name: napData.name
+    },
+    serviceType: "Referral Program",
+    category: "Affiliate Marketing",
+    areaServed: {
+      "@type": "Country",
+      name: "United States"
+    },
+    offers: pageData.offers?.map((offer) => ({
+      "@type": "Offer",
+      name: offer.name,
+      description: offer.description,
+      price: offer.price,
+      priceCurrency: offer.currency || "USD",
+      availability: "https://schema.org/InStock",
+      validThrough: "2025-12-31",
+      eligibleCustomerType: "Referral Partner",
+      seller: {
+        "@type": "Organization",
+        "@id": `${baseUrl}/#organization`,
+        name: napData.name
+      }
+    })) || [],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Referral Program Benefits",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          name: "Referral Bonus",
+          description: "$500 bonus for each successful client referral",
+          price: "500",
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock"
+        }
+      ]
+    },
+    termsOfService: `${pageData.url}#terms`,
+    audience: {
+      "@type": "BusinessAudience",
+      audienceType: "Business Professionals"
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": pageData.url,
+      name: pageData.title,
+      description: pageData.description
+    },
+    potentialAction: {
+      "@type": "ApplyAction",
+      name: "Apply for Referral Program",
+      target: `${pageData.url}#apply`
+    }
+  } : null;
+
   // Breadcrumb Schema
   const breadcrumbSchema = breadcrumbs ? {
     "@context": "https://schema.org",
@@ -407,6 +479,7 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
   if (locationSchema) schemas.push(locationSchema);
   if (aboutSchema) schemas.push(aboutSchema);
   if (contactSchema) schemas.push(contactSchema);
+  if (referralSchema) schemas.push(referralSchema);
   if (breadcrumbSchema) schemas.push(breadcrumbSchema);
 
   const schemaGraph = {

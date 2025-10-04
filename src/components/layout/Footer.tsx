@@ -89,7 +89,8 @@ const footerSections: FooterSection[] = [
     title: 'Resources',
     links: [
       { name: 'Free SEO Audit', href: '/free-audit' },
-      { name: 'AI Technology', href: '/learn-aio' }
+      { name: 'AI Technology', href: '/learn-aio' },
+      { name: 'Referral Program', href: '/referral' }
     ]
   },
   {

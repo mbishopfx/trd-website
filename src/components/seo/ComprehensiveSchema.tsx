@@ -53,7 +53,7 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
       postalCode: "08816",
       addressCountry: "US"
     },
-    telephone: ["+1-732-475-0139", "+1-732-215-6319"],
+    telephone: "+1-732-475-0139",
     email: "jon@truerankdigital.com",
     url: baseUrl,
     logo: `${baseUrl}/images/logos/trd-logo1.avif`
@@ -136,7 +136,7 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
         postalCode: napData.address.postalCode,
         addressCountry: napData.address.addressCountry
       },
-      telephone: napData.telephone[0],
+      telephone: napData.telephone,
       email: napData.email
     },
     serviceType: pageData.serviceType || "Digital Marketing",
@@ -354,7 +354,7 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
     about: {
       "@type": "ContactPoint",
       contactType: "Customer Service",
-      telephone: napData.telephone[0],
+      telephone: napData.telephone,
       email: napData.email,
       availableLanguage: "English",
       areaServed: "US"

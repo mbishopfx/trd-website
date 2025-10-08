@@ -156,7 +156,6 @@ const socialLinks = [
 const contactInfo = {
   address: 'East Brunswick, NJ 08816',
   phone: '(732) 475-0139',
-  altPhone: '(732) 215-6319',
   email: 'jon@truerankdigital.com',
   hours: '24/7 Available'
 };
@@ -211,15 +210,12 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-4 h-4 flex-shrink-0 text-brand-primary" />
-                  <div className="text-sm">
-                    <a href={`tel:${contactInfo.phone}`} className="hover:text-brand-primary transition-colors duration-200">
-                      {contactInfo.phone}
-                    </a>
-                    <span className="mx-2">•</span>
-                    <a href={`tel:${contactInfo.altPhone}`} className="hover:text-brand-primary transition-colors duration-200">
-                      {contactInfo.altPhone}
-                    </a>
-                  </div>
+                  <a
+                    href={`tel:${contactInfo.phone}`}
+                    className="text-sm hover:text-brand-primary transition-colors duration-200"
+                  >
+                    {contactInfo.phone}
+                  </a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Mail className="w-4 h-4 flex-shrink-0 text-brand-primary" />

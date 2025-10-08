@@ -21,10 +21,7 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
       postalCode: "08816",
       addressCountry: "US"
     },
-    telephone: [
-      "+1-732-475-0139",
-      "+1-732-215-6319"
-    ],
+    telephone: "+1-732-475-0139",
     email: "jon@truerankdigital.com",
     url: "https://truerankdigital.com",
     logo: "https://truerankdigital.com/images/logos/trd-logo1.avif",
@@ -60,22 +57,13 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
       postalCode: napData.address.postalCode,
       addressCountry: napData.address.addressCountry
     },
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        telephone: napData.telephone[0],
-        contactType: "customer service",
-        areaServed: "US",
-        availableLanguage: "English"
-      },
-      {
-        "@type": "ContactPoint", 
-        telephone: napData.telephone[1],
-        contactType: "sales",
-        areaServed: "US",
-        availableLanguage: "English"
-      }
-    ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: napData.telephone,
+      contactType: "customer service",
+      areaServed: "US",
+      availableLanguage: "English"
+    },
     sameAs: [
       "https://www.linkedin.com/company/true-rank-digital",
       "https://www.facebook.com/truerankdigital",

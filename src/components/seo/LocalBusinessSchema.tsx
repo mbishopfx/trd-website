@@ -11,7 +11,7 @@ export default function LocalBusinessSchema() {
     alternateName: "True Rank Digital",
     description: "Professional SEO and digital marketing services specializing in custom software development, schema markup engineering, and LLM.txt optimization. We build solutions others can't.",
     url: "https://truerankdigital.com",
-    telephone: ["+1-732-475-0139", "+1-732-215-6319"],
+    telephone: "+1-732-475-0139",
     email: "jon@truerankdigital.com",
     foundingDate: "2020",
     
@@ -172,41 +172,20 @@ export default function LocalBusinessSchema() {
     },
     
     // Contact Information
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        telephone: "+1-732-475-0139",
-        contactType: "customer service",
-        areaServed: "US",
-        availableLanguage: ["English"],
-        hoursAvailable: {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          opens: "00:00",
-          closes: "23:59"
-        }
-      },
-      {
-        "@type": "ContactPoint",
-        telephone: "+1-732-215-6319", 
-        contactType: "sales",
-        areaServed: "US",
-        availableLanguage: ["English"],
-        hoursAvailable: {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-          opens: "00:00",
-          closes: "23:59"
-        }
-      },
-      {
-        "@type": "ContactPoint",
-        email: "jon@truerankdigital.com",
-        contactType: "customer service",
-        areaServed: "US",
-        availableLanguage: ["English"]
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-732-475-0139",
+      email: "jon@truerankdigital.com",
+      contactType: "customer service",
+      areaServed: "US",
+      availableLanguage: ["English"],
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "00:00",
+        closes: "23:59"
       }
-    ],
+    },
     
     // Social Media Profiles
     sameAs: [

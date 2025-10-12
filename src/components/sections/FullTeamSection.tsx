@@ -69,6 +69,28 @@ export default function FullTeamSection() {
       experience: "Developer",
       email: "bishop@truerankdigital.com",
       linkedin: "https://www.linkedin.com/in/matt-bishop-a17b2431b/"
+    },
+    {
+      name: "Sean O'Niel",
+      role: "SEO Specialist",
+      department: "SEO Team",
+      bio: "SEO specialist focused on optimization strategies and search engine performance.",
+      specialties: ["SEO Optimization", "Search Strategy", "Performance Analysis"],
+      icon: <Search className="w-8 h-8" />,
+      color: "from-green-500 to-blue-500",
+      experience: "SEO Expert",
+      email: "sean@truerankdigital.com"
+    },
+    {
+      name: "Sebastian Vargas",
+      role: "Sales Director",
+      department: "Sales",
+      bio: "Sales Director focused on client development and relationship management.",
+      specialties: ["Client Relations", "Sales Strategy", "Business Development"],
+      icon: <Target className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      experience: "Sales Director",
+      email: "sebastian@truerankdigital.com"
     }
   ];
 

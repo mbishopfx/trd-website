@@ -129,19 +129,19 @@ const socialLinks = [
   },
   {
     name: 'Instagram',
-    href: 'https://www.instagram.com/truerankdigital', 
+    href: 'https://www.instagram.com/truerankdigital_/?hl=en', 
     icon: <Instagram className="w-5 h-5" />,
     color: 'hover:text-pink-500'
   },
   {
     name: 'YouTube',
-    href: 'https://www.youtube.com/c/truerankdigital',
+    href: 'https://www.youtube.com/channel/UC9wb8G1oROv_iUIDRL7JIWA',
     icon: <Youtube className="w-5 h-5" />,
     color: 'hover:text-red-500'
   },
   {
     name: 'TikTok',
-    href: 'https://www.tiktok.com/@truerankdigital',
+    href: 'https://www.tiktok.com/@truerankdigital_',
     icon: <TikTokIcon />,
     color: 'hover:text-black'
   },

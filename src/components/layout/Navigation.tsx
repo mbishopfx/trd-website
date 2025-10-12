@@ -97,52 +97,52 @@ const navigationItems: NavItem[] = [
     description: 'Discover our AI-powered optimization technology'
   },
   {
-    name: 'Platform',
-    href: '/platform',
-    icon: <Zap className="w-4 h-4" />,
-    badge: 'Exclusive',
+    name: 'Business Starter Pack',
+    href: '/llc',
+    icon: <Rocket className="w-4 h-4" />,
+    badge: 'New LLC',
     items: [
       {
-        name: 'Grid Ranking System',
-        href: '/platform/grid-ranking',
-        icon: <BarChart3 className="w-4 h-4" />,
-        description: 'Geographic search intelligence and heat map visualization'
+        name: 'Website Build',
+        href: '/llc/website-build',
+        icon: <Globe className="w-4 h-4" />,
+        description: 'SEO-optimized site built for ranking and conversions'
       },
       {
-        name: 'E-E-A-T Analysis Engine',
-        href: '/platform/eeat-analysis',
-        icon: <Target className="w-4 h-4" />,
-        description: 'Expertise, Experience, Authoritativeness & Trustworthiness optimization'
+        name: 'Google Business Profile Creation',
+        href: '/llc/gbp-creation',
+        icon: <MapPin className="w-4 h-4" />,
+        description: 'Engineered for local visibility from day one'
       },
       {
-        name: 'Indexability Analysis',
-        href: '/platform/indexability',
+        name: 'AIO (AI Optimization)',
+        href: '/llc/aio',
+        icon: <Bot className="w-4 h-4" />,
+        description: 'Inject your brand into Google\'s AI ecosystem'
+      },
+      {
+        name: 'LSEO (Local SEO)',
+        href: '/llc/lseo',
         icon: <Search className="w-4 h-4" />,
-        description: 'Ensure Google discovers and indexes every valuable page'
+        description: 'Dominate the Google 3-Pack where leads live'
       },
       {
-        name: 'Knowledge Graph Optimization',
-        href: '/platform/knowledge-graph',
-        icon: <Network className="w-4 h-4" />,
-        description: 'Transform your business into a recognized digital entity'
-      },
-      {
-        name: 'Digital Overwatch System',
-        href: '/platform/overwatch',
+        name: 'GBP Watchtower',
+        href: '/llc/gbp-watchtower',
         icon: <Shield className="w-4 h-4" />,
-        description: '24/7 intelligent monitoring and threat detection'
+        description: '24/7 monitoring and defense system'
       },
       {
-        name: 'Competitor Analysis',
-        href: '/platform/competitor-analysis',
-        icon: <Users className="w-4 h-4" />,
-        description: 'Decode competitor strategies and find market opportunities'
+        name: 'Go-To-Market Playbook',
+        href: '/llc/go-to-market-playbook',
+        icon: <Target className="w-4 h-4" />,
+        description: 'Custom strategy by Jon Korkowski'
       },
       {
-        name: 'Lead Generation Intelligence',
-        href: '/platform/lead-generation',
-        icon: <TrendingUp className="w-4 h-4" />,
-        description: 'Predict markets before they emerge and find fresh prospects'
+        name: 'Free Consultation',
+        href: '/llc/consultation',
+        icon: <MessageSquare className="w-4 h-4" />,
+        description: 'Meet with Jon to plan your 90-day domination'
       }
     ]
   }

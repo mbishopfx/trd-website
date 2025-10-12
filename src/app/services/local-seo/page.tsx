@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Search, MapPin, TrendingUp, CheckCircle } from 'lucide-react';
-import PageSpecificSchema from '@/components/seo/PageSpecificSchema';
+import ComprehensiveSchema from '@/components/seo/ComprehensiveSchema';
 
 export const metadata: Metadata = {
   title: 'Professional Local Search Engine Optimization Services | Grid Map Ranking Analysis | True Rank Digital',

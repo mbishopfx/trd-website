@@ -191,9 +191,9 @@ export default function LocalBusinessSchema() {
     sameAs: [
       "https://www.linkedin.com/company/true-rank-digital",
       "https://www.facebook.com/truerankdigital", 
-      "https://www.instagram.com/truerankdigital",
-      "https://www.youtube.com/c/truerankdigital",
-      "https://www.tiktok.com/@truerankdigital",
+      "https://www.instagram.com/truerankdigital_/?hl=en",
+      "https://www.youtube.com/channel/UC9wb8G1oROv_iUIDRL7JIWA",
+      "https://www.tiktok.com/@truerankdigital_",
       "https://www.pinterest.com/truerankdigital"
     ],
     

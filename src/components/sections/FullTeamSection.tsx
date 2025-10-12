@@ -14,6 +14,7 @@ interface TeamMember {
   color: string;
   experience: string;
   email: string;
+  linkedin?: string;
 }
 
 export default function FullTeamSection() {
@@ -27,7 +28,8 @@ export default function FullTeamSection() {
       icon: <Award className="w-8 h-8" />,
       color: "from-brand-primary to-brand-secondary",
       experience: "Leadership",
-      email: "jon@truerankdigital.com"
+      email: "jon@truerankdigital.com",
+      linkedin: "https://www.linkedin.com/in/jonjkorkowski/"
     },
     {
       name: "Jesse Mathews",
@@ -38,7 +40,8 @@ export default function FullTeamSection() {
       icon: <Target className="w-8 h-8" />,
       color: "from-brand-secondary to-brand-accent",
       experience: "Leadership",
-      email: "jesse@truerankdigital.com"
+      email: "jesse@truerankdigital.com",
+      linkedin: "https://www.linkedin.com/in/jesse-mathews-b342641bb/"
     },
     {
       name: "Jose Perdomo",
@@ -49,7 +52,8 @@ export default function FullTeamSection() {
       icon: <BarChart3 className="w-8 h-8" />,
       color: "from-brand-accent to-purple-600",
       experience: "Leadership",
-      email: "jose@truerankdigital.com"
+      email: "jose@truerankdigital.com",
+      linkedin: "https://www.linkedin.com/in/jose-perdomo-2ab14a22a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     }
   ];
 
@@ -63,29 +67,8 @@ export default function FullTeamSection() {
       icon: <Code className="w-8 h-8" />,
       color: "from-blue-500 to-indigo-500",
       experience: "Developer",
-      email: "bishop@truerankdigital.com"
-    },
-    {
-      name: "Sean O'Niel",
-      role: "SEO Specialist",
-      department: "SEO Team",
-      bio: "SEO specialist focused on optimization strategies and search engine performance.",
-      specialties: ["SEO Optimization", "Search Strategy", "Performance Analysis"],
-      icon: <Search className="w-8 h-8" />,
-      color: "from-green-500 to-blue-500",
-      experience: "SEO Expert",
-      email: "sean@truerankdigital.com"
-    },
-    {
-      name: "Sebastian Vargas",
-      role: "Sales Director",
-      department: "Sales",
-      bio: "Sales Director focused on client development and relationship management.",
-      specialties: ["Client Relations", "Sales Strategy", "Business Development"],
-      icon: <Target className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      experience: "Sales Director",
-      email: "sebastian@truerankdigital.com"
+      email: "bishop@truerankdigital.com",
+      linkedin: "https://www.linkedin.com/in/matt-bishop-a17b2431b/"
     }
   ];
 
@@ -155,10 +138,17 @@ export default function FullTeamSection() {
                 <Mail className="w-4 h-4" />
                 <span>Contact</span>
               </a>
-              <button className="flex items-center space-x-2 text-brand-secondary hover:text-brand-primary transition-colors text-sm">
-                <Linkedin className="w-4 h-4" />
-                <span>LinkedIn</span>
-              </button>
+              {member.linkedin && (
+                <a 
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 text-brand-secondary hover:text-brand-primary transition-colors text-sm"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  <span>LinkedIn</span>
+                </a>
+              )}
             </div>
           </motion.div>
         ))}

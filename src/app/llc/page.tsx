@@ -239,7 +239,7 @@ export default function BusinessStarterPackPage() {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </section>
 
         {/* Who It's For Section */}

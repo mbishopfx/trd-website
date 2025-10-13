@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { 
   Rocket,
   Globe,
@@ -12,14 +11,23 @@ import {
   Shield,
   Target,
   MessageSquare,
-  ArrowRight,
   CheckCircle,
+  XCircle,
+  Clock,
   Zap,
   TrendingUp,
   Award,
   Users,
   Phone,
-  Mail
+  Mail,
+  AlertTriangle,
+  Star,
+  Eye,
+  Bell,
+  Brain,
+  Sparkles,
+  BookOpen,
+  DollarSign
 } from 'lucide-react';
 import ConsultationForm from '@/components/sections/ConsultationForm';
 import ComprehensiveSchema from '@/components/seo/ComprehensiveSchema';
@@ -30,51 +38,51 @@ export default function BusinessStarterPackPage() {
       icon: <Globe className="w-8 h-8" />,
       title: 'Website Build',
       description: 'A high-performance, SEO-optimized site that speaks Google\'s language — built to convert, rank, and grow with your brand.',
-      href: '/llc/website-build',
       color: 'from-blue-500 to-indigo-500'
     },
     {
       icon: <MapPin className="w-8 h-8" />,
       title: 'Google Business Profile Creation',
       description: 'We don\'t just set it up — we engineer it for dominance. Every tag, service, and city is mapped for visibility from the start.',
-      href: '/llc/gbp-creation',
       color: 'from-green-500 to-emerald-500'
     },
     {
       icon: <Bot className="w-8 h-8" />,
       title: 'AIO (Artificial Intelligence Optimization)',
       description: 'Our proprietary fast-start system injects your brand into Google\'s AI ecosystem. Be seen by AI Overviews before your competitors even know what hit them.',
-      href: '/llc/aio',
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: <Search className="w-8 h-8" />,
       title: 'LSEO (Local Search Engine Optimization)',
       description: 'Get discovered in Maps, not lost in searches. LSEO pushes your business straight into the 3-Pack — where real leads live.',
-      href: '/llc/lseo',
       color: 'from-orange-500 to-red-500'
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: 'GBP Watchtower + Defense System',
       description: 'Monitor, defend, and expand your Google presence 24/7. Our tools flag negative shifts, competitor threats, and keyword movement in real time.',
-      href: '/llc/gbp-watchtower',
       color: 'from-cyan-500 to-blue-500'
     },
     {
       icon: <Target className="w-8 h-8" />,
       title: 'Custom Go-To-Market Playbook',
       description: 'Personally written by Jon Korkowski, this custom strategy outlines exactly how to scale your visibility, build local trust, and dominate your niche.',
-      href: '/llc/go-to-market-playbook',
       color: 'from-yellow-500 to-orange-500'
     },
     {
       icon: <MessageSquare className="w-8 h-8" />,
       title: 'Free Consultation with Jon Korkowski',
       description: 'You\'ll sit down (virtually) with Jon himself — to dissect your business, uncover growth blind spots, and map out your 90-day domination plan.',
-      href: '/llc/consultation',
       color: 'from-indigo-500 to-purple-500'
     }
+  ];
+
+  const pricingHighlights = [
+    { label: 'Regular Price', value: '$2,500+', strikethrough: true },
+    { label: 'Your Price', value: '$499', highlight: true },
+    { label: 'Duration', value: 'First 2 Months' },
+    { label: 'Value', value: '80% Savings' }
   ];
 
   const targetAudience = [
@@ -95,11 +103,105 @@ export default function BusinessStarterPackPage() {
     }
   ];
 
+  const commonMistakes = [
+    {
+      category: 'Website',
+      mistakes: [
+        { error: 'Using DIY website builders', why: 'Limited SEO, slow loading, can\'t rank' },
+        { error: 'Building for looks not performance', why: 'Heavy sites tank rankings' }
+      ]
+    },
+    {
+      category: 'Google Business Profile',
+      mistakes: [
+        { error: 'Basic setup without optimization', why: 'Wastes your #1 visibility opportunity' },
+        { error: 'Wrong category selections', why: 'Won\'t show in searches that matter' }
+      ]
+    },
+    {
+      category: 'Local SEO',
+      mistakes: [
+        { error: 'Only focusing on organic SEO', why: 'Takes 6-12 months vs weeks with local' },
+        { error: 'No citation building', why: 'Missing critical ranking signals' }
+      ]
+    },
+    {
+      category: 'Strategy',
+      mistakes: [
+        { error: 'Using generic templates', why: 'Cookie-cutter fails, custom wins' },
+        { error: 'No monitoring system', why: 'Problems go unnoticed for weeks' }
+      ]
+    }
+  ];
+
+  const whatYouGet = {
+    website: [
+      'Custom responsive design (mobile & desktop)',
+      'SEO-optimized code structure',
+      'Schema markup engineering',
+      'Performance optimization (Core Web Vitals)',
+      'Google Analytics & Search Console setup',
+      'SSL security & HTTPS',
+      '30 days post-launch support'
+    ],
+    gbp: [
+      'Complete GBP setup & verification',
+      'Strategic category selection',
+      'Service area mapping & targeting',
+      'Professional description optimization',
+      'Product/service listings',
+      'Photo optimization guidelines',
+      'Review strategy setup',
+      'Monthly monitoring plan'
+    ],
+    aio: [
+      'LLM.txt file creation',
+      'Schema for AI comprehension',
+      'Entity establishment in Knowledge Graph',
+      'AI Overview targeting',
+      'Voice search optimization',
+      'ChatGPT, Claude, Perplexity optimization',
+      'AI visibility tracking'
+    ],
+    lseo: [
+      'Local keyword research',
+      'NAP consistency audit',
+      'Local citation building',
+      'Google Maps optimization',
+      'Location page creation',
+      'Service area expansion',
+      'Review generation system',
+      'Monthly performance reports'
+    ],
+    monitoring: [
+      'Real-time ranking monitoring',
+      'GBP change alerts',
+      'Review tracking',
+      'Competitor movement alerts',
+      'Keyword performance tracking',
+      'Website uptime monitoring',
+      'Monthly threat reports',
+      'Proactive recommendations'
+    ],
+    playbook: [
+      'Market analysis',
+      'Positioning strategy',
+      '90-day action plan',
+      'Visibility roadmap',
+      'Trust-building strategy',
+      'Content strategy',
+      'Budget allocation',
+      'Success metrics & KPIs'
+    ]
+  };
+
   const credentials = [
     'Recognized by Google\'s AI Overview as a leading SEO specialist',
     'Built custom software solutions others can\'t replicate',
     'Proven track record launching successful local businesses',
-    'Direct access to Jon Korkowski and the TRD Elite Team'
+    'Direct access to Jon Korkowski and the TRD Elite Team',
+    '100+ successful new business launches',
+    'Proprietary SEO frameworks and technology'
   ];
 
   return (
@@ -107,15 +209,17 @@ export default function BusinessStarterPackPage() {
       <ComprehensiveSchema
         type="service-landing"
         pageData={{
-          title: "TRUE RANK DIGITAL — Business Starter Pack for New LLCs",
-          description: "Your launchpad into the Googleverse. Complete business starter pack including website build, GBP creation, AIO, LSEO, monitoring, custom playbook, and free consultation with Jon Korkowski.",
+          title: "New Entrepreneur Starter Pack - $499 for First 2 Months | True Rank Digital",
+          description: "Everything your new LLC needs to dominate from day one. Complete business starter pack including website, GBP, AI optimization, local SEO, monitoring, custom playbook, and free consultation with Jon Korkowski.",
           url: "https://truerankdigital.com/llc",
-          keywords: ["new business", "LLC startup", "business starter pack", "Google Business Profile", "local SEO", "AI optimization"],
+          keywords: ["new business", "LLC startup", "business starter pack", "entrepreneur package", "local SEO", "AI optimization"],
           category: "Business Services",
-          offers: services.map(service => ({
-            name: service.title,
-            description: service.description
-          }))
+          offers: [{
+            name: "New Entrepreneur Starter Pack",
+            price: "499",
+            priceCurrency: "USD",
+            description: "Complete business starter package for new LLCs - first 2 months"
+          }]
         }}
         breadcrumbs={[
           { name: "Home", url: "https://truerankdigital.com" },
@@ -126,7 +230,6 @@ export default function BusinessStarterPackPage() {
       <div className="pt-16">
         {/* Hero Section */}
         <section className="py-20 lg:py-28 bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-accent relative overflow-hidden">
-          {/* Background Elements */}
           <div className="absolute inset-0">
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/20 to-transparent"></div>
             <div className="absolute bottom-0 left-0 w-1/2 h-full bg-gradient-to-r from-black/10 to-transparent"></div>
@@ -140,20 +243,32 @@ export default function BusinessStarterPackPage() {
                 transition={{ duration: 0.6 }}
                 className="mb-8"
               >
-                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium mb-6">
-                  <Rocket className="w-4 h-4" />
-                  <span>Built by Jon J. Korkowski & the TRD Elite Team</span>
+                <div className="inline-flex items-center space-x-2 px-6 py-3 bg-white/20 backdrop-blur-sm text-white rounded-full text-lg font-bold mb-6">
+                  <Sparkles className="w-5 h-5" />
+                  <span>SPECIAL OFFER: $499 for the First 2 Months</span>
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
-                  TRUE RANK DIGITAL
-                  <span className="block mt-2">Business Starter Pack</span>
+                  New Entrepreneur
+                  <span className="block mt-2">Starter Pack</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
-                  This isn't your average "starter kit." This is your <strong>launchpad into the Googleverse</strong>.
+                <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-4">
+                  Everything your new LLC needs to <strong>dominate Google from day one</strong>
                 </p>
-                <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
-                  Perfect for new businesses ready to dominate from day one.
+                <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8">
+                  This isn't your average "starter kit." This is your launchpad into the Googleverse.
                 </p>
+
+                {/* Pricing Highlight */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-8">
+                  {pricingHighlights.map((item, index) => (
+                    <div key={index} className="glass-card p-4 bg-white/10 backdrop-blur-md">
+                      <p className="text-white/70 text-sm mb-1">{item.label}</p>
+                      <p className={`text-white font-bold text-xl ${item.strikethrough ? 'line-through' : ''} ${item.highlight ? 'text-yellow-300 text-3xl' : ''}`}>
+                        {item.value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </motion.div>
 
               <motion.div
@@ -162,31 +277,31 @@ export default function BusinessStarterPackPage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
               >
-                <Link
-                  href="#consultation"
-                  className="btn btn-white px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl"
+                <a
+                  href="#get-started"
+                  className="btn btn-white px-10 py-5 text-xl font-bold shadow-2xl hover:shadow-3xl"
                 >
                   <div className="flex items-center space-x-2">
-                    <MessageSquare className="w-5 h-5" />
-                    <span>Book Free Consultation</span>
+                    <Rocket className="w-6 h-6" />
+                    <span>Get Started - $499</span>
                   </div>
-                </Link>
-                <Link
-                  href="#services"
-                  className="btn btn-outline btn-white px-8 py-4 text-lg font-semibold"
+                </a>
+                <a
+                  href="tel:7324750139"
+                  className="btn btn-outline btn-white px-10 py-5 text-xl font-bold"
                 >
                   <div className="flex items-center space-x-2">
-                    <span>Explore the Pack</span>
-                    <ArrowRight className="w-5 h-5" />
+                    <Phone className="w-6 h-6" />
+                    <span>Call (732) 475-0139</span>
                   </div>
-                </Link>
+                </a>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Services Overview Section */}
-        <section id="services" className="py-20 bg-white">
+        {/* What's Included Section */}
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -195,8 +310,8 @@ export default function BusinessStarterPackPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
-                The TRD Business Starter Pack Includes
+              <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+                What's Included in Your Starter Pack
               </h2>
               <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
                 Seven essential services designed to give your new LLC the competitive edge from day one.
@@ -218,24 +333,252 @@ export default function BusinessStarterPackPage() {
                       {service.icon}
                     </div>
                   </div>
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark">
-                      {service.title}
-                    </h3>
-                    <span className="inline-flex items-center justify-center w-8 h-8 bg-brand-light rounded-full text-brand-primary font-bold text-sm flex-shrink-0 ml-2">
-                      {index + 1}
-                    </span>
-                  </div>
-                  <p className="text-brand-dark/70 leading-relaxed mb-4">
+                  <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-brand-dark/70 leading-relaxed">
                     {service.description}
                   </p>
-                  <Link
-                    href={service.href}
-                    className="inline-flex items-center space-x-2 text-brand-primary hover:text-brand-secondary transition-colors font-semibold group/link"
-                  >
-                    <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why This Matters - Comprehensive Benefits */}
+        <section className="py-20 bg-gradient-to-b from-brand-light/20 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+                Why This Matters for New LLCs
+              </h2>
+              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+                Your first 90 days determine your success. Get it right from day one.
+              </p>
+            </motion.div>
+
+            {/* Detailed Breakdown by Service */}
+            <div className="space-y-16">
+              {/* Website Section */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="glass-card p-8"
+              >
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
+                    <Globe className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-brand-dark">Website Build - Your Digital Foundation</h3>
+                </div>
+                <p className="text-lg text-brand-dark/70 mb-4">
+                  Your website is your first impression, your 24/7 salesperson, and the foundation of all your digital marketing. 
+                  Professional sites convert at 3-5x higher rates than DIY builders.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {whatYouGet.website.map((item, i) => (
+                    <div key={i} className="flex items-start space-x-2">
+                      <CheckCircle className="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-brand-dark">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* GBP Section */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="glass-card p-8"
+              >
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-brand-dark">Google Business Profile - Local Visibility Engine</h3>
+                </div>
+                <p className="text-lg text-brand-dark/70 mb-4">
+                  87% of consumers use Google to evaluate local businesses. If your GBP isn't optimized, you're invisible to most potential customers.
+                  We engineer it for dominance, not just basic setup.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {whatYouGet.gbp.map((item, i) => (
+                    <div key={i} className="flex items-start space-x-2">
+                      <CheckCircle className="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-brand-dark">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* AI Optimization Section */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="glass-card p-8"
+              >
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center">
+                    <Bot className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-brand-dark">AI Optimization - Future-Proof Your Business</h3>
+                </div>
+                <p className="text-lg text-brand-dark/70 mb-4">
+                  AI search is happening RIGHT NOW. Get in early or get left behind. First movers dominate AI search results because 
+                  they're indexed first and optimized properly.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {whatYouGet.aio.map((item, i) => (
+                    <div key={i} className="flex items-start space-x-2">
+                      <CheckCircle className="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-brand-dark">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Local SEO Section */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="glass-card p-8"
+              >
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center">
+                    <Search className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-brand-dark">Local SEO - Google 3-Pack Domination</h3>
+                </div>
+                <p className="text-lg text-brand-dark/70 mb-4">
+                  The Google 3-Pack gets 93% of all local clicks. If you're not in the 3-Pack, you're invisible. 
+                  Local SEO generates leads in 3-6 weeks vs 6-12 months for organic SEO.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {whatYouGet.lseo.map((item, i) => (
+                    <div key={i} className="flex items-start space-x-2">
+                      <CheckCircle className="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-brand-dark">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Monitoring Section */}
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="glass-card p-8"
+              >
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-cyan-500 rounded-xl flex items-center justify-center">
+                    <Shield className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-brand-dark">24/7 Monitoring - Protect Your Momentum</h3>
+                </div>
+                <p className="text-lg text-brand-dark/70 mb-4">
+                  You can't protect what you don't monitor. Without monitoring, problems go unnoticed for 14+ days on average. 
+                  By then, you've lost critical momentum and revenue.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {whatYouGet.monitoring.map((item, i) => (
+                    <div key={i} className="flex items-start space-x-2">
+                      <CheckCircle className="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-brand-dark">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Playbook Section */}
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="glass-card p-8"
+              >
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-yellow-500 rounded-xl flex items-center justify-center">
+                    <Target className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-brand-dark">Custom Go-To-Market Playbook by Jon Korkowski</h3>
+                </div>
+                <p className="text-lg text-brand-dark/70 mb-4">
+                  Generic advice kills momentum. Custom strategy creates winners. Jon personally writes your playbook after deep 
+                  research into your specific market, competitors, and opportunities.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {whatYouGet.playbook.map((item, i) => (
+                    <div key={i} className="flex items-start space-x-2">
+                      <CheckCircle className="w-5 h-5 text-brand-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-brand-dark">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Common Mistakes Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <AlertTriangle className="w-10 h-10 text-red-600" />
+              </div>
+              <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+                Common Mistakes New Businesses Make
+              </h2>
+              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+                Avoid these costly errors that kill momentum before you even get started.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {commonMistakes.map((category, index) => (
+                <motion.div
+                  key={category.category}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="glass-card p-6"
+                >
+                  <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">{category.category}</h3>
+                  <div className="space-y-4">
+                    {category.mistakes.map((mistake, i) => (
+                      <div key={i} className="border-l-4 border-red-500 pl-4">
+                        <div className="flex items-start space-x-2 mb-1">
+                          <XCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                          <p className="font-semibold text-brand-dark">{mistake.error}</p>
+                        </div>
+                        <p className="text-sm text-brand-dark/70 ml-7">Why it fails: {mistake.why}</p>
+                      </div>
+                    ))}
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -252,8 +595,8 @@ export default function BusinessStarterPackPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
-                Who It's For
+              <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+                Who This Is For
               </h2>
               <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
                 This starter pack is designed for ambitious entrepreneurs launching new businesses.
@@ -301,7 +644,7 @@ export default function BusinessStarterPackPage() {
                   <Award className="w-4 h-4" />
                   <span>Expert-Led Solutions</span>
                 </div>
-                <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+                <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
                   Built by the Experts Who Build Winners
                 </h2>
                 <p className="text-xl text-brand-dark/70 mb-8">
@@ -328,7 +671,7 @@ export default function BusinessStarterPackPage() {
                 className="glass-card p-8"
               >
                 <div className="text-center mb-6">
-                  <Users className="w-16 h-16 text-brand-primary mx-auto mb-4" />
+                  <Users className="w-20 h-20 text-brand-primary mx-auto mb-4" />
                   <h3 className="text-2xl font-heading font-bold text-brand-dark mb-2">
                     Meet Jon Korkowski
                   </h3>
@@ -360,8 +703,8 @@ export default function BusinessStarterPackPage() {
           </div>
         </section>
 
-        {/* Consultation Form Section */}
-        <section id="consultation" className="py-20 bg-gradient-to-b from-brand-light/20 to-white">
+        {/* Get Started Form Section */}
+        <section id="get-started" className="py-20 bg-gradient-to-b from-brand-light/20 to-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -370,7 +713,11 @@ export default function BusinessStarterPackPage() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+              <div className="inline-flex items-center space-x-2 px-6 py-3 bg-green-100 text-green-800 rounded-full text-lg font-bold mb-6">
+                <DollarSign className="w-5 h-5" />
+                <span>Only $499 for First 2 Months</span>
+              </div>
+              <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
                 Ready to Launch Like a Pro?
               </h2>
               <p className="text-xl text-brand-dark/70 max-w-2xl mx-auto">
@@ -385,9 +732,9 @@ export default function BusinessStarterPackPage() {
               viewport={{ once: true }}
             >
               <ConsultationForm
-                title="Schedule Your Free Strategy Session"
-                description="Fill out the form below and we'll contact you within 24 hours to schedule your consultation."
-                subjectPrefix="Business Starter Pack"
+                title="Get Started Today"
+                description="Fill out the form below or call us directly to claim your $499 starter pack offer."
+                subjectPrefix="Business Starter Pack - $499 Offer"
               />
             </motion.div>
           </div>
@@ -404,33 +751,48 @@ export default function BusinessStarterPackPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
+              <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6">
                 Skip the Struggle Phase. Launch Like a Winner.
               </h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Get everything you need to dominate Google from day one with the TRUE RANK DIGITAL Business Starter Pack.
               </p>
               
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <Link
-                  href="#consultation"
-                  className="btn btn-white px-8 py-4 text-lg font-semibold"
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">
+                <a
+                  href="#get-started"
+                  className="btn btn-white px-10 py-5 text-xl font-bold"
                 >
                   <div className="flex items-center space-x-2">
-                    <MessageSquare className="w-5 h-5" />
-                    <span>Book Consultation</span>
+                    <Rocket className="w-6 h-6" />
+                    <span>Get Started - $499</span>
                   </div>
-                </Link>
+                </a>
                 
                 <a
                   href="tel:7324750139"
-                  className="btn btn-outline btn-white px-8 py-4 text-lg font-semibold"
+                  className="btn btn-outline btn-white px-10 py-5 text-xl font-bold"
                 >
                   <div className="flex items-center space-x-2">
-                    <Phone className="w-5 h-5" />
+                    <Phone className="w-6 h-6" />
                     <span>Call (732) 475-0139</span>
                   </div>
                 </a>
+              </div>
+
+              <div className="flex items-center justify-center space-x-8 text-white/80">
+                <div className="flex items-center space-x-2">
+                  <Shield className="w-5 h-5" />
+                  <span className="text-sm">80% Savings</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Zap className="w-5 h-5" />
+                  <span className="text-sm">First 2 Months</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Award className="w-5 h-5" />
+                  <span className="text-sm">Expert Guidance</span>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -439,4 +801,3 @@ export default function BusinessStarterPackPage() {
     </>
   );
 }
-

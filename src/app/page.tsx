@@ -3,6 +3,7 @@ import AIServicesSection from '@/components/sections/AIServicesSection';
 import TraditionalServicesSection from '@/components/sections/TraditionalServicesSection';
 import TestimonialsCarousel from '@/components/sections/TestimonialsCarousel';
 import CTASection from '@/components/sections/CTASection';
+import StarterPackBanner from '@/components/sections/StarterPackBanner';
 import PageSpecificSchema from '@/components/seo/PageSpecificSchema';
 import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
 
@@ -17,7 +18,10 @@ export default function Home() {
       />
       <LocalBusinessSchema />
       
-      <div className="pt-20">
+      <div className="pt-16">
+        {/* Promotional Banner */}
+        <StarterPackBanner />
+        
         {/* Hero Section */}
         <HeroSection />
         

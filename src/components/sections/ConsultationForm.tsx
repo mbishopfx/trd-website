@@ -251,35 +251,47 @@ export default function ConsultationForm({
             </div>
           )}
 
-          {/* Submit Button */}
+          {/* Submit Buttons */}
           <div className="text-center pt-4">
-            <motion.button
-              type="submit"
-              disabled={isSubmitting}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className={`
-                bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold
-                px-12 py-4 text-lg rounded-full shadow-lg hover:shadow-xl
-                transition-all duration-300 transform hover:scale-105
-                ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}
-              `}
-            >
-              {isSubmitting ? (
-                <div className="flex items-center space-x-2">
-                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                  <span>Sending Request...</span>
-                </div>
-              ) : (
-                <div className="flex items-center space-x-2">
-                  <Send className="w-5 h-5" />
-                  <span>Request Free Consultation</span>
-                </div>
-              )}
-            </motion.button>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+              <motion.button
+                type="submit"
+                disabled={isSubmitting}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className={`
+                  bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold
+                  px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl
+                  transition-all duration-300 transform hover:scale-105
+                  ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}
+                `}
+              >
+                {isSubmitting ? (
+                  <div className="flex items-center space-x-2">
+                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                    <span>Sending Request...</span>
+                  </div>
+                ) : (
+                  <div className="flex items-center space-x-2">
+                    <Send className="w-5 h-5" />
+                    <span>Submit Request</span>
+                  </div>
+                )}
+              </motion.button>
+
+              <motion.a
+                href="tel:7324750139"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center space-x-2 px-8 py-4 text-lg font-semibold bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                <Phone className="w-5 h-5" />
+                <span>Skip the Form, Call or Text Now!</span>
+              </motion.a>
+            </div>
             
-            <p className="text-sm text-brand-dark/60 mt-4">
-              Or call us directly: <a href="tel:7324750139" className="text-brand-primary hover:underline font-semibold">(732) 475-0139</a>
+            <p className="text-sm text-brand-dark/60">
+              <a href="tel:7324750139" className="text-brand-primary hover:underline font-semibold">(732) 475-0139</a>
             </p>
           </div>
         </form>

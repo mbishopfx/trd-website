@@ -100,51 +100,7 @@ const navigationItems: NavItem[] = [
     name: 'Business Starter Pack',
     href: '/llc',
     icon: <Rocket className="w-4 h-4" />,
-    badge: 'New LLC',
-    items: [
-      {
-        name: 'Website Build',
-        href: '/llc/website-build',
-        icon: <Globe className="w-4 h-4" />,
-        description: 'SEO-optimized site built for ranking and conversions'
-      },
-      {
-        name: 'Google Business Profile Creation',
-        href: '/llc/gbp-creation',
-        icon: <MapPin className="w-4 h-4" />,
-        description: 'Engineered for local visibility from day one'
-      },
-      {
-        name: 'AIO (AI Optimization)',
-        href: '/llc/aio',
-        icon: <Bot className="w-4 h-4" />,
-        description: 'Inject your brand into Google\'s AI ecosystem'
-      },
-      {
-        name: 'LSEO (Local SEO)',
-        href: '/llc/lseo',
-        icon: <Search className="w-4 h-4" />,
-        description: 'Dominate the Google 3-Pack where leads live'
-      },
-      {
-        name: 'GBP Watchtower',
-        href: '/llc/gbp-watchtower',
-        icon: <Shield className="w-4 h-4" />,
-        description: '24/7 monitoring and defense system'
-      },
-      {
-        name: 'Go-To-Market Playbook',
-        href: '/llc/go-to-market-playbook',
-        icon: <Target className="w-4 h-4" />,
-        description: 'Custom strategy by Jon Korkowski'
-      },
-      {
-        name: 'Free Consultation',
-        href: '/llc/consultation',
-        icon: <MessageSquare className="w-4 h-4" />,
-        description: 'Meet with Jon to plan your 90-day domination'
-      }
-    ]
+    badge: '$499'
   }
 ];
 

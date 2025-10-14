@@ -19,22 +19,60 @@ export default function StarterPackBanner() {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
       </div>
 
+      {/* Animated Shimmer Effect */}
+      <motion.div
+        animate={{
+          x: ['-100%', '100%'],
+        }}
+        transition={{
+          duration: 3,
+          repeat: Infinity,
+          ease: "linear",
+          repeatDelay: 2
+        }}
+        className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"
+      />
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Left Side - Message */}
           <div className="flex items-center space-x-3 text-white">
             <div className="flex-shrink-0">
-              <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+              <motion.div
+                animate={{
+                  scale: [1, 1.1, 1],
+                  rotate: [0, 5, -5, 0]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center"
+              >
                 <Rocket className="w-5 h-5 text-white" />
-              </div>
+              </motion.div>
             </div>
             <div>
               <div className="flex items-center space-x-2">
                 <Sparkles className="w-4 h-4" />
-                <span className="font-bold text-lg">New Entrepreneur Starter Pack</span>
+                <span className="font-bold text-lg">Entrepreneur Starter Pack - Work Directly with Jon</span>
               </div>
               <p className="text-white/90 text-sm">
-                <strong className="font-bold">$499 for the first 2 months</strong> - Everything your new LLC needs to dominate from day one
+                <motion.strong
+                  animate={{
+                    opacity: [1, 0.7, 1],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="font-bold"
+                >
+                  Two months at $499
+                </motion.strong>
+                {' '}- Get everything your new LLC needs with personal guidance from Jon Korkowski
               </p>
             </div>
           </div>

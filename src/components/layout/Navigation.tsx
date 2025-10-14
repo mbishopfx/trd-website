@@ -90,14 +90,14 @@ const navigationItems: NavItem[] = [
     icon: <Phone className="w-4 h-4" />,
   },
   {
-    name: 'Learn About AIO',
+    name: 'AIO',
     href: '/learn-aio',
     icon: <Bot className="w-4 h-4" />,
     badge: 'AI',
     description: 'Discover our AI-powered optimization technology'
   },
   {
-    name: 'Business Starter Pack',
+    name: 'Starter Pack',
     href: '/llc',
     icon: <Rocket className="w-4 h-4" />,
     badge: '$499'

@@ -3,7 +3,7 @@
 import Script from 'next/script';
 
 interface ComprehensiveSchemaProps {
-  type: 'platform-tool' | 'service' | 'education' | 'location' | 'about' | 'contact' | 'referral-program' | 'article' | 'howto' | 'video' | 'product';
+  type: 'platform-tool' | 'service' | 'education' | 'location' | 'about' | 'contact' | 'referral-program' | 'article' | 'howto' | 'video' | 'product' | 'service-landing';
   pageData: {
     title: string;
     description: string;
@@ -524,6 +524,116 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
     })) || []
   } : null;
 
+  // Service Landing Page Schema (for special offers like Business Starter Pack)
+  const serviceLandingSchema = type === 'service-landing' ? {
+    "@context": "https://schema.org",
+    "@type": ["Service", "Product"],
+    "@id": `${pageData.url}#service-landing`,
+    name: pageData.title,
+    description: pageData.description,
+    url: pageData.url,
+    category: pageData.category || "Business Services",
+    brand: {
+      "@type": "Brand",
+      name: "True Rank Digital",
+      logo: napData.logo
+    },
+    provider: {
+      "@type": "LocalBusiness",
+      "@id": `${baseUrl}/#organization`,
+      name: napData.name,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: napData.address.streetAddress,
+        addressLocality: napData.address.addressLocality,
+        addressRegion: napData.address.addressRegion,
+        postalCode: napData.address.postalCode,
+        addressCountry: napData.address.addressCountry
+      },
+      telephone: napData.telephone,
+      email: napData.email
+    },
+    offers: pageData.offers?.map((offer) => ({
+      "@type": "Offer",
+      name: offer.name,
+      description: offer.description,
+      price: offer.price,
+      priceCurrency: offer.currency || "USD",
+      priceValidUntil: "2025-12-31",
+      availability: "https://schema.org/InStock",
+      url: pageData.url,
+      eligibleRegion: {
+        "@type": "Country",
+        name: "United States"
+      },
+      itemOffered: {
+        "@type": "Service",
+        name: offer.name,
+        description: offer.description,
+        serviceType: "Business Development Package"
+      },
+      seller: {
+        "@type": "LocalBusiness",
+        "@id": `${baseUrl}/#organization`,
+        name: napData.name
+      }
+    })) || [],
+    serviceType: "Business Startup Package",
+    areaServed: {
+      "@type": "Country",
+      name: "United States"
+    },
+    audience: {
+      "@type": "BusinessAudience",
+      audienceType: "New Business Owners"
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: "12"
+    },
+    review: [
+      {
+        "@type": "Review",
+        author: {
+          "@type": "Person",
+          name: "Jessica Perez"
+        },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5"
+        },
+        reviewBody: "True rank digital isn't a company it's a family they got my business back on track. Constant follow ups they treated me like family god bless y'all"
+      }
+    ],
+    keywords: pageData.keywords?.join(", "),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": pageData.url
+    },
+    potentialAction: [
+      {
+        "@type": "BuyAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${pageData.url}#get-started`,
+          actionPlatform: ["https://schema.org/DesktopWebPlatform", "https://schema.org/MobileWebPlatform"]
+        }
+      },
+      {
+        "@type": "ContactAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: "tel:+17324750139",
+          actionPlatform: ["https://schema.org/DesktopWebPlatform", "https://schema.org/MobileWebPlatform"]
+        }
+      }
+    ]
+  } : null;
+
   // Referral Program Schema
   const referralSchema = type === 'referral-program' ? {
     "@context": "https://schema.org",
@@ -638,6 +748,7 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
 
   if (platformToolSchema) schemas.push(platformToolSchema);
   if (serviceSchema) schemas.push(serviceSchema);
+  if (serviceLandingSchema) schemas.push(serviceLandingSchema);
   if (educationSchema) schemas.push(educationSchema);
   if (locationSchema) schemas.push(locationSchema);
   if (aboutSchema) schemas.push(aboutSchema);

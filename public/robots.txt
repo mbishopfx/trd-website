@@ -1,0 +1,122 @@
+# True Rank Digital - Robots.txt
+# Website: https://truerankdigital.com
+# Professional SEO & Digital Marketing Services
+
+# Allow all bots to crawl all content
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://truerankdigital.com/sitemap.xml
+
+# High Priority Pages - Core Services
+# Homepage
+Allow: /
+
+# About & Contact
+Allow: /about
+Allow: /staff
+Allow: /meet-the-staff
+Allow: /contact
+
+# Business Starter Pack (HIGH VALUE - NEW!)
+Allow: /llc
+
+# AI & Technology
+Allow: /learn-aio
+Allow: /ai-seo-technology
+
+# Lead Generation Pages
+Allow: /free-audit
+Allow: /referral
+Allow: /local-seo-growth
+Allow: /ecommerce-growth
+Allow: /lead-generation
+Allow: /enterprise-seo
+Allow: /technical-seo
+Allow: /content-marketing
+Allow: /google-ads-management
+Allow: /website-optimization
+Allow: /digital-strategy
+
+# Main Service Pages
+Allow: /services
+Allow: /services/local-seo
+Allow: /services/google-business-profile
+Allow: /services/ai-seo
+Allow: /services/website-development
+Allow: /services/ecommerce-optimization
+Allow: /services/digital-marketing
+Allow: /services/organic-search
+Allow: /services/review-management
+
+# Platform Pages - SEO Tools
+Allow: /platform
+Allow: /platform/competitor-analysis
+Allow: /platform/eeat-analysis
+Allow: /platform/grid-ranking
+Allow: /platform/indexability
+Allow: /platform/knowledge-graph
+Allow: /platform/lead-generation
+Allow: /platform/overwatch
+
+# Education & Resources
+Allow: /education
+Allow: /education/ai-search-preparation
+Allow: /education/algorithm-adaptation
+Allow: /education/custom-vs-cookie-cutter
+Allow: /education/future-proofing-seo
+
+# Market Segments
+Allow: /markets
+Allow: /markets/local-business
+Allow: /markets/ecommerce-enterprise
+Allow: /markets/multi-location
+
+# Location Pages - Local SEO
+Allow: /locations
+Allow: /locations/east-brunswick
+Allow: /locations/edison
+Allow: /locations/new-brunswick
+Allow: /locations/north-brunswick
+Allow: /locations/sayreville
+Allow: /locations/south-river
+Allow: /east-brunswick-services
+
+# Additional Pages
+Allow: /case-studies
+Allow: /support
+Allow: /tech-services/team-platform-software
+Allow: /gbp-pro/search-grid-ranking
+
+# Legal Pages
+Allow: /privacy-policy
+Allow: /terms
+Allow: /gdpr
+
+# Disallow Admin/API Routes (not for indexing)
+Disallow: /api/
+
+# Crawl Delay (optional - helps prevent server overload)
+# Crawl-delay: 1
+
+# Special Instructions for Major Search Engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots (optional security)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+

@@ -80,7 +80,7 @@ export default function BusinessStarterPackPage() {
 
   const pricingHighlights = [
     { label: 'Regular Price', value: '$2,500+', strikethrough: true },
-    { label: 'Your Price', value: '$499', highlight: true },
+    { label: 'Your Price', value: 'Starting at $499', highlight: true },
     { label: 'Duration', value: 'First 2 Months' },
     { label: 'Value', value: '80% Savings' }
   ];
@@ -245,7 +245,7 @@ export default function BusinessStarterPackPage() {
               >
                 <div className="inline-flex items-center space-x-2 px-6 py-3 bg-white/20 backdrop-blur-sm text-white rounded-full text-lg font-bold mb-6">
                   <Sparkles className="w-5 h-5" />
-                  <span>SPECIAL OFFER: $499 for the First 2 Months</span>
+                  <span>SPECIAL OFFER: Starting at $499</span>
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
                   New Entrepreneur
@@ -283,7 +283,7 @@ export default function BusinessStarterPackPage() {
                 >
                   <div className="flex items-center space-x-2">
                     <Rocket className="w-6 h-6" />
-                    <span>Get Started - $499</span>
+                    <span>Get Started - From $499</span>
                   </div>
                 </a>
                 <a
@@ -765,7 +765,7 @@ export default function BusinessStarterPackPage() {
                 >
                   <div className="flex items-center space-x-2">
                     <Rocket className="w-6 h-6" />
-                    <span>Get Started - $499</span>
+                    <span>Get Started - From $499</span>
                   </div>
                 </a>
                 

@@ -100,7 +100,7 @@ const navigationItems: NavItem[] = [
     name: 'Starter Pack',
     href: '/llc',
     icon: <Rocket className="w-4 h-4" />,
-    badge: '$499'
+    badge: 'From $499'
   }
 ];
 

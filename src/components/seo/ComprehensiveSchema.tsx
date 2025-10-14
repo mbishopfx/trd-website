@@ -334,6 +334,11 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
           "@type": "Person",
           name: "Sebastian Vargas",
           jobTitle: "SEO Specialist"
+        },
+        {
+          "@type": "Person",
+          name: "Eric Malheiro",
+          jobTitle: "Business Acquisition Director"
         }
       ]
     }

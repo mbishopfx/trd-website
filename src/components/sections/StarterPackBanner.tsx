@@ -70,7 +70,7 @@ export default function StarterPackBanner() {
                   }}
                   className="font-bold"
                 >
-                  Two months at $499
+                  Starting at $499
                 </motion.strong>
                 {' '}- Get everything your new LLC needs with personal guidance from Jon Korkowski
               </p>

@@ -159,6 +159,14 @@ export default function PageSpecificSchema({
         worksFor: {
           "@id": `${baseUrl}/#organization`
         }
+      },
+      {
+        "@type": "Person",
+        name: "Eric Malheiro",
+        jobTitle: "Business Acquisition Director", 
+        worksFor: {
+          "@id": `${baseUrl}/#organization`
+        }
       }
     ]
   });

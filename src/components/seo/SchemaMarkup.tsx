@@ -323,6 +323,28 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
       sameAs: [
         "https://www.linkedin.com/in/sebastian-vargas"
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": "https://truerankdigital.com/staff/eric-malheiro", 
+      name: "Eric Malheiro",
+      jobTitle: "Business Acquisition Director",
+      worksFor: {
+        "@id": "https://truerankdigital.com/#organization"
+      },
+      description: "Business Acquisition Director focused on strategic client acquisition and business development for True Rank Digital.",
+      email: "eric@truerankdigital.com",
+      url: "https://truerankdigital.com/staff",
+      knowsAbout: [
+        "Business Development",
+        "Client Acquisition",
+        "Strategic Partnerships",
+        "Sales Strategy"
+      ],
+      sameAs: [
+        "https://www.linkedin.com/in/eric-malheiro"
+      ]
     }
   ];
 

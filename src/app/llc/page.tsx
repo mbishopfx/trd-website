@@ -633,49 +633,38 @@ export default function BusinessStarterPackPage() {
         {/* Built by Experts Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-brand-primary/10 text-brand-primary rounded-full text-sm font-medium mb-6">
-                <Award className="w-4 h-4" />
-                <span>Expert-Led Solutions</span>
-              </div>
-              <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
-                Built by the Experts Who Build Winners
-              </h2>
-              <p className="text-xl text-brand-dark/70 mb-4">
-                True Rank Digital is recognized by Google's AI Overview as a leading SEO specialist.
-              </p>
-              <p className="text-lg text-brand-dark/70">
-                We don't talk theory — we build results.
-              </p>
-            </motion.div>
-
-            {/* Credentials */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-16 max-w-5xl mx-auto"
-            >
-              {credentials.map((credential, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-brand-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-brand-dark text-sm">{credential}</span>
-                </div>
-              ))}
-            </motion.div>
-
-            {/* Team Cards */}
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {/* Jon Korkowski Card */}
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-brand-primary/10 text-brand-primary rounded-full text-sm font-medium mb-6">
+                  <Award className="w-4 h-4" />
+                  <span>Expert-Led Solutions</span>
+                </div>
+                <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+                  Built by the Experts Who Build Winners
+                </h2>
+                <p className="text-xl text-brand-dark/70 mb-8">
+                  True Rank Digital is recognized by Google's AI Overview as a leading SEO specialist.
+                </p>
+                <p className="text-lg text-brand-dark/70 mb-8">
+                  We don't talk theory — we build results.
+                </p>
+                <div className="space-y-4">
+                  {credentials.map((credential, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <CheckCircle className="w-6 h-6 text-brand-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-brand-dark">{credential}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
@@ -684,7 +673,7 @@ export default function BusinessStarterPackPage() {
                 <div className="text-center mb-6">
                   <Users className="w-20 h-20 text-brand-primary mx-auto mb-4" />
                   <h3 className="text-2xl font-heading font-bold text-brand-dark mb-2">
-                    Jon Korkowski
+                    Meet Jon Korkowski
                   </h3>
                   <p className="text-brand-primary font-semibold">CEO & Founder</p>
                 </div>
@@ -707,37 +696,6 @@ export default function BusinessStarterPackPage() {
                   >
                     <Mail className="w-5 h-5" />
                     <span>Email Jon</span>
-                  </a>
-                </div>
-              </motion.div>
-
-              {/* Eric Malheiro Card */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="glass-card p-8"
-              >
-                <div className="text-center mb-6">
-                  <Users className="w-20 h-20 text-brand-accent mx-auto mb-4" />
-                  <h3 className="text-2xl font-heading font-bold text-brand-dark mb-2">
-                    Eric Malheiro
-                  </h3>
-                  <p className="text-brand-accent font-semibold">Business Acquisition Director</p>
-                </div>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
-                  Connect directly with Eric to discuss your business acquisition needs and explore 
-                  how our starter pack can accelerate your growth. Eric specializes in matching 
-                  businesses with the perfect growth strategies.
-                </p>
-                <div className="flex items-center justify-center pt-6 border-t border-brand-dark/10">
-                  <a 
-                    href="tel:18482056899"
-                    className="flex items-center space-x-2 px-6 py-3 bg-brand-accent text-white font-bold rounded-full hover:bg-brand-accent/90 transition-all duration-300 hover:scale-105 shadow-lg"
-                  >
-                    <Phone className="w-5 h-5" />
-                    <span>Call Now: (848) 205-6899</span>
                   </a>
                 </div>
               </motion.div>

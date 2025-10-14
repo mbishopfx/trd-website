@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Linkedin, Mail, Award, Code, Brain, BarChart3, Search, Globe, Target, Users, Zap, Shield } from 'lucide-react';
+import { Linkedin, Mail, Phone, Award, Code, Brain, BarChart3, Search, Globe, Target, Users, Zap, Shield } from 'lucide-react';
 
 interface TeamMember {
   name: string;
@@ -14,6 +14,7 @@ interface TeamMember {
   color: string;
   experience: string;
   email: string;
+  phone?: string;
   linkedin?: string;
 }
 
@@ -54,6 +55,18 @@ export default function FullTeamSection() {
       experience: "Leadership",
       email: "jose@truerankdigital.com",
       linkedin: "https://www.linkedin.com/in/jose-perdomo-2ab14a22a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+    },
+    {
+      name: "Eric Malheiro",
+      role: "Business Acquisition Director",
+      department: "Leadership",
+      bio: "Business Acquisition Director focused on strategic client acquisition and business development for True Rank Digital.",
+      specialties: ["Business Development", "Client Acquisition", "Strategic Partnerships", "Sales Strategy"],
+      icon: <Users className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      experience: "Leadership",
+      email: "eric@truerankdigital.com",
+      phone: "18482056899"
     }
   ];
 
@@ -152,14 +165,23 @@ export default function FullTeamSection() {
             </div>
 
             {/* Contact */}
-            <div className="flex items-center space-x-3 pt-4 border-t border-brand-dark/10">
+            <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-brand-dark/10">
               <a 
                 href={`mailto:${member.email}`}
                 className="flex items-center space-x-2 text-brand-secondary hover:text-brand-primary transition-colors text-sm"
               >
                 <Mail className="w-4 h-4" />
-                <span>Contact</span>
+                <span>Email</span>
               </a>
+              {member.phone && (
+                <a 
+                  href={`tel:${member.phone}`}
+                  className="flex items-center space-x-2 px-3 py-1.5 bg-brand-accent text-white rounded-full hover:bg-brand-accent/90 transition-colors text-sm font-semibold"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>Call Now</span>
+                </a>
+              )}
               {member.linkedin && (
                 <a 
                   href={member.linkedin}

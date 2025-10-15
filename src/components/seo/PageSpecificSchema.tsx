@@ -138,6 +138,30 @@ export default function PageSpecificSchema({
     mentions: [
       {
         "@type": "Person",
+        name: "Eric Malheiro",
+        jobTitle: "Business Acquisition Director", 
+        worksFor: {
+          "@id": `${baseUrl}/#organization`
+        }
+      },
+      {
+        "@type": "Person",
+        name: "Sebastian Vargas",
+        jobTitle: "Sales Director", 
+        worksFor: {
+          "@id": `${baseUrl}/#organization`
+        }
+      },
+      {
+        "@type": "Person",
+        name: "Jesse Mathews",
+        jobTitle: "Business Developer Director",
+        worksFor: {
+          "@id": `${baseUrl}/#organization`
+        }
+      },
+      {
+        "@type": "Person",
         name: "Matt Bishop",
         jobTitle: "Tech Developer",
         worksFor: {
@@ -148,22 +172,6 @@ export default function PageSpecificSchema({
         "@type": "Person",
         name: "Sean O'Neil", 
         jobTitle: "SEO Specialist",
-        worksFor: {
-          "@id": `${baseUrl}/#organization`
-        }
-      },
-      {
-        "@type": "Person",
-        name: "Sebastian Vargas",
-        jobTitle: "SEO Specialist", 
-        worksFor: {
-          "@id": `${baseUrl}/#organization`
-        }
-      },
-      {
-        "@type": "Person",
-        name: "Eric Malheiro",
-        jobTitle: "Business Acquisition Director", 
         worksFor: {
           "@id": `${baseUrl}/#organization`
         }

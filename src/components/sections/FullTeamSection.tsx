@@ -33,18 +33,6 @@ export default function FullTeamSection() {
       linkedin: "https://www.linkedin.com/in/jonjkorkowski/"
     },
     {
-      name: "Jesse Mathews",
-      role: "President",
-      department: "Leadership", 
-      bio: "President overseeing operations and ensuring quality service delivery for all clients.",
-      specialties: ["Operations", "Team Leadership", "Quality Management"],
-      icon: <Target className="w-8 h-8" />,
-      color: "from-brand-secondary to-brand-accent",
-      experience: "Leadership",
-      email: "jesse@truerankdigital.com",
-      linkedin: "https://www.linkedin.com/in/jesse-mathews-b342641bb/"
-    },
-    {
       name: "Jose Perdomo",
       role: "Executive Vice President",
       department: "Leadership",
@@ -67,10 +55,33 @@ export default function FullTeamSection() {
       experience: "Leadership",
       email: "eric@truerankdigital.com",
       phone: "18482056899"
+    },
+    {
+      name: "Sebastian Vargas",
+      role: "Sales Director",
+      department: "Leadership",
+      bio: "Sales Director focused on client development and relationship management.",
+      specialties: ["Client Relations", "Sales Strategy", "Business Development"],
+      icon: <Target className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      experience: "Leadership",
+      email: "sebastian@truerankdigital.com"
     }
   ];
 
   const technicalTeam: TeamMember[] = [
+    {
+      name: "Jesse Mathews",
+      role: "Business Developer Director",
+      department: "Business Development", 
+      bio: "Business Developer Director overseeing operations and ensuring quality service delivery for all clients.",
+      specialties: ["Operations", "Team Leadership", "Quality Management"],
+      icon: <Target className="w-8 h-8" />,
+      color: "from-brand-secondary to-brand-accent",
+      experience: "Business Development",
+      email: "jesse@truerankdigital.com",
+      linkedin: "https://www.linkedin.com/in/jesse-mathews-b342641bb/"
+    },
     {
       name: "Matt Bishop",
       role: "Tech Developer",
@@ -93,17 +104,6 @@ export default function FullTeamSection() {
       color: "from-green-500 to-blue-500",
       experience: "SEO Expert",
       email: "sean@truerankdigital.com"
-    },
-    {
-      name: "Sebastian Vargas",
-      role: "Sales Director",
-      department: "Sales",
-      bio: "Sales Director focused on client development and relationship management.",
-      specialties: ["Client Relations", "Sales Strategy", "Business Development"],
-      icon: <Target className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      experience: "Sales Director",
-      email: "sebastian@truerankdigital.com"
     }
   ];
 

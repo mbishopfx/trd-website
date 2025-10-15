@@ -312,13 +312,23 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
       employee: [
         {
           "@type": "Person",
-          name: "Jesse Mathews",
-          jobTitle: "President"
-        },
-        {
-          "@type": "Person", 
           name: "Jose Perdomo",
           jobTitle: "Executive Vice President"
+        },
+        {
+          "@type": "Person",
+          name: "Eric Malheiro",
+          jobTitle: "Business Acquisition Director"
+        },
+        {
+          "@type": "Person",
+          name: "Sebastian Vargas",
+          jobTitle: "Sales Director"
+        },
+        {
+          "@type": "Person",
+          name: "Jesse Mathews",
+          jobTitle: "Business Developer Director"
         },
         {
           "@type": "Person",
@@ -329,16 +339,6 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
           "@type": "Person",
           name: "Sean O'Niel",
           jobTitle: "SEO Specialist"
-        },
-        {
-          "@type": "Person",
-          name: "Sebastian Vargas",
-          jobTitle: "SEO Specialist"
-        },
-        {
-          "@type": "Person",
-          name: "Eric Malheiro",
-          jobTitle: "Business Acquisition Director"
         }
       ]
     }

@@ -219,18 +219,18 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
       "@type": "Person",
       "@id": "https://truerankdigital.com/staff/jesse-mathews",
       name: "Jesse Mathews",
-      jobTitle: "President",
+      jobTitle: "Business Developer Director",
       worksFor: {
         "@id": "https://truerankdigital.com/#organization"
       },
-      description: "President overseeing operations and ensuring quality service delivery for all True Rank Digital clients.",
+      description: "Business Developer Director overseeing operations and ensuring quality service delivery for all True Rank Digital clients.",
       email: "jesse@truerankdigital.com",
       url: "https://truerankdigital.com/staff",
       knowsAbout: [
         "Operations",
         "Team Leadership",
         "Quality Management",
-        "Client Services"
+        "Business Development"
       ],
       sameAs: [
         "https://www.linkedin.com/in/jesse-mathews"
@@ -307,18 +307,18 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
       "@type": "Person",
       "@id": "https://truerankdigital.com/staff/sebastian-vargas", 
       name: "Sebastian Vargas",
-      jobTitle: "SEO Specialist",
+      jobTitle: "Sales Director",
       worksFor: {
         "@id": "https://truerankdigital.com/#organization"
       },
-      description: "SEO specialist working on search optimization and digital marketing campaigns with focus on technical SEO implementations.",
+      description: "Sales Director focused on client development and relationship management.",
       email: "sebastian@truerankdigital.com",
       url: "https://truerankdigital.com/staff",
       knowsAbout: [
-        "SEO Optimization",
-        "Digital Marketing",
-        "Search Analysis",
-        "Technical SEO"
+        "Client Relations",
+        "Sales Strategy",
+        "Business Development",
+        "Digital Marketing"
       ],
       sameAs: [
         "https://www.linkedin.com/in/sebastian-vargas"

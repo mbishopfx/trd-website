@@ -7,6 +7,7 @@ import { redirect } from 'next/navigation';
 import { isAdminAuthenticated, clearAdminAuth } from '@/lib/admin-auth';
 import { blogDb } from '@/lib/supabase-admin';
 import Link from 'next/link';
+import { GenerateSingleButton, GenerateBulkButton } from './GenerateButtons';
 
 export default async function AdminDashboardPage() {
   // Check authentication
@@ -144,47 +145,9 @@ export default async function AdminDashboardPage() {
             </div>
           </Link>
 
-          <Link
-            href="/admin/posts"
-            className="bg-gradient-to-br from-orange-600 to-pink-600 rounded-xl p-6 hover:shadow-2xl transition-all duration-200 group text-left block"
-          >
-            <div className="flex items-center gap-4 mb-3">
-              <span className="text-4xl">🚀</span>
-              <h3 className="text-xl font-bold text-white">Generate 1 Post</h3>
-            </div>
-            <p className="text-orange-100 text-sm">
-              Manually trigger single blog post generation
-            </p>
-            <div className="mt-4 text-white font-semibold group-hover:translate-x-2 transition-transform">
-              Generate →
-            </div>
-          </Link>
+          <GenerateSingleButton />
 
-          <form action={async () => {
-            'use server';
-            const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/admin/blog/bulk-generate`, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ count: 10 }),
-            });
-            redirect('/admin/posts?generated=bulk');
-          }}>
-            <button
-              type="submit"
-              className="w-full bg-gradient-to-br from-purple-600 to-indigo-600 rounded-xl p-6 hover:shadow-2xl transition-all duration-200 group text-left"
-            >
-              <div className="flex items-center gap-4 mb-3">
-                <span className="text-4xl">⚡</span>
-                <h3 className="text-xl font-bold text-white">Generate 10 Posts</h3>
-              </div>
-              <p className="text-purple-100 text-sm">
-                Bulk generate 10 AI blog posts at once
-              </p>
-              <div className="mt-4 text-white font-semibold group-hover:translate-x-2 transition-transform">
-                Generate Bulk →
-              </div>
-            </button>
-          </form>
+          <GenerateBulkButton />
         </div>
 
         {/* Recent Posts */}

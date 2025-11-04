@@ -8,6 +8,7 @@ import { isAdminAuthenticated, clearAdminAuth } from '@/lib/admin-auth';
 import { blogDb } from '@/lib/supabase-admin';
 import Link from 'next/link';
 import { GenerateSingleButton, GenerateBulkButton } from './GenerateButtons';
+import QRCodeGenerator from '@/components/QRCodeGenerator';
 
 export default async function AdminDashboardPage() {
   // Check authentication
@@ -194,6 +195,11 @@ export default async function AdminDashboardPage() {
               ))}
             </div>
           )}
+        </div>
+
+        {/* QR Code Generator */}
+        <div className="mt-8">
+          <QRCodeGenerator />
         </div>
 
         {/* System Info */}

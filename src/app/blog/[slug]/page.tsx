@@ -119,7 +119,7 @@ export default async function BlogPostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <article className="min-h-screen bg-black">
+      <article className="min-h-screen bg-black pt-20">
         {/* Breadcrumb Navigation */}
         <div className="bg-gray-900 border-b border-gray-800">
           <div className="max-w-4xl mx-auto px-4 py-4">

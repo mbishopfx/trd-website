@@ -57,7 +57,7 @@ export default async function BlogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
 
-      <div className="min-h-screen bg-black">
+      <div className="min-h-screen bg-black pt-20">
         {/* Hero Section */}
         <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">

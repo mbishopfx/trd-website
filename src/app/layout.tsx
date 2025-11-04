@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/layout/Navigation";
-import Footer from "@/components/layout/Footer";
+import ConditionalLayout from "@/components/layout/ConditionalLayout";
 import SchemaMarkup from "@/components/seo/SchemaMarkup";
 
 const inter = Inter({
@@ -107,13 +106,9 @@ export default function RootLayout({
             <div className="floating-particle" style={{ left: '90%', animationDelay: '2.5s' }}></div>
           </div>
           
-          <Navigation />
-          
-          <main className="flex-grow relative">
+          <ConditionalLayout>
             {children}
-          </main>
-          
-          <Footer />
+          </ConditionalLayout>
         </div>
       </body>
     </html>

@@ -204,24 +204,111 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Content */}
         <div className="max-w-4xl mx-auto px-4 pb-16">
+          <style jsx>{`
+            .blog-content h1 {
+              font-size: 2.25rem;
+              font-weight: 700;
+              color: white;
+              margin-top: 2rem;
+              margin-bottom: 1.5rem;
+              line-height: 1.2;
+            }
+            .blog-content h2 {
+              font-size: 1.875rem;
+              font-weight: 700;
+              color: white;
+              margin-top: 3rem;
+              margin-bottom: 1.5rem;
+              line-height: 1.3;
+            }
+            .blog-content h3 {
+              font-size: 1.5rem;
+              font-weight: 700;
+              color: white;
+              margin-top: 2rem;
+              margin-bottom: 1rem;
+              line-height: 1.4;
+            }
+            .blog-content h4 {
+              font-size: 1.25rem;
+              font-weight: 700;
+              color: white;
+              margin-top: 1.5rem;
+              margin-bottom: 0.75rem;
+            }
+            .blog-content h5 {
+              font-size: 1.125rem;
+              font-weight: 700;
+              color: #e5e7eb;
+              margin-top: 1rem;
+              margin-bottom: 0.5rem;
+            }
+            .blog-content h6 {
+              font-size: 1rem;
+              font-weight: 700;
+              color: #e5e7eb;
+              margin-top: 1rem;
+              margin-bottom: 0.5rem;
+            }
+            .blog-content p {
+              font-size: 1.125rem;
+              color: white;
+              line-height: 1.75;
+              margin-bottom: 1.5rem;
+            }
+            .blog-content strong {
+              font-weight: 700;
+              color: white;
+            }
+            .blog-content em {
+              font-style: italic;
+              color: #d1d5db;
+            }
+            .blog-content a {
+              color: #60a5fa;
+              font-weight: 600;
+              text-decoration: none;
+            }
+            .blog-content a:hover {
+              text-decoration: underline;
+            }
+            .blog-content ul, .blog-content ol {
+              margin: 1.5rem 0;
+              padding-left: 1.5rem;
+            }
+            .blog-content ul {
+              list-style-type: disc;
+            }
+            .blog-content ol {
+              list-style-type: decimal;
+            }
+            .blog-content li {
+              font-size: 1rem;
+              color: white;
+              margin-bottom: 0.5rem;
+              line-height: 1.6;
+            }
+            .blog-content blockquote {
+              border-left: 4px solid #3b82f6;
+              padding-left: 1.5rem;
+              padding-top: 1rem;
+              padding-bottom: 1rem;
+              margin: 1.5rem 0;
+              background-color: #111827;
+              font-style: italic;
+              color: #d1d5db;
+            }
+            .blog-content code {
+              background-color: #111827;
+              color: #60a5fa;
+              padding: 0.25rem 0.5rem;
+              border-radius: 0.25rem;
+              font-family: 'Courier New', monospace;
+              font-size: 0.875rem;
+            }
+          `}</style>
           <div
-            className="prose prose-lg prose-invert max-w-none
-              prose-headings:font-bold prose-headings:text-white
-              prose-h1:text-4xl prose-h1:mt-8 prose-h1:mb-6 prose-h1:text-white
-              prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-white
-              prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-white
-              prose-h4:text-xl prose-h4:mt-6 prose-h4:mb-3 prose-h4:text-white
-              prose-h5:text-lg prose-h5:mt-4 prose-h5:mb-2 prose-h5:text-gray-200
-              prose-h6:text-base prose-h6:mt-4 prose-h6:mb-2 prose-h6:text-gray-200
-              prose-p:text-white prose-p:leading-relaxed prose-p:mb-6 prose-p:text-lg
-              prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline prose-a:font-semibold
-              prose-strong:text-white prose-strong:font-bold
-              prose-em:text-gray-200 prose-em:italic
-              prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
-              prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
-              prose-li:text-white prose-li:mb-2 prose-li:text-base
-              prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-300 prose-blockquote:bg-gray-900 prose-blockquote:py-4 prose-blockquote:my-6
-              prose-code:text-blue-400 prose-code:bg-gray-900 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:font-mono prose-code:text-sm"
+            className="blog-content"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 

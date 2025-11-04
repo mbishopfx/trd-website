@@ -3,7 +3,7 @@
  * View and manage submissions for a specific form
  */
 
-import { redirect } from 'next/redirect';
+import { redirect } from 'next/navigation';
 import { isAdminAuthenticated } from '@/lib/admin-auth';
 import { createClient } from '@supabase/supabase-js';
 import Link from 'next/link';

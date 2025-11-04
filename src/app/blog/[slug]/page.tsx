@@ -119,20 +119,20 @@ export default async function BlogPostPage({ params }: Props) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <article className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <article className="min-h-screen bg-black">
         {/* Breadcrumb Navigation */}
-        <div className="bg-white border-b border-gray-200">
+        <div className="bg-gray-900 border-b border-gray-800">
           <div className="max-w-4xl mx-auto px-4 py-4">
-            <nav className="flex items-center gap-2 text-sm text-gray-600">
-              <Link href="/" className="hover:text-blue-600 transition-colors">
+            <nav className="flex items-center gap-2 text-sm text-gray-400">
+              <Link href="/" className="hover:text-blue-400 transition-colors">
                 Home
               </Link>
               <span>/</span>
-              <Link href="/blog" className="hover:text-blue-600 transition-colors">
+              <Link href="/blog" className="hover:text-blue-400 transition-colors">
                 Blog
               </Link>
               <span>/</span>
-              <span className="text-gray-900 font-medium truncate">
+              <span className="text-white font-medium truncate">
                 {post.title}
               </span>
             </nav>
@@ -205,23 +205,23 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Content */}
         <div className="max-w-4xl mx-auto px-4 pb-16">
           <div
-            className="prose prose-lg prose-blue max-w-none
-              prose-headings:font-bold prose-headings:text-gray-900
-              prose-h1:text-4xl prose-h1:mt-8 prose-h1:mb-6 prose-h1:text-gray-900
-              prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-gray-900
-              prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-gray-800
-              prose-h4:text-xl prose-h4:mt-6 prose-h4:mb-3 prose-h4:text-gray-800
-              prose-h5:text-lg prose-h5:mt-4 prose-h5:mb-2 prose-h5:text-gray-800
-              prose-h6:text-base prose-h6:mt-4 prose-h6:mb-2 prose-h6:text-gray-700
-              prose-p:text-gray-900 prose-p:leading-relaxed prose-p:mb-6 prose-p:text-lg
-              prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-a:font-semibold
-              prose-strong:text-gray-900 prose-strong:font-bold
-              prose-em:text-gray-800 prose-em:italic
+            className="prose prose-lg prose-invert max-w-none
+              prose-headings:font-bold prose-headings:text-white
+              prose-h1:text-4xl prose-h1:mt-8 prose-h1:mb-6 prose-h1:text-white
+              prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-white
+              prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:text-white
+              prose-h4:text-xl prose-h4:mt-6 prose-h4:mb-3 prose-h4:text-white
+              prose-h5:text-lg prose-h5:mt-4 prose-h5:mb-2 prose-h5:text-gray-200
+              prose-h6:text-base prose-h6:mt-4 prose-h6:mb-2 prose-h6:text-gray-200
+              prose-p:text-white prose-p:leading-relaxed prose-p:mb-6 prose-p:text-lg
+              prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline prose-a:font-semibold
+              prose-strong:text-white prose-strong:font-bold
+              prose-em:text-gray-200 prose-em:italic
               prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6
               prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6
-              prose-li:text-gray-900 prose-li:mb-2 prose-li:text-base
-              prose-blockquote:border-l-4 prose-blockquote:border-blue-600 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-800 prose-blockquote:bg-blue-50 prose-blockquote:py-4 prose-blockquote:my-6
-              prose-code:text-blue-700 prose-code:bg-blue-50 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:font-mono prose-code:text-sm"
+              prose-li:text-white prose-li:mb-2 prose-li:text-base
+              prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-300 prose-blockquote:bg-gray-900 prose-blockquote:py-4 prose-blockquote:my-6
+              prose-code:text-blue-400 prose-code:bg-gray-900 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:font-mono prose-code:text-sm"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
@@ -245,7 +245,7 @@ export default async function BlogPostPage({ params }: Props) {
           <div className="mt-12 text-center">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold transition-colors"
+              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold transition-colors"
             >
               ← Back to All Articles
             </Link>

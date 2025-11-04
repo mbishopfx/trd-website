@@ -57,7 +57,7 @@ export default async function BlogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
 
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <div className="min-h-screen bg-black">
         {/* Hero Section */}
         <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
@@ -78,10 +78,10 @@ export default async function BlogPage() {
           {posts.length === 0 ? (
             <div className="text-center py-20">
               <div className="text-6xl mb-4">📝</div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-2">
+              <h2 className="text-2xl font-bold text-white mb-2">
                 Coming Soon
               </h2>
-              <p className="text-gray-600">
+              <p className="text-gray-400">
                 AI-powered content is being generated. Check back soon!
               </p>
             </div>
@@ -93,10 +93,10 @@ export default async function BlogPage() {
                   href={`/blog/${post.slug}`}
                   className="group"
                 >
-                  <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
+                  <article className="bg-gray-900 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300 h-full flex flex-col border border-gray-800">
                     {/* Featured Image */}
                     {post.featured_image && (
-                      <div className="aspect-video w-full overflow-hidden bg-gray-100">
+                      <div className="aspect-video w-full overflow-hidden bg-gray-800">
                         <img
                           src={post.featured_image}
                           alt={post.title}
@@ -107,16 +107,16 @@ export default async function BlogPage() {
 
                     {/* Content */}
                     <div className="p-6 flex-1 flex flex-col">
-                      <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                      <h2 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors line-clamp-2">
                         {post.title}
                       </h2>
                       
-                      <p className="text-gray-800 mb-4 line-clamp-3 flex-1 leading-relaxed">
+                      <p className="text-gray-300 mb-4 line-clamp-3 flex-1 leading-relaxed">
                         {post.excerpt}
                       </p>
 
                       {/* Meta Info */}
-                      <div className="flex items-center justify-between text-sm text-gray-500 pt-4 border-t border-gray-100">
+                      <div className="flex items-center justify-between text-sm text-gray-400 pt-4 border-t border-gray-800">
                         <span className="flex items-center gap-1">
                           📅 {new Date(post.published_at).toLocaleDateString('en-US', {
                             month: 'short',
@@ -135,7 +135,7 @@ export default async function BlogPage() {
                           {post.tags.slice(0, 3).map((tag, idx) => (
                             <span
                               key={idx}
-                              className="px-2 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-medium"
+                              className="px-2 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-medium border border-blue-500/30"
                             >
                               {tag}
                             </span>
@@ -144,7 +144,7 @@ export default async function BlogPage() {
                       )}
 
                       {/* Read More */}
-                      <div className="mt-4 text-blue-600 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                      <div className="mt-4 text-blue-400 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                         Read Article
                         <span className="group-hover:translate-x-1 transition-transform">→</span>
                       </div>

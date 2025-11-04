@@ -20,26 +20,29 @@ export default async function AdminPostsPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-      {/* Header */}
-      <header className="bg-white/5 backdrop-blur-lg border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Link
-              href="/admin/dashboard"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              ← Back
-            </Link>
-            <h1 className="text-2xl font-bold text-white">
+
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-4 py-8">
+        {/* Page Title */}
+        <div className="flex items-center gap-4 mb-4">
+          <Link
+            href="/admin/dashboard"
+            className="text-gray-400 hover:text-white transition-colors text-lg"
+          >
+            ← Back to Dashboard
+          </Link>
+        </div>
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h1 className="text-4xl font-bold text-white mb-2">
               📚 Blog Posts
             </h1>
-            <span className="bg-white/10 px-3 py-1 rounded-full text-sm text-white">
-              {posts.length} total
-            </span>
+            <p className="text-gray-300">
+              {posts.length} total posts • Manage and generate content
+            </p>
           </div>
           <form action={async () => {
             'use server';
-            // Trigger manual generation
             await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/admin/blog/generate`, { 
               method: 'POST' 
             });
@@ -47,16 +50,12 @@ export default async function AdminPostsPage() {
           }}>
             <button
               type="submit"
-              className="px-6 py-2 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-teal-700 transition-all"
+              className="px-6 py-3 bg-gradient-to-r from-green-600 to-teal-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-teal-700 transition-all shadow-lg"
             >
               + Generate New Post
             </button>
           </form>
         </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 py-8">
         {posts.length === 0 ? (
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-12 border border-white/20 text-center">
             <div className="text-6xl mb-4">📝</div>

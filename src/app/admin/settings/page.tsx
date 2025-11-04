@@ -71,25 +71,26 @@ export default async function AdminSettingsPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-      {/* Header */}
-      <header className="bg-white/5 backdrop-blur-lg border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Link
-              href="/admin/dashboard"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              ← Back
-            </Link>
-            <h1 className="text-2xl font-bold text-white">
-              ⚙️ Settings
-            </h1>
-          </div>
-        </div>
-      </header>
 
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 py-8 space-y-8">
+        {/* Page Title */}
+        <div className="flex items-center gap-4 mb-4">
+          <Link
+            href="/admin/dashboard"
+            className="text-gray-400 hover:text-white transition-colors text-lg"
+          >
+            ← Back to Dashboard
+          </Link>
+        </div>
+        <div className="mb-8">
+          <h1 className="text-4xl font-bold text-white mb-2">
+            ⚙️ Settings
+          </h1>
+          <p className="text-gray-300">
+            Configure AI models, prompts, and automation schedule
+          </p>
+        </div>
         {/* Schedule Configuration */}
         <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
           <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">

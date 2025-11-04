@@ -21,11 +21,11 @@ CREATE TABLE blog_settings (
 -- Create index
 CREATE INDEX blog_settings_key_idx ON blog_settings(setting_key);
 
--- Insert default settings
+-- Insert default settings with ultra-informative, schema-optimized prompts
 INSERT INTO blog_settings (setting_key, setting_value) VALUES
-  ('gpt_system_message', 'You are an elite SEO and AIO (AI Optimization) content strategist. Your expertise is in the evolution of search beyond traditional SEO. You write authoritative, forward-thinking content about how AI is transforming search, why old SEO tactics are dying, and how businesses must adapt to AI Overviews, ChatGPT, Perplexity, and voice assistants. Your writing is professional, data-driven, and actionable. You must return valid JSON with the following structure: {"title": "Blog Title Here", "slug": "blog-slug-here", "excerpt": "Brief 2-3 sentence summary", "content": "Full blog post content in HTML format with proper headings, paragraphs, and structure", "tags": ["tag1", "tag2", "tag3"]}'),
-  ('gpt_user_prompt_template', 'Write a comprehensive, SEO-optimized blog post about: {topic}. Focus on: 1) Why traditional SEO is becoming obsolete, 2) How AI search (ChatGPT, Perplexity, Google AI Overviews) is changing the game, 3) Practical strategies businesses MUST implement now to rank in AI-powered search, 4) Real-world impact and case studies. Make it authoritative, data-backed, and actionable. Use proper HTML formatting with <h2>, <h3>, <p>, <ul>, <li> tags. Include 8-12 paragraphs with concrete examples. Target 1500-2000 words. Make the title compelling and clickable. Return as JSON.'),
-  ('dalle_prompt_template', 'A professional, modern, futuristic illustration representing AI-powered search and the evolution of SEO. Topic: {topic}. Style: Clean, tech-forward, gradient colors (blue, purple, teal), abstract geometric shapes, digital interface elements, data visualization aesthetic. Professional business quality.'),
+  ('gpt_system_message', 'You are an elite SEO and AIO (AI Optimization) content strategist with expertise in structured content and semantic HTML. Your content is ULTRA-INFORMATIVE with deep technical insights, data-driven analysis, and actionable strategies. You write authoritative articles about how AI is transforming search and why traditional SEO is obsolete. CRITICAL: Use proper HTML heading hierarchy (H1 for title, H2 for main sections, H3-H6 for subsections). Use <strong> for emphasis, <ul>/<ol> for lists, proper paragraph breaks, and semantic structure. Every article must be schema-ready with clear heading hierarchy for automatic indexing. Return valid JSON: {"title": "Compelling H1 Title", "slug": "seo-friendly-slug", "excerpt": "Engaging 2-3 sentence summary with key benefits", "content": "Full HTML article with H2-H6 structure, bold text, lists, and rich formatting", "tags": ["Primary-Keyword", "Secondary-Keyword", "Topic-Category"]}'),
+  ('gpt_user_prompt_template', 'Write an ULTRA-COMPREHENSIVE, schema-optimized blog post about: {topic}. STRUCTURE REQUIREMENTS: Use H2 for main sections, H3-H4 for subsections, H5-H6 for deep details. Include: 1) H2: Why Traditional SEO is Dead (with specific examples and data), 2) H2: How AI Search is Dominating (ChatGPT, Perplexity, Google AI Overviews with statistics), 3) H2: The New Search Visibility Framework (step-by-step strategies), 4) H2: Implementation Roadmap (actionable checklist), 5) H2: Case Studies & Results (real examples with metrics), 6) H2: Future-Proofing Your Strategy. FORMATTING: Use <strong> for key terms, <ul>/<li> for actionable lists, <blockquote> for expert insights, proper <p> tags. Target 2000-2500 words with deep technical insights, specific tools, concrete metrics, and detailed explanations. Make every section information-rich and immediately actionable. Return as structured JSON.'),
+  ('dalle_prompt_template', 'Professional SEO and digital marketing featured image. Topic: {topic}. Style: Ultra-professional business aesthetic, high search visibility appeal, clean modern design with strategic use of blue and purple gradients representing trust and technology. Include subtle elements: upward trending graphs, search result snippets, digital interfaces, AI/tech iconography. Composition: Balanced, eye-catching thumbnail that looks authoritative in search results and social shares. Quality: Professional business publication standard, optimized for web visibility and click-through rates. NO text, NO logos, pure visual impact for maximum search appeal.'),
   ('gpt_model', 'gpt-4o'),
   ('gpt_temperature', '0.7'),
   ('dalle_model', 'dall-e-3'),
@@ -48,15 +48,15 @@ CREATE TABLE blog_schedule (
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- Insert default schedule
+-- Insert default schedule (3 posts every 4 hours)
 INSERT INTO blog_schedule (enabled, themes, frequency, posts_per_run, auto_publish, next_run)
 VALUES (
   false, 
-  'AI Search Optimization, Google AI Overviews, ChatGPT SEO, Voice Search, Traditional SEO vs AIO, Future of SERP, E-E-A-T for AI, Semantic Search, Zero-Click Search, Answer Engine Optimization',
-  'daily',
-  1,
+  'AI Search Optimization, Google AI Overviews, ChatGPT SEO, Voice Search Optimization, Traditional SEO vs AIO, Future of SERP, E-E-A-T for AI Era, Semantic Search Strategies, Zero-Click Search Solutions, Answer Engine Optimization, AI Content Strategy, Schema Markup for AI, SGE Optimization, Perplexity SEO, Voice Assistant Optimization',
+  'hourly',
+  3,
   true,
-  NOW() + INTERVAL '1 day'
+  NOW() + INTERVAL '4 hours'
 );
 
 -- Create unique index (only one schedule row)

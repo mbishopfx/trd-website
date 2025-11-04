@@ -21,43 +21,32 @@ export default async function AdminDashboardPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
-      {/* Header */}
-      <header className="bg-white/5 backdrop-blur-lg border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <h1 className="text-2xl font-bold text-white">
-              📊 Admin Dashboard
-            </h1>
-            <span className="text-gray-400 text-sm">
-              True Rank Digital Blog System
-            </span>
-          </div>
-          <div className="flex items-center gap-4">
-            <Link
-              href="/blog"
-              target="_blank"
-              className="px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors"
-            >
-              View Blog →
-            </Link>
-            <form action={async () => {
-              'use server';
-              await clearAdminAuth();
-              redirect('/admin');
-            }}>
-              <button
-                type="submit"
-                className="px-4 py-2 bg-red-500/20 text-red-200 rounded-lg hover:bg-red-500/30 transition-colors"
-              >
-                Logout
-              </button>
-            </form>
-          </div>
-        </div>
-      </header>
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-8">
+        {/* Page Title */}
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h1 className="text-4xl font-bold text-white mb-2">
+              📊 Admin Dashboard
+            </h1>
+            <p className="text-gray-300">
+              AI-Powered Blog System - True Rank Digital
+            </p>
+          </div>
+          <form action={async () => {
+            'use server';
+            await clearAdminAuth();
+            redirect('/admin');
+          }}>
+            <button
+              type="submit"
+              className="px-4 py-2 bg-red-500/20 text-red-200 rounded-lg hover:bg-red-500/30 transition-colors"
+            >
+              Logout
+            </button>
+          </form>
+        </div>
         {/* Status Cards */}
         <div className="grid md:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -122,7 +111,7 @@ export default async function AdminDashboardPage() {
         </div>
 
         {/* Quick Actions */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
+        <div className="grid md:grid-cols-4 gap-6 mb-8">
           <Link
             href="/admin/settings"
             className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl p-6 hover:shadow-2xl transition-all duration-200 group"
@@ -161,15 +150,41 @@ export default async function AdminDashboardPage() {
           >
             <div className="flex items-center gap-4 mb-3">
               <span className="text-4xl">🚀</span>
-              <h3 className="text-xl font-bold text-white">Generate Now</h3>
+              <h3 className="text-xl font-bold text-white">Generate 1 Post</h3>
             </div>
             <p className="text-orange-100 text-sm">
-              Manually trigger AI blog post generation
+              Manually trigger single blog post generation
             </p>
             <div className="mt-4 text-white font-semibold group-hover:translate-x-2 transition-transform">
               Generate →
             </div>
           </Link>
+
+          <form action={async () => {
+            'use server';
+            const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/api/admin/blog/bulk-generate`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ count: 10 }),
+            });
+            redirect('/admin/posts?generated=bulk');
+          }}>
+            <button
+              type="submit"
+              className="w-full bg-gradient-to-br from-purple-600 to-indigo-600 rounded-xl p-6 hover:shadow-2xl transition-all duration-200 group text-left"
+            >
+              <div className="flex items-center gap-4 mb-3">
+                <span className="text-4xl">⚡</span>
+                <h3 className="text-xl font-bold text-white">Generate 10 Posts</h3>
+              </div>
+              <p className="text-purple-100 text-sm">
+                Bulk generate 10 AI blog posts at once
+              </p>
+              <div className="mt-4 text-white font-semibold group-hover:translate-x-2 transition-transform">
+                Generate Bulk →
+              </div>
+            </button>
+          </form>
         </div>
 
         {/* Recent Posts */}

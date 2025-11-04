@@ -155,14 +155,9 @@ export default async function AdminDashboardPage() {
             </div>
           </Link>
 
-          <button
-            onClick={async () => {
-              if (confirm('Generate a new blog post now?')) {
-                await fetch('/api/admin/blog/generate', { method: 'POST' });
-                location.reload();
-              }
-            }}
-            className="bg-gradient-to-br from-orange-600 to-pink-600 rounded-xl p-6 hover:shadow-2xl transition-all duration-200 group text-left"
+          <Link
+            href="/admin/posts"
+            className="bg-gradient-to-br from-orange-600 to-pink-600 rounded-xl p-6 hover:shadow-2xl transition-all duration-200 group text-left block"
           >
             <div className="flex items-center gap-4 mb-3">
               <span className="text-4xl">🚀</span>
@@ -174,7 +169,7 @@ export default async function AdminDashboardPage() {
             <div className="mt-4 text-white font-semibold group-hover:translate-x-2 transition-transform">
               Generate →
             </div>
-          </button>
+          </Link>
         </div>
 
         {/* Recent Posts */}

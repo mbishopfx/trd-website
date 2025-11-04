@@ -29,9 +29,31 @@ export async function POST(request: Request) {
     const settings = await blogDb.getSettings();
     const schedule = await blogDb.getSchedule();
 
+    console.log('Settings loaded:', settings ? 'Yes' : 'No', settings ? Object.keys(settings).length + ' keys' : '');
+    console.log('Schedule loaded:', schedule ? 'Yes' : 'No');
+
     if (!settings || !schedule) {
+      console.error('Configuration missing:', { settings: !!settings, schedule: !!schedule });
       return NextResponse.json(
-        { success: false, message: 'Configuration not found' },
+        { 
+          success: false, 
+          message: 'Configuration not found. Please run database setup.',
+          details: {
+            settings_loaded: !!settings,
+            schedule_loaded: !!schedule,
+          }
+        },
+        { status: 500 }
+      );
+    }
+
+    if (!settings.gpt_system_message || !settings.gpt_user_prompt_template) {
+      console.error('Settings are incomplete:', Object.keys(settings));
+      return NextResponse.json(
+        { 
+          success: false, 
+          message: 'Settings are incomplete. Please check database.',
+        },
         { status: 500 }
       );
     }

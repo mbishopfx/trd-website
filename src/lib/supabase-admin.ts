@@ -181,9 +181,22 @@ export const blogDb = {
     const supabase = getServiceSupabase();
     if (!supabase) return null;
 
+    // First get the schedule to get its ID
+    const { data: currentSchedule } = await supabase
+      .from('blog_schedule')
+      .select('id')
+      .limit(1)
+      .single();
+
+    if (!currentSchedule?.id) {
+      console.error('No schedule found to update');
+      return null;
+    }
+
     const { data, error } = await supabase
       .from('blog_schedule')
       .update(updates)
+      .eq('id', currentSchedule.id)
       .select()
       .single();
 

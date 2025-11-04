@@ -4,6 +4,11 @@
       "path": "/api/cron/auto-blog",
       "schedule": "0 */4 * * *"
     }
-  ]
+  ],
+  "functions": {
+    "src/app/api/admin/blog/bulk-generate/route.ts": {
+      "maxDuration": 300
+    }
+  }
 }
 

@@ -63,7 +63,7 @@ export function GenerateBulkButton() {
   const router = useRouter();
 
   const handleBulkGenerate = async () => {
-    if (!confirm('Generate 10 blog posts now? This will take 5-8 minutes and cost about $1.00.')) {
+    if (!confirm('Generate 10 blog posts now? This will take 3-5 minutes and cost about $1.00.')) {
       return;
     }
 
@@ -111,7 +111,7 @@ export function GenerateBulkButton() {
         {loading ? progress || 'Creating 10 comprehensive articles...' : 'Bulk generate 10 AI blog posts at once'}
       </p>
       <div className="mt-4 text-white font-semibold group-hover:translate-x-2 transition-transform">
-        {loading ? 'Please wait (5-8 min)...' : 'Generate Bulk →'}
+        {loading ? 'Please wait (3-5 min)...' : 'Generate Bulk →'}
       </div>
     </button>
   );

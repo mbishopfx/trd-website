@@ -49,6 +49,16 @@ export async function createSanityBlogPost(post: {
   tags?: string[];
   featuredImage?: string;
 }) {
+  // SANITY DISABLED: Posts are saved to Supabase (primary storage) and served from /blog
+  // Sanity integration is optional and currently has schema compatibility issues
+  console.log('ℹ️  Sanity publishing disabled - posts saved to Supabase only');
+  return {
+    success: false,
+    message: 'Sanity publishing disabled - posts saved to Supabase',
+    skipped: true,
+  };
+
+  /* SANITY INTEGRATION DISABLED - Uncomment if you need it
   const client = getSanityClient();
 
   // Graceful fallback if Sanity not configured
@@ -129,6 +139,7 @@ export async function createSanityBlogPost(post: {
       error,
     };
   }
+  */
 }
 
 /**

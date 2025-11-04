@@ -142,10 +142,10 @@ export async function POST(request: Request) {
           published,
         });
 
-        // Rate limiting: wait 3 seconds between posts
+        // Rate limiting: wait 1 second between posts
         if (i < count - 1) {
-          console.log(`   ⏳ Waiting 3 seconds...`);
-          await new Promise((resolve) => setTimeout(resolve, 3000));
+          console.log(`   ⏳ Waiting 1 second...`);
+          await new Promise((resolve) => setTimeout(resolve, 1000));
         }
       } catch (postError) {
         console.error(`   ❌ Error on post ${i + 1}:`, postError);

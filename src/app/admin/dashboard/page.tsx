@@ -9,6 +9,10 @@ import { blogDb } from '@/lib/supabase-admin';
 import Link from 'next/link';
 import { GenerateSingleButton, GenerateBulkButton } from './GenerateButtons';
 import QRCodeGenerator from '@/components/QRCodeGenerator';
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
 
 export default async function AdminDashboardPage() {
   // Check authentication
@@ -20,6 +24,29 @@ export default async function AdminDashboardPage() {
   // Load dashboard data
   const schedule = await blogDb.getSchedule();
   const recentPosts = await blogDb.getPosts(5);
+
+  // Load forms data
+  const supabase = createClient(supabaseUrl, supabaseServiceKey);
+  const { data: forms } = await supabase
+    .from('forms')
+    .select(`
+      id,
+      title,
+      is_active,
+      submissions:form_submissions(count)
+    `)
+    .order('created_at', { ascending: false })
+    .limit(5);
+
+  const formsWithCounts = forms?.map(form => ({
+    ...form,
+    submission_count: form.submissions?.[0]?.count || 0,
+  })) || [];
+
+  const totalSubmissions = formsWithCounts.reduce(
+    (sum, f) => sum + f.submission_count,
+    0
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
@@ -146,9 +173,102 @@ export default async function AdminDashboardPage() {
             </div>
           </Link>
 
-          <GenerateSingleButton />
+          <Link
+            href="/admin/forms"
+            className="bg-gradient-to-br from-yellow-600 to-orange-600 rounded-xl p-6 hover:shadow-2xl transition-all duration-200 group"
+          >
+            <div className="flex items-center gap-4 mb-3">
+              <span className="text-4xl">📋</span>
+              <h3 className="text-xl font-bold text-white">Forms</h3>
+            </div>
+            <p className="text-yellow-100 text-sm">
+              Create lead capture forms with QR codes
+            </p>
+            <div className="mt-4 text-white font-semibold group-hover:translate-x-2 transition-transform">
+              Manage →
+            </div>
+          </Link>
 
+          <GenerateSingleButton />
+        </div>
+
+        {/* More Actions */}
+        <div className="grid md:grid-cols-1 gap-6 mb-8">
           <GenerateBulkButton />
+        </div>
+
+        {/* Forms Overview */}
+        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 mb-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl font-bold text-white flex items-center gap-2">
+              <span>📋</span> Forms & Submissions
+            </h2>
+            <Link
+              href="/admin/forms/builder"
+              className="px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              + Create Form
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-4 mb-6">
+            <div className="bg-white/5 rounded-lg p-4">
+              <div className="text-gray-400 text-sm mb-1">Total Forms</div>
+              <div className="text-2xl font-bold text-white">{formsWithCounts.length}</div>
+            </div>
+            <div className="bg-white/5 rounded-lg p-4">
+              <div className="text-gray-400 text-sm mb-1">Active Forms</div>
+              <div className="text-2xl font-bold text-green-400">
+                {formsWithCounts.filter(f => f.is_active).length}
+              </div>
+            </div>
+            <div className="bg-white/5 rounded-lg p-4">
+              <div className="text-gray-400 text-sm mb-1">Total Submissions</div>
+              <div className="text-2xl font-bold text-blue-400">{totalSubmissions}</div>
+            </div>
+          </div>
+
+          {formsWithCounts.length === 0 ? (
+            <div className="text-center py-8 text-gray-400">
+              <p className="text-lg mb-2">No forms yet</p>
+              <p className="text-sm">Create your first lead capture form!</p>
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {formsWithCounts.map((form) => (
+                <div
+                  key={form.id}
+                  className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-1">
+                        <h3 className="text-white font-semibold">{form.title}</h3>
+                        <span
+                          className={`px-2 py-0.5 rounded text-xs font-semibold ${
+                            form.is_active
+                              ? 'bg-green-500/20 text-green-400'
+                              : 'bg-gray-500/20 text-gray-400'
+                          }`}
+                        >
+                          {form.is_active ? 'Active' : 'Inactive'}
+                        </span>
+                      </div>
+                      <p className="text-gray-400 text-sm">
+                        {form.submission_count} submission{form.submission_count !== 1 ? 's' : ''}
+                      </p>
+                    </div>
+                    <Link
+                      href={`/admin/forms/${form.id}/submissions`}
+                      className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm"
+                    >
+                      View →
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Recent Posts */}

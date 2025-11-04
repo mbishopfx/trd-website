@@ -111,7 +111,7 @@ export default async function BlogPage() {
                         {post.title}
                       </h2>
                       
-                      <p className="text-gray-600 mb-4 line-clamp-3 flex-1">
+                      <p className="text-gray-800 mb-4 line-clamp-3 flex-1 leading-relaxed">
                         {post.excerpt}
                       </p>
 

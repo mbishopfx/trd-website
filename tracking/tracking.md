@@ -17,7 +17,7 @@
   - Type: TRDAnalyticsHealth.testConnection()
 -->
 
-<script src="/tracking/analytics-tracker.js"></script>
+<script src="https://trd-python-platform.vercel.app/tracking/analytics-tracker.js"></script>
 <script>
 (function() {
   'use strict';

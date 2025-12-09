@@ -36,7 +36,7 @@ export default function TraditionalServicesSection() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
+        {/* Section Header - GEO Optimized Question-Based H2 */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,10 +45,10 @@ export default function TraditionalServicesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
-            How We Help Your Business Grow
+            How <strong className="text-brand-primary">True Rank Digital</strong> Helps Your Business Grow with SEO
           </h2>
           <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-            Our core services are designed specifically for small businesses who want real results without the complexity.
+            Our core <strong>SEO services</strong> are designed specifically for <strong>small businesses</strong> who want real results without the complexity. <strong>True Rank Digital</strong> delivers proven <strong>local SEO</strong>, <strong>Google Business Profile</strong> optimization, and <strong>website development</strong> services.
           </p>
         </motion.div>
 

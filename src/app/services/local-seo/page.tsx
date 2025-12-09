@@ -1,11 +1,38 @@
 import type { Metadata } from 'next';
 import { Search, MapPin, TrendingUp, CheckCircle } from 'lucide-react';
-import ComprehensiveSchema from '@/components/seo/ComprehensiveSchema';
+import GEOSchema from '@/components/seo/GEOSchema';
+import FAQSchema, { generateServiceFAQs } from '@/components/seo/FAQSchema';
 
+// GEO-Optimized Metadata
 export const metadata: Metadata = {
-  title: 'Professional Local Search Engine Optimization Services | Grid Map Ranking Analysis | True Rank Digital',
-  description: 'Master local search engine optimization with our proprietary SEO dashboard platform. Advanced Google Maps optimization, grid map ranking verification, competitor analysis tools, and automated Google knowledge graph consistency monitoring for faster local search positioning.',
-  keywords: 'local search engine optimization, Google Maps optimization services, grid map ranking analysis, local SEO dashboard platform, competitor analysis tools, Google knowledge graph optimization, local search positioning strategies, professional local SEO services, Google Business Profile optimization, local keyword research tools',
+  title: 'Local SEO Services | Grid Map Ranking Analysis | True Rank Digital',
+  description: 'True Rank Digital provides professional local SEO services with proprietary grid map ranking verification, competitor analysis platform, and automated Google knowledge graph consistency monitoring.',
+  keywords: 'local SEO services, True Rank Digital, grid map ranking, Google Maps optimization, local search engine optimization, Google Business Profile, East Brunswick NJ, competitor analysis tools',
+  openGraph: {
+    title: 'Professional Local SEO Services | True Rank Digital',
+    description: 'Get found on Google with local SEO services featuring grid map ranking verification and competitor analysis.',
+    url: 'https://truerankdigital.com/services/local-seo',
+    type: 'website',
+    images: [{
+      url: 'https://truerankdigital.com/images/services/local-seo.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'True Rank Digital Local SEO Services'
+    }]
+  },
+  alternates: {
+    canonical: 'https://truerankdigital.com/services/local-seo'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  }
 };
 
 export default function LocalSEOPage() {
@@ -24,39 +51,51 @@ export default function LocalSEOPage() {
     'Custom script integration for enhanced performance'
   ];
 
+  // Service-specific FAQs
+  const faqs = generateServiceFAQs('localSEO', [
+    {
+      question: "What is grid map ranking analysis?",
+      answer: "Grid map ranking analysis is True Rank Digital's proprietary technology that verifies your business's Google Maps ranking from multiple geographic locations. Our dashboard platform tracks your position in the local pack across a grid of coordinates around your service area, providing precise data on where customers can find your business on Google Maps."
+    },
+    {
+      question: "Can True Rank Digital help my business rank for multiple locations?",
+      answer: "Yes, True Rank Digital specializes in multi-location SEO strategies for businesses serving multiple cities or regions. Our grid map ranking verification works across all your service areas, and our proprietary platform monitors Google Business Profile performance for each location separately while maintaining brand consistency."
+    }
+  ]);
+
   return (
     <>
-      {/* Enhanced Schema Markup for Local SEO Service Page */}
-      <ComprehensiveSchema
-        type="howto"
+      {/* Advanced GEO Schema */}
+      <GEOSchema 
+        pageType="service"
         pageData={{
-          title: "Professional Local SEO Services - How to Dominate Local Search",
-          description: "Learn how True Rank Digital's proven local SEO process helps businesses dominate local search results and get found by nearby customers on Google Maps.",
+          title: "Professional Local SEO Services by True Rank Digital",
+          description: "True Rank Digital delivers professional local SEO services with proprietary grid map ranking verification, competitor analysis platform, and automated Google knowledge graph consistency monitoring for businesses.",
           url: "https://truerankdigital.com/services/local-seo",
-          keywords: ["local SEO", "Google Maps optimization", "local search ranking", "Google Business Profile", "local citations", "review management", "local content strategy"],
-          category: "Local SEO",
-          datePublished: "2024-01-01",
-          dateModified: new Date().toISOString().split('T')[0],
-          contentSections: [
+          keywords: ["local SEO", "Google Maps optimization", "grid map ranking", "Google Business Profile", "local search"],
+          category: "Local SEO Services",
+          serviceType: "Local Search Engine Optimization",
+          areaServed: ["United States", "New Jersey", "New York", "Pennsylvania"],
+          steps: [
             {
-              heading: "Technical SEO Audit",
-              text: "We scan your website with our proprietary problem detection software to find issues other SEO companies miss at the code level. This comprehensive audit identifies technical barriers that could be hurting your local search visibility."
+              name: "Technical SEO Audit",
+              text: "True Rank Digital scans your website with proprietary problem detection software to find issues other SEO companies miss at the code level."
             },
             {
-              heading: "Custom Schema Markup Engineering",
-              text: "We create hand-crafted structured data schemas specifically for your business type to help search engines understand your content better than competitors. This includes local business schema, service schema, and review markup."
+              name: "Custom Schema Markup Engineering",
+              text: "We create hand-crafted structured data schemas specifically for your business type to help search engines understand your content better than competitors."
             },
             {
-              heading: "LLM.txt Creation & Optimization",
-              text: "We develop and optimize LLM.txt files designed for AI search engines like ChatGPT, Claude, and Perplexity to improve your AI search visibility. This cutting-edge optimization gives you a competitive advantage in AI-powered search results."
+              name: "LLM.txt Creation & Optimization",
+              text: "We develop and optimize LLM.txt files designed for AI search engines like ChatGPT, Claude, and Perplexity to improve your AI search visibility."
             },
             {
-              heading: "Custom Solution Implementation",
-              text: "We build and implement custom software solutions to fix identified problems and optimize your website's search engine performance. Our proprietary tools ensure your local SEO strategy adapts to algorithm changes automatically."
+              name: "Custom Solution Implementation",
+              text: "We build and implement custom software solutions to fix identified problems and optimize your website's search engine performance."
             },
             {
-              heading: "Ongoing Monitoring & Optimization",
-              text: "Our custom software continuously monitors and optimizes your website's performance, making real-time adjustments for maximum search visibility. This includes tracking local keyword rankings, Google Business Profile insights, and competitor analysis."
+              name: "Ongoing Monitoring & Optimization",
+              text: "Our custom software continuously monitors and optimizes your website's performance, making real-time adjustments for maximum search visibility."
             }
           ]
         }}
@@ -65,9 +104,20 @@ export default function LocalSEOPage() {
           { name: "Services", url: "https://truerankdigital.com/services" },
           { name: "Local SEO", url: "https://truerankdigital.com/services/local-seo" }
         ]}
+        entities={{
+          primary: ["True Rank Digital", "Local SEO Services", "Grid Map Ranking"],
+          secondary: ["Google Maps Optimization", "Google Business Profile", "East Brunswick NJ"]
+        }}
       />
       
-      <div className="pt-16 min-h-screen bg-gradient-to-b from-green-50 to-white">
+      {/* FAQ Schema */}
+      <FAQSchema 
+        faqs={faqs}
+        pageUrl="https://truerankdigital.com/services/local-seo"
+        category="service"
+      />
+      
+      <article className="pt-16 min-h-screen bg-gradient-to-b from-green-50 to-white">
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-green-100 rounded-full mb-6">
@@ -75,24 +125,31 @@ export default function LocalSEOPage() {
               <span className="text-green-600 font-semibold text-sm">Local SEO</span>
             </div>
           
+          {/* GEO-Optimized H1 with Subject-Predicate-Object */}
           <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
-            Professional Local Search Engine Optimization Services
+            <strong className="text-brand-primary">True Rank Digital</strong> Provides Professional <strong>Local SEO Services</strong> with Grid Map Ranking Analysis
           </h1>
           
           <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-8">
-            Master local search engine optimization with our proven Google optimization tactics and proprietary SEO dashboard platform. Our in-house technology solutions deliver faster local search positioning through advanced grid map ranking analysis, competitor intelligence monitoring, and automated Google knowledge graph consistency tracking.
+            <strong>True Rank Digital</strong> delivers <strong>local search engine optimization</strong> with proven Google optimization tactics and proprietary SEO dashboard platform. Our in-house technology solutions provide faster <strong>local search positioning</strong> through advanced <strong>grid map ranking analysis</strong>, competitor intelligence monitoring, and automated <strong>Google knowledge graph</strong> consistency tracking.
           </p>
 
           <div className="max-w-4xl mx-auto mb-12">
             <div className="glass-card p-6 lg:p-8 mb-8">
+              {/* Question-Based H2 */}
               <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
-                Our Local SEO Process: Getting Your Business Found on Google—Fast!
+                How <strong className="text-brand-primary">True Rank Digital's</strong> Local SEO Process Works
               </h2>
               <p className="text-brand-dark/70 leading-relaxed">
-                Every local SEO client gains access to our exclusive digital marketing platform featuring real-time grid map ranking verification, comprehensive keyword search volume research tools, and automated competitor analysis monitoring. Our algorithm-proof strategies combine proven Google tactics mastered by professionals with custom solution building frameworks that keep you ahead of search algorithm changes. While our dashboard platform works with any website, clients choosing our custom web builds unlock enhanced algorithm manipulation capabilities through proprietary script integration.
+                Every <strong>local SEO</strong> client gains access to our exclusive <strong>digital marketing platform</strong> featuring real-time <strong>grid map ranking verification</strong>, comprehensive keyword search volume research tools, and automated <strong>competitor analysis monitoring</strong>. Our algorithm-proof strategies combine proven Google tactics mastered by professionals with custom solution building frameworks that keep you ahead of search algorithm changes.
               </p>
             </div>
           </div>
+
+          {/* H2 for Benefits Section */}
+          <h2 className="text-3xl font-heading font-bold text-brand-dark mb-8">
+            What <strong className="text-brand-primary">Results</strong> You Get from Local SEO Services
+          </h2>
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             {benefits.map((benefit, index) => (
@@ -103,15 +160,68 @@ export default function LocalSEOPage() {
             ))}
           </div>
 
+          {/* H2 for Process Steps */}
+          <h2 className="text-3xl font-heading font-bold text-brand-dark mb-8">
+            Your <strong className="text-brand-primary">Local SEO</strong> Process in 5 Steps
+          </h2>
+
+          <div className="grid gap-6 mb-12 text-left">
+            <div className="glass-card p-6">
+              <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                Step 1: Technical SEO Audit with Proprietary Software
+              </h3>
+              <p className="text-brand-dark/70">
+                <strong>True Rank Digital</strong> scans your website with proprietary problem detection software to find issues other SEO companies miss at the code level.
+              </p>
+            </div>
+
+            <div className="glass-card p-6">
+              <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                Step 2: Custom Schema Markup Engineering
+              </h3>
+              <p className="text-brand-dark/70">
+                We create hand-crafted <strong>structured data schemas</strong> specifically for your business type to help search engines understand your content better than competitors.
+              </p>
+            </div>
+
+            <div className="glass-card p-6">
+              <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                Step 3: LLM.txt Creation & AI Optimization
+              </h3>
+              <p className="text-brand-dark/70">
+                We develop and optimize <strong>LLM.txt files</strong> designed for AI search engines like ChatGPT, Claude, and Perplexity to improve your AI search visibility.
+              </p>
+            </div>
+
+            <div className="glass-card p-6">
+              <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                Step 4: Custom Solution Implementation
+              </h3>
+              <p className="text-brand-dark/70">
+                We build and implement custom software solutions to fix identified problems and optimize your website's <strong>search engine performance</strong>.
+              </p>
+            </div>
+
+            <div className="glass-card p-6">
+              <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                Step 5: Ongoing Monitoring & Optimization
+              </h3>
+              <p className="text-brand-dark/70">
+                Our custom software continuously monitors and optimizes your website's performance with real-time <strong>grid map ranking</strong> tracking and competitor analysis.
+              </p>
+            </div>
+          </div>
+
+          {/* Final CTA Section */}
           <div className="glass-card p-8 lg:p-10">
             <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <MapPin className="w-10 h-10 text-white" />
             </div>
             <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
-              Access Your Proprietary Local SEO Dashboard Platform
+              Why Businesses Choose <strong className="text-brand-primary">True Rank Digital</strong> for Local SEO
             </h2>
             <p className="text-brand-dark/70 mb-6 leading-relaxed">
-              Start dominating local search engine results with our proven Google optimization tactics and exclusive client dashboard featuring grid map ranking analysis, keyword search volume research tools, and automated Google knowledge graph consistency monitoring. Our professional local search positioning strategies are designed to get your business found on Google faster through advanced algorithm-proof digital marketing techniques.
+              Start dominating <strong>local search engine results</strong> with our proven Google optimization tactics and exclusive client dashboard featuring <strong>grid map ranking analysis</strong>, keyword search volume research tools, and automated Google knowledge graph consistency monitoring. Our professional <strong>local search positioning strategies</strong> are designed to get your business found on Google faster.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -132,7 +242,7 @@ export default function LocalSEOPage() {
           </div>
         </div>
       </section>
-      </div>
+      </article>
     </>
   );
 }

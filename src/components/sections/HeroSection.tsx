@@ -134,17 +134,19 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Main Headline */}
+          {/* Main Headline - GEO Optimized with Subject-Predicate-Object */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold text-brand-dark mb-6 leading-tight"
           >
-            <span className="text-brand-primary">Get Your Business</span>
+            <span className="text-brand-primary font-bold">True Rank Digital</span>
             <br />
-            <span className="text-brand-dark">Found on Google</span>
-            <span className="text-brand-primary">—Fast!</span>
+            <span className="text-brand-dark">Delivers Professional </span>
+            <span className="text-brand-primary font-bold">SEO Services</span>
+            <br />
+            <span className="text-brand-dark">That Get Businesses Found on Google</span>
           </motion.h1>
 
           {/* Subheadline */}

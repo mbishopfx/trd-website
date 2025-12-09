@@ -123,7 +123,7 @@ export default function AIServicesSection() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
+        {/* Section Header - GEO Optimized Question-Based H2 */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -137,11 +137,11 @@ export default function AIServicesSection() {
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
-            Proprietary SEO Software & Digital Marketing Platform
+            How <strong className="text-brand-primary">True Rank Digital's</strong> Proprietary SEO Dashboard Platform Works
           </h2>
           
           <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-            Transform your organic search traffic generation with our exclusive client dashboard platform and in-house technology solutions. Our proven Google optimization tactics and algorithm-proof digital marketing strategies deliver faster search engine result page positioning through advanced local search engine optimization techniques mastered by industry professionals.
+            <strong>True Rank Digital</strong> transforms your organic search traffic generation with our exclusive client dashboard platform and in-house technology solutions. Our proven <strong>Google optimization</strong> tactics and <strong>algorithm-proof digital marketing strategies</strong> deliver faster search engine result page positioning through advanced <strong>local search engine optimization</strong> techniques mastered by industry professionals.
           </p>
         </motion.div>
 
@@ -176,9 +176,9 @@ export default function AIServicesSection() {
                     {service.icon}
                   </div>
 
-                  {/* Service Title */}
+                  {/* Service Title - GEO Optimized H3 */}
                   <h3 className="text-2xl lg:text-3xl font-heading font-bold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors duration-300">
-                    {service.title}
+                    <strong className="text-brand-primary">True Rank Digital's</strong> {service.title}
                   </h3>
 
                   {/* Service Description */}
@@ -249,10 +249,10 @@ export default function AIServicesSection() {
         >
           <div className="text-center mb-8">
             <h3 className="text-3xl font-heading font-bold text-brand-dark mb-4">
-              Access Our Proprietary SEO Dashboard Platform
+              Why <strong className="text-brand-primary">True Rank Digital</strong> Clients Get Exclusive Platform Access
             </h3>
             <p className="text-lg text-brand-dark/70 max-w-4xl mx-auto leading-relaxed">
-              Every client receives access to our exclusive digital marketing platform featuring grid map ranking analysis, keyword search volume research tools, and competitor intelligence monitoring. While our dashboard platform works with any website, clients who choose our custom web builds unlock advanced algorithm manipulation capabilities and deeper local search engine optimization control through our proprietary script integration.
+              Every <strong>True Rank Digital</strong> client receives access to our exclusive <strong>digital marketing platform</strong> featuring <strong>grid map ranking analysis</strong>, keyword search volume research tools, and <strong>competitor intelligence monitoring</strong>. While our dashboard platform works with any website, clients who choose our custom web builds unlock advanced algorithm manipulation capabilities and deeper <strong>local search engine optimization</strong> control through our proprietary script integration.
             </p>
           </div>
           

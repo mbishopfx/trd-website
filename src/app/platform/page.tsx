@@ -1,21 +1,9 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import GEOSchema from '@/components/seo/GEOSchema';
-import FAQSchema from '@/components/seo/FAQSchema';
-
-// GEO-Optimized Metadata
-export const metadata: Metadata = {
-  title: 'SEO Platform Dashboard | Advanced SEO Tools | True Rank Digital',
-  description: 'True Rank Digital provides proprietary SEO platform dashboard with grid ranking analysis, E-E-A-T scoring, competitor analysis, and indexability monitoring tools.',
-  keywords: 'SEO platform, SEO dashboard, True Rank Digital, SEO tools, grid ranking, E-E-A-T analysis, competitor analysis',
-  alternates: { canonical: 'https://truerankdigital.com/platform' },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } }
-};
 import { 
   Zap, 
   BarChart3, 

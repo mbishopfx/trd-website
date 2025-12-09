@@ -96,6 +96,12 @@ Allow: /gdpr
 
 # Disallow Admin/API Routes (not for indexing)
 Disallow: /api/
+Disallow: /admin/
+Disallow: /forms/
+
+# Block non-existent pages that appear in old sitemaps
+Disallow: /_next/
+Disallow: /static/
 
 # Crawl Delay (optional - helps prevent server overload)
 # Crawl-delay: 1

@@ -10,7 +10,7 @@ export interface FAQItem {
 export interface FAQSchemaProps {
   faqs: FAQItem[];
   pageUrl: string;
-  category?: 'service' | 'location' | 'product' | 'general';
+  category?: 'service' | 'location' | 'product' | 'general' | 'education';
 }
 
 // Pre-built FAQ templates for common page types
@@ -75,6 +75,9 @@ export const LocationFAQTemplate = (city: string, state: string = "NJ") => [
 ];
 
 export default function FAQSchema({ faqs, pageUrl, category }: FAQSchemaProps) {
+  const baseUrl = 'https://truerankdigital.com';
+  const organizationId = `${baseUrl}/#organization`;
+  
   // Validate FAQs have proper structure
   const validFaqs = faqs.filter(faq => 
     faq.question && 
@@ -87,29 +90,53 @@ export default function FAQSchema({ faqs, pageUrl, category }: FAQSchemaProps) {
     return null;
   }
 
-  const faqSchema = {
+  // Build FAQPage schema with @graph structure
+  const faqSchemaGraph = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": `${pageUrl}#faq`,
-    "mainEntity": validFaqs.map((faq, index) => ({
-      "@type": "Question",
-      "@id": `${pageUrl}#faq-question-${index + 1}`,
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "@id": `${pageUrl}#faq-answer-${index + 1}`,
-        "text": faq.answer,
-        "inLanguage": "en-US"
-      }
-    }))
+    "@graph": [
+      // FAQPage entity
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faqpage`,
+        "mainEntity": validFaqs.map((faq, index) => ({
+          "@id": `${pageUrl}#faq-question-${index + 1}`
+        }))
+      },
+      // Individual Question entities
+      ...validFaqs.map((faq, index) => ({
+        "@type": "Question",
+        "@id": `${pageUrl}#faq-question-${index + 1}`,
+        "name": faq.question,
+        "text": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "@id": `${pageUrl}#faq-answer-${index + 1}`,
+          "text": faq.answer,
+          "inLanguage": "en-US",
+          "author": {
+            "@id": organizationId
+          },
+          "dateCreated": new Date().toISOString().split('T')[0],
+          "upvoteCount": 0,
+          "url": `${pageUrl}#faq-${index + 1}`
+        },
+        "answerCount": 1,
+        "upvoteCount": 0,
+        "dateCreated": new Date().toISOString().split('T')[0],
+        "author": {
+          "@id": organizationId
+        }
+      }))
+    ]
   };
 
   return (
     <Script
-      id="faq-schema"
+      id="faq-schema-graph"
       type="application/ld+json"
+      strategy="beforeInteractive"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(faqSchema, null, 0)
+        __html: JSON.stringify(faqSchemaGraph, null, 0)
       }}
     />
   );
@@ -133,4 +160,3 @@ export function generateLocationFAQs(
   const baseFaqs = LocationFAQTemplate(city, state);
   return [...baseFaqs, ...additionalFaqs];
 }
-

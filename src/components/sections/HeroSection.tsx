@@ -235,9 +235,8 @@ export default function HeroSection() {
                   loop
                   muted
                   playsInline
-                  poster="/images/video-poster.jpg"
+                  preload="auto"
                 >
-                  <source src="/videos/hero-video.mov" type="video/quicktime" />
                   <source src="/videos/hero-video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>

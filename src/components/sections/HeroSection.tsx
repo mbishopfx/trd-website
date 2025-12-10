@@ -64,8 +64,11 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-4xl mx-auto">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Left Column - Text Content */}
+          <div className="text-center lg:text-left">
           
           {/* Company Logo */}
           <motion.div
@@ -74,7 +77,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6 }}
             className="mb-8"
           >
-            <div className="relative inline-flex items-center justify-center w-40 h-40 mx-auto mb-6">
+            <div className="relative inline-flex items-center justify-center w-40 h-40 mx-auto lg:mx-0 mb-6">
               {/* Floating Frame Effect */}
               <div className="absolute inset-0 glass-card rounded-3xl shadow-glow hover:shadow-glow-lg transition-all duration-300 bg-white/10 backdrop-blur-md border-2 border-white/30">
                 <div className="absolute inset-2 rounded-2xl bg-gradient-to-br from-brand-primary/10 to-brand-secondary/5"></div>
@@ -210,31 +213,90 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Scroll Indicator */}
+          </div>
+          
+          {/* Right Column - Video */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:block"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="relative"
           >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="flex flex-col items-center text-brand-dark/50"
-            >
-              <span className="text-xs font-medium mb-2 tracking-wider uppercase">Scroll to explore</span>
-              <div className="w-px h-8 bg-brand-primary/30 relative">
-                <motion.div
-                  animate={{ y: [0, 16, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="absolute top-0 left-0 w-full h-2 bg-gradient-to-b from-brand-primary to-transparent"
-                />
+            <div className="relative aspect-square max-w-md mx-auto">
+              {/* Video Container with Decorative Frame */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5">
+                {/* Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/20 via-transparent to-brand-accent/20 blur-xl"></div>
+                
+                {/* Video Element */}
+                <video
+                  className="relative w-full h-full object-cover rounded-2xl"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  poster="/images/video-poster.jpg"
+                >
+                  <source src="/videos/hero-video.mov" type="video/quicktime" />
+                  <source src="/videos/hero-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
-            </motion.div>
+              
+              {/* Decorative Elements */}
+              <motion.div
+                animate={{
+                  scale: [1, 1.1, 1],
+                  opacity: [0.3, 0.5, 0.3]
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                className="absolute -top-4 -right-4 w-24 h-24 bg-brand-accent/30 rounded-full blur-2xl"
+              />
+              <motion.div
+                animate={{
+                  scale: [1, 1.15, 1],
+                  opacity: [0.2, 0.4, 0.2]
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1
+                }}
+                className="absolute -bottom-6 -left-6 w-32 h-32 bg-brand-primary/20 rounded-full blur-3xl"
+              />
+            </div>
           </motion.div>
 
         </div>
       </div>
+      
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 1.1 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:block"
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="flex flex-col items-center text-brand-dark/50"
+        >
+          <span className="text-xs font-medium mb-2 tracking-wider uppercase">Scroll to explore</span>
+          <div className="w-px h-8 bg-brand-primary/30 relative">
+            <motion.div
+              animate={{ y: [0, 16, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="absolute top-0 left-0 w-full h-2 bg-gradient-to-b from-brand-primary to-transparent"
+            />
+          </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

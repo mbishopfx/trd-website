@@ -236,9 +236,14 @@ export default function HeroSection() {
                   muted
                   playsInline
                   preload="auto"
+                  aria-label="True Rank Digital SEO Services Overview"
                 >
                   <source src="/videos/hero-video.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
+                  <div className="sr-only">
+                    True Rank Digital provides professional SEO services including local search optimization, 
+                    Google Business Profile management, and custom algorithm adaptation scripts to help 
+                    businesses dominate search rankings. Contact us at (732) 475-0139 for a free consultation.
+                  </div>
                 </video>
               </div>
               

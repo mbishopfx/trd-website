@@ -113,6 +113,7 @@ const testimonials: Testimonial[] = [
 ];
 
 // Duplicate testimonials for seamless infinite scroll
+// Note: Duplicates are aria-hidden to prevent search engine confusion
 const extendedTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
 interface TestimonialCardProps {
@@ -216,7 +217,12 @@ export default function TestimonialsCarousel() {
           onMouseLeave={() => setIsPaused(false)}
         >
           {extendedTestimonials.map((testimonial, index) => (
-            <TestimonialCard key={`${testimonial.id}-${index}`} testimonial={testimonial} />
+            <div
+              key={`${testimonial.id}-${index}`}
+              aria-hidden={index >= testimonials.length ? 'true' : undefined}
+            >
+              <TestimonialCard testimonial={testimonial} />
+            </div>
           ))}
         </motion.div>
 

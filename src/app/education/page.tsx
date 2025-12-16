@@ -1,12 +1,89 @@
 'use client';
 
 import Link from 'next/link';
+import Script from 'next/script';
 import { motion } from 'framer-motion';
 import { Brain, BookOpen, TrendingUp, Zap, Target, Code, Search, AlertTriangle, ArrowRight, Clock, Users } from 'lucide-react';
 
 // Metadata is handled by the parent layout for client components
 
 export default function EducationPage() {
+  // Collection Page Schema for Education Hub
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "SEO Education & Learning Center | True Rank Digital",
+    "description": "Advanced SEO education guides covering AI search preparation, algorithm adaptation, custom solutions, and future-proofing strategies from True Rank Digital experts.",
+    "url": "https://truerankdigital.com/education",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://truerankdigital.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Education",
+          "item": "https://truerankdigital.com/education"
+        }
+      ]
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Article",
+            "name": "Preparing Your Business for AI Search & LLM Integration",
+            "description": "Comprehensive guide to understanding how Large Language Models are transforming search behavior and ranking factors.",
+            "url": "https://truerankdigital.com/education/ai-search-preparation"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Article",
+            "name": "Algorithm Evolution & Real-Time Adaptation Strategies",
+            "description": "Deep-dive into Google's algorithm update patterns, machine learning integration, and real-time SEO adaptation frameworks.",
+            "url": "https://truerankdigital.com/education/algorithm-adaptation"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Article",
+            "name": "Custom SEO Solutions vs Cookie-Cutter Platforms",
+            "description": "Technical comparison revealing why enterprise SEO requires custom script integration and adaptive optimization frameworks.",
+            "url": "https://truerankdigital.com/education/custom-vs-cookie-cutter"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Article",
+            "name": "Future-Proofing SEO: Advanced Prediction & Adaptation Methodologies",
+            "description": "Sophisticated prediction models and adaptation methodologies for maintaining search visibility through AI advancement.",
+            "url": "https://truerankdigital.com/education/future-proofing-seo"
+          }
+        }
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://truerankdigital.com/#organization",
+      "name": "True Rank Digital"
+    }
+  };
+
   const guides = [
     {
       icon: <Brain className="w-8 h-8" />,
@@ -324,6 +401,7 @@ export default function EducationPage() {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

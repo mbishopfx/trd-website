@@ -1,10 +1,20 @@
 import type { Metadata } from 'next';
 import { Search, Globe, Code, Zap, TrendingUp, Users } from 'lucide-react';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'Professional Digital Marketing Services | Proprietary SEO Dashboard Platform | True Rank Digital',
   description: 'Access our exclusive digital marketing services featuring proprietary SEO dashboard platform with grid map ranking analysis, competitor intelligence monitoring, automated Google knowledge graph consistency tools, and proven Google optimization tactics for faster search engine result page positioning.',
   keywords: 'professional digital marketing services, proprietary SEO dashboard platform, grid map ranking analysis, competitor intelligence monitoring, Google knowledge graph optimization, algorithm-proof SEO strategies, local search engine optimization services, custom script integration, keyword search volume analysis tools, automated Google optimization tactics',
+  openGraph: {
+    title: 'Professional Digital Marketing Services | True Rank Digital',
+    description: 'Comprehensive digital marketing services powered by proprietary SEO dashboard platform.',
+    url: 'https://truerankdigital.com/services',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://truerankdigital.com/services'
+  },
 };
 
 export default function ServicesPage() {
@@ -53,8 +63,146 @@ export default function ServicesPage() {
     }
   ];
 
+  // Service Catalog Schema
+  const serviceCatalogSchema = {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "name": "True Rank Digital Services",
+    "description": "Comprehensive digital marketing and SEO services catalog",
+    "provider": {
+      "@type": "Organization",
+      "@id": "https://truerankdigital.com/#organization",
+      "name": "True Rank Digital"
+    },
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Local SEO & Google Maps Optimization",
+          "description": "Master local search positioning with proprietary SEO dashboard featuring grid map ranking verification",
+          "url": "https://truerankdigital.com/services/local-seo",
+          "provider": {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          "areaServed": "United States",
+          "serviceType": "Search Engine Optimization"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Google Business Profile Management",
+          "description": "Comprehensive GBP management with advanced optimization tools and automated consistency monitoring",
+          "url": "https://truerankdigital.com/services/google-business-profile",
+          "provider": {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          "areaServed": "United States",
+          "serviceType": "Business Listing Management"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "AI-Enhanced SEO",
+          "description": "Revolutionary custom algorithm adaptation scripts that automatically adjust to Google algorithm changes",
+          "url": "https://truerankdigital.com/services/ai-seo",
+          "provider": {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          "areaServed": "United States",
+          "serviceType": "AI SEO"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Custom Web Development",
+          "description": "SEO-optimized websites with advanced proprietary script integration capabilities",
+          "url": "https://truerankdigital.com/services/website-development",
+          "provider": {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          "areaServed": "United States",
+          "serviceType": "Web Development"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "E-commerce Optimization",
+          "description": "Scale your online store with comprehensive competitor analysis tools and optimization strategies",
+          "url": "https://truerankdigital.com/services/ecommerce-optimization",
+          "provider": {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          "areaServed": "United States",
+          "serviceType": "E-commerce SEO"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Digital Marketing Campaign Management",
+          "description": "Strategic digital marketing campaigns powered by SEO dashboard platform with real-time tracking",
+          "url": "https://truerankdigital.com/services/digital-marketing",
+          "provider": {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          "areaServed": "United States",
+          "serviceType": "Digital Marketing"
+        }
+      }
+    ]
+  };
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://truerankdigital.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://truerankdigital.com/services"
+      }
+    ]
+  };
+
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-b from-brand-light/20 to-white">
+    <>
+      {/* Service Catalog Schema */}
+      <Script
+        id="service-catalog-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceCatalogSchema)
+        }}
+      />
+      
+      {/* Breadcrumb Schema */}
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema)
+        }}
+      />
+
+      <div className="pt-16 min-h-screen bg-gradient-to-b from-brand-light/20 to-white">
       
       {/* Hero Section */}
       <section className="py-20">
@@ -117,6 +265,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

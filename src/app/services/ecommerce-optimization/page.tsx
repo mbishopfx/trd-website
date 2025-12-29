@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { ShoppingCart, TrendingUp, Target } from 'lucide-react';
 import GEOSchema from '@/components/seo/GEOSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
+import ServiceSchema from '@/components/seo/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'E-commerce SEO Optimization Services | True Rank Digital',
@@ -58,6 +59,40 @@ export default function EcommerceOptimizationPage() {
           primary: ["True Rank Digital", "E-commerce SEO", "Product Optimization"],
           secondary: ["Online Store", "Conversion Optimization", "Product Schema"]
         }}
+      />
+      
+      {/* Service Schema with Mentions */}
+      <ServiceSchema
+        serviceName="E-commerce Optimization & Competitor Analysis Platform"
+        serviceUrl="https://truerankdigital.com/services/ecommerce-optimization"
+        description="Scale your online store with comprehensive competitor analysis tools, keyword search volume research, and automated optimization strategies integrated with our proprietary dashboard platform."
+        serviceType="E-commerce SEO"
+        mentions={[
+          {
+            type: "Organization",
+            name: "Google",
+            sameAs: "https://www.wikidata.org/wiki/Q95",
+            description: "Search engine platform"
+          },
+          {
+            type: "Organization",
+            name: "Schema.org",
+            sameAs: "https://www.wikidata.org/wiki/Q845256",
+            description: "Structured data for products"
+          },
+          {
+            type: "Organization",
+            name: "Shopify",
+            sameAs: "https://www.wikidata.org/wiki/Q7501434",
+            description: "E-commerce platform partner"
+          },
+          {
+            type: "Organization",
+            name: "WooCommerce",
+            sameAs: "https://www.wikidata.org/wiki/Q8029652",
+            description: "E-commerce platform integration"
+          }
+        ]}
       />
       
       <FAQSchema 

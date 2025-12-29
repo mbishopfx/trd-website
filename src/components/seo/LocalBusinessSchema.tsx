@@ -15,7 +15,7 @@ export default function LocalBusinessSchema() {
     email: "jon@truerankdigital.com",
     foundingDate: "2020",
     
-    // Address and Location
+    // Address and Location (Exact NAP)
     address: {
       "@type": "PostalAddress",
       streetAddress: "East Brunswick",
@@ -24,11 +24,16 @@ export default function LocalBusinessSchema() {
       postalCode: "08816",
       addressCountry: "US"
     },
+    
+    // Geo Coordinates (6 decimal places for precision)
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "40.4862",
-      longitude: "-74.4518"
+      latitude: "40.428100",
+      longitude: "-74.415700"
     },
+    
+    // Direct link to Google Maps listing via hasMap property
+    hasMap: "https://www.google.com/maps?cid=4662204553635539796",
     
     // Business Details
     priceRange: "$$-$$$",
@@ -46,8 +51,18 @@ export default function LocalBusinessSchema() {
       }
     ],
     
-    // Service Areas
+    // Service Areas with geoMidpoint for service radius
     areaServed: [
+      {
+        "@type": "GeoCircle",
+        geoMidpoint: {
+          "@type": "GeoCoordinates",
+          latitude: "40.428100",
+          longitude: "-74.415700"
+        },
+        geoRadius: "80467.2",  // 50 miles in meters
+        description: "Primary service area within 50 miles of East Brunswick, NJ"
+      },
       {
         "@type": "State",
         name: "New Jersey"
@@ -187,10 +202,12 @@ export default function LocalBusinessSchema() {
       }
     },
     
-    // Social Media Profiles
+    // Social Media Profiles and Entity Links (sameAs for brand consolidation)
     sameAs: [
-      "https://www.linkedin.com/company/true-rank-digital",
-      "https://www.facebook.com/truerankdigital", 
+      "https://www.google.com/maps?cid=4662204553635539796",  // Google Business Profile
+      "https://www.facebook.com/truerankdigital",  // Facebook
+      "https://www.linkedin.com/company/true-rank-digital",  // LinkedIn
+      "https://www.wikidata.org/wiki/Q130284854",  // Wikidata entry
       "https://www.instagram.com/truerankdigital_/?hl=en",
       "https://www.youtube.com/channel/UC9wb8G1oROv_iUIDRL7JIWA",
       "https://www.tiktok.com/@truerankdigital_",

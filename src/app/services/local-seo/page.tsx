@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Search, MapPin, TrendingUp, CheckCircle } from 'lucide-react';
 import GEOSchema from '@/components/seo/GEOSchema';
 import FAQSchema, { generateServiceFAQs } from '@/components/seo/FAQSchema';
+import ServiceSchema from '@/components/seo/ServiceSchema';
 
 // GEO-Optimized Metadata
 export const metadata: Metadata = {
@@ -108,6 +109,46 @@ export default function LocalSEOPage() {
           primary: ["True Rank Digital", "Local SEO Services", "Grid Map Ranking"],
           secondary: ["Google Maps Optimization", "Google Business Profile", "East Brunswick NJ"]
         }}
+      />
+      
+      {/* Service Schema with Mentions */}
+      <ServiceSchema
+        serviceName="Local SEO & Google Maps Optimization"
+        serviceUrl="https://truerankdigital.com/services/local-seo"
+        description="Professional local search engine optimization services with grid map ranking verification, Google Business Profile optimization, and automated knowledge graph consistency monitoring for maximum local visibility."
+        serviceType="Local SEO"
+        mentions={[
+          {
+            type: "Organization",
+            name: "Google",
+            sameAs: "https://www.wikidata.org/wiki/Q95",
+            description: "Primary search engine platform"
+          },
+          {
+            type: "Product",
+            name: "Google Business Profile",
+            sameAs: "https://www.wikidata.org/wiki/Q17633166",
+            description: "Business listing platform"
+          },
+          {
+            type: "Product",
+            name: "Google Maps",
+            sameAs: "https://www.wikidata.org/wiki/Q12013",
+            description: "Mapping and local search platform"
+          },
+          {
+            type: "SoftwareApplication",
+            name: "Google Search Console",
+            sameAs: "https://www.wikidata.org/wiki/Q1503528",
+            description: "Search performance monitoring tool"
+          },
+          {
+            type: "Organization",
+            name: "Schema.org",
+            sameAs: "https://www.wikidata.org/wiki/Q845256",
+            description: "Structured data vocabulary"
+          }
+        ]}
       />
       
       {/* FAQ Schema */}

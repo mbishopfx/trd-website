@@ -402,6 +402,5 @@ export default function EducationPage() {
         </div>
       </section>
       </div>
-    </>
   );
 }

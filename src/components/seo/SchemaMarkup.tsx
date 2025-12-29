@@ -65,8 +65,10 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
       availableLanguage: "English"
     },
     sameAs: [
-      "https://www.linkedin.com/company/true-rank-digital",
-      "https://www.facebook.com/truerankdigital",
+      "https://www.google.com/maps?cid=4662204553635539796",  // Google Business Profile
+      "https://www.facebook.com/truerankdigital",  // Facebook  
+      "https://www.linkedin.com/company/true-rank-digital",  // LinkedIn
+      "https://www.wikidata.org/wiki/Q130284854",  // Wikidata entry
       "https://www.instagram.com/truerankdigital_/?hl=en",
       "https://www.youtube.com/channel/UC9wb8G1oROv_iUIDRL7JIWA",
       "https://www.tiktok.com/@truerankdigital_",
@@ -135,9 +137,10 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "40.4862",
-      longitude: "-74.4518"
+      latitude: "40.428100",
+      longitude: "-74.415700"
     },
+    hasMap: "https://www.google.com/maps?cid=4662204553635539796",
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: [
@@ -615,11 +618,12 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "40.4862",
-      longitude: "-74.4518"
+      latitude: "40.428100",
+      longitude: "-74.415700"
     },
     priceRange: "$$-$$$",
     openingHours: "Mo-Su 00:00-23:59",
+    hasMap: "https://www.google.com/maps?cid=4662204553635539796",
     areaOfExpertise: [
       "Search Engine Optimization",
       "Digital Marketing",

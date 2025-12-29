@@ -72,8 +72,20 @@ export default function SayrevillePage() {
             addressCountry: "US" 
           }, 
           geo: { 
-            latitude: "40.4595", 
-            longitude: "-74.3610" 
+            latitude: "40.459500", 
+            longitude: "-74.361000" 
+          },
+          locatedIn: {
+            "@type": "Place",
+            "@id": "https://truerankdigital.com/#organization",
+            "name": "True Rank Digital",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "East Brunswick",
+              "addressRegion": "NJ",
+              "postalCode": "08816",
+              "addressCountry": "US"
+            }
           } 
         }} 
         breadcrumbs={[

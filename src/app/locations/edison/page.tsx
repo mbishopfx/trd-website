@@ -72,8 +72,20 @@ export default function EdisonPage() {
             addressCountry: "US" 
           }, 
           geo: { 
-            latitude: "40.5187", 
-            longitude: "-74.4121" 
+            latitude: "40.518700", 
+            longitude: "-74.412100" 
+          },
+          locatedIn: {
+            "@type": "Place",
+            "@id": "https://truerankdigital.com/#organization",
+            "name": "True Rank Digital",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "East Brunswick",
+              "addressRegion": "NJ",
+              "postalCode": "08816",
+              "addressCountry": "US"
+            }
           } 
         }} 
         breadcrumbs={[

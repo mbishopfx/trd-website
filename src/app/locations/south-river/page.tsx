@@ -72,8 +72,20 @@ export default function SouthRiverPage() {
             addressCountry: "US" 
           }, 
           geo: { 
-            latitude: "40.4462", 
-            longitude: "-74.3860" 
+            latitude: "40.446200", 
+            longitude: "-74.386000" 
+          },
+          locatedIn: {
+            "@type": "Place",
+            "@id": "https://truerankdigital.com/#organization",
+            "name": "True Rank Digital",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "East Brunswick",
+              "addressRegion": "NJ",
+              "postalCode": "08816",
+              "addressCountry": "US"
+            }
           } 
         }} 
         breadcrumbs={[

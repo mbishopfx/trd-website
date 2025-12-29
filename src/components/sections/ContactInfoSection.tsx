@@ -189,18 +189,31 @@ export default function ContactInfoSection() {
               <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
                 Our Location
               </h3>
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="font-semibold text-brand-dark mb-2">East Brunswick, NJ 08816</div>
-                  <div className="text-brand-dark/70 text-sm leading-relaxed">
-                    Located in the heart of the NY/NJ metropolitan area, serving clients worldwide with 
-                    enterprise-level digital marketing solutions.
+              <div className="space-y-4">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="font-semibold text-brand-dark mb-2">East Brunswick, NJ 08816</div>
+                    <div className="text-brand-dark/70 text-sm leading-relaxed mb-3">
+                      Located in the heart of the NY/NJ metropolitan area, serving clients worldwide with 
+                      enterprise-level digital marketing solutions.
+                    </div>
+                    <a
+                      href="https://www.google.com/maps?cid=4662204553635539796"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-2 px-4 py-2 bg-brand-primary text-white rounded-full hover:bg-brand-primary/90 transition-all text-sm font-semibold"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                      </svg>
+                      <span>View on Google Maps</span>
+                    </a>
                   </div>
                 </div>
               </div>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Brain, Zap, Target, TrendingUp } from 'lucide-react';
 import GEOSchema from '@/components/seo/GEOSchema';
 import FAQSchema, { generateServiceFAQs } from '@/components/seo/FAQSchema';
+import ServiceSchema from '@/components/seo/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'AI SEO Services | LLM.txt Optimization | True Rank Digital',
@@ -62,6 +63,52 @@ export default function AISEOPage() {
           primary: ["True Rank Digital", "AI SEO", "LLM.txt Optimization"],
           secondary: ["ChatGPT", "Perplexity", "Google AI Overview", "Algorithm Adaptation"]
         }}
+      />
+      
+      {/* Service Schema with Mentions */}
+      <ServiceSchema
+        serviceName="AI-Enhanced SEO with Algorithm Adaptation Scripts"
+        serviceUrl="https://truerankdigital.com/services/ai-seo"
+        description="Revolutionary custom algorithm adaptation scripts and proprietary solution building frameworks that automatically adjust to Google algorithm changes, maintaining peak search engine performance. Includes LLM.txt optimization for AI search engines."
+        serviceType="AI SEO"
+        mentions={[
+          {
+            type: "Organization",
+            name: "OpenAI",
+            sameAs: "https://www.wikidata.org/wiki/Q21708200",
+            description: "Creator of ChatGPT"
+          },
+          {
+            type: "SoftwareApplication",
+            name: "ChatGPT",
+            sameAs: "https://www.wikidata.org/wiki/Q115564437",
+            description: "AI chatbot and search assistant"
+          },
+          {
+            type: "Organization",
+            name: "Anthropic",
+            sameAs: "https://www.wikidata.org/wiki/Q104834799",
+            description: "Creator of Claude AI"
+          },
+          {
+            type: "SoftwareApplication",
+            name: "Perplexity AI",
+            sameAs: "https://www.wikidata.org/wiki/Q123885700",
+            description: "AI-powered answer engine"
+          },
+          {
+            type: "Organization",
+            name: "Google",
+            sameAs: "https://www.wikidata.org/wiki/Q95",
+            description: "Search engine with AI Overview"
+          },
+          {
+            type: "Organization",
+            name: "Schema.org",
+            sameAs: "https://www.wikidata.org/wiki/Q845256",
+            description: "Structured data vocabulary"
+          }
+        ]}
       />
       
       <FAQSchema 

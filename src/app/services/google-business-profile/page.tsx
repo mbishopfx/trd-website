@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Users, Star, MapPin, TrendingUp } from 'lucide-react';
 import GEOSchema from '@/components/seo/GEOSchema';
 import FAQSchema, { generateServiceFAQs } from '@/components/seo/FAQSchema';
+import ServiceSchema from '@/components/seo/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'Google Business Profile Management Services | True Rank Digital',
@@ -58,6 +59,34 @@ export default function GoogleBusinessProfilePage() {
           primary: ["True Rank Digital", "Google Business Profile", "GBP Management"],
           secondary: ["Review Management", "Local Listings", "Google Maps"]
         }}
+      />
+      
+      {/* Service Schema with Mentions */}
+      <ServiceSchema
+        serviceName="Google Business Profile Management"
+        serviceUrl="https://truerankdigital.com/services/google-business-profile"
+        description="Complete Google Business Profile optimization and management services including listing optimization, review management, local visibility enhancement, and automated consistency monitoring."
+        serviceType="Business Listing Management"
+        mentions={[
+          {
+            type: "Organization",
+            name: "Google",
+            sameAs: "https://www.wikidata.org/wiki/Q95",
+            description: "Primary search engine platform"
+          },
+          {
+            type: "Product",
+            name: "Google Business Profile",
+            sameAs: "https://www.wikidata.org/wiki/Q17633166",
+            description: "Business listing platform"
+          },
+          {
+            type: "Product",
+            name: "Google Maps",
+            sameAs: "https://www.wikidata.org/wiki/Q12013",
+            description: "Mapping and local search platform"
+          }
+        ]}
       />
       
       <FAQSchema 

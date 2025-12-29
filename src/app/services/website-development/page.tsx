@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Code, Zap, Rocket, TrendingUp } from 'lucide-react';
 import GEOSchema from '@/components/seo/GEOSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
+import ServiceSchema from '@/components/seo/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'SEO-Optimized Website Development | Custom Web Builds | True Rank Digital',
@@ -62,6 +63,40 @@ export default function WebsiteDevelopmentPage() {
           primary: ["True Rank Digital", "Website Development", "Custom Web Builds"],
           secondary: ["SEO Optimization", "Proprietary Scripts", "Algorithm Manipulation"]
         }}
+      />
+      
+      {/* Service Schema with Mentions */}
+      <ServiceSchema
+        serviceName="Custom Web Development with Enhanced Script Integration"
+        serviceUrl="https://truerankdigital.com/services/website-development"
+        description="SEO-optimized websites designed for conversion with advanced proprietary script integration capabilities that unlock enhanced algorithm manipulation tools and deeper optimization control."
+        serviceType="Web Development"
+        mentions={[
+          {
+            type: "Organization",
+            name: "Vercel",
+            sameAs: "https://www.wikidata.org/wiki/Q105906396",
+            description: "Hosting and deployment platform"
+          },
+          {
+            type: "SoftwareApplication",
+            name: "Next.js",
+            sameAs: "https://www.wikidata.org/wiki/Q73359117",
+            description: "React framework for web development"
+          },
+          {
+            type: "Organization",
+            name: "Google",
+            sameAs: "https://www.wikidata.org/wiki/Q95",
+            description: "Search engine optimization target"
+          },
+          {
+            type: "Organization",
+            name: "Schema.org",
+            sameAs: "https://www.wikidata.org/wiki/Q845256",
+            description: "Structured data implementation"
+          }
+        ]}
       />
       
       <FAQSchema 

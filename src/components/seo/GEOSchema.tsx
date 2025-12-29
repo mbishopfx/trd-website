@@ -112,10 +112,20 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "40.4281",
-      "longitude": "-74.4157"
+      "latitude": "40.428100",
+      "longitude": "-74.415700"
     },
     "areaServed": [
+      {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "40.428100",
+          "longitude": "-74.415700"
+        },
+        "geoRadius": "80467.2",
+        "description": "Primary service area within 50 miles of East Brunswick, NJ"
+      },
       {
         "@type": "State",
         "name": "New Jersey"
@@ -126,8 +136,10 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
       }
     ],
     "sameAs": [
+      "https://www.google.com/maps?cid=4662204553635539796",
       "https://www.facebook.com/truerankdigital",
       "https://www.linkedin.com/company/true-rank-digital",
+      "https://www.wikidata.org/wiki/Q130284854",
       "https://twitter.com/truerankdigital"
     ],
     "founder": {
@@ -435,8 +447,8 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
       "longitude": pageData.geo.longitude
     } : {
       "@type": "GeoCoordinates",
-      "latitude": "40.4281",
-      "longitude": "-74.4157"
+      "latitude": "40.428100",
+      "longitude": "-74.415700"
     },
     "areaServed": {
       "@type": "City",

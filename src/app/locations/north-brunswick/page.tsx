@@ -72,8 +72,20 @@ export default function NorthBrunswickPage() {
             addressCountry: "US" 
           }, 
           geo: { 
-            latitude: "40.4517", 
-            longitude: "-74.4794" 
+            latitude: "40.451700", 
+            longitude: "-74.479400" 
+          },
+          locatedIn: {
+            "@type": "Place",
+            "@id": "https://truerankdigital.com/#organization",
+            "name": "True Rank Digital",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "East Brunswick",
+              "addressRegion": "NJ",
+              "postalCode": "08816",
+              "addressCountry": "US"
+            }
           } 
         }} 
         breadcrumbs={[

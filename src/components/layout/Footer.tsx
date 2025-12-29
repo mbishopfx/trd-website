@@ -209,6 +209,17 @@ export default function Footer() {
                   <span className="text-sm">{contactInfo.address}</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
+                  <MapPin className="w-4 h-4 flex-shrink-0 text-brand-primary" />
+                  <a
+                    href="https://www.google.com/maps?cid=4662204553635539796"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm hover:text-brand-primary transition-colors duration-200 underline"
+                  >
+                    View on Google Maps
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-4 h-4 flex-shrink-0 text-brand-primary" />
                   <a
                     href={`tel:${contactInfo.phone}`}

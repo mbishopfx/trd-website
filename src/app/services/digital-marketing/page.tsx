@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Megaphone, BarChart, Users, TrendingUp } from 'lucide-react';
 import GEOSchema from '@/components/seo/GEOSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
+import ServiceSchema from '@/components/seo/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'Digital Marketing Services | Campaign Management | True Rank Digital',
@@ -58,6 +59,40 @@ export default function DigitalMarketingPage() {
           primary: ["True Rank Digital", "Digital Marketing", "Campaign Management"],
           secondary: ["Marketing Automation", "ROI Optimization", "Performance Tracking"]
         }}
+      />
+      
+      {/* Service Schema with Mentions */}
+      <ServiceSchema
+        serviceName="Comprehensive Digital Marketing Campaign Management"
+        serviceUrl="https://truerankdigital.com/services/digital-marketing"
+        description="Strategic digital marketing campaigns powered by our SEO dashboard platform featuring real-time performance tracking, organic search traffic generation tools, and proven Google optimization tactics."
+        serviceType="Digital Marketing"
+        mentions={[
+          {
+            type: "Organization",
+            name: "Google",
+            sameAs: "https://www.wikidata.org/wiki/Q95",
+            description: "Primary advertising platform"
+          },
+          {
+            type: "SoftwareApplication",
+            name: "Google Analytics",
+            sameAs: "https://www.wikidata.org/wiki/Q459107",
+            description: "Marketing analytics platform"
+          },
+          {
+            type: "Organization",
+            name: "Meta",
+            sameAs: "https://www.wikidata.org/wiki/Q380",
+            description: "Social media marketing platform"
+          },
+          {
+            type: "Organization",
+            name: "HubSpot",
+            sameAs: "https://www.wikidata.org/wiki/Q5928176",
+            description: "Marketing automation partner"
+          }
+        ]}
       />
       
       <FAQSchema 

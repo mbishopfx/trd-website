@@ -210,11 +210,7 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
       contentUrl: napData.image
     },
     datePublished: "2024-01-01",
-    dateModified: new Date().toISOString().split('T')[0],
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: ["h1", "h2", ".hero-content", "article p"]
-    }
+    dateModified: new Date().toISOString().split('T')[0]
   };
 
   // Service Catalog (OfferCatalog)
@@ -362,18 +358,18 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
     ]
   };
 
-  // Aggregate Rating
+  // Aggregate Rating (updated to reflect 30 reviews in schema)
   const aggregateRatingSchema = {
     "@type": "AggregateRating",
     "@id": `${baseUrl}/#aggregate-rating`,
     ratingValue: "5.0",
     bestRating: "5",
     worstRating: "1",
-    ratingCount: "12",
-    reviewCount: "12"
+    ratingCount: "30",
+    reviewCount: "30"
   };
 
-  // Reviews
+  // Reviews - Selected most authoritative reviews from GBP (Local Guides, multiple reviews, detailed feedback)
   const reviewsSchema = [
     {
       "@type": "Review",
@@ -389,7 +385,7 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
         bestRating: "5",
         worstRating: "1"
       },
-      datePublished: "2024-01-15",
+      datePublished: "2024-09-15",
       itemReviewed: {
         "@id": organizationId
       }
@@ -408,26 +404,7 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
         bestRating: "5",
         worstRating: "1"
       },
-      datePublished: "2024-02-20",
-      itemReviewed: {
-        "@id": organizationId
-      }
-    },
-    {
-      "@type": "Review",
-      "@id": `${baseUrl}/reviews/estrella-rojas`,
-      reviewBody: "Jose was great to work with! He really understood what my business needed and helped get it on the right track. Thanks to his expertise, our online presence improved, and we saw real results. I highly recommend him and his team!",
-      author: {
-        "@type": "Person",
-        name: "Estrella Rojas"
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-        worstRating: "1"
-      },
-      datePublished: "2024-03-10",
+      datePublished: "2024-08-20",
       itemReviewed: {
         "@id": organizationId
       }
@@ -446,7 +423,482 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
         bestRating: "5",
         worstRating: "1"
       },
-      datePublished: "2024-04-05",
+      datePublished: "2024-07-21",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/yasmin-peralta`,
+      reviewBody: "I loved working with Jose he helped my business tremendously. He answered all my questions and walked me through every step.",
+      author: {
+        "@type": "Person",
+        name: "Yasmin Peralta"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-04-15",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/armas-kakar`,
+      reviewBody: "True Rank Digital delivered outstanding results! Jon J Korkowski and his team helped us attract more quality leads and improve our brand image significantly.",
+      author: {
+        "@type": "Person",
+        name: "Armas Kakar"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-03-15",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/mostafa-meshak`,
+      reviewBody: "I highly recommend True Rank Digital! Jon J Korkowski's strategies helped us reach a wider audience and establish strong brand recognition.",
+      author: {
+        "@type": "Person",
+        name: "Mostafa Meshak"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-03-15",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/mariann-koppenheffer`,
+      reviewBody: "Really helped our family business in 2025 marketing approach. Thank you Jon and team.",
+      author: {
+        "@type": "Person",
+        name: "Mariann Koppenheffer"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-02-15",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/estrella-rojas`,
+      reviewBody: "Jose was great to work with! He really understood what my business needed and helped get it on the right track. Thanks to his expertise, our online presence improved, and we saw real results. I highly recommend him and his team!",
+      author: {
+        "@type": "Person",
+        name: "Estrella Rojas"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-02-15",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/ale`,
+      reviewBody: "Our business has flourished thanks to Jon J Korkowski and his team. Not only did they help us increase leads, but they also made our brand stand out in a crowded market, delivering results we could see right away.",
+      author: {
+        "@type": "Person",
+        name: "Ale"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-02-15",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/selena-gallegos`,
+      reviewBody: "Choosing Jon J Korkowski was the best decision. Our leads have increased, and our brand is now widely recognized",
+      author: {
+        "@type": "Person",
+        name: "Selena Gallegos"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2025-01-06",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/jose-mata-vegas`,
+      reviewBody: "Jon J Korkowski and his team delivered incredible results. Our leads skyrocketed and our brand is now well-recognized in the industry",
+      author: {
+        "@type": "Person",
+        name: "Jose Mata Vegas"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2025-01-06",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/lupita-castellanos`,
+      reviewBody: "Working with Jon J Korkowski has transformed our business. The increase in leads and brand recognition has been outstanding",
+      author: {
+        "@type": "Person",
+        name: "Lupita Castellanos"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2025-01-06",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/julian-curatola`,
+      reviewBody: "True Rank Digital provided exceptional service and helped grow our business significantly.",
+      author: {
+        "@type": "Person",
+        name: "Julian Curatola"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-12-27",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/krishnamurthy-nemani`,
+      reviewBody: "True Rank Digital delivered excellent results for our business. Highly professional team and outstanding service.",
+      author: {
+        "@type": "Person",
+        name: "Krishnamurthy Nemani"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-12-24",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/rudy-espana`,
+      reviewBody: "Top notch team of professionals that understand the needs of their business as it evolves daily! I would recommend True Rank Digital to anyone needing their services truly exceptional!",
+      author: {
+        "@type": "Person",
+        name: "Rudy Espana"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-12-24",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/mohammed-elkholy`,
+      reviewBody: "Feels like I have 24 hours service, I call them for advise on my marketing all the time. Definitely will continue to use them!",
+      author: {
+        "@type": "Person",
+        name: "Mohammed Elkholy"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-12-24",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/jrs-autospa`,
+      reviewBody: "10/10 love the service from Jon and Tom they answered all my questions, got my website running in just a few days and just went above and beyond with everything I needed thank you!",
+      author: {
+        "@type": "Person",
+        name: "Jrs AutoSpa"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-12-24",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/frank-mannarino`,
+      reviewBody: "True Rank Digital brought my nutrition consulting to the next level. Thank you",
+      author: {
+        "@type": "Person",
+        name: "Frank Mannarino"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-12-16",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/duubalin-hard`,
+      reviewBody: "With Jon J Korkowski's expertise, our leads increased and our brand recognition improved.",
+      author: {
+        "@type": "Person",
+        name: "Duubalin Hard"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-12-13",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/juan-alcantara`,
+      reviewBody: "If you're serious about enhancing your brand's image, Jon J Korkowski is your guy! Our lead generation has never been better",
+      author: {
+        "@type": "Person",
+        name: "Juan Alcantara"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-11-05",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/kelvin-dellez`,
+      reviewBody: "After partnering with Jon J Korkowski, we've experienced a phenomenal increase in leads and our overall brand image. I can't imagine working with anyone else!",
+      author: {
+        "@type": "Person",
+        name: "Kelvin Dellez"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-11-05",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/humberto-garcia-camara`,
+      reviewBody: "Jon's insights into digital marketing were invaluable. We've seen our leads triple and our brand's reputation greatly enhanced. Highly effective",
+      author: {
+        "@type": "Person",
+        name: "Humberto Garcia Camara"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-11-05",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/ezequiel-panizo`,
+      reviewBody: "Thanks to Jon's innovative marketing strategies, our brand is more recognized than ever, and leads are pouring in. Very impressed",
+      author: {
+        "@type": "Person",
+        name: "Ezequiel Panizo"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-11-05",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/samantha-cabazos`,
+      reviewBody: "Working with Jon was transformative for our business. Our lead generation improved dramatically, and our brand's reputation is now stellar",
+      author: {
+        "@type": "Person",
+        name: "Samantha Cabazos"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-11-05",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/luise-tucuma`,
+      reviewBody: "We owe our recent success to Jon J Korkowski! Our leads skyrocketed, and the positive buzz surrounding our brand is more than we could have hoped for.",
+      author: {
+        "@type": "Person",
+        name: "Luise Tucuma"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-11-05",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/montze-maradiaga`,
+      reviewBody: "Jon J Korkowski is an advertising genius! Our lead growth and the newfound respect for our brand is a testament to his skill",
+      author: {
+        "@type": "Person",
+        name: "Montze Maradiaga"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-11-05",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/nick-kelley`,
+      reviewBody: "Absolute best service around. I wish I had found this company sooner!",
+      author: {
+        "@type": "Person",
+        name: "Nick Kelley"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-06-13",
+      itemReviewed: {
+        "@id": organizationId
+      }
+    },
+    {
+      "@type": "Review",
+      "@id": `${baseUrl}/reviews/brandon-nelson`,
+      reviewBody: "True Rank Digital helped me turn my business around. I really owe Jon for all the hard work and time he spent with us and saved me a small fortune. I highly recommend them to anyone.",
+      author: {
+        "@type": "Person",
+        name: "Brandon Nelson"
+      },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: "5",
+        bestRating: "5",
+        worstRating: "1"
+      },
+      datePublished: "2024-06-13",
       itemReviewed: {
         "@id": organizationId
       }
@@ -465,7 +917,7 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
         bestRating: "5",
         worstRating: "1"
       },
-      datePublished: "2024-05-12",
+      datePublished: "2024-04-23",
       itemReviewed: {
         "@id": organizationId
       }

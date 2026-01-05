@@ -1022,6 +1022,284 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
     }))
   } : null;
 
+  // Location-specific LocalBusiness schemas for Local Map Pack dominance
+  const locationSchemas = [
+    {
+      "@type": "LocalBusiness",
+      "@id": `${baseUrl}/locations/edison#localbusiness`,
+      name: "True Rank Digital - Edison",
+      description: "Professional Google Business Optimization services for Edison, NJ businesses. Serving Oak Tree Road, Menlo Park Mall area, and all Edison neighborhoods.",
+      url: `${baseUrl}/locations/edison`,
+      telephone: napData.telephone,
+      email: napData.email,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Serving Edison",
+        addressLocality: "Edison",
+        addressRegion: "NJ",
+        postalCode: "08817",
+        addressCountry: "US"
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "40.518700",
+        longitude: "-74.412100"
+      },
+      areaServed: {
+        "@type": "City",
+        name: "Edison"
+      },
+      parentOrganization: {
+        "@id": organizationId
+      },
+      priceRange: "$$-$$$",
+      hasMap: "https://www.google.com/maps?cid=4662204553635539796"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${baseUrl}/locations/east-brunswick#localbusiness`,
+      name: "True Rank Digital - East Brunswick",
+      description: "Professional Google Business Optimization services for East Brunswick, NJ businesses. Headquarters location serving Middlesex County.",
+      url: `${baseUrl}/locations/east-brunswick`,
+      telephone: napData.telephone,
+      email: napData.email,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "East Brunswick",
+        addressLocality: "East Brunswick",
+        addressRegion: "NJ",
+        postalCode: "08816",
+        addressCountry: "US"
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "40.428100",
+        longitude: "-74.415700"
+      },
+      areaServed: {
+        "@type": "City",
+        name: "East Brunswick"
+      },
+      parentOrganization: {
+        "@id": organizationId
+      },
+      priceRange: "$$-$$$",
+      hasMap: "https://www.google.com/maps?cid=4662204553635539796"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${baseUrl}/locations/new-brunswick#localbusiness`,
+      name: "True Rank Digital - New Brunswick",
+      description: "Professional Google Business Optimization services for New Brunswick, NJ businesses. Serving Rutgers University area, Robert Wood Johnson medical district, and downtown George Street corridor.",
+      url: `${baseUrl}/locations/new-brunswick`,
+      telephone: napData.telephone,
+      email: napData.email,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Serving New Brunswick",
+        addressLocality: "New Brunswick",
+        addressRegion: "NJ",
+        postalCode: "08901",
+        addressCountry: "US"
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "40.486200",
+        longitude: "-74.451800"
+      },
+      areaServed: {
+        "@type": "City",
+        name: "New Brunswick"
+      },
+      parentOrganization: {
+        "@id": organizationId
+      },
+      priceRange: "$$-$$$",
+      hasMap: "https://www.google.com/maps?cid=4662204553635539796"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${baseUrl}/locations/north-brunswick#localbusiness`,
+      name: "True Rank Digital - North Brunswick",
+      description: "Professional Google Business Optimization services for North Brunswick, NJ businesses. Serving Route 27 corridor, Renaissance area, and Adams Lane district.",
+      url: `${baseUrl}/locations/north-brunswick`,
+      telephone: napData.telephone,
+      email: napData.email,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Serving North Brunswick",
+        addressLocality: "North Brunswick",
+        addressRegion: "NJ",
+        postalCode: "08902",
+        addressCountry: "US"
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "40.451700",
+        longitude: "-74.479400"
+      },
+      areaServed: {
+        "@type": "City",
+        name: "North Brunswick"
+      },
+      parentOrganization: {
+        "@id": organizationId
+      },
+      priceRange: "$$-$$$",
+      hasMap: "https://www.google.com/maps?cid=4662204553635539796"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${baseUrl}/locations/sayreville#localbusiness`,
+      name: "True Rank Digital - Sayreville",
+      description: "Professional Google Business Optimization services for Sayreville, NJ businesses. Serving Route 9 corridor, Parlin area, Morgan waterfront, and Garden State Parkway access.",
+      url: `${baseUrl}/locations/sayreville`,
+      telephone: napData.telephone,
+      email: napData.email,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Serving Sayreville",
+        addressLocality: "Sayreville",
+        addressRegion: "NJ",
+        postalCode: "08872",
+        addressCountry: "US"
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "40.459500",
+        longitude: "-74.361000"
+      },
+      areaServed: {
+        "@type": "City",
+        name: "Sayreville"
+      },
+      parentOrganization: {
+        "@id": organizationId
+      },
+      priceRange: "$$-$$$",
+      hasMap: "https://www.google.com/maps?cid=4662204553635539796"
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${baseUrl}/locations/south-river#localbusiness`,
+      name: "True Rank Digital - South River",
+      description: "Professional Google Business Optimization services for South River, NJ businesses. Serving Main Street shops, home services, and small businesses in South River Borough.",
+      url: `${baseUrl}/locations/south-river`,
+      telephone: napData.telephone,
+      email: napData.email,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Serving South River",
+        addressLocality: "South River",
+        addressRegion: "NJ",
+        postalCode: "08882",
+        addressCountry: "US"
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "40.446200",
+        longitude: "-74.386000"
+      },
+      areaServed: {
+        "@type": "City",
+        name: "South River"
+      },
+      parentOrganization: {
+        "@id": organizationId
+      },
+      priceRange: "$$-$$$",
+      hasMap: "https://www.google.com/maps?cid=4662204553635539796"
+    }
+  ];
+
+  // Service schemas for each location (for Local Map Pack)
+  const locationServiceSchemas = [
+    {
+      "@type": "Service",
+      "@id": `${baseUrl}/locations/edison#service`,
+      name: "Google Business Optimization Services in Edison, NJ",
+      description: "Local pack domination and Google Business Profile optimization for Edison businesses",
+      provider: {
+        "@id": `${baseUrl}/locations/edison#localbusiness`
+      },
+      areaServed: {
+        "@type": "City",
+        name: "Edison"
+      },
+      serviceType: "Google Business Optimization"
+    },
+    {
+      "@type": "Service",
+      "@id": `${baseUrl}/locations/east-brunswick#service`,
+      name: "Google Business Optimization Services in East Brunswick, NJ",
+      description: "Local pack domination and Google Business Profile optimization for East Brunswick businesses",
+      provider: {
+        "@id": `${baseUrl}/locations/east-brunswick#localbusiness`
+      },
+      areaServed: {
+        "@type": "City",
+        name: "East Brunswick"
+      },
+      serviceType: "Google Business Optimization"
+    },
+    {
+      "@type": "Service",
+      "@id": `${baseUrl}/locations/new-brunswick#service`,
+      name: "Google Business Optimization Services in New Brunswick, NJ",
+      description: "Local pack domination and Google Business Profile optimization for New Brunswick businesses",
+      provider: {
+        "@id": `${baseUrl}/locations/new-brunswick#localbusiness`
+      },
+      areaServed: {
+        "@type": "City",
+        name: "New Brunswick"
+      },
+      serviceType: "Google Business Optimization"
+    },
+    {
+      "@type": "Service",
+      "@id": `${baseUrl}/locations/north-brunswick#service`,
+      name: "Google Business Optimization Services in North Brunswick, NJ",
+      description: "Local pack domination and Google Business Profile optimization for North Brunswick businesses",
+      provider: {
+        "@id": `${baseUrl}/locations/north-brunswick#localbusiness`
+      },
+      areaServed: {
+        "@type": "City",
+        name: "North Brunswick"
+      },
+      serviceType: "Google Business Optimization"
+    },
+    {
+      "@type": "Service",
+      "@id": `${baseUrl}/locations/sayreville#service`,
+      name: "Google Business Optimization Services in Sayreville, NJ",
+      description: "Local pack domination and Google Business Profile optimization for Sayreville businesses",
+      provider: {
+        "@id": `${baseUrl}/locations/sayreville#localbusiness`
+      },
+      areaServed: {
+        "@type": "City",
+        name: "Sayreville"
+      },
+      serviceType: "Google Business Optimization"
+    },
+    {
+      "@type": "Service",
+      "@id": `${baseUrl}/locations/south-river#service`,
+      name: "Google Business Optimization Services in South River, NJ",
+      description: "Local pack domination and Google Business Profile optimization for South River businesses",
+      provider: {
+        "@id": `${baseUrl}/locations/south-river#localbusiness`
+      },
+      areaServed: {
+        "@type": "City",
+        name: "South River"
+      },
+      serviceType: "Google Business Optimization"
+    }
+  ];
+
   // Combine all schemas into one comprehensive @graph
   const schemaGraph = {
     "@context": "https://schema.org",
@@ -1034,7 +1312,9 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
       ...reviewsSchema,
       ...teamMembersSchema,
       ...faqEntities,
-      ...(faqPageSchema ? [faqPageSchema] : [])
+      ...(faqPageSchema ? [faqPageSchema] : []),
+      ...locationSchemas,
+      ...locationServiceSchemas
     ]
   };
 

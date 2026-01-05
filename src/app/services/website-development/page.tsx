@@ -5,12 +5,12 @@ import FAQSchema from '@/components/seo/FAQSchema';
 import ServiceSchema from '@/components/seo/ServiceSchema';
 
 export const metadata: Metadata = {
-  title: 'SEO-Optimized Website Development | Custom Web Builds | True Rank Digital',
-  description: 'True Rank Digital delivers SEO-optimized website development with custom web builds, proprietary script integration, and enhanced algorithm manipulation capabilities for superior search performance.',
-  keywords: 'SEO website development, custom web builds, website optimization, True Rank Digital, proprietary script integration, algorithm manipulation, fast websites',
+  title: 'Google-Optimized Website Development | Custom Web Builds | True Rank Digital',
+  description: 'True Rank Digital delivers Google-optimized website development with custom web builds, proprietary script integration, and enhanced optimization capabilities for superior Google visibility.',
+  keywords: 'website development, custom web builds, website optimization, True Rank Digital, proprietary script integration, Google optimization, fast websites',
   openGraph: {
-    title: 'SEO-Optimized Website Development | True Rank Digital',
-    description: 'Custom web builds with SEO optimization and proprietary technology integration.',
+    title: 'Google-Optimized Website Development | True Rank Digital',
+    description: 'Custom web builds with Google optimization and proprietary technology integration.',
     url: 'https://truerankdigital.com/services/website-development',
     type: 'website',
   },
@@ -33,7 +33,7 @@ export default function WebsiteDevelopmentPage() {
   const faqs = [
     {
       question: "What makes True Rank Digital's custom web builds different?",
-      answer: "True Rank Digital's custom web builds include proprietary script integration that unlocks enhanced algorithm manipulation capabilities. While our dashboard platform works with any website, custom web builds provide deeper optimization control, faster performance, and advanced SEO features that off-the-shelf websites cannot offer."
+      answer: "True Rank Digital's custom web builds include proprietary script integration that unlocks enhanced optimization capabilities. While our dashboard platform works with any website, custom web builds provide deeper optimization control, faster performance, and advanced Google optimization features that off-the-shelf websites cannot offer."
     },
     {
       question: "How fast are True Rank Digital's websites?",
@@ -46,10 +46,10 @@ export default function WebsiteDevelopmentPage() {
       <GEOSchema 
         pageType="service"
         pageData={{
-          title: "SEO-Optimized Website Development by True Rank Digital",
-          description: "True Rank Digital delivers SEO-optimized website development with custom web builds and proprietary script integration for enhanced search performance.",
+          title: "Google-Optimized Website Development by True Rank Digital",
+          description: "True Rank Digital delivers Google-optimized website development with custom web builds and proprietary script integration for enhanced Google visibility.",
           url: "https://truerankdigital.com/services/website-development",
-          keywords: ["website development", "SEO optimization", "custom web builds"],
+          keywords: ["website development", "Google optimization", "custom web builds"],
           category: "Website Development",
           serviceType: "Web Development",
           areaServed: ["United States"],
@@ -61,7 +61,7 @@ export default function WebsiteDevelopmentPage() {
         ]}
         entities={{
           primary: ["True Rank Digital", "Website Development", "Custom Web Builds"],
-          secondary: ["SEO Optimization", "Proprietary Scripts", "Algorithm Manipulation"]
+          secondary: ["Google Optimization", "Proprietary Scripts", "Performance Optimization"]
         }}
       />
       
@@ -69,7 +69,7 @@ export default function WebsiteDevelopmentPage() {
       <ServiceSchema
         serviceName="Custom Web Development with Enhanced Script Integration"
         serviceUrl="https://truerankdigital.com/services/website-development"
-        description="SEO-optimized websites designed for conversion with advanced proprietary script integration capabilities that unlock enhanced algorithm manipulation tools and deeper optimization control."
+        description="Google-optimized websites designed for conversion with advanced proprietary script integration capabilities that unlock enhanced optimization tools and deeper performance control."
         serviceType="Web Development"
         mentions={[
           {
@@ -114,20 +114,20 @@ export default function WebsiteDevelopmentPage() {
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
-              <strong className="text-brand-primary">True Rank Digital</strong> Builds SEO-Optimized <strong>Custom Websites</strong>
+              <strong className="text-brand-primary">True Rank Digital</strong> Builds Google-Optimized <strong>Custom Websites</strong>
             </h1>
             
             <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-12">
-              <strong>True Rank Digital</strong> delivers <strong>SEO-optimized website development</strong> with custom web builds featuring proprietary script integration and enhanced algorithm manipulation capabilities for superior search performance.
+              <strong>True Rank Digital</strong> delivers <strong>Google-optimized website development</strong> with custom web builds featuring proprietary script integration and enhanced optimization capabilities for superior Google visibility.
             </p>
 
             <h2 className="text-3xl font-heading font-bold text-brand-dark mb-8">
-              How <strong className="text-brand-primary">Custom Web Builds</strong> Provide SEO Advantages
+              How <strong className="text-brand-primary">Custom Web Builds</strong> Provide Google Optimization Advantages
             </h2>
 
             <div className="glass-card p-8 mb-12">
               <p className="text-brand-dark/70 leading-relaxed">
-                <strong>True Rank Digital's custom web builds</strong> include proprietary script integration that unlocks enhanced <strong>algorithm manipulation capabilities</strong>. Our websites are built for speed, SEO, and conversion optimization.
+                <strong>True Rank Digital's custom web builds</strong> include proprietary script integration that unlocks enhanced <strong>optimization capabilities</strong>. Our websites are built for speed, Google visibility, and conversion optimization.
               </p>
             </div>
 
@@ -136,10 +136,10 @@ export default function WebsiteDevelopmentPage() {
                 <Rocket className="w-10 h-10 text-white" />
               </div>
               <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
-                Get Your <strong className="text-brand-primary">SEO-Optimized</strong> Website Built
+                Get Your <strong className="text-brand-primary">Google-Optimized</strong> Website Built
               </h2>
               <p className="text-brand-dark/70 mb-6">
-                Start with a <strong>custom web build</strong> from <strong>True Rank Digital</strong> featuring proprietary SEO technology and enhanced optimization capabilities.
+                Start with a <strong>custom web build</strong> from <strong>True Rank Digital</strong> featuring proprietary Google optimization technology and enhanced performance capabilities.
               </p>
               <a
                 href="/contact"

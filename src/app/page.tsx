@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import HeroSection from '@/components/sections/HeroSection';
+import LawyersSection from '@/components/sections/LawyersSection';
 import AIServicesSection from '@/components/sections/AIServicesSection';
 import TraditionalServicesSection from '@/components/sections/TraditionalServicesSection';
 import TestimonialsCarousel from '@/components/sections/TestimonialsCarousel';
@@ -8,18 +9,19 @@ import StarterPackBanner from '@/components/sections/StarterPackBanner';
 import GEOSchema from '@/components/seo/GEOSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
+import SchemaMarkup from '@/components/seo/SchemaMarkup';
 
 // GEO-Optimized Metadata for Homepage
 export const metadata: Metadata = {
-  title: 'True Rank Digital | Professional SEO Services in East Brunswick, NJ',
-  description: 'True Rank Digital delivers professional SEO services with proprietary dashboard platform, grid map ranking analysis, and custom algorithm adaptation scripts for businesses in East Brunswick, NJ.',
-  keywords: 'True Rank Digital, SEO services, East Brunswick SEO, professional SEO, local SEO, Google Business Profile, schema markup, LLM.txt optimization, digital marketing, SEO company New Jersey',
+  title: 'True Rank Digital | Google Business Optimization & Local Pack Domination',
+  description: 'True Rank Digital delivers Google Business Optimization services with proprietary dashboard platform, grid map ranking analysis, and local pack domination strategies for businesses in East Brunswick, NJ and nationwide.',
+  keywords: 'True Rank Digital, Google Business Optimization, East Brunswick, local pack domination, Google Business Profile, digital marketing, hyperlocal marketing, advertising agency, marketing agency, website design',
   authors: [{ name: 'True Rank Digital', url: 'https://truerankdigital.com' }],
   creator: 'True Rank Digital',
   publisher: 'True Rank Digital',
   openGraph: {
-    title: 'True Rank Digital - Professional SEO Services That Get Results',
-    description: 'Get your business found on Google with True Rank Digital\'s proprietary SEO platform, grid map ranking analysis, and custom optimization scripts.',
+    title: 'True Rank Digital - Google Business Optimization & Local Pack Domination',
+    description: 'Get your business found on Google with True Rank Digital\'s proprietary Google Business Optimization platform, grid map ranking analysis, and local pack domination strategies.',
     url: 'https://truerankdigital.com',
     siteName: 'True Rank Digital',
     type: 'website',
@@ -33,8 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'True Rank Digital - Professional SEO Services',
-    description: 'Proprietary SEO platform with grid map ranking and algorithm adaptation',
+    title: 'True Rank Digital - Google Business Optimization',
+    description: 'Proprietary Google Business Optimization platform with grid map ranking and local pack domination',
     images: ['https://truerankdigital.com/images/logos/trdlogoblue.webp'],
     creator: '@truerankdigital',
   },
@@ -57,28 +59,28 @@ export const metadata: Metadata = {
 // Homepage FAQs for GEO
 const homepageFAQs = [
   {
-    question: "What makes True Rank Digital different from other SEO companies?",
-    answer: "True Rank Digital builds custom software solutions in-house including proprietary schema markup engineering, LLM.txt optimization files, and problem detection systems. Our clients gain access to an exclusive dashboard platform featuring grid map ranking verification, competitor analysis tools, and automated Google knowledge graph consistency monitoring that other SEO agencies simply cannot provide."
+    question: "What makes True Rank Digital different from other marketing agencies?",
+    answer: "True Rank Digital builds custom software solutions in-house including proprietary Google Business Optimization technology, local pack domination strategies, and problem detection systems. Our clients gain access to an exclusive dashboard platform featuring grid map ranking verification, competitor analysis tools, and automated Google knowledge graph consistency monitoring that other agencies simply cannot provide."
   },
   {
-    question: "What is schema markup engineering and why does my business need it?",
-    answer: "Schema markup engineering is True Rank Digital's process of creating custom structured data schemas specifically for each business type. Hand-crafted schema markup helps search engines understand your content better than any competitor, leading to improved search visibility, rich snippets, and enhanced presence in AI-powered search results from ChatGPT, Perplexity, and Google's AI Overview."
+    question: "What is Google Business Optimization and why does my business need it?",
+    answer: "Google Business Optimization is True Rank Digital's comprehensive approach to dominating Google's local pack, Google Maps, and Google Business Profile listings. Our proprietary strategies help businesses appear in the top 3 local results when customers search, leading to increased visibility, more clicks, and enhanced presence in AI-powered search results from ChatGPT, Perplexity, and Google's AI Overview."
   },
   {
-    question: "How long does it take to see SEO results with True Rank Digital?",
-    answer: "True Rank Digital clients typically see initial improvements in search rankings within 30-60 days, with significant results appearing within 3-6 months. Every client receives access to our proprietary dashboard platform for real-time tracking of grid map rankings, keyword positions, competitor analysis, and Google Business Profile performance metrics."
+    question: "How long does it take to see results with True Rank Digital?",
+    answer: "True Rank Digital clients typically see initial improvements in local pack rankings within 30-60 days, with significant local pack domination appearing within 3-6 months. Every client receives access to our proprietary dashboard platform for real-time tracking of grid map rankings, local pack positions, competitor analysis, and Google Business Profile performance metrics."
   },
   {
     question: "Does True Rank Digital work with businesses outside of New Jersey?",
-    answer: "Yes, True Rank Digital provides SEO services to businesses throughout the United States. While headquartered in East Brunswick, NJ, our proprietary dashboard platform and custom optimization tools work for businesses in any location. We specialize in local SEO, e-commerce optimization, enterprise SEO, and multi-location business strategies nationwide."
+    answer: "Yes, True Rank Digital provides Google Business Optimization services to businesses throughout the United States. While headquartered in East Brunswick, NJ, our proprietary dashboard platform and local pack domination tools work for businesses in any location. We specialize in hyperlocal marketing, multi-location business strategies, and digital marketing services nationwide."
   },
   {
-    question: "What is LLM.txt and how does it help my SEO?",
-    answer: "LLM.txt is a specialized file that True Rank Digital creates to optimize your content for AI search engines like ChatGPT, Claude, Perplexity, and Google's AI Overview. This cutting-edge optimization gives businesses a competitive advantage in AI-powered search results by providing structured information that AI systems prefer, increasing the likelihood of being cited as a source."
+    question: "What is local pack domination?",
+    answer: "Local pack domination is True Rank Digital's strategy for consistently appearing in Google's top 3 local results (the local pack) that appears above organic search results. Our proprietary grid map ranking system tracks your position across multiple geographic locations, and our optimization strategies ensure maximum visibility in the local pack for your target service areas."
   },
   {
-    question: "How much do True Rank Digital's SEO services cost?",
-    answer: "True Rank Digital offers custom pricing based on your business needs, market competition, and optimization goals. Services include local SEO, Google Business Profile management, custom website development with proprietary script integration, algorithm adaptation tools, and ongoing dashboard platform access. Contact us at (732) 475-0139 for a free consultation and personalized quote."
+    question: "How much do True Rank Digital's Google Business Optimization services cost?",
+    answer: "True Rank Digital offers custom pricing based on your business needs, market competition, and optimization goals. Services include Google Business Profile management, local pack domination, hyperlocal marketing, custom website development with proprietary script integration, and ongoing dashboard platform access. Contact us at (732) 475-0139 for a free consultation and personalized quote."
   }
 ];
 
@@ -89,13 +91,13 @@ export default function Home() {
       <GEOSchema 
         pageType="service"
         pageData={{
-          title: "True Rank Digital - Professional SEO Services",
-          description: "True Rank Digital delivers professional SEO services with proprietary dashboard platform, grid map ranking analysis, custom algorithm adaptation scripts, and in-house technology solutions for businesses nationwide.",
+          title: "True Rank Digital - Google Business Optimization & Local Pack Domination",
+          description: "True Rank Digital delivers Google Business Optimization services with proprietary dashboard platform, grid map ranking analysis, local pack domination strategies, and in-house technology solutions for businesses nationwide.",
           url: "https://truerankdigital.com",
-          keywords: ["SEO services", "local SEO", "Google Business Profile", "schema markup engineering", "LLM.txt optimization", "digital marketing", "East Brunswick NJ"],
-          category: "Professional SEO Services",
+          keywords: ["Google Business Optimization", "local pack domination", "Google Business Profile", "hyperlocal marketing", "digital marketing", "East Brunswick NJ", "advertising agency"],
+          category: "Google Business Optimization Services",
           image: "https://truerankdigital.com/images/logos/trdlogoblue.webp",
-          serviceType: "Search Engine Optimization",
+          serviceType: "Google Business Optimization",
           areaServed: ["United States", "New Jersey", "New York", "Pennsylvania"],
           contentSections: [
             {
@@ -140,6 +142,9 @@ export default function Home() {
       {/* LocalBusiness Schema */}
       <LocalBusinessSchema />
       
+      {/* Comprehensive Schema Markup with All Entities (Reviews, Team, Service Catalog, etc.) */}
+      <SchemaMarkup includeAllSchemas={true} />
+      
       <article className="pt-16">
         {/* Promotional Banner */}
         <StarterPackBanner />
@@ -147,6 +152,11 @@ export default function Home() {
         {/* Hero Section */}
         <section>
           <HeroSection />
+        </section>
+        
+        {/* Lawyers Section */}
+        <section>
+          <LawyersSection />
         </section>
         
         {/* AI Services Section */}

@@ -7,9 +7,9 @@ import { MapPin, Search, Globe, TrendingUp } from 'lucide-react';
 const services = [
   {
     icon: <MapPin className="w-8 h-8" />,
-    title: 'Local SEO & Google Maps',
-    description: 'Appear in local searches and attract nearby customers with AI-powered local optimization.',
-    features: ['Google Maps optimization', 'Local keyword targeting', 'Citation building', 'Review management']
+    title: 'Local Pack Domination',
+    description: 'Dominate the local pack and attract nearby customers with Google Business Optimization.',
+    features: ['Google Maps optimization', 'Local pack positioning', 'Citation building', 'Review management']
   },
   {
     icon: <Search className="w-8 h-8" />,
@@ -19,8 +19,8 @@ const services = [
   },
   {
     icon: <Globe className="w-8 h-8" />,
-    title: 'SEO-Optimized Websites',
-    description: 'Fast-loading websites built for search engines with AI-enhanced semantic structure.',
+    title: 'Google-Optimized Websites',
+    description: 'Fast-loading websites built for Google visibility with AI-enhanced semantic structure.',
     features: ['Mobile-responsive design', 'Core Web Vitals', 'Schema markup', 'Speed optimization']
   },
   {
@@ -45,10 +45,10 @@ export default function TraditionalServicesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
-            How <strong className="text-brand-primary">True Rank Digital</strong> Helps Your Business Grow with SEO
+            How <strong className="text-brand-primary">True Rank Digital</strong> Helps Your Business Grow with Google Optimization
           </h2>
           <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-            Our core <strong>SEO services</strong> are designed specifically for <strong>small businesses</strong> who want real results without the complexity. <strong>True Rank Digital</strong> delivers proven <strong>local SEO</strong>, <strong>Google Business Profile</strong> optimization, and <strong>website development</strong> services.
+            Our core <strong>Google Business Optimization services</strong> are designed specifically for <strong>small businesses</strong> who want real results without the complexity. <strong>True Rank Digital</strong> delivers proven <strong>local pack domination</strong>, <strong>Google Business Profile</strong> optimization, and <strong>website development</strong> services.
           </p>
         </motion.div>
 

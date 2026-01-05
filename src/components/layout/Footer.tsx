@@ -50,7 +50,6 @@ const footerSections: FooterSection[] = [
       { name: 'Google Business Profile', href: '/services/google-business-profile' },
       { name: 'AI-Enhanced SEO', href: '/services/ai-seo' },
       { name: 'Website Development', href: '/services/website-development' },
-      { name: 'Ecommerce Optimization', href: '/services/ecommerce-optimization' }
     ]
   },
   {

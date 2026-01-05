@@ -15,24 +15,24 @@ export interface FAQSchemaProps {
 export const ServiceFAQTemplates = {
   localSEO: [
     {
-      question: "What is local SEO and why does my business need it?",
-      answer: "Local SEO is the process of optimizing your online presence to attract customers from local searches on Google. True Rank Digital provides local SEO services that help businesses appear in Google Maps, local search results, and the Google Local Pack. Businesses need local SEO because 46% of all Google searches have local intent, and 76% of people who search for something nearby visit a business within 24 hours."
+      question: "What is local pack domination and why does my business need it?",
+      answer: "Local pack domination is the process of optimizing your online presence to appear in Google's top 3 local results (the local pack) when customers search for your services. True Rank Digital provides Google Business Optimization services that help businesses dominate Google Maps, local search results, and the Google Local Pack. Businesses need local pack domination because 46% of all Google searches have local intent, and 85% of clicks go to the top 3 local pack results."
     },
     {
-      question: "How long does it take to see results from local SEO?",
-      answer: "True Rank Digital's clients typically see initial improvements in local rankings within 30-60 days, with significant results appearing within 3-6 months. The timeline depends on your industry competition, current online presence, and the comprehensiveness of the optimization strategy. Our proprietary grid map ranking verification dashboard allows you to track progress in real-time."
+      question: "How long does it take to see results from local pack domination?",
+      answer: "True Rank Digital's clients typically see initial improvements in local pack rankings within 30-60 days, with significant results appearing within 3-6 months. The timeline depends on your industry competition, current online presence, and the comprehensiveness of the optimization strategy. Our proprietary grid map ranking verification dashboard allows you to track progress in real-time."
     },
     {
-      question: "What makes True Rank Digital's local SEO different from other agencies?",
+      question: "What makes True Rank Digital's local pack domination different from other agencies?",
       answer: "True Rank Digital provides proprietary technology that other agencies cannot offer. Our clients gain access to exclusive tools including grid map ranking verification dashboards, automated Google knowledge graph consistency monitoring, advanced competitor analysis platforms, and custom algorithm adaptation scripts. While our platform works with any website, clients who choose our custom web builds unlock enhanced optimization capabilities through proprietary script integration."
     },
     {
-      question: "How much does professional local SEO cost?",
-      answer: "True Rank Digital offers custom pricing based on your business needs, market competition, and goals. Local SEO services typically range from managing Google Business Profile optimization to comprehensive campaigns including website development, content creation, citation building, and ongoing monitoring. Contact our team for a personalized quote and free SEO audit to determine the best strategy for your business."
+      question: "How much does professional local pack domination cost?",
+      answer: "True Rank Digital offers custom pricing based on your business needs, market competition, and goals. Google Business Optimization services typically range from managing Google Business Profile optimization to comprehensive campaigns including website development, content creation, citation building, and ongoing monitoring. Contact our team for a personalized quote and free audit to determine the best strategy for your business."
     },
     {
       question: "Do you guarantee first page rankings on Google?",
-      answer: "True Rank Digital does not guarantee specific rankings because Google's algorithm constantly evolves and no ethical SEO company can guarantee positions. However, we provide algorithm-proof strategies using proprietary solution building frameworks that automatically adapt to Google changes. Our clients receive transparent reporting through our dashboard platform showing real ranking data, traffic growth, and competitive positioning verified through our grid map analysis tools."
+      answer: "True Rank Digital does not guarantee specific rankings because Google's algorithm constantly evolves and no ethical agency can guarantee positions. However, we provide proven strategies using proprietary solution building frameworks that automatically adapt to Google changes. Our clients receive transparent reporting through our dashboard platform showing real ranking data, traffic growth, and competitive positioning verified through our grid map analysis tools."
     }
   ],
   googleBusinessProfile: [
@@ -64,7 +64,7 @@ export const LocationFAQTemplate = (city: string, state: string = "NJ") => [
   },
   {
     question: `What types of businesses in ${city} do you work with?`,
-    answer: `True Rank Digital works with all types of businesses in ${city} including local service providers, retail stores, restaurants, professional services, healthcare practices, home service companies, and e-commerce businesses. Our SEO strategies are customized for each industry and business size, from single-location businesses to multi-location enterprises.`
+    answer: `True Rank Digital works with all types of businesses in ${city} including local service providers, retail stores, restaurants, professional services, healthcare practices, and home service companies. Our Google Business Optimization strategies are customized for each industry and business size, from single-location businesses to multi-location enterprises.`
   },
   {
     question: `How can I get started with SEO services in ${city}?`,

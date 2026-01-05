@@ -6,7 +6,7 @@ export default function LocalBusinessSchema() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://truerankdigital.com/#localbusiness-enhanced",
+    "@id": "https://truerankdigital.com/#organization",
     name: "True Rank Digital LLC",
     alternateName: "True Rank Digital",
     description: "Professional SEO and digital marketing services specializing in custom software development, schema markup engineering, and LLM.txt optimization. We build solutions others can't.",
@@ -64,6 +64,10 @@ export default function LocalBusinessSchema() {
         description: "Primary service area within 50 miles of East Brunswick, NJ"
       },
       {
+        "@type": "AdministrativeArea",
+        name: "Middlesex County"
+      },
+      {
         "@type": "State",
         name: "New Jersey"
       },
@@ -111,8 +115,8 @@ export default function LocalBusinessSchema() {
           "@type": "Person",
           name: "Sebastian Vargas"
         },
-        reviewBody: "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Karkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!",
-        datePublished: "2024"
+        reviewBody: "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Korkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!",
+        datePublished: "2024-01-15"
       },
       {
         "@type": "Review",
@@ -126,7 +130,7 @@ export default function LocalBusinessSchema() {
           name: "Jeffrey Fraley"
         },
         reviewBody: "I've been in cars sales for over 17 years. Had a lot of vendors. John and his team at truerank are one of the only seo and gbp vendors that actually showed progress and are on point with there work.",
-        datePublished: "2024"
+        datePublished: "2024-02-20"
       }
     ],
     

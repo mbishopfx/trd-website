@@ -5,12 +5,12 @@ import FAQSchema from '@/components/seo/FAQSchema';
 import ServiceSchema from '@/components/seo/ServiceSchema';
 
 export const metadata: Metadata = {
-  title: 'E-commerce SEO Optimization Services | True Rank Digital',
-  description: 'True Rank Digital provides e-commerce SEO optimization with product schema, competitor analysis, and conversion optimization for online stores.',
-  keywords: 'e-commerce SEO, online store optimization, product schema, True Rank Digital, e-commerce marketing, conversion optimization',
+  title: 'E-commerce Optimization Services | True Rank Digital',
+  description: 'True Rank Digital provides e-commerce optimization with product schema, competitor analysis, and conversion optimization for online stores.',
+  keywords: 'e-commerce optimization, online store optimization, product schema, True Rank Digital, e-commerce marketing, conversion optimization',
   openGraph: {
-    title: 'E-commerce SEO Optimization | True Rank Digital',
-    description: 'Scale your online store with e-commerce SEO optimization services.',
+    title: 'E-commerce Optimization Services | True Rank Digital',
+    description: 'Scale your online store with e-commerce optimization services.',
     url: 'https://truerankdigital.com/services/ecommerce-optimization',
     type: 'website',
   },
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
 export default function EcommerceOptimizationPage() {
   const faqs = [
     {
-      question: "How does True Rank Digital optimize e-commerce websites for SEO?",
-      answer: "True Rank Digital optimizes e-commerce websites through product schema markup, category page optimization, technical SEO improvements, site speed enhancement, and conversion rate optimization. Our dashboard platform tracks product rankings, competitor pricing, and search visibility for your entire catalog."
+      question: "How does True Rank Digital optimize e-commerce websites?",
+      answer: "True Rank Digital optimizes e-commerce websites through product schema markup, category page optimization, technical improvements, site speed enhancement, and conversion rate optimization. Our dashboard platform tracks product rankings, competitor pricing, and search visibility for your entire catalog."
     }
   ];
 
@@ -42,12 +42,12 @@ export default function EcommerceOptimizationPage() {
       <GEOSchema 
         pageType="service"
         pageData={{
-          title: "E-commerce SEO Optimization by True Rank Digital",
-          description: "True Rank Digital provides e-commerce SEO optimization with product schema and conversion optimization.",
+          title: "E-commerce Optimization by True Rank Digital",
+          description: "True Rank Digital provides e-commerce optimization with product schema and conversion optimization.",
           url: "https://truerankdigital.com/services/ecommerce-optimization",
-          keywords: ["e-commerce SEO", "online store optimization", "product schema"],
+          keywords: ["e-commerce optimization", "online store optimization", "product schema"],
           category: "E-commerce Optimization",
-          serviceType: "E-commerce SEO",
+          serviceType: "E-commerce Optimization",
           areaServed: ["United States"],
         }}
         breadcrumbs={[
@@ -56,7 +56,7 @@ export default function EcommerceOptimizationPage() {
           { name: "E-commerce Optimization", url: "https://truerankdigital.com/services/ecommerce-optimization" }
         ]}
         entities={{
-          primary: ["True Rank Digital", "E-commerce SEO", "Product Optimization"],
+          primary: ["True Rank Digital", "E-commerce Optimization", "Product Optimization"],
           secondary: ["Online Store", "Conversion Optimization", "Product Schema"]
         }}
       />
@@ -66,7 +66,7 @@ export default function EcommerceOptimizationPage() {
         serviceName="E-commerce Optimization & Competitor Analysis Platform"
         serviceUrl="https://truerankdigital.com/services/ecommerce-optimization"
         description="Scale your online store with comprehensive competitor analysis tools, keyword search volume research, and automated optimization strategies integrated with our proprietary dashboard platform."
-        serviceType="E-commerce SEO"
+        serviceType="E-commerce Optimization"
         mentions={[
           {
             type: "Organization",

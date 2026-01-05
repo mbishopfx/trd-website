@@ -6,12 +6,12 @@ import ServiceSchema from '@/components/seo/ServiceSchema';
 
 // GEO-Optimized Metadata
 export const metadata: Metadata = {
-  title: 'Local SEO Services | Grid Map Ranking Analysis | True Rank Digital',
-  description: 'True Rank Digital provides professional local SEO services with proprietary grid map ranking verification, competitor analysis platform, and automated Google knowledge graph consistency monitoring.',
-  keywords: 'local SEO services, True Rank Digital, grid map ranking, Google Maps optimization, local search engine optimization, Google Business Profile, East Brunswick NJ, competitor analysis tools',
+  title: 'Local Pack Domination Services | Grid Map Ranking Analysis | True Rank Digital',
+  description: 'True Rank Digital provides professional Google Business Optimization services with proprietary grid map ranking verification, competitor analysis platform, and local pack domination strategies.',
+  keywords: 'local pack domination, Google Business Optimization, True Rank Digital, grid map ranking, Google Maps optimization, hyperlocal marketing, Google Business Profile, East Brunswick NJ, competitor analysis tools',
   openGraph: {
-    title: 'Professional Local SEO Services | True Rank Digital',
-    description: 'Get found on Google with local SEO services featuring grid map ranking verification and competitor analysis.',
+    title: 'Professional Local Pack Domination Services | True Rank Digital',
+    description: 'Dominate Google local pack with grid map ranking verification and competitor analysis.',
     url: 'https://truerankdigital.com/services/local-seo',
     type: 'website',
     images: [{
@@ -42,13 +42,13 @@ export default function LocalSEOPage() {
     'Advanced local keyword search volume analysis', 
     'Google knowledge graph consistency automation',
     'Competitor intelligence monitoring platform',
-    'Local search engine result page positioning',
+    'Local pack domination and positioning',
     'Professional Google Business Profile optimization',
     'Google Maps optimization with ranking tracking',
     'Local citation building and management automation',
     'Review response automation and monitoring',
-    'Local content strategy with semantic optimization',
-    'Algorithm-proof local SEO tactics implementation',
+    'Hyperlocal content strategy with semantic optimization',
+    'Proven Google Business Optimization tactics implementation',
     'Custom script integration for enhanced performance'
   ];
 
@@ -60,7 +60,7 @@ export default function LocalSEOPage() {
     },
     {
       question: "Can True Rank Digital help my business rank for multiple locations?",
-      answer: "Yes, True Rank Digital specializes in multi-location SEO strategies for businesses serving multiple cities or regions. Our grid map ranking verification works across all your service areas, and our proprietary platform monitors Google Business Profile performance for each location separately while maintaining brand consistency."
+      answer: "Yes, True Rank Digital specializes in multi-location Google Business Optimization strategies for businesses serving multiple cities or regions. Our grid map ranking verification works across all your service areas, and our proprietary platform monitors Google Business Profile performance for each location separately while maintaining brand consistency."
     }
   ]);
 
@@ -70,17 +70,17 @@ export default function LocalSEOPage() {
       <GEOSchema 
         pageType="service"
         pageData={{
-          title: "Professional Local SEO Services by True Rank Digital",
-          description: "True Rank Digital delivers professional local SEO services with proprietary grid map ranking verification, competitor analysis platform, and automated Google knowledge graph consistency monitoring for businesses.",
+          title: "Professional Local Pack Domination Services by True Rank Digital",
+          description: "True Rank Digital delivers professional Google Business Optimization services with proprietary grid map ranking verification, competitor analysis platform, and local pack domination strategies for businesses.",
           url: "https://truerankdigital.com/services/local-seo",
-          keywords: ["local SEO", "Google Maps optimization", "grid map ranking", "Google Business Profile", "local search"],
-          category: "Local SEO Services",
-          serviceType: "Local Search Engine Optimization",
+          keywords: ["local pack domination", "Google Maps optimization", "grid map ranking", "Google Business Profile", "hyperlocal marketing"],
+          category: "Google Business Optimization Services",
+          serviceType: "Local Pack Domination",
           areaServed: ["United States", "New Jersey", "New York", "Pennsylvania"],
           steps: [
             {
-              name: "Technical SEO Audit",
-              text: "True Rank Digital scans your website with proprietary problem detection software to find issues other SEO companies miss at the code level."
+              name: "Technical Audit & Analysis",
+              text: "True Rank Digital scans your website with proprietary problem detection software to find issues other agencies miss at the code level."
             },
             {
               name: "Custom Schema Markup Engineering",
@@ -92,18 +92,18 @@ export default function LocalSEOPage() {
             },
             {
               name: "Custom Solution Implementation",
-              text: "We build and implement custom software solutions to fix identified problems and optimize your website's search engine performance."
+              text: "We build and implement custom software solutions to fix identified problems and optimize your website's Google visibility."
             },
             {
               name: "Ongoing Monitoring & Optimization",
-              text: "Our custom software continuously monitors and optimizes your website's performance, making real-time adjustments for maximum search visibility."
+              text: "Our custom software continuously monitors and optimizes your website's performance, making real-time adjustments for maximum Google visibility."
             }
           ]
         }}
         breadcrumbs={[
           { name: "Home", url: "https://truerankdigital.com" },
           { name: "Services", url: "https://truerankdigital.com/services" },
-          { name: "Local SEO", url: "https://truerankdigital.com/services/local-seo" }
+          { name: "Local Pack Domination", url: "https://truerankdigital.com/services/local-seo" }
         ]}
         entities={{
           primary: ["True Rank Digital", "Local SEO Services", "Grid Map Ranking"],
@@ -113,10 +113,10 @@ export default function LocalSEOPage() {
       
       {/* Service Schema with Mentions */}
       <ServiceSchema
-        serviceName="Local SEO & Google Maps Optimization"
+        serviceName="Local Pack Domination & Google Maps Optimization"
         serviceUrl="https://truerankdigital.com/services/local-seo"
-        description="Professional local search engine optimization services with grid map ranking verification, Google Business Profile optimization, and automated knowledge graph consistency monitoring for maximum local visibility."
-        serviceType="Local SEO"
+        description="Professional Google Business Optimization services with grid map ranking verification, Google Business Profile optimization, and automated knowledge graph consistency monitoring for maximum local pack visibility."
+        serviceType="Local Pack Domination"
         mentions={[
           {
             type: "Organization",
@@ -168,28 +168,28 @@ export default function LocalSEOPage() {
           
           {/* GEO-Optimized H1 with Subject-Predicate-Object */}
           <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
-            <strong className="text-brand-primary">True Rank Digital</strong> Provides Professional <strong>Local SEO Services</strong> with Grid Map Ranking Analysis
+            <strong className="text-brand-primary">True Rank Digital</strong> Provides <strong>Local Pack Domination Services</strong> with Grid Map Ranking Analysis
           </h1>
           
           <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-8">
-            <strong>True Rank Digital</strong> delivers <strong>local search engine optimization</strong> with proven Google optimization tactics and proprietary SEO dashboard platform. Our in-house technology solutions provide faster <strong>local search positioning</strong> through advanced <strong>grid map ranking analysis</strong>, competitor intelligence monitoring, and automated <strong>Google knowledge graph</strong> consistency tracking.
+            <strong>True Rank Digital</strong> delivers <strong>Google Business Optimization</strong> with proven local pack domination tactics and proprietary dashboard platform. Our in-house technology solutions provide faster <strong>local pack positioning</strong> through advanced <strong>grid map ranking analysis</strong>, competitor intelligence monitoring, and automated <strong>Google knowledge graph</strong> consistency tracking.
           </p>
 
           <div className="max-w-4xl mx-auto mb-12">
             <div className="glass-card p-6 lg:p-8 mb-8">
               {/* Question-Based H2 */}
               <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
-                How <strong className="text-brand-primary">True Rank Digital's</strong> Local SEO Process Works
+                How <strong className="text-brand-primary">True Rank Digital's</strong> Local Pack Domination Process Works
               </h2>
               <p className="text-brand-dark/70 leading-relaxed">
-                Every <strong>local SEO</strong> client gains access to our exclusive <strong>digital marketing platform</strong> featuring real-time <strong>grid map ranking verification</strong>, comprehensive keyword search volume research tools, and automated <strong>competitor analysis monitoring</strong>. Our algorithm-proof strategies combine proven Google tactics mastered by professionals with custom solution building frameworks that keep you ahead of search algorithm changes.
+                Every <strong>local pack domination</strong> client gains access to our exclusive <strong>digital marketing platform</strong> featuring real-time <strong>grid map ranking verification</strong>, comprehensive keyword search volume research tools, and automated <strong>competitor analysis monitoring</strong>. Our proven strategies combine Google Business Optimization tactics mastered by professionals with custom solution building frameworks that keep you ahead of algorithm changes.
               </p>
             </div>
           </div>
 
           {/* H2 for Benefits Section */}
           <h2 className="text-3xl font-heading font-bold text-brand-dark mb-8">
-            What <strong className="text-brand-primary">Results</strong> You Get from Local SEO Services
+            What <strong className="text-brand-primary">Results</strong> You Get from Local Pack Domination Services
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">
@@ -203,16 +203,16 @@ export default function LocalSEOPage() {
 
           {/* H2 for Process Steps */}
           <h2 className="text-3xl font-heading font-bold text-brand-dark mb-8">
-            Your <strong className="text-brand-primary">Local SEO</strong> Process in 5 Steps
+            Your <strong className="text-brand-primary">Local Pack Domination</strong> Process in 5 Steps
           </h2>
 
           <div className="grid gap-6 mb-12 text-left">
             <div className="glass-card p-6">
               <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
-                Step 1: Technical SEO Audit with Proprietary Software
+                Step 1: Technical Audit & Analysis with Proprietary Software
               </h3>
               <p className="text-brand-dark/70">
-                <strong>True Rank Digital</strong> scans your website with proprietary problem detection software to find issues other SEO companies miss at the code level.
+                <strong>True Rank Digital</strong> scans your website with proprietary problem detection software to find issues other agencies miss at the code level.
               </p>
             </div>
 
@@ -239,7 +239,7 @@ export default function LocalSEOPage() {
                 Step 4: Custom Solution Implementation
               </h3>
               <p className="text-brand-dark/70">
-                We build and implement custom software solutions to fix identified problems and optimize your website's <strong>search engine performance</strong>.
+                We build and implement custom software solutions to fix identified problems and optimize your website's <strong>Google visibility</strong>.
               </p>
             </div>
 
@@ -259,10 +259,10 @@ export default function LocalSEOPage() {
               <MapPin className="w-10 h-10 text-white" />
             </div>
             <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
-              Why Businesses Choose <strong className="text-brand-primary">True Rank Digital</strong> for Local SEO
+              Why Businesses Choose <strong className="text-brand-primary">True Rank Digital</strong> for Local Pack Domination
             </h2>
             <p className="text-brand-dark/70 mb-6 leading-relaxed">
-              Start dominating <strong>local search engine results</strong> with our proven Google optimization tactics and exclusive client dashboard featuring <strong>grid map ranking analysis</strong>, keyword search volume research tools, and automated Google knowledge graph consistency monitoring. Our professional <strong>local search positioning strategies</strong> are designed to get your business found on Google faster.
+              Start dominating <strong>Google's local pack</strong> with our proven Google Business Optimization tactics and exclusive client dashboard featuring <strong>grid map ranking analysis</strong>, keyword search volume research tools, and automated Google knowledge graph consistency monitoring. Our professional <strong>local pack domination strategies</strong> are designed to get your business in the top 3 Google results faster.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -270,14 +270,14 @@ export default function LocalSEOPage() {
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-green-600 text-white font-semibold text-lg rounded-full hover:bg-green-700 transition-colors duration-300"
               >
                 <TrendingUp className="w-5 h-5" />
-                <span>Get Free Local SEO Dashboard Demo</span>
+                <span>Get Free Local Pack Domination Demo</span>
               </a>
               <a
                 href="/contact"
                 className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-green-600 text-green-600 font-semibold text-lg rounded-full hover:bg-green-600 hover:text-white transition-all duration-300"
               >
                 <MapPin className="w-5 h-5" />
-                <span>Start Local SEO Strategy</span>
+                <span>Start Local Pack Domination Strategy</span>
               </a>
             </div>
           </div>

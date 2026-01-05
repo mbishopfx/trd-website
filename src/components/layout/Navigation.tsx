@@ -24,7 +24,20 @@ import {
   Network,
   MessageSquare,
   Target,
-  Zap
+  Zap,
+  Store,
+  ShoppingBag,
+  Wrench,
+  Briefcase,
+  UtensilsCrossed,
+  Factory,
+  Scale,
+  Heart,
+  Home,
+  DollarSign,
+  Hammer,
+  Car,
+  Bug
 } from 'lucide-react';
 
 interface NavItem {
@@ -43,15 +56,64 @@ const navigationItems: NavItem[] = [
     icon: <Building className="w-4 h-4" />,
   },
   {
+    name: 'Who We Serve',
+    href: '/services',
+    icon: <Target className="w-4 h-4" />,
+    items: [
+      {
+        name: 'Lawyers & Legal Services',
+        href: '/services?icp=lawyers',
+        icon: <Scale className="w-4 h-4" />,
+        description: 'Law firms and attorneys needing local pack domination and Google Business Profile optimization'
+      },
+      {
+        name: 'Medical & Dental Practices',
+        href: '/services?icp=medical',
+        icon: <Heart className="w-4 h-4" />,
+        description: 'Healthcare providers seeking Google visibility and patient acquisition through local search'
+      },
+      {
+        name: 'Home Services Contractors',
+        href: '/services?icp=home-services',
+        icon: <Hammer className="w-4 h-4" />,
+        description: 'Plumbing, HVAC, roofing, and home improvement contractors needing local pack results'
+      },
+      {
+        name: 'Real Estate Agents',
+        href: '/services?icp=real-estate',
+        icon: <Home className="w-4 h-4" />,
+        description: 'Real estate professionals requiring Google Business Profile optimization for listings visibility'
+      },
+      {
+        name: 'Financial Advisors & Accountants',
+        href: '/services?icp=financial',
+        icon: <DollarSign className="w-4 h-4" />,
+        description: 'Financial professionals needing local search optimization for client acquisition'
+      },
+      {
+        name: 'Auto Repair & Dealerships',
+        href: '/services?icp=automotive',
+        icon: <Car className="w-4 h-4" />,
+        description: 'Auto repair shops and dealerships seeking local pack domination'
+      },
+      {
+        name: 'Pest Control & Lawn Care',
+        href: '/services?icp=pest-control',
+        icon: <Bug className="w-4 h-4" />,
+        description: 'Service-based businesses needing hyperlocal Google optimization'
+      }
+    ]
+  },
+  {
     name: 'Services',
     href: '/services',
     icon: <Settings className="w-4 h-4" />,
     items: [
       {
-        name: 'Local SEO & Google Maps',
+        name: 'Local Pack Domination',
         href: '/services/local-seo',
         icon: <MapPin className="w-4 h-4" />,
-        description: 'Dominate local search results and Google Maps listings'
+        description: 'Dominate Google local pack and Google Maps listings'
       },
       {
         name: 'Google Business Profile',
@@ -60,23 +122,17 @@ const navigationItems: NavItem[] = [
         description: 'Optimize your Google Business Profile for maximum visibility'
       },
       {
-        name: 'AI-Enhanced SEO',
+        name: 'AI Search Optimization',
         href: '/services/ai-seo',
         icon: <Bot className="w-4 h-4" />,
-        description: 'Proprietary AI technology for semantic optimization'
+        description: 'Proprietary AI technology for search visibility'
       },
       {
         name: 'Website Development',
         href: '/services/website-development',
         icon: <Globe className="w-4 h-4" />,
-        description: 'SEO-optimized websites built for performance'
+        description: 'High-performance websites built for Google visibility'
       },
-      {
-        name: 'Ecommerce Optimization',
-        href: '/services/ecommerce-optimization',
-        icon: <TrendingUp className="w-4 h-4" />,
-        description: 'Scale your ecommerce business globally'
-      }
     ]
   },
   {

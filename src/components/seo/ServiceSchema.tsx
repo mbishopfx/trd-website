@@ -33,7 +33,7 @@ export default function ServiceSchema({
     url: serviceUrl,
     provider: {
       "@type": "LocalBusiness",
-      "@id": "https://truerankdigital.com/#localbusiness-enhanced",
+      "@id": "https://truerankdigital.com/#organization",
       name: "True Rank Digital LLC",
       telephone: "+1-732-475-0139",
       email: "jon@truerankdigital.com",
@@ -55,7 +55,12 @@ export default function ServiceSchema({
         "https://www.google.com/maps?cid=4662204553635539796",
         "https://www.facebook.com/truerankdigital",
         "https://www.linkedin.com/company/true-rank-digital",
-        "https://www.wikidata.org/wiki/Q130284854"
+        "https://www.wikidata.org/wiki/Q130284854",
+        "https://twitter.com/truerankdigital",
+        "https://www.instagram.com/truerankdigital_/?hl=en",
+        "https://www.youtube.com/channel/UC9wb8G1oROv_iUIDRL7JIWA",
+        "https://www.tiktok.com/@truerankdigital_",
+        "https://www.pinterest.com/truerankdigital"
       ]
     },
     areaServed: [
@@ -68,6 +73,10 @@ export default function ServiceSchema({
         },
         geoRadius: "80467.2",
         description: "Primary service area within 50 miles of East Brunswick, NJ"
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Middlesex County"
       },
       {
         "@type": "State",

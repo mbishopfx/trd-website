@@ -5,12 +5,12 @@ import FAQSchema, { generateServiceFAQs } from '@/components/seo/FAQSchema';
 import ServiceSchema from '@/components/seo/ServiceSchema';
 
 export const metadata: Metadata = {
-  title: 'AI SEO Services | LLM.txt Optimization | True Rank Digital',
-  description: 'True Rank Digital provides AI SEO services with LLM.txt optimization, custom algorithm adaptation scripts, and AI search engine optimization for ChatGPT, Perplexity, and Google AI Overview.',
-  keywords: 'AI SEO, LLM.txt optimization, AI search optimization, ChatGPT SEO, Perplexity optimization, Google AI Overview, True Rank Digital, algorithm adaptation, AI-enhanced SEO',
+  title: 'AI Search Optimization Services | LLM.txt Optimization | True Rank Digital',
+  description: 'True Rank Digital provides AI Search Optimization services with LLM.txt optimization, custom algorithm adaptation scripts, and AI search engine optimization for ChatGPT, Perplexity, and Google AI Overview.',
+  keywords: 'AI Search Optimization, LLM.txt optimization, AI search optimization, ChatGPT optimization, Perplexity optimization, Google AI Overview, True Rank Digital, algorithm adaptation, AI-enhanced optimization',
   openGraph: {
-    title: 'AI SEO Services & LLM.txt Optimization | True Rank Digital',
-    description: 'Optimize for AI search engines with True Rank Digital\'s AI SEO services and LLM.txt creation.',
+    title: 'AI Search Optimization Services & LLM.txt Optimization | True Rank Digital',
+    description: 'Optimize for AI search engines with True Rank Digital\'s AI Search Optimization services and LLM.txt creation.',
     url: 'https://truerankdigital.com/services/ai-seo',
     type: 'website',
   },
@@ -36,8 +36,8 @@ export default function AISEOPage() {
       answer: "True Rank Digital optimizes your content for all major AI search engines including ChatGPT, Perplexity, Claude, Google's AI Overview (SGE), Microsoft Copilot, and other LLM-powered search tools. Our LLM.txt files and structured data optimization ensure your business gets cited by AI systems when users ask relevant questions."
     },
     {
-      question: "How does AI SEO differ from traditional SEO?",
-      answer: "Traditional SEO focuses on ranking in Google's traditional search results, while AI SEO optimizes for AI-powered answer engines. True Rank Digital provides both strategies - traditional SEO for Google rankings and AI SEO for visibility in ChatGPT, Perplexity, and other AI tools. AI SEO requires LLM.txt files, enhanced structured data, and content formatting that AI systems prefer."
+      question: "How does AI Search Optimization differ from Google Business Optimization?",
+      answer: "Google Business Optimization focuses on ranking in Google's traditional search results and local pack, while AI Search Optimization optimizes for AI-powered answer engines. True Rank Digital provides both strategies - Google Business Optimization for Google rankings and AI Search Optimization for visibility in ChatGPT, Perplexity, and other AI tools. AI Search Optimization requires LLM.txt files, enhanced structured data, and content formatting that AI systems prefer."
     }
   ]);
 
@@ -46,31 +46,31 @@ export default function AISEOPage() {
       <GEOSchema 
         pageType="service"
         pageData={{
-          title: "AI SEO Services & LLM.txt Optimization by True Rank Digital",
-          description: "True Rank Digital delivers AI SEO services with LLM.txt optimization, custom algorithm adaptation scripts, and AI search engine optimization for ChatGPT, Perplexity, and Google AI Overview.",
+          title: "AI Search Optimization Services & LLM.txt Optimization by True Rank Digital",
+          description: "True Rank Digital delivers AI Search Optimization services with LLM.txt optimization, custom algorithm adaptation scripts, and AI search engine optimization for ChatGPT, Perplexity, and Google AI Overview.",
           url: "https://truerankdigital.com/services/ai-seo",
-          keywords: ["AI SEO", "LLM.txt", "ChatGPT optimization", "Perplexity SEO", "AI search"],
-          category: "AI SEO Services",
-          serviceType: "AI Search Engine Optimization",
+          keywords: ["AI Search Optimization", "LLM.txt", "ChatGPT optimization", "Perplexity optimization", "AI search"],
+          category: "AI Search Optimization Services",
+          serviceType: "AI Search Optimization",
           areaServed: ["United States"],
         }}
         breadcrumbs={[
           { name: "Home", url: "https://truerankdigital.com" },
           { name: "Services", url: "https://truerankdigital.com/services" },
-          { name: "AI SEO", url: "https://truerankdigital.com/services/ai-seo" }
+          { name: "AI Search Optimization", url: "https://truerankdigital.com/services/ai-seo" }
         ]}
         entities={{
-          primary: ["True Rank Digital", "AI SEO", "LLM.txt Optimization"],
+          primary: ["True Rank Digital", "AI Search Optimization", "LLM.txt Optimization"],
           secondary: ["ChatGPT", "Perplexity", "Google AI Overview", "Algorithm Adaptation"]
         }}
       />
       
       {/* Service Schema with Mentions */}
       <ServiceSchema
-        serviceName="AI-Enhanced SEO with Algorithm Adaptation Scripts"
+        serviceName="AI Search Optimization with Algorithm Adaptation Scripts"
         serviceUrl="https://truerankdigital.com/services/ai-seo"
-        description="Revolutionary custom algorithm adaptation scripts and proprietary solution building frameworks that automatically adjust to Google algorithm changes, maintaining peak search engine performance. Includes LLM.txt optimization for AI search engines."
-        serviceType="AI SEO"
+        description="Revolutionary custom algorithm adaptation scripts and proprietary solution building frameworks that automatically adjust to Google algorithm changes, maintaining peak Google visibility. Includes LLM.txt optimization for AI search engines."
+        serviceType="AI Search Optimization"
         mentions={[
           {
             type: "Organization",
@@ -122,30 +122,30 @@ export default function AISEOPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-purple-100 rounded-full mb-6">
               <Brain className="w-5 h-5 text-purple-600" />
-              <span className="text-purple-600 font-semibold text-sm">AI-Enhanced SEO</span>
+              <span className="text-purple-600 font-semibold text-sm">AI Search Optimization</span>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
-              <strong className="text-brand-primary">True Rank Digital</strong> Delivers AI SEO Services with <strong>LLM.txt Optimization</strong>
+              <strong className="text-brand-primary">True Rank Digital</strong> Delivers AI Search Optimization Services with <strong>LLM.txt Optimization</strong>
             </h1>
             
             <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-8">
-              <strong>True Rank Digital</strong> provides <strong>AI SEO services</strong> featuring <strong>LLM.txt optimization</strong>, custom algorithm adaptation scripts, and <strong>AI search engine optimization</strong> for <strong>ChatGPT</strong>, <strong>Perplexity</strong>, and <strong>Google AI Overview</strong>. Our in-house technology ensures your business gets cited by AI-powered search engines.
+              <strong>True Rank Digital</strong> provides <strong>AI Search Optimization services</strong> featuring <strong>LLM.txt optimization</strong>, custom algorithm adaptation scripts, and <strong>AI search engine optimization</strong> for <strong>ChatGPT</strong>, <strong>Perplexity</strong>, and <strong>Google AI Overview</strong>. Our in-house technology ensures your business gets cited by AI-powered search engines.
             </p>
 
             <div className="max-w-4xl mx-auto mb-12">
               <div className="glass-card p-6 lg:p-8 mb-8">
                 <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
-                  How <strong className="text-brand-primary">AI SEO</strong> Optimization Works in 2026
+                  How <strong className="text-brand-primary">AI Search Optimization</strong> Works in 2026
                 </h2>
                 <p className="text-brand-dark/70 leading-relaxed">
-                  <strong>True Rank Digital's AI SEO services</strong> combine advanced <strong>LLM.txt file creation</strong> with our proprietary SEO dashboard platform to optimize your content for <strong>AI search engines</strong>. Every client receives custom <strong>algorithm adaptation scripts</strong> that ensure your business appears in AI-generated answers from ChatGPT, Perplexity, Claude, and Google's AI Overview.
+                  <strong>True Rank Digital's AI Search Optimization services</strong> combine advanced <strong>LLM.txt file creation</strong> with our proprietary dashboard platform to optimize your content for <strong>AI search engines</strong>. Every client receives custom <strong>algorithm adaptation scripts</strong> that ensure your business appears in AI-generated answers from ChatGPT, Perplexity, Claude, and Google's AI Overview.
                 </p>
               </div>
             </div>
 
             <h2 className="text-3xl font-heading font-bold text-brand-dark mb-8">
-              What <strong className="text-brand-primary">AI SEO Services</strong> Include
+              What <strong className="text-brand-primary">AI Search Optimization Services</strong> Include
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -171,17 +171,17 @@ export default function AISEOPage() {
                 <Brain className="w-10 h-10 text-white" />
               </div>
               <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
-                Why Choose <strong className="text-brand-primary">True Rank Digital</strong> for AI SEO
+                Why Choose <strong className="text-brand-primary">True Rank Digital</strong> for AI Search Optimization
               </h2>
               <p className="text-brand-dark/70 mb-6">
-                Get your business cited by <strong>AI search engines</strong> with our proven <strong>AI SEO optimization</strong> tactics and exclusive <strong>LLM.txt creation</strong> services. <strong>True Rank Digital</strong> delivers AI visibility for ChatGPT, Perplexity, and Google AI Overview.
+                Get your business cited by <strong>AI search engines</strong> with our proven <strong>AI Search Optimization</strong> tactics and exclusive <strong>LLM.txt creation</strong> services. <strong>True Rank Digital</strong> delivers AI visibility for ChatGPT, Perplexity, and Google AI Overview.
               </p>
               <a
                 href="/free-audit"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-purple-600 text-white font-semibold text-lg rounded-full hover:bg-purple-700 transition-colors duration-300"
               >
                 <TrendingUp className="w-5 h-5" />
-                <span>Get Free AI SEO Consultation</span>
+                <span>Get Free AI Search Optimization Consultation</span>
               </a>
             </div>
           </div>

@@ -33,7 +33,7 @@ export default function DigitalMarketingPage() {
   const faqs = [
     {
       question: "What digital marketing services does True Rank Digital provide?",
-      answer: "True Rank Digital provides comprehensive digital marketing services including SEO, content marketing, social media management, email marketing, PPC campaign management, and marketing automation. Our proprietary dashboard platform tracks all marketing channels in one place with real-time performance analytics and ROI reporting."
+      answer: "True Rank Digital provides comprehensive digital marketing services including Google Business Optimization, content marketing, social media management, email marketing, PPC campaign management, and marketing automation. Our proprietary dashboard platform tracks all marketing channels in one place with real-time performance analytics and ROI reporting."
     }
   ];
 
@@ -65,7 +65,7 @@ export default function DigitalMarketingPage() {
       <ServiceSchema
         serviceName="Comprehensive Digital Marketing Campaign Management"
         serviceUrl="https://truerankdigital.com/services/digital-marketing"
-        description="Strategic digital marketing campaigns powered by our SEO dashboard platform featuring real-time performance tracking, organic search traffic generation tools, and proven Google optimization tactics."
+        description="Strategic digital marketing campaigns powered by our dashboard platform featuring real-time performance tracking, organic search traffic generation tools, and proven Google optimization tactics."
         serviceType="Digital Marketing"
         mentions={[
           {

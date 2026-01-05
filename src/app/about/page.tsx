@@ -28,7 +28,7 @@ const aboutFAQs = [
   },
   {
     question: "What services does True Rank Digital provide?",
-    answer: "True Rank Digital provides professional SEO services including local SEO and Google Maps optimization, Google Business Profile management, AI-enhanced SEO with LLM.txt optimization, custom web development, e-commerce optimization, comprehensive digital marketing, review management, and organic search optimization. We specialize in proprietary technology solutions including grid map ranking analysis, competitor intelligence monitoring, and custom schema markup engineering."
+    answer: "True Rank Digital provides professional Google Business Optimization services including local pack domination and Google Maps optimization, Google Business Profile management, AI Search Optimization with LLM.txt optimization, custom web development, comprehensive digital marketing, review management, and organic search optimization. We specialize in proprietary technology solutions including grid map ranking analysis, competitor intelligence monitoring, and custom schema markup engineering."
   },
   {
     question: "How much do True Rank Digital's services cost?",
@@ -208,10 +208,6 @@ export default function AboutPage() {
                       description: "SEO-optimized websites with proprietary script integration, enhanced algorithm manipulation capabilities, Core Web Vitals optimization, and conversion-focused design."
                     },
                     {
-                      title: "E-commerce Optimization",
-                      description: "Product schema markup, competitor analysis platform, keyword research tools, and conversion rate optimization for online stores using Shopify, WooCommerce, and custom platforms."
-                    },
-                    {
                       title: "Schema Markup Engineering",
                       description: "Hand-crafted structured data schemas, LocalBusiness markup, Service schemas, FAQ schemas, breadcrumb navigation, and custom entity relationship mapping."
                     },
@@ -354,7 +350,6 @@ export default function AboutPage() {
                     <ul className="list-disc list-inside space-y-1 ml-2">
                       <li>Google (Search, Maps, Business Profile, Analytics, Search Console)</li>
                       <li>AI Platforms (ChatGPT, Perplexity AI, Claude)</li>
-                      <li>E-commerce (Shopify, WooCommerce)</li>
                       <li>Development (Next.js, Vercel)</li>
                       <li>Marketing (HubSpot, Meta)</li>
                     </ul>

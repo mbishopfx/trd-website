@@ -23,7 +23,6 @@ export default function ContactFormSection() {
     'Google Business Profile Management', 
     'AI-Enhanced SEO',
     'Website Development',
-    'Ecommerce Optimization',
     'Free Custom Playbook',
     'General Inquiry'
   ];

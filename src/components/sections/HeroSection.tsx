@@ -146,10 +146,10 @@ export default function HeroSection() {
           >
             <span className="text-brand-primary font-bold">True Rank Digital</span>
             <br />
-            <span className="text-brand-dark">Delivers Professional </span>
-            <span className="text-brand-primary font-bold">SEO Services</span>
+            <span className="text-brand-dark">Delivers </span>
+            <span className="text-brand-primary font-bold">Google Business Optimization</span>
             <br />
-            <span className="text-brand-dark">That Get Businesses Found on Google</span>
+            <span className="text-brand-dark">That Gets Businesses in the Local Pack</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -159,7 +159,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-xl sm:text-2xl text-brand-dark/80 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Master proven Google optimization tactics with our proprietary SEO dashboard platform featuring grid map ranking analysis, competitor intelligence tools, and automated Google knowledge graph consistency monitoring. Get faster search engine result page positioning with our in-house algorithm-proof digital marketing strategies.
+            Master proven Google Business Optimization tactics with our proprietary dashboard platform featuring grid map ranking analysis, competitor intelligence tools, and automated Google knowledge graph consistency monitoring. Dominate the local pack with our in-house proven digital marketing strategies.
           </motion.p>
 
           {/* Primary CTA Button */}
@@ -178,7 +178,7 @@ export default function HeroSection() {
                 className="inline-flex items-center space-x-3 px-8 py-4 sm:px-10 sm:py-5 bg-brand-primary text-white font-semibold text-lg sm:text-xl rounded-full shadow-glow hover:shadow-glow-lg transition-all duration-300 hover:bg-brand-primary/90 group"
               >
                 <Rocket className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-                <span>Schedule Your Free SEO Audit</span>
+                <span>Schedule Your Free Audit</span>
               </Link>
             </motion.div>
           </motion.div>
@@ -240,9 +240,9 @@ export default function HeroSection() {
                 >
                   <source src="/videos/hero-video.mp4" type="video/mp4" />
                   <div className="sr-only">
-                    True Rank Digital provides professional SEO services including local search optimization, 
+                    True Rank Digital provides Google Business Optimization services including local pack domination, 
                     Google Business Profile management, and custom algorithm adaptation scripts to help 
-                    businesses dominate search rankings. Contact us at (732) 475-0139 for a free consultation.
+                    businesses dominate the local pack. Contact us at (732) 475-0139 for a free consultation.
                   </div>
                 </video>
               </div>

@@ -45,7 +45,7 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
     keywords: "SEO, Digital Marketing, Schema Markup, LLM.txt, Local SEO, Google Business Profile, AI SEO, Custom Software Development",
     founder: {
       "@type": "Person",
-      name: "Jon Karkowski",
+      name: "Jon Korkowski",
       jobTitle: "Founder",
       description: "Founder of True Rank Digital, leading custom software development for SEO and digital marketing solutions."
     },
@@ -69,6 +69,7 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
       "https://www.facebook.com/truerankdigital",  // Facebook  
       "https://www.linkedin.com/company/true-rank-digital",  // LinkedIn
       "https://www.wikidata.org/wiki/Q130284854",  // Wikidata entry
+      "https://twitter.com/truerankdigital",  // Twitter/X
       "https://www.instagram.com/truerankdigital_/?hl=en",
       "https://www.youtube.com/channel/UC9wb8G1oROv_iUIDRL7JIWA",
       "https://www.tiktok.com/@truerankdigital_",
@@ -120,7 +121,7 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://truerankdigital.com/#localbusiness",
+    "@id": "https://truerankdigital.com/#organization",
     name: napData.name,
     image: napData.image,
     telephone: napData.telephone,
@@ -357,7 +358,7 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
       "@context": "https://schema.org",
       "@type": "Review",
       "@id": "https://truerankdigital.com/reviews/sebastian-vargas",
-      reviewBody: "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Karkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!",
+      reviewBody: "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Korkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!",
       author: {
         "@type": "Person",
         name: "Sebastian Vargas"
@@ -368,7 +369,7 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
         bestRating: "5",
         worstRating: "1"
       },
-      datePublished: "2024",
+      datePublished: "2024-01-15",
       itemReviewed: {
         "@id": "https://truerankdigital.com/#organization"
       }
@@ -388,7 +389,7 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
         bestRating: "5",
         worstRating: "1"
       },
-      datePublished: "2024",
+      datePublished: "2024-02-20",
       itemReviewed: {
         "@id": "https://truerankdigital.com/#organization"
       }
@@ -408,7 +409,7 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
         bestRating: "5",
         worstRating: "1"
       },
-      datePublished: "2024",
+      datePublished: "2024-03-10",
       itemReviewed: {
         "@id": "https://truerankdigital.com/#organization"
       }
@@ -428,7 +429,7 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
         bestRating: "5",
         worstRating: "1"
       },
-      datePublished: "2024",
+      datePublished: "2024-04-05",
       itemReviewed: {
         "@id": "https://truerankdigital.com/#organization"
       }
@@ -448,7 +449,7 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
         bestRating: "5",
         worstRating: "1"
       },
-      datePublished: "2024",
+      datePublished: "2024-05-12",
       itemReviewed: {
         "@id": "https://truerankdigital.com/#organization"
       }
@@ -792,28 +793,6 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
       },
       {
         "@type": "Offer",
-        "@id": "https://truerankdigital.com/services/ecommerce-optimization#offer",
-        itemOffered: {
-          "@type": "Service",
-          "@id": "https://truerankdigital.com/services/ecommerce-optimization",
-          name: "E-commerce Optimization & Competitor Analysis Platform",
-          description: "Scale your online store with comprehensive competitor analysis tools, keyword search volume research, and automated optimization strategies integrated with our proprietary dashboard platform.",
-          provider: {
-            "@id": "https://truerankdigital.com/#organization"
-          },
-          serviceType: "E-commerce SEO",
-          category: "E-commerce"
-        },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          price: "Custom Pricing",
-          priceCurrency: "USD"
-        },
-        availability: "https://schema.org/InStock",
-        seller: { "@id": "https://truerankdigital.com/#organization" }
-      },
-      {
-        "@type": "Offer",
         "@id": "https://truerankdigital.com/services/digital-marketing#offer",
         itemOffered: {
           "@type": "Service",
@@ -843,7 +822,7 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
       "@context": "https://schema.org",
       "@type": "Review",
       "@id": "https://truerankdigital.com/reviews/sebastian-vargas",
-      reviewBody: "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Karkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!",
+      reviewBody: "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Korkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!",
       author: {
         "@type": "Person",
         name: "Sebastian Vargas"

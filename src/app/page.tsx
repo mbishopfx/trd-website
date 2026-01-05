@@ -6,10 +6,7 @@ import TraditionalServicesSection from '@/components/sections/TraditionalService
 import TestimonialsCarousel from '@/components/sections/TestimonialsCarousel';
 import CTASection from '@/components/sections/CTASection';
 import StarterPackBanner from '@/components/sections/StarterPackBanner';
-import GEOSchema from '@/components/seo/GEOSchema';
-import FAQSchema from '@/components/seo/FAQSchema';
-import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
-import SchemaMarkup from '@/components/seo/SchemaMarkup';
+import HomepageSchema from '@/components/seo/HomepageSchema';
 
 // GEO-Optimized Metadata for Homepage
 export const metadata: Metadata = {
@@ -87,63 +84,8 @@ const homepageFAQs = [
 export default function Home() {
   return (
     <>
-      {/* Advanced GEO Schema Markup for Homepage */}
-      <GEOSchema 
-        pageType="service"
-        pageData={{
-          title: "True Rank Digital - Google Business Optimization & Local Pack Domination",
-          description: "True Rank Digital delivers Google Business Optimization services with proprietary dashboard platform, grid map ranking analysis, local pack domination strategies, and in-house technology solutions for businesses nationwide.",
-          url: "https://truerankdigital.com",
-          keywords: ["Google Business Optimization", "local pack domination", "Google Business Profile", "hyperlocal marketing", "digital marketing", "East Brunswick NJ", "advertising agency"],
-          category: "Google Business Optimization Services",
-          image: "https://truerankdigital.com/images/logos/trdlogoblue.webp",
-          serviceType: "Google Business Optimization",
-          areaServed: ["United States", "New Jersey", "New York", "Pennsylvania"],
-          contentSections: [
-            {
-              heading: "Proprietary SEO Dashboard Platform",
-              text: "Access our exclusive client dashboard platform featuring advanced grid map ranking verification, comprehensive keyword search volume analysis tools, and real-time competitor intelligence monitoring for superior local search engine optimization."
-            },
-            {
-              heading: "Custom Algorithm Adaptation Scripts",
-              text: "Our expert-developed custom scripts and solution building frameworks keep you ahead of Google algorithm changes with proven digital marketing tactics, especially when combined with our custom web builds for enhanced optimization capabilities."
-            },
-            {
-              heading: "Schema Markup Engineering",
-              text: "Hand-crafted structured data schemas specifically designed for your business type help search engines understand your content better than competitors, leading to improved visibility and rich search results."
-            },
-            {
-              heading: "LLM.txt Creation & Optimization",
-              text: "We develop and optimize LLM.txt files designed for AI search engines like ChatGPT, Claude, and Perplexity to improve your AI search visibility and give you a competitive advantage in AI-powered search results."
-            }
-          ]
-        }}
-        breadcrumbs={[
-          { name: "Home", url: "https://truerankdigital.com" }
-        ]}
-        entities={{
-          primary: ["True Rank Digital", "SEO Services", "East Brunswick NJ"],
-          secondary: ["Local SEO", "Google Business Profile", "Schema Markup", "Digital Marketing"],
-          mentions: [
-            { type: "SoftwareApplication", id: "https://truerankdigital.com/#custom-seo-software", name: "Proprietary SEO Dashboard Platform" },
-            { type: "Service", id: "https://truerankdigital.com/services/local-seo", name: "Local SEO Services" },
-            { type: "Service", id: "https://truerankdigital.com/services/ai-seo", name: "AI SEO Optimization" }
-          ]
-        }}
-      />
-      
-      {/* FAQ Schema for Homepage */}
-      <FAQSchema 
-        faqs={homepageFAQs}
-        pageUrl="https://truerankdigital.com"
-        category="general"
-      />
-      
-      {/* LocalBusiness Schema */}
-      <LocalBusinessSchema />
-      
-      {/* Comprehensive Schema Markup with All Entities (Reviews, Team, Service Catalog, etc.) */}
-      <SchemaMarkup includeAllSchemas={true} />
+      {/* Consolidated Homepage Schema - All entities in one @graph for maximum detection */}
+      <HomepageSchema faqs={homepageFAQs} />
       
       <article className="pt-16">
         {/* Promotional Banner */}

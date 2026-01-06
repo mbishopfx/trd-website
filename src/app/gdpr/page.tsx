@@ -238,7 +238,7 @@ export default function GDPRPage() {
             <div className="mt-8 text-sm text-white/70">
               <p>True Rank Digital LLC</p>
               <p>East Brunswick, NJ 08816</p>
-              <p>Last updated: December 2024</p>
+              <p>Last updated: January 2026</p>
             </div>
           </motion.div>
         </div>

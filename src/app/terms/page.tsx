@@ -126,7 +126,7 @@ export default function TermsPage() {
 
               <div className="border-t border-brand-dark/10 pt-6">
                 <p className="text-brand-dark/60 text-sm">
-                  Last updated: December 2024<br />
+                  Last updated: January 2026<br />
                   These terms are effective for all services provided by True Rank Digital LLC.
                 </p>
               </div>

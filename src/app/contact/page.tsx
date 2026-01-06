@@ -9,11 +9,24 @@ export const metadata: Metadata = {
   title: 'Contact True Rank Digital - Get Your Free Custom Playbook Today',
   description: 'Ready to scale your business with AI-enhanced digital marketing? Contact True Rank Digital for enterprise-level SEO solutions. 24/7 support available.',
   keywords: 'contact true rank digital, free custom playbook, digital marketing consultation, AI SEO services, New Jersey SEO company',
+  alternates: {
+    canonical: 'https://truerankdigital.com/contact',
+  },
   openGraph: {
     title: 'Contact True Rank Digital - Get Your Free Custom Playbook Today',
     description: 'Ready to scale your business with AI-enhanced digital marketing? Contact us for enterprise-level SEO solutions.',
     url: 'https://truerankdigital.com/contact',
     type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 

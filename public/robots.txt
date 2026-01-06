@@ -99,9 +99,17 @@ Disallow: /api/
 Disallow: /admin/
 Disallow: /forms/
 
-# Block non-existent pages that appear in old sitemaps
+# Block Next.js build artifacts and internal files
 Disallow: /_next/
+Disallow: /_next/static/
 Disallow: /static/
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.woff2$
+Disallow: /*.woff$
+Disallow: /*.ttf$
+Disallow: /*.eot$
+Disallow: /favicon.ico?*
 
 # Crawl Delay (optional - helps prevent server overload)
 # Crawl-delay: 1

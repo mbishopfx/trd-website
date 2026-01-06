@@ -126,9 +126,30 @@ export default function WebsiteDevelopmentPage() {
             </h2>
 
             <div className="glass-card p-8 mb-12">
-              <p className="text-brand-dark/70 leading-relaxed">
+              <p className="text-brand-dark/70 leading-relaxed mb-6">
                 <strong>True Rank Digital's custom web builds</strong> include proprietary script integration that unlocks enhanced <strong>optimization capabilities</strong>. Our websites are built for speed, Google visibility, and conversion optimization.
               </p>
+              
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <div>
+                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">Proprietary Script Integration</h3>
+                  <p className="text-brand-dark/70 text-sm leading-relaxed">
+                    Our custom websites include advanced script integration that unlocks enhanced optimization tools and deeper performance control not available with standard website builders.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">Google Optimization Built-In</h3>
+                  <p className="text-brand-dark/70 text-sm leading-relaxed">
+                    Every website we build is optimized for Google from day one, with proper schema markup, fast loading speeds, and mobile-first design for superior search visibility.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">Performance & Speed</h3>
+                  <p className="text-brand-dark/70 text-sm leading-relaxed">
+                    Our websites are built for Core Web Vitals excellence, with optimized images, minified code, and server-side rendering for lightning-fast page loads that improve both user experience and rankings.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="glass-card p-8">
@@ -141,6 +162,31 @@ export default function WebsiteDevelopmentPage() {
               <p className="text-brand-dark/70 mb-6">
                 Start with a <strong>custom web build</strong> from <strong>True Rank Digital</strong> featuring proprietary Google optimization technology and enhanced performance capabilities.
               </p>
+              
+              <div className="space-y-4 mb-6 text-left">
+                <div className="flex items-start space-x-3">
+                  <Zap className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-brand-dark mb-1">Custom Development Process</h4>
+                    <p className="text-sm text-brand-dark/70">We build websites using modern frameworks like Next.js with custom optimization scripts integrated from the start, ensuring maximum Google visibility and performance.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Code className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-brand-dark mb-1">Proprietary Technology Stack</h4>
+                    <p className="text-sm text-brand-dark/70">Our custom websites include proprietary script integration that works seamlessly with our SEO dashboard platform, providing enhanced optimization capabilities and real-time performance tracking.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <Rocket className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-brand-dark mb-1">Google-First Architecture</h4>
+                    <p className="text-sm text-brand-dark/70">Every website is architected with Google's ranking factors in mind, including proper schema markup, semantic HTML, fast loading speeds, and mobile-first responsive design.</p>
+                  </div>
+                </div>
+              </div>
+              
               <a
                 href="/contact"
                 className="inline-flex items-center space-x-2 px-8 py-4 bg-indigo-600 text-white font-semibold text-lg rounded-full hover:bg-indigo-700 transition-colors duration-300"

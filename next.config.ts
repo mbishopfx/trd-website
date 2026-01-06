@@ -198,6 +198,110 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: false, // Temporary in case search is added later
       },
+      
+      // Old referral program pages → current referral
+      {
+        source: '/referral-program-direct',
+        destination: '/referral',
+        permanent: true,
+      },
+      {
+        source: '/referral-program-casual',
+        destination: '/referral',
+        permanent: true,
+      },
+      {
+        source: '/referral-program-professional',
+        destination: '/referral',
+        permanent: true,
+      },
+      
+      // Old audit pages → free audit
+      {
+        source: '/conversion-rate-audit',
+        destination: '/free-audit',
+        permanent: true,
+      },
+      {
+        source: '/ppc-campaign-audit',
+        destination: '/free-audit',
+        permanent: true,
+      },
+      {
+        source: '/gbp-optimization-audit',
+        destination: '/free-audit',
+        permanent: true,
+      },
+      {
+        source: '/content-marketing-audit',
+        destination: '/free-audit',
+        permanent: true,
+      },
+      {
+        source: '/website-seo-audit',
+        destination: '/free-audit',
+        permanent: true,
+      },
+      
+      // Old service pages → services
+      {
+        source: '/services/amazon-ott',
+        destination: '/services',
+        permanent: true,
+      },
+      
+      // Old AIO services pages → learn-aio
+      {
+        source: '/aio-services/:path*',
+        destination: '/learn-aio',
+        permanent: true,
+      },
+      
+      // Old GBP Pro pages → platform (except search-grid-ranking which exists)
+      {
+        source: '/gbp-pro/qr-code-generator',
+        destination: '/platform',
+        permanent: true,
+      },
+      {
+        source: '/gbp-pro/tasks',
+        destination: '/platform',
+        permanent: true,
+      },
+      {
+        source: '/gbp-pro/reports',
+        destination: '/platform',
+        permanent: true,
+      },
+      {
+        source: '/gbp-pro/instant-audit',
+        destination: '/free-audit',
+        permanent: true,
+      },
+      {
+        source: '/gbp-pro/advanced-audit',
+        destination: '/free-audit',
+        permanent: true,
+      },
+      
+      // Old tech services pages → platform
+      {
+        source: '/tech-services/aio-scripts',
+        destination: '/platform',
+        permanent: true,
+      },
+      
+      // Old dashboard/admin pages → contact
+      {
+        source: '/dashboard',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/employee-intake',
+        destination: '/contact',
+        permanent: true,
+      },
     ];
   },
 };

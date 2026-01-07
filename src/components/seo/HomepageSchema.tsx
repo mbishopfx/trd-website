@@ -422,6 +422,76 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
     ]
   };
 
+  // Products Catalog - GBP Products (separate from Services)
+  const productsCatalogSchema = {
+    "@type": "OfferCatalog",
+    "@id": `${baseUrl}/#products`,
+    name: "True Rank Digital Products",
+    description: "Digital marketing products and solutions by True Rank Digital",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/products/socialsparkpro#offer`,
+        itemOffered: {
+          "@type": "Product",
+          "@id": `${baseUrl}/products/socialsparkpro`,
+          name: "SocialSparkPRO",
+          description: "SocialSparkPRO is True Rank Digital's comprehensive organic social media management solution. This all-in-one platform handles content creation, scheduling, community engagement, and analytics across all major social platforms including Facebook, Instagram, LinkedIn, TikTok, and Twitter/X. Our team creates custom branded content, manages daily posting schedules, responds to comments and messages, and provides monthly performance reports. SocialSparkPRO includes strategic hashtag research, competitor monitoring, trend analysis, and audience growth tactics. Perfect for businesses wanting to build authentic social presence without the time investment. Includes branded graphics, video content, story creation, and engagement optimization to maximize organic reach and follower growth.",
+          brand: {
+            "@type": "Brand",
+            name: "True Rank Digital"
+          },
+          manufacturer: {
+            "@id": organizationId
+          },
+          category: "Social Media Marketing",
+          image: `${baseUrl}/images/products/socialsparkpro.png`,
+          offers: {
+            "@type": "Offer",
+            availability: "https://schema.org/InStock",
+            seller: {
+              "@id": organizationId
+            }
+          }
+        },
+        availability: "https://schema.org/InStock",
+        seller: {
+          "@id": organizationId
+        }
+      },
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/products/trd#offer`,
+        itemOffered: {
+          "@type": "Product",
+          "@id": `${baseUrl}/products/trd`,
+          name: "TRD",
+          description: "TRD is True Rank Digital's flagship hyperlocal Google optimization package designed to dominate your local market. This comprehensive solution combines Google Business Profile optimization, local SEO, grid map ranking analysis, and competitor intelligence monitoring into one powerful system. TRD includes our proprietary dashboard platform with real-time ranking verification across your entire service area, automated citation management, review generation strategies, and Google knowledge graph consistency monitoring. Our team handles everything from NAP consistency audits to strategic content creation optimized for local search intent. TRD clients receive monthly strategy calls, detailed performance reports, and priority support. Ideal for service-based businesses, professional practices, and local retailers wanting to dominate the Google Local Pack and attract more customers from their target geographic area.",
+          brand: {
+            "@type": "Brand",
+            name: "True Rank Digital"
+          },
+          manufacturer: {
+            "@id": organizationId
+          },
+          category: "Local SEO & Google Optimization",
+          image: `${baseUrl}/images/products/trd-package.png`,
+          offers: {
+            "@type": "Offer",
+            availability: "https://schema.org/InStock",
+            seller: {
+              "@id": organizationId
+            }
+          }
+        },
+        availability: "https://schema.org/InStock",
+        seller: {
+          "@id": organizationId
+        }
+      }
+    ]
+  };
+
   // Aggregate Rating (updated to reflect 30 reviews in schema)
   const aggregateRatingSchema = {
     "@type": "AggregateRating",
@@ -1372,6 +1442,7 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
       websiteSchema,
       webpageSchema,
       serviceCatalogSchema,
+      productsCatalogSchema,
       aggregateRatingSchema,
       ...reviewsSchema,
       ...teamMembersSchema,

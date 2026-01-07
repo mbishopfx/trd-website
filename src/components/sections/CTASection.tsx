@@ -64,34 +64,6 @@ export default function CTASection() {
 
           </div>
 
-          {/* Trust Indicators */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-white/80"
-          >
-            {[
-              { value: 'Schema', label: 'Markup Experts' },
-              { value: 'Custom', label: 'Tech Solutions' },
-              { value: 'LLM.txt', label: 'Optimization' },
-              { value: 'Problem', label: 'Finders & Solvers' }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 + 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="text-2xl font-bold mb-1">{item.value}</div>
-                <div className="text-sm">{item.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
-
         </motion.div>
 
         {/* Bottom Contact Info */}

@@ -232,36 +232,8 @@ export default function TestimonialsCarousel() {
       </div>
 
       {/* Stats Section */}
+      {/* CTA Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center"
-        >
-          {[
-            { value: 'Custom', label: 'Tech Solutions', icon: '⚙️' },
-            { value: 'Schema', label: 'Markup Expert', icon: '📋' },
-            { value: 'LLM.txt', label: 'Optimization', icon: '🤖' },
-            { value: 'Problem', label: 'Solvers', icon: '🔧' }
-          ].map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="p-6 glass-card hover:shadow-glass transition-all duration-300"
-            >
-              <div className="text-2xl mb-2">{stat.icon}</div>
-              <div className="text-2xl font-bold text-brand-dark mb-1">{stat.value}</div>
-              <div className="text-brand-dark/60 text-sm font-medium">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -110,10 +110,10 @@ const navigationItems: NavItem[] = [
     icon: <Settings className="w-4 h-4" />,
     items: [
       {
-        name: 'Local Pack Domination',
-        href: '/services/local-seo',
-        icon: <MapPin className="w-4 h-4" />,
-        description: 'Dominate Google local pack and Google Maps listings'
+        name: 'Digital Marketing',
+        href: '/services/digital-marketing',
+        icon: <TrendingUp className="w-4 h-4" />,
+        description: 'Comprehensive digital marketing and advertising services'
       },
       {
         name: 'Google Business Profile',
@@ -122,16 +122,46 @@ const navigationItems: NavItem[] = [
         description: 'Optimize your Google Business Profile for maximum visibility'
       },
       {
-        name: 'AI Search Optimization',
-        href: '/services/ai-seo',
-        icon: <Bot className="w-4 h-4" />,
-        description: 'Proprietary AI technology for search visibility'
-      },
-      {
-        name: 'Website Development',
+        name: 'Website Engineering',
         href: '/services/website-development',
         icon: <Globe className="w-4 h-4" />,
-        description: 'High-performance websites built for Google visibility'
+        description: 'Custom website design, development, and UX optimization'
+      },
+      {
+        name: 'Social Marketing',
+        href: '/services/social-media',
+        icon: <Users className="w-4 h-4" />,
+        description: 'Organic social media management and advertising'
+      },
+      {
+        name: 'CRM With AI Chat',
+        href: '/services/crm-ai-chat',
+        icon: <Bot className="w-4 h-4" />,
+        description: 'AI-powered CRM with automated customer interactions'
+      },
+      {
+        name: 'Business Consulting',
+        href: '/services/business-consulting',
+        icon: <Building className="w-4 h-4" />,
+        description: 'Strategic guidance for digital growth and optimization'
+      },
+      {
+        name: 'Local SEO',
+        href: '/services/local-seo',
+        icon: <MapPin className="w-4 h-4" />,
+        description: 'Dominate local search and Google Maps results'
+      },
+      {
+        name: 'PPC Campaigns',
+        href: '/services/ppc-campaigns',
+        icon: <TrendingUp className="w-4 h-4" />,
+        description: 'Targeted Google Ads campaigns for immediate results'
+      },
+      {
+        name: 'SEO Tactics',
+        href: '/services/seo-tactics',
+        icon: <Search className="w-4 h-4" />,
+        description: 'Proven SEO strategies to boost your Google rankings'
       },
     ]
   },

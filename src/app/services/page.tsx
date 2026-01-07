@@ -20,48 +20,76 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   const services = [
     {
-      icon: <Search className="w-8 h-8" />,
-      title: 'Local Pack Domination & Grid Map Rankings',
-      description: 'Dominate the local pack with our proprietary dashboard featuring grid map ranking verification, competitor intelligence monitoring, and automated Google knowledge graph consistency tracking for faster local pack results.',
-      link: '/services/local-seo',
-      color: 'from-green-500 to-teal-500'
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Professional Google Business Profile Optimization',
-      description: 'Comprehensive Google Business Profile management using our advanced optimization tools and automated consistency monitoring systems to maximize local search visibility and customer engagement.',
-      link: '/services/google-business-profile',
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: 'Digital Marketing and Advertising',
+      description: 'True Rank Digital is a leading digital marketing agency specializing in SEO, PPC, Google Business Profile Optimization and content strategy to boost your online presence and drive growth.',
+      link: '/services/digital-marketing',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'AI Search Optimization with Algorithm Adaptation Scripts',
-      description: 'Revolutionary custom algorithm adaptation scripts and proprietary solution building frameworks that automatically adjust to Google algorithm changes, maintaining peak Google visibility through our in-house technology solutions.',
-      link: '/services/ai-seo',
-      color: 'from-purple-500 to-pink-500'
+      icon: <Users className="w-8 h-8" />,
+      title: 'Google Business Profile Optimization',
+      description: 'Maximize your visibility on Google with True Rank Digital\'s GBP Optimization services. We expertly fine-tune your profile to enhance local search rankings, attract more traffic, and increase engagement.',
+      link: '/services/google-business-profile',
+      color: 'from-green-500 to-teal-500'
     },
     {
       icon: <Code className="w-8 h-8" />,
-      title: 'Custom Web Development with Enhanced Script Integration',
-      description: 'Google-optimized websites designed for conversion with advanced proprietary script integration capabilities that unlock enhanced optimization tools and deeper performance control.',
+      title: 'Website Engineering',
+      description: 'True Rank Digital offers comprehensive website engineering, including custom design, development, and UX optimization to enhance your online presence and user engagement.',
       link: '/services/website-development',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: 'Social Marketing and Advertising',
+      description: 'Grow your brand naturally with True Rank Digital\'s organic social media services. We manage and enhance your social presence through strategic content and community engagement.',
+      link: '/services/social-media',
+      color: 'from-pink-500 to-rose-500'
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: 'CRM With AI Chat',
+      description: 'True Rank Digital\'s AI-powered CRM streamlines customer interactions with an AI chatbot that sets appointments, handles follow-ups, and enhances customer engagement seamlessly.',
+      link: '/services/crm-ai-chat',
+      color: 'from-indigo-500 to-purple-500'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Business Consulting',
+      description: 'Achieve sustainable growth with True Rank Digital\'s business consulting. We offer strategic guidance on digital marketing, process optimization, and market expansion.',
+      link: '/services/business-consulting',
       color: 'from-orange-500 to-red-500'
     },
     {
+      icon: <Search className="w-8 h-8" />,
+      title: 'Local SEO',
+      description: 'Dominate local search results with True Rank Digital\'s Local SEO services. We optimize your online presence to ensure customers in your area find you first on Google.',
+      link: '/services/local-seo',
+      color: 'from-teal-500 to-cyan-500'
+    },
+    {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: 'Comprehensive Digital Marketing Campaign Management',
-      description: 'Strategic digital marketing campaigns powered by our SEO dashboard platform featuring real-time performance tracking, organic search traffic generation tools, and proven Google optimization tactics for sustainable growth.',
-      link: '/services/digital-marketing',
+      title: 'PPC Campaigns',
+      description: 'Drive immediate results with True Rank Digital\'s PPC campaigns. We create targeted Google Ads that generate quality leads and maximize your advertising ROI.',
+      link: '/services/ppc-campaigns',
       color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      icon: <Search className="w-8 h-8" />,
+      title: 'SEO Tactics',
+      description: 'Master proven SEO tactics with True Rank Digital. Our strategic approach combines technical optimization, content strategy, and link building to boost your Google rankings.',
+      link: '/services/seo-tactics',
+      color: 'from-emerald-500 to-green-500'
     }
   ];
 
-  // Service Catalog Schema
+  // Service Catalog Schema - Matches GBP (9 services, no prices)
   const serviceCatalogSchema = {
     "@context": "https://schema.org",
     "@type": "OfferCatalog",
     "name": "True Rank Digital Services",
-    "description": "Comprehensive digital marketing and SEO services catalog",
+    "description": "Comprehensive digital marketing services catalog",
     "provider": {
       "@type": "Organization",
       "@id": "https://truerankdigital.com/#organization",
@@ -72,22 +100,22 @@ export default function ServicesPage() {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Local Pack Domination & Google Maps Optimization",
-          "description": "Dominate local pack positioning with proprietary dashboard featuring grid map ranking verification",
-          "url": "https://truerankdigital.com/services/local-seo",
+          "name": "Digital Marketing and Advertising",
+          "description": "True Rank Digital is a leading digital marketing agency specializing in SEO, PPC, Google Business Profile Optimization and content strategy to boost your online presence and drive growth.",
+          "url": "https://truerankdigital.com/services/digital-marketing",
           "provider": {
             "@id": "https://truerankdigital.com/#organization"
           },
           "areaServed": "United States",
-          "serviceType": "Local Pack Domination"
+          "serviceType": "Digital Marketing"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Google Business Profile Management",
-          "description": "Comprehensive GBP management with advanced optimization tools and automated consistency monitoring",
+          "name": "Google Business Profile Optimization",
+          "description": "Maximize your visibility on Google with True Rank Digital's GBP Optimization services. We expertly fine-tune your profile to enhance local search rankings, attract more traffic, and increase engagement.",
           "url": "https://truerankdigital.com/services/google-business-profile",
           "provider": {
             "@id": "https://truerankdigital.com/#organization"
@@ -100,22 +128,8 @@ export default function ServicesPage() {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "AI Search Optimization",
-          "description": "Revolutionary custom algorithm adaptation scripts that automatically adjust to Google algorithm changes",
-          "url": "https://truerankdigital.com/services/ai-seo",
-          "provider": {
-            "@id": "https://truerankdigital.com/#organization"
-          },
-          "areaServed": "United States",
-          "serviceType": "AI Search Optimization"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Custom Web Development",
-          "description": "Google-optimized websites with advanced proprietary script integration capabilities",
+          "name": "Website Engineering",
+          "description": "True Rank Digital offers comprehensive website engineering, including custom design, development, and UX optimization to enhance your online presence and user engagement.",
           "url": "https://truerankdigital.com/services/website-development",
           "provider": {
             "@id": "https://truerankdigital.com/#organization"
@@ -128,14 +142,84 @@ export default function ServicesPage() {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Digital Marketing Campaign Management",
-          "description": "Strategic digital marketing campaigns powered by dashboard platform with real-time tracking",
-          "url": "https://truerankdigital.com/services/digital-marketing",
+          "name": "Social Marketing and Advertising",
+          "description": "Grow your brand naturally with True Rank Digital's organic social media services. We manage and enhance your social presence through strategic content and community engagement.",
+          "url": "https://truerankdigital.com/services/social-media",
           "provider": {
             "@id": "https://truerankdigital.com/#organization"
           },
           "areaServed": "United States",
-          "serviceType": "Digital Marketing"
+          "serviceType": "Social Media Marketing"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "CRM With AI Chat",
+          "description": "True Rank Digital's AI-powered CRM streamlines customer interactions with an AI chatbot that sets appointments, handles follow-ups, and enhances customer engagement seamlessly.",
+          "url": "https://truerankdigital.com/services/crm-ai-chat",
+          "provider": {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          "areaServed": "United States",
+          "serviceType": "CRM Software"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Business Consulting",
+          "description": "Achieve sustainable growth with True Rank Digital's business consulting. We offer strategic guidance on digital marketing, process optimization, and market expansion.",
+          "url": "https://truerankdigital.com/services/business-consulting",
+          "provider": {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          "areaServed": "United States",
+          "serviceType": "Business Consulting"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Local SEO",
+          "description": "Dominate local search results with True Rank Digital's Local SEO services. We optimize your online presence to ensure customers in your area find you first on Google.",
+          "url": "https://truerankdigital.com/services/local-seo",
+          "provider": {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          "areaServed": "United States",
+          "serviceType": "Local SEO"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "PPC Campaigns",
+          "description": "Drive immediate results with True Rank Digital's PPC campaigns. We create targeted Google Ads that generate quality leads and maximize your advertising ROI.",
+          "url": "https://truerankdigital.com/services/ppc-campaigns",
+          "provider": {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          "areaServed": "United States",
+          "serviceType": "PPC Advertising"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "SEO Tactics",
+          "description": "Master proven SEO tactics with True Rank Digital. Our strategic approach combines technical optimization, content strategy, and link building to boost your Google rankings.",
+          "url": "https://truerankdigital.com/services/seo-tactics",
+          "provider": {
+            "@id": "https://truerankdigital.com/#organization"
+          },
+          "areaServed": "United States",
+          "serviceType": "SEO Strategy"
         }
       }
     ]
@@ -192,11 +276,11 @@ export default function ServicesPage() {
           </div>
           
           <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
-            Professional Digital Marketing Services & Dashboard Platform
+            Digital Marketing Services That Drive Growth
           </h1>
           
           <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-8">
-            Access our comprehensive suite of digital marketing services powered by our proprietary dashboard platform. Every service includes grid map ranking analysis, competitor intelligence monitoring, and automated Google knowledge graph consistency tools designed to get your business found on Google faster through proven optimization tactics mastered by professionals.
+            True Rank Digital delivers comprehensive digital marketing solutions including Google Business Profile optimization, website engineering, AI-powered CRM, social media marketing, business consulting, and proven SEO strategies to help your business dominate online.
           </p>
 
           <div className="max-w-4xl mx-auto mb-12">

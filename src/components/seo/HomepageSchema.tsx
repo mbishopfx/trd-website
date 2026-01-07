@@ -214,33 +214,29 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
   };
 
   // Service Catalog (OfferCatalog)
+  // Service Catalog - Matches GBP Services (9 main services, no prices)
   const serviceCatalogSchema = {
     "@type": "OfferCatalog",
     "@id": `${baseUrl}/#service-catalog`,
-    name: "Professional Google Business Optimization & Digital Marketing Services",
-    description: "Comprehensive suite of Google Business Optimization services including local pack domination, Google Business Profile management, AI search optimization, and custom website development.",
+    name: "True Rank Digital Services",
+    description: "Comprehensive digital marketing services catalog",
     itemListElement: [
       {
         "@type": "Offer",
-        "@id": `${baseUrl}/services/local-seo#offer`,
+        "@id": `${baseUrl}/services/digital-marketing#offer`,
         itemOffered: {
           "@type": "Service",
-          "@id": `${baseUrl}/services/local-seo`,
-          name: "Local Pack Domination & Google Maps Optimization",
-          description: "Dominate the local pack with proprietary dashboard featuring grid map ranking verification, competitor intelligence monitoring, and automated Google knowledge graph consistency tracking.",
+          "@id": `${baseUrl}/services/digital-marketing`,
+          name: "Digital Marketing and Advertising",
+          description: "True Rank Digital is a leading digital marketing agency specializing in SEO, PPC, Google Business Profile Optimization and content strategy to boost your online presence and drive growth.",
           provider: {
             "@id": organizationId
           },
-          serviceType: "Local Pack Domination",
+          serviceType: "Digital Marketing",
           areaServed: {
             "@type": "Country",
             name: "United States"
           }
-        },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          price: "Custom Pricing",
-          priceCurrency: "USD"
         },
         availability: "https://schema.org/InStock",
         seller: {
@@ -254,7 +250,7 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
           "@type": "Service",
           "@id": `${baseUrl}/services/google-business-profile`,
           name: "Google Business Profile Optimization",
-          description: "Comprehensive Google Business Profile management with advanced optimization tools and automated consistency monitoring systems.",
+          description: "Maximize your visibility on Google with True Rank Digital's GBP Optimization services. We expertly fine-tune your profile to enhance local search rankings, attract more traffic, and increase engagement.",
           provider: {
             "@id": organizationId
           },
@@ -263,38 +259,6 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
             "@type": "Country",
             name: "United States"
           }
-        },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          price: "Custom Pricing",
-          priceCurrency: "USD"
-        },
-        availability: "https://schema.org/InStock",
-        seller: {
-          "@id": organizationId
-        }
-      },
-      {
-        "@type": "Offer",
-        "@id": `${baseUrl}/services/ai-seo#offer`,
-        itemOffered: {
-          "@type": "Service",
-          "@id": `${baseUrl}/services/ai-seo`,
-          name: "AI Search Optimization",
-          description: "Revolutionary custom algorithm adaptation scripts that automatically adjust to Google algorithm changes, maintaining peak Google visibility.",
-          provider: {
-            "@id": organizationId
-          },
-          serviceType: "AI Search Optimization",
-          areaServed: {
-            "@type": "Country",
-            name: "United States"
-          }
-        },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          price: "Custom Pricing",
-          priceCurrency: "USD"
         },
         availability: "https://schema.org/InStock",
         seller: {
@@ -307,8 +271,8 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
         itemOffered: {
           "@type": "Service",
           "@id": `${baseUrl}/services/website-development`,
-          name: "Custom Web Development",
-          description: "Google-optimized websites with advanced proprietary script integration capabilities.",
+          name: "Website Engineering",
+          description: "True Rank Digital offers comprehensive website engineering, including custom design, development, and UX optimization to enhance your online presence and user engagement.",
           provider: {
             "@id": organizationId
           },
@@ -318,10 +282,27 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
             name: "United States"
           }
         },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          price: "Custom Pricing",
-          priceCurrency: "USD"
+        availability: "https://schema.org/InStock",
+        seller: {
+          "@id": organizationId
+        }
+      },
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/social-media#offer`,
+        itemOffered: {
+          "@type": "Service",
+          "@id": `${baseUrl}/services/social-media`,
+          name: "Social Marketing and Advertising",
+          description: "Grow your brand naturally with True Rank Digital's organic social media services. We manage and enhance your social presence through strategic content and community engagement.",
+          provider: {
+            "@id": organizationId
+          },
+          serviceType: "Social Media Marketing",
+          areaServed: {
+            "@type": "Country",
+            name: "United States"
+          }
         },
         availability: "https://schema.org/InStock",
         seller: {
@@ -330,25 +311,108 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
       },
       {
         "@type": "Offer",
-        "@id": `${baseUrl}/services/digital-marketing#offer`,
+        "@id": `${baseUrl}/services/crm-ai-chat#offer`,
         itemOffered: {
           "@type": "Service",
-          "@id": `${baseUrl}/services/digital-marketing`,
-          name: "Digital Marketing Campaign Management",
-          description: "Strategic digital marketing campaigns powered by dashboard platform with real-time tracking.",
+          "@id": `${baseUrl}/services/crm-ai-chat`,
+          name: "CRM With AI Chat",
+          description: "True Rank Digital's AI-powered CRM streamlines customer interactions with an AI chatbot that sets appointments, handles follow-ups, and enhances customer engagement seamlessly.",
           provider: {
             "@id": organizationId
           },
-          serviceType: "Digital Marketing",
+          serviceType: "CRM Software",
           areaServed: {
             "@type": "Country",
             name: "United States"
           }
         },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          price: "Custom Pricing",
-          priceCurrency: "USD"
+        availability: "https://schema.org/InStock",
+        seller: {
+          "@id": organizationId
+        }
+      },
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/business-consulting#offer`,
+        itemOffered: {
+          "@type": "Service",
+          "@id": `${baseUrl}/services/business-consulting`,
+          name: "Business Consulting",
+          description: "Achieve sustainable growth with True Rank Digital's business consulting. We offer strategic guidance on digital marketing, process optimization, and market expansion.",
+          provider: {
+            "@id": organizationId
+          },
+          serviceType: "Business Consulting",
+          areaServed: {
+            "@type": "Country",
+            name: "United States"
+          }
+        },
+        availability: "https://schema.org/InStock",
+        seller: {
+          "@id": organizationId
+        }
+      },
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/local-seo#offer`,
+        itemOffered: {
+          "@type": "Service",
+          "@id": `${baseUrl}/services/local-seo`,
+          name: "Local SEO",
+          description: "Dominate local search results with True Rank Digital's Local SEO services. We optimize your online presence to ensure customers in your area find you first on Google.",
+          provider: {
+            "@id": organizationId
+          },
+          serviceType: "Local SEO",
+          areaServed: {
+            "@type": "Country",
+            name: "United States"
+          }
+        },
+        availability: "https://schema.org/InStock",
+        seller: {
+          "@id": organizationId
+        }
+      },
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/ppc-campaigns#offer`,
+        itemOffered: {
+          "@type": "Service",
+          "@id": `${baseUrl}/services/ppc-campaigns`,
+          name: "PPC Campaigns",
+          description: "Drive immediate results with True Rank Digital's PPC campaigns. We create targeted Google Ads that generate quality leads and maximize your advertising ROI.",
+          provider: {
+            "@id": organizationId
+          },
+          serviceType: "PPC Advertising",
+          areaServed: {
+            "@type": "Country",
+            name: "United States"
+          }
+        },
+        availability: "https://schema.org/InStock",
+        seller: {
+          "@id": organizationId
+        }
+      },
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/seo-tactics#offer`,
+        itemOffered: {
+          "@type": "Service",
+          "@id": `${baseUrl}/services/seo-tactics`,
+          name: "SEO Tactics",
+          description: "Master proven SEO tactics with True Rank Digital. Our strategic approach combines technical optimization, content strategy, and link building to boost your Google rankings.",
+          provider: {
+            "@id": organizationId
+          },
+          serviceType: "SEO Strategy",
+          areaServed: {
+            "@type": "Country",
+            name: "United States"
+          }
         },
         availability: "https://schema.org/InStock",
         seller: {

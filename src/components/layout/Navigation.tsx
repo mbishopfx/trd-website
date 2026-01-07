@@ -283,20 +283,21 @@ export default function Navigation() {
                           transition={{ duration: 0.2 }}
                           className="absolute top-full left-0 mt-2 w-96 bg-white/95 backdrop-blur-md border border-white/30 rounded-xl shadow-xl overflow-hidden"
                         >
-                          <div className="p-2 grid grid-cols-2 gap-1">
-                            {item.items.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                href={subItem.href}
-                                className="flex items-start space-x-2 p-2 rounded-lg hover:bg-white/25 transition-colors duration-200 group/item"
-                              >
-                                <div className="flex-shrink-0 mt-0.5 text-brand-primary group-hover/item:text-brand-accent transition-colors duration-200">
-                                  {subItem.icon}
-                                </div>
-                                <div className="flex-grow">
-                                  <h4 className="font-semibold text-brand-dark group-hover/item:text-brand-primary transition-colors duration-200">
-                                    {subItem.name}
-                                  </h4>
+                          <div className="p-2 max-h-[80vh] overflow-y-auto custom-scrollbar">
+                            <div className="grid grid-cols-2 gap-1">
+                              {item.items.map((subItem) => (
+                                <Link
+                                  key={subItem.name}
+                                  href={subItem.href}
+                                  className="flex items-start space-x-2 p-2 rounded-lg hover:bg-white/25 transition-colors duration-200 group/item"
+                                >
+                                  <div className="flex-shrink-0 mt-0.5 text-brand-primary group-hover/item:text-brand-accent transition-colors duration-200">
+                                    {subItem.icon}
+                                  </div>
+                                  <div className="flex-grow">
+                                    <h4 className="font-semibold text-brand-dark group-hover/item:text-brand-primary transition-colors duration-200">
+                                      {subItem.name}
+                                    </h4>
                                   {subItem.description && (
                                     <p className="text-sm text-brand-dark/70 mt-1">
                                       {subItem.description}
@@ -305,6 +306,7 @@ export default function Navigation() {
                                 </div>
                               </Link>
                             ))}
+                            </div>
                           </div>
                         </motion.div>
                       )}

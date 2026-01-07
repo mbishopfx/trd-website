@@ -418,6 +418,162 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
         seller: {
           "@id": organizationId
         }
+      },
+      // Website Designer Services (GBP Category)
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/website-development#custom-design`,
+        itemOffered: {
+          "@type": "Service",
+          name: "Custom Website Design",
+          description: "Professional custom website design tailored to your brand and business goals.",
+          provider: { "@id": organizationId },
+          serviceType: "Web Design",
+          areaServed: { "@type": "Country", name: "United States" }
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": organizationId }
+      },
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/website-development#redesign`,
+        itemOffered: {
+          "@type": "Service",
+          name: "Website Redesign",
+          description: "Complete website redesign that preserves SEO value while modernizing your online presence.",
+          provider: { "@id": organizationId },
+          serviceType: "Web Design",
+          areaServed: { "@type": "Country", name: "United States" }
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": organizationId }
+      },
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/website-development#ecommerce`,
+        itemOffered: {
+          "@type": "Service",
+          name: "E-commerce Website Development",
+          description: "Custom online store development with shopping cart and payment integration.",
+          provider: { "@id": organizationId },
+          serviceType: "E-commerce Development",
+          areaServed: { "@type": "Country", name: "United States" }
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": organizationId }
+      },
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/website-development#landing-pages`,
+        itemOffered: {
+          "@type": "Service",
+          name: "Landing Page Design",
+          description: "High-converting landing pages optimized for lead generation and sales.",
+          provider: { "@id": organizationId },
+          serviceType: "Web Design",
+          areaServed: { "@type": "Country", name: "United States" }
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": organizationId }
+      },
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/website-development#hosting`,
+        itemOffered: {
+          "@type": "Service",
+          name: "Website Hosting & Support",
+          description: "Managed website hosting with 24/7 support and automatic updates.",
+          provider: { "@id": organizationId },
+          serviceType: "Web Hosting",
+          areaServed: { "@type": "Country", name: "United States" }
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": organizationId }
+      },
+      // Internet Marketing Services (GBP Category)
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/local-seo#local-search`,
+        itemOffered: {
+          "@type": "Service",
+          name: "Local Search Optimization",
+          description: "Dominate local search results with citation building, map pack optimization, and location-based keyword targeting.",
+          provider: { "@id": organizationId },
+          serviceType: "Local SEO",
+          areaServed: { "@type": "Country", name: "United States" }
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": organizationId }
+      },
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/digital-marketing#content`,
+        itemOffered: {
+          "@type": "Service",
+          name: "Content Marketing",
+          description: "Strategic content creation including blog posts, articles, and guides that establish authority and drive organic traffic.",
+          provider: { "@id": organizationId },
+          serviceType: "Content Marketing",
+          areaServed: { "@type": "Country", name: "United States" }
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": organizationId }
+      },
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/google-business-profile#reputation`,
+        itemOffered: {
+          "@type": "Service",
+          name: "Online Reputation Management",
+          description: "Monitor and improve your online reputation with review generation, response management, and brand monitoring.",
+          provider: { "@id": organizationId },
+          serviceType: "Reputation Management",
+          areaServed: { "@type": "Country", name: "United States" }
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": organizationId }
+      },
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/seo-tactics#schema`,
+        itemOffered: {
+          "@type": "Service",
+          name: "Schema Markup Implementation",
+          description: "Structured data implementation to enhance search listings and win rich snippets in Google.",
+          provider: { "@id": organizationId },
+          serviceType: "Technical SEO",
+          areaServed: { "@type": "Country", name: "United States" }
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": organizationId }
+      },
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/digital-marketing#competitor`,
+        itemOffered: {
+          "@type": "Service",
+          name: "Competitor Analysis",
+          description: "In-depth competitor research to identify opportunities and develop winning strategies.",
+          provider: { "@id": organizationId },
+          serviceType: "Market Research",
+          areaServed: { "@type": "Country", name: "United States" }
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": organizationId }
+      },
+      {
+        "@type": "Offer",
+        "@id": `${baseUrl}/services/seo-tactics#link-building`,
+        itemOffered: {
+          "@type": "Service",
+          name: "Link Building Services",
+          description: "White-hat link building through outreach, guest posting, and digital PR to increase domain authority.",
+          provider: { "@id": organizationId },
+          serviceType: "Link Building",
+          areaServed: { "@type": "Country", name: "United States" }
+        },
+        availability: "https://schema.org/InStock",
+        seller: { "@id": organizationId }
       }
     ]
   };

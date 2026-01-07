@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { Search, Globe, Code, Zap, TrendingUp, Users } from 'lucide-react';
+import Link from 'next/link';
+import { Search, Globe, Code, Zap, TrendingUp, Users, Link2, FileText, Shield, BarChart3, Settings, Layout, Palette, Server, Target, Star, Database } from 'lucide-react';
 import Script from 'next/script';
 
 export const metadata: Metadata = {
@@ -18,7 +19,8 @@ export const metadata: Metadata = {
 };
 
 export default function ServicesPage() {
-  const services = [
+  // Main Services (GBP Primary Categories)
+  const mainServices = [
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: 'Digital Marketing and Advertising',
@@ -84,7 +86,81 @@ export default function ServicesPage() {
     }
   ];
 
-  // Service Catalog Schema - Matches GBP (9 services, no prices)
+  // Website Designer Services (GBP Category)
+  const websiteDesignerServices = [
+    {
+      icon: <Palette className="w-6 h-6" />,
+      title: 'Custom Website Design',
+      description: 'Professional custom website design tailored to your brand and business goals.',
+      link: '/services/website-development'
+    },
+    {
+      icon: <Layout className="w-6 h-6" />,
+      title: 'Website Redesign',
+      description: 'Complete website redesign that preserves SEO value while modernizing your online presence.',
+      link: '/services/website-development'
+    },
+    {
+      icon: <Code className="w-6 h-6" />,
+      title: 'E-commerce Website Development',
+      description: 'Custom online store development with shopping cart and payment integration.',
+      link: '/services/website-development'
+    },
+    {
+      icon: <Target className="w-6 h-6" />,
+      title: 'Landing Page Design',
+      description: 'High-converting landing pages optimized for lead generation and sales.',
+      link: '/services/website-development'
+    },
+    {
+      icon: <Server className="w-6 h-6" />,
+      title: 'Website Hosting & Support',
+      description: 'Managed website hosting with 24/7 support and automatic updates.',
+      link: '/services/website-development'
+    }
+  ];
+
+  // Internet Marketing Services (GBP Category)
+  const internetMarketingServices = [
+    {
+      icon: <Search className="w-6 h-6" />,
+      title: 'Local Search Optimization',
+      description: 'Dominate local search results with citation building, map pack optimization, and location-based keyword targeting.',
+      link: '/services/local-seo'
+    },
+    {
+      icon: <FileText className="w-6 h-6" />,
+      title: 'Content Marketing',
+      description: 'Strategic content creation including blog posts, articles, and guides that establish authority and drive organic traffic.',
+      link: '/services/digital-marketing'
+    },
+    {
+      icon: <Star className="w-6 h-6" />,
+      title: 'Online Reputation Management',
+      description: 'Monitor and improve your online reputation with review generation, response management, and brand monitoring.',
+      link: '/services/google-business-profile'
+    },
+    {
+      icon: <Database className="w-6 h-6" />,
+      title: 'Schema Markup Implementation',
+      description: 'Structured data implementation to enhance search listings and win rich snippets in Google.',
+      link: '/services/seo-tactics'
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: 'Competitor Analysis',
+      description: 'In-depth competitor research to identify opportunities and develop winning strategies.',
+      link: '/services/digital-marketing'
+    },
+    {
+      icon: <Link2 className="w-6 h-6" />,
+      title: 'Link Building Services',
+      description: 'White-hat link building through outreach, guest posting, and digital PR to increase domain authority.',
+      link: '/services/seo-tactics'
+    }
+  ];
+
+  // Service Catalog Schema - Matches GBP (All services including sub-categories)
   const serviceCatalogSchema = {
     "@context": "https://schema.org",
     "@type": "OfferCatalog",
@@ -96,6 +172,7 @@ export default function ServicesPage() {
       "name": "True Rank Digital"
     },
     "itemListElement": [
+      // Main Services (Advertising Agency)
       {
         "@type": "Offer",
         "itemOffered": {
@@ -103,9 +180,7 @@ export default function ServicesPage() {
           "name": "Digital Marketing and Advertising",
           "description": "True Rank Digital is a leading digital marketing agency specializing in SEO, PPC, Google Business Profile Optimization and content strategy to boost your online presence and drive growth.",
           "url": "https://truerankdigital.com/services/digital-marketing",
-          "provider": {
-            "@id": "https://truerankdigital.com/#organization"
-          },
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
           "areaServed": "United States",
           "serviceType": "Digital Marketing"
         }
@@ -117,9 +192,7 @@ export default function ServicesPage() {
           "name": "Google Business Profile Optimization",
           "description": "Maximize your visibility on Google with True Rank Digital's GBP Optimization services. We expertly fine-tune your profile to enhance local search rankings, attract more traffic, and increase engagement.",
           "url": "https://truerankdigital.com/services/google-business-profile",
-          "provider": {
-            "@id": "https://truerankdigital.com/#organization"
-          },
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
           "areaServed": "United States",
           "serviceType": "Business Listing Management"
         }
@@ -131,9 +204,7 @@ export default function ServicesPage() {
           "name": "Website Engineering",
           "description": "True Rank Digital offers comprehensive website engineering, including custom design, development, and UX optimization to enhance your online presence and user engagement.",
           "url": "https://truerankdigital.com/services/website-development",
-          "provider": {
-            "@id": "https://truerankdigital.com/#organization"
-          },
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
           "areaServed": "United States",
           "serviceType": "Web Development"
         }
@@ -145,9 +216,7 @@ export default function ServicesPage() {
           "name": "Social Marketing and Advertising",
           "description": "Grow your brand naturally with True Rank Digital's organic social media services. We manage and enhance your social presence through strategic content and community engagement.",
           "url": "https://truerankdigital.com/services/social-media",
-          "provider": {
-            "@id": "https://truerankdigital.com/#organization"
-          },
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
           "areaServed": "United States",
           "serviceType": "Social Media Marketing"
         }
@@ -159,9 +228,7 @@ export default function ServicesPage() {
           "name": "CRM With AI Chat",
           "description": "True Rank Digital's AI-powered CRM streamlines customer interactions with an AI chatbot that sets appointments, handles follow-ups, and enhances customer engagement seamlessly.",
           "url": "https://truerankdigital.com/services/crm-ai-chat",
-          "provider": {
-            "@id": "https://truerankdigital.com/#organization"
-          },
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
           "areaServed": "United States",
           "serviceType": "CRM Software"
         }
@@ -173,9 +240,7 @@ export default function ServicesPage() {
           "name": "Business Consulting",
           "description": "Achieve sustainable growth with True Rank Digital's business consulting. We offer strategic guidance on digital marketing, process optimization, and market expansion.",
           "url": "https://truerankdigital.com/services/business-consulting",
-          "provider": {
-            "@id": "https://truerankdigital.com/#organization"
-          },
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
           "areaServed": "United States",
           "serviceType": "Business Consulting"
         }
@@ -187,9 +252,7 @@ export default function ServicesPage() {
           "name": "Local SEO",
           "description": "Dominate local search results with True Rank Digital's Local SEO services. We optimize your online presence to ensure customers in your area find you first on Google.",
           "url": "https://truerankdigital.com/services/local-seo",
-          "provider": {
-            "@id": "https://truerankdigital.com/#organization"
-          },
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
           "areaServed": "United States",
           "serviceType": "Local SEO"
         }
@@ -201,9 +264,7 @@ export default function ServicesPage() {
           "name": "PPC Campaigns",
           "description": "Drive immediate results with True Rank Digital's PPC campaigns. We create targeted Google Ads that generate quality leads and maximize your advertising ROI.",
           "url": "https://truerankdigital.com/services/ppc-campaigns",
-          "provider": {
-            "@id": "https://truerankdigital.com/#organization"
-          },
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
           "areaServed": "United States",
           "serviceType": "PPC Advertising"
         }
@@ -215,11 +276,143 @@ export default function ServicesPage() {
           "name": "SEO Tactics",
           "description": "Master proven SEO tactics with True Rank Digital. Our strategic approach combines technical optimization, content strategy, and link building to boost your Google rankings.",
           "url": "https://truerankdigital.com/services/seo-tactics",
-          "provider": {
-            "@id": "https://truerankdigital.com/#organization"
-          },
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
           "areaServed": "United States",
           "serviceType": "SEO Strategy"
+        }
+      },
+      // Website Designer Services
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Custom Website Design",
+          "description": "Professional custom website design tailored to your brand and business goals.",
+          "url": "https://truerankdigital.com/services/website-development",
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
+          "areaServed": "United States",
+          "serviceType": "Web Design"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Website Redesign",
+          "description": "Complete website redesign that preserves SEO value while modernizing your online presence.",
+          "url": "https://truerankdigital.com/services/website-development",
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
+          "areaServed": "United States",
+          "serviceType": "Web Design"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "E-commerce Website Development",
+          "description": "Custom online store development with shopping cart and payment integration.",
+          "url": "https://truerankdigital.com/services/website-development",
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
+          "areaServed": "United States",
+          "serviceType": "E-commerce Development"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Landing Page Design",
+          "description": "High-converting landing pages optimized for lead generation and sales.",
+          "url": "https://truerankdigital.com/services/website-development",
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
+          "areaServed": "United States",
+          "serviceType": "Web Design"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Website Hosting & Support",
+          "description": "Managed website hosting with 24/7 support and automatic updates.",
+          "url": "https://truerankdigital.com/services/website-development",
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
+          "areaServed": "United States",
+          "serviceType": "Web Hosting"
+        }
+      },
+      // Internet Marketing Services
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Local Search Optimization",
+          "description": "Dominate local search results with citation building, map pack optimization, and location-based keyword targeting.",
+          "url": "https://truerankdigital.com/services/local-seo",
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
+          "areaServed": "United States",
+          "serviceType": "Local SEO"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Content Marketing",
+          "description": "Strategic content creation including blog posts, articles, and guides that establish authority and drive organic traffic.",
+          "url": "https://truerankdigital.com/services/digital-marketing",
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
+          "areaServed": "United States",
+          "serviceType": "Content Marketing"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Online Reputation Management",
+          "description": "Monitor and improve your online reputation with review generation, response management, and brand monitoring.",
+          "url": "https://truerankdigital.com/services/google-business-profile",
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
+          "areaServed": "United States",
+          "serviceType": "Reputation Management"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Schema Markup Implementation",
+          "description": "Structured data implementation to enhance search listings and win rich snippets in Google.",
+          "url": "https://truerankdigital.com/services/seo-tactics",
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
+          "areaServed": "United States",
+          "serviceType": "Technical SEO"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Competitor Analysis",
+          "description": "In-depth competitor research to identify opportunities and develop winning strategies.",
+          "url": "https://truerankdigital.com/services/digital-marketing",
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
+          "areaServed": "United States",
+          "serviceType": "Market Research"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Link Building Services",
+          "description": "White-hat link building through outreach, guest posting, and digital PR to increase domain authority.",
+          "url": "https://truerankdigital.com/services/seo-tactics",
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
+          "areaServed": "United States",
+          "serviceType": "Link Building"
         }
       }
     ]
@@ -296,11 +489,14 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="pb-20">
+      {/* Main Services Grid */}
+      <section className="pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-heading font-bold text-brand-dark mb-8 text-center">
+            Core <span className="text-brand-primary">Services</span>
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+            {mainServices.map((service) => (
               <div key={service.title} className="glass-card p-8 hover:shadow-glass-lg transition-all duration-300 group">
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <div className="text-white">
@@ -316,15 +512,112 @@ export default function ServicesPage() {
                   {service.description}
                 </p>
 
-                <a
+                <Link
                   href={service.link}
                   className="inline-flex items-center space-x-2 text-brand-primary hover:text-brand-primary/80 font-semibold transition-colors duration-200"
                 >
                   <span>Learn More</span>
                   <TrendingUp className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Website Designer Services */}
+      <section className="py-16 bg-white/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-purple-100 rounded-full mb-4">
+              <Code className="w-5 h-5 text-purple-600" />
+              <span className="text-purple-600 font-semibold text-sm">Website Designer</span>
+            </div>
+            <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              Website Design & Development Services
+            </h2>
+            <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              Professional website design and development services to build your online presence.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            {websiteDesignerServices.map((service) => (
+              <Link key={service.title} href={service.link} className="glass-card p-6 hover:scale-105 transition-transform duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 text-white">
+                  {service.icon}
+                </div>
+                <h3 className="text-lg font-heading font-bold text-brand-dark mb-2 group-hover:text-brand-primary transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-brand-dark/70 text-sm">
+                  {service.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Internet Marketing Services */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-emerald-100 rounded-full mb-4">
+              <Globe className="w-5 h-5 text-emerald-600" />
+              <span className="text-emerald-600 font-semibold text-sm">Internet Marketing Service</span>
+            </div>
+            <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              Internet Marketing Services
+            </h2>
+            <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              Organic marketing strategies to build sustainable online visibility and authority.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {internetMarketingServices.map((service) => (
+              <Link key={service.title} href={service.link} className="glass-card p-6 hover:scale-105 transition-transform duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center mb-4 text-white">
+                  {service.icon}
+                </div>
+                <h3 className="text-lg font-heading font-bold text-brand-dark mb-2 group-hover:text-brand-primary transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-brand-dark/70 text-sm">
+                  {service.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="glass-card p-8 bg-gradient-to-br from-brand-primary/10 to-blue-500/10">
+            <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              Ready to Grow Your Business?
+            </h2>
+            <p className="text-xl text-brand-dark/70 mb-8">
+              Contact True Rank Digital today for a free consultation and discover how our services can help you dominate your market.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-brand-primary text-white font-semibold text-lg rounded-full hover:bg-brand-primary/90 transition-colors duration-300"
+              >
+                <TrendingUp className="w-5 h-5" />
+                <span>Get Free Consultation</span>
+              </Link>
+              <a
+                href="tel:+17324750139"
+                className="inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-brand-primary text-brand-primary font-semibold text-lg rounded-full hover:bg-brand-primary/5 transition-colors duration-300"
+              >
+                <span>(732) 475-0139</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

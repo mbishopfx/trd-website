@@ -181,12 +181,6 @@ const navigationItems: NavItem[] = [
     icon: <Bot className="w-4 h-4" />,
     badge: 'AI',
     description: 'Discover our AI-powered optimization technology'
-  },
-  {
-    name: 'Starter Pack',
-    href: '/llc',
-    icon: <Rocket className="w-4 h-4" />,
-    badge: 'From $499'
   }
 ];
 

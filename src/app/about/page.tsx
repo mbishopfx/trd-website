@@ -40,7 +40,7 @@ const aboutFAQs = [
   },
   {
     question: "Who founded True Rank Digital?",
-    answer: "True Rank Digital LLC was founded in 2020 by Jon Korkowski (CEO & Founder). The leadership team includes Jon Korkowski (CEO & Founder), Jesse Mathews (Business Developer Director), and Jose Perdomo (Executive Vice President). The technical team includes Matt Bishop (Tech Developer) and Sean O'Niel (SEO Specialist). The sales team includes Sebastian Vargas (Sales Director) and Eric Malheiro (Business Acquisition Director)."
+    answer: "True Rank Digital LLC was founded in 2020 by Jon Korkowski (CEO & Founder). The leadership team includes Jon Korkowski (CEO & Founder), Jesse Mathews (Business Developer Director), and Jose Perdomo (Executive Vice President). The technical team includes Matt Bishop (Tech Developer) and Sean O'Niel (SEO Specialist). The sales team includes Eric Malheiro (Business Acquisition Director)."
   }
 ];
 
@@ -279,13 +279,6 @@ export default function AboutPage() {
                       role: "SEO Optimization, Search Strategy, Performance Analysis",
                       description: "Focused on optimization strategies and search engine performance for True Rank Digital's client campaigns.",
                       email: "sean@truerankdigital.com"
-                    },
-                    {
-                      name: "Sebastian Vargas",
-                      title: "Sales Director",
-                      role: "Client Development, Relationship Management",
-                      description: "Leads client development and relationship management for True Rank Digital.",
-                      email: "sebastian@truerankdigital.com"
                     },
                     {
                       name: "Eric Malheiro",

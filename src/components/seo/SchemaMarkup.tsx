@@ -170,9 +170,9 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
       },
       author: {
         "@type": "Person",
-        name: "Sebastian Vargas"
+        name: "Jeffrey Fraley"
       },
-      reviewBody: "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Karkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!"
+      reviewBody: "I've been in cars sales for over 17 years. Had a lot of vendors. John and his team at truerank are one of the only seo and gbp vendors that actually showed progress and are on point with there work."
     }
   };
 
@@ -309,28 +309,6 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "@id": "https://truerankdigital.com/staff/sebastian-vargas", 
-      name: "Sebastian Vargas",
-      jobTitle: "Sales Director",
-      worksFor: {
-        "@id": "https://truerankdigital.com/#organization"
-      },
-      description: "Sales Director focused on client development and relationship management.",
-      email: "sebastian@truerankdigital.com",
-      url: "https://truerankdigital.com/staff",
-      knowsAbout: [
-        "Client Relations",
-        "Sales Strategy",
-        "Business Development",
-        "Digital Marketing"
-      ],
-      sameAs: [
-        "https://www.linkedin.com/in/sebastian-vargas"
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
       "@id": "https://truerankdigital.com/staff/eric-malheiro", 
       name: "Eric Malheiro",
       jobTitle: "Business Acquisition Director",
@@ -354,26 +332,6 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
 
   // Reviews Schema with Authentic Google Reviews
   const reviewsSchema = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Review",
-      "@id": "https://truerankdigital.com/reviews/sebastian-vargas",
-      reviewBody: "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Korkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!",
-      author: {
-        "@type": "Person",
-        name: "Sebastian Vargas"
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-        worstRating: "1"
-      },
-      datePublished: "2024-01-15",
-      itemReviewed: {
-        "@id": "https://truerankdigital.com/#organization"
-      }
-    },
     {
       "@context": "https://schema.org",
       "@type": "Review",
@@ -818,26 +776,6 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
 
   // Enhanced Reviews with more detailed structured data
   const enhancedReviewsSchema = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Review",
-      "@id": "https://truerankdigital.com/reviews/sebastian-vargas",
-      reviewBody: "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Korkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!",
-      author: {
-        "@type": "Person",
-        name: "Sebastian Vargas"
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-        worstRating: "1"
-      },
-      datePublished: "2024-01-15",
-      itemReviewed: {
-        "@id": "https://truerankdigital.com/#organization"
-      }
-    },
     {
       "@context": "https://schema.org",
       "@type": "Review",

@@ -102,21 +102,6 @@ export default function StaffPage() {
       },
       {
         "@type": "Person",
-        "@id": "https://truerankdigital.com/staff/sebastian-vargas",
-        "name": "Sebastian Vargas",
-        "jobTitle": "Sales Director",
-        "worksFor": {
-          "@type": "Organization",
-          "@id": "https://truerankdigital.com/#organization",
-          "name": "True Rank Digital"
-        },
-        "description": "Sales Director focused on client development and relationship management.",
-        "email": "sebastian@truerankdigital.com",
-        "url": "https://truerankdigital.com/staff",
-        "knowsAbout": ["Client Relations", "Sales Strategy", "Business Development", "Digital Marketing"]
-      },
-      {
-        "@type": "Person",
         "@id": "https://truerankdigital.com/staff/eric-malheiro",
         "name": "Eric Malheiro",
         "jobTitle": "Business Acquisition Director",

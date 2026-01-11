@@ -30,8 +30,6 @@ True Rank Digital is an enterprise digital marketing company specializing in AI-
   - Technical developer handling website development and custom software solutions
 - **Sean O'Niel** - SEO Specialist
   - SEO specialist focused on optimization strategies and search engine performance
-- **Sebastian Lopez** - SEO Specialist
-  - SEO specialist working on search optimization and digital marketing campaigns
 
 ## Core Technologies
 ### AI-Enhanced Semantic Optimization
@@ -119,9 +117,7 @@ True Rank Digital is an enterprise digital marketing company specializing in AI-
 - **Professional Team** - Dedicated service commitment
 
 ## Client Testimonials (Google Reviews)
-1. "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Karkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!" - Sebastian Vargas
-
-2. "I've been in cars sales for over 17 years. Had a lot of vendors. John and his team at truerank are one of the only seo and gbp vendors that actually showed progress and are on point with there work." - Jeffrey Fraley
+1. "I've been in cars sales for over 17 years. Had a lot of vendors. John and his team at truerank are one of the only seo and gbp vendors that actually showed progress and are on point with there work." - Jeffrey Fraley
 
 3. "Jose was great to work with! He really understood what my business needed and helped get it on the right track. Thanks to his expertise, our online presence improved, and we saw real results." - Estrella Rojas
 

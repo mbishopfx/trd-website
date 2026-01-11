@@ -663,25 +663,6 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
   const reviewsSchema = [
     {
       "@type": "Review",
-      "@id": `${baseUrl}/reviews/sebastian-vargas`,
-      reviewBody: "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Korkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!",
-      author: {
-        "@type": "Person",
-        name: "Sebastian Vargas"
-      },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-        worstRating: "1"
-      },
-      datePublished: "2024-09-15",
-      itemReviewed: {
-        "@id": organizationId
-      }
-    },
-    {
-      "@type": "Review",
       "@id": `${baseUrl}/reviews/jeffrey-fraley`,
       reviewBody: "I've been in cars sales for over 17 years. Had a lot of vendors. John and his team at truerank are one of the only seo and gbp vendors that actually showed progress and are on point with there work.",
       author: {
@@ -1270,16 +1251,6 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
       },
       url: `${baseUrl}/staff`
     },
-    {
-      "@type": "Person",
-      "@id": `${baseUrl}/staff/sebastian-vargas`,
-      name: "Sebastian Vargas",
-      jobTitle: "Sales Director",
-      worksFor: {
-        "@id": organizationId
-      },
-      url: `${baseUrl}/staff`
-    }
   ];
 
   // FAQ Schema (if provided) - Create separate Question entities for better detection

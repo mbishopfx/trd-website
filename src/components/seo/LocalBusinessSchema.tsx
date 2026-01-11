@@ -111,13 +111,6 @@ export default function LocalBusinessSchema() {
           ratingValue: "5",
           bestRating: "5"
         },
-        author: {
-          "@type": "Person",
-          name: "Sebastian Vargas"
-        },
-        reviewBody: "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Korkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!",
-        datePublished: "2024-01-15"
-      },
       {
         "@type": "Review",
         reviewRating: {

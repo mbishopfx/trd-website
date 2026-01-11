@@ -15,14 +15,6 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    id: 1,
-    quote: "True Rank Digital has been instrumental in boosting our lead generation and brand awareness. Their team, especially Jon Karkowski and Jose, are professional, knowledgeable, and always on top of things. Highly recommend for businesses looking to grow!",
-    author: "Sebastian Vargas",
-    company: "4 reviews",
-    rating: 5,
-    industry: "Google Review"
-  },
-  {
     id: 2,
         quote: "I&apos;ve been in cars sales for over 17 years. Had a lot of vendors. John and his team at truerank are one of the only seo and gbp vendors that actually showed progress and are on point with there work.",
     author: "Jeffrey Fraley",

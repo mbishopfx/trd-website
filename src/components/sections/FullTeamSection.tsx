@@ -56,17 +56,6 @@ export default function FullTeamSection() {
       email: "eric@truerankdigital.com",
       phone: "18482056899"
     },
-    {
-      name: "Sebastian Vargas",
-      role: "Sales Director",
-      department: "Leadership",
-      bio: "Sales Director focused on client development and relationship management.",
-      specialties: ["Client Relations", "Sales Strategy", "Business Development"],
-      icon: <Target className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      experience: "Leadership",
-      email: "sebastian@truerankdigital.com"
-    }
   ];
 
   const technicalTeam: TeamMember[] = [

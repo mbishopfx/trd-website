@@ -65,7 +65,7 @@ export default function EastBrunswickPage() {
           keywords: ["East Brunswick NJ SEO", "Route 18 SEO", "East Brunswick digital marketing", "Middlesex County SEO", "local SEO East Brunswick"], 
           category: "Local Business", 
           address: { 
-            streetAddress: "East Brunswick", 
+            streetAddress: "288 Summerhill Rd, suite 3", 
             addressLocality: "East Brunswick", 
             addressRegion: "NJ", 
             postalCode: "08816", 

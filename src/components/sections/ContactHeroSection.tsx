@@ -61,8 +61,8 @@ export default function ContactHeroSection() {
             {
               icon: <MapPin className="w-6 h-6" />,
               title: 'Visit Us',
-              primary: 'East Brunswick, NJ',
-              secondary: '08816',
+              primary: '288 Summerhill Rd, suite 3',
+              secondary: 'East Brunswick, NJ 08816',
               action: '#'
             },
             {

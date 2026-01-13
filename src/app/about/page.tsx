@@ -24,7 +24,7 @@ const aboutFAQs = [
   },
   {
     question: "Where is True Rank Digital located?",
-    answer: "True Rank Digital LLC is located in East Brunswick, New Jersey 08816. We serve clients within a 50-mile radius of East Brunswick, including Edison, New Brunswick, North Brunswick, Sayreville, South River, and throughout New Jersey, New York, and Pennsylvania. Our services are available nationwide for businesses seeking professional SEO solutions."
+    answer: "True Rank Digital LLC is located at 288 Summerhill Rd, suite 3, East Brunswick, New Jersey 08816. We serve clients within a 50-mile radius of East Brunswick, including Edison, New Brunswick, North Brunswick, Sayreville, South River, and throughout New Jersey, New York, and Pennsylvania. Our services are available nationwide for businesses seeking professional SEO solutions."
   },
   {
     question: "What services does True Rank Digital provide?",
@@ -318,7 +318,7 @@ export default function AboutPage() {
                     <p><strong>Legal Name:</strong> True Rank Digital LLC</p>
                     <p><strong>Founded:</strong> 2020</p>
                     <p><strong>Founder:</strong> Jon Korkowski</p>
-                    <p><strong>Headquarters:</strong> East Brunswick, New Jersey 08816</p>
+                    <p><strong>Headquarters:</strong> 288 Summerhill Rd, suite 3, East Brunswick, New Jersey 08816</p>
                     <p><strong>Industry:</strong> Professional SEO Services & Digital Marketing</p>
                     <p><strong>NAICS Code:</strong> 541613 (Marketing Consulting Services)</p>
                     <p><strong>Price Range:</strong> $$-$$$ (Mid to upper-mid professional services)</p>

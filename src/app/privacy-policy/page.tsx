@@ -74,7 +74,7 @@ export default function PrivacyPolicyPage() {
                 <div className="mt-4 p-4 bg-brand-light rounded-lg">
                   <p className="text-brand-dark"><strong>Email:</strong> privacy@truerankdigital.com</p>
                   <p className="text-brand-dark"><strong>Phone:</strong> (732) 475-0139</p>
-                  <p className="text-brand-dark"><strong>Address:</strong> East Brunswick, NJ 08816</p>
+                  <p className="text-brand-dark"><strong>Address:</strong> 288 Summerhill Rd, suite 3, East Brunswick, NJ 08816</p>
                 </div>
               </section>
             </div>

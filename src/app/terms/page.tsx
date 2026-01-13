@@ -118,7 +118,7 @@ export default function TermsPage() {
                 </p>
                 <div className="mt-4 p-4 bg-brand-light/30 rounded-lg">
                   <p className="text-brand-dark font-semibold">True Rank Digital LLC</p>
-                  <p className="text-brand-dark/70">East Brunswick, NJ 08816</p>
+                  <p className="text-brand-dark/70">288 Summerhill Rd, suite 3, East Brunswick, NJ 08816</p>
                   <p className="text-brand-dark/70">Phone: (732) 475-0139</p>
                   <p className="text-brand-dark/70">Email: jon@truerankdigital.com</p>
                 </div>

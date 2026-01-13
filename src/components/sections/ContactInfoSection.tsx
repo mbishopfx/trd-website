@@ -198,7 +198,7 @@ export default function ContactInfoSection() {
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold text-brand-dark mb-2">East Brunswick, NJ 08816</div>
+                    <div className="font-semibold text-brand-dark mb-2">288 Summerhill Rd, suite 3, East Brunswick, NJ 08816</div>
                     <div className="text-brand-dark/70 text-sm leading-relaxed mb-3">
                       Located in the heart of the NY/NJ metropolitan area, serving clients worldwide with 
                       enterprise-level digital marketing solutions.

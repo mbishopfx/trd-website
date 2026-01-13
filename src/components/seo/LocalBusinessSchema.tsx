@@ -18,7 +18,7 @@ export default function LocalBusinessSchema() {
     // Address and Location (Exact NAP)
     address: {
       "@type": "PostalAddress",
-      streetAddress: "East Brunswick",
+      streetAddress: "288 Summerhill Rd, suite 3",
       addressLocality: "East Brunswick",
       addressRegion: "NJ",
       postalCode: "08816",

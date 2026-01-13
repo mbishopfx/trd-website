@@ -20,7 +20,7 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
     name: "True Rank Digital LLC",
     legalName: "True Rank Digital LLC",
     address: {
-      streetAddress: "East Brunswick",
+      streetAddress: "288 Summerhill Rd, suite 3",
       addressLocality: "East Brunswick",
       addressRegion: "NJ",
       postalCode: "08816",
@@ -1326,7 +1326,7 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
       email: napData.email,
       address: {
         "@type": "PostalAddress",
-        streetAddress: "East Brunswick",
+        streetAddress: "288 Summerhill Rd, suite 3",
         addressLocality: "East Brunswick",
         addressRegion: "NJ",
         postalCode: "08816",

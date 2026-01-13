@@ -15,7 +15,7 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
     name: "True Rank Digital LLC",
     legalName: "True Rank Digital LLC",
     address: {
-      streetAddress: "East Brunswick",
+      streetAddress: "288 Summerhill Rd, suite 3",
       addressLocality: "East Brunswick",
       addressRegion: "NJ",
       postalCode: "08816",

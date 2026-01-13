@@ -153,7 +153,7 @@ const socialLinks = [
 ];
 
 const contactInfo = {
-  address: 'East Brunswick, NJ 08816',
+  address: '288 Summerhill Rd, suite 3, East Brunswick, NJ 08816',
   phone: '(732) 475-0139',
   email: 'jon@truerankdigital.com',
   hours: '24/7 Available'

@@ -3,7 +3,6 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import ConditionalLayout from "@/components/layout/ConditionalLayout";
 import SchemaMarkup from "@/components/seo/SchemaMarkup";
-import TRDAnalytics from "@/components/TRDAnalytics";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -111,9 +110,6 @@ export default function RootLayout({
             {children}
           </ConditionalLayout>
         </div>
-        
-        {/* TRD Analytics Tracking */}
-        <TRDAnalytics />
       </body>
     </html>
   );

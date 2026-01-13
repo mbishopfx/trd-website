@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { MapPin, TrendingUp, Phone, Clock, Users, Star, Award, Target, Zap, Shield, BarChart3, Building, ShoppingBag } from 'lucide-react';
 import GEOSchema from '@/components/seo/GEOSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
+import GoogleMapComponent from '@/components/sections/GoogleMap';
 
 export const metadata: Metadata = {
   title: 'North Brunswick NJ SEO Services | Route 27 Local SEO | True Rank Digital',
@@ -515,6 +516,32 @@ export default function NorthBrunswickPage() {
                 <span>5 minutes from North Brunswick</span>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Map Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-4">
+                Serving <span className="text-brand-primary">North Brunswick, NJ</span>
+              </h2>
+              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+                We provide SEO services to North Brunswick businesses from our East Brunswick headquarters
+              </p>
+            </div>
+            <GoogleMapComponent
+              locations={[
+                {
+                  lat: 40.451700,
+                  lng: -74.479400,
+                  name: 'North Brunswick, NJ',
+                  address: 'North Brunswick, New Jersey',
+                },
+              ]}
+              singleLocation={true}
+              height="500px"
+            />
           </div>
         </section>
       </article>

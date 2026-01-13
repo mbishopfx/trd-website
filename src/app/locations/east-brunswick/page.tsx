@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { MapPin, TrendingUp, Phone, Clock, Users, Star, Award, Target, Zap, Shield, BarChart3, Building, Home } from 'lucide-react';
 import GEOSchema from '@/components/seo/GEOSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
+import GoogleMapComponent from '@/components/sections/GoogleMap';
 
 export const metadata: Metadata = {
   title: 'East Brunswick NJ SEO Services | Headquarters Location | True Rank Digital',
@@ -515,6 +516,32 @@ export default function EastBrunswickPage() {
                 <span>Your hometown SEO experts</span>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Map Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-4">
+                Find Us in <span className="text-brand-primary">East Brunswick</span>
+              </h2>
+              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+                Visit our headquarters at 288 Summerhill Rd, suite 3, East Brunswick, NJ 08816
+              </p>
+            </div>
+            <GoogleMapComponent
+              locations={[
+                {
+                  lat: 40.428100,
+                  lng: -74.415700,
+                  name: 'True Rank Digital - Headquarters',
+                  address: '288 Summerhill Rd, suite 3, East Brunswick, NJ 08816',
+                },
+              ]}
+              singleLocation={true}
+              height="500px"
+            />
           </div>
         </section>
       </article>

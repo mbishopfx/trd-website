@@ -7,6 +7,7 @@ import TestimonialsCarousel from '@/components/sections/TestimonialsCarousel';
 import CTASection from '@/components/sections/CTASection';
 import StarterPackBanner from '@/components/sections/StarterPackBanner';
 import HomepageSchema from '@/components/seo/HomepageSchema';
+import GoogleMapComponent from '@/components/sections/GoogleMap';
 
 // GEO-Optimized Metadata for Homepage
 export const metadata: Metadata = {
@@ -119,6 +120,61 @@ export default function Home() {
         {/* Final CTA Section */}
         <section>
           <CTASection />
+        </section>
+
+        {/* Service Locations Map */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-4">
+                Serving <span className="text-brand-primary">Middlesex County</span> & Beyond
+              </h2>
+              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+                Based in East Brunswick, we provide SEO services to businesses throughout New Jersey and nationwide
+              </p>
+            </div>
+            <GoogleMapComponent
+              locations={[
+                {
+                  lat: 40.428100,
+                  lng: -74.415700,
+                  name: 'True Rank Digital - Headquarters',
+                  address: '288 Summerhill Rd, suite 3, East Brunswick, NJ 08816',
+                },
+                {
+                  lat: 40.518700,
+                  lng: -74.412100,
+                  name: 'Edison, NJ',
+                  address: 'Edison, New Jersey',
+                },
+                {
+                  lat: 40.486200,
+                  lng: -74.451800,
+                  name: 'New Brunswick, NJ',
+                  address: 'New Brunswick, New Jersey',
+                },
+                {
+                  lat: 40.451700,
+                  lng: -74.479400,
+                  name: 'North Brunswick, NJ',
+                  address: 'North Brunswick, New Jersey',
+                },
+                {
+                  lat: 40.459500,
+                  lng: -74.361000,
+                  name: 'Sayreville, NJ',
+                  address: 'Sayreville, New Jersey',
+                },
+                {
+                  lat: 40.446200,
+                  lng: -74.386000,
+                  name: 'South River, NJ',
+                  address: 'South River, New Jersey',
+                },
+              ]}
+              height="500px"
+            />
+          </div>
         </section>
       </article>
     </>

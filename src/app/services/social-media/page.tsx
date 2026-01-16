@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Users, Share2, TrendingUp, MessageCircle, Heart, Target, ArrowRight, CheckCircle } from 'lucide-react';
+import { Users, Share2, TrendingUp, MessageCircle, Heart, Target, ArrowRight, CheckCircle, Megaphone, Star } from 'lucide-react';
 import GEOSchema from '@/components/seo/GEOSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 import ServiceSchema from '@/components/seo/ServiceSchema';
@@ -34,15 +34,27 @@ export default function SocialMediaPage() {
   const faqs = [
     {
       question: "What social media platforms does True Rank Digital manage?",
-      answer: "True Rank Digital manages all major social platforms including Facebook, Instagram, LinkedIn, TikTok, Twitter/X, Pinterest, and YouTube. We create platform-specific strategies that maximize engagement and reach for each channel based on your target audience."
+      answer: "True Rank Digital manages all major social platforms including Facebook, Instagram, LinkedIn, TikTok, Twitter/X, Pinterest, and YouTube. We create platform-specific strategies that maximize engagement and reach for each channel based on your target audience, with all content aligned to your Knowledge Graph and website schema."
+    },
+    {
+      question: "How do content campaigns help with Google authority?",
+      answer: "Our strategic content campaigns use schema-aligned content that links back to your Knowledge Graph and website schema. This reinforces your brand entity recognition with Google, demonstrates expertise through E-E-A-T signals, and shows your brand is ALIVE and trustworthy. Consistent, authoritative campaigns prevent Google from counting you as lesser than competitors."
+    },
+    {
+      question: "How does True Rank Digital handle review and reply management?",
+      answer: "We provide 24/7 monitoring across Google Business Profile, Facebook, Yelp, Trustpilot, BBB, and all review platforms. Our team responds professionally and timely to all reviews with schema-aligned responses that reinforce your Knowledge Graph. This active review management shows Google your brand is responsive, trustworthy, and actively engaged - key signals for authority ranking."
     },
     {
       question: "How does organic social media marketing differ from paid advertising?",
-      answer: "Organic social media focuses on building authentic engagement through quality content, community interaction, and strategic posting. While paid advertising provides immediate reach, organic growth builds lasting relationships with your audience. True Rank Digital offers both services for comprehensive social presence."
+      answer: "Organic social media focuses on building authentic engagement through quality content, community interaction, and strategic posting that aligns with your Knowledge Graph. While paid advertising provides immediate reach, organic growth with schema-aligned content builds lasting relationships and strengthens your Google authority. True Rank Digital offers both services for comprehensive social presence."
     },
     {
       question: "How often will you post on my social media accounts?",
-      answer: "True Rank Digital creates customized posting schedules based on your industry and audience. Typically, we recommend 3-5 posts per week on primary platforms, with daily engagement activities. Our content calendar ensures consistent, strategic posting that maximizes visibility."
+      answer: "True Rank Digital creates customized posting schedules based on your industry and audience. Typically, we recommend 3-5 posts per week on primary platforms, with daily engagement activities. Our content calendar ensures consistent, strategic posting with schema-aligned content that maximizes visibility and reinforces your Knowledge Graph connection."
+    },
+    {
+      question: "Why is review response rate important for Google?",
+      answer: "Google evaluates your review response rate and quality as signals of brand authority and trustworthiness. Active, professional review responses show Google your brand is ALIVE, responsive, and cares about customer experience. Our review and reply management ensures timely, schema-aligned responses that demonstrate E-E-A-T signals and prevent Google from counting you as lesser than competitors."
     }
   ];
 
@@ -66,6 +78,16 @@ export default function SocialMediaPage() {
       icon: <Target className="w-8 h-8" />,
       title: 'Trustworthy Brand Presence',
       description: 'High authority strategies that make your brand show ALIVE and trustworthy, preventing Google from counting you as lesser than competitors.'
+    },
+    {
+      icon: <Megaphone className="w-8 h-8" />,
+      title: 'Content Campaigns',
+      description: 'Strategic content campaigns that drive engagement, build authority, and reinforce your brand messaging across all platforms with schema-aligned content.'
+    },
+    {
+      icon: <Star className="w-8 h-8" />,
+      title: 'Review and Reply Management',
+      description: 'Active review monitoring and professional response management across Google Business Profile, Facebook, Yelp, and all review platforms to build trust and authority.'
     }
   ];
 
@@ -170,7 +192,7 @@ export default function SocialMediaPage() {
               Our <strong className="text-brand-primary">Social Media</strong> Services
             </h2>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="glass-card p-6 text-center hover:scale-105 transition-transform duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center mx-auto mb-4 text-white">
@@ -208,6 +230,182 @@ export default function SocialMediaPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Content Campaigns Section */}
+        <section className="py-16 bg-white/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-pink-100 rounded-full mb-6">
+                  <Megaphone className="w-5 h-5 text-pink-600" />
+                  <span className="text-pink-600 font-semibold text-sm">Content Campaigns</span>
+                </div>
+                <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+                  Strategic <strong className="text-brand-primary">Content Campaigns</strong> That Build Authority
+                </h2>
+                <p className="text-xl text-brand-dark/70 mb-6 leading-relaxed">
+                  True Rank Digital creates strategic <strong>content campaigns</strong> that drive engagement, build authority, and reinforce your brand messaging across all platforms. Our campaigns use <strong>schema-aligned content</strong> that strengthens your Knowledge Graph connection.
+                </p>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-brand-dark">Campaign Strategy & Planning:</strong>
+                      <p className="text-brand-dark/70">We develop comprehensive content campaigns aligned with your business goals, Knowledge Graph signals, and target audience across all platforms.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-brand-dark">Schema-Aligned Content Creation:</strong>
+                      <p className="text-brand-dark/70">Every campaign piece includes structured data markers that link back to your website schema and reinforce your Google Knowledge Graph entity.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-brand-dark">Cross-Platform Consistency:</strong>
+                      <p className="text-brand-dark/70">Campaigns maintain consistent messaging, branding, and authority signals across Facebook, Instagram, LinkedIn, Twitter/X, TikTok, and YouTube.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <strong className="text-brand-dark">Performance Tracking & Optimization:</strong>
+                      <p className="text-brand-dark/70">We track campaign performance, engagement metrics, and Knowledge Graph impact to continuously optimize for maximum authority and visibility.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div className="glass-card p-8 bg-gradient-to-br from-pink-50 to-rose-50">
+                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-4">
+                  Campaign Types We Execute:
+                </h3>
+                <div className="space-y-4">
+                  {[
+                    'Brand awareness campaigns with E-E-A-T signals',
+                    'Product/service launch campaigns with schema alignment',
+                    'Thought leadership campaigns demonstrating expertise',
+                    'Seasonal campaigns with timely, relevant content',
+                    'Authority-building campaigns linking to Knowledge Graph',
+                    'Engagement campaigns that show your brand is ALIVE'
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start">
+                      <TrendingUp className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                      <span className="text-brand-dark/80">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Review and Reply Management Section */}
+        <section className="py-16 bg-gradient-to-br from-rose-50 to-pink-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-pink-100 rounded-full mb-6">
+                <Star className="w-5 h-5 text-pink-600" />
+                <span className="text-pink-600 font-semibold text-sm">Review Management</span>
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+                Professional <strong className="text-brand-primary">Review and Reply Management</strong> That Builds Trust
+              </h2>
+              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto leading-relaxed">
+                Active <strong>review monitoring and professional response management</strong> across Google Business Profile, Facebook, Yelp, and all review platforms to build trust, demonstrate authority, and show Google your brand is <strong>ALIVE and trustworthy</strong>.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="glass-card p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center mb-6 text-white">
+                  <MessageCircle className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-4">
+                  Multi-Platform Review Monitoring
+                </h3>
+                <ul className="space-y-3 text-brand-dark/70">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span>24/7 monitoring across <strong>Google Business Profile, Facebook, Yelp, Trustpilot, BBB, and industry-specific platforms</strong></span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span>Real-time alerts for new reviews, comments, and mentions</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span>Review sentiment analysis and trend tracking</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span>Competitor review analysis for market insights</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="glass-card p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center mb-6 text-white">
+                  <Star className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-4">
+                  Professional Response Management
+                </h3>
+                <ul className="space-y-3 text-brand-dark/70">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span><strong>Timely responses</strong> to all reviews (positive and negative) showing your brand is responsive and ALIVE</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span><strong>Professional, brand-aligned</strong> responses that demonstrate E-E-A-T signals</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span><strong>Schema-aligned responses</strong> that reinforce your Knowledge Graph and business entity information</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                    <span><strong>Review generation strategies</strong> to encourage more positive reviews from satisfied customers</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="glass-card p-8 bg-gradient-to-br from-brand-primary/10 to-pink-100/50">
+              <h3 className="text-2xl font-heading font-bold text-brand-dark mb-4">
+                Why Review Management Matters for Google Authority
+              </h3>
+              <p className="text-brand-dark/80 mb-6 leading-relaxed">
+                <strong>Google is strict</strong> - they evaluate your review response rate, response quality, and overall review sentiment to determine your brand authority. Active <strong>review and reply management</strong> shows Google that your brand is:
+              </p>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <Heart className="w-6 h-6 text-brand-primary" />
+                  </div>
+                  <h4 className="font-semibold text-brand-dark mb-2">ALIVE & Active</h4>
+                  <p className="text-sm text-brand-dark/70">Timely responses show your brand is actively engaged and trustworthy</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <Target className="w-6 h-6 text-brand-primary" />
+                  </div>
+                  <h4 className="font-semibold text-brand-dark mb-2">Authoritative</h4>
+                  <p className="text-sm text-brand-dark/70">Professional responses demonstrate expertise and build E-E-A-T signals</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-brand-primary/20 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <Share2 className="w-6 h-6 text-brand-primary" />
+                  </div>
+                  <h4 className="font-semibold text-brand-dark mb-2">Knowledge Graph Ready</h4>
+                  <p className="text-sm text-brand-dark/70">Schema-aligned responses strengthen your entity recognition</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

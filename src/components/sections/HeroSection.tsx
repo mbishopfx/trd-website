@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Rocket, TrendingUp, Sparkles } from 'lucide-react';
 
@@ -70,87 +69,25 @@ export default function HeroSection() {
           {/* Left Column - Text Content */}
           <div className="text-center lg:text-left">
           
-          {/* Company Logo */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8"
-          >
-            <div className="relative inline-flex items-center justify-center w-40 h-40 mx-auto lg:mx-0 mb-6">
-              {/* Floating Frame Effect */}
-              <div className="absolute inset-0 glass-card rounded-3xl shadow-glow hover:shadow-glow-lg transition-all duration-300 bg-white/10 backdrop-blur-md border-2 border-white/30">
-                <div className="absolute inset-2 rounded-2xl bg-gradient-to-br from-brand-primary/10 to-brand-secondary/5"></div>
-              </div>
-              
-              {/* Logo */}
-              <div className="relative z-10 w-28 h-28">
-                <Image
-                  src="/images/logos/trdlogoblue.webp"
-                  alt="True Rank Digital Logo"
-                  width={112}
-                  height={112}
-                  className="w-full h-full object-contain drop-shadow-lg"
-                  priority
-                />
-              </div>
-              
-              {/* Floating Animation Elements */}
-              <motion.div
-                animate={{
-                  y: [0, -8, 0],
-                  rotate: [0, 2, 0]
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="absolute -top-2 -right-2 w-3 h-3 bg-brand-accent/80 rounded-full shadow-lg"
-              />
-              <motion.div
-                animate={{
-                  y: [0, 6, 0],
-                  rotate: [0, -3, 0]
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1
-                }}
-                className="absolute -bottom-2 -left-2 w-2 h-2 bg-brand-primary/70 rounded-full shadow-lg"
-              />
-              <motion.div
-                animate={{
-                  y: [0, -4, 0],
-                  x: [0, 2, 0]
-                }}
-                transition={{
-                  duration: 3.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 2
-                }}
-                className="absolute top-4 -left-4 w-1.5 h-1.5 bg-brand-secondary/60 rounded-full shadow-md"
-              />
-            </div>
-          </motion.div>
-
-          {/* Main Headline - GEO Optimized with Subject-Predicate-Object */}
+          {/* Main Headline - H1 for NAP consistency with GMB */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold text-brand-dark mb-6 leading-tight"
+            className="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold text-brand-primary mb-6 leading-tight"
           >
-            <span className="text-brand-primary font-bold">True Rank Digital</span>
-            <br />
-            <span className="text-brand-dark">Delivers </span>
-            <span className="text-brand-primary font-bold">Google Business Optimization</span>
-            <br />
-            <span className="text-brand-dark">That Gets Businesses in the Local Pack</span>
+            True Rank Digital
           </motion.h1>
+
+          {/* Tagline */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-2xl sm:text-3xl lg:text-4xl text-brand-dark mb-8 leading-relaxed"
+          >
+            We Deliver <span className="text-brand-primary font-semibold">Google Business Optimization</span> That Gets Businesses in the <span className="text-brand-primary font-semibold">Local Pack</span>
+          </motion.p>
 
           {/* Subheadline */}
           <motion.p

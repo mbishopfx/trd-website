@@ -6,9 +6,9 @@ import FAQSchema from '@/components/seo/FAQSchema';
 import ServiceSchema from '@/components/seo/ServiceSchema';
 
 export const metadata: Metadata = {
-  title: 'Social Marketing and Advertising Services | True Rank Digital',
-  description: 'Grow your brand naturally with True Rank Digital\'s organic social media services. We manage and enhance your social presence through strategic content and community engagement.',
-  keywords: 'social media marketing, organic social media, social media management, community engagement, content strategy, True Rank Digital, social advertising',
+  title: 'Social Media Multi-Platform Management | High Authority Strategies | True Rank Digital',
+  description: 'True Rank Digital uses high authority strategies to make your brand show ALIVE and trustworthy across all platforms. Google is strict - link your social presence back to your Knowledge Graph and website schema to prevent being counted as lesser than.',
+  keywords: 'social media multi-platform management, high authority social media, Knowledge Graph alignment, schema-aligned content, social media authority, True Rank Digital, multi-platform social strategy',
   openGraph: {
     title: 'Social Marketing and Advertising | True Rank Digital',
     description: 'Organic social media management and advertising services to grow your brand.',
@@ -49,23 +49,23 @@ export default function SocialMediaPage() {
   const features = [
     {
       icon: <Share2 className="w-8 h-8" />,
-      title: 'Content Strategy',
-      description: 'Strategic content planning and creation that resonates with your target audience and drives engagement.'
+      title: 'High Authority Content Strategy',
+      description: 'Strategic content that demonstrates expertise, builds trust, and aligns with your Knowledge Graph for maximum Google authority.'
     },
     {
       icon: <MessageCircle className="w-8 h-8" />,
-      title: 'Community Management',
-      description: 'Active community engagement, comment moderation, and relationship building with your followers.'
+      title: 'Multi-Platform Management',
+      description: 'Consistent brand presence across all platforms - Facebook, Instagram, LinkedIn, Twitter/X, TikTok, YouTube - that links back to your schema.'
     },
     {
       icon: <Heart className="w-8 h-8" />,
-      title: 'Brand Awareness',
-      description: 'Increase brand visibility and recognition through consistent, on-brand social presence.'
+      title: 'Knowledge Graph Alignment',
+      description: 'Schema-aligned content that strengthens your Google Knowledge Graph connection, ensuring Google recognizes your brand as a trusted entity.'
     },
     {
       icon: <Target className="w-8 h-8" />,
-      title: 'Audience Growth',
-      description: 'Targeted strategies to grow your follower base with engaged, relevant audiences.'
+      title: 'Trustworthy Brand Presence',
+      description: 'High authority strategies that make your brand show ALIVE and trustworthy, preventing Google from counting you as lesser than competitors.'
     }
   ];
 
@@ -81,12 +81,12 @@ export default function SocialMediaPage() {
       <GEOSchema 
         pageType="service"
         pageData={{
-          title: "Social Marketing and Advertising by True Rank Digital",
-          description: "Grow your brand naturally with True Rank Digital's organic social media services. Strategic content and community engagement.",
+          title: "Social Media Multi-Platform Management by True Rank Digital",
+          description: "True Rank Digital uses high authority strategies to make your brand show ALIVE and trustworthy across all platforms. Strong presence that links back to Knowledge Graph and website schema.",
           url: "https://truerankdigital.com/services/social-media",
-          keywords: ["social media marketing", "organic social media", "community engagement", "content strategy"],
+          keywords: ["social media multi-platform management", "high authority social media", "Knowledge Graph alignment", "schema-aligned content", "social media authority"],
           category: "Social Media Marketing Services",
-          serviceType: "Social Media Marketing",
+          serviceType: "Social Media Multi-Platform Management",
           areaServed: ["United States"],
         }}
         breadcrumbs={[
@@ -101,10 +101,10 @@ export default function SocialMediaPage() {
       />
       
       <ServiceSchema
-        serviceName="Social Marketing and Advertising"
+        serviceName="Social Media Multi-Platform Management"
         serviceUrl="https://truerankdigital.com/services/social-media"
-        description="Grow your brand naturally with True Rank Digital's organic social media services. We manage and enhance your social presence through strategic content and community engagement."
-        serviceType="Social Media Marketing"
+        description="True Rank Digital uses high authority strategies to make your brand show ALIVE and trustworthy across all platforms. Google is strict - link your social presence back to your Knowledge Graph and website schema to prevent being counted as lesser than."
+        serviceType="Social Media Multi-Platform Management"
         mentions={[
           {
             type: "Organization",
@@ -154,11 +154,11 @@ export default function SocialMediaPage() {
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
-              <strong className="text-brand-primary">True Rank Digital</strong> Delivers Professional <strong>Social Marketing and Advertising</strong>
+              <strong className="text-brand-primary">True Rank Digital</strong> Delivers <strong>Social Media Multi-Platform Management</strong> with High Authority Strategies
             </h1>
             
             <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto mb-12">
-              Grow your brand naturally with <strong>True Rank Digital&apos;s</strong> organic <strong>social media services</strong>. We manage and enhance your social presence through <strong>strategic content</strong> and <strong>community engagement</strong>.
+              We use <strong>high authority strategies</strong> to make sure your brand shows <strong>ALIVE and trustworthy</strong> throughout all platforms. <strong>Google is strict</strong> and the last thing you want is for them to count you off as lesser than - so having a <strong>strong presence that links back to your Knowledge Graph and website schema is key</strong>. Our multi-platform management ensures your brand maintains consistent authority across Facebook, Instagram, LinkedIn, Twitter/X, TikTok, and YouTube.
             </p>
           </div>
         </section>
@@ -188,15 +188,15 @@ export default function SocialMediaPage() {
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-heading font-bold text-brand-dark text-center mb-12">
-              How <strong className="text-brand-primary">Social Media Marketing</strong> Works
+              How Our <strong className="text-brand-primary">High Authority Multi-Platform Management</strong> Works
             </h2>
             
             <div className="space-y-6">
               {[
-                { step: '01', title: 'Audit & Strategy', desc: 'We analyze your current social presence and develop a customized strategy aligned with your business goals.' },
-                { step: '02', title: 'Content Creation', desc: 'Our team creates engaging, on-brand content including graphics, videos, and copy that resonates with your audience.' },
-                { step: '03', title: 'Community Engagement', desc: 'We actively engage with your community, respond to comments, and build relationships with followers.' },
-                { step: '04', title: 'Analytics & Optimization', desc: 'Monthly reporting and continuous optimization ensure your social strategy delivers measurable results.' }
+                { step: '01', title: 'Authority Audit & Schema Alignment', desc: 'We analyze your current social presence, Knowledge Graph status, and website schema to identify gaps that could make Google count you as lesser than competitors. We develop a high authority strategy aligned with your business goals.' },
+                { step: '02', title: 'Schema-Aligned Content Creation', desc: 'Our team creates engaging, trustworthy content that links back to your Knowledge Graph and website schema. Every post, graphic, and video reinforces your brand authority across all platforms.' },
+                { step: '03', title: 'Multi-Platform Brand Consistency', desc: 'We actively manage your presence across Facebook, Instagram, LinkedIn, Twitter/X, TikTok, and YouTube, ensuring consistent messaging that makes your brand show ALIVE and trustworthy to Google.' },
+                { step: '04', title: 'Knowledge Graph Optimization & Reporting', desc: 'Continuous monitoring of your cross-platform authority, Knowledge Graph signals, and schema alignment ensures Google recognizes your brand as a trusted entity. Monthly reporting tracks your authority growth.' }
               ].map((item, index) => (
                 <div key={index} className="flex items-start space-x-4 glass-card p-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-xl flex items-center justify-center text-white font-bold flex-shrink-0">
@@ -208,6 +208,72 @@ export default function SocialMediaPage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Google Authority Section */}
+        <section className="py-16 bg-gradient-to-br from-pink-50 to-rose-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-heading font-bold text-brand-dark text-center mb-6">
+              Why <strong className="text-brand-primary">Google Authority</strong> Matters for Your Social Media
+            </h2>
+            <p className="text-xl text-brand-dark/70 text-center mb-12 max-w-3xl mx-auto">
+              <strong>Google is strict</strong> - they evaluate your entire online presence to determine your brand authority. The last thing you want is for Google to count you off as lesser than your competitors.
+            </p>
+            
+            <div className="glass-card p-8 mb-8">
+              <h3 className="text-2xl font-heading font-bold text-brand-dark mb-4">
+                <strong className="text-brand-primary">High Authority Strategy:</strong> Making Your Brand Show ALIVE
+              </h3>
+              <p className="text-brand-dark/80 mb-6 leading-relaxed">
+                True Rank Digital uses <strong>high authority strategies</strong> that make your brand appear <strong>ALIVE and trustworthy</strong> throughout all social platforms. We ensure every post, interaction, and piece of content reinforces your expertise and credibility in Google&apos;s eyes.
+              </p>
+              <ul className="space-y-3 text-brand-dark/70">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                  <span><strong>Consistent messaging</strong> across all platforms that aligns with your Knowledge Graph</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                  <span><strong>Schema-aligned content</strong> that links back to your website schema and strengthens your Google authority</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                  <span><strong>E-E-A-T signals</strong> through authentic, expert content that demonstrates your brand&apos;s Experience, Expertise, Authoritativeness, and Trustworthiness</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                  <span><strong>Active engagement</strong> that shows your brand is alive, responsive, and trustworthy to both users and Google&apos;s algorithms</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="glass-card p-8 bg-gradient-to-br from-brand-primary/10 to-pink-100/50">
+              <h3 className="text-2xl font-heading font-bold text-brand-dark mb-4">
+                <strong className="text-brand-primary">Knowledge Graph & Schema Alignment:</strong> The Key to Google Recognition
+              </h3>
+              <p className="text-brand-dark/80 mb-6 leading-relaxed">
+                Having a <strong>strong presence that links back to your Knowledge Graph and website schema is key</strong> to preventing Google from counting you as lesser than your competitors. Our multi-platform management ensures:
+              </p>
+              <ul className="space-y-3 text-brand-dark/70">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                  <span>All social profiles use <strong>consistent NAP (Name, Address, Phone)</strong> information that matches your Knowledge Graph</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Content includes <strong>structured data markers</strong> that reinforce your website schema</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Social media profiles <strong>link back to your website</strong> with proper schema attribution</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mr-3 mt-0.5 flex-shrink-0" />
+                  <span><strong>Cross-platform consistency</strong> that strengthens your brand entity recognition in Google&apos;s Knowledge Graph</span>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
@@ -260,10 +326,10 @@ export default function SocialMediaPage() {
                 <TrendingUp className="w-10 h-10 text-white" />
               </div>
               <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
-                Ready to Grow Your <strong className="text-brand-primary">Social Presence</strong>?
+                Ready to Build <strong className="text-brand-primary">High Authority</strong> Across All Platforms?
               </h2>
               <p className="text-brand-dark/70 mb-6">
-                Let <strong>True Rank Digital</strong> transform your social media into a powerful brand-building tool.
+                Don&apos;t let Google count you as lesser than. Let <strong>True Rank Digital</strong> create a <strong>strong social media presence that links back to your Knowledge Graph and website schema</strong>, making your brand show <strong>ALIVE and trustworthy</strong> throughout all platforms.
               </p>
               <Link
                 href="/contact"

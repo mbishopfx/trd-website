@@ -44,8 +44,8 @@ export default function ServicesPage() {
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: 'Social Marketing and Advertising',
-      description: 'Grow your brand naturally with True Rank Digital\'s organic social media services. We manage and enhance your social presence through strategic content and community engagement.',
+      title: 'Social Media Multi-Platform Management',
+      description: 'True Rank Digital uses high authority strategies to make your brand show ALIVE and trustworthy across all platforms. Strong presence that links back to Knowledge Graph and website schema is key.',
       link: '/services/social-media',
       color: 'from-pink-500 to-rose-500'
     },

@@ -128,10 +128,10 @@ const navigationItems: NavItem[] = [
         description: 'Custom website design, development, and UX optimization'
       },
       {
-        name: 'Social Marketing',
+        name: 'Social Media Multi-Platform Management',
         href: '/services/social-media',
         icon: <Users className="w-4 h-4" />,
-        description: 'Organic social media management and advertising'
+        description: 'High authority strategies that link back to Knowledge Graph and website schema'
       },
       {
         name: 'CRM With AI Chat',

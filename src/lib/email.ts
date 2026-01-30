@@ -1,18 +1,18 @@
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || 'smtp.gmail.com',
-  port: parseInt(process.env.SMTP_PORT || '587'),
-  secure: process.env.SMTP_SECURE === 'true',
+  host: process.env.SMTP_HOST?.trim() || 'smtp.gmail.com',
+  port: parseInt(process.env.SMTP_PORT?.trim() || '587'),
+  secure: process.env.SMTP_SECURE?.trim() === 'true',
   auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
+    user: process.env.SMTP_USER?.trim(),
+    pass: process.env.SMTP_PASS?.trim(),
   },
 });
 
 export async function sendLeadEmail(formTitle: string, leadData: Record<string, any>) {
-  const recipient = process.env.RECIPIENT_EMAIL || 'jon@truerankdigital.com';
-  const sender = process.env.SMTP_USER || 'bishop@truerankdigital.com';
+  const recipient = (process.env.RECIPIENT_EMAIL?.trim()) || 'jon@truerankdigital.com';
+  const sender = (process.env.SMTP_USER?.trim()) || 'bishop@truerankdigital.com';
 
   // Format the data for the email
   const fieldEntries = Object.entries(leadData)

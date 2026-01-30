@@ -9,6 +9,7 @@ import StarterPackBanner from '@/components/sections/StarterPackBanner';
 import HomepageSchema from '@/components/seo/HomepageSchema';
 import GoogleMapComponent from '@/components/sections/GoogleMap';
 import ContactFormSection from '@/components/sections/ContactFormSection';
+import Script from 'next/script';
 
 // GEO-Optimized Metadata for Homepage
 export const metadata: Metadata = {
@@ -119,11 +120,40 @@ export default function Home() {
         </section>
 
         {/* Lead Capture Form */}
-        <section>
-          <ContactFormSection 
-            title="Get Found on Google Local Pack"
-            description="Enter your details below to receive a custom local domination strategy for your business."
-          />
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-4">
+                Get Found on <span className="text-brand-primary">Google Local Pack</span>
+              </h2>
+              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+                Enter your details below to receive a custom local domination strategy for your business.
+              </p>
+            </div>
+            <div className="max-w-3xl mx-auto glass-card p-4 overflow-hidden">
+              <iframe
+                src="https://agency.truerankdigital.com/widget/form/okcMKCPqVph5zIp4b4Nk"
+                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px', minHeight: '802px' }}
+                id="inline-okcMKCPqVph5zIp4b4Nk" 
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Main Form"
+                data-height="802"
+                data-layout-iframe-id="inline-okcMKCPqVph5zIp4b4Nk"
+                data-form-id="okcMKCPqVph5zIp4b4Nk"
+                title="Main Form"
+              ></iframe>
+              <Script 
+                src="https://agency.truerankdigital.com/js/form_embed.js"
+                strategy="lazyOnload"
+              />
+            </div>
+          </div>
         </section>
         
         {/* Final CTA Section */}

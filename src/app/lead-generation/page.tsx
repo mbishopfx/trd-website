@@ -33,6 +33,15 @@ export default function LeadGenerationPage() {
               title="Start Generating More Leads" 
               description="Tell us about your project and we'll show you how to dominate your local market."
             />
+            
+            <div className="mt-6 text-center">
+              <p className="text-[10px] text-gray-500">
+                By submitting your information, you agree to our 
+                <a href="/privacy-policy" className="mx-1 underline hover:text-brand-primary">Privacy Policy</a> 
+                and 
+                <a href="/terms" className="mx-1 underline hover:text-brand-primary">Terms of Service</a>.
+              </p>
+            </div>
           </div>
         </section>
       </article>

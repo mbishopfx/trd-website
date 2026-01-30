@@ -8,7 +8,7 @@ import CTASection from '@/components/sections/CTASection';
 import StarterPackBanner from '@/components/sections/StarterPackBanner';
 import HomepageSchema from '@/components/seo/HomepageSchema';
 import GoogleMapComponent from '@/components/sections/GoogleMap';
-import LeadCaptureForm from '@/components/sections/LeadCaptureForm';
+import ContactFormSection from '@/components/sections/ContactFormSection';
 
 // GEO-Optimized Metadata for Homepage
 export const metadata: Metadata = {
@@ -119,13 +119,11 @@ export default function Home() {
         </section>
 
         {/* Lead Capture Form */}
-        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <LeadCaptureForm 
-              title="Get Found on Google Local Pack"
-              description="Enter your details below to receive a custom local domination strategy for your business."
-            />
-          </div>
+        <section>
+          <ContactFormSection 
+            title="Get Found on Google Local Pack"
+            description="Enter your details below to receive a custom local domination strategy for your business."
+          />
         </section>
         
         {/* Final CTA Section */}

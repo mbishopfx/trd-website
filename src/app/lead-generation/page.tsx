@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Users, TrendingUp } from 'lucide-react';
 import GEOSchema from '@/components/seo/GEOSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
-import LeadCaptureForm from '@/components/sections/LeadCaptureForm';
+import ContactFormSection from '@/components/sections/ContactFormSection';
 
 export const metadata: Metadata = {
   title: 'Lead Generation Services | Get More Qualified Leads | True Rank Digital',
@@ -19,17 +19,17 @@ export default function LeadGenerationPage() {
     <>
       <GEOSchema pageType="landing" pageData={{ title: "Get More Qualified Leads with Lead Generation Services", description: "True Rank Digital helps businesses get more leads with SEO and conversion optimization.", url: "https://truerankdigital.com/lead-generation", keywords: ["lead generation", "get more leads"], category: "Lead Generation", serviceType: "Lead Generation Services" }} breadcrumbs={[{ name: "Home", url: "https://truerankdigital.com" }, { name: "Lead Generation", url: "https://truerankdigital.com/lead-generation" }]} entities={{ primary: ["True Rank Digital", "Lead Generation", "Qualified Leads"] }} />
       <FAQSchema faqs={faqs} pageUrl="https://truerankdigital.com/lead-generation" category="service" />
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-gray-900 via-blue-900 to-black">
+      <article className="pt-16 min-h-screen bg-gradient-to-b from-blue-50 to-white">
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-6">
+            <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
               Get More <strong className="text-brand-primary">Qualified Leads</strong>
             </h1>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12">
+            <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-12">
               <strong>True Rank Digital</strong> provides <strong>lead generation services</strong> with SEO optimization, conversion optimization, and lead capture strategies designed to generate more qualified leads for your business.
             </p>
             
-            <LeadCaptureForm 
+            <ContactFormSection 
               title="Start Generating More Leads" 
               description="Tell us about your project and we'll show you how to dominate your local market."
             />

@@ -4,14 +4,24 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, User, Mail, Building, MessageSquare, Rocket, CheckCircle, AlertCircle } from 'lucide-react';
 
-export default function ContactFormSection() {
+interface ContactFormSectionProps {
+  title?: string;
+  description?: string;
+}
+
+export default function ContactFormSection({ 
+  title = "Ready to Get Started?",
+  description = "Fill out the form below and we'll get back to you within 24 hours with a customized strategy for your business."
+}: ContactFormSectionProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
-    message: ''
+    message: '',
+    consentTransactional: false,
+    consentMarketing: false
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,9 +38,12 @@ export default function ContactFormSection() {
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+    
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: type === 'checkbox' ? checked : value
     });
   };
 
@@ -40,6 +53,12 @@ export default function ContactFormSection() {
     if (!formData.name || !formData.email || !formData.message) {
       setSubmitStatus('error');
       setSubmitMessage('Please fill in all required fields.');
+      return;
+    }
+
+    if (!formData.consentTransactional) {
+      setSubmitStatus('error');
+      setSubmitMessage('You must consent to receive transactional messages to submit the form.');
       return;
     }
 
@@ -55,7 +74,9 @@ export default function ContactFormSection() {
         },
         body: JSON.stringify({
           ...formData,
-          subject: `Contact Form - ${formData.service || 'General Inquiry'}`
+          subject: `Contact Form - ${formData.service || 'General Inquiry'}`,
+          consentTransactional: formData.consentTransactional,
+          consentMarketing: formData.consentMarketing
         }),
       });
 
@@ -104,11 +125,11 @@ export default function ContactFormSection() {
           </div>
           
           <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
-            Ready to Get Started?
+            {title}
           </h2>
           
           <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-            Fill out the form below and we'll get back to you within 24 hours with a customized strategy for your business.
+            {description}
           </p>
         </motion.div>
 
@@ -232,6 +253,42 @@ export default function ContactFormSection() {
                 className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm text-gray-900 placeholder-gray-500 resize-none"
                 placeholder="Tell us about your business goals and how we can help you achieve them..."
               />
+            </div>
+
+            {/* Compliance Checkboxes */}
+            <div className="space-y-4 pt-2">
+              <label className="flex items-start gap-3 cursor-pointer">
+                <div className="flex items-center h-5 mt-0.5">
+                  <input
+                    type="checkbox"
+                    id="consentTransactional"
+                    name="consentTransactional"
+                    checked={formData.consentTransactional}
+                    onChange={handleInputChange}
+                    required
+                    className="w-5 h-5 bg-white border-brand-dark/20 rounded text-brand-primary focus:ring-brand-primary transition-all cursor-pointer"
+                  />
+                </div>
+                <span className="text-xs text-brand-dark/60 leading-tight">
+                  I consent to receive transactional messages from <strong>True Rank Digital</strong> at the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out. <span className="text-red-500">*</span>
+                </span>
+              </label>
+
+              <label className="flex items-start gap-3 cursor-pointer">
+                <div className="flex items-center h-5 mt-0.5">
+                  <input
+                    type="checkbox"
+                    id="consentMarketing"
+                    name="consentMarketing"
+                    checked={formData.consentMarketing}
+                    onChange={handleInputChange}
+                    className="w-5 h-5 bg-white border-brand-dark/20 rounded text-brand-primary focus:ring-brand-primary transition-all cursor-pointer"
+                  />
+                </div>
+                <span className="text-xs text-brand-dark/60 leading-tight">
+                  I consent to receive marketing and promotional messages from <strong>True Rank Digital</strong> at the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out.
+                </span>
+              </label>
             </div>
 
             {/* Submit Button */}

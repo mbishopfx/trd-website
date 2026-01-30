@@ -9,6 +9,8 @@ interface Submission {
   ip_address?: string;
   user_agent?: string;
   created_at: string;
+  consent_transactional?: boolean;
+  consent_marketing?: boolean;
 }
 
 interface Field {
@@ -64,7 +66,7 @@ export default function SubmissionsClient({
     }
 
     // Create CSV headers
-    const headers = ['Submission Date', ...formFields.map(f => f.label), 'IP Address'];
+    const headers = ['Submission Date', ...formFields.map(f => f.label), 'Transactional SMS Consent', 'Marketing SMS Consent', 'IP Address'];
     const csvRows = [headers.join(',')];
 
     // Add data rows
@@ -84,6 +86,8 @@ export default function SubmissionsClient({
           }
           return stringValue;
         }),
+        submission.consent_transactional ? 'CONSENTED' : 'NO',
+        submission.consent_marketing ? 'CONSENTED' : 'NO',
         submission.ip_address || '',
       ];
       csvRows.push(row.join(','));
@@ -220,7 +224,7 @@ export default function SubmissionsClient({
             <div className="p-6">
               {/* Meta Info */}
               <div className="mb-6 pb-6 border-b border-gray-700">
-                <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="grid grid-cols-2 gap-4 text-sm mb-4">
                   <div>
                     <div className="text-gray-400 mb-1">Submitted</div>
                     <div className="text-white">
@@ -232,6 +236,24 @@ export default function SubmissionsClient({
                     <div className="text-white">
                       {selectedSubmission.ip_address || 'Unknown'}
                     </div>
+                  </div>
+                </div>
+
+                {/* Compliance Badges */}
+                <div className="flex gap-2 mt-4">
+                  <div className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${
+                    selectedSubmission.consent_transactional 
+                      ? 'bg-green-500/20 text-green-400 border border-green-500/30' 
+                      : 'bg-red-500/20 text-red-400 border border-red-500/30'
+                  }`}>
+                    Transactional SMS: {selectedSubmission.consent_transactional ? 'Consented' : 'No Consent'}
+                  </div>
+                  <div className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${
+                    selectedSubmission.consent_marketing 
+                      ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' 
+                      : 'bg-gray-500/20 text-gray-400 border border-gray-500/30'
+                  }`}>
+                    Marketing SMS: {selectedSubmission.consent_marketing ? 'Consented' : 'No Consent'}
                   </div>
                 </div>
               </div>

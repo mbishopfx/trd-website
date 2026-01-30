@@ -95,6 +95,10 @@ export async function POST(request: Request, context: RouteContext) {
                'unknown';
     const userAgent = headersList.get('user-agent') || 'unknown';
 
+    // Extract compliance fields if they exist
+    const consentTransactional = data.consent_transactional === true || data.consent_transactional === 'on';
+    const consentMarketing = data.consent_marketing === true || data.consent_marketing === 'on';
+
     // Create submission
     const { data: submission, error: submitError } = await supabase
       .from('form_submissions')
@@ -103,6 +107,8 @@ export async function POST(request: Request, context: RouteContext) {
         data,
         ip_address: ip,
         user_agent: userAgent,
+        consent_transactional: consentTransactional,
+        consent_marketing: consentMarketing,
       })
       .select()
       .single();
@@ -117,8 +123,27 @@ export async function POST(request: Request, context: RouteContext) {
 
     console.log('✅ Form submitted:', form.id);
 
-    // TODO: Trigger email notification here
-    // Send notification email to admin about new submission
+    // Trigger email notification
+    try {
+      const { sendLeadEmail } = await import('@/lib/email');
+      
+      // Map field IDs to labels for the email
+      const leadDataWithLabels: Record<string, any> = {
+        consent_transactional: consentTransactional,
+        consent_marketing: consentMarketing,
+      };
+
+      form.fields.forEach((field: any) => {
+        if (data[field.id] !== undefined) {
+          leadDataWithLabels[field.label] = data[field.id];
+        }
+      });
+
+      await sendLeadEmail(form.title || 'Unknown Form', leadDataWithLabels);
+    } catch (emailError) {
+      console.error('Failed to send notification email:', emailError);
+      // Don't fail the request if email fails
+    }
 
     return NextResponse.json({
       success: true,

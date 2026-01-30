@@ -104,7 +104,25 @@ export default function TermsPage() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">9. Changes to Terms</h2>
+                <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">9. SMS Messaging Terms</h2>
+                <div className="text-brand-dark/70 leading-relaxed space-y-4">
+                  <p>
+                    By providing your phone number and opting in to receive SMS from True Rank Digital LLC, you agree to the following terms:
+                  </p>
+                  <ul className="list-disc list-inside space-y-2">
+                    <li><strong>SMS Use Cases:</strong> You may receive transactional messages (e.g., appointment reminders, project updates, and support) or marketing messages (e.g., promotional offers and industry news).</li>
+                    <li><strong>Opt-Out Instructions:</strong> You can unsubscribe from SMS at any time by replying <strong>STOP</strong> to any message. You will receive one final message confirming your opt-out.</li>
+                    <li><strong>Customer Support:</strong> Reply <strong>HELP</strong> for assistance or contact us directly at <a href="tel:7324750139" className="text-brand-primary hover:underline">(732) 475-0139</a>.</li>
+                    <li><strong>Message and Data Rates:</strong> Message and data rates may apply from your wireless provider. Message frequency varies based on your interaction with us.</li>
+                    <li><strong>Carrier Liability:</strong> Carriers are not responsible for delayed or undelivered messages.</li>
+                    <li><strong>Age Restriction:</strong> By opting in, you verify that you are 18 years of age or older.</li>
+                    <li><strong>Privacy:</strong> Use of your information is governed by our <a href="/privacy-policy" className="text-brand-primary hover:underline">Privacy Policy</a>. No mobile information will be shared with third parties/affiliates for marketing/promotional purposes.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">10. Changes to Terms</h2>
                 <p className="text-brand-dark/70 leading-relaxed">
                   These terms may be updated periodically. Material changes will be communicated to active clients. 
                   Continued use of services after changes constitutes acceptance of updated terms.

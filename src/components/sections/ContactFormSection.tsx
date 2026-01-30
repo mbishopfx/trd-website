@@ -56,12 +56,6 @@ export default function ContactFormSection({
       return;
     }
 
-    if (!formData.consentTransactional) {
-      setSubmitStatus('error');
-      setSubmitMessage('You must consent to receive transactional messages to submit the form.');
-      return;
-    }
-
     setIsSubmitting(true);
     setSubmitStatus('idle');
     setSubmitMessage('');
@@ -265,12 +259,11 @@ export default function ContactFormSection({
                     name="consentTransactional"
                     checked={formData.consentTransactional}
                     onChange={handleInputChange}
-                    required
                     className="w-5 h-5 bg-white border-brand-dark/20 rounded text-brand-primary focus:ring-brand-primary transition-all cursor-pointer"
                   />
                 </div>
                 <span className="text-xs text-brand-dark/60 leading-tight">
-                  I consent to receive transactional messages from <strong>True Rank Digital</strong> at the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out. <span className="text-red-500">*</span>
+                  I consent to receive transactional messages (e.g., appointment reminders, support) from <strong>True Rank Digital</strong> at the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out. Carriers are not liable for delayed or undelivered messages. By opting in, I verify that I am 18 years of age or older.
                 </span>
               </label>
 
@@ -286,7 +279,7 @@ export default function ContactFormSection({
                   />
                 </div>
                 <span className="text-xs text-brand-dark/60 leading-tight">
-                  I consent to receive marketing and promotional messages from <strong>True Rank Digital</strong> at the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out.
+                  I consent to receive marketing and promotional messages from <strong>True Rank Digital</strong> at the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out. Carriers are not liable for delayed or undelivered messages.
                 </span>
               </label>
             </div>

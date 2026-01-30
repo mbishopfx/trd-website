@@ -60,6 +60,55 @@ export default function PrivacyPolicyPage() {
               </section>
 
               <section>
+                <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">SMS Messaging & A2P 10DLC Compliance</h2>
+                <p className="text-brand-dark/70 leading-relaxed mb-4">
+                  True Rank Digital offers SMS messaging for transactional and marketing purposes. By providing your phone number and opting in, you agree to receive text messages from us.
+                </p>
+                <div className="space-y-4 text-brand-dark/70">
+                  <div>
+                    <h3 className="text-xl font-bold text-brand-dark">How Consent is Obtained</h3>
+                    <p>Consent is obtained when you voluntarily provide your phone number on our website forms and check the opt-in box. Opt-in is not required to purchase any goods or services.</p>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-brand-dark">Types of Messages</h3>
+                    <p>Users may receive transactional messages (appointment reminders, project updates, support) or marketing messages (promotional offers, industry news). Message frequency varies based on your interaction with us.</p>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-brand-dark">Unsubscribing and Opt-out</h3>
+                    <p>You may opt-out of SMS communications at any time by replying <strong>STOP</strong> to any message you receive from us. You can also reply <strong>HELP</strong> for assistance.</p>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-brand-dark">Fees and Liability</h3>
+                    <p>Message and data rates may apply from your carrier. Carriers are not liable for delayed or undelivered messages.</p>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-brand-dark">Age Requirement</h3>
+                    <p>By opting into SMS, you verify that you are 18 years of age or older.</p>
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">Phone Number & Data Sharing</h2>
+                <p className="text-brand-dark/70 leading-relaxed mb-4">
+                  <strong>Mobile Information Sharing:</strong> No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">Your Data Rights</h2>
+                <p className="text-brand-dark/70 leading-relaxed mb-4">
+                  You have the right to access, correct, or delete your personal data.
+                </p>
+                <ul className="list-disc list-inside text-brand-dark/70 space-y-2">
+                  <li><strong>Access:</strong> You may request a copy of the data we hold about you.</li>
+                  <li><strong>Deletion:</strong> You may request that we delete your personal information from our systems.</li>
+                  <li><strong>Correction:</strong> You may request that we update or correct inaccurate information.</li>
+                </ul>
+                <p className="mt-4">To exercise these rights, please email us at <a href="mailto:privacy@truerankdigital.com" className="text-brand-primary hover:underline">privacy@truerankdigital.com</a>.</p>
+              </section>
+
+              <section>
                 <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">Data Protection</h2>
                 <p className="text-brand-dark/70 leading-relaxed">
                   We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. We use industry-standard encryption and secure storage practices.

@@ -263,7 +263,7 @@ export default function ContactFormSection({
                   />
                 </div>
                 <span className="text-xs text-brand-dark/60 leading-tight">
-                  I consent to receive transactional messages (e.g., appointment reminders, support) from <strong>True Rank Digital</strong> at the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out. Carriers are not liable for delayed or undelivered messages. By opting in, I verify that I am 18 years of age or older.
+                  I consent to receive transactional messages (e.g., appointment reminders, support) from <strong>True Rank Digital</strong> at the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out. Carriers are not responsible for delayed or undelivered messages. By opting in, I verify that I am 18 years of age or older.
                 </span>
               </label>
 
@@ -279,9 +279,21 @@ export default function ContactFormSection({
                   />
                 </div>
                 <span className="text-xs text-brand-dark/60 leading-tight">
-                  I consent to receive marketing and promotional messages from <strong>True Rank Digital</strong> at the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out. Carriers are not liable for delayed or undelivered messages.
+                  I consent to receive marketing and promotional messages from <strong>True Rank Digital</strong> at the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out. Carriers are not responsible for delayed or undelivered messages.
                 </span>
               </label>
+            </div>
+
+            {/* A2P 10DLC & Privacy Disclosure Block */}
+            <div className="pt-4 pb-2 border-t border-brand-dark/10">
+              <p className="text-[10px] text-brand-dark/50 leading-relaxed text-center">
+                By submitting this form and providing your phone number, you agree to our <a href="/privacy-policy" className="underline hover:text-brand-primary">Privacy Policy</a> and <a href="/terms" className="underline hover:text-brand-primary">Terms of Service</a>. 
+                <strong> SMS Disclosure:</strong> You may receive transactional or marketing text messages (e.g., appointment reminders, service updates, and promotional offers). Message frequency varies. <strong>Message and data rates may apply.</strong> 
+                You can unsubscribe at any time by replying <strong>STOP</strong> to any message, or reply <strong>HELP</strong> for assistance. 
+                Carriers are not responsible for delayed or undelivered messages. 
+                By providing your information, you verify that you are <strong>18 years of age or older</strong>. 
+                <strong> Cookies:</strong> This site uses cookies and tracking technologies to improve your experience and analyze our traffic as described in our Privacy Policy.
+              </p>
             </div>
 
             {/* Submit Button */}

@@ -60,6 +60,19 @@ export default function PrivacyPolicyPage() {
               </section>
 
               <section>
+                <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">Cookies and Tracking Technologies</h2>
+                <p className="text-brand-dark/70 leading-relaxed mb-4">
+                  True Rank Digital uses cookies, web beacons, and similar tracking technologies to collect information about your browsing activities over time and across different websites following your use of our services.
+                </p>
+                <ul className="list-disc list-inside text-brand-dark/70 space-y-2">
+                  <li><strong>Essential Cookies:</strong> Necessary for the website to function properly.</li>
+                  <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website (e.g., Google Analytics).</li>
+                  <li><strong>Tracking Pixels:</strong> Used to measure the effectiveness of our advertising campaigns.</li>
+                </ul>
+                <p className="mt-4 text-brand-dark/70">You can control the use of cookies at the individual browser level, but if you choose to disable cookies, it may limit your use of certain features or functions on our website.</p>
+              </section>
+
+              <section>
                 <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">SMS Messaging & A2P 10DLC Compliance</h2>
                 <p className="text-brand-dark/70 leading-relaxed mb-4">
                   True Rank Digital offers SMS messaging for transactional and marketing purposes. By providing your phone number and opting in, you agree to receive text messages from us.
@@ -79,7 +92,7 @@ export default function PrivacyPolicyPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-brand-dark">Fees and Liability</h3>
-                    <p>Message and data rates may apply from your carrier. Carriers are not liable for delayed or undelivered messages.</p>
+                    <p>Message and data rates may apply from your carrier. Carriers are not responsible for delayed or undelivered messages.</p>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-brand-dark">Age Requirement</h3>

@@ -34,7 +34,7 @@ export default function BusinessConsultingPage() {
   const faqs = [
     {
       question: "What types of businesses does True Rank Digital consult?",
-      answer: "True Rank Digital provides business consulting for small to mid-sized businesses across all industries. We specialize in helping service-based businesses, professional practices, retail operations, and local businesses optimize their digital presence and operational efficiency. Our clients range from startups to established companies with $1M-$50M in annual revenue."
+      answer: "True Rank Digital provides business consulting for small to mid-sized businesses across many industries. We specialize in helping service-based businesses, professional practices, retail operations, and local businesses optimize their digital presence and operational efficiency."
     },
     {
       question: "How is business consulting different from marketing services?",
@@ -42,7 +42,7 @@ export default function BusinessConsultingPage() {
     },
     {
       question: "What does a typical consulting engagement look like?",
-      answer: "A True Rank Digital consulting engagement typically begins with a comprehensive business audit (1-2 weeks), followed by strategic planning sessions, implementation roadmap development, and ongoing advisory support. Engagements can range from one-time strategy sessions ($2,500-$5,000) to ongoing monthly consulting relationships ($1,500-$5,000/month)."
+      answer: "A True Rank Digital consulting engagement typically begins with a comprehensive business audit, followed by strategic planning sessions, implementation roadmap development, and ongoing advisory support. We tailor the engagement structure to your goals and internal capacity."
     },
     {
       question: "How do you measure consulting success?",
@@ -127,10 +127,10 @@ export default function BusinessConsultingPage() {
   ];
 
   const results = [
-    { metric: '50+', label: 'Businesses Consulted', description: 'Across diverse industries' },
-    { metric: '127%', label: 'Avg. Revenue Growth', description: 'For engaged clients' },
-    { metric: '35%', label: 'Cost Reduction', description: 'Through optimization' },
-    { metric: '92%', label: 'Client Satisfaction', description: 'Would recommend' }
+    { metric: 'Clear', label: 'Strategy', description: 'Aligned plans and priorities' },
+    { metric: 'Focused', label: 'Execution', description: 'Roadmaps with next steps' },
+    { metric: 'Data-Led', label: 'Decisions', description: 'KPIs that match your goals' },
+    { metric: 'Practical', label: 'Support', description: 'Guidance your team can implement' }
   ];
 
   const relatedServices = [
@@ -230,15 +230,15 @@ export default function BusinessConsultingPage() {
                 <div className="flex flex-wrap gap-4 mb-8">
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>50+ Businesses Consulted</span>
+                    <span>Strategy-first guidance</span>
                   </div>
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>127% Avg. Revenue Growth</span>
+                    <span>Execution roadmaps</span>
                   </div>
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>92% Client Satisfaction</span>
+                    <span>KPI-driven decisions</span>
                   </div>
                 </div>
 
@@ -288,19 +288,19 @@ export default function BusinessConsultingPage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-orange-600 mb-4">70%</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Of Small Businesses</h3>
-                <p className="text-brand-dark/70">Fail within 10 years due to poor planning and strategy. Professional consulting significantly improves success rates.</p>
+                <div className="text-4xl font-bold text-orange-600 mb-4">Clarity</div>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Better Prioritization</h3>
+                <p className="text-brand-dark/70">Remove guesswork by turning goals into clear priorities, timelines, and ownership across your team.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-orange-600 mb-4">3x</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Faster Growth</h3>
-                <p className="text-brand-dark/70">Businesses with strategic advisors grow 3x faster than those without, according to SBA research.</p>
+                <div className="text-4xl font-bold text-orange-600 mb-4">Alignment</div>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Teams Move Together</h3>
+                <p className="text-brand-dark/70">Align leadership, marketing, and operations around the same targets so execution stays consistent.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-orange-600 mb-4">$7</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">ROI Per $1 Spent</h3>
-                <p className="text-brand-dark/70">Quality business consulting typically returns $7 for every $1 invested through improved efficiency and growth.</p>
+                <div className="text-4xl font-bold text-orange-600 mb-4">Accountability</div>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Execute the Plan</h3>
+                <p className="text-brand-dark/70">Use milestones, KPIs, and feedback loops to keep initiatives moving and adjust based on real outcomes.</p>
               </div>
             </div>
           </div>

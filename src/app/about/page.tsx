@@ -6,11 +6,11 @@ import ServiceSchema from '@/components/seo/ServiceSchema';
 // Entity-Dense Metadata
 export const metadata: Metadata = {
   title: 'About True Rank Digital LLC | Professional SEO Company in East Brunswick, NJ',
-  description: 'True Rank Digital LLC is a professional SEO and digital marketing company located in East Brunswick, New Jersey. Founded in 2020 by Jon Korkowski, we serve businesses throughout New Jersey, New York, Pennsylvania, and nationwide with proprietary SEO technology and custom optimization solutions.',
+  description: 'True Rank Digital LLC is a professional SEO and digital marketing company located in East Brunswick, New Jersey. Founded by Jon Korkowski, we serve businesses throughout New Jersey and beyond with proprietary SEO technology and custom optimization solutions.',
   keywords: 'True Rank Digital LLC, East Brunswick SEO company, New Jersey digital marketing, Jon Korkowski, professional SEO services, East Brunswick NJ 08816',
   openGraph: {
     title: 'About True Rank Digital LLC - Professional SEO Company in East Brunswick, NJ',
-    description: 'Learn about True Rank Digital LLC, a professional SEO company serving East Brunswick and surrounding areas since 2020.',
+    description: 'Learn about True Rank Digital LLC, a professional SEO company serving East Brunswick and surrounding areas.',
     url: 'https://truerankdigital.com/about',
     type: 'website',
   },
@@ -20,11 +20,11 @@ export const metadata: Metadata = {
 const aboutFAQs = [
   {
     question: "Who is True Rank Digital?",
-    answer: "True Rank Digital LLC is a professional SEO and digital marketing company located in East Brunswick, New Jersey. Founded in 2020 by Jon Korkowski, True Rank Digital specializes in custom SEO technology, Google Business Profile optimization, and proprietary dashboard platforms. The company serves businesses throughout New Jersey, New York, Pennsylvania, and nationwide."
+    answer: "True Rank Digital LLC is a professional SEO and digital marketing company located in East Brunswick, New Jersey. Founded by Jon Korkowski, True Rank Digital specializes in custom SEO technology, Google Business Profile optimization, and proprietary dashboard platforms. The company serves businesses throughout New Jersey and beyond."
   },
   {
     question: "Where is True Rank Digital located?",
-    answer: "True Rank Digital LLC is located at 288 Summerhill Rd, suite 3, East Brunswick, New Jersey 08816. We serve clients within a 50-mile radius of East Brunswick, including Edison, New Brunswick, North Brunswick, Sayreville, South River, and throughout New Jersey, New York, and Pennsylvania. Our services are available nationwide for businesses seeking professional SEO solutions."
+    answer: "True Rank Digital LLC is located at 288 Summerhill Rd, suite 3, East Brunswick, New Jersey 08816. We serve clients in East Brunswick and surrounding areas, and our services are available beyond New Jersey for businesses seeking professional SEO solutions."
   },
   {
     question: "What services does True Rank Digital provide?",
@@ -32,15 +32,15 @@ const aboutFAQs = [
   },
   {
     question: "How much do True Rank Digital's services cost?",
-    answer: "True Rank Digital's professional SEO services are priced in the mid to upper-mid range ($$-$$$), reflecting our custom technology solutions and proprietary dashboard platform. Pricing varies based on business needs, market competition, and service scope. Contact us at (732) 475-0139 or jon@truerankdigital.com for a custom quote and free consultation."
+    answer: "Pricing varies based on business needs, market competition, and service scope. Contact us at (732) 475-0139 or jon@truerankdigital.com for a custom quote and consultation."
   },
   {
     question: "Why choose True Rank Digital over other SEO companies?",
-    answer: "True Rank Digital stands out by building custom software solutions in-house, including proprietary schema markup engineering, LLM.txt optimization files, and problem detection systems that other SEO agencies don't offer. Founded in 2020 in East Brunswick, NJ, we provide clients with exclusive dashboard platform access featuring grid map ranking verification, competitor analysis tools, and automated Google knowledge graph consistency monitoring that competitors simply cannot provide."
+    answer: "True Rank Digital stands out by building custom software solutions in-house, including proprietary schema markup engineering, LLM.txt optimization files, and problem detection systems. We provide clients with exclusive dashboard platform access featuring grid map ranking verification, competitor analysis tools, and automated Google knowledge graph consistency monitoring."
   },
   {
     question: "Who founded True Rank Digital?",
-    answer: "True Rank Digital LLC was founded in 2020 by Jon Korkowski (CEO & Founder). The leadership team includes Jon Korkowski (CEO & Founder), Jesse Mathews (Business Developer Director), and Jose Perdomo (Executive Vice President). The technical team includes Matt Bishop (Tech Developer) and Sean O'Niel (SEO Specialist). The sales team includes Eric Malheiro (Business Acquisition Director)."
+    answer: "True Rank Digital LLC was founded by Jon Korkowski (CEO & Founder). The leadership team includes Jon Korkowski (CEO & Founder), Jesse Mathews (Business Developer Director), and Jose Perdomo (Executive Vice President). The technical team includes Matt Bishop (Tech Developer) and Sean O'Niel (SEO Specialist). The sales team includes Eric Malheiro (Business Acquisition Director)."
   }
 ];
 

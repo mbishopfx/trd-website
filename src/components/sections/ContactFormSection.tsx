@@ -11,7 +11,7 @@ interface ContactFormSectionProps {
 
 export default function ContactFormSection({ 
   title = "Ready to Get Started?",
-  description = "Fill out the form below and we'll get back to you within 24 hours with a customized strategy for your business."
+  description = "Fill out the form below and we'll get back to you with a customized strategy for your business."
 }: ContactFormSectionProps) {
   const [formData, setFormData] = useState({
     name: '',
@@ -78,7 +78,7 @@ export default function ContactFormSection({
 
       if (response.ok) {
         setSubmitStatus('success');
-            setSubmitMessage('Thank you! Your message has been sent successfully. We&apos;ll get back to you within 24 hours.');
+            setSubmitMessage('Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.');
         // Reset form
         setFormData({
           name: '',
@@ -324,7 +324,7 @@ export default function ContactFormSection({
               
               {submitStatus === 'idle' && (
                 <p className="text-brand-dark/60 text-sm mt-4">
-                      We&apos;ll respond within 24 hours with a customized strategy for your business.
+                      We&apos;ll respond soon with a customized strategy for your business.
                 </p>
               )}
             </div>

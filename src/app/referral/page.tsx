@@ -126,7 +126,7 @@ export default function ReferralPage() {
     {
       icon: <DollarSign className="w-8 h-8" />,
       title: '$500 Per Referral',
-      description: 'Earn $500 for each successful referral that becomes an active client for 30+ days',
+      description: 'Earn $500 for each successful referral that becomes an active client after the qualification period',
       color: 'from-green-500 to-emerald-500'
     },
     {
@@ -138,7 +138,7 @@ export default function ReferralPage() {
     {
       icon: <Target className="w-8 h-8" />,
       title: 'High Success Rate',
-      description: 'Our proven SEO results make referrals easy to convert with 95% client satisfaction',
+      description: 'Our proven SEO results make referrals easier to convert with strong client satisfaction',
       color: 'from-purple-500 to-pink-500'
     },
     {
@@ -159,7 +159,7 @@ export default function ReferralPage() {
     {
       step: '2', 
       title: 'Get Approved',
-      description: 'Our team reviews your application within 1-2 business days',
+      description: 'Our team reviews your application and follows up with next steps',
       icon: <CheckCircle className="w-6 h-6" />
     },
     {
@@ -190,7 +190,7 @@ export default function ReferralPage() {
             name: "Referral Bonus",
             price: "500",
             currency: "USD",
-            description: "Earn $500 for each successful client referral that remains active for 30+ days"
+            description: "Earn $500 for each successful client referral after the qualification period"
           }]
         }}
         breadcrumbs={[
@@ -369,7 +369,7 @@ export default function ReferralPage() {
                 Apply for Referral Partnership
               </h2>
               <p className="text-xl text-brand-dark/70 max-w-2xl mx-auto">
-                Fill out the form below to join our referral program. You'll hear back from us within 1-2 business days with your referral materials.
+                Fill out the form below to join our referral program. You'll hear back from us with your referral materials.
               </p>
             </motion.div>
 
@@ -558,10 +558,10 @@ export default function ReferralPage() {
                       <div className="text-sm text-yellow-800">
                         <h4 className="font-semibold mb-2">Terms & Conditions:</h4>
                         <ul className="space-y-1 list-disc list-inside">
-                          <li>Referral bonuses are paid after the referred client has been active for a minimum of 30 days</li>
+                          <li>Referral bonuses are paid after the referred client has been active for the qualification period</li>
                           <li>Client must complete their first invoice payment to qualify for bonus</li>
                           <li>All referrals must be tracked through your unique referral code</li>
-                          <li>Bonuses are typically processed within 7-14 days after qualification period</li>
+                          <li>Bonuses are processed after the qualification period</li>
                           <li>Self-referrals and duplicate referrals are not eligible for bonuses</li>
                         </ul>
                       </div>
@@ -630,11 +630,11 @@ export default function ReferralPage() {
               {[
                 {
                   question: "How much can I earn with the referral program?",
-                  answer: "You earn $500 for each successful referral that becomes a client and remains active for at least 30 days. There are no limits on how many referrals you can make, so your earning potential is unlimited."
+                  answer: "You earn $500 for each successful referral that becomes a client and meets the qualification requirements. There are no limits on how many referrals you can make, so your earning potential is unlimited."
                 },
                 {
                   question: "When do I get paid?",
-                  answer: "Referral bonuses are paid after the referred client has been active for a minimum of 30 days and has paid their first invoice. Payments are typically processed within 7-14 days after the qualification period."
+                  answer: "Referral bonuses are paid after the referred client meets the qualification requirements and has paid their first invoice. Payments are processed after the qualification period."
                 },
                 {
                   question: "What materials will I receive?",
@@ -688,7 +688,7 @@ export default function ReferralPage() {
                 Ready to Start Earning $500 Per Referral?
               </h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join hundreds of successful referral partners who are earning substantial rewards by sharing our proven SEO solutions.
+                Join referral partners who earn rewards by sharing our SEO solutions.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">

@@ -37,7 +37,6 @@ export default function TeamPlatformSoftwarePage() {
         'Scalable architecture design',
         'Performance optimization and monitoring'
       ],
-      pricing: 'Starting at $15,000'
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -49,7 +48,6 @@ export default function TeamPlatformSoftwarePage() {
         'Team performance analytics',
         'Integrated communication systems'
       ],
-      pricing: 'Starting at $8,000'
     },
     {
       icon: <Database className="w-8 h-8" />,
@@ -61,7 +59,6 @@ export default function TeamPlatformSoftwarePage() {
         'Advanced reporting and visualization',
         'Data security and compliance protocols'
       ],
-      pricing: 'Starting at $12,000'
     },
     {
       icon: <Shield className="w-8 h-8" />,
@@ -73,7 +70,6 @@ export default function TeamPlatformSoftwarePage() {
         'Access control and permissions management',
         'Security audit and penetration testing'
       ],
-      pricing: 'Starting at $10,000'
     },
     {
       icon: <Network className="w-8 h-8" />,
@@ -85,7 +81,6 @@ export default function TeamPlatformSoftwarePage() {
         'Data migration and synchronization',
         'Workflow automation setup'
       ],
-      pricing: 'Starting at $6,000'
     },
     {
       icon: <Monitor className="w-8 h-8" />,
@@ -97,7 +92,6 @@ export default function TeamPlatformSoftwarePage() {
         'Preventive maintenance scheduling',
         'Performance optimization recommendations'
       ],
-      pricing: 'Starting at $2,500/month'
     }
   ];
 
@@ -111,31 +105,10 @@ export default function TeamPlatformSoftwarePage() {
   ];
 
   const successMetrics = [
-    { metric: '99.9%', label: 'Platform Uptime', icon: <TrendingUp className="w-6 h-6" /> },
-    { metric: '50+', label: 'Custom Platforms Delivered', icon: <Code className="w-6 h-6" /> },
-    { metric: '24/7', label: 'Technical Support', icon: <Clock className="w-6 h-6" /> },
-    { metric: '3x', label: 'Average Efficiency Improvement', icon: <Zap className="w-6 h-6" /> }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Mitchell',
-      company: 'TechStart Solutions',
-      text: 'True Rank Digital transformed our team workflow with a custom platform that increased our productivity by 200%. Their technical expertise is unmatched.',
-      rating: 5
-    },
-    {
-      name: 'David Chen',
-      company: 'Enterprise Analytics Corp',
-      text: 'The platform they built handles our complex data processing needs perfectly. The integration with our existing systems was seamless.',
-      rating: 5
-    },
-    {
-      name: 'Jennifer Rodriguez',
-      company: 'Digital Marketing Agency',
-      text: 'Their team platform solution revolutionized how we manage client projects. The custom dashboards and automation features are incredible.',
-      rating: 5
-    }
+    { title: 'Stability', description: 'Built with monitoring, observability, and maintenance workflows.', icon: <TrendingUp className="w-6 h-6" /> },
+    { title: 'Custom Fit', description: 'Designed around your team, process, and tooling — not generic templates.', icon: <Code className="w-6 h-6" /> },
+    { title: 'Support', description: 'Fast response for platform issues and ongoing improvements.', icon: <Clock className="w-6 h-6" /> },
+    { title: 'Efficiency', description: 'Automation and streamlined workflows reduce admin work and bottlenecks.', icon: <Zap className="w-6 h-6" /> }
   ];
 
   return (
@@ -223,8 +196,8 @@ export default function TeamPlatformSoftwarePage() {
                     {metric.icon}
                   </div>
                 </div>
-                <div className="text-3xl font-bold text-brand-primary mb-2">{metric.metric}</div>
-                <div className="text-brand-dark/70 font-medium">{metric.label}</div>
+                <div className="text-lg font-semibold text-brand-dark mb-2">{metric.title}</div>
+                <div className="text-brand-dark/70 text-sm">{metric.description}</div>
               </motion.div>
             ))}
           </div>
@@ -280,8 +253,7 @@ export default function TeamPlatformSoftwarePage() {
                         </li>
                       ))}
                     </ul>
-                    <div className="flex items-center justify-between">
-                      <span className="text-brand-primary font-bold">{service.pricing}</span>
+                    <div className="flex items-center justify-end">
                       <Link
                         href="/contact"
                         className="text-brand-primary hover:text-brand-primary/80 font-semibold text-sm"
@@ -350,71 +322,25 @@ export default function TeamPlatformSoftwarePage() {
                   Built for scale, security, and performance
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">50+</div>
-                  <div className="text-sm text-brand-dark/70">Platforms Built</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">99.9%</div>
-                  <div className="text-sm text-brand-dark/70">Uptime Guarantee</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">24/7</div>
-                  <div className="text-sm text-brand-dark/70">Support Available</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">3x</div>
-                  <div className="text-sm text-brand-dark/70">Efficiency Boost</div>
-                </div>
-              </div>
+              <ul className="space-y-4 text-brand-dark/80">
+                <li className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
+                  <span>Monitoring and maintenance workflows designed for stability.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
+                  <span>Security-first architecture with access control and auditability.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
+                  <span>Scalable infrastructure patterns for growth and performance.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
+                  <span>Support and iteration cycles to keep improving after launch.</span>
+                </li>
+              </ul>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-brand-light/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
-              What Our Clients Say About Our Platform Solutions
-            </h2>
-            <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-              Real results from businesses that transformed their operations with our custom platform solutions
-            </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="glass-card p-8"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <div key={i} className="w-5 h-5 text-yellow-400 fill-current">★</div>
-                  ))}
-                </div>
-                <p className="text-brand-dark/80 mb-6 leading-relaxed italic">
-                  "{testimonial.text}"
-                </p>
-                <div>
-                  <div className="font-semibold text-brand-dark">{testimonial.name}</div>
-                  <div className="text-brand-dark/60 text-sm">{testimonial.company}</div>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
@@ -477,4 +403,3 @@ export default function TeamPlatformSoftwarePage() {
     </div>
   );
 }
-

@@ -9,7 +9,6 @@ interface LocationHeroSectionProps {
   cityName: string;
   stateName: string;
   county: string;
-  population?: string;
   description: string;
   zipCodes?: string[];
   isMainLocation?: boolean;
@@ -19,7 +18,6 @@ export default function LocationHeroSection({
   cityName,
   stateName,
   county,
-  population,
   description,
   zipCodes,
   isMainLocation = false
@@ -122,14 +120,6 @@ export default function LocationHeroSection({
               <MapPin className="w-4 h-4 text-brand-primary" />
               <span className="text-sm font-medium">{county}</span>
             </div>
-            {population && (
-              <>
-                <div className="hidden sm:block w-px h-4 bg-brand-dark/20"></div>
-                <div className="flex items-center space-x-2">
-                  <span className="text-sm font-medium">Population: {population}</span>
-                </div>
-              </>
-            )}
             {zipCodes && zipCodes.length > 0 && (
               <>
                 <div className="hidden sm:block w-px h-4 bg-brand-dark/20"></div>

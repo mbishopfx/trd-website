@@ -15,19 +15,19 @@ export default function ContactInfoSection() {
     {
       icon: <Globe className="w-8 h-8" />,
       title: 'Global Reach',
-      subtitle: 'Serving clients worldwide with 24/7 support',
+      subtitle: 'Serving clients across many markets',
       color: 'from-brand-secondary to-brand-accent'
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: 'Expert Team',
-      subtitle: '15+ years combined experience',
+      subtitle: 'Experienced digital marketing team',
       color: 'from-brand-accent to-purple-600'
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Fast Results',
-      subtitle: 'See improvements in 30-60 days',
+      subtitle: 'Track progress with clear reporting',
       color: 'from-yellow-500 to-brand-primary'
     }
   ];
@@ -177,8 +177,8 @@ export default function ContactInfoSection() {
                   </div>
                   <div>
                     <div className="font-semibold text-brand-dark">Business Hours</div>
-                    <div className="text-green-600 font-bold">24/7 Available</div>
-                    <div className="text-sm text-brand-dark/60">Digital services and support available around the clock</div>
+                    <div className="text-green-600 font-bold">Contact for availability</div>
+                    <div className="text-sm text-brand-dark/60">Reach out to schedule a time that works</div>
                   </div>
                 </div>
               </div>

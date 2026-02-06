@@ -21,7 +21,7 @@ export default function LocalSEOGrowthPage() {
   const faqs = generateServiceFAQs('localSEO', [
     {
       question: "How quickly can I get more local customers with SEO?",
-      answer: "True Rank Digital's local SEO growth services typically generate increased local visibility within 30-60 days, with significant customer growth within 3-6 months. Our proprietary grid map ranking verification and Google Business Profile optimization strategies are designed to get your business found by local customers searching on Google and Google Maps."
+      answer: "Timelines vary based on your market, competition, and starting point. True Rank Digital's local SEO growth services focus on measurable visibility improvements over time using grid map ranking verification and Google Business Profile optimization strategies designed to help customers find you on Google and Google Maps."
     }
   ]);
 

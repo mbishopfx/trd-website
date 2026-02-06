@@ -262,7 +262,7 @@ export default function LocalSEOPage() {
               Why Businesses Choose <strong className="text-brand-primary">True Rank Digital</strong> for Local Pack Domination
             </h2>
             <p className="text-brand-dark/70 mb-6 leading-relaxed">
-              Start dominating <strong>Google's local pack</strong> with our proven Google Business Optimization tactics and exclusive client dashboard featuring <strong>grid map ranking analysis</strong>, keyword search volume research tools, and automated Google knowledge graph consistency monitoring. Our professional <strong>local pack domination strategies</strong> are designed to get your business in the top 3 Google results faster.
+              Start dominating <strong>Google&apos;s local pack</strong> with our proven Google Business Optimization tactics and exclusive client dashboard featuring <strong>grid map ranking analysis</strong>, keyword search volume research tools, and automated Google knowledge graph consistency monitoring. Our professional <strong>local pack domination strategies</strong> are built to improve your visibility and consistency across the areas you serve.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

@@ -4,21 +4,14 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   MapPin, 
-  Users, 
   Building, 
-  TrendingUp, 
-  Target, 
-  Star, 
   CheckCircle, 
   Search,
   Globe,
   Smartphone,
   BarChart3,
   Shield,
-  Zap,
   Phone,
-  Mail,
-  Clock,
   Award
 } from 'lucide-react';
 import ComprehensiveSchema from '@/components/seo/ComprehensiveSchema';
@@ -34,8 +27,7 @@ export default function EastBrunswickServicesPage() {
         'Local keyword targeting',
         'Citation building and management',
         'Local schema markup implementation'
-      ],
-      pricing: 'Starting at $1,200/month'
+      ]
     },
     {
       icon: <Globe className="w-8 h-8" />,
@@ -46,8 +38,7 @@ export default function EastBrunswickServicesPage() {
         'Fast loading optimization',
         'SEO-optimized architecture',
         'Local business integration'
-      ],
-      pricing: 'Starting at $3,500'
+      ]
     },
     {
       icon: <Building className="w-8 h-8" />,
@@ -58,8 +49,7 @@ export default function EastBrunswickServicesPage() {
         'Review management system',
         'Post scheduling and content',
         'Performance monitoring'
-      ],
-      pricing: 'Starting at $500/month'
+      ]
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
@@ -70,8 +60,7 @@ export default function EastBrunswickServicesPage() {
         'Facebook & Instagram advertising',
         'Local audience targeting',
         'Conversion tracking setup'
-      ],
-      pricing: 'Starting at $800/month + ad spend'
+      ]
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
@@ -82,8 +71,7 @@ export default function EastBrunswickServicesPage() {
         'Community engagement',
         'Local event promotion',
         'Brand reputation building'
-      ],
-      pricing: 'Starting at $600/month'
+      ]
     },
     {
       icon: <Shield className="w-8 h-8" />,
@@ -94,46 +82,16 @@ export default function EastBrunswickServicesPage() {
         'Crisis management protocols',
         'Positive review generation',
         'Online reputation audits'
-      ],
-      pricing: 'Starting at $400/month'
+      ]
     }
-  ];
-
-  const localMarketData = [
-    { label: 'East Brunswick Population', value: '48,739', icon: <Users className="w-6 h-6" /> },
-    { label: 'Median Household Income', value: '$89,456', icon: <TrendingUp className="w-6 h-6" /> },
-    { label: 'Total Local Businesses', value: '2,100+', icon: <Building className="w-6 h-6" /> },
-    { label: 'Online Search Growth', value: '78%', icon: <Search className="w-6 h-6" /> }
   ];
 
   const whyChooseUs = [
     'Local East Brunswick team with community knowledge',
-    'Proven results for 200+ New Jersey businesses',
-    'Google-certified and schema markup specialists',
+    'Custom schema markup and technical SEO execution',
     'Custom proprietary SEO software platform',
     'Same-day response and dedicated support',
     'Free comprehensive custom playbook included'
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      business: 'East Brunswick Dental Practice',
-      text: 'True Rank Digital transformed our online presence. We now appear first for "dentist East Brunswick" and have doubled our new patient inquiries.',
-      rating: 5
-    },
-    {
-      name: 'Mike Rodriguez',
-      business: 'Local Restaurant Owner',
-      text: 'Their local SEO expertise helped us dominate food delivery searches in East Brunswick. Revenue increased 40% in just 6 months.',
-      rating: 5
-    },
-    {
-      name: 'Lisa Chen',
-      business: 'East Brunswick Law Firm',
-      text: 'Professional service and incredible results. We rank #1 for multiple legal keywords in East Brunswick and surrounding areas.',
-      rating: 5
-    }
   ];
 
   return (
@@ -179,47 +137,6 @@ export default function EastBrunswickServicesPage() {
               </motion.div>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Local Market Data */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-4">
-              East Brunswick Market Insights
-            </h2>
-            <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-              Understanding your local market is key to digital marketing success
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {localMarketData.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="glass-card p-8 text-center hover:shadow-glass-lg transition-all duration-300"
-              >
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-brand-accent rounded-2xl flex items-center justify-center text-white">
-                    {stat.icon}
-                  </div>
-                </div>
-                <div className="text-3xl font-bold text-brand-primary mb-2">{stat.value}</div>
-                <div className="text-brand-dark/70 font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -272,8 +189,7 @@ export default function EastBrunswickServicesPage() {
                         </li>
                       ))}
                     </ul>
-                    <div className="flex items-center justify-between">
-                      <span className="text-brand-primary font-bold">{service.pricing}</span>
+                    <div className="flex items-center justify-end">
                       <Link
                         href="/contact"
                         className="text-brand-primary hover:text-brand-primary/80 font-semibold text-sm"
@@ -332,77 +248,31 @@ export default function EastBrunswickServicesPage() {
               <div className="text-center mb-8">
                 <Award className="w-16 h-16 text-brand-primary mx-auto mb-4" />
                 <h3 className="text-2xl font-heading font-bold text-brand-dark mb-2">
-                  Proven Results for East Brunswick
+                  Built for Local Search
                 </h3>
                 <p className="text-brand-dark/70">
-                  Our local expertise delivers measurable success
+                  A practical, execution-first approach to visibility and lead flow.
                 </p>
               </div>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">200+</div>
-                  <div className="text-sm text-brand-dark/70">Local Clients Served</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">350%</div>
-                  <div className="text-sm text-brand-dark/70">Average Ranking Improvement</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">24/7</div>
-                  <div className="text-sm text-brand-dark/70">Support & Monitoring</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">5★</div>
-                  <div className="text-sm text-brand-dark/70">Average Client Rating</div>
-                </div>
-              </div>
+              <ul className="space-y-4 text-brand-dark/80">
+                <li className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
+                  <span>Local intent mapping: service + neighborhood + proximity queries.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
+                  <span>Google Business Profile workflows aligned to your real services and service areas.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
+                  <span>Technical SEO execution with schema support and indexing hygiene.</span>
+                </li>
+                <li className="flex items-start space-x-3">
+                  <CheckCircle className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
+                  <span>Transparent next steps: audit → playbook → implementation.</span>
+                </li>
+              </ul>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 bg-brand-light/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
-              What East Brunswick Businesses Say About Us
-            </h2>
-            <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-              Real results from real East Brunswick business owners
-            </p>
-          </motion.div>
-
-          <div className="grid lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="glass-card p-8"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-brand-dark/80 mb-6 leading-relaxed italic">
-                  "{testimonial.text}"
-                </p>
-                <div>
-                  <div className="font-semibold text-brand-dark">{testimonial.name}</div>
-                  <div className="text-brand-dark/60 text-sm">{testimonial.business}</div>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>

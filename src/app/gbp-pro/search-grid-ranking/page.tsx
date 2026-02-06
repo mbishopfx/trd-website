@@ -28,20 +28,20 @@ export default function GBPProGridRankingPage() {
     {
       icon: <Map className="w-6 h-6" />,
       title: 'Multi-Point Precision Analysis',
-      description: 'Creates virtual grid network across thousands of geographic coordinates for comprehensive market intelligence.',
-      benefit: '70% improvement in local search visibility through strategic geographic optimization'
+      description: 'Creates a virtual grid network across a broad set of geographic coordinates for comprehensive market intelligence.',
+      benefit: 'Improves local search visibility through strategic geographic optimization'
     },
     {
       icon: <Activity className="w-6 h-6" />,
       title: 'Heat Map Visualization Technology',
       description: 'Transforms raw ranking data into intuitive heat maps revealing competitive strengths and weaknesses by location.',
-      benefit: '45% reduction in wasted marketing spend by focusing on high-opportunity areas'
+      benefit: 'Helps reduce wasted marketing spend by focusing on high-opportunity areas'
     },
     {
       icon: <Compass className="w-6 h-6" />,
       title: 'Predictive Market Modeling',
       description: 'Identifies emerging opportunity zones before competitors discover them using proprietary algorithms.',
-      benefit: '3x faster market expansion through data-driven territory selection'
+      benefit: 'Accelerates market expansion through data-driven territory selection'
     },
     {
       icon: <Crosshair className="w-6 h-6" />,
@@ -127,7 +127,7 @@ export default function GBPProGridRankingPage() {
               </div>
               
               <p className="text-xl text-brand-dark/70 mb-8 leading-relaxed">
-                Revolutionary precision marketing through location intelligence. Our proprietary grid system analyzes search rankings across thousands of geographic coordinates, providing unparalleled insights into local market dominance and competitive positioning.
+                Revolutionary precision marketing through location intelligence. Our proprietary grid system analyzes search rankings across a broad set of geographic coordinates, providing actionable insights into local market positioning and competitive dynamics.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -153,16 +153,16 @@ export default function GBPProGridRankingPage() {
 
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-blue-600">1000+</div>
-                  <div className="text-sm text-brand-dark/60">Grid Points</div>
+                  <div className="text-2xl font-bold text-blue-600">Broad</div>
+                  <div className="text-sm text-brand-dark/60">Coverage</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-blue-600">Real-Time</div>
+                  <div className="text-2xl font-bold text-blue-600">Frequent</div>
                   <div className="text-sm text-brand-dark/60">Updates</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-blue-600">70%</div>
-                  <div className="text-sm text-brand-dark/60">Visibility Boost</div>
+                  <div className="text-2xl font-bold text-blue-600">Actionable</div>
+                  <div className="text-sm text-brand-dark/60">Insights</div>
                 </div>
               </div>
             </motion.div>
@@ -477,4 +477,3 @@ export default function GBPProGridRankingPage() {
     </div>
   );
 }
-

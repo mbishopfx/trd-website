@@ -134,23 +134,23 @@ export default function EducationPage() {
   const stats = [
     {
       icon: <Search className="w-6 h-6" />,
-      value: '73%',
-      label: 'Algorithm Changes Miss Traditional SEO'
+      value: 'Often',
+      label: 'Algorithm changes outpace traditional SEO playbooks'
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      value: '89%',
-      label: 'AI Queries Require Custom Optimization'
+      value: 'Growing',
+      label: 'AI-driven queries require clearer, structured optimization'
     },
     {
       icon: <AlertTriangle className="w-6 h-6" />,
-      value: '94%',
-      label: 'Cookie-Cutter Platforms Fail Algorithm Updates'
+      value: 'Risk',
+      label: 'Cookie-cutter platforms can struggle with major updates'
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      value: '156%',
-      label: 'Performance Gap with Custom Solutions'
+      value: 'Edge',
+      label: 'Custom solutions can outperform generic implementations'
     }
   ];
 

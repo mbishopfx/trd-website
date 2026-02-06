@@ -43,7 +43,7 @@ export default function NewBrunswickPage() {
     },
     {
       question: "How long does SEO take for New Brunswick businesses?",
-      answer: "Most New Brunswick businesses see initial improvements in 30-60 days, with significant results in 3-6 months. Timeline depends on your industry's competition level - downtown restaurants face different competition than service businesses in residential areas. We provide monthly progress reports tracking your rankings across New Brunswick neighborhoods, student area searches, and comparison to local competitors."
+      answer: "Timelines vary based on your industry's competition level — downtown restaurants face different competition than service businesses in residential areas. We provide progress reporting and visibility tracking across New Brunswick neighborhoods, student-area searches, and competitor comparisons so you can see what’s improving over time."
     },
     {
       question: "Do you optimize for specific New Brunswick neighborhoods?",
@@ -134,20 +134,20 @@ export default function NewBrunswickPage() {
               {/* Trust Indicators */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">55K</div>
-                  <div className="text-sm text-brand-dark/60">New Brunswick Population</div>
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Local</div>
+                  <div className="text-sm text-brand-dark/60">Market Knowledge</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">50K+</div>
-                  <div className="text-sm text-brand-dark/60">Rutgers Students/Staff</div>
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Rutgers</div>
+                  <div className="text-sm text-brand-dark/60">Campus Intent</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">4.9★</div>
-                  <div className="text-sm text-brand-dark/60">Google Rating</div>
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Grid</div>
+                  <div className="text-sm text-brand-dark/60">Visibility Tracking</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">10 Min</div>
-                  <div className="text-sm text-brand-dark/60">From New Brunswick</div>
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Strategy</div>
+                  <div className="text-sm text-brand-dark/60">Built to Convert</div>
                 </div>
               </div>
             </div>
@@ -441,7 +441,7 @@ export default function NewBrunswickPage() {
               Our <strong className="text-brand-primary">New Brunswick SEO</strong> Process
             </h2>
             <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
-              Proven methodology that gets New Brunswick businesses ranking on page 1 across university, medical, and downtown searches
+              Proven methodology focused on improving local visibility across campus, medical, and downtown searches
             </p>
 
             <div className="grid md:grid-cols-5 gap-6">
@@ -507,7 +507,7 @@ export default function NewBrunswickPage() {
             <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-white/80">
               <div className="flex items-center space-x-2">
                 <Clock className="w-5 h-5" />
-                <span>Response within 24 hours</span>
+                <span>Fast response</span>
               </div>
               <div className="flex items-center space-x-2">
                 <GraduationCap className="w-5 h-5" />

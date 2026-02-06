@@ -39,11 +39,11 @@ export default function EastBrunswickPage() {
     },
     {
       question: "Do you work with businesses in residential East Brunswick neighborhoods?",
-      answer: "Yes! Beyond the Route 18 commercial corridor, East Brunswick has extensive residential areas requiring hyperlocal SEO. We optimize for neighborhood-specific searches, target East Brunswick homeowners looking for local services, emphasize convenient local service vs. driving to neighboring towns, and help contractors, home services, and local businesses dominate 'near me' searches from East Brunswick's 48,000 residents."
+      answer: "Yes! Beyond the Route 18 commercial corridor, East Brunswick has extensive residential areas requiring hyperlocal SEO. We optimize for neighborhood-specific searches, target East Brunswick homeowners looking for local services, emphasize convenient local service vs. driving to neighboring towns, and help contractors, home services, and local businesses compete for 'near me' searches across East Brunswick."
     },
     {
       question: "How long does it take to see SEO results in East Brunswick?",
-      answer: "Most East Brunswick businesses see initial ranking improvements within 30-60 days, with significant page 1 results in 3-6 months. Timeline depends on Route 18 corridor competition (higher) vs. residential area searches (lower), your industry, and current online presence. Being local, we can meet in person to review progress, adjust strategies quickly, and provide monthly reports tracking your rankings across different East Brunswick areas and zip codes."
+      answer: "Timelines vary based on competition along the Route 18 corridor, your industry, your current online presence, and how quickly we can implement fixes. We provide consistent progress reporting and visibility tracking across different East Brunswick areas and zip codes so you can see what is improving and what we’re doing next."
     },
     {
       question: "What East Brunswick neighborhoods do you optimize for?",
@@ -134,20 +134,20 @@ export default function EastBrunswickPage() {
               {/* Trust Indicators */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">48K</div>
-                  <div className="text-sm text-brand-dark/60">East Brunswick Population</div>
-                </div>
-                <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">HQ</div>
-                  <div className="text-sm text-brand-dark/60">Based in East Brunswick</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">4.9★</div>
-                  <div className="text-sm text-brand-dark/60">Google Rating</div>
+                  <div className="text-sm text-brand-dark/60">East Brunswick Based</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Local</div>
-                  <div className="text-sm text-brand-dark/60">Your Hometown Agency</div>
+                  <div className="text-sm text-brand-dark/60">Market Knowledge</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Grid</div>
+                  <div className="text-sm text-brand-dark/60">Visibility Tracking</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Strategy</div>
+                  <div className="text-sm text-brand-dark/60">Built to Convert</div>
                 </div>
               </div>
             </div>
@@ -194,7 +194,7 @@ export default function EastBrunswickPage() {
                   <strong className="text-brand-primary">Proven Local</strong> Results
                 </h3>
                 <p className="text-brand-dark/70 leading-relaxed">
-                  Our own business ranks #1 for competitive East Brunswick searches. We practice what we preach. Our grid ranking system tracks visibility across all East Brunswick neighborhoods, Route 18 searches, and residential areas. We know what works because we've tested it right here in our hometown market.
+                  We practice what we preach. Our grid ranking system tracks visibility across East Brunswick neighborhoods, Route 18 searches, and residential areas. We focus on repeatable execution and transparent tracking so you can see progress and coverage improve over time.
                 </p>
               </div>
             </div>
@@ -439,7 +439,7 @@ export default function EastBrunswickPage() {
               Our <strong className="text-brand-primary">East Brunswick SEO</strong> Process
             </h2>
             <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
-              Proven 5-step methodology that gets East Brunswick businesses ranking on page 1 of Google
+              Proven 5-step methodology focused on improving local visibility and lead flow
             </p>
 
             <div className="grid md:grid-cols-5 gap-6">

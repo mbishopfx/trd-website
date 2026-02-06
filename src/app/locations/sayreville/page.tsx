@@ -43,11 +43,11 @@ export default function SayrevillePage() {
     },
     {
       question: "How long does it take to see SEO results for Sayreville businesses?",
-      answer: "Most Sayreville businesses see initial improvements in 30-60 days, with significant ranking growth in 3-6 months. Timeline varies based on Route 9 corridor competition, your industry, and current online presence. We provide monthly progress reports tracking rankings across Sayreville neighborhoods, Parlin area searches, and comparison to Route 9 competitors."
+      answer: "Timelines vary based on Route 9 corridor competition, your industry, your current online presence, and how quickly we can implement fixes. We provide progress reporting and visibility tracking across Sayreville neighborhoods, Parlin-area searches, and competitor comparisons so you can see what’s improving over time."
     },
     {
       question: "Do you optimize for Garden State Parkway area searches?",
-      answer: "Yes! Sayreville's Garden State Parkway access (Exit 123, 124, 125) brings significant traffic. We optimize for Parkway exit searches, traveler and commuter targeting, 'near Garden State Parkway' keywords, and capture searches from people using the Parkway to access Sayreville businesses. Valuable for restaurants, hotels, gas stations, and retail near Parkway exits."
+      answer: "Yes! Sayreville's Garden State Parkway access brings significant traffic. We optimize for Parkway-related searches, traveler and commuter targeting, 'near Garden State Parkway' keywords, and capture searches from people using the Parkway to access Sayreville businesses. Valuable for restaurants, hotels, gas stations, and retail near Parkway access points."
     },
     {
       question: "What's included in your Sayreville SEO package?",
@@ -134,20 +134,20 @@ export default function SayrevillePage() {
               {/* Trust Indicators */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">45K</div>
-                  <div className="text-sm text-brand-dark/60">Sayreville Population</div>
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Local</div>
+                  <div className="text-sm text-brand-dark/60">Market Knowledge</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">GSP</div>
-                  <div className="text-sm text-brand-dark/60">Parkway Access (3 exits)</div>
+                  <div className="text-sm text-brand-dark/60">Parkway Access</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">4.9★</div>
-                  <div className="text-sm text-brand-dark/60">Google Rating</div>
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Grid</div>
+                  <div className="text-sm text-brand-dark/60">Visibility Tracking</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">15 Min</div>
-                  <div className="text-sm text-brand-dark/60">From Sayreville</div>
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Strategy</div>
+                  <div className="text-sm text-brand-dark/60">Built to Convert</div>
                 </div>
               </div>
             </div>
@@ -440,7 +440,7 @@ export default function SayrevillePage() {
               Our <strong className="text-brand-primary">Sayreville SEO</strong> Process
             </h2>
             <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
-              Proven methodology that gets Sayreville businesses ranking on page 1 across Route 9, Parkway exits, and local community searches
+              Proven methodology focused on improving local visibility across Route 9, Parkway access, and community searches
             </p>
 
             <div className="grid md:grid-cols-5 gap-6">
@@ -506,7 +506,7 @@ export default function SayrevillePage() {
             <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-white/80">
               <div className="flex items-center space-x-2">
                 <Clock className="w-5 h-5" />
-                <span>Response within 24 hours</span>
+                <span>Fast response</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Anchor className="w-5 h-5" />

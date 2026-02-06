@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords: 'PPC campaigns, Google Ads management, pay per click, paid advertising, lead generation, True Rank Digital, advertising ROI, SEM',
   openGraph: {
     title: 'PPC Campaigns | True Rank Digital',
-    description: 'Targeted Google Ads campaigns for immediate results and quality leads. $2.4M+ ad spend managed.',
+    description: 'Targeted Google Ads campaigns focused on quality leads, efficient spend, and clear reporting.',
     url: 'https://truerankdigital.com/services/ppc-campaigns',
     type: 'website',
   },
@@ -34,11 +34,11 @@ export default function PPCCampaignsPage() {
   const faqs = [
     {
       question: "How much should I budget for PPC campaigns?",
-      answer: "True Rank Digital recommends starting with a minimum budget of $1,500-$3,000 per month for effective PPC campaigns, depending on your industry and competition. We optimize your spend to maximize ROI, and many clients see positive returns within the first month. Our management fee is separate from ad spend, ensuring transparency in your investment."
+      answer: "Your PPC budget depends on your goals, your market, and how competitive your keywords are. We’ll help you choose a budget that matches what you’re trying to achieve, then optimize targeting and spend for efficiency. Our management fee is separate from ad spend, so your investment stays transparent."
     },
     {
       question: "How quickly will I see results from PPC advertising?",
-      answer: "Unlike organic SEO, PPC delivers immediate visibility. You can start receiving clicks and leads within hours of campaign launch. True Rank Digital typically achieves optimal campaign performance within 2-4 weeks as we gather data and optimize targeting, bidding, and ad copy. We provide weekly performance reports from day one."
+      answer: "PPC can start generating visibility soon after launch, but performance improves as we test messaging, refine targeting, and tune bidding. We focus on consistent optimization and clear reporting so you can understand what’s working and where we’re making improvements."
     },
     {
       question: "What platforms does True Rank Digital manage for PPC?",
@@ -50,7 +50,7 @@ export default function PPCCampaignsPage() {
     },
     {
       question: "What makes True Rank Digital's PPC management different?",
-      answer: "We combine data-driven optimization with creative strategy. Our team actively manages campaigns daily (not set-and-forget), conducts ongoing A/B testing, and provides transparent reporting. We also integrate PPC with your overall digital strategy including SEO and GBP optimization for maximum impact."
+      answer: "We combine data-driven optimization with creative strategy. We actively manage campaigns, run ongoing tests, and provide transparent reporting. We also integrate PPC with your overall digital strategy including SEO and GBP optimization so channels support each other."
     }
   ];
 
@@ -64,7 +64,7 @@ export default function PPCCampaignsPage() {
     {
       icon: <Globe className="w-8 h-8" />,
       title: 'Display Advertising',
-      description: 'Reach potential customers across millions of websites with visually engaging display ads.',
+      description: 'Reach potential customers across a wide network of websites with visually engaging display ads.',
       details: ['Audience targeting', 'Remarketing campaigns', 'Banner design', 'Placement optimization']
     },
     {
@@ -127,10 +127,10 @@ export default function PPCCampaignsPage() {
   ];
 
   const results = [
-    { metric: '$2.4M+', label: 'Ad Spend Managed', description: 'Annually' },
-    { metric: '4.2x', label: 'Average ROAS', description: 'Return on ad spend' },
-    { metric: '47%', label: 'Lower CPA', description: 'vs. industry average' },
-    { metric: '89%', label: 'Client Retention', description: 'Year over year' }
+    { metric: 'Clear', label: 'Reporting', description: 'Dashboards and insights you can act on' },
+    { metric: 'Active', label: 'Optimization', description: 'Ongoing testing and iteration' },
+    { metric: 'Focused', label: 'Lead Quality', description: 'Built around qualified leads and calls' },
+    { metric: 'Integrated', label: 'Strategy', description: 'Aligned with SEO and GBP' }
   ];
 
   const platforms = [
@@ -241,15 +241,15 @@ export default function PPCCampaignsPage() {
                 <div className="flex flex-wrap gap-4 mb-8">
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>$2.4M+ Ad Spend Managed</span>
+                    <span>Transparent reporting</span>
                   </div>
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>4.2x Average ROAS</span>
+                    <span>Active optimization</span>
                   </div>
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>47% Lower CPA</span>
+                    <span>Lead-quality focus</span>
                   </div>
                 </div>
 
@@ -299,19 +299,19 @@ export default function PPCCampaignsPage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-yellow-600 mb-4">65%</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Of High-Intent Clicks</h3>
-                <p className="text-brand-dark/70">Go to paid ads for commercial searches. When customers are ready to buy, they click on ads.</p>
+                <div className="text-4xl font-bold text-yellow-600 mb-4">Intent</div>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Capture Demand</h3>
+                <p className="text-brand-dark/70">Show up when customers are actively searching for what you offer and are ready to take action.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-yellow-600 mb-4">200%</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Average ROI</h3>
-                <p className="text-brand-dark/70">Google reports that businesses make an average of $2 for every $1 spent on Google Ads.</p>
+                <div className="text-4xl font-bold text-yellow-600 mb-4">Measurable</div>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">See What Works</h3>
+                <p className="text-brand-dark/70">Track spend, clicks, and conversions so you can make smarter decisions and improve efficiency over time.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-yellow-600 mb-4">50%</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">More Conversions</h3>
-                <p className="text-brand-dark/70">PPC visitors are 50% more likely to make a purchase than organic visitors for commercial queries.</p>
+                <div className="text-4xl font-bold text-yellow-600 mb-4">Targeted</div>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Reach the Right People</h3>
+                <p className="text-brand-dark/70">Use location, keywords, and audience signals to focus your budget on the customers most likely to convert.</p>
               </div>
             </div>
           </div>
@@ -427,7 +427,7 @@ export default function PPCCampaignsPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Proven Track Record</h3>
-                      <p className="text-brand-dark/70">$2.4M+ in ad spend managed with an average 4.2x ROAS across diverse industries.</p>
+                      <p className="text-brand-dark/70">Experienced campaign management across diverse industries, with a focus on lead quality and efficient spend.</p>
                     </div>
                   </div>
                   
@@ -437,7 +437,7 @@ export default function PPCCampaignsPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Active Management</h3>
-                      <p className="text-brand-dark/70">We actively manage campaigns daily, not set-and-forget. Continuous optimization drives better results.</p>
+                      <p className="text-brand-dark/70">We actively manage campaigns, not set-and-forget. Continuous optimization drives better results.</p>
                     </div>
                   </div>
                   

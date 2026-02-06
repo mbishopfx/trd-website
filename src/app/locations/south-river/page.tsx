@@ -43,11 +43,11 @@ export default function SouthRiverPage() {
     },
     {
       question: "How long does it take to see SEO results in South River?",
-      answer: "South River businesses often see faster initial results (within 30-45 days) due to lower search volume competition compared to larger towns. Significant page 1 rankings typically occur within 2-4 months. The smaller market means quicker traction, but consistency is key to maintaining dominance. We provide monthly reports tracking your South River rankings and local visibility improvements."
+      answer: "Timelines vary, but smaller markets can sometimes move faster due to lower competition compared to larger towns. The key is consistent execution and measurement. We provide progress reporting and visibility tracking for South River searches and local visibility improvements over time."
     },
     {
       question: "Do you optimize for searches from neighboring towns like Sayreville and Old Bridge?",
-      answer: "Yes! While focusing on South River, we also capture searches from bordering areas where South River businesses can serve. We target Sayreville border areas, Old Bridge neighborhoods near South River, East Brunswick southern areas, and commuters passing through South River. This expands your reach beyond South River's 16,000 residents to surrounding communities."
+      answer: "Yes! While focusing on South River, we also capture searches from bordering areas where South River businesses can serve. We target Sayreville border areas, Old Bridge neighborhoods near South River, East Brunswick southern areas, and commuters passing through South River. This expands your reach beyond South River to surrounding communities."
     },
     {
       question: "What's included in your South River SEO package?",
@@ -134,20 +134,20 @@ export default function SouthRiverPage() {
               {/* Trust Indicators */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">16K</div>
-                  <div className="text-sm text-brand-dark/60">South River Population</div>
-                </div>
-                <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Local</div>
                   <div className="text-sm text-brand-dark/60">Community Focus</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">4.9★</div>
-                  <div className="text-sm text-brand-dark/60">Google Rating</div>
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Main St</div>
+                  <div className="text-sm text-brand-dark/60">Local Commerce</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">10 Min</div>
-                  <div className="text-sm text-brand-dark/60">From South River</div>
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Grid</div>
+                  <div className="text-sm text-brand-dark/60">Visibility Tracking</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Strategy</div>
+                  <div className="text-sm text-brand-dark/60">Built to Convert</div>
                 </div>
               </div>
             </div>
@@ -444,7 +444,7 @@ export default function SouthRiverPage() {
 
             <div className="grid md:grid-cols-5 gap-6">
               {[
-                { step: "1", title: "Local Analysis", desc: "Analyze South River market, Main Street competition, and identify low-competition keywords where you can quickly rank page 1." },
+                { step: "1", title: "Local Analysis", desc: "Analyze South River market, Main Street competition, and identify low-competition keywords where you can build visibility." },
                 { step: "2", title: "Google Business Setup", desc: "Complete GBP optimization with South River-specific content, Main Street photos, community connections, and hometown messaging." },
                 { step: "3", title: "On-Page SEO", desc: "Website optimization with South River hyperlocal keywords, community-focused content, and messaging that resonates with local residents." },
                 { step: "4", title: "Review Building", desc: "Systematic review generation showcasing community support, testimonials from South River customers, and strong local reputation." },
@@ -505,7 +505,7 @@ export default function SouthRiverPage() {
             <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-white/80">
               <div className="flex items-center space-x-2">
                 <Clock className="w-5 h-5" />
-                <span>Response within 24 hours</span>
+                <span>Fast response</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Heart className="w-5 h-5" />

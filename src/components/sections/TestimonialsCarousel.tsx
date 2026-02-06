@@ -8,99 +8,51 @@ interface Testimonial {
   id: number;
   quote: string;
   author: string;
-  company: string;
-  rating: number;
-  industry: string;
+  source?: string;
 }
 
 const testimonials: Testimonial[] = [
   {
-    id: 2,
-        quote: "I&apos;ve been in cars sales for over 17 years. Had a lot of vendors. John and his team at truerank are one of the only seo and gbp vendors that actually showed progress and are on point with there work.",
-    author: "Jeffrey Fraley",
-    company: "4 reviews",
-    rating: 5,
-    industry: "Google Review"
-  },
-  {
     id: 3,
     quote: "Jose was great to work with! He really understood what my business needed and helped get it on the right track. Thanks to his expertise, our online presence improved, and we saw real results. I highly recommend him and his team!",
     author: "Estrella Rojas",
-    company: "7 reviews",
-    rating: 5,
-    industry: "Google Review"
+    source: "Client review"
   },
   {
     id: 4,
     quote: "I loved working with Jose he helped my business tremendously. He answered all my questions and walked me through every step.",
     author: "Yasmin Peralta",
-    company: "11 reviews",
-    rating: 5,
-    industry: "Google Review"
+    source: "Client review"
   },
   {
     id: 5,
     quote: "True Rank Digital helped my business by providing more calls and more leads with their services. I had to hire more people to handle the calls and leads. Jon went above and beyond, As a business owner I would highly recommend them to help your business.",
     author: "Frederick Picchiello",
-    company: "5 reviews",
-    rating: 5,
-    industry: "Google Review"
+    source: "Client review"
   },
   {
     id: 6,
-        quote: "True rank digital isn&apos;t a company it&apos;s a family they got my business back on track. Constant follow ups they treated me like family god bless y&apos;all",
+    quote: "True rank digital isn&apos;t a company it&apos;s a family they got my business back on track. Constant follow ups they treated me like family god bless y&apos;all",
     author: "Jessica Perez",
-    company: "1 review",
-    rating: 5,
-    industry: "Google Review"
-  },
-  {
-    id: 7,
-    quote: "Feels like I have 24 hours service, I call them for advise on my marketing all the time. Definitely will continue to use them!",
-    author: "Mohammed Elkholy",
-    company: "Local Guide · 75 reviews",
-    rating: 5,
-    industry: "Google Review"
-  },
-  {
-    id: 8,
-    quote: "10/10 love the service from Jon and Tom they answered all my questions, got my website running in just a few days and just went above and beyond with everything I needed thank you!",
-    author: "Jrs AutoSpa",
-    company: "7 reviews",
-    rating: 5,
-    industry: "Google Review"
+    source: "Client review"
   },
   {
     id: 9,
     quote: "True ranked helped me grow my business! Was able to generate more leads and more traffic. Can't thank them enough!",
     author: "Nato J",
-    company: "6 reviews",
-    rating: 5,
-    industry: "Google Review"
+    source: "Client review"
   },
   {
     id: 10,
     quote: "John, I cannot sing enough praises. He revolutionized my marketing strategy for my company. As long as I am in business True Rank has a client. Thank you!!",
     author: "Azam C",
-    company: "2 reviews",
-    rating: 5,
-    industry: "Google Review"
-  },
-  {
-    id: 11,
-    quote: "They increased my business profit by increasing traffic and leads within 30 days @ half the price I was paying for before. Very knowledgeable people",
-    author: "Jose Perdomo",
-    company: "17 reviews",
-    rating: 5,
-    industry: "Google Review"
+    source: "Client review"
   },
   {
     id: 12,
     quote: "Absolute best service around. I wish I had found this company sooner!",
     author: "Nick Kelley",
-    company: "Local Guide · 11 reviews",
-    rating: 5,
-    industry: "Google Review"
+    source: "Client review"
   }
 ];
 
@@ -125,13 +77,6 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
         <div className="absolute -top-10 -right-10 w-20 h-20 bg-gradient-to-br from-brand-primary/20 to-brand-accent/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         
         <div className="relative">
-          {/* Rating Stars */}
-          <div className="flex items-center space-x-1 mb-4">
-            {[...Array(testimonial.rating)].map((_, i) => (
-              <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-            ))}
-          </div>
-
           {/* Quote Icon */}
           <div className="absolute -top-2 -left-2 text-brand-primary/20">
             <Quote className="w-12 h-12" />
@@ -146,12 +91,13 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
           <div className="flex items-center justify-between">
             <div>
               <div className="font-semibold text-brand-dark">{testimonial.author}</div>
-              <div className="text-sm text-brand-dark/60">{testimonial.company}</div>
             </div>
             
-            <div className="text-xs px-2 py-1 bg-brand-primary/10 text-brand-primary rounded-full font-medium">
-              {testimonial.industry}
-            </div>
+            {testimonial.source ? (
+              <div className="text-xs px-2 py-1 bg-brand-primary/10 text-brand-primary rounded-full font-medium">
+                {testimonial.source}
+              </div>
+            ) : null}
           </div>
         </div>
       </div>
@@ -234,7 +180,7 @@ export default function TestimonialsCarousel() {
           className="text-center mt-16"
         >
           <p className="text-lg text-brand-dark/70 mb-6">
-            Join hundreds of successful businesses that trust True Rank Digital
+            Join businesses that trust True Rank Digital
           </p>
           <motion.a
             href="/case-studies"

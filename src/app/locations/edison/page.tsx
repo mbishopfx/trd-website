@@ -27,7 +27,7 @@ export default function EdisonPage() {
     },
     {
       question: "How long does it take to see SEO results for my Edison business?",
-      answer: "Most Edison businesses start seeing improvements in local search visibility within 30-60 days of implementing our SEO strategies. Significant ranking improvements typically occur within 3-6 months. The timeline depends on your industry competition, current online presence, and how competitive your target keywords are in the Edison market. We provide monthly progress reports tracking your rankings, traffic, and local visibility improvements."
+      answer: "Timelines vary based on your industry competition, current online presence, and how competitive your target keywords are in the Edison market. We focus on measurable progress, consistent improvement over time, and transparent reporting on visibility, traffic, and local performance."
     },
     {
       question: "What makes Edison SEO different from general SEO?",
@@ -134,20 +134,20 @@ export default function EdisonPage() {
               {/* Trust Indicators */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">50+</div>
-                  <div className="text-sm text-brand-dark/60">Edison Businesses Served</div>
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Local</div>
+                  <div className="text-sm text-brand-dark/60">Middlesex Focus</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">4.9★</div>
-                  <div className="text-sm text-brand-dark/60">Google Rating</div>
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Grid</div>
+                  <div className="text-sm text-brand-dark/60">Visibility Tracking</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">5 Min</div>
-                  <div className="text-sm text-brand-dark/60">From Edison</div>
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Fast</div>
+                  <div className="text-sm text-brand-dark/60">Response & Support</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-brand-primary mb-1">2020</div>
-                  <div className="text-sm text-brand-dark/60">Serving Middlesex</div>
+                  <div className="text-3xl font-bold text-brand-primary mb-1">Strategy</div>
+                  <div className="text-sm text-brand-dark/60">Built to Convert</div>
                 </div>
               </div>
             </div>
@@ -442,7 +442,7 @@ export default function EdisonPage() {
               Our <strong className="text-brand-primary">Edison SEO</strong> Process
             </h2>
             <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
-              Proven 5-step methodology that gets Edison businesses ranking on page 1 of Google
+              Proven 5-step methodology focused on improving local visibility and lead flow
             </p>
 
             <div className="grid md:grid-cols-5 gap-6">
@@ -508,7 +508,7 @@ export default function EdisonPage() {
             <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-white/80">
               <div className="flex items-center space-x-2">
                 <Clock className="w-5 h-5" />
-                <span>Response within 24 hours</span>
+                <span>Fast response</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Users className="w-5 h-5" />

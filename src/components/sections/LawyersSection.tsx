@@ -10,7 +10,7 @@ export default function LawyersSection() {
     {
       icon: <Scale className="w-6 h-6" />,
       title: 'Local Pack Domination',
-      description: 'Appear in the top 3 Google local results when potential clients search for "lawyer near me" or "attorney in [your city]". Our proprietary grid map ranking system tracks your position across multiple locations.',
+      description: 'Improve visibility in Google local results when potential clients search for "lawyer near me" or "attorney in [your city]". Our proprietary grid map ranking system tracks your position across multiple locations.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
@@ -86,7 +86,7 @@ export default function LawyersSection() {
           
           <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto leading-relaxed">
             Dominate local search results and dominate the Google local pack when potential clients search for legal services. 
-            <strong> True Rank Digital</strong> specializes in helping law firms and attorneys appear in the top 3 Google results 
+            <strong> True Rank Digital</strong> specializes in helping law firms and attorneys improve visibility in Google local results
             for high-value practice area keywords, driving more qualified client inquiries and cases.
           </p>
         </motion.div>
@@ -150,7 +150,7 @@ export default function LawyersSection() {
                 Why <strong className="text-brand-primary">Law Firms</strong> Choose True Rank Digital
               </h3>
               <p className="text-lg text-brand-dark/70 leading-relaxed mb-6">
-                Legal marketing is highly competitive, and appearing in Google's local pack (the top 3 results) can make or break your 
+                Legal marketing is highly competitive, and appearing in Google's local pack can make or break your 
                 firm's ability to attract new clients. Unlike traditional SEO agencies, we focus specifically on <strong>local pack domination</strong> 
                 and <strong>Google Business Profile optimization</strong> - the two most critical factors for law firm client acquisition.
               </p>
@@ -180,16 +180,16 @@ export default function LawyersSection() {
             </div>
             <div className="space-y-6">
               <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-4xl font-bold text-brand-primary mb-2">85%</div>
-                <div className="text-brand-dark/70">of potential clients click on the top 3 local pack results</div>
+                <div className="text-xl font-bold text-brand-primary mb-2">Visibility</div>
+                <div className="text-brand-dark/70">Local pack placement can drive high-intent calls and consultation requests.</div>
               </div>
               <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100">
-                <div className="text-4xl font-bold text-brand-primary mb-2">3x</div>
-                <div className="text-brand-dark/70">more inquiries when appearing in local pack vs. organic results</div>
+                <div className="text-xl font-bold text-brand-primary mb-2">Intent</div>
+                <div className="text-brand-dark/70">Local searches often signal urgency, especially for practice-area keywords.</div>
               </div>
               <div className="bg-gradient-to-br from-pink-50 to-orange-50 rounded-2xl p-6 border border-pink-100">
-                <div className="text-4xl font-bold text-brand-primary mb-2">92%</div>
-                <div className="text-brand-dark/70">of legal searches include location-based keywords ("near me", "[city] lawyer")</div>
+                <div className="text-xl font-bold text-brand-primary mb-2">Coverage</div>
+                <div className="text-brand-dark/70">We map visibility by location to strengthen coverage across your service area.</div>
               </div>
             </div>
           </div>
@@ -221,7 +221,7 @@ export default function LawyersSection() {
             </a>
           </div>
           <p className="text-brand-dark/60 mt-4 text-sm">
-            See exactly where you rank vs. competitors • No obligations • Results in 24 hours
+            See exactly where you rank vs. competitors • No obligations • Fast turnaround
           </p>
         </motion.div>
       </div>

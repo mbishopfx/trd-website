@@ -1,21 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import ConditionalLayout from "@/components/layout/ConditionalLayout";
 import SchemaMarkup from "@/components/seo/SchemaMarkup";
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
-
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-poppins',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   title: "True Rank Digital - Get Your Business Found on Google Fast",
@@ -49,10 +35,8 @@ export const metadata: Metadata = {
     siteName: 'True Rank Digital',
     images: [
       {
-        url: '/images/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'True Rank Digital - AI-Enhanced SEO Solutions',
+        url: '/images/logos/trdlogoblue.webp',
+        alt: 'True Rank Digital',
       },
     ],
     locale: 'en_US',
@@ -62,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "True Rank Digital - AI-Enhanced SEO Solutions",
     description: "Get Your Business Found on Google Fast with Expert Automation",
-    images: ['/images/twitter-image.jpg'],
+    images: ['/images/logos/trdlogoblue.webp'],
     creator: '@truerankdigital',
   },
   robots: {
@@ -76,9 +60,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'google-site-verification-code',
-  },
+  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+    : undefined,
 };
 
 export default function RootLayout({
@@ -87,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en">
       <head>
         <SchemaMarkup includeAllSchemas={false} />
       </head>

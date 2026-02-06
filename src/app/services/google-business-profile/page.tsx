@@ -7,11 +7,11 @@ import ServiceSchema from '@/components/seo/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'Google Business Profile Management & Optimization Services | True Rank Digital',
-  description: 'Expert Google Business Profile management from True Rank Digital. Our GBP specialists have optimized 200+ profiles with proven strategies for local pack rankings, review management, and visibility enhancement.',
+  description: 'Expert Google Business Profile management from True Rank Digital. GBP optimization, review management, and visibility enhancement for local businesses.',
   keywords: 'Google Business Profile optimization, GBP management, Google My Business, review management, local listings, local pack rankings, GBP expert, profile optimization, local SEO',
   openGraph: {
     title: 'Google Business Profile Management | True Rank Digital',
-    description: 'Expert GBP optimization with proven results. 200+ profiles optimized, 4.8+ average rating improvement.',
+    description: 'Expert GBP optimization with proven strategies for local visibility, review management, and profile quality.',
     url: 'https://truerankdigital.com/services/google-business-profile',
     type: 'website',
   },
@@ -34,23 +34,23 @@ export default function GoogleBusinessProfilePage() {
   const faqs = generateServiceFAQs('googleBusinessProfile', [
     {
       question: "How often should I update my Google Business Profile?",
-      answer: "True Rank Digital recommends updating your Google Business Profile at least weekly with new posts, photos, and offers. Our automated review management system monitors your profile daily, and we provide monthly optimization updates to ensure your listing maintains maximum visibility in local search results and Google Maps. Consistent activity signals to Google that your business is active and engaged."
+      answer: "True Rank Digital recommends updating your Google Business Profile regularly with new posts, photos, and offers. Our review management system monitors activity and we provide ongoing optimization updates to help maintain visibility in local search results and Google Maps. Consistent activity signals to Google that your business is active and engaged."
     },
     {
       question: "What's included in True Rank Digital's GBP management service?",
-      answer: "Our comprehensive GBP management includes: complete profile optimization (categories, attributes, services, products), weekly Google Posts creation, photo optimization and geotagging, review monitoring and response management, Q&A management, citation consistency auditing, competitor analysis, monthly performance reporting, and direct access to our proprietary dashboard for real-time tracking."
+      answer: "Our comprehensive GBP management includes: complete profile optimization (categories, attributes, services, products), Google Posts creation, photo optimization and geotagging, review monitoring and response management, Q&A management, citation consistency auditing, competitor analysis, performance reporting, and access to our proprietary dashboard for tracking."
     },
     {
       question: "How long does it take to see results from GBP optimization?",
-      answer: "Most clients see initial improvements within 2-4 weeks of optimization, with significant local pack ranking improvements within 60-90 days. Factors affecting timeline include your current profile state, competition level, review velocity, and industry. True Rank Digital provides monthly progress reports tracking all key metrics including impressions, clicks, calls, and direction requests."
+      answer: "Timelines vary based on your current profile state, competition level, review velocity, and industry. We focus on measurable progress and provide consistent reporting on visibility, engagement, and key actions like calls and direction requests."
     },
     {
       question: "Can you help with negative reviews on my Google Business Profile?",
-      answer: "Yes, True Rank Digital provides comprehensive review management including professional response strategies for negative reviews, review removal requests for policy violations, and proactive review generation campaigns to improve your overall rating. We've helped clients improve average ratings by 0.5-1.5 stars through strategic review management."
+      answer: "Yes, True Rank Digital provides comprehensive review management including professional response strategies for negative reviews, review removal requests for policy violations, and proactive review generation campaigns to strengthen your overall reputation over time."
     },
     {
       question: "Do you manage Google Business Profiles for multi-location businesses?",
-      answer: "Absolutely. True Rank Digital specializes in multi-location GBP management with centralized reporting, location-specific optimization strategies, and scalable processes. We currently manage profiles for businesses with 2-50+ locations, ensuring brand consistency while optimizing for local relevance at each location."
+      answer: "Absolutely. True Rank Digital specializes in multi-location GBP management with centralized reporting, location-specific optimization strategies, and scalable processes. We help maintain brand consistency while optimizing for local relevance at each location."
     }
   ]);
 
@@ -64,14 +64,14 @@ export default function GoogleBusinessProfilePage() {
     {
       step: '02',
       title: 'Strategic Optimization',
-      description: 'Our GBP specialists implement proven optimization strategies based on 200+ successful profile optimizations.',
+      description: 'Our GBP specialists implement proven optimization strategies based on repeatable workflows and local intent best practices.',
       details: ['Primary & secondary categories', 'Service/product catalog setup', 'Attribute optimization', 'Business description enhancement']
     },
     {
       step: '03',
       title: 'Content & Media Strategy',
       description: 'We create and manage engaging content that drives visibility and customer engagement.',
-      details: ['Weekly Google Posts', 'Geotagged photo optimization', 'Video content integration', 'Q&A management']
+      details: ['Google Posts', 'Geotagged photo optimization', 'Video content integration', 'Q&A management']
     },
     {
       step: '04',
@@ -91,12 +91,12 @@ export default function GoogleBusinessProfilePage() {
     {
       icon: <Search className="w-8 h-8" />,
       title: 'Local Pack Optimization',
-      description: 'Strategic optimization to improve your visibility in Google\'s local 3-pack results where 46% of all searches have local intent.'
+      description: 'Strategic optimization to improve your visibility in Google\'s local results and map-based searches.'
     },
     {
       icon: <Star className="w-8 h-8" />,
       title: 'Review Management',
-      description: 'Comprehensive review generation, monitoring, and response management. Average client rating improvement: 0.7 stars.'
+      description: 'Comprehensive review monitoring and response management with a focus on trust, relevance, and customer experience.'
     },
     {
       icon: <Camera className="w-8 h-8" />,
@@ -121,10 +121,10 @@ export default function GoogleBusinessProfilePage() {
   ];
 
   const results = [
-    { metric: '200+', label: 'Profiles Optimized', description: 'Across diverse industries' },
-    { metric: '156%', label: 'Avg. Visibility Increase', description: 'In local search results' },
-    { metric: '4.8★', label: 'Avg. Client Rating', description: 'After optimization' },
-    { metric: '89%', label: 'Local Pack Improvement', description: 'Within 90 days' }
+    { title: 'Profile Quality', description: 'Complete, accurate listings aligned to your real services and service areas.' },
+    { title: 'Local Visibility', description: 'Optimization that improves coverage across Google Maps and local intent searches.' },
+    { title: 'Trust Signals', description: 'Review workflows and on-profile signals that support credibility and conversions.' },
+    { title: 'Transparent Tracking', description: 'Clear reporting so you can see what changed and what improved over time.' }
   ];
 
   const relatedServices = [
@@ -140,7 +140,7 @@ export default function GoogleBusinessProfilePage() {
         pageType="service"
         pageData={{
           title: "Google Business Profile Management by True Rank Digital",
-          description: "Expert Google Business Profile optimization with proven results. 200+ profiles optimized with comprehensive management services.",
+          description: "Expert Google Business Profile optimization and management services to improve local visibility, trust, and conversions.",
           url: "https://truerankdigital.com/services/google-business-profile",
           keywords: ["Google Business Profile", "GBP management", "review management", "local listings", "local pack optimization"],
           category: "Google Business Profile Services",
@@ -218,21 +218,21 @@ export default function GoogleBusinessProfilePage() {
                 </h1>
                 
                 <p className="text-xl text-brand-dark/70 mb-8">
-                  <strong>True Rank Digital</strong> has optimized <strong>200+ Google Business Profiles</strong> with an average <strong>156% visibility increase</strong>. Our proven optimization strategies help businesses dominate local search and attract more customers.
+                  <strong>True Rank Digital</strong> helps businesses strengthen their Google Business Profile presence with execution-first optimization, review workflows, and performance tracking designed to improve local visibility and conversions.
                 </p>
 
                 <div className="flex flex-wrap gap-4 mb-8">
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>200+ Profiles Optimized</span>
+                    <span>Execution-First Optimization</span>
                   </div>
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>89% Local Pack Success</span>
+                    <span>Local Visibility Coverage</span>
                   </div>
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>4.8★ Avg. Client Rating</span>
+                    <span>Trust + Conversion Focus</span>
                   </div>
                 </div>
 
@@ -258,9 +258,8 @@ export default function GoogleBusinessProfilePage() {
               <div className="grid grid-cols-2 gap-6">
                 {results.map((result, index) => (
                   <div key={index} className="glass-card p-6 text-center">
-                    <div className="text-3xl font-bold text-brand-primary mb-2">{result.metric}</div>
-                    <div className="text-lg font-semibold text-brand-dark mb-1">{result.label}</div>
-                    <div className="text-sm text-brand-dark/60">{result.description}</div>
+                    <div className="text-lg font-semibold text-brand-dark mb-2">{result.title}</div>
+                    <div className="text-sm text-brand-dark/70">{result.description}</div>
                   </div>
                 ))}
               </div>
@@ -282,19 +281,16 @@ export default function GoogleBusinessProfilePage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-brand-primary mb-4">46%</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Of All Google Searches</h3>
-                <p className="text-brand-dark/70">Have local intent, meaning users are looking for nearby businesses. An optimized GBP ensures you appear in these critical searches.</p>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Local Intent Visibility</h3>
+                <p className="text-brand-dark/70">Many searches are local and map-driven. A well-optimized GBP helps you show up when customers are looking nearby.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-brand-primary mb-4">88%</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Of Mobile Searches</h3>
-                <p className="text-brand-dark/70">Result in a call or visit within 24 hours. Your GBP is the gateway to converting these high-intent searchers into customers.</p>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">High-Intent Actions</h3>
+                <p className="text-brand-dark/70">Your GBP is often the fastest path to calls, direction requests, and website visits from ready-to-buy searchers.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-brand-primary mb-4">5x</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">More Visibility</h3>
-                <p className="text-brand-dark/70">Optimized profiles receive up to 5x more views than incomplete profiles. Every missing element costs you potential customers.</p>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Complete Profiles Win</h3>
+                <p className="text-brand-dark/70">Missing categories, services, photos, and responses can reduce visibility. We focus on completeness and consistency.</p>
               </div>
             </div>
           </div>
@@ -334,7 +330,7 @@ export default function GoogleBusinessProfilePage() {
                 Our Proven <strong className="text-brand-primary">5-Step Optimization</strong> Process
               </h2>
               <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-                Developed through 200+ successful optimizations, our systematic approach delivers consistent results.
+                Our systematic approach is designed to improve profile quality, local visibility, and conversion signals over time.
               </p>
             </div>
 
@@ -378,11 +374,11 @@ export default function GoogleBusinessProfilePage() {
                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Award className="w-6 h-6 text-blue-600" />
                     </div>
-                    <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Proven Track Record</h3>
-                      <p className="text-brand-dark/70">200+ profiles optimized with an 89% success rate in achieving local pack rankings within 90 days.</p>
-                    </div>
+                  <div>
+                    <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Proven Track Record</h3>
+                      <p className="text-brand-dark/70">Repeatable GBP workflows focused on profile quality, trust signals, and measurable local visibility improvements over time.</p>
                   </div>
+                </div>
                   
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -410,7 +406,7 @@ export default function GoogleBusinessProfilePage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Rapid Response</h3>
-                      <p className="text-brand-dark/70">24-hour response time for profile issues, unauthorized edits, or negative reviews requiring immediate attention.</p>
+                      <p className="text-brand-dark/70">Fast response for profile issues, unauthorized edits, or negative reviews requiring immediate attention.</p>
                     </div>
                   </div>
                 </div>

@@ -10,7 +10,6 @@ interface ServiceArea {
   slug: string;
   county: string;
   description: string;
-  population?: string;
   featured: boolean;
 }
 
@@ -20,7 +19,6 @@ const serviceAreas: ServiceArea[] = [
     slug: 'east-brunswick',
     county: 'Middlesex County',
     description: 'Our home base and primary service area. Expert SEO services for local businesses in East Brunswick.',
-    population: '48,000',
     featured: true
   },
   {
@@ -28,7 +26,6 @@ const serviceAreas: ServiceArea[] = [
     slug: 'edison',
     county: 'Middlesex County', 
     description: 'Comprehensive digital marketing solutions for Edison businesses and entrepreneurs.',
-    population: '107,000',
     featured: true
   },
   {
@@ -36,7 +33,6 @@ const serviceAreas: ServiceArea[] = [
     slug: 'new-brunswick',
     county: 'Middlesex County',
     description: 'SEO and local marketing services for New Brunswick\'s diverse business community.',
-    population: '55,000',
     featured: true
   },
   {
@@ -44,7 +40,6 @@ const serviceAreas: ServiceArea[] = [
     slug: 'north-brunswick', 
     county: 'Middlesex County',
     description: 'Professional SEO services helping North Brunswick businesses get found online.',
-    population: '42,000',
     featured: true
   },
   {
@@ -52,7 +47,6 @@ const serviceAreas: ServiceArea[] = [
     slug: 'sayreville',
     county: 'Middlesex County',
     description: 'Local SEO expertise for Sayreville businesses looking to dominate their market.',
-    population: '45,000',
     featured: true
   },
   {
@@ -60,7 +54,6 @@ const serviceAreas: ServiceArea[] = [
     slug: 'south-river',
     county: 'Middlesex County',
     description: 'Tailored digital marketing strategies for South River\'s close-knit business community.',
-    population: '16,000',
     featured: true
   }
 ];
@@ -144,12 +137,6 @@ export default function ServiceAreasPage() {
                   <p className="text-brand-dark/80 mb-6 leading-relaxed">
                     {area.description}
                   </p>
-                  
-                  {area.population && (
-                    <div className="mb-6 text-sm text-brand-dark/60">
-                      Population: {area.population}
-                    </div>
-                  )}
                   
                   <Link
                     href={`/locations/${area.slug}`}

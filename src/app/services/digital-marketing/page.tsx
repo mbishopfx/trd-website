@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords: 'digital marketing, advertising agency, SEO services, PPC management, content marketing, social media marketing, True Rank Digital, online marketing',
   openGraph: {
     title: 'Digital Marketing & Advertising Services | True Rank Digital',
-    description: 'Full-service digital marketing agency with proven ROI. SEO, PPC, content marketing, and more.',
+    description: 'Full-service digital marketing agency covering SEO, PPC, content marketing, and more.',
     url: 'https://truerankdigital.com/services/digital-marketing',
     type: 'website',
   },
@@ -42,7 +42,7 @@ export default function DigitalMarketingPage() {
     },
     {
       question: "How long does it take to see results from digital marketing?",
-      answer: "Results vary by channel: PPC campaigns can generate leads within days of launch, while SEO typically shows significant improvement within 3-6 months. Social media engagement builds over 2-3 months, and email marketing can produce immediate results. We set realistic expectations during onboarding and provide regular progress updates against established benchmarks."
+      answer: "Results vary by channel. PPC can create visibility quickly, while SEO and content strategies typically compound over time. Social engagement and email performance also depend on consistency, audience fit, and offer strength. We set realistic expectations during onboarding and provide regular progress updates against agreed benchmarks."
     },
     {
       question: "Do you work with businesses of all sizes?",
@@ -121,10 +121,10 @@ export default function DigitalMarketingPage() {
   ];
 
   const results = [
-    { metric: '150+', label: 'Clients Served', description: 'Across diverse industries' },
-    { metric: '312%', label: 'Avg. ROI Increase', description: 'For active clients' },
-    { metric: '$2.4M+', label: 'Ad Spend Managed', description: 'Annually' },
-    { metric: '94%', label: 'Client Retention', description: 'Year over year' }
+    { title: 'Strategy + Execution', description: 'A complete plan across channels with clear priorities and next steps.' },
+    { title: 'Performance Visibility', description: 'Unified reporting so you can see what’s working and what needs adjustment.' },
+    { title: 'Conversion Focus', description: 'We optimize landing pages and funnels to turn traffic into leads.' },
+    { title: 'Scalable Systems', description: 'Process-driven marketing that can grow with your budget and goals.' }
   ];
 
   const relatedServices = [
@@ -224,15 +224,15 @@ export default function DigitalMarketingPage() {
                 <div className="flex flex-wrap gap-4 mb-8">
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>150+ Clients Served</span>
+                    <span>Full-Funnel Strategy</span>
                   </div>
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>312% Avg. ROI Increase</span>
+                    <span>Execution + Optimization</span>
                   </div>
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>94% Client Retention</span>
+                    <span>Transparent Reporting</span>
                   </div>
                 </div>
 
@@ -258,9 +258,8 @@ export default function DigitalMarketingPage() {
               <div className="grid grid-cols-2 gap-6">
                 {results.map((result, index) => (
                   <div key={index} className="glass-card p-6 text-center">
-                    <div className="text-3xl font-bold text-brand-primary mb-2">{result.metric}</div>
-                    <div className="text-lg font-semibold text-brand-dark mb-1">{result.label}</div>
-                    <div className="text-sm text-brand-dark/60">{result.description}</div>
+                    <div className="text-lg font-semibold text-brand-dark mb-2">{result.title}</div>
+                    <div className="text-sm text-brand-dark/70">{result.description}</div>
                   </div>
                 ))}
               </div>
@@ -282,19 +281,16 @@ export default function DigitalMarketingPage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-brand-primary mb-4">93%</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Of Online Experiences</h3>
-                <p className="text-brand-dark/70">Begin with a search engine. If you&apos;re not visible online, you&apos;re invisible to the majority of potential customers.</p>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Search Visibility</h3>
+                <p className="text-brand-dark/70">If you&apos;re not visible online, you&apos;re invisible to potential customers actively researching solutions.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-brand-primary mb-4">72%</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Of Consumers</h3>
-                <p className="text-brand-dark/70">Research businesses online before making a purchase decision. Your digital presence shapes their perception.</p>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Trust & Proof</h3>
+                <p className="text-brand-dark/70">Customers research businesses before buying. Your site, listings, and content shape credibility.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-brand-primary mb-4">3x</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Higher Conversion</h3>
-                <p className="text-brand-dark/70">Businesses with integrated digital marketing strategies see 3x higher conversion rates than those without.</p>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Integrated Growth</h3>
+                <p className="text-brand-dark/70">Coordinated SEO, paid, content, and conversion work together to improve lead flow and efficiency.</p>
               </div>
             </div>
           </div>
@@ -388,7 +384,7 @@ export default function DigitalMarketingPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Proven Results</h3>
-                      <p className="text-brand-dark/70">150+ clients served with an average 312% ROI increase. We focus on metrics that matter to your business.</p>
+                      <p className="text-brand-dark/70">Execution-first marketing focused on visibility, conversion, and repeatable performance improvements over time.</p>
                     </div>
                   </div>
                   

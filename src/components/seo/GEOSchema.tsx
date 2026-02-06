@@ -1,4 +1,5 @@
 import Script from 'next/script';
+import { siteIdentity } from '@/lib/seo/siteIdentity';
 
 // GEO Schema Types
 export type PageType = 'service' | 'article' | 'product' | 'howto' | 'faq' | 'landing' | 'location' | 'software' | 'webpage' | 'market';
@@ -73,7 +74,7 @@ export interface GEOSchemaProps {
 }
 
 export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, includeFAQ = false, faqs = [] }: GEOSchemaProps) {
-  const baseUrl = 'https://truerankdigital.com';
+  const baseUrl = siteIdentity.url;
   const organizationId = `${baseUrl}/#organization`;
   const websiteId = `${baseUrl}/#website`;
   const pageId = `${pageData.url}#webpage`;
@@ -85,14 +86,15 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
   const buildOrganizationSchema = () => ({
     "@type": "Organization",
     "@id": organizationId,
-    "name": "True Rank Digital",
+    "name": siteIdentity.brandName,
+    "legalName": siteIdentity.legalName,
     "url": baseUrl,
     "logo": {
       "@type": "ImageObject",
       "@id": `${baseUrl}/#logo`,
-      "url": `${baseUrl}/images/logos/trdlogoblue.webp`,
-      "contentUrl": `${baseUrl}/images/logos/trdlogoblue.webp`,
-      "caption": "True Rank Digital Logo",
+      "url": siteIdentity.imageUrl,
+      "contentUrl": siteIdentity.imageUrl,
+      "caption": `${siteIdentity.brandName} Logo`,
       "inLanguage": "en-US",
       "width": "1200",
       "height": "630"
@@ -100,54 +102,28 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
     "image": {
       "@id": `${baseUrl}/#logo`
     },
-    "telephone": "+1-732-475-0139",
-    "email": "jon@truerankdigital.com",
+    "telephone": siteIdentity.telephone,
+    "email": siteIdentity.email,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Serving East Brunswick",
-      "addressLocality": "East Brunswick",
-      "addressRegion": "NJ",
-      "postalCode": "08816",
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "40.428100",
-      "longitude": "-74.415700"
+      "streetAddress": siteIdentity.address.streetAddress,
+      "addressLocality": siteIdentity.address.addressLocality,
+      "addressRegion": siteIdentity.address.addressRegion,
+      "postalCode": siteIdentity.address.postalCode,
+      "addressCountry": siteIdentity.address.addressCountry
     },
     "areaServed": [
-      {
-        "@type": "GeoCircle",
-        "geoMidpoint": {
-          "@type": "GeoCoordinates",
-          "latitude": "40.428100",
-          "longitude": "-74.415700"
-        },
-        "geoRadius": "80467.2",
-        "description": "Primary service area within 50 miles of East Brunswick, NJ"
-      },
-      {
-        "@type": "State",
-        "name": "New Jersey"
-      },
-      {
-        "@type": "Country",
-        "name": "United States"
-      }
+      { "@type": "City", "name": `${siteIdentity.address.addressLocality}, ${siteIdentity.address.addressRegion}` },
+      { "@type": "State", "name": siteIdentity.address.addressRegion },
+      { "@type": "Country", "name": "United States" }
     ],
-    "sameAs": [
-      "https://www.google.com/maps?cid=4662204553635539796",
-      "https://www.facebook.com/truerankdigital",
-      "https://www.linkedin.com/company/true-rank-digital",
-      "https://www.wikidata.org/wiki/Q130284854",
-      "https://twitter.com/truerankdigital"
-    ],
+    "sameAs": siteIdentity.sameAs,
     "founder": {
       "@type": "Person",
-      "name": "Jon Korkowski",
-      "jobTitle": "Founder & CEO"
+      "name": "Jon J Korkowski",
+      "jobTitle": "CEO & Founder"
     },
-    "foundingDate": "2020",
+    "foundingDate": siteIdentity.foundingYear,
     "knowsAbout": entities?.primary || ["SEO", "Digital Marketing", "AI Optimization"],
     "slogan": "Get Your Business Found on Google—Fast!"
   });
@@ -157,20 +133,12 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
     "@type": "WebSite",
     "@id": websiteId,
     "url": baseUrl,
-    "name": "True Rank Digital",
-    "description": "Professional SEO & Digital Marketing Services with AI-Enhanced Technology",
+    "name": siteIdentity.brandName,
+    "description": "Professional SEO & Digital Marketing Services",
     "publisher": {
       "@id": organizationId
     },
-    "inLanguage": "en-US",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": `${baseUrl}/search?q={search_term_string}`
-      },
-      "query-input": "required name=search_term_string"
-    }
+    "inLanguage": "en-US"
   });
 
   // Build page schema

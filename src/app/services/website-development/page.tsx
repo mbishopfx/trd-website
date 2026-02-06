@@ -38,11 +38,11 @@ export default function WebsiteDevelopmentPage() {
     },
     {
       question: "How long does it take to build a custom website?",
-      answer: "Timeline varies based on project complexity. A standard business website takes 4-6 weeks, while more complex projects with custom functionality may take 8-12 weeks. We provide detailed timelines during discovery and maintain transparent communication throughout development. Rush projects are available for an additional fee."
+      answer: "Timeline varies based on project scope and complexity. After discovery, we provide a clear project plan with milestones and a realistic delivery timeline, and we stay transparent throughout the build."
     },
     {
       question: "Do you provide website hosting and maintenance?",
-      answer: "Yes, True Rank Digital offers managed hosting on enterprise-grade infrastructure with 99.9% uptime guarantee. Our maintenance packages include security updates, performance monitoring, content updates, and technical support. Hosting is optimized for speed with CDN integration and automatic SSL certificates."
+      answer: "Yes. True Rank Digital offers managed hosting and maintenance. Our packages include security updates, performance monitoring, content updates, and technical support. Hosting is optimized for speed and includes SSL and CDN options based on your needs."
     },
     {
       question: "Will my website be mobile-friendly?",
@@ -88,8 +88,8 @@ export default function WebsiteDevelopmentPage() {
     {
       icon: <Server className="w-8 h-8" />,
       title: 'Managed Hosting',
-      description: 'Enterprise-grade hosting with 99.9% uptime, automatic SSL, and CDN integration.',
-      features: ['99.9% uptime', 'Automatic SSL', 'Daily backups', '24/7 monitoring']
+      description: 'Reliable hosting with SSL, monitoring, and performance-oriented delivery options.',
+      features: ['SSL setup', 'Monitoring', 'Backups', 'CDN options']
     }
   ];
 
@@ -127,10 +127,10 @@ export default function WebsiteDevelopmentPage() {
   ];
 
   const results = [
-    { metric: '75+', label: 'Websites Built', description: 'Custom projects delivered' },
-    { metric: '95+', label: 'PageSpeed Score', description: 'Average performance' },
-    { metric: '2.1s', label: 'Avg. Load Time', description: 'Mobile performance' },
-    { metric: '100%', label: 'Mobile Optimized', description: 'Responsive design' }
+    { metric: 'SEO-Ready', label: 'Architecture', description: 'Built for crawlability and clarity' },
+    { metric: 'Fast', label: 'Performance', description: 'Optimized for Core Web Vitals' },
+    { metric: 'Mobile-First', label: 'UX', description: 'Responsive across devices' },
+    { metric: 'Maintainable', label: 'Codebase', description: 'Clean builds and scalable patterns' }
   ];
 
   const techStack = [
@@ -235,15 +235,15 @@ export default function WebsiteDevelopmentPage() {
                 <div className="flex flex-wrap gap-4 mb-8">
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>75+ Websites Built</span>
+                    <span>Custom builds</span>
                   </div>
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>95+ PageSpeed Score</span>
+                    <span>Performance-focused</span>
                   </div>
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>100% Mobile Optimized</span>
+                    <span>Mobile-first UX</span>
                   </div>
                 </div>
 
@@ -293,19 +293,19 @@ export default function WebsiteDevelopmentPage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-purple-600 mb-4">94%</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">First Impressions</h3>
-                <p className="text-brand-dark/70">Of first impressions are design-related. A professional, custom website builds immediate credibility with visitors.</p>
+                <div className="text-4xl font-bold text-purple-600 mb-4">Credibility</div>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Strong First Impression</h3>
+                <p className="text-brand-dark/70">A professional, custom website helps build trust and makes it easy for visitors to understand your value.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-purple-600 mb-4">53%</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Mobile Abandonment</h3>
-                <p className="text-brand-dark/70">Of mobile users abandon sites that take over 3 seconds to load. Our sites load in under 2.5 seconds on average.</p>
+                <div className="text-4xl font-bold text-purple-600 mb-4">Speed</div>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Performance Matters</h3>
+                <p className="text-brand-dark/70">Fast, stable pages improve user experience and support stronger search performance.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-purple-600 mb-4">200%</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Conversion Increase</h3>
-                <p className="text-brand-dark/70">Custom-designed websites can increase conversions by up to 200% compared to template-based alternatives.</p>
+                <div className="text-4xl font-bold text-purple-600 mb-4">Conversion</div>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Built to Convert</h3>
+                <p className="text-brand-dark/70">Clear structure, focused messaging, and thoughtful UX help turn visitors into leads.</p>
               </div>
             </div>
           </div>
@@ -431,7 +431,7 @@ export default function WebsiteDevelopmentPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Performance Obsessed</h3>
-                      <p className="text-brand-dark/70">Our websites consistently score 95+ on PageSpeed Insights. Fast sites rank better and convert more visitors.</p>
+                      <p className="text-brand-dark/70">We prioritize performance and Core Web Vitals because fast, stable sites rank better and convert more visitors.</p>
                     </div>
                   </div>
                   

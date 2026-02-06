@@ -19,7 +19,7 @@ export default function SupportPage() {
       title: 'Email Support',
       description: 'Send us your questions and we\'ll respond promptly',
       contact: 'jon@truerankdigital.com',
-      availability: 'Response within 24 hours',
+      availability: 'Fast response',
       color: 'from-green-500 to-teal-500'
     },
     {
@@ -35,7 +35,7 @@ export default function SupportPage() {
   const faqItems = [
     {
       question: 'How quickly will I see SEO results?',
-      answer: 'SEO results typically begin showing within 30-60 days, with significant improvements often visible within 90 days. We focus on sustainable, long-term growth.'
+      answer: 'SEO is a long-term strategy and timelines vary by market, competition, and starting point. We focus on sustainable growth and provide consistent reporting so you can see progress over time.'
     },
     {
       question: 'Do you require long-term contracts?',

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords: 'SEO tactics, search engine optimization, technical SEO, content strategy, link building, True Rank Digital, Google rankings, organic traffic',
   openGraph: {
     title: 'SEO Tactics | True Rank Digital',
-    description: 'Proven SEO strategies with 150+ websites optimized. Technical SEO, content strategy, and link building.',
+    description: 'Proven SEO strategies combining technical SEO, content strategy, and link building.',
     url: 'https://truerankdigital.com/services/seo-tactics',
     type: 'website',
   },
@@ -34,7 +34,7 @@ export default function SEOTacticsPage() {
   const faqs = [
     {
       question: "How long does it take to see SEO results?",
-      answer: "SEO is a long-term strategy. True Rank Digital typically sees initial improvements within 3-6 months, with significant results in 6-12 months. The timeline depends on your current website authority, competition level, content quality, and the aggressiveness of your SEO campaign. We provide monthly progress reports tracking all key metrics."
+      answer: "SEO is a long-term strategy. Timelines vary based on your current website authority, competition level, content quality, and how quickly we can implement fixes. We provide consistent progress reporting and focus on measurable improvements over time."
     },
     {
       question: "What SEO tactics does True Rank Digital use?",
@@ -133,10 +133,10 @@ export default function SEOTacticsPage() {
   ];
 
   const results = [
-    { metric: '150+', label: 'Websites Optimized', description: 'Across diverse industries' },
-    { metric: '187%', label: 'Avg. Traffic Increase', description: 'Within 12 months' },
-    { metric: '2,500+', label: 'Keywords Ranked', description: 'Page 1 positions' },
-    { metric: '91%', label: 'Client Retention', description: 'Year over year' }
+    { title: 'Execution-First Strategy', description: 'Technical SEO, content, and authority-building built around your goals.' },
+    { title: 'Transparent Reporting', description: 'Clear visibility into what we changed, what improved, and what we’re doing next.' },
+    { title: 'Sustainable Practices', description: 'White-hat tactics designed to build durable, algorithm-resistant growth.' },
+    { title: 'Conversion Focus', description: 'We optimize for business outcomes, not vanity metrics.' }
   ];
 
   const tactics = [
@@ -248,15 +248,15 @@ export default function SEOTacticsPage() {
                 <div className="flex flex-wrap gap-4 mb-8">
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>150+ Websites Optimized</span>
+                    <span>Technical + Content + Authority</span>
                   </div>
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>187% Avg. Traffic Increase</span>
+                    <span>Transparent Progress Reporting</span>
                   </div>
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>2,500+ Page 1 Rankings</span>
+                    <span>Built for Sustainable Growth</span>
                   </div>
                 </div>
 
@@ -282,9 +282,8 @@ export default function SEOTacticsPage() {
               <div className="grid grid-cols-2 gap-6">
                 {results.map((result, index) => (
                   <div key={index} className="glass-card p-6 text-center">
-                    <div className="text-3xl font-bold text-emerald-600 mb-2">{result.metric}</div>
-                    <div className="text-lg font-semibold text-brand-dark mb-1">{result.label}</div>
-                    <div className="text-sm text-brand-dark/60">{result.description}</div>
+                    <div className="text-lg font-semibold text-brand-dark mb-2">{result.title}</div>
+                    <div className="text-sm text-brand-dark/70">{result.description}</div>
                   </div>
                 ))}
               </div>
@@ -306,19 +305,16 @@ export default function SEOTacticsPage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-emerald-600 mb-4">53%</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Of Website Traffic</h3>
-                <p className="text-brand-dark/70">Comes from organic search. It&apos;s the largest traffic source for most websites, making SEO essential for growth.</p>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Compounding Visibility</h3>
+                <p className="text-brand-dark/70">Organic growth builds over time and can keep working even when you pause paid campaigns.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-emerald-600 mb-4">5.7x</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Higher ROI</h3>
-                <p className="text-brand-dark/70">SEO delivers 5.7x higher ROI than paid advertising over time because you don&apos;t pay per click.</p>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Cost Efficiency</h3>
+                <p className="text-brand-dark/70">You&apos;re not paying per click, so strong organic performance can reduce reliance on ads over time.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-emerald-600 mb-4">14.6%</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Close Rate</h3>
-                <p className="text-brand-dark/70">SEO leads have a 14.6% close rate vs. 1.7% for outbound leads. Organic visitors are higher quality.</p>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">High Intent Traffic</h3>
+                <p className="text-brand-dark/70">Searchers are actively looking for answers and providers, which can translate to stronger lead quality.</p>
               </div>
             </div>
           </div>
@@ -434,7 +430,7 @@ export default function SEOTacticsPage() {
                     </div>
                     <div>
                       <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Proven Results</h3>
-                      <p className="text-brand-dark/70">150+ websites optimized with an average 187% traffic increase within 12 months.</p>
+                      <p className="text-brand-dark/70">Execution-first SEO focused on technical quality, strong content, and durable authority signals.</p>
                     </div>
                   </div>
                   

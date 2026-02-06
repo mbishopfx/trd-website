@@ -30,7 +30,7 @@ interface FormData {
 
 export default function ConsultationForm({ 
   title = "Book Your Free Consultation",
-  description = "Schedule a strategy session with Jon Korkowski to map out your 90-day domination plan.",
+  description = "Schedule a strategy session with Jon Korkowski to map out a practical growth plan.",
   subjectPrefix = "Business Starter Pack",
   showTitle = true
 }: ConsultationFormProps) {
@@ -83,7 +83,7 @@ export default function ConsultationForm({
 
       if (response.ok) {
         setSubmitStatus('success');
-        setSubmitMessage('Thank you! We\'ll contact you within 24 hours to schedule your consultation with Jon.');
+        setSubmitMessage('Thank you! We\'ll contact you soon to schedule your consultation with Jon.');
         setFormData({
           name: '',
           email: '',
@@ -299,4 +299,3 @@ export default function ConsultationForm({
     </div>
   );
 }
-

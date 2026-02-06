@@ -16,11 +16,11 @@ export const ServiceFAQTemplates = {
   localSEO: [
     {
       question: "What is local pack domination and why does my business need it?",
-      answer: "Local pack domination is the process of optimizing your online presence to appear in Google's top 3 local results (the local pack) when customers search for your services. True Rank Digital provides Google Business Optimization services that help businesses dominate Google Maps, local search results, and the Google Local Pack. Businesses need local pack domination because 46% of all Google searches have local intent, and 85% of clicks go to the top 3 local pack results."
+      answer: "Local pack domination is the process of optimizing your online presence to appear more consistently in Google's local results (the local pack) when customers search for your services. True Rank Digital provides Google Business Optimization services that help businesses strengthen visibility across Google Maps, local search results, and local intent queries."
     },
     {
       question: "How long does it take to see results from local pack domination?",
-      answer: "True Rank Digital's clients typically see initial improvements in local pack rankings within 30-60 days, with significant results appearing within 3-6 months. The timeline depends on your industry competition, current online presence, and the comprehensiveness of the optimization strategy. Our proprietary grid map ranking verification dashboard allows you to track progress in real-time."
+      answer: "Timelines vary based on your market, competition, starting point, and how quickly we can implement fixes. We focus on measurable progress and transparent reporting. Our proprietary grid map ranking verification dashboard allows you to track progress over time."
     },
     {
       question: "What makes True Rank Digital's local pack domination different from other agencies?",
@@ -48,7 +48,7 @@ export const ServiceFAQTemplates = {
   aiSEO: [
     {
       question: "What is AI SEO and how does it differ from traditional SEO?",
-      answer: "AI SEO (AI Optimization) focuses on optimizing content for AI-powered search engines like ChatGPT, Perplexity, Claude, and Google's AI Overview. True Rank Digital specializes in creating LLM.txt files, structured data optimization, and content formatting that AI systems prefer. This differs from traditional SEO which focuses solely on Google's traditional search algorithm. Businesses need both strategies in 2026 as AI search continues to grow."
+      answer: "AI SEO (AI Optimization) focuses on optimizing content for AI-powered search engines and AI-assisted search experiences. True Rank Digital specializes in creating LLM.txt files, structured data optimization, and content formatting that AI systems can interpret clearly. This complements traditional SEO, which targets Google's standard ranking systems."
     },
     {
       question: "What is an LLM.txt file and why does my business need one?",

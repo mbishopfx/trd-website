@@ -12,7 +12,13 @@ export const metadata: Metadata = {
 };
 
 export default function CaseStudiesPage() {
-  const faqs = [{ question: "What results does True Rank Digital achieve?", answer: "True Rank Digital has helped businesses achieve significant results including 200%+ increases in organic traffic, first-page Google rankings for competitive keywords, improved Google Maps visibility, and substantial growth in leads and revenue. Our case studies showcase real results across diverse industries." }];
+  const faqs = [
+    {
+      question: "What results does True Rank Digital achieve?",
+      answer:
+        "Results vary by market and starting point. True Rank Digital focuses on measurable improvements in organic visibility, Google Maps presence, lead quality, and conversion outcomes. Our case studies highlight the work performed, the strategy used, and the business impact over time."
+    }
+  ];
 
   return (
     <>

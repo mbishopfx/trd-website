@@ -50,7 +50,7 @@ export default function CRMAIChatPage() {
     },
     {
       question: "What's the typical ROI from implementing AI CRM?",
-      answer: "Most clients see positive ROI within 3-6 months. On average, our AI CRM reduces response time by 85%, increases lead conversion by 40%, and saves 15-20 hours per week in administrative tasks. The exact ROI depends on your current processes and lead volume."
+      answer: "ROI timelines vary based on your current processes, lead volume, and how quickly your team adopts the workflow. Our AI CRM is designed to improve response speed, reduce manual work, and increase conversion opportunities through consistent follow-up and scheduling automation."
     }
   ];
 
@@ -121,10 +121,10 @@ export default function CRMAIChatPage() {
   ];
 
   const results = [
-    { metric: '85%', label: 'Faster Response', description: 'Average reduction in response time' },
-    { metric: '40%', label: 'More Conversions', description: 'Increase in lead conversion' },
-    { metric: '24/7', label: 'Availability', description: 'Round-the-clock engagement' },
-    { metric: '15hrs', label: 'Weekly Saved', description: 'Average time savings' }
+    { title: 'Faster Lead Response', description: 'Automations and AI chat help you respond quickly and consistently.' },
+    { title: 'More Booked Appointments', description: 'Scheduling workflows reduce friction and capture intent while it’s high.' },
+    { title: 'Consistent Follow-Up', description: 'Prevent lead leakage with structured follow-ups and reminders.' },
+    { title: 'Less Admin Work', description: 'Reduce manual tasks so your team can focus on high-value conversations.' }
   ];
 
   const integrations = [
@@ -235,11 +235,11 @@ export default function CRMAIChatPage() {
                 <div className="flex flex-wrap gap-4 mb-8">
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>85% Faster Response</span>
+                    <span>Faster Lead Response</span>
                   </div>
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span>40% More Conversions</span>
+                    <span>More Booked Appointments</span>
                   </div>
                   <div className="flex items-center space-x-2 text-brand-dark/70">
                     <CheckCircle className="w-5 h-5 text-green-500" />
@@ -269,9 +269,8 @@ export default function CRMAIChatPage() {
               <div className="grid grid-cols-2 gap-6">
                 {results.map((result, index) => (
                   <div key={index} className="glass-card p-6 text-center">
-                    <div className="text-3xl font-bold text-indigo-600 mb-2">{result.metric}</div>
-                    <div className="text-lg font-semibold text-brand-dark mb-1">{result.label}</div>
-                    <div className="text-sm text-brand-dark/60">{result.description}</div>
+                    <div className="text-lg font-semibold text-brand-dark mb-2">{result.title}</div>
+                    <div className="text-sm text-brand-dark/70">{result.description}</div>
                   </div>
                 ))}
               </div>
@@ -293,18 +292,15 @@ export default function CRMAIChatPage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-indigo-600 mb-4">78%</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Of Leads Go Cold</h3>
-                <p className="text-brand-dark/70">When response time exceeds 5 minutes. AI responds instantly, capturing leads before competitors.</p>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Speed Matters</h3>
+                <p className="text-brand-dark/70">Slow response times can cost deals. AI chat helps you respond quickly and keep conversations moving.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-indigo-600 mb-4">67%</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Prefer Self-Service</h3>
-                <p className="text-brand-dark/70">Customers want instant answers. AI chatbots provide 24/7 self-service without wait times.</p>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Self-Service Expectations</h3>
+                <p className="text-brand-dark/70">Customers want instant answers. AI chat provides self-service without wait times.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-indigo-600 mb-4">5x</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">More Efficient</h3>
+                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Operational Efficiency</h3>
                 <p className="text-brand-dark/70">AI handles routine inquiries, freeing your team to focus on high-value conversations.</p>
               </div>
             </div>

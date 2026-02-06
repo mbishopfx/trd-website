@@ -64,11 +64,11 @@ const homepageFAQs = [
   },
   {
     question: "What is Google Business Optimization and why does my business need it?",
-    answer: "Google Business Optimization is True Rank Digital's comprehensive approach to dominating Google's local pack, Google Maps, and Google Business Profile listings. Our proprietary strategies help businesses appear in the top 3 local results when customers search, leading to increased visibility, more clicks, and enhanced presence in AI-powered search results from ChatGPT, Perplexity, and Google's AI Overview."
+    answer: "Google Business Optimization is True Rank Digital's comprehensive approach to improving visibility across Google's local results, Google Maps, and Google Business Profile listings. Our strategies help businesses show up more consistently for local intent searches, leading to increased visibility, more clicks, and stronger presence in AI-powered search experiences."
   },
   {
     question: "How long does it take to see results with True Rank Digital?",
-    answer: "True Rank Digital clients typically see initial improvements in local pack rankings within 30-60 days, with significant local pack domination appearing within 3-6 months. Every client receives access to our proprietary dashboard platform for real-time tracking of grid map rankings, local pack positions, competitor analysis, and Google Business Profile performance metrics."
+    answer: "Timelines vary based on your market, competition, current online presence, and how quickly we can implement fixes. We focus on measurable progress, transparent reporting, and consistent improvement over time using our dashboard platform for grid ranking verification, competitor visibility, and Google Business Profile performance tracking."
   },
   {
     question: "Does True Rank Digital work with businesses outside of New Jersey?",
@@ -76,7 +76,7 @@ const homepageFAQs = [
   },
   {
     question: "What is local pack domination?",
-    answer: "Local pack domination is True Rank Digital's strategy for consistently appearing in Google's top 3 local results (the local pack) that appears above organic search results. Our proprietary grid map ranking system tracks your position across multiple geographic locations, and our optimization strategies ensure maximum visibility in the local pack for your target service areas."
+    answer: "Local pack domination is True Rank Digital's strategy for improving consistency and coverage across Google's local results. Our proprietary grid map ranking system tracks visibility across geographic areas, and our optimization strategies focus on stronger local relevance, trust signals, and coverage for your target service areas."
   },
   {
     question: "How much do True Rank Digital's Google Business Optimization services cost?",

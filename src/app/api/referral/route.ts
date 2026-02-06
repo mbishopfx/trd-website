@@ -106,17 +106,17 @@ export async function POST(request: NextRequest) {
             <p style="margin: 8px 0; color: #374151;"><strong>Referral Type:</strong> ${referralType}</p>
           </div>
           
-          <div style="background-color: #f0fdf4; padding: 20px; border-radius: 8px; border-left: 4px solid #22c55e; margin: 20px 0;">
-            <h3 style="color: #15803d; margin: 0 0 15px;">💰 Referral Bonus: $500</h3>
-            <p style="margin: 8px 0; color: #374151;">Earn $500 for each successful referral that becomes a client and remains active for at least 30 days.</p>
-          </div>
+	          <div style="background-color: #f0fdf4; padding: 20px; border-radius: 8px; border-left: 4px solid #22c55e; margin: 20px 0;">
+	            <h3 style="color: #15803d; margin: 0 0 15px;">💰 Referral Bonus: $500</h3>
+	            <p style="margin: 8px 0; color: #374151;">Earn $500 for each successful referral that becomes a client and meets the qualification requirements.</p>
+	          </div>
           
-          <h3 style="color: #1f2937; margin: 25px 0 15px;">What Happens Next?</h3>
-          <ol style="color: #374151; line-height: 1.6; padding-left: 20px;">
-            <li>Our team will review your application within 1-2 business days</li>
-            <li>Once approved, you'll receive your complete referral kit including:
-              <ul style="margin: 10px 0; padding-left: 20px;">
-                <li>Customized QR code for easy sharing</li>
+	          <h3 style="color: #1f2937; margin: 25px 0 15px;">What Happens Next?</h3>
+	          <ol style="color: #374151; line-height: 1.6; padding-left: 20px;">
+	            <li>Our team will review your application and follow up with next steps</li>
+	            <li>Once approved, you'll receive your complete referral kit including:
+	              <ul style="margin: 10px 0; padding-left: 20px;">
+	                <li>Customized QR code for easy sharing</li>
                 <li>Referral tracking dashboard access</li>
                 <li>Marketing materials and resources</li>
                 <li>Complete terms and conditions</li>
@@ -125,11 +125,11 @@ export async function POST(request: NextRequest) {
             <li>Start referring and earning $500 per successful client!</li>
           </ol>
           
-          <div style="background-color: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 20px 0;">
-            <p style="margin: 0; color: #92400e; font-size: 14px;">
-              <strong>Important:</strong> Referral bonuses are paid after the referred client has been active for a minimum of 30 days and has paid their first invoice.
-            </p>
-          </div>
+	          <div style="background-color: #fef3c7; padding: 15px; border-radius: 8px; border-left: 4px solid #f59e0b; margin: 20px 0;">
+	            <p style="margin: 0; color: #92400e; font-size: 14px;">
+	              <strong>Important:</strong> Referral bonuses are paid after the referred client meets the qualification requirements and has paid their first invoice.
+	            </p>
+	          </div>
           
           <p style="color: #374151; line-height: 1.6; margin: 20px 0;">
             If you have any questions about the referral program, please don't hesitate to reach out to us at <a href="mailto:jon@truerankdigital.com" style="color: #3b82f6;">jon@truerankdigital.com</a> or call us at <a href="tel:+17324750139" style="color: #3b82f6;">(732) 475-0139</a>.
@@ -189,7 +189,6 @@ export async function POST(request: NextRequest) {
     );
   }
 }
-
 
 
 

@@ -33,7 +33,7 @@ export default function PlatformPage() {
       tagline: 'Geographic Search Intelligence',
       description: 'Revolutionary precision marketing through location intelligence with comprehensive geographic market analysis.',
       features: [
-        'Multi-point precision analysis across thousands of coordinates',
+        'Multi-point precision analysis across a broad set of coordinates',
         'Heat map visualization of competitive strengths by location', 
         'Real-time competitive intelligence monitoring',
         'Predictive market modeling for opportunity zones'
@@ -43,7 +43,6 @@ export default function PlatformPage() {
       imageUrl: '/platform/gridmapdemo.png',
       videoUrl: null,
       href: '/platform/grid-ranking',
-      stats: { improvement: '70%', metric: 'Local Search Visibility' },
       badge: 'Core System'
     },
     {
@@ -62,7 +61,6 @@ export default function PlatformPage() {
       imageUrl: '/platform/eeat.png',
       videoUrl: '/platform/eeatvideo.mp4',
       href: '/platform/eeat-analysis',
-      stats: { improvement: '250%', metric: 'Authority Recognition' },
       badge: 'AI Powered'
     },
     {
@@ -81,7 +79,6 @@ export default function PlatformPage() {
       imageUrl: '/platform/websiteindex.png',
       videoUrl: null,
       href: '/platform/indexability',
-      stats: { improvement: '45%', metric: 'Traffic Recovery' },
       badge: 'Technical SEO'
     },
     {
@@ -100,7 +97,6 @@ export default function PlatformPage() {
       imageUrl: '/platform/websitedna.png',
       videoUrl: null,
       href: '/platform/knowledge-graph',
-      stats: { improvement: '180%', metric: 'Entity Recognition' },
       badge: 'Semantic SEO'
     },
     {
@@ -119,7 +115,6 @@ export default function PlatformPage() {
       imageUrl: '/platform/verticlescroll.jpeg',
       videoUrl: null,
       href: '/platform/overwatch',
-      stats: { improvement: '95%', metric: 'Threat Prevention' },
       badge: 'Security'
     },
     {
@@ -138,7 +133,6 @@ export default function PlatformPage() {
       imageUrl: '/platform/maprankdash.png',
       videoUrl: null,
       href: '/platform/competitor-analysis',
-      stats: { improvement: '150%', metric: 'Competitive Edge' },
       badge: 'Intelligence'
     },
     {
@@ -157,16 +151,15 @@ export default function PlatformPage() {
       imageUrl: '/platform/gridmapsnap.png',
       videoUrl: null,
       href: '/platform/lead-generation',
-      stats: { improvement: '300%', metric: 'Lead Quality' },
       badge: 'Predictive'
     }
   ];
 
   const platformStats = [
-    { value: '500%', label: 'Organic Traffic Growth', icon: <TrendingUp className="w-6 h-6" /> },
-    { value: '24/7', label: 'Intelligent Monitoring', icon: <Monitor className="w-6 h-6" /> },
-    { value: '7', label: 'Advanced AI Systems', icon: <Brain className="w-6 h-6" /> },
-    { value: '99.9%', label: 'Platform Uptime', icon: <Lock className="w-6 h-6" /> }
+    { value: 'Unified', label: 'Client Platform', icon: <Database className="w-6 h-6" /> },
+    { value: 'Real-Time', label: 'Monitoring', icon: <Monitor className="w-6 h-6" /> },
+    { value: 'AI-Assisted', label: 'Analysis', icon: <Brain className="w-6 h-6" /> },
+    { value: '24/7', label: 'Availability', icon: <Lock className="w-6 h-6" /> }
   ];
 
   // Video auto-play with fade effect setup
@@ -426,14 +419,6 @@ export default function PlatformPage() {
                           </li>
                         ))}
                       </ul>
-                    </div>
-
-                    {/* Performance Stats */}
-                    <div className="flex items-center space-x-6 mb-8">
-                      <div className={`p-4 bg-gradient-to-r ${tool.color} rounded-xl text-white`}>
-                        <div className="text-2xl font-bold">{tool.stats.improvement}</div>
-                        <div className="text-white/80 text-sm">{tool.stats.metric}</div>
-                      </div>
                     </div>
 
                     {/* CTA */}

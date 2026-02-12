@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Linkedin, Mail, Phone, Award, Code, Brain, BarChart3, Search, Globe, Target, Users, Zap, Shield } from 'lucide-react';
+import { Linkedin, Mail, Phone, Award, Code, BarChart3, Search, Target, Users } from 'lucide-react';
 
 interface TeamMember {
   name: string;
@@ -22,7 +22,7 @@ export default function FullTeamSection() {
   const leadership: TeamMember[] = [
     {
       name: "Jon J Korkowski",
-      role: "CEO & Founder",
+      role: "CEO - Founder",
       department: "Leadership",
       bio: "Founder and CEO leading True Rank Digital's vision and strategy for digital marketing excellence.",
       specialties: ["Business Strategy", "Client Relations", "SEO Leadership"],
@@ -34,10 +34,10 @@ export default function FullTeamSection() {
     },
     {
       name: "Jose Perdomo",
-      role: "Executive Vice President",
+      role: "EVP of Sales & Client Success",
       department: "Leadership",
-      bio: "Executive Vice President focused on strategic growth and business development.",
-      specialties: ["Strategic Planning", "Business Development", "Market Expansion"],
+      bio: "Executive Vice President leading sales execution and client success for sustained growth.",
+      specialties: ["Sales Leadership", "Client Success", "Revenue Growth"],
       icon: <BarChart3 className="w-8 h-8" />,
       color: "from-brand-accent to-purple-600",
       experience: "Leadership",
@@ -46,10 +46,10 @@ export default function FullTeamSection() {
     },
     {
       name: "Eric Malheiro",
-      role: "Business Acquisition Director",
+      role: "EVP of Sales Operations & Performance",
       department: "Leadership",
-      bio: "Business Acquisition Director focused on strategic client acquisition and business development for True Rank Digital.",
-      specialties: ["Business Development", "Client Acquisition", "Strategic Partnerships", "Sales Strategy"],
+      bio: "Executive Vice President focused on sales operations, performance management, and strategic partnerships.",
+      specialties: ["Sales Operations", "Performance Management", "Strategic Partnerships", "Revenue Operations"],
       icon: <Users className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
       experience: "Leadership",
@@ -61,25 +61,25 @@ export default function FullTeamSection() {
   const technicalTeam: TeamMember[] = [
     {
       name: "Jesse Mathews",
-      role: "Business Developer Director",
-      department: "Business Development", 
-      bio: "Business Developer Director overseeing operations and ensuring quality service delivery for all clients.",
-      specialties: ["Operations", "Team Leadership", "Quality Management"],
+      role: "EVP of Business Development & Sale",
+      department: "Business Development & Sales", 
+      bio: "Executive Vice President driving business development strategy and pipeline growth.",
+      specialties: ["Business Development", "Sales Strategy", "Operations Leadership"],
       icon: <Target className="w-8 h-8" />,
       color: "from-brand-secondary to-brand-accent",
-      experience: "Business Development",
+      experience: "Executive Leadership",
       email: "jesse@truerankdigital.com",
       linkedin: "https://www.linkedin.com/in/jesse-mathews-b342641bb/"
     },
     {
       name: "Matt Bishop",
-      role: "Tech Developer",
-      department: "Development",
-      bio: "Technical developer handling website development and technical implementation for client projects.",
-      specialties: ["Web Development", "Technical Implementation", "Website Optimization"],
+      role: "CTO (Chief Technology Officer)",
+      department: "Technology",
+      bio: "Chief Technology Officer responsible for architecture, development, and technical execution across client and internal platforms.",
+      specialties: ["Technology Strategy", "Software Architecture", "Web Development"],
       icon: <Code className="w-8 h-8" />,
       color: "from-blue-500 to-indigo-500",
-      experience: "Developer",
+      experience: "Technology Leadership",
       email: "bishop@truerankdigital.com",
       linkedin: "https://www.linkedin.com/in/matt-bishop-a17b2431b/"
     },

@@ -121,7 +121,7 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
     "founder": {
       "@type": "Person",
       "name": "Jon J Korkowski",
-      "jobTitle": "CEO & Founder"
+      "jobTitle": "CEO - Founder"
     },
     "foundingDate": siteIdentity.foundingYear,
     "knowsAbout": entities?.primary || ["SEO", "Digital Marketing", "AI Optimization"],

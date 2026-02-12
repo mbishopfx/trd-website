@@ -51,12 +51,12 @@ export const siteIdentity = {
     'https://www.pinterest.com/truerankdigital',
   ],
   team: [
-    { name: 'Jon J Korkowski', jobTitle: 'CEO & Founder' },
-    { name: 'Jesse Mathews', jobTitle: 'Business Developer Director' },
-    { name: 'Jose Perdomo', jobTitle: 'Executive Vice President' },
-    { name: 'Matt Bishop', jobTitle: 'Tech Developer' },
+    { name: 'Jon J Korkowski', jobTitle: 'CEO - Founder' },
+    { name: 'Jesse Mathews', jobTitle: 'EVP of Business Development & Sale' },
+    { name: 'Jose Perdomo', jobTitle: 'EVP of Sales & Client Success' },
+    { name: 'Matt Bishop', jobTitle: 'CTO (Chief Technology Officer)' },
     { name: "Sean O'Niel", jobTitle: 'SEO Specialist' },
-    { name: 'Eric Malheiro', jobTitle: 'Business Acquisition Director' },
+    { name: 'Eric Malheiro', jobTitle: 'EVP of Sales Operations & Performance' },
   ] satisfies TeamMember[],
   reviewQuotes: [
     {

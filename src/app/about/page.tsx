@@ -40,7 +40,7 @@ const aboutFAQs = [
   },
   {
     question: "Who founded True Rank Digital?",
-    answer: "True Rank Digital LLC was founded by Jon Korkowski (CEO & Founder). The leadership team includes Jon Korkowski (CEO & Founder), Jesse Mathews (Business Developer Director), and Jose Perdomo (Executive Vice President). The technical team includes Matt Bishop (Tech Developer) and Sean O'Niel (SEO Specialist). The sales team includes Eric Malheiro (Business Acquisition Director)."
+    answer: "True Rank Digital LLC was founded by Jon Korkowski (CEO - Founder). The leadership team includes Jon Korkowski (CEO - Founder), Jesse Mathews (EVP of Business Development & Sale), and Jose Perdomo (EVP of Sales & Client Success). The technical team includes Matt Bishop (CTO (Chief Technology Officer)) and Sean O'Niel (SEO Specialist). The sales team includes Eric Malheiro (EVP of Sales Operations & Performance)."
   }
 ];
 
@@ -247,30 +247,30 @@ export default function AboutPage() {
                   {[
                     {
                       name: "Jon Korkowski",
-                      title: "CEO & Founder",
+                      title: "CEO - Founder",
                       role: "Business Strategy, Client Relations, SEO Leadership",
                       description: "Founded True Rank Digital in 2020 with a vision to build custom SEO technology that gives clients a competitive advantage.",
                       email: "jon@truerankdigital.com"
                     },
                     {
                       name: "Jesse Mathews",
-                      title: "Business Developer Director",
-                      role: "Operations, Team Leadership, Quality Management",
-                      description: "Oversees operations and ensures quality service delivery for all True Rank Digital clients.",
+                      title: "EVP of Business Development & Sale",
+                      role: "Business Development, Sales Strategy, Operations Leadership",
+                      description: "Drives business development strategy and sales pipeline growth across True Rank Digital initiatives.",
                       email: "jesse@truerankdigital.com"
                     },
                     {
                       name: "Jose Perdomo",
-                      title: "Executive Vice President",
-                      role: "Strategic Planning, Business Development, Market Expansion",
-                      description: "Focused on strategic growth and business development for True Rank Digital's expansion.",
+                      title: "EVP of Sales & Client Success",
+                      role: "Sales Leadership, Client Success, Revenue Growth",
+                      description: "Leads sales execution and client success strategy to improve retention and long-term account growth.",
                       email: "jose@truerankdigital.com"
                     },
                     {
                       name: "Matt Bishop",
-                      title: "Tech Developer",
-                      role: "Web Development, Technical Implementation, Custom Software",
-                      description: "Handles website development and technical implementation using True Rank Digital's proprietary technology stack.",
+                      title: "CTO (Chief Technology Officer)",
+                      role: "Technology Strategy, Software Architecture, Custom Software",
+                      description: "Owns technical architecture, platform development, and engineering execution across company initiatives.",
                       email: "bishop@truerankdigital.com"
                     },
                     {
@@ -282,9 +282,9 @@ export default function AboutPage() {
                     },
                     {
                       name: "Eric Malheiro",
-                      title: "Business Acquisition Director",
-                      role: "Strategic Partnerships, Client Acquisition",
-                      description: "Focused on strategic client acquisition and business development for True Rank Digital.",
+                      title: "EVP of Sales Operations & Performance",
+                      role: "Sales Operations, Performance Management, Strategic Partnerships",
+                      description: "Leads sales operations and performance systems to increase efficiency, visibility, and forecasting accuracy.",
                       email: "eric@truerankdigital.com"
                     }
                   ].map((member, index) => (

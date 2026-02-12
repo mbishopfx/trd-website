@@ -15,7 +15,7 @@ interface PageSpecificSchemaProps {
   breadcrumbs?: Array<{name: string; url: string}>;
 }
 
-export default function PageSpecificSchema({ 
+export default function PageSpecificSchema({
   pageType, 
   pageTitle, 
   pageDescription, 
@@ -138,8 +138,24 @@ export default function PageSpecificSchema({
     mentions: [
       {
         "@type": "Person",
+        name: "Jon J Korkowski",
+        jobTitle: "CEO - Founder",
+        worksFor: {
+          "@id": `${baseUrl}/#organization`
+        }
+      },
+      {
+        "@type": "Person",
+        name: "Jose Perdomo",
+        jobTitle: "EVP of Sales & Client Success",
+        worksFor: {
+          "@id": `${baseUrl}/#organization`
+        }
+      },
+      {
+        "@type": "Person",
         name: "Eric Malheiro",
-        jobTitle: "Business Acquisition Director", 
+        jobTitle: "EVP of Sales Operations & Performance", 
         worksFor: {
           "@id": `${baseUrl}/#organization`
         }
@@ -147,7 +163,7 @@ export default function PageSpecificSchema({
       {
         "@type": "Person",
         name: "Jesse Mathews",
-        jobTitle: "Business Developer Director",
+        jobTitle: "EVP of Business Development & Sale",
         worksFor: {
           "@id": `${baseUrl}/#organization`
         }
@@ -155,7 +171,7 @@ export default function PageSpecificSchema({
       {
         "@type": "Person",
         name: "Matt Bishop",
-        jobTitle: "Tech Developer",
+        jobTitle: "CTO (Chief Technology Officer)",
         worksFor: {
           "@id": `${baseUrl}/#organization`
         }
@@ -446,4 +462,3 @@ export default function PageSpecificSchema({
     />
   );
 }
-

@@ -29,7 +29,7 @@ export default function StaffPage() {
         "@type": "Person",
         "@id": "https://truerankdigital.com/staff/jon-korkowski",
         "name": "Jon J Korkowski",
-        "jobTitle": "CEO & Founder",
+        "jobTitle": "CEO - Founder",
         "worksFor": {
           "@type": "Organization",
           "@id": "https://truerankdigital.com/#organization",
@@ -44,46 +44,46 @@ export default function StaffPage() {
         "@type": "Person",
         "@id": "https://truerankdigital.com/staff/jesse-mathews",
         "name": "Jesse Mathews",
-        "jobTitle": "Business Developer Director",
+        "jobTitle": "EVP of Business Development & Sale",
         "worksFor": {
           "@type": "Organization",
           "@id": "https://truerankdigital.com/#organization",
           "name": "True Rank Digital"
         },
-        "description": "Business Developer Director overseeing operations and ensuring quality service delivery for all True Rank Digital clients.",
+        "description": "Executive Vice President of Business Development & Sale overseeing operations and growth initiatives for True Rank Digital clients.",
         "email": "jesse@truerankdigital.com",
         "url": "https://truerankdigital.com/staff",
-        "knowsAbout": ["Operations", "Team Leadership", "Quality Management", "Business Development"]
+        "knowsAbout": ["Business Development", "Sales Strategy", "Operations Leadership", "Growth Planning"]
       },
       {
         "@type": "Person",
         "@id": "https://truerankdigital.com/staff/jose-perdomo",
         "name": "Jose Perdomo",
-        "jobTitle": "Executive Vice President",
+        "jobTitle": "EVP of Sales & Client Success",
         "worksFor": {
           "@type": "Organization",
           "@id": "https://truerankdigital.com/#organization",
           "name": "True Rank Digital"
         },
-        "description": "Executive Vice President focused on strategic growth and business development for True Rank Digital's expansion.",
+        "description": "Executive Vice President of Sales & Client Success focused on client outcomes, retention, and scalable revenue growth.",
         "email": "jose@truerankdigital.com",
         "url": "https://truerankdigital.com/staff",
-        "knowsAbout": ["Strategic Planning", "Business Development", "Market Expansion", "Sales Strategy"]
+        "knowsAbout": ["Sales Leadership", "Client Success", "Revenue Growth", "Account Management"]
       },
       {
         "@type": "Person",
         "@id": "https://truerankdigital.com/staff/matt-bishop",
         "name": "Matt Bishop",
-        "jobTitle": "Tech Developer",
+        "jobTitle": "CTO (Chief Technology Officer)",
         "worksFor": {
           "@type": "Organization",
           "@id": "https://truerankdigital.com/#organization",
           "name": "True Rank Digital"
         },
-        "description": "Technical developer handling website development and technical implementation for client projects using True Rank Digital's proprietary technology stack.",
+        "description": "Chief Technology Officer responsible for technical architecture, software development, and platform innovation across True Rank Digital.",
         "email": "bishop@truerankdigital.com",
         "url": "https://truerankdigital.com/staff",
-        "knowsAbout": ["Web Development", "Technical Implementation", "Website Optimization", "Custom Software Development"]
+        "knowsAbout": ["Technology Strategy", "Software Architecture", "Web Development", "Custom Software Development"]
       },
       {
         "@type": "Person",
@@ -104,16 +104,16 @@ export default function StaffPage() {
         "@type": "Person",
         "@id": "https://truerankdigital.com/staff/eric-malheiro",
         "name": "Eric Malheiro",
-        "jobTitle": "Business Acquisition Director",
+        "jobTitle": "EVP of Sales Operations & Performance",
         "worksFor": {
           "@type": "Organization",
           "@id": "https://truerankdigital.com/#organization",
           "name": "True Rank Digital"
         },
-        "description": "Business Acquisition Director focused on strategic client acquisition and business development for True Rank Digital.",
+        "description": "Executive Vice President of Sales Operations & Performance driving sales process efficiency, forecasting accuracy, and performance optimization.",
         "email": "eric@truerankdigital.com",
         "url": "https://truerankdigital.com/staff",
-        "knowsAbout": ["Business Development", "Client Acquisition", "Strategic Partnerships", "Sales Strategy"]
+        "knowsAbout": ["Sales Operations", "Performance Management", "Revenue Operations", "Strategic Partnerships"]
       }
     ]
   };

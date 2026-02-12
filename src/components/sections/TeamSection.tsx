@@ -16,21 +16,21 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     name: 'Jon J Korkowski',
-    title: 'CEO Founder',
+    title: 'CEO - Founder',
     description: 'Visionary leader driving True Rank Digital\'s innovation and growth strategy.',
     quote: 'This isn\'t just another agency—it\'s a full-speed freight train. There are no brakes here, no walls that can\'t be broken, no mountain too steep. We move fast, we move loud, and we move together. You\'re here because you\'re built for the climb. Bring energy. Be consistent. Stay persistent. This company only knows forward.',
     image: '/images/team/jon-korkowski.jpg'
   },
   {
     name: 'Jesse Mathews',
-    title: 'President',
-    description: 'Overseeing company operations and strategic development initiatives.',
+    title: 'EVP of Business Development & Sale',
+    description: 'Leading business development initiatives and growth strategy execution.',
     image: '/images/team/jesse-mathews.jpg'
   },
   {
     name: 'Jose Perdomo',
-    title: 'Executive Vice President',
-    description: 'Managing key client relationships and driving business growth.',
+    title: 'EVP of Sales & Client Success',
+    description: 'Managing sales performance and client success outcomes across accounts.',
     linkedin: 'https://www.linkedin.com/in/jose-perdomo',
     image: '/images/team/jose-perdomo.jpg'
   }

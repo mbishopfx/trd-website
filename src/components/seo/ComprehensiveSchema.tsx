@@ -1,6 +1,3 @@
-'use client';
-
-import Script from 'next/script';
 import { siteIdentity } from '@/lib/seo/siteIdentity';
 
 interface ComprehensiveSchemaProps {
@@ -59,7 +56,9 @@ function cleanUrl(url: string) {
 export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: ComprehensiveSchemaProps) {
   const baseUrl = siteIdentity.url;
   const organizationId = `${baseUrl}/#organization`;
+  const localBusinessId = `${baseUrl}/#localbusiness`;
   const websiteId = `${baseUrl}/#website`;
+  const contactPointId = `${baseUrl}/#contactpoint`;
 
   const pageUrl = cleanUrl(pageData.url);
 
@@ -86,7 +85,7 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
     description: pageData.description,
     url: pageUrl,
     isPartOf: { '@id': websiteId },
-    about: { '@id': organizationId },
+    about: { '@id': type === 'contact' ? localBusinessId : organizationId },
     publisher: { '@id': organizationId },
     inLanguage: 'en-US',
     ...(pageData.keywords?.length ? { keywords: pageData.keywords.join(', ') } : {}),
@@ -94,7 +93,75 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
       '@type': 'ImageObject',
       url: siteIdentity.imageUrl,
     },
+    ...(type === 'contact'
+      ? {
+          mainEntity: { '@id': localBusinessId },
+          potentialAction: [
+            { '@type': 'ContactAction', target: `${baseUrl}/contact` },
+            {
+              '@type': 'CommunicateAction',
+              target: `tel:${siteIdentity.telephone.replace(/[^\d+]/g, '')}`,
+            },
+            { '@type': 'CommunicateAction', target: `mailto:${siteIdentity.email}` },
+          ],
+        }
+      : {}),
   };
+
+  const contactPointSchema =
+    type === 'contact'
+      ? {
+          '@type': 'ContactPoint',
+          '@id': contactPointId,
+          contactType: 'customer service',
+          telephone: siteIdentity.telephone,
+          email: siteIdentity.email,
+          areaServed: 'US',
+          availableLanguage: ['English'],
+          url: `${baseUrl}/contact`,
+        }
+      : null;
+
+  const localBusinessSchema =
+    type === 'contact'
+      ? {
+          '@type': ['LocalBusiness', 'ProfessionalService'],
+          '@id': localBusinessId,
+          name: siteIdentity.brandName,
+          legalName: siteIdentity.legalName,
+          url: baseUrl,
+          logo: siteIdentity.logoUrl,
+          image: siteIdentity.imageUrl,
+          email: siteIdentity.email,
+          telephone: siteIdentity.telephone,
+          priceRange: '$$-$$$',
+          parentOrganization: { '@id': organizationId },
+          address: {
+            '@type': 'PostalAddress',
+            ...siteIdentity.address,
+          },
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: 40.4281,
+            longitude: -74.4157,
+          },
+          hasMap: siteIdentity.googleMapsCidUrl,
+          sameAs: siteIdentity.sameAs,
+          areaServed: [
+            { '@type': 'AdministrativeArea', name: 'New Jersey' },
+            { '@type': 'Country', name: 'United States' },
+          ],
+          contactPoint: [{ '@id': contactPointId }],
+          potentialAction: [
+            { '@type': 'ContactAction', target: `${baseUrl}/contact` },
+            {
+              '@type': 'CommunicateAction',
+              target: `tel:${siteIdentity.telephone.replace(/[^\d+]/g, '')}`,
+            },
+            { '@type': 'CommunicateAction', target: `mailto:${siteIdentity.email}` },
+          ],
+        }
+      : null;
 
   const softwareApplicationSchema =
     type === 'platform-tool'
@@ -235,6 +302,8 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
   const schemaGraph = {
     '@context': 'https://schema.org',
     '@graph': [
+      ...(localBusinessSchema ? [localBusinessSchema] : []),
+      ...(contactPointSchema ? [contactPointSchema] : []),
       webPageSchema,
       ...(softwareApplicationSchema ? [softwareApplicationSchema] : []),
       ...(serviceSchema ? [serviceSchema] : []),
@@ -249,11 +318,10 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
   };
 
   return (
-    <Script
+    <script
       id={`comprehensive-schema-${type}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
     />
   );
 }
-

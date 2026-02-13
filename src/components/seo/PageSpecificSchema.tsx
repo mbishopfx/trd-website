@@ -1,7 +1,3 @@
-'use client';
-
-import Script from 'next/script';
-
 interface PageSpecificSchemaProps {
   pageType: 'service' | 'about' | 'contact' | 'staff' | 'homepage' | 'location' | 'service-areas';
   pageTitle?: string;
@@ -97,29 +93,104 @@ export default function PageSpecificSchema({
   // Contact Page Schema
   const createContactSchema = () => ({
     "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "@id": `${baseUrl}/contact#contactpage`,
-    name: "Contact True Rank Digital",
-    description: "Get in touch with True Rank Digital for professional SEO and digital marketing services.",
-    url: `${baseUrl}/contact`,
-    mainEntity: {
-      "@id": `${baseUrl}/#organization`
-    },
-    potentialAction: [
+    "@graph": [
       {
-        "@type": "ContactAction",
-        target: `${baseUrl}/contact`,
-        actionStatus: "https://schema.org/PotentialActionStatus"
+        "@type": "Organization",
+        "@id": `${baseUrl}/#organization`,
+        name: "True Rank Digital LLC",
+        url: baseUrl,
+        email: "jon@truerankdigital.com",
+        telephone: "+1-732-475-0139",
+        contactPoint: [{ "@id": `${baseUrl}/#contactpoint` }]
       },
       {
-        "@type": "CommunicateAction",
-        target: "tel:+17324750139",
-        actionStatus: "https://schema.org/PotentialActionStatus"
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": `${baseUrl}/#localbusiness`,
+        name: "True Rank Digital",
+        legalName: "True Rank Digital LLC",
+        url: baseUrl,
+        image: `${baseUrl}/images/logos/trdlogoblue.webp`,
+        logo: `${baseUrl}/images/logos/trd-logo1.avif`,
+        email: "jon@truerankdigital.com",
+        telephone: "+1-732-475-0139",
+        priceRange: "$$-$$$",
+        parentOrganization: {
+          "@id": `${baseUrl}/#organization`
+        },
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "288 Summerhill Rd, suite 3",
+          addressLocality: "East Brunswick",
+          addressRegion: "NJ",
+          postalCode: "08816",
+          addressCountry: "US"
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 40.4281,
+          longitude: -74.4157
+        },
+        hasMap: "https://www.google.com/maps?cid=4662204553635539796",
+        sameAs: [
+          "https://www.google.com/maps?cid=4662204553635539796",
+          "https://www.facebook.com/truerankdigital",
+          "https://www.linkedin.com/company/true-rank-digital",
+          "https://www.wikidata.org/wiki/Q130284854",
+          "https://twitter.com/truerankdigital",
+          "https://www.instagram.com/truerankdigital_/?hl=en",
+          "https://www.youtube.com/channel/UC9wb8G1oROv_iUIDRL7JIWA",
+          "https://www.tiktok.com/@truerankdigital_",
+          "https://www.pinterest.com/truerankdigital"
+        ],
+        contactPoint: [{ "@id": `${baseUrl}/#contactpoint` }],
+        potentialAction: [
+          {
+            "@type": "ContactAction",
+            target: `${baseUrl}/contact`
+          },
+          {
+            "@type": "CommunicateAction",
+            target: "tel:+17324750139"
+          },
+          {
+            "@type": "CommunicateAction",
+            target: "mailto:jon@truerankdigital.com"
+          }
+        ]
       },
       {
-        "@type": "CommunicateAction", 
-        target: "mailto:jon@truerankdigital.com",
-        actionStatus: "https://schema.org/PotentialActionStatus"
+        "@type": "ContactPoint",
+        "@id": `${baseUrl}/#contactpoint`,
+        contactType: "customer service",
+        telephone: "+1-732-475-0139",
+        email: "jon@truerankdigital.com",
+        areaServed: "US",
+        availableLanguage: ["English"],
+        url: `${baseUrl}/contact`
+      },
+      {
+        "@type": "ContactPage",
+        "@id": `${baseUrl}/contact#contactpage`,
+        name: "Contact True Rank Digital",
+        description: "Get in touch with True Rank Digital for professional SEO and digital marketing services.",
+        url: `${baseUrl}/contact`,
+        mainEntity: {
+          "@id": `${baseUrl}/#localbusiness`
+        },
+        potentialAction: [
+          {
+            "@type": "ContactAction",
+            target: `${baseUrl}/contact`
+          },
+          {
+            "@type": "CommunicateAction",
+            target: "tel:+17324750139"
+          },
+          {
+            "@type": "CommunicateAction",
+            target: "mailto:jon@truerankdigital.com"
+          }
+        ]
       }
     ]
   });
@@ -453,7 +524,7 @@ export default function PageSpecificSchema({
   if (!pageSchema) return null;
 
   return (
-    <Script
+    <script
       id={`page-specific-schema-${pageType}`}
       type="application/ld+json"
       dangerouslySetInnerHTML={{

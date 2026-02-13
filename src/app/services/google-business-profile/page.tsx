@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Users, Star, MapPin, TrendingUp, CheckCircle, Shield, Award, Clock, BarChart3, Camera, MessageSquare, Search, ArrowRight, Phone, Zap } from 'lucide-react';
 import GEOSchema from '@/components/seo/GEOSchema';
-import FAQSchema, { generateServiceFAQs } from '@/components/seo/FAQSchema';
-import ServiceSchema from '@/components/seo/ServiceSchema';
+import { generateServiceFAQs } from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
   title: 'Google Business Profile Management & Optimization Services | True Rank Digital',
@@ -140,7 +139,7 @@ export default function GoogleBusinessProfilePage() {
         pageType="service"
         pageData={{
           title: "Google Business Profile Management by True Rank Digital",
-          description: "Expert Google Business Profile optimization and management services to improve local visibility, trust, and conversions.",
+          description: "Complete Google Business Profile optimization and management services including listing optimization, review management, local visibility enhancement, and automated consistency monitoring.",
           url: "https://truerankdigital.com/services/google-business-profile",
           keywords: ["Google Business Profile", "GBP management", "review management", "local listings", "local pack optimization"],
           category: "Google Business Profile Services",
@@ -154,41 +153,30 @@ export default function GoogleBusinessProfilePage() {
         ]}
         entities={{
           primary: ["True Rank Digital", "Google Business Profile", "GBP Management"],
-          secondary: ["Review Management", "Local Listings", "Google Maps", "Local Pack"]
+          secondary: ["Review Management", "Local Listings", "Google Maps", "Local Pack"],
+          mentions: [
+            {
+              type: "Organization",
+              name: "Google",
+              sameAs: "https://www.wikidata.org/wiki/Q95",
+              description: "Primary search engine platform"
+            },
+            {
+              type: "Product",
+              name: "Google Business Profile",
+              sameAs: "https://www.wikidata.org/wiki/Q17633166",
+              description: "Business listing platform"
+            },
+            {
+              type: "Product",
+              name: "Google Maps",
+              sameAs: "https://www.wikidata.org/wiki/Q12013",
+              description: "Mapping and local search platform"
+            }
+          ]
         }}
-      />
-      
-      <ServiceSchema
-        serviceName="Google Business Profile Management"
-        serviceUrl="https://truerankdigital.com/services/google-business-profile"
-        description="Complete Google Business Profile optimization and management services including listing optimization, review management, local visibility enhancement, and automated consistency monitoring."
-        serviceType="Business Listing Management"
-        mentions={[
-          {
-            type: "Organization",
-            name: "Google",
-            sameAs: "https://www.wikidata.org/wiki/Q95",
-            description: "Primary search engine platform"
-          },
-          {
-            type: "Product",
-            name: "Google Business Profile",
-            sameAs: "https://www.wikidata.org/wiki/Q17633166",
-            description: "Business listing platform"
-          },
-          {
-            type: "Product",
-            name: "Google Maps",
-            sameAs: "https://www.wikidata.org/wiki/Q12013",
-            description: "Mapping and local search platform"
-          }
-        ]}
-      />
-      
-      <FAQSchema 
+        includeFAQ={true}
         faqs={faqs}
-        pageUrl="https://truerankdigital.com/services/google-business-profile"
-        category="service"
       />
       
       <article className="pt-16 min-h-screen bg-gradient-to-b from-blue-50 to-white">

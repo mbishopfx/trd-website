@@ -2,7 +2,7 @@ import Script from 'next/script';
 import { siteIdentity } from '@/lib/seo/siteIdentity';
 
 // GEO Schema Types
-export type PageType = 'service' | 'article' | 'product' | 'howto' | 'faq' | 'landing' | 'location' | 'software' | 'webpage' | 'market';
+export type PageType = 'service' | 'article' | 'product' | 'howto' | 'faq' | 'landing' | 'location' | 'software' | 'market' | 'webpage' | 'course' | 'collection' | 'person';
 
 export interface GEOSchemaProps {
   pageType: PageType;
@@ -15,7 +15,14 @@ export interface GEOSchemaProps {
     datePublished?: string;
     dateModified?: string;
     image?: string;
-    video?: string;
+    video?: {
+      name: string;
+      description: string;
+      thumbnailUrl: string;
+      uploadDate: string;
+      contentUrl?: string;
+      embedUrl?: string;
+    };
     // Service-specific
     serviceType?: string;
     priceRange?: string;
@@ -52,6 +59,20 @@ export interface GEOSchemaProps {
       text: string;
       image?: string;
     }>;
+    // Course-specific
+    courseCode?: string;
+    provider?: string;
+    // Collection-specific
+    collectionItems?: Array<{
+      name: string;
+      url: string;
+      description?: string;
+      position?: number;
+    }>;
+    // Person-specific
+    jobTitle?: string;
+    worksFor?: string;
+    socialLinks?: string[];
   };
   breadcrumbs?: Array<{
     name: string;
@@ -62,8 +83,10 @@ export interface GEOSchemaProps {
     secondary?: string[];
     mentions?: Array<{
       type: string;
-      id: string;
+      id?: string;
       name: string;
+      sameAs?: string;
+      description?: string;
     }>;
   };
   includeFAQ?: boolean;
@@ -81,65 +104,6 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
   
   // Generate @id for the main entity
   const mainEntityId = `${pageData.url}#${pageType}`;
-  
-  // Organization schema (full definition for graph)
-  const buildOrganizationSchema = () => ({
-    "@type": "Organization",
-    "@id": organizationId,
-    "name": siteIdentity.brandName,
-    "legalName": siteIdentity.legalName,
-    "url": baseUrl,
-    "logo": {
-      "@type": "ImageObject",
-      "@id": `${baseUrl}/#logo`,
-      "url": siteIdentity.imageUrl,
-      "contentUrl": siteIdentity.imageUrl,
-      "caption": `${siteIdentity.brandName} Logo`,
-      "inLanguage": "en-US",
-      "width": "1200",
-      "height": "630"
-    },
-    "image": {
-      "@id": `${baseUrl}/#logo`
-    },
-    "telephone": siteIdentity.telephone,
-    "email": siteIdentity.email,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": siteIdentity.address.streetAddress,
-      "addressLocality": siteIdentity.address.addressLocality,
-      "addressRegion": siteIdentity.address.addressRegion,
-      "postalCode": siteIdentity.address.postalCode,
-      "addressCountry": siteIdentity.address.addressCountry
-    },
-    "areaServed": [
-      { "@type": "City", "name": `${siteIdentity.address.addressLocality}, ${siteIdentity.address.addressRegion}` },
-      { "@type": "State", "name": siteIdentity.address.addressRegion },
-      { "@type": "Country", "name": "United States" }
-    ],
-    "sameAs": siteIdentity.sameAs,
-    "founder": {
-      "@type": "Person",
-      "name": "Jon J Korkowski",
-      "jobTitle": "CEO - Founder"
-    },
-    "foundingDate": siteIdentity.foundingYear,
-    "knowsAbout": entities?.primary || ["SEO", "Digital Marketing", "AI Optimization"],
-    "slogan": "Get Your Business Found on Google—Fast!"
-  });
-
-  // Website schema (full definition for graph)
-  const buildWebsiteSchema = () => ({
-    "@type": "WebSite",
-    "@id": websiteId,
-    "url": baseUrl,
-    "name": siteIdentity.brandName,
-    "description": "Professional SEO & Digital Marketing Services",
-    "publisher": {
-      "@id": organizationId
-    },
-    "inLanguage": "en-US"
-  });
 
   // Build page schema
   const buildPageSchema = () => {
@@ -184,6 +148,23 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
         "caption": pageData.title
       };
     }
+    
+    // Add video if provided
+    if (pageData.video) {
+      baseSchema["video"] = {
+        "@type": "VideoObject",
+        "@id": `${pageData.url}#video`,
+        "name": pageData.video.name,
+        "description": pageData.video.description,
+        "thumbnailUrl": pageData.video.thumbnailUrl,
+        "uploadDate": pageData.video.uploadDate,
+        "contentUrl": pageData.video.contentUrl,
+        "embedUrl": pageData.video.embedUrl,
+        "publisher": {
+          "@id": organizationId
+        }
+      };
+    }
 
     // Add breadcrumbs reference
     if (breadcrumbs && breadcrumbs.length > 0) {
@@ -224,6 +205,12 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
         return buildMarketSchema();
       case 'webpage':
         return buildWebpageSchema();
+      case 'course':
+        return buildCourseSchema();
+      case 'collection':
+        return buildCollectionSchema();
+      case 'person':
+        return buildPersonSchema();
       default:
         return null;
     }
@@ -285,7 +272,15 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
     },
     "brand": {
       "@id": organizationId
-    }
+    },
+    ...(entities?.mentions && entities.mentions.length > 0 && {
+      "mentions": entities.mentions.map(mention => ({
+        "@type": mention.type,
+        "name": mention.name,
+        "sameAs": mention.sameAs,
+        "description": mention.description
+      }))
+    })
   });
 
   const buildArticleSchema = () => ({
@@ -497,6 +492,58 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
     })) || []
   });
 
+  const buildCourseSchema = () => ({
+    "@type": "Course",
+    "@id": mainEntityId,
+    "name": pageData.title,
+    "description": pageData.description,
+    "provider": {
+      "@id": organizationId
+    },
+    "courseCode": pageData.courseCode || "SEO-101",
+    "hasCourseInstance": {
+      "@type": "CourseInstance",
+      "courseMode": "Online",
+      "courseWorkload": "Self-paced"
+    }
+  });
+
+  const buildCollectionSchema = () => ({
+    "@type": "CollectionPage",
+    "@id": mainEntityId,
+    "name": pageData.title,
+    "description": pageData.description,
+    "url": pageData.url,
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": pageData.collectionItems?.map((item, index) => ({
+        "@type": "ListItem",
+        "position": item.position || index + 1,
+        "item": {
+          "@type": "WebPage",
+          "@id": item.url,
+          "name": item.name,
+          "description": item.description,
+          "url": item.url
+        }
+      })) || []
+    }
+  });
+
+  const buildPersonSchema = () => ({
+    "@type": "Person",
+    "@id": mainEntityId,
+    "name": pageData.title,
+    "description": pageData.description,
+    "jobTitle": pageData.jobTitle || "Team Member",
+    "worksFor": {
+      "@id": organizationId
+    },
+    "url": pageData.url,
+    "image": pageData.image,
+    "sameAs": pageData.socialLinks || []
+  });
+
   // Build breadcrumb schema
   const buildBreadcrumbSchema = () => {
     if (!breadcrumbs || breadcrumbs.length === 0) return null;
@@ -539,8 +586,6 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
   const schemaGraph = {
     "@context": "https://schema.org",
     "@graph": [
-      buildOrganizationSchema(),
-      buildWebsiteSchema(),
       buildPageSchema(),
       buildMainEntitySchema(),
       buildBreadcrumbSchema(),

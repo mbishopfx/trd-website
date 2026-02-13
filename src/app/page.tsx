@@ -6,7 +6,7 @@ import TraditionalServicesSection from '@/components/sections/TraditionalService
 import TestimonialsCarousel from '@/components/sections/TestimonialsCarousel';
 import CTASection from '@/components/sections/CTASection';
 import StarterPackBanner from '@/components/sections/StarterPackBanner';
-import HomepageSchema from '@/components/seo/HomepageSchema';
+import GEOSchema from '@/components/seo/GEOSchema';
 import GoogleMapComponent from '@/components/sections/GoogleMap';
 import ContactFormSection from '@/components/sections/ContactFormSection';
 import Script from 'next/script';
@@ -88,7 +88,25 @@ export default function Home() {
   return (
     <>
       {/* Consolidated Homepage Schema - All entities in one @graph for maximum detection */}
-      <HomepageSchema faqs={homepageFAQs} />
+      <GEOSchema
+        pageType="webpage"
+        pageData={{
+          title: "True Rank Digital | Google Business Optimization & Local Pack Domination",
+          description: "True Rank Digital delivers Google Business Optimization services with proprietary dashboard platform, grid map ranking analysis, and local pack domination strategies for businesses in East Brunswick, NJ and nationwide.",
+          url: "https://truerankdigital.com",
+          keywords: ["Google Business Optimization", "local pack domination", "grid map ranking", "Google Business Profile", "hyperlocal marketing"],
+          category: "Digital Marketing Agency"
+        }}
+        breadcrumbs={[
+          { name: "Home", url: "https://truerankdigital.com" }
+        ]}
+        entities={{
+          primary: ["True Rank Digital", "Google Business Optimization", "Local Pack Domination"],
+          secondary: ["Grid Map Ranking", "Competitor Analysis", "Hyperlocal Marketing"]
+        }}
+        includeFAQ={true}
+        faqs={homepageFAQs}
+      />
       
       <article className="pt-16">
         {/* Promotional Banner */}

@@ -145,7 +145,7 @@ export default function PageSpecificSchema({
         contactPoint: [{ "@id": `${baseUrl}/#contactpoint` }],
         potentialAction: [
           {
-            "@type": "ContactAction",
+            "@type": "CommunicateAction",
             target: `${baseUrl}/contact`
           },
           {
@@ -179,7 +179,7 @@ export default function PageSpecificSchema({
         },
         potentialAction: [
           {
-            "@type": "ContactAction",
+            "@type": "CommunicateAction",
             target: `${baseUrl}/contact`
           },
           {

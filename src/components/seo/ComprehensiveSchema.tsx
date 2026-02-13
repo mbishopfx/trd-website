@@ -97,7 +97,7 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
       ? {
           mainEntity: { '@id': localBusinessId },
           potentialAction: [
-            { '@type': 'ContactAction', target: `${baseUrl}/contact` },
+            { '@type': 'CommunicateAction', target: `${baseUrl}/contact` },
             {
               '@type': 'CommunicateAction',
               target: `tel:${siteIdentity.telephone.replace(/[^\d+]/g, '')}`,
@@ -153,7 +153,7 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
           ],
           contactPoint: [{ '@id': contactPointId }],
           potentialAction: [
-            { '@type': 'ContactAction', target: `${baseUrl}/contact` },
+            { '@type': 'CommunicateAction', target: `${baseUrl}/contact` },
             {
               '@type': 'CommunicateAction',
               target: `tel:${siteIdentity.telephone.replace(/[^\d+]/g, '')}`,

@@ -81,7 +81,7 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
     hasOfferCatalog: { '@id': offerCatalogId },
     potentialAction: [
       {
-        '@type': 'ContactAction',
+        '@type': 'CommunicateAction',
         target: `${baseUrl}/contact`,
       },
       {
@@ -100,7 +100,7 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
     about: { '@id': localBusinessId },
     inLanguage: 'en-US',
     potentialAction: {
-      '@type': 'ContactAction',
+      '@type': 'CommunicateAction',
       target: `${baseUrl}/contact`,
     },
   };

@@ -33,9 +33,18 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
     },
     hasMap: siteIdentity.googleMapsCidUrl,
     sameAs: siteIdentity.sameAs,
-    contactPoint: [{ '@id': contactPointId }],
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: siteIdentity.telephone,
+        email: siteIdentity.email,
+        contactType: 'customer service',
+        areaServed: 'US',
+        availableLanguage: ['English'],
+        url: `${baseUrl}/contact`,
+      },
+    ],
     areaServed: { '@type': 'Country', name: 'United States' },
-    hasOfferCatalog: { '@id': offerCatalogId },
     knowsAbout: ['Local SEO', 'Digital Marketing', 'Google Business Profile', 'Schema Markup', 'AI SEO'],
   };
 
@@ -61,7 +70,11 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
     telephone: siteIdentity.telephone,
     email: siteIdentity.email,
     priceRange: '$$-$$$',
-    parentOrganization: { '@id': organizationId },
+    parentOrganization: {
+      '@type': 'Organization',
+      name: siteIdentity.legalName,
+      url: baseUrl,
+    },
     address: {
       '@type': 'PostalAddress',
       ...siteIdentity.address,
@@ -77,8 +90,17 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
       { '@type': 'AdministrativeArea', name: 'New Jersey' },
       { '@type': 'Country', name: 'United States' },
     ],
-    contactPoint: [{ '@id': contactPointId }],
-    hasOfferCatalog: { '@id': offerCatalogId },
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: siteIdentity.telephone,
+        email: siteIdentity.email,
+        contactType: 'customer service',
+        areaServed: 'US',
+        availableLanguage: ['English'],
+        url: `${baseUrl}/contact`,
+      },
+    ],
     potentialAction: [
       {
         '@type': 'CommunicateAction',
@@ -96,8 +118,12 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
     '@id': websiteId,
     name: siteIdentity.brandName,
     url: baseUrl,
-    publisher: { '@id': organizationId },
-    about: { '@id': localBusinessId },
+    publisher: {
+      '@type': 'Organization',
+      name: siteIdentity.legalName,
+      url: baseUrl,
+    },
+    about: `${siteIdentity.brandName} local SEO and digital marketing services`,
     inLanguage: 'en-US',
     potentialAction: {
       '@type': 'CommunicateAction',
@@ -113,27 +139,27 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
       {
         '@type': 'Service',
         name: 'Local SEO & Google Maps Optimization',
-        provider: { '@id': localBusinessId },
+        provider: { '@type': 'Organization', name: siteIdentity.brandName, url: baseUrl },
       },
       {
         '@type': 'Service',
         name: 'Google Business Profile Optimization',
-        provider: { '@id': localBusinessId },
+        provider: { '@type': 'Organization', name: siteIdentity.brandName, url: baseUrl },
       },
       {
         '@type': 'Service',
         name: 'Technical SEO & Schema Markup',
-        provider: { '@id': localBusinessId },
+        provider: { '@type': 'Organization', name: siteIdentity.brandName, url: baseUrl },
       },
       {
         '@type': 'Service',
         name: 'AI Search Optimization (AIO/LLM.txt)',
-        provider: { '@id': localBusinessId },
+        provider: { '@type': 'Organization', name: siteIdentity.brandName, url: baseUrl },
       },
       {
         '@type': 'Service',
         name: 'Web Development & Conversion Optimization',
-        provider: { '@id': localBusinessId },
+        provider: { '@type': 'Organization', name: siteIdentity.brandName, url: baseUrl },
       },
     ],
   };

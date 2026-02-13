@@ -181,6 +181,16 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
       baseSchema["dateModified"] = pageData.dateModified;
     }
 
+    // Add mentions to WebPage schema (CreativeWork)
+    if (entities?.mentions && entities.mentions.length > 0) {
+      baseSchema["mentions"] = entities.mentions.map(mention => ({
+        "@type": mention.type,
+        "name": mention.name,
+        "sameAs": mention.sameAs,
+        "description": mention.description
+      }));
+    }
+
     return baseSchema;
   };
 
@@ -272,15 +282,7 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
     },
     "brand": {
       "@id": organizationId
-    },
-    ...(entities?.mentions && entities.mentions.length > 0 && {
-      "mentions": entities.mentions.map(mention => ({
-        "@type": mention.type,
-        "name": mention.name,
-        "sameAs": mention.sameAs,
-        "description": mention.description
-      }))
-    })
+    }
   });
 
   const buildArticleSchema = () => ({

@@ -24,6 +24,7 @@ export default function AIAuditPage() {
   const [location, setLocation] = useState('Missouri');
   const [website, setWebsite] = useState('');
   const [phone, setPhone] = useState('');
+  const [mapKeyword, setMapKeyword] = useState('');
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -37,7 +38,7 @@ export default function AIAuditPage() {
       const r = await fetch('/api/ai-scan', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, business: `${business} (${location})`, website, phone, email, variant: 'ai-audit' }),
+        body: JSON.stringify({ name, business: `${business} (${location})`, website, phone, mapKeyword, email, variant: 'ai-audit' }),
       });
       const j = await r.json();
       if (!r.ok) throw new Error(j?.error || 'Scan failed');
@@ -63,7 +64,8 @@ export default function AIAuditPage() {
               <input value={business} onChange={(e) => setBusiness(e.target.value)} placeholder="Business name" className="w-full rounded-xl border border-[#d7cfc3] bg-[#fdfbf8] px-4 py-3" />
               <input value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Primary city/state" className="w-full rounded-xl border border-[#d7cfc3] bg-[#fdfbf8] px-4 py-3" />
               <input value={website} onChange={(e) => setWebsite(e.target.value)} placeholder="Website URL" className="w-full rounded-xl border border-[#d7cfc3] bg-[#fdfbf8] px-4 py-3" />
-              <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone (required)" className="w-full rounded-xl border border-[#d7cfc3] bg-[#fdfbf8] px-4 py-3" />
+              <input value={mapKeyword} onChange={(e) => setMapKeyword(e.target.value)} placeholder="Industry keyword for map pack check (e.g., dog groomers near me)" className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 placeholder:text-white/50" />
+            <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone (required)" className="w-full rounded-xl border border-[#d7cfc3] bg-[#fdfbf8] px-4 py-3" />
               <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work email (required)" className="w-full rounded-xl border border-[#d7cfc3] bg-[#fdfbf8] px-4 py-3" />
               <button onClick={run} disabled={loading} className="w-full rounded-xl bg-[#17120f] px-4 py-3 font-semibold text-white disabled:opacity-60">{loading ? 'Scanning…' : 'Start Audit'}</button>
               {error && <p className="text-sm text-red-700">{error}</p>}

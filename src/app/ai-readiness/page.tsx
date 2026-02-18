@@ -16,6 +16,7 @@ export default function AIReadinessPage() {
   const [website, setWebsite] = useState('');
   const [vertical, setVertical] = useState('Auto Dealer');
   const [phone, setPhone] = useState('');
+  const [mapKeyword, setMapKeyword] = useState('');
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -29,7 +30,7 @@ export default function AIReadinessPage() {
       const resp = await fetch('/api/ai-scan', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, business, website, vertical, phone, email, variant: 'ai-readiness' }),
+        body: JSON.stringify({ name, business, website, vertical, phone, mapKeyword, email, variant: 'ai-readiness' }),
       });
       const data = await resp.json();
       if (!resp.ok) throw new Error(data?.error || 'Scan failed');
@@ -62,6 +63,7 @@ export default function AIReadinessPage() {
                 <option key={v}>{v}</option>
               ))}
             </select>
+            <input value={mapKeyword} onChange={(e) => setMapKeyword(e.target.value)} placeholder="Industry keyword for map pack check (e.g., dog groomers near me)" className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 placeholder:text-white/50" />
             <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone (required)" className="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-4 py-3 text-sm" />
             <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work email (required)" className="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-4 py-3 text-sm" />
             <button onClick={runScan} disabled={loading} className="w-full rounded-xl bg-cyan-400 px-4 py-3 text-sm font-semibold text-zinc-950 disabled:opacity-60">

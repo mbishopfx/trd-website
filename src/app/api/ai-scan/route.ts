@@ -4,6 +4,7 @@ type ScanInput = {
   name: string;
   business: string;
   website: string;
+  mapKeyword: string;
   vertical?: string;
   email: string;
   phone: string;
@@ -16,18 +17,25 @@ type GBPPlacement = {
   sampleQuery: string;
 };
 
+type AuditSignals = {
+  negatives: string[];
+  schemaVisible: boolean;
+  socialPresent: boolean;
+  seoIssues: string[];
+  serviceLocationPagesVisible: boolean;
+};
+
 function validEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-function pickSearchQuery(input: ScanInput) {
-  const base = input.vertical?.trim() || 'local service';
-  return `${base} near me ${input.business}`.trim();
+function ensureUrl(url: string) {
+  return /^https?:\/\//i.test(url) ? url : `https://${url}`;
 }
 
 async function checkGBPPlacement(input: ScanInput): Promise<GBPPlacement> {
   const apiKey = process.env.GOOGLE_PLACES_API_KEY;
-  const sampleQuery = pickSearchQuery(input);
+  const sampleQuery = input.mapKeyword.trim();
   if (!apiKey) return { checked: false, position: null, sampleQuery };
 
   try {
@@ -43,6 +51,7 @@ async function checkGBPPlacement(input: ScanInput): Promise<GBPPlacement> {
     });
 
     if (!resp.ok) return { checked: false, position: null, sampleQuery };
+
     const json = (await resp.json()) as { places?: Array<{ displayName?: { text?: string } }> };
     const places = json.places || [];
     const tokens = input.business.toLowerCase().split(/\s+/).filter((x) => x.length > 2);
@@ -64,67 +73,75 @@ async function checkGBPPlacement(input: ScanInput): Promise<GBPPlacement> {
   }
 }
 
-async function firecrawlDeepNegatives(url: string) {
+async function runDeepAudit(input: ScanInput): Promise<AuditSignals> {
+  const url = ensureUrl(input.website);
   const key = process.env.FIRECRAWL_API_KEY;
-  if (!key) {
-    return {
-      negatives: ['Firecrawl key missing: deep crawl unavailable'],
-      crawled: false,
-    };
-  }
 
+  let html = '';
   try {
-    const normalized = /^https?:\/\//i.test(url) ? url : `https://${url}`;
-    const resp = await fetch('https://api.firecrawl.dev/v1/scrape', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${key}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        url: normalized,
-        formats: ['markdown'],
-        onlyMainContent: true,
-      }),
-      cache: 'no-store',
-    });
-
-    if (!resp.ok) {
-      return { negatives: ['Firecrawl scrape failed'], crawled: false };
-    }
-
-    const data = (await resp.json()) as { data?: { markdown?: string } };
-    const markdown = (data?.data?.markdown || '').toLowerCase();
-
-    const negatives: string[] = [];
-
-    if (!markdown.includes('schema') && !markdown.includes('application/ld+json')) {
-      negatives.push('No clear schema/JSON-LD evidence found in crawl output');
-    }
-    if (!markdown.includes('faq')) {
-      negatives.push('No visible FAQ content for AI answer targeting');
-    }
-    if (!markdown.includes('review') && !markdown.includes('testimonial')) {
-      negatives.push('Weak trust proof on-page (few review/testimonial signals found)');
-    }
-    if (!markdown.includes('contact') || !markdown.includes('phone')) {
-      negatives.push('Contact conversion path appears weak or hard to find');
-    }
-    if (!markdown.includes('service') && !markdown.includes('location')) {
-      negatives.push('Service/location intent coverage appears thin for local search');
-    }
-
-    if (negatives.length === 0) {
-      negatives.push('No major technical negatives detected from initial crawl sample (manual validation recommended)');
-    }
-
-    return { negatives, crawled: true };
+    const res = await fetch(url, { cache: 'no-store' });
+    if (res.ok) html = await res.text();
   } catch {
-    return { negatives: ['Deep crawl exception occurred'], crawled: false };
+    // best effort
   }
+
+  let firecrawlMarkdown = '';
+  if (key) {
+    try {
+      const fc = await fetch('https://api.firecrawl.dev/v1/scrape', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${key}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ url, formats: ['markdown'], onlyMainContent: true }),
+        cache: 'no-store',
+      });
+      if (fc.ok) {
+        const json = (await fc.json()) as { data?: { markdown?: string } };
+        firecrawlMarkdown = json?.data?.markdown || '';
+      }
+    } catch {
+      // best effort
+    }
+  }
+
+  const combined = `${html}\n${firecrawlMarkdown}`.toLowerCase();
+
+  const schemaVisible = combined.includes('application/ld+json') || combined.includes('schema.org');
+  const socialPresent =
+    combined.includes('facebook.com') ||
+    combined.includes('instagram.com') ||
+    combined.includes('linkedin.com') ||
+    combined.includes('tiktok.com') ||
+    combined.includes('x.com') ||
+    combined.includes('twitter.com');
+
+  const serviceLocationPagesVisible =
+    combined.includes('/services') ||
+    combined.includes('/service-areas') ||
+    combined.includes('/locations') ||
+    combined.includes('service areas') ||
+    combined.includes('areas we serve');
+
+  const seoIssues: string[] = [];
+  if (!/<title>[^<]{15,}<\/title>/i.test(html)) seoIssues.push('Weak or missing optimized <title> tag');
+  if (!/meta\s+name=["']description["']\s+content=["'][^"']{60,}/i.test(html)) seoIssues.push('Missing/weak meta description');
+  if (!/<h1[^>]*>[^<]{4,}<\/h1>/i.test(html)) seoIssues.push('Missing clear H1 headline');
+  if ((html.match(/<h1/gi) || []).length > 1) seoIssues.push('Multiple H1 tags detected (possible structure issue)');
+
+  const negatives: string[] = [];
+  if (!schemaVisible) negatives.push('Schema visibility is weak or missing (no strong JSON-LD evidence found).');
+  if (!socialPresent) negatives.push('Social presence signals are weak (no clear linked social profiles found).');
+  if (seoIssues.length) negatives.push(`Website SEO issues: ${seoIssues.join(' | ')}`);
+  if (!serviceLocationPagesVisible) negatives.push('Service/location pages are not clearly visible for local intent.');
+
+  if (negatives.length === 0) negatives.push('No major negatives detected in initial deep crawl sample. Manual review recommended.');
+
+  return { negatives, schemaVisible, socialPresent, seoIssues, serviceLocationPagesVisible };
 }
 
-async function createLeadTaskAndNote(input: ScanInput, negatives: string[], placement: GBPPlacement, score: number) {
+async function createLeadTaskAndNote(input: ScanInput, placement: GBPPlacement, score: number, audit: AuditSignals) {
   const token = process.env.GHL_API_TOKEN;
   const locationId = process.env.GHL_LOCATION_ID || 'ukS9ShMolehB8MKWPstv';
   const assigneeId = process.env.GHL_ASSIGNEE_ID || 'rVX5I5UZCKaJxyIUKviL';
@@ -168,15 +185,27 @@ async function createLeadTaskAndNote(input: ScanInput, negatives: string[], plac
 
   const placementText = placement.checked
     ? placement.position
-      ? `Approx map placement for "${placement.sampleQuery}": #${placement.position}`
-      : `Not found in top 10 for "${placement.sampleQuery}"`
-    : 'Map placement check unavailable';
+      ? `GBP map pack placement for "${placement.sampleQuery}": #${placement.position}`
+      : `GBP map pack placement for "${placement.sampleQuery}": Not in top 10`
+    : 'GBP map pack placement check unavailable';
 
   const noteBody = [
-    `AI Scanner Result — Score: ${score}/100`,
-    placementText,
+    `AI Scanner Deep Audit — Score: ${score}/100`,
+    '',
+    `Name: ${input.name}`,
+    `Business: ${input.business}`,
+    `Website: ${input.website}`,
+    `Email: ${input.email}`,
+    `Phone: ${input.phone}`,
+    '',
+    `1) Schema visibility: ${audit.schemaVisible ? 'Detected (partial/strong)' : 'Weak or missing'}`,
+    `2) ${placementText}`,
+    `3) Social presence: ${audit.socialPresent ? 'Detected' : 'Weak or missing'}`,
+    `4) Website SEO audit: ${audit.seoIssues.length ? audit.seoIssues.join(' | ') : 'No major issues detected in quick technical pass'}`,
+    `5) Service/location pages visible: ${audit.serviceLocationPagesVisible ? 'Yes' : 'No'}`,
+    '',
     'Negatives found:',
-    ...negatives.map((n, i) => `${i + 1}. ${n}`),
+    ...audit.negatives.map((n, i) => `${i + 1}. ${n}`),
   ].join('\n');
 
   if (contactId) {
@@ -190,7 +219,7 @@ async function createLeadTaskAndNote(input: ScanInput, negatives: string[], plac
           contactId,
           assignedTo: assigneeId,
           title: `AI Scanner follow-up: ${input.business}`,
-          body: `New scanner lead (${input.name}). Phone: ${input.phone}. ${placementText}`,
+          body: `New scanner lead (${input.name}). ${placementText}`,
           dueDate: due,
         }),
       });
@@ -199,23 +228,13 @@ async function createLeadTaskAndNote(input: ScanInput, negatives: string[], plac
       // best effort
     }
 
-    // best-effort notes (LeadConnector endpoint variations)
     try {
-      const n1 = await fetch('https://services.leadconnectorhq.com/contacts/notes', {
+      const noteResp = await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}/notes`, {
         method: 'POST',
         headers,
-        body: JSON.stringify({ locationId, contactId, body: noteBody }),
+        body: JSON.stringify({ body: noteBody }),
       });
-      noteCreated = n1.ok;
-
-      if (!noteCreated) {
-        const n2 = await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}/notes`, {
-          method: 'POST',
-          headers,
-          body: JSON.stringify({ locationId, body: noteBody }),
-        });
-        noteCreated = n2.ok;
-      }
+      noteCreated = noteResp.ok;
     } catch {
       // best effort
     }
@@ -224,9 +243,7 @@ async function createLeadTaskAndNote(input: ScanInput, negatives: string[], plac
   return { contactId, taskCreated, noteCreated, reason: 'ok' };
 }
 
-
-
-async function sendScannerLeadEmail(input: ScanInput, score: number, negatives: string[], placement: GBPPlacement) {
+async function sendScannerLeadEmail(input: ScanInput, score: number, audit: AuditSignals, placement: GBPPlacement) {
   const smtpHost = process.env.SMTP_HOST?.trim();
   const smtpPort = parseInt(process.env.SMTP_PORT?.trim() || '587', 10);
   const smtpSecure = process.env.SMTP_SECURE?.trim() === 'true';
@@ -246,17 +263,15 @@ async function sendScannerLeadEmail(input: ScanInput, score: number, negatives: 
   const to = ['jon@truerankdigital.com', 'bishop@truerankdigital.com'].join(',');
   const placementText = placement.checked
     ? placement.position
-      ? `Approx map placement for "${placement.sampleQuery}": #${placement.position}`
-      : `Not found in top 10 for "${placement.sampleQuery}"`
-    : 'Map placement check unavailable';
+      ? `#${placement.position} for "${placement.sampleQuery}"`
+      : `Not in top 10 for "${placement.sampleQuery}"`
+    : 'Placement check unavailable';
 
-  const negativesHtml = negatives.map((n) => `<li>${n}</li>`).join('');
+  const negativesHtml = audit.negatives.map((n) => `<li>${n}</li>`).join('');
 
   const html = `
     <div style="font-family:Arial,sans-serif;max-width:720px;margin:0 auto;border:1px solid #eee;border-radius:10px;overflow:hidden">
-      <div style="background:#111827;color:#fff;padding:18px 20px">
-        <h2 style="margin:0">New AI Scanner Lead</h2>
-      </div>
+      <div style="background:#111827;color:#fff;padding:18px 20px"><h2 style="margin:0">New AI Scanner Lead</h2></div>
       <div style="padding:18px 20px">
         <p><strong>Name:</strong> ${input.name}</p>
         <p><strong>Business:</strong> ${input.business}</p>
@@ -264,9 +279,8 @@ async function sendScannerLeadEmail(input: ScanInput, score: number, negatives: 
         <p><strong>Phone:</strong> ${input.phone}</p>
         <p><strong>Website:</strong> ${input.website}</p>
         <p><strong>Score:</strong> ${score}/100</p>
-        <p><strong>Placement:</strong> ${placementText}</p>
-        <h3>Negatives Found</h3>
-        <ul>${negativesHtml}</ul>
+        <p><strong>Map pack placement:</strong> ${placementText}</p>
+        <h3>Negatives Found</h3><ul>${negativesHtml}</ul>
       </div>
     </div>`;
 
@@ -278,8 +292,7 @@ async function sendScannerLeadEmail(input: ScanInput, score: number, negatives: 
       html,
     });
     return { sent: true };
-  } catch (error) {
-    console.error('scanner lead email send failed', error);
+  } catch {
     return { sent: false, reason: 'send_failed' };
   }
 }
@@ -288,17 +301,17 @@ export async function POST(req: NextRequest) {
   try {
     const body = (await req.json()) as ScanInput;
 
-    if (!body.name || !body.business || !body.website || !body.email || !body.phone) {
-      return NextResponse.json({ error: 'Name, business, website, email, and phone are required.' }, { status: 400 });
+    if (!body.name || !body.business || !body.website || !body.email || !body.phone || !body.mapKeyword) {
+      return NextResponse.json({ error: 'Name, business, website, map keyword, email, and phone are required.' }, { status: 400 });
     }
     if (!validEmail(body.email)) {
       return NextResponse.json({ error: 'Please enter a valid email.' }, { status: 400 });
     }
 
-    const [crawl, placement] = await Promise.all([firecrawlDeepNegatives(body.website), checkGBPPlacement(body)]);
+    const [audit, placement] = await Promise.all([runDeepAudit(body), checkGBPPlacement(body)]);
 
     let score = 90;
-    score -= Math.min(45, crawl.negatives.length * 8);
+    score -= Math.min(45, audit.negatives.length * 8);
     if (placement.checked) {
       if (!placement.position) score -= 10;
       else if (placement.position > 6) score -= 6;
@@ -306,14 +319,14 @@ export async function POST(req: NextRequest) {
     }
     score = Math.max(25, Math.min(96, score));
 
-    const crm = await createLeadTaskAndNote(body, crawl.negatives, placement, score);
-    const emailNotify = await sendScannerLeadEmail(body, score, crawl.negatives, placement);
+    const crm = await createLeadTaskAndNote(body, placement, score, audit);
+    const emailNotify = await sendScannerLeadEmail(body, score, audit, placement);
 
     return NextResponse.json({
       score,
       summary: 'Deep audit complete. Showing key negatives only.',
       projectedLift: `${(2.6 + (100 - score) / 17).toFixed(1)}x projected upside after fixes`,
-      gaps: crawl.negatives,
+      gaps: audit.negatives,
       bookingUrl: '/contact',
       placement,
       crm,

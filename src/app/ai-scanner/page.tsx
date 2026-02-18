@@ -15,6 +15,7 @@ export default function AIScannerPage() {
   const [business, setBusiness] = useState('');
   const [site, setSite] = useState('');
   const [phone, setPhone] = useState('');
+  const [mapKeyword, setMapKeyword] = useState('');
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -28,7 +29,7 @@ export default function AIScannerPage() {
       const r = await fetch('/api/ai-scan', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, business, website: site, phone, email, variant: 'ai-scanner' }),
+        body: JSON.stringify({ name, business, website: site, phone, mapKeyword, email, variant: 'ai-scanner' }),
       });
       const j = await r.json();
       if (!r.ok) throw new Error(j?.error || 'Scan failed');
@@ -54,6 +55,7 @@ export default function AIScannerPage() {
             <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 placeholder:text-white/50" />
             <input value={business} onChange={(e) => setBusiness(e.target.value)} placeholder="Business name + city or GBP link" className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 placeholder:text-white/50" />
             <input value={site} onChange={(e) => setSite(e.target.value)} placeholder="Website URL" className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 placeholder:text-white/50" />
+            <input value={mapKeyword} onChange={(e) => setMapKeyword(e.target.value)} placeholder="Industry keyword for map pack check (e.g., dog groomers near me)" className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 placeholder:text-white/50" />
             <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone (required)" className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 placeholder:text-white/50" />
             <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work email (required)" className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 placeholder:text-white/50" />
             <button onClick={onScan} disabled={loading} className="w-full rounded-xl bg-gradient-to-r from-cyan-400 to-fuchsia-400 px-4 py-3 font-semibold text-zinc-950 disabled:opacity-60">

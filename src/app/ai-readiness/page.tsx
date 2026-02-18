@@ -11,6 +11,7 @@ type ScanResponse = {
 };
 
 export default function AIReadinessPage() {
+  const [name, setName] = useState('');
   const [business, setBusiness] = useState('');
   const [website, setWebsite] = useState('');
   const [vertical, setVertical] = useState('Auto Dealer');
@@ -27,7 +28,7 @@ export default function AIReadinessPage() {
       const resp = await fetch('/api/ai-scan', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ business, website, vertical, email, variant: 'ai-readiness' }),
+        body: JSON.stringify({ name, business, website, vertical, email, variant: 'ai-readiness' }),
       });
       const data = await resp.json();
       if (!resp.ok) throw new Error(data?.error || 'Scan failed');
@@ -47,17 +48,18 @@ export default function AIReadinessPage() {
         <div className="mb-10">
           <p className="text-xs uppercase tracking-[0.3em] text-cyan-300">True Rank Digital</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight md:text-6xl">AI Readiness Scanner</h1>
-          <p className="mt-4 max-w-3xl text-zinc-300 md:text-lg">
-            Fast audit for AI search + local visibility performance.
-          </p>
+          <p className="mt-4 max-w-3xl text-zinc-300 md:text-lg">Fast audit for AI search + local visibility performance.</p>
         </div>
 
         <div className="grid gap-8 rounded-3xl border border-zinc-800 bg-zinc-900/70 p-6 md:grid-cols-2 md:p-8">
           <div className="space-y-5">
-            <input value={business} onChange={(e) => setBusiness(e.target.value)} placeholder="Business / GBP URL" className="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-4 py-3 text-sm" />
+            <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" className="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-4 py-3 text-sm" />
+            <input value={business} onChange={(e) => setBusiness(e.target.value)} placeholder="Business name + city or GBP URL" className="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-4 py-3 text-sm" />
             <input value={website} onChange={(e) => setWebsite(e.target.value)} placeholder="Website URL" className="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-4 py-3 text-sm" />
             <select value={vertical} onChange={(e) => setVertical(e.target.value)} className="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-4 py-3 text-sm">
-              {['Auto Dealer', 'Home Services', 'Food Truck', 'Legal', 'Medical'].map((v) => <option key={v}>{v}</option>)}
+              {['Auto Dealer', 'Home Services', 'Food Truck', 'Legal', 'Medical'].map((v) => (
+                <option key={v}>{v}</option>
+              ))}
             </select>
             <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work email (required)" className="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-4 py-3 text-sm" />
             <button onClick={runScan} disabled={loading} className="w-full rounded-xl bg-cyan-400 px-4 py-3 text-sm font-semibold text-zinc-950 disabled:opacity-60">

@@ -19,6 +19,7 @@ const checklist = [
 ];
 
 export default function AIAuditPage() {
+  const [name, setName] = useState('');
   const [business, setBusiness] = useState('');
   const [location, setLocation] = useState('Missouri');
   const [website, setWebsite] = useState('');
@@ -35,7 +36,7 @@ export default function AIAuditPage() {
       const r = await fetch('/api/ai-scan', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ business: `${business} (${location})`, website, email, variant: 'ai-audit' }),
+        body: JSON.stringify({ name, business: `${business} (${location})`, website, email, variant: 'ai-audit' }),
       });
       const j = await r.json();
       if (!r.ok) throw new Error(j?.error || 'Scan failed');
@@ -57,6 +58,7 @@ export default function AIAuditPage() {
             <p className="mt-4 text-sm text-[#4c3d2d]">A client-ready audit preview for local and multi-location businesses.</p>
 
             <div className="mt-8 space-y-4">
+              <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" className="w-full rounded-xl border border-[#d7cfc3] bg-[#fdfbf8] px-4 py-3" />
               <input value={business} onChange={(e) => setBusiness(e.target.value)} placeholder="Business name" className="w-full rounded-xl border border-[#d7cfc3] bg-[#fdfbf8] px-4 py-3" />
               <input value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Primary city/state" className="w-full rounded-xl border border-[#d7cfc3] bg-[#fdfbf8] px-4 py-3" />
               <input value={website} onChange={(e) => setWebsite(e.target.value)} placeholder="Website URL" className="w-full rounded-xl border border-[#d7cfc3] bg-[#fdfbf8] px-4 py-3" />

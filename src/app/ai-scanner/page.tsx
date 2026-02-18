@@ -11,6 +11,7 @@ type ScanResponse = {
 };
 
 export default function AIScannerPage() {
+  const [name, setName] = useState('');
   const [business, setBusiness] = useState('');
   const [site, setSite] = useState('');
   const [email, setEmail] = useState('');
@@ -26,7 +27,7 @@ export default function AIScannerPage() {
       const r = await fetch('/api/ai-scan', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ business, website: site, email, variant: 'ai-scanner' }),
+        body: JSON.stringify({ name, business, website: site, email, variant: 'ai-scanner' }),
       });
       const j = await r.json();
       if (!r.ok) throw new Error(j?.error || 'Scan failed');
@@ -49,6 +50,7 @@ export default function AIScannerPage() {
 
         <div className="grid gap-8 md:grid-cols-[1.1fr,0.9fr]">
           <div className="rounded-3xl border border-white/10 bg-black/30 p-6 md:p-8 space-y-4">
+            <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 placeholder:text-white/50" />
             <input value={business} onChange={(e) => setBusiness(e.target.value)} placeholder="Business name + city or GBP link" className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 placeholder:text-white/50" />
             <input value={site} onChange={(e) => setSite(e.target.value)} placeholder="Website URL" className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 placeholder:text-white/50" />
             <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work email (required)" className="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 placeholder:text-white/50" />

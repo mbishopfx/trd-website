@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 type ScanInput = {
+  name: string;
   business: string;
   website: string;
   vertical?: string;
@@ -8,67 +9,25 @@ type ScanInput = {
   variant?: 'ai-readiness' | 'ai-scanner' | 'ai-audit';
 };
 
-type SiteSignals = {
-  ok: boolean;
-  schema: boolean;
-  faq: boolean;
-  local: boolean;
-};
-
 type GBPPlacement = {
   checked: boolean;
   position: number | null;
   sampleQuery: string;
-  confidence: 'high' | 'medium' | 'low';
 };
 
 function validEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-function extractBusinessTokens(text: string) {
-  return text
-    .toLowerCase()
-    .replace(/https?:\/\/[^\s]+/g, ' ')
-    .replace(/[^a-z0-9\s]/g, ' ')
-    .split(/\s+/)
-    .filter((t) => t.length > 2)
-    .slice(0, 4);
-}
-
 function pickSearchQuery(input: ScanInput) {
   const base = input.vertical?.trim() || 'local service';
-  const cityHint = input.business.match(/\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)\b/g)?.slice(-1)?.[0] || '';
-  return `${base} near me ${cityHint}`.trim();
-}
-
-async function fetchSiteSignals(url: string): Promise<SiteSignals> {
-  try {
-    const normalized = /^https?:\/\//i.test(url) ? url : `https://${url}`;
-    const res = await fetch(normalized, { method: 'GET', cache: 'no-store' });
-    if (!res.ok) return { ok: false, schema: false, faq: false, local: false };
-    const html = (await res.text()).slice(0, 250_000).toLowerCase();
-    return {
-      ok: true,
-      schema: html.includes('application/ld+json') || html.includes('schema.org'),
-      faq: html.includes('faqpage') || html.includes('faq'),
-      local:
-        html.includes('localbusiness') ||
-        html.includes('servicearea') ||
-        html.includes('postalcode') ||
-        html.includes('geo'),
-    };
-  } catch {
-    return { ok: false, schema: false, faq: false, local: false };
-  }
+  return `${base} near me ${input.business}`.trim();
 }
 
 async function checkGBPPlacement(input: ScanInput): Promise<GBPPlacement> {
   const apiKey = process.env.GOOGLE_PLACES_API_KEY;
   const sampleQuery = pickSearchQuery(input);
-  if (!apiKey) {
-    return { checked: false, position: null, sampleQuery, confidence: 'low' };
-  }
+  if (!apiKey) return { checked: false, position: null, sampleQuery };
 
   try {
     const resp = await fetch('https://places.googleapis.com/v1/places:searchText', {
@@ -76,48 +35,100 @@ async function checkGBPPlacement(input: ScanInput): Promise<GBPPlacement> {
       headers: {
         'Content-Type': 'application/json',
         'X-Goog-Api-Key': apiKey,
-        'X-Goog-FieldMask': 'places.displayName,places.formattedAddress',
+        'X-Goog-FieldMask': 'places.displayName',
       },
       body: JSON.stringify({ textQuery: sampleQuery, maxResultCount: 10, regionCode: 'US', languageCode: 'en' }),
       cache: 'no-store',
     });
 
-    if (!resp.ok) {
-      return { checked: false, position: null, sampleQuery, confidence: 'low' };
-    }
-
+    if (!resp.ok) return { checked: false, position: null, sampleQuery };
     const json = (await resp.json()) as { places?: Array<{ displayName?: { text?: string } }> };
     const places = json.places || [];
-    const tokens = extractBusinessTokens(input.business);
+    const tokens = input.business.toLowerCase().split(/\s+/).filter((x) => x.length > 2);
 
     let position: number | null = null;
     places.some((p, i) => {
       const n = (p.displayName?.text || '').toLowerCase();
-      const matchCount = tokens.filter((t) => n.includes(t)).length;
-      if (matchCount >= Math.max(1, Math.floor(tokens.length / 2))) {
+      const match = tokens.filter((t) => n.includes(t)).length;
+      if (match >= Math.max(1, Math.floor(tokens.length / 2))) {
         position = i + 1;
         return true;
       }
       return false;
     });
 
-    return {
-      checked: true,
-      position,
-      sampleQuery,
-      confidence: position && position <= 3 ? 'high' : position ? 'medium' : 'low',
-    };
+    return { checked: true, position, sampleQuery };
   } catch {
-    return { checked: false, position: null, sampleQuery, confidence: 'low' };
+    return { checked: false, position: null, sampleQuery };
   }
 }
 
-async function upsertLeadAndTask(input: ScanInput, score: number, placement: GBPPlacement) {
+async function firecrawlDeepNegatives(url: string) {
+  const key = process.env.FIRECRAWL_API_KEY;
+  if (!key) {
+    return {
+      negatives: ['Firecrawl key missing: deep crawl unavailable'],
+      crawled: false,
+    };
+  }
+
+  try {
+    const normalized = /^https?:\/\//i.test(url) ? url : `https://${url}`;
+    const resp = await fetch('https://api.firecrawl.dev/v1/scrape', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${key}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        url: normalized,
+        formats: ['markdown'],
+        onlyMainContent: true,
+      }),
+      cache: 'no-store',
+    });
+
+    if (!resp.ok) {
+      return { negatives: ['Firecrawl scrape failed'], crawled: false };
+    }
+
+    const data = (await resp.json()) as { data?: { markdown?: string } };
+    const markdown = (data?.data?.markdown || '').toLowerCase();
+
+    const negatives: string[] = [];
+
+    if (!markdown.includes('schema') && !markdown.includes('application/ld+json')) {
+      negatives.push('No clear schema/JSON-LD evidence found in crawl output');
+    }
+    if (!markdown.includes('faq')) {
+      negatives.push('No visible FAQ content for AI answer targeting');
+    }
+    if (!markdown.includes('review') && !markdown.includes('testimonial')) {
+      negatives.push('Weak trust proof on-page (few review/testimonial signals found)');
+    }
+    if (!markdown.includes('contact') || !markdown.includes('phone')) {
+      negatives.push('Contact conversion path appears weak or hard to find');
+    }
+    if (!markdown.includes('service') && !markdown.includes('location')) {
+      negatives.push('Service/location intent coverage appears thin for local search');
+    }
+
+    if (negatives.length === 0) {
+      negatives.push('No major technical negatives detected from initial crawl sample (manual validation recommended)');
+    }
+
+    return { negatives, crawled: true };
+  } catch {
+    return { negatives: ['Deep crawl exception occurred'], crawled: false };
+  }
+}
+
+async function createLeadTaskAndNote(input: ScanInput, negatives: string[], placement: GBPPlacement, score: number) {
   const token = process.env.GHL_API_TOKEN;
   const locationId = process.env.GHL_LOCATION_ID || 'ukS9ShMolehB8MKWPstv';
   const assigneeId = process.env.GHL_ASSIGNEE_ID || 'rVX5I5UZCKaJxyIUKviL';
 
-  if (!token) return { contactId: null, taskCreated: false, reason: 'missing_token' };
+  if (!token) return { contactId: null, taskCreated: false, noteCreated: false, reason: 'missing_token' };
 
   const headers = {
     Authorization: `Bearer ${token}`,
@@ -127,6 +138,8 @@ async function upsertLeadAndTask(input: ScanInput, score: number, placement: GBP
   };
 
   let contactId: string | null = null;
+  let taskCreated = false;
+  let noteCreated = false;
 
   try {
     const contactResp = await fetch('https://services.leadconnectorhq.com/contacts/upsert', {
@@ -134,11 +147,12 @@ async function upsertLeadAndTask(input: ScanInput, score: number, placement: GBP
       headers,
       body: JSON.stringify({
         locationId,
-        name: input.business,
+        firstName: input.name,
+        name: input.name,
         companyName: input.business,
         email: input.email,
         website: input.website,
-        tags: ['trd_ai_scanner', input.variant || 'ai-scanner'],
+        tags: ['ai_scanner_lead', input.variant || 'ai-scanner'],
       }),
     });
 
@@ -150,17 +164,22 @@ async function upsertLeadAndTask(input: ScanInput, score: number, placement: GBP
     // best effort
   }
 
-  let taskCreated = false;
+  const placementText = placement.checked
+    ? placement.position
+      ? `Approx map placement for "${placement.sampleQuery}": #${placement.position}`
+      : `Not found in top 10 for "${placement.sampleQuery}"`
+    : 'Map placement check unavailable';
+
+  const noteBody = [
+    `AI Scanner Result — Score: ${score}/100`,
+    placementText,
+    'Negatives found:',
+    ...negatives.map((n, i) => `${i + 1}. ${n}`),
+  ].join('\n');
 
   if (contactId) {
     try {
       const due = new Date(Date.now() + 60 * 60 * 1000).toISOString();
-      const placementText = placement.checked
-        ? placement.position
-          ? `Approx map placement for \"${placement.sampleQuery}\": #${placement.position}`
-          : `Not found in top 10 for \"${placement.sampleQuery}\"`
-        : 'Map placement check unavailable';
-
       const taskResp = await fetch('https://services.leadconnectorhq.com/tasks/', {
         method: 'POST',
         headers,
@@ -168,8 +187,8 @@ async function upsertLeadAndTask(input: ScanInput, score: number, placement: GBP
           locationId,
           contactId,
           assignedTo: assigneeId,
-          title: `TRD AI Scanner Follow-up: ${input.business}`,
-          body: `Lead completed scanner. Score: ${score}/100. ${placementText}. Email: ${input.email}. Website: ${input.website}`,
+          title: `AI Scanner follow-up: ${input.business}`,
+          body: `New scanner lead (${input.name}). ${placementText}`,
           dueDate: due,
         }),
       });
@@ -177,62 +196,61 @@ async function upsertLeadAndTask(input: ScanInput, score: number, placement: GBP
     } catch {
       // best effort
     }
+
+    // best-effort notes (LeadConnector endpoint variations)
+    try {
+      const n1 = await fetch('https://services.leadconnectorhq.com/contacts/notes', {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({ locationId, contactId, body: noteBody }),
+      });
+      noteCreated = n1.ok;
+
+      if (!noteCreated) {
+        const n2 = await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}/notes`, {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({ locationId, body: noteBody }),
+        });
+        noteCreated = n2.ok;
+      }
+    } catch {
+      // best effort
+    }
   }
 
-  return { contactId, taskCreated, reason: 'ok' };
+  return { contactId, taskCreated, noteCreated, reason: 'ok' };
 }
 
 export async function POST(req: NextRequest) {
   try {
     const body = (await req.json()) as ScanInput;
 
-    if (!body.business || !body.website || !body.email) {
-      return NextResponse.json({ error: 'Business, website, and email are required.' }, { status: 400 });
+    if (!body.name || !body.business || !body.website || !body.email) {
+      return NextResponse.json({ error: 'Name, business, website, and email are required.' }, { status: 400 });
     }
-
     if (!validEmail(body.email)) {
       return NextResponse.json({ error: 'Please enter a valid email.' }, { status: 400 });
     }
 
-    const [site, placement] = await Promise.all([fetchSiteSignals(body.website), checkGBPPlacement(body)]);
+    const [crawl, placement] = await Promise.all([firecrawlDeepNegatives(body.website), checkGBPPlacement(body)]);
 
-    let score = 50;
-    if (site.ok) score += 8;
-    if (site.schema) score += 14;
-    if (site.local) score += 10;
-    if (site.faq) score += 6;
-
+    let score = 90;
+    score -= Math.min(45, crawl.negatives.length * 8);
     if (placement.checked) {
-      if (placement.position && placement.position <= 3) score += 14;
-      else if (placement.position && placement.position <= 6) score += 8;
-      else if (placement.position) score += 3;
-      else score -= 4;
+      if (!placement.position) score -= 10;
+      else if (placement.position > 6) score -= 6;
+      else if (placement.position > 3) score -= 3;
     }
+    score = Math.max(25, Math.min(96, score));
 
-    score = Math.max(35, Math.min(97, score));
-
-    const gaps = [
-      !site.schema && 'Schema markup is too thin for strong AI understanding and citation lift',
-      !site.local && 'Local entity signals are weak (service area, geo, NAP context)',
-      !site.faq && 'No high-intent FAQ blocks for AI answer targeting',
-      placement.checked && !placement.position && `Not visible in top results for "${placement.sampleQuery}"`,
-      placement.checked && placement.position && placement.position > 6 && `Low local visibility (currently around #${placement.position}) for "${placement.sampleQuery}"`,
-      'GBP post/review cadence can be improved for freshness and trust',
-      'Lead conversion journey can be tightened from discovery to booked call',
-    ].filter(Boolean) as string[];
-
-    const crm = await upsertLeadAndTask(body, score, placement);
+    const crm = await createLeadTaskAndNote(body, crawl.negatives, placement, score);
 
     return NextResponse.json({
       score,
-      summary:
-        score >= 82
-          ? 'Strong baseline. Focused optimization can push this into category-leading local AI visibility.'
-          : score >= 68
-          ? 'Good starting position with clear upside. Technical + local refinements should improve lead volume.'
-          : 'High upside opportunity. Current technical/local signal gaps are likely suppressing discoverability.',
-      projectedLift: `${(2.2 + (100 - score) / 18).toFixed(1)}x projected qualified lead opportunity`,
-      gaps,
+      summary: 'Deep audit complete. Showing key negatives only.',
+      projectedLift: `${(2.6 + (100 - score) / 17).toFixed(1)}x projected upside after fixes`,
+      gaps: crawl.negatives,
       bookingUrl: '/contact',
       placement,
       crm,

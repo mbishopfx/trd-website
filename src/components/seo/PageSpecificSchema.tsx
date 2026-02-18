@@ -246,14 +246,6 @@ export default function PageSpecificSchema({
         worksFor: {
           "@id": `${baseUrl}/#organization`
         }
-      },
-      {
-        "@type": "Person",
-        name: "Sean O'Neil", 
-        jobTitle: "SEO Specialist",
-        worksFor: {
-          "@id": `${baseUrl}/#organization`
-        }
       }
     ]
   });

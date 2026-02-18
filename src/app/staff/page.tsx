@@ -87,21 +87,6 @@ export default function StaffPage() {
       },
       {
         "@type": "Person",
-        "@id": "https://truerankdigital.com/staff/sean-oniel",
-        "name": "Sean O'Niel",
-        "jobTitle": "SEO Specialist",
-        "worksFor": {
-          "@type": "Organization",
-          "@id": "https://truerankdigital.com/#organization",
-          "name": "True Rank Digital"
-        },
-        "description": "SEO specialist focused on optimization strategies and search engine performance for True Rank Digital's client campaigns.",
-        "email": "sean@truerankdigital.com",
-        "url": "https://truerankdigital.com/staff",
-        "knowsAbout": ["SEO Optimization", "Search Strategy", "Performance Analysis", "Local SEO"]
-      },
-      {
-        "@type": "Person",
         "@id": "https://truerankdigital.com/staff/eric-malheiro",
         "name": "Eric Malheiro",
         "jobTitle": "EVP of Sales Operations & Performance",

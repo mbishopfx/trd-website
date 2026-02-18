@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Linkedin, Mail, Phone, Award, Code, BarChart3, Search, Target, Users } from 'lucide-react';
+import { Linkedin, Mail, Phone, Award, Code, BarChart3, Target, Users } from 'lucide-react';
 
 interface TeamMember {
   name: string;
@@ -22,7 +22,7 @@ export default function FullTeamSection() {
   const leadership: TeamMember[] = [
     {
       name: "Jon J Korkowski",
-      role: "CEO - Founder",
+      role: "CEO - Founder - President",
       department: "Leadership",
       bio: "Founder and CEO leading True Rank Digital's vision and strategy for digital marketing excellence.",
       specialties: ["Business Strategy", "Client Relations", "SEO Leadership"],
@@ -82,17 +82,6 @@ export default function FullTeamSection() {
       experience: "Technology Leadership",
       email: "bishop@truerankdigital.com",
       linkedin: "https://www.linkedin.com/in/matt-bishop-a17b2431b/"
-    },
-    {
-      name: "Sean O'Niel",
-      role: "SEO Specialist",
-      department: "SEO Team",
-      bio: "SEO specialist focused on optimization strategies and search engine performance.",
-      specialties: ["SEO Optimization", "Search Strategy", "Performance Analysis"],
-      icon: <Search className="w-8 h-8" />,
-      color: "from-green-500 to-blue-500",
-      experience: "SEO Expert",
-      email: "sean@truerankdigital.com"
     }
   ];
 

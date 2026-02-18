@@ -40,7 +40,7 @@ const aboutFAQs = [
   },
   {
     question: "Who founded True Rank Digital?",
-    answer: "True Rank Digital LLC was founded by Jon Korkowski (CEO - Founder). The leadership team includes Jon Korkowski (CEO - Founder), Jesse Mathews (EVP of Business Development & Sale), and Jose Perdomo (EVP of Sales & Client Success). The technical team includes Matt Bishop (CTO (Chief Technology Officer)) and Sean O'Niel (SEO Specialist). The sales team includes Eric Malheiro (EVP of Sales Operations & Performance)."
+    answer: "True Rank Digital LLC was founded by Jon Korkowski (CEO - Founder - President). The leadership team includes Jon Korkowski (CEO - Founder - President), Jesse Mathews (EVP of Business Development & Sale), and Jose Perdomo (EVP of Sales & Client Success). The technical team includes Matt Bishop (CTO (Chief Technology Officer)). The sales team includes Eric Malheiro (EVP of Sales Operations & Performance)."
   }
 ];
 
@@ -247,7 +247,7 @@ export default function AboutPage() {
                   {[
                     {
                       name: "Jon Korkowski",
-                      title: "CEO - Founder",
+                      title: "CEO - Founder - President",
                       role: "Business Strategy, Client Relations, SEO Leadership",
                       description: "Founded True Rank Digital in 2020 with a vision to build custom SEO technology that gives clients a competitive advantage.",
                       email: "jon@truerankdigital.com"
@@ -272,13 +272,6 @@ export default function AboutPage() {
                       role: "Technology Strategy, Software Architecture, Custom Software",
                       description: "Owns technical architecture, platform development, and engineering execution across company initiatives.",
                       email: "bishop@truerankdigital.com"
-                    },
-                    {
-                      name: "Sean O'Niel",
-                      title: "SEO Specialist",
-                      role: "SEO Optimization, Search Strategy, Performance Analysis",
-                      description: "Focused on optimization strategies and search engine performance for True Rank Digital's client campaigns.",
-                      email: "sean@truerankdigital.com"
                     },
                     {
                       name: "Eric Malheiro",

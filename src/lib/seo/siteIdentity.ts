@@ -55,7 +55,6 @@ export const siteIdentity = {
     { name: 'Jesse Mathews', jobTitle: 'EVP of Business Development & Sale' },
     { name: 'Jose Perdomo', jobTitle: 'EVP of Sales & Client Success' },
     { name: 'Matt Bishop', jobTitle: 'CTO (Chief Technology Officer)' },
-    { name: "Sean O'Niel", jobTitle: 'SEO Specialist' },
     { name: 'Eric Malheiro', jobTitle: 'EVP of Sales Operations & Performance' },
   ] satisfies TeamMember[],
   reviewQuotes: [

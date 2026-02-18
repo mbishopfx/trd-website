@@ -16,7 +16,7 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     name: 'Jon J Korkowski',
-    title: 'CEO - Founder',
+    title: 'CEO - Founder - President',
     description: 'Visionary leader driving True Rank Digital\'s innovation and growth strategy.',
     quote: 'This isn\'t just another agency—it\'s a full-speed freight train. There are no brakes here, no walls that can\'t be broken, no mountain too steep. We move fast, we move loud, and we move together. You\'re here because you\'re built for the climb. Bring energy. Be consistent. Stay persistent. This company only knows forward.',
     image: '/images/team/jon-korkowski.jpg'

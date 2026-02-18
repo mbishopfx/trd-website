@@ -6,6 +6,7 @@ type ScanInput = {
   website: string;
   vertical?: string;
   email: string;
+  phone: string;
   variant?: 'ai-readiness' | 'ai-scanner' | 'ai-audit';
 };
 
@@ -151,6 +152,7 @@ async function createLeadTaskAndNote(input: ScanInput, negatives: string[], plac
         name: input.name,
         companyName: input.business,
         email: input.email,
+        phone: input.phone,
         website: input.website,
         tags: ['ai_scanner_lead', input.variant || 'ai-scanner'],
       }),
@@ -188,7 +190,7 @@ async function createLeadTaskAndNote(input: ScanInput, negatives: string[], plac
           contactId,
           assignedTo: assigneeId,
           title: `AI Scanner follow-up: ${input.business}`,
-          body: `New scanner lead (${input.name}). ${placementText}`,
+          body: `New scanner lead (${input.name}). Phone: ${input.phone}. ${placementText}`,
           dueDate: due,
         }),
       });
@@ -222,12 +224,72 @@ async function createLeadTaskAndNote(input: ScanInput, negatives: string[], plac
   return { contactId, taskCreated, noteCreated, reason: 'ok' };
 }
 
+
+
+async function sendScannerLeadEmail(input: ScanInput, score: number, negatives: string[], placement: GBPPlacement) {
+  const smtpHost = process.env.SMTP_HOST?.trim();
+  const smtpPort = parseInt(process.env.SMTP_PORT?.trim() || '587', 10);
+  const smtpSecure = process.env.SMTP_SECURE?.trim() === 'true';
+  const smtpUser = process.env.SMTP_USER?.trim();
+  const smtpPass = process.env.SMTP_PASS?.trim();
+
+  if (!smtpHost || !smtpUser || !smtpPass) return { sent: false, reason: 'smtp_not_configured' };
+
+  const nodemailer = await import('nodemailer');
+  const transporter = nodemailer.default.createTransport({
+    host: smtpHost,
+    port: smtpPort,
+    secure: smtpSecure,
+    auth: { user: smtpUser, pass: smtpPass },
+  });
+
+  const to = ['jon@truerankdigital.com', 'bishop@truerankdigital.com'].join(',');
+  const placementText = placement.checked
+    ? placement.position
+      ? `Approx map placement for "${placement.sampleQuery}": #${placement.position}`
+      : `Not found in top 10 for "${placement.sampleQuery}"`
+    : 'Map placement check unavailable';
+
+  const negativesHtml = negatives.map((n) => `<li>${n}</li>`).join('');
+
+  const html = `
+    <div style="font-family:Arial,sans-serif;max-width:720px;margin:0 auto;border:1px solid #eee;border-radius:10px;overflow:hidden">
+      <div style="background:#111827;color:#fff;padding:18px 20px">
+        <h2 style="margin:0">New AI Scanner Lead</h2>
+      </div>
+      <div style="padding:18px 20px">
+        <p><strong>Name:</strong> ${input.name}</p>
+        <p><strong>Business:</strong> ${input.business}</p>
+        <p><strong>Email:</strong> ${input.email}</p>
+        <p><strong>Phone:</strong> ${input.phone}</p>
+        <p><strong>Website:</strong> ${input.website}</p>
+        <p><strong>Score:</strong> ${score}/100</p>
+        <p><strong>Placement:</strong> ${placementText}</p>
+        <h3>Negatives Found</h3>
+        <ul>${negativesHtml}</ul>
+      </div>
+    </div>`;
+
+  try {
+    await transporter.sendMail({
+      from: `"TRD AI Scanner" <${smtpUser}>`,
+      to,
+      subject: `New AI Scanner Lead: ${input.business} (${score}/100)`,
+      html,
+    });
+    return { sent: true };
+  } catch (error) {
+    console.error('scanner lead email send failed', error);
+    return { sent: false, reason: 'send_failed' };
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = (await req.json()) as ScanInput;
 
-    if (!body.name || !body.business || !body.website || !body.email) {
-      return NextResponse.json({ error: 'Name, business, website, and email are required.' }, { status: 400 });
+    if (!body.name || !body.business || !body.website || !body.email || !body.phone) {
+      return NextResponse.json({ error: 'Name, business, website, email, and phone are required.' }, { status: 400 });
     }
     if (!validEmail(body.email)) {
       return NextResponse.json({ error: 'Please enter a valid email.' }, { status: 400 });
@@ -245,6 +307,7 @@ export async function POST(req: NextRequest) {
     score = Math.max(25, Math.min(96, score));
 
     const crm = await createLeadTaskAndNote(body, crawl.negatives, placement, score);
+    const emailNotify = await sendScannerLeadEmail(body, score, crawl.negatives, placement);
 
     return NextResponse.json({
       score,
@@ -254,6 +317,7 @@ export async function POST(req: NextRequest) {
       bookingUrl: '/contact',
       placement,
       crm,
+      emailNotify,
     });
   } catch {
     return NextResponse.json({ error: 'Scanner request failed. Please try again.' }, { status: 500 });

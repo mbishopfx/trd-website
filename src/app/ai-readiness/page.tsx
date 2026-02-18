@@ -15,6 +15,7 @@ export default function AIReadinessPage() {
   const [business, setBusiness] = useState('');
   const [website, setWebsite] = useState('');
   const [vertical, setVertical] = useState('Auto Dealer');
+  const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -28,7 +29,7 @@ export default function AIReadinessPage() {
       const resp = await fetch('/api/ai-scan', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, business, website, vertical, email, variant: 'ai-readiness' }),
+        body: JSON.stringify({ name, business, website, vertical, phone, email, variant: 'ai-readiness' }),
       });
       const data = await resp.json();
       if (!resp.ok) throw new Error(data?.error || 'Scan failed');
@@ -61,6 +62,7 @@ export default function AIReadinessPage() {
                 <option key={v}>{v}</option>
               ))}
             </select>
+            <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone (required)" className="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-4 py-3 text-sm" />
             <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Work email (required)" className="w-full rounded-xl border border-zinc-700 bg-zinc-950 px-4 py-3 text-sm" />
             <button onClick={runScan} disabled={loading} className="w-full rounded-xl bg-cyan-400 px-4 py-3 text-sm font-semibold text-zinc-950 disabled:opacity-60">
               {loading ? 'Scanning…' : 'Run Free Scan'}
@@ -84,9 +86,7 @@ export default function AIReadinessPage() {
                     <li key={gap} className="rounded-lg border border-zinc-800 bg-zinc-900 px-3 py-2">{gap}</li>
                   ))}
                 </ul>
-                <a href={result.bookingUrl} className="mt-6 inline-block w-full rounded-xl bg-white px-4 py-3 text-center text-sm font-semibold text-zinc-950">
-                  Book a Strategy Call
-                </a>
+                <a href={result.bookingUrl} className="mt-6 inline-block w-full rounded-xl bg-white px-4 py-3 text-center text-sm font-semibold text-zinc-950">Book a Strategy Call</a>
               </div>
             ) : (
               <div className="flex h-full items-center justify-center text-sm text-zinc-400">Run the scan to view your results.</div>

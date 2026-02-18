@@ -16,6 +16,8 @@ type GBPPlacement = {
   position: number; // 1..10, 11 = not in top 10
   sampleQuery: string;
   note: string;
+  businessPlaceId?: string;
+  businessZip?: string;
 };
 
 type AuditSignals = {
@@ -34,72 +36,144 @@ function ensureUrl(url: string) {
   return /^https?:\/\//i.test(url) ? url : `https://${url}`;
 }
 
+function tokenizeBusinessName(name: string): string[] {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter((x) => x.length > 2 && !['llc', 'inc', 'co', 'company', 'agency', 'digital'].includes(x));
+}
+
+function similarityScore(a: string, businessTokens: string[]) {
+  const n = a.toLowerCase();
+  return businessTokens.reduce((acc, t) => acc + (n.includes(t) ? 1 : 0), 0);
+}
+
 async function checkGBPPlacement(input: ScanInput): Promise<GBPPlacement> {
   const apiKey = process.env.GOOGLE_PLACES_API_KEY;
-  const primaryQuery = input.mapKeyword.trim();
-  const fallbackQuery = `${input.business} ${input.vertical || ''}`.trim();
+  const keywordQuery = input.mapKeyword.trim();
 
   if (!apiKey) {
     return {
       checked: false,
       position: 11,
-      sampleQuery: primaryQuery || fallbackQuery || input.business,
-      note: 'API key missing; treated as not in top 10',
+      sampleQuery: keywordQuery,
+      note: 'Google Maps API key missing; treated as not in top 10',
     };
   }
 
-  const tryQuery = async (query: string) => {
-    const resp = await fetch('https://places.googleapis.com/v1/places:searchText', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Goog-Api-Key': apiKey,
-        'X-Goog-FieldMask': 'places.displayName',
-      },
-      body: JSON.stringify({ textQuery: query, maxResultCount: 10, regionCode: 'US', languageCode: 'en' }),
-      cache: 'no-store',
-    });
-    if (!resp.ok) return null;
-    const json = (await resp.json()) as { places?: Array<{ displayName?: { text?: string } }> };
-    return json.places || [];
-  };
-
   try {
-    const tokens = input.business.toLowerCase().split(/\s+/).filter((x) => x.length > 2);
-    let usedQuery = primaryQuery || fallbackQuery || input.business;
-    let places = await tryQuery(usedQuery);
+    // 1) Find the business first (required by user)
+    const findUrl = new URL('https://maps.googleapis.com/maps/api/place/textsearch/json');
+    findUrl.searchParams.set('query', input.business);
+    findUrl.searchParams.set('key', apiKey);
 
-    if (!places || places.length === 0) {
-      usedQuery = fallbackQuery || input.business;
-      places = await tryQuery(usedQuery);
+    const findResp = await fetch(findUrl.toString(), { cache: 'no-store' });
+    const findJson = (await findResp.json()) as {
+      results?: Array<{ place_id?: string; name?: string; formatted_address?: string; geometry?: { location?: { lat?: number; lng?: number } } }>;
+    };
+
+    const businessTokens = tokenizeBusinessName(input.business);
+    const candidates = findJson.results || [];
+    const best = candidates
+      .map((c) => ({ c, score: similarityScore(c.name || '', businessTokens) }))
+      .sort((a, b) => b.score - a.score)[0]?.c;
+
+    const businessPlaceId = best?.place_id;
+    const businessName = best?.name || input.business;
+
+    // 2) Pull place details to get postal code / canonical location
+    let businessZip = '';
+    let centerLat = best?.geometry?.location?.lat || 0;
+    let centerLng = best?.geometry?.location?.lng || 0;
+
+    if (businessPlaceId) {
+      const detailsUrl = new URL('https://maps.googleapis.com/maps/api/place/details/json');
+      detailsUrl.searchParams.set('place_id', businessPlaceId);
+      detailsUrl.searchParams.set('fields', 'address_component,geometry,name,formatted_address');
+      detailsUrl.searchParams.set('key', apiKey);
+
+      const detResp = await fetch(detailsUrl.toString(), { cache: 'no-store' });
+      const detJson = (await detResp.json()) as {
+        result?: {
+          address_components?: Array<{ long_name?: string; short_name?: string; types?: string[] }>;
+          geometry?: { location?: { lat?: number; lng?: number } };
+          name?: string;
+        };
+      };
+
+      const comps = detJson.result?.address_components || [];
+      const postal = comps.find((x) => (x.types || []).includes('postal_code'));
+      if (postal?.long_name) businessZip = postal.long_name;
+
+      const dLat = detJson.result?.geometry?.location?.lat;
+      const dLng = detJson.result?.geometry?.location?.lng;
+      if (typeof dLat === 'number' && typeof dLng === 'number') {
+        centerLat = dLat;
+        centerLng = dLng;
+      }
     }
 
-    if (!places || places.length === 0) {
-      return { checked: false, position: 11, sampleQuery: usedQuery, note: 'No map results returned; treated as not in top 10' };
+    // 3) If ZIP exists, geocode ZIP and use that as ranking origin
+    if (businessZip) {
+      const geoUrl = new URL('https://maps.googleapis.com/maps/api/geocode/json');
+      geoUrl.searchParams.set('address', businessZip);
+      geoUrl.searchParams.set('key', apiKey);
+      const geoResp = await fetch(geoUrl.toString(), { cache: 'no-store' });
+      const geoJson = (await geoResp.json()) as { results?: Array<{ geometry?: { location?: { lat?: number; lng?: number } } }> };
+      const g = geoJson.results?.[0]?.geometry?.location;
+      if (typeof g?.lat === 'number' && typeof g?.lng === 'number') {
+        centerLat = g.lat;
+        centerLng = g.lng;
+      }
     }
+
+    // 4) Run local ranking query anchored at that ZIP/location
+    const rankUrl = new URL('https://maps.googleapis.com/maps/api/place/textsearch/json');
+    rankUrl.searchParams.set('query', keywordQuery || `${input.business} ${input.vertical || ''}`.trim());
+    rankUrl.searchParams.set('location', `${centerLat},${centerLng}`);
+    rankUrl.searchParams.set('radius', '20000');
+    rankUrl.searchParams.set('key', apiKey);
+
+    const rankResp = await fetch(rankUrl.toString(), { cache: 'no-store' });
+    const rankJson = (await rankResp.json()) as { results?: Array<{ place_id?: string; name?: string }> };
+    const rankResults = rankJson.results || [];
 
     let position = 11;
-    places.some((p, i) => {
-      const n = (p.displayName?.text || '').toLowerCase();
-      const matchCount = tokens.filter((t) => n.includes(t)).length;
-      if (matchCount >= Math.max(1, Math.floor(tokens.length / 2))) {
-        position = i + 1;
+    rankResults.some((r, idx) => {
+      if (businessPlaceId && r.place_id === businessPlaceId) {
+        position = idx + 1;
+        return true;
+      }
+      const rScore = similarityScore(r.name || '', businessTokens);
+      if (!businessPlaceId && rScore >= Math.max(1, Math.floor(businessTokens.length / 2))) {
+        position = idx + 1;
         return true;
       }
       return false;
     });
 
+    const noteParts = [
+      position <= 10 ? 'Ranking found in top 10' : 'Not found in top 10',
+      businessPlaceId ? `placeId=${businessPlaceId}` : 'placeId=not_resolved',
+      businessZip ? `zip=${businessZip}` : 'zip=not_resolved',
+      `origin=${centerLat.toFixed(5)},${centerLng.toFixed(5)}`,
+      `business=${businessName}`,
+    ];
+
     return {
       checked: true,
       position,
-      sampleQuery: usedQuery,
-      note: position <= 10 ? 'Ranking found in top 10' : 'Not found in top 10',
+      sampleQuery: keywordQuery || `${input.business} ${input.vertical || ''}`.trim(),
+      note: noteParts.join(' | '),
+      businessPlaceId,
+      businessZip,
     };
   } catch {
     return {
       checked: false,
       position: 11,
-      sampleQuery: primaryQuery || fallbackQuery || input.business,
+      sampleQuery: keywordQuery,
       note: 'Placement check exception; treated as not in top 10',
     };
   }

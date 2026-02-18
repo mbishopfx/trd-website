@@ -52,7 +52,7 @@ export default function AIAuditPage() {
       <section className="mx-auto max-w-5xl px-6 py-14 md:py-20">
         <div className="grid gap-10 md:grid-cols-[0.95fr,1.05fr]">
           <aside className="rounded-2xl border border-[#d7cfc3] bg-white p-6 md:p-8">
-            <p className="text-xs uppercase tracking-[0.3em] text-[#7a5d42]">True Rank Digital • Variant C (Light)</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-[#7a5d42]">True Rank Digital</p>
             <h1 className="mt-3 text-4xl font-semibold leading-tight md:text-5xl">AI Audit</h1>
             <p className="mt-4 text-sm text-[#4c3d2d]">A client-ready audit preview for local and multi-location businesses.</p>
 

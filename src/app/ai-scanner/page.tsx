@@ -42,7 +42,7 @@ export default function AIScannerPage() {
     <main className="min-h-screen bg-gradient-to-br from-indigo-950 via-zinc-950 to-fuchsia-950 text-white">
       <section className="mx-auto max-w-6xl px-6 py-14 md:py-20">
         <div className="mb-10 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
-          <p className="text-xs uppercase tracking-[0.25em] text-fuchsia-200">True Rank Digital • Variant B</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-fuchsia-200">True Rank Digital</p>
           <h1 className="mt-2 text-4xl font-black leading-tight md:text-6xl">AI Scanner</h1>
           <p className="mt-4 max-w-3xl text-white/80">Discover where your business is winning and where AI/local visibility leaks are costing leads.</p>
         </div>

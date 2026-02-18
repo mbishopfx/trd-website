@@ -48,7 +48,7 @@ export default function AIReadinessPage() {
           <p className="text-xs uppercase tracking-[0.3em] text-cyan-300">True Rank Digital</p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight md:text-6xl">AI Readiness Scanner</h1>
           <p className="mt-4 max-w-3xl text-zinc-300 md:text-lg">
-            Fast audit for AI search + local visibility performance. Variant A (minimal dark).
+            Fast audit for AI search + local visibility performance.
           </p>
         </div>
 

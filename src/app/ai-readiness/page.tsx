@@ -30,10 +30,10 @@ export default function AIReadinessPage() {
     setLookupLoading(true);
     setSelectedBusiness(null);
     try {
-      const r = await fetch('/api/ai-business-lookup', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ businessName, state }) });
+      const r = await fetch(`/api/ai-business-lookup?name=${encodeURIComponent(businessName)}&state=${encodeURIComponent(state)}`);
       const j = await r.json();
       if (!r.ok) throw new Error(j?.error || 'Business lookup failed');
-      setCandidates(j.candidates || []);
+      setCandidates(j.businesses || []);
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : 'Business lookup failed');
     } finally {

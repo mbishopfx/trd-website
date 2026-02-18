@@ -13,8 +13,9 @@ type ScanInput = {
 
 type GBPPlacement = {
   checked: boolean;
-  position: number | null;
+  position: number; // 1..10, 11 = not in top 10
   sampleQuery: string;
+  note: string;
 };
 
 type AuditSignals = {
@@ -35,10 +36,19 @@ function ensureUrl(url: string) {
 
 async function checkGBPPlacement(input: ScanInput): Promise<GBPPlacement> {
   const apiKey = process.env.GOOGLE_PLACES_API_KEY;
-  const sampleQuery = input.mapKeyword.trim();
-  if (!apiKey) return { checked: false, position: null, sampleQuery };
+  const primaryQuery = input.mapKeyword.trim();
+  const fallbackQuery = `${input.business} ${input.vertical || ''}`.trim();
 
-  try {
+  if (!apiKey) {
+    return {
+      checked: false,
+      position: 11,
+      sampleQuery: primaryQuery || fallbackQuery || input.business,
+      note: 'API key missing; treated as not in top 10',
+    };
+  }
+
+  const tryQuery = async (query: string) => {
     const resp = await fetch('https://places.googleapis.com/v1/places:searchText', {
       method: 'POST',
       headers: {
@@ -46,30 +56,52 @@ async function checkGBPPlacement(input: ScanInput): Promise<GBPPlacement> {
         'X-Goog-Api-Key': apiKey,
         'X-Goog-FieldMask': 'places.displayName',
       },
-      body: JSON.stringify({ textQuery: sampleQuery, maxResultCount: 10, regionCode: 'US', languageCode: 'en' }),
+      body: JSON.stringify({ textQuery: query, maxResultCount: 10, regionCode: 'US', languageCode: 'en' }),
       cache: 'no-store',
     });
-
-    if (!resp.ok) return { checked: false, position: null, sampleQuery };
-
+    if (!resp.ok) return null;
     const json = (await resp.json()) as { places?: Array<{ displayName?: { text?: string } }> };
-    const places = json.places || [];
-    const tokens = input.business.toLowerCase().split(/\s+/).filter((x) => x.length > 2);
+    return json.places || [];
+  };
 
-    let position: number | null = null;
+  try {
+    const tokens = input.business.toLowerCase().split(/\s+/).filter((x) => x.length > 2);
+    let usedQuery = primaryQuery || fallbackQuery || input.business;
+    let places = await tryQuery(usedQuery);
+
+    if (!places || places.length === 0) {
+      usedQuery = fallbackQuery || input.business;
+      places = await tryQuery(usedQuery);
+    }
+
+    if (!places || places.length === 0) {
+      return { checked: false, position: 11, sampleQuery: usedQuery, note: 'No map results returned; treated as not in top 10' };
+    }
+
+    let position = 11;
     places.some((p, i) => {
       const n = (p.displayName?.text || '').toLowerCase();
-      const match = tokens.filter((t) => n.includes(t)).length;
-      if (match >= Math.max(1, Math.floor(tokens.length / 2))) {
+      const matchCount = tokens.filter((t) => n.includes(t)).length;
+      if (matchCount >= Math.max(1, Math.floor(tokens.length / 2))) {
         position = i + 1;
         return true;
       }
       return false;
     });
 
-    return { checked: true, position, sampleQuery };
+    return {
+      checked: true,
+      position,
+      sampleQuery: usedQuery,
+      note: position <= 10 ? 'Ranking found in top 10' : 'Not found in top 10',
+    };
   } catch {
-    return { checked: false, position: null, sampleQuery };
+    return {
+      checked: false,
+      position: 11,
+      sampleQuery: primaryQuery || fallbackQuery || input.business,
+      note: 'Placement check exception; treated as not in top 10',
+    };
   }
 }
 
@@ -138,6 +170,16 @@ async function runDeepAudit(input: ScanInput): Promise<AuditSignals> {
 
   if (negatives.length === 0) negatives.push('No major negatives detected in initial deep crawl sample. Manual review recommended.');
 
+  const defaults = [
+    'Map pack ranking is outside top positions for your target keyword.',
+    'Entity consistency across website, GBP, and citations needs tightening.',
+    'Conversion journey from discovery to booked call can be improved.',
+  ];
+  for (const d of defaults) {
+    if (negatives.length >= 3) break;
+    negatives.push(d);
+  }
+
   return { negatives, schemaVisible, socialPresent, seoIssues, serviceLocationPagesVisible };
 }
 
@@ -183,11 +225,7 @@ async function createLeadTaskAndNote(input: ScanInput, placement: GBPPlacement, 
     // best effort
   }
 
-  const placementText = placement.checked
-    ? placement.position
-      ? `GBP map pack placement for "${placement.sampleQuery}": #${placement.position}`
-      : `GBP map pack placement for "${placement.sampleQuery}": Not in top 10`
-    : 'GBP map pack placement check unavailable';
+  const placementText = `GBP map pack placement for "${placement.sampleQuery}": ${placement.position <= 10 ? `#${placement.position}` : 'Not in top 10'} (${placement.note})`;
 
   const noteBody = [
     `AI Scanner Deep Audit — Score: ${score}/100`,
@@ -205,7 +243,7 @@ async function createLeadTaskAndNote(input: ScanInput, placement: GBPPlacement, 
     `5) Service/location pages visible: ${audit.serviceLocationPagesVisible ? 'Yes' : 'No'}`,
     '',
     'Negatives found:',
-    ...audit.negatives.map((n, i) => `${i + 1}. ${n}`),
+    ...audit.negatives.slice(0, 3).map((n, i) => `${i + 1}. ${n}`),
   ].join('\n');
 
   if (contactId) {
@@ -261,13 +299,8 @@ async function sendScannerLeadEmail(input: ScanInput, score: number, audit: Audi
   });
 
   const to = ['jon@truerankdigital.com', 'bishop@truerankdigital.com'].join(',');
-  const placementText = placement.checked
-    ? placement.position
-      ? `#${placement.position} for "${placement.sampleQuery}"`
-      : `Not in top 10 for "${placement.sampleQuery}"`
-    : 'Placement check unavailable';
-
-  const negativesHtml = audit.negatives.map((n) => `<li>${n}</li>`).join('');
+  const placementText = `${placement.position <= 10 ? `#${placement.position}` : 'Not in top 10'} for "${placement.sampleQuery}" (${placement.note})`;
+  const negativesHtml = audit.negatives.slice(0, 3).map((n) => `<li>${n}</li>`).join('');
 
   const html = `
     <div style="font-family:Arial,sans-serif;max-width:720px;margin:0 auto;border:1px solid #eee;border-radius:10px;overflow:hidden">
@@ -280,7 +313,7 @@ async function sendScannerLeadEmail(input: ScanInput, score: number, audit: Audi
         <p><strong>Website:</strong> ${input.website}</p>
         <p><strong>Score:</strong> ${score}/100</p>
         <p><strong>Map pack placement:</strong> ${placementText}</p>
-        <h3>Negatives Found</h3><ul>${negativesHtml}</ul>
+        <h3>Top 3 Negatives</h3><ul>${negativesHtml}</ul>
       </div>
     </div>`;
 
@@ -312,11 +345,9 @@ export async function POST(req: NextRequest) {
 
     let score = 90;
     score -= Math.min(45, audit.negatives.length * 8);
-    if (placement.checked) {
-      if (!placement.position) score -= 10;
-      else if (placement.position > 6) score -= 6;
-      else if (placement.position > 3) score -= 3;
-    }
+    if (placement.position > 10) score -= 10;
+    else if (placement.position > 6) score -= 6;
+    else if (placement.position > 3) score -= 3;
     score = Math.max(25, Math.min(96, score));
 
     const crm = await createLeadTaskAndNote(body, placement, score, audit);
@@ -326,7 +357,7 @@ export async function POST(req: NextRequest) {
       score,
       summary: 'Deep audit complete. Showing key negatives only.',
       projectedLift: `${(2.6 + (100 - score) / 17).toFixed(1)}x projected upside after fixes`,
-      gaps: audit.negatives,
+      gaps: audit.negatives.slice(0, 3),
       bookingUrl: '/contact',
       placement,
       crm,

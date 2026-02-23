@@ -23,7 +23,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: 'Jesse Mathews',
-    title: 'EVP of Business Development & Sale',
+    title: 'EVP of Business Development',
     description: 'Leading business development initiatives and growth strategy execution.',
     image: '/images/team/jesse-mathews.jpg'
   },

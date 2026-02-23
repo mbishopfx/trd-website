@@ -44,13 +44,13 @@ export default function StaffPage() {
         "@type": "Person",
         "@id": "https://truerankdigital.com/staff/jesse-mathews",
         "name": "Jesse Mathews",
-        "jobTitle": "EVP of Business Development & Sale",
+        "jobTitle": "EVP of Business Development",
         "worksFor": {
           "@type": "Organization",
           "@id": "https://truerankdigital.com/#organization",
           "name": "True Rank Digital"
         },
-        "description": "Executive Vice President of Business Development & Sale overseeing operations and growth initiatives for True Rank Digital clients.",
+        "description": "Executive Vice President of Business Development overseeing operations and growth initiatives for True Rank Digital clients.",
         "email": "jesse@truerankdigital.com",
         "url": "https://truerankdigital.com/staff",
         "knowsAbout": ["Business Development", "Sales Strategy", "Operations Leadership", "Growth Planning"]

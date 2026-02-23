@@ -234,7 +234,7 @@ export default function PageSpecificSchema({
       {
         "@type": "Person",
         name: "Jesse Mathews",
-        jobTitle: "EVP of Business Development & Sale",
+        jobTitle: "EVP of Business Development",
         worksFor: {
           "@id": `${baseUrl}/#organization`
         }

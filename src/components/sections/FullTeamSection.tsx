@@ -61,7 +61,7 @@ export default function FullTeamSection() {
   const technicalTeam: TeamMember[] = [
     {
       name: "Jesse Mathews",
-      role: "EVP of Business Development & Sale",
+      role: "EVP of Business Development",
       department: "Business Development & Sales", 
       bio: "Executive Vice President driving business development strategy and pipeline growth.",
       specialties: ["Business Development", "Sales Strategy", "Operations Leadership"],
@@ -69,7 +69,7 @@ export default function FullTeamSection() {
       color: "from-brand-secondary to-brand-accent",
       experience: "Executive Leadership",
       email: "jesse@truerankdigital.com",
-      linkedin: "https://www.linkedin.com/in/jesse-mathews-b342641bb/"
+      linkedin: "https://www.linkedin.com/in/JMathewsTRD"
     },
     {
       name: "Matt Bishop",
@@ -81,7 +81,7 @@ export default function FullTeamSection() {
       color: "from-blue-500 to-indigo-500",
       experience: "Technology Leadership",
       email: "bishop@truerankdigital.com",
-      linkedin: "https://www.linkedin.com/in/matt-bishop-a17b2431b/"
+      linkedin: "https://www.linkedin.com/in/mattbishopTRD"
     }
   ];
 

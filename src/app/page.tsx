@@ -5,7 +5,6 @@ import AIServicesSection from '@/components/sections/AIServicesSection';
 import TraditionalServicesSection from '@/components/sections/TraditionalServicesSection';
 import TestimonialsCarousel from '@/components/sections/TestimonialsCarousel';
 import CTASection from '@/components/sections/CTASection';
-import StarterPackBanner from '@/components/sections/StarterPackBanner';
 import GEOSchema from '@/components/seo/GEOSchema';
 import GoogleMapComponent from '@/components/sections/GoogleMap';
 import ContactFormSection from '@/components/sections/ContactFormSection';
@@ -109,9 +108,6 @@ export default function Home() {
       />
       
       <article className="pt-16">
-        {/* Promotional Banner */}
-        <StarterPackBanner />
-        
         {/* Hero Section */}
         <section>
           <HeroSection />

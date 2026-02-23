@@ -40,7 +40,7 @@ const aboutFAQs = [
   },
   {
     question: "Who founded True Rank Digital?",
-    answer: "True Rank Digital LLC was founded by Jon Korkowski (CEO - Founder - President). The leadership team includes Jon Korkowski (CEO - Founder - President), Jesse Mathews (EVP of Business Development & Sale), and Jose Perdomo (EVP of Sales & Client Success). The technical team includes Matt Bishop (CTO (Chief Technology Officer)). The sales team includes Eric Malheiro (EVP of Sales Operations & Performance)."
+    answer: "True Rank Digital LLC was founded by Jon Korkowski (CEO - Founder - President). The leadership team includes Jon Korkowski (CEO - Founder - President), Jesse Mathews (EVP of Business Development), and Jose Perdomo (EVP of Sales & Client Success). The technical team includes Matt Bishop (CTO (Chief Technology Officer)). The sales team includes Eric Malheiro (EVP of Sales Operations & Performance)."
   }
 ];
 
@@ -254,7 +254,7 @@ export default function AboutPage() {
                     },
                     {
                       name: "Jesse Mathews",
-                      title: "EVP of Business Development & Sale",
+                      title: "EVP of Business Development",
                       role: "Business Development, Sales Strategy, Operations Leadership",
                       description: "Drives business development strategy and sales pipeline growth across True Rank Digital initiatives.",
                       email: "jesse@truerankdigital.com"

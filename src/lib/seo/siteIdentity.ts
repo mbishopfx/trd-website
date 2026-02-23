@@ -52,7 +52,7 @@ export const siteIdentity = {
   ],
   team: [
     { name: 'Jon J Korkowski', jobTitle: 'CEO - Founder' },
-    { name: 'Jesse Mathews', jobTitle: 'EVP of Business Development & Sale' },
+    { name: 'Jesse Mathews', jobTitle: 'EVP of Business Development' },
     { name: 'Jose Perdomo', jobTitle: 'EVP of Sales & Client Success' },
     { name: 'Matt Bishop', jobTitle: 'CTO (Chief Technology Officer)' },
     { name: 'Eric Malheiro', jobTitle: 'EVP of Sales Operations & Performance' },

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://truerankdigital.com'),
   alternates: {
-    canonical: '/',
+    canonical: './',
   },
   openGraph: {
     title: "True Rank Digital - Get Your Business Found on Google Fast",

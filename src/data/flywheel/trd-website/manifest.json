@@ -1,8 +1,37 @@
 {
   "clientId": "trd-website",
   "clientName": "True Rank Digital",
-  "generatedAt": "2026-03-03T17:35:23.943Z",
-  "pageCount": 100,
-  "outputDir": "/Users/matthewbishop/True Rank Digital/trd-website/website/src/data/flywheel/trd-website",
-  "routeTemplate": "/:location-:industry/:service-:segment"
+  "generatedAt": "2026-03-03T19:28:35.058Z",
+  "pageCount": 400,
+  "outputDir": "/Users/matthewbishop/True Rank Digital/trd-flywheel/data/flywheel/trd-website",
+  "routeTemplate": "/:location-:industry/:service-:segment",
+  "schema": {
+    "schemaTypes": [
+      "MarketingAgency",
+      "LocalBusiness",
+      "Organization"
+    ],
+    "graphEntities": [
+      "WebSite",
+      "Organization/LocalBusiness",
+      "Service",
+      "WebPage",
+      "BreadcrumbList",
+      "FAQPage"
+    ]
+  },
+  "content": {
+    "model": "gemini-2.5-flash",
+    "minWords": 500,
+    "maxWords": 800,
+    "sources": {
+      "gemini": 0,
+      "fallback": 0,
+      "cache": 400
+    },
+    "observedWordRange": {
+      "min": 570,
+      "max": 582
+    }
+  }
 }

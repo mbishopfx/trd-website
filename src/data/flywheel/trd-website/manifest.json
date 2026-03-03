@@ -1,0 +1,8 @@
+{
+  "clientId": "trd-website",
+  "clientName": "True Rank Digital",
+  "generatedAt": "2026-03-03T17:35:23.943Z",
+  "pageCount": 100,
+  "outputDir": "/Users/matthewbishop/True Rank Digital/trd-website/website/src/data/flywheel/trd-website",
+  "routeTemplate": "/:location-:industry/:service-:segment"
+}

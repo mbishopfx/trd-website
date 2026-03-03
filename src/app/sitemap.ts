@@ -8,6 +8,12 @@ type PageEntry = {
   lastModified?: string;
 };
 
+type FlywheelPage = {
+  path?: string;
+  absoluteUrl?: string;
+  lastmod?: string;
+};
+
 const SKIP_DIRS = new Set(['api', 'admin', 'forms']);
 
 function isRouteGroup(segment: string) {
@@ -65,8 +71,43 @@ async function collectStaticRoutesFromAppDir(): Promise<PageEntry[]> {
   return [...uniqueByUrl.values()];
 }
 
+async function collectFlywheelEntries(): Promise<PageEntry[]> {
+  const flywheelDir = path.join(process.cwd(), 'src', 'data', 'flywheel');
+
+  try {
+    const clients = await fs.readdir(flywheelDir, { withFileTypes: true });
+    const entries: PageEntry[] = [];
+
+    for (const client of clients) {
+      if (!client.isDirectory()) continue;
+
+      const pagesPath = path.join(flywheelDir, client.name, 'pages.json');
+      if (!(await fileExists(pagesPath))) continue;
+
+      const raw = await fs.readFile(pagesPath, 'utf8');
+      const payload = JSON.parse(raw) as FlywheelPage[];
+
+      if (!Array.isArray(payload)) continue;
+
+      for (const page of payload) {
+        if (!page.path) continue;
+        const url = page.absoluteUrl?.startsWith('http') ? page.absoluteUrl : `${siteUrl}${page.path}`;
+        const lastModified = page.lastmod ? `${page.lastmod}T00:00:00.000Z` : undefined;
+        entries.push({ url, lastModified });
+      }
+    }
+
+    const uniqueByUrl = new Map<string, PageEntry>();
+    for (const entry of entries) uniqueByUrl.set(entry.url, entry);
+    return [...uniqueByUrl.values()];
+  } catch {
+    return [];
+  }
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticEntries = await collectStaticRoutesFromAppDir();
+  const flywheelEntries = await collectFlywheelEntries();
 
   const blogEntries: PageEntry[] = [];
   try {
@@ -83,10 +124,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // If DB credentials are unavailable at build/runtime, ship a sitemap for the static site only.
   }
 
-  const allEntries = [...staticEntries, ...blogEntries];
+  const allEntries = [...staticEntries, ...blogEntries, ...flywheelEntries];
   const uniqueByUrl = new Map<string, PageEntry>();
   for (const entry of allEntries) uniqueByUrl.set(entry.url, entry);
 
   return [...uniqueByUrl.values()];
 }
-

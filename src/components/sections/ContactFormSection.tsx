@@ -378,7 +378,7 @@ export default function ContactFormSection({
             </motion.a>
             
             <motion.a
-              href="mailto:jon@truerankdigital.com"
+              href="mailto:info@truerankdigital.com"
               className="inline-flex items-center space-x-2 px-6 py-3 glass-button bg-brand-secondary/10 hover:bg-brand-secondary hover:text-white text-brand-secondary font-semibold rounded-full transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

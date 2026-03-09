@@ -48,15 +48,15 @@ export default function ContactHeroSection() {
               icon: <Phone className="w-6 h-6" />,
               title: 'Call Us',
               primary: '(732) 475-0139',
-              secondary: '(732) 215-6319',
+              secondary: 'Office line',
               action: 'tel:+17324750139'
             },
             {
               icon: <Mail className="w-6 h-6" />,
               title: 'Email Us',
-              primary: 'jon@truerankdigital.com',
+              primary: 'info@truerankdigital.com',
               secondary: 'Get a response within hours',
-              action: 'mailto:jon@truerankdigital.com'
+              action: 'mailto:info@truerankdigital.com'
             },
             {
               icon: <MapPin className="w-6 h-6" />,

@@ -138,20 +138,6 @@ export default function ContactInfoSection() {
                   </div>
                 </div>
 
-                {/* Emergency/Secondary Phone */}
-                <div className="flex items-center space-x-4 p-4 bg-brand-secondary/5 rounded-xl hover:bg-brand-secondary/10 transition-colors duration-200">
-                  <div className="w-12 h-12 bg-brand-secondary/20 rounded-full flex items-center justify-center">
-                    <svg className="w-6 h-6 text-brand-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="font-semibold text-brand-dark">Emergency Support</div>
-                    <a href="tel:+17322156319" className="text-brand-secondary font-bold text-lg hover:text-brand-secondary/80 transition-colors">
-                      (732) 215-6319
-                    </a>
-                  </div>
-                </div>
 
                 {/* Email */}
                 <div className="flex items-center space-x-4 p-4 bg-brand-accent/5 rounded-xl hover:bg-brand-accent/10 transition-colors duration-200">
@@ -162,8 +148,8 @@ export default function ContactInfoSection() {
                   </div>
                   <div>
                     <div className="font-semibold text-brand-dark">Email Us</div>
-                    <a href="mailto:jon@truerankdigital.com" className="text-brand-accent font-bold text-lg hover:text-brand-accent/80 transition-colors">
-                      jon@truerankdigital.com
+                    <a href="mailto:info@truerankdigital.com" className="text-brand-accent font-bold text-lg hover:text-brand-accent/80 transition-colors">
+                      info@truerankdigital.com
                     </a>
                   </div>
                 </div>

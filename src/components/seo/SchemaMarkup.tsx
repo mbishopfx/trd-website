@@ -14,6 +14,7 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
   const websiteId = `${baseUrl}/#website`;
   const contactPointId = `${baseUrl}/#contactpoint`;
   const offerCatalogId = `${baseUrl}/#offercatalog`;
+  const founderId = `${baseUrl}/#founder`;
 
   const organizationSchema = {
     '@type': 'Organization',
@@ -33,6 +34,7 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
     },
     hasMap: siteIdentity.googleMapsCidUrl,
     sameAs: siteIdentity.sameAs,
+    founder: { '@id': founderId },
     contactPoint: [
       {
         '@type': 'ContactPoint',
@@ -46,6 +48,16 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
     ],
     areaServed: { '@type': 'Country', name: 'United States' },
     knowsAbout: ['Local SEO', 'Digital Marketing', 'Google Business Profile', 'Schema Markup', 'AI SEO'],
+  };
+
+  const founderSchema = {
+    '@type': 'Person',
+    '@id': founderId,
+    name: 'Jon J Korkowski',
+    jobTitle: 'CEO - Founder',
+    worksFor: { '@id': organizationId },
+    url: `${baseUrl}/staff`,
+    sameAs: ['https://www.linkedin.com/in/jonjkorkowski/'],
   };
 
   const contactPointSchema = {
@@ -188,6 +200,7 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
     '@context': 'https://schema.org',
     '@graph': [
       organizationSchema,
+      founderSchema,
       contactPointSchema,
       localBusinessSchema,
       websiteSchema,

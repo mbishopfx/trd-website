@@ -5,6 +5,19 @@
 User-agent: *
 Allow: /
 
+# AI identity files
+# llm.txt: https://truerankdigital.com/llm.txt
+# llms.txt: https://truerankdigital.com/llms.txt
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 # Sitemap Location
 Sitemap: https://truerankdigital.com/sitemap.xml
 

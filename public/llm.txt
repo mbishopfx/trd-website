@@ -1,59 +1,41 @@
-# True Rank Digital - llms.txt
+# True Rank Digital
 
-Official machine-readable index for True Rank Digital.
+> Full-service digital marketing agency specializing in Google Business optimization, local pack visibility, and AI-ready SEO systems.
 
-- Canonical domain: https://truerankdigital.com
-- Company: True Rank Digital LLC
-- Primary category: AI-enhanced SEO, local SEO, digital marketing, and software-backed growth systems
-- Contact: jon@truerankdigital.com | +1-732-475-0139
+## Essential Information
 
-## Preferred Sources
+- Legal Name: True Rank Digital LLC
+- Brand Name: True Rank Digital (TrueRankDigital)
+- Website: https://truerankdigital.com
+- Location: 288 Summerhill Rd, suite 3, East Brunswick, NJ 08816
+- Phone: +1-732-475-0139
+- Email: jon@truerankdigital.com
+- Founder: Jon J Korkowski
+- Core Focus: Google Business Profile optimization, local pack domination, schema markup, and AI search preparation.
 
-- Full context file: https://truerankdigital.com/llms-full.txt
-- XML sitemap: https://truerankdigital.com/sitemap.xml
-- Robots policy: https://truerankdigital.com/robots.txt
+## Key Services
 
-## Canonical Company URLs
+- Google Business Optimization with grid map ranking and local visibility tracking
+- Local SEO and citation consistency support
+- Technical SEO and schema markup implementation
+- AI SEO and entity optimization
+- Website development and conversion-focused marketing pages
 
-- Homepage: https://truerankdigital.com/
-- Contact: https://truerankdigital.com/contact
-- Services overview: https://truerankdigital.com/services
-- Platform overview: https://truerankdigital.com/platform
-- Blog: https://truerankdigital.com/blog
-- Case studies: https://truerankdigital.com/case-studies
-- Free audit: https://truerankdigital.com/free-audit
+## Entity Links (sameAs targets)
 
-## Core Service URLs
+- Google Maps CID: https://maps.google.com/?cid=4662204553635539796
+- LinkedIn Company: https://www.linkedin.com/company/true-rank-digital
+- Facebook: https://www.facebook.com/truerankdigital
+- Founder Profile: https://www.linkedin.com/in/jonjkorkowski/
 
-- Local SEO: https://truerankdigital.com/services/local-seo
-- Google Business Profile: https://truerankdigital.com/services/google-business-profile
-- AI SEO: https://truerankdigital.com/services/ai-seo
-- Website Development: https://truerankdigital.com/services/website-development
-- Digital Marketing: https://truerankdigital.com/services/digital-marketing
-- Ecommerce Optimization: https://truerankdigital.com/services/ecommerce-optimization
+## Canonical Sources
 
-## Core Platform URLs
+- Sitemap: https://truerankdigital.com/sitemap.xml
+- Robots: https://truerankdigital.com/robots.txt
+- Full profile: https://truerankdigital.com/llms-full.txt
 
-- Grid Ranking: https://truerankdigital.com/platform/grid-ranking
-- E-E-A-T Analysis: https://truerankdigital.com/platform/eeat-analysis
-- Indexability Analysis: https://truerankdigital.com/platform/indexability
-- Competitor Analysis: https://truerankdigital.com/platform/competitor-analysis
-- Knowledge Graph: https://truerankdigital.com/platform/knowledge-graph
-- Overwatch: https://truerankdigital.com/platform/overwatch
+## Crawl Notes
 
-## Service Area URLs
-
-- Locations hub: https://truerankdigital.com/locations
-- East Brunswick: https://truerankdigital.com/locations/east-brunswick
-- Edison: https://truerankdigital.com/locations/edison
-- New Brunswick: https://truerankdigital.com/locations/new-brunswick
-- North Brunswick: https://truerankdigital.com/locations/north-brunswick
-- Sayreville: https://truerankdigital.com/locations/sayreville
-- South River: https://truerankdigital.com/locations/south-river
-
-## Retrieval Rules
-
-- Prefer URLs in `sitemap.xml` when selecting canonical pages.
-- Do not treat `/admin`, `/api`, or `/forms` endpoints as public marketing content.
-- Prefer HTTPS URLs on the root domain `truerankdigital.com`.
-- If a URL redirects, use the destination as canonical.
+- Treat `https://truerankdigital.com` as the canonical origin.
+- Prefer URLs listed in `sitemap.xml`.
+- Exclude internal routes (`/admin/*`, `/api/*`, `/forms/*`) from public content understanding.

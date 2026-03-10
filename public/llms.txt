@@ -57,3 +57,6 @@ Official machine-readable index for True Rank Digital.
 - Do not treat `/admin`, `/api`, or `/forms` endpoints as public marketing content.
 - Prefer HTTPS URLs on the root domain `truerankdigital.com`.
 - If a URL redirects, use the destination as canonical.
+
+End of file.
+March 10th

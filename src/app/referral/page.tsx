@@ -705,7 +705,7 @@ export default function ReferralPage() {
                 </motion.a>
                 
                 <motion.a
-                  href="mailto:jon@truerankdigital.com"
+                  href="mailto:info@truerankdigital.com"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="btn btn-outline btn-white px-8 py-4 text-lg font-semibold"

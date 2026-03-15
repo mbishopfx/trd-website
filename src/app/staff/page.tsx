@@ -36,7 +36,7 @@ export default function StaffPage() {
           "name": "True Rank Digital"
         },
         "description": "Founder and CEO leading True Rank Digital's vision and strategy for digital marketing excellence and proprietary SEO technology development.",
-        "email": "jon@truerankdigital.com",
+        "email": "info@truerankdigital.com",
         "url": "https://truerankdigital.com/staff",
         "knowsAbout": ["Business Strategy", "Client Relations", "SEO Leadership", "Digital Marketing Strategy"]
       },

@@ -32,7 +32,7 @@ const aboutFAQs = [
   },
   {
     question: "How much do True Rank Digital's services cost?",
-    answer: "Pricing varies based on business needs, market competition, and service scope. Contact us at (732) 475-0139 or jon@truerankdigital.com for a custom quote and consultation."
+    answer: "Pricing varies based on business needs, market competition, and service scope. Contact us at (732) 475-0139 or info@truerankdigital.com for a custom quote and consultation."
   },
   {
     question: "Why choose True Rank Digital over other SEO companies?",
@@ -122,7 +122,7 @@ export default function AboutPage() {
                     <p><strong>Country:</strong> United States</p>
                     <p><strong>Coordinates:</strong> 40.428100, -74.415700</p>
                     <p><strong>Phone:</strong> (732) 475-0139</p>
-                    <p><strong>Email:</strong> jon@truerankdigital.com</p>
+                    <p><strong>Email:</strong> info@truerankdigital.com</p>
                   </div>
                 </div>
 
@@ -250,7 +250,7 @@ export default function AboutPage() {
                       title: "CEO - Founder - President",
                       role: "Business Strategy, Client Relations, SEO Leadership",
                       description: "Founded True Rank Digital in 2020 with a vision to build custom SEO technology that gives clients a competitive advantage.",
-                      email: "jon@truerankdigital.com"
+                      email: "info@truerankdigital.com"
                     },
                     {
                       name: "Jesse Mathews",

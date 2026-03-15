@@ -28,7 +28,7 @@ export const siteIdentity = {
   foundingYear: '2020',
   url: siteUrl,
   telephone: '+1-732-475-0139',
-  email: 'jon@truerankdigital.com',
+  email: 'info@truerankdigital.com',
   address: {
     streetAddress: '288 Summerhill Rd, suite 3',
     addressLocality: 'East Brunswick',

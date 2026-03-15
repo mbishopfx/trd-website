@@ -132,7 +132,7 @@ export async function POST(request: NextRequest) {
 	          </div>
           
           <p style="color: #374151; line-height: 1.6; margin: 20px 0;">
-            If you have any questions about the referral program, please don't hesitate to reach out to us at <a href="mailto:jon@truerankdigital.com" style="color: #3b82f6;">jon@truerankdigital.com</a> or call us at <a href="tel:+17324750139" style="color: #3b82f6;">(732) 475-0139</a>.
+            If you have any questions about the referral program, please don't hesitate to reach out to us at <a href="mailto:info@truerankdigital.com" style="color: #3b82f6;">info@truerankdigital.com</a> or call us at <a href="tel:+17324750139" style="color: #3b82f6;">(732) 475-0139</a>.
           </p>
           
           <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb;">

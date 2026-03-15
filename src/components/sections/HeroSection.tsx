@@ -142,10 +142,10 @@ export default function HeroSection() {
             <div className="flex items-center space-x-2">
               <span className="text-sm font-medium">Email:</span>
               <a 
-                href="mailto:jon@truerankdigital.com"
+                href="mailto:info@truerankdigital.com"
                 className="text-brand-primary font-semibold hover:text-brand-primary/80 transition-colors duration-200"
               >
-                jon@truerankdigital.com
+                info@truerankdigital.com
               </a>
             </div>
           </motion.div>

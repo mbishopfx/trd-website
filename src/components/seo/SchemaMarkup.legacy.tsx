@@ -24,7 +24,7 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
       addressCountry: "US"
     },
     telephone: "+1-732-475-0139",
-    email: "jon@truerankdigital.com",
+    email: "info@truerankdigital.com",
     url: "https://truerankdigital.com",
     logo: "https://truerankdigital.com/images/logos/trd-logo1.avif",
     image: "https://truerankdigital.com/images/logos/trdlogoblue.webp"
@@ -208,7 +208,7 @@ export default function SchemaMarkup({ type = 'organization', breadcrumbs, inclu
         "@id": "https://truerankdigital.com/#organization"
       },
       description: "Founder and CEO leading True Rank Digital's vision and strategy for digital marketing excellence and proprietary SEO technology development.",
-      email: "jon@truerankdigital.com",
+      email: "info@truerankdigital.com",
       url: "https://truerankdigital.com/staff",
       knowsAbout: [
         "Business Strategy",

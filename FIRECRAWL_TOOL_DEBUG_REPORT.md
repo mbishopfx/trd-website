@@ -254,7 +254,7 @@ The site implements **15+ comprehensive schemas**:
         "addressCountry": "US"
       },
       "telephone": "+1-732-475-0139",
-      "email": "jon@truerankdigital.com",
+      "email": "info@truerankdigital.com",
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "5.0",
@@ -792,7 +792,7 @@ If you need clarification on any of these findings or want to test your fixes ag
 
 **Site Owner:** True Rank Digital  
 **Test URL:** https://truerankdigital.com  
-**Contact:** jon@truerankdigital.com  
+**Contact:** info@truerankdigital.com  
 **Phone:** (732) 475-0139
 
 ---

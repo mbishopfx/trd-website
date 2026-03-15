@@ -29,7 +29,7 @@ export default function FullTeamSection() {
       icon: <Award className="w-8 h-8" />,
       color: "from-brand-primary to-brand-secondary",
       experience: "Leadership",
-      email: "jon@truerankdigital.com",
+      email: "info@truerankdigital.com",
       linkedin: "https://www.linkedin.com/in/jonjkorkowski/"
     },
     {

@@ -138,7 +138,7 @@ The website is optimized for Vercel deployment:
 
 **True Rank Digital LLC**
 - Phone: (732) 475-0139 | (732) 215-6319
-- Email: jon@truerankdigital.com
+- Email: info@truerankdigital.com
 - Location: East Brunswick, NJ 08816
 
 ---

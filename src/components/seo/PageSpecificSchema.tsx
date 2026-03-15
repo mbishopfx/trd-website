@@ -99,7 +99,7 @@ export default function PageSpecificSchema({
         "@id": `${baseUrl}/#organization`,
         name: "True Rank Digital LLC",
         url: baseUrl,
-        email: "jon@truerankdigital.com",
+        email: "info@truerankdigital.com",
         telephone: "+1-732-475-0139",
         contactPoint: [{ "@id": `${baseUrl}/#contactpoint` }]
       },
@@ -111,7 +111,7 @@ export default function PageSpecificSchema({
         url: baseUrl,
         image: `${baseUrl}/images/logos/trdlogoblue.webp`,
         logo: `${baseUrl}/images/logos/trd-logo1.avif`,
-        email: "jon@truerankdigital.com",
+        email: "info@truerankdigital.com",
         telephone: "+1-732-475-0139",
         priceRange: "$$-$$$",
         parentOrganization: {
@@ -154,7 +154,7 @@ export default function PageSpecificSchema({
           },
           {
             "@type": "CommunicateAction",
-            target: "mailto:jon@truerankdigital.com"
+            target: "mailto:info@truerankdigital.com"
           }
         ]
       },
@@ -163,7 +163,7 @@ export default function PageSpecificSchema({
         "@id": `${baseUrl}/#contactpoint`,
         contactType: "customer service",
         telephone: "+1-732-475-0139",
-        email: "jon@truerankdigital.com",
+        email: "info@truerankdigital.com",
         areaServed: "US",
         availableLanguage: ["English"],
         url: `${baseUrl}/contact`
@@ -188,7 +188,7 @@ export default function PageSpecificSchema({
           },
           {
             "@type": "CommunicateAction",
-            target: "mailto:jon@truerankdigital.com"
+            target: "mailto:info@truerankdigital.com"
           }
         ]
       }

@@ -29,7 +29,7 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
       addressCountry: "US"
     },
     telephone: "+1-732-475-0139",
-    email: "jon@truerankdigital.com",
+    email: "info@truerankdigital.com",
     url: baseUrl,
     logo: `${baseUrl}/images/logos/trd-logo1.avif`,
     image: `${baseUrl}/images/logos/trdlogoblue.webp`

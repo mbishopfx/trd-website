@@ -223,7 +223,7 @@ export default function GDPRPage() {
               <div className="space-y-4">
                 <div className="flex items-center justify-center space-x-3">
                   <Mail className="w-5 h-5" />
-                  <span>jon@truerankdigital.com</span>
+                  <span>info@truerankdigital.com</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3">
                   <FileText className="w-5 h-5" />

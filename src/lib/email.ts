@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
 });
 
 export async function sendLeadEmail(formTitle: string, leadData: Record<string, any>) {
-  const recipient = (process.env.RECIPIENT_EMAIL?.trim()) || 'jon@truerankdigital.com';
+  const recipient = (process.env.RECIPIENT_EMAIL?.trim()) || 'info@truerankdigital.com';
   const sender = (process.env.SMTP_USER?.trim()) || 'bishop@truerankdigital.com';
 
   // Format the data for the email

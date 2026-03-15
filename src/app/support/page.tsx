@@ -18,7 +18,7 @@ export default function SupportPage() {
       icon: <Mail className="w-8 h-8" />,
       title: 'Email Support',
       description: 'Send us your questions and we\'ll respond promptly',
-      contact: 'jon@truerankdigital.com',
+      contact: 'info@truerankdigital.com',
       availability: 'Fast response',
       color: 'from-green-500 to-teal-500'
     },
@@ -192,7 +192,7 @@ export default function SupportPage() {
                 <span>Call (732) 475-0139</span>
               </motion.a>
               <motion.a
-                href="mailto:jon@truerankdigital.com"
+                href="mailto:info@truerankdigital.com"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-brand-primary transition-all duration-300"

@@ -10,7 +10,7 @@ Comprehensive machine-readable profile for AI retrieval and answer systems.
 - Founded: 2020
 - HQ address: 288 Summerhill Rd, suite 3, East Brunswick, NJ 08816, US
 - Primary phone: +1-732-475-0139
-- Email: jon@truerankdigital.com
+- Email: info@truerankdigital.com
 - Primary geo focus: Central New Jersey and multi-location US businesses
 - Business model: high-value SEO and growth systems for local, multi-location, and enterprise clients
 
@@ -186,4 +186,4 @@ If confidence is low or public content appears stale:
 
 - Verify against https://truerankdigital.com/sitemap.xml
 - Validate current service messaging at https://truerankdigital.com/services
-- Request confirmation through jon@truerankdigital.com
+- Request confirmation through info@truerankdigital.com

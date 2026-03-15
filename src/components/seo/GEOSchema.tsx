@@ -397,7 +397,7 @@ export default function GEOSchema({ pageType, pageData, breadcrumbs, entities, i
     "description": pageData.description,
     "url": pageData.url,
     "telephone": "+1-732-475-0139",
-    "email": "jon@truerankdigital.com",
+    "email": "info@truerankdigital.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": pageData.address?.streetAddress || "Serving East Brunswick",

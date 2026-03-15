@@ -68,7 +68,7 @@ export const LocationFAQTemplate = (city: string, state: string = "NJ") => [
   },
   {
     question: `How can I get started with SEO services in ${city}?`,
-    answer: `Getting started with True Rank Digital's SEO services in ${city} is simple. Contact us at (732) 475-0139 or email jon@truerankdigital.com to schedule a free consultation. We'll analyze your current online presence, discuss your business goals, and create a custom SEO strategy specifically for your ${city} business. You'll also get access to our proprietary dashboard platform to track your results.`
+    answer: `Getting started with True Rank Digital's SEO services in ${city} is simple. Contact us at (732) 475-0139 or email info@truerankdigital.com to schedule a free consultation. We'll analyze your current online presence, discuss your business goals, and create a custom SEO strategy specifically for your ${city} business. You'll also get access to our proprietary dashboard platform to track your results.`
   }
 ];
 

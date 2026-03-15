@@ -372,7 +372,7 @@ async function sendScannerLeadEmail(input: ScanInput, score: number, audit: Audi
     auth: { user: smtpUser, pass: smtpPass },
   });
 
-  const to = ['jon@truerankdigital.com', 'bishop@truerankdigital.com'].join(',');
+  const to = ['info@truerankdigital.com', 'bishop@truerankdigital.com'].join(',');
   const placementText = `${placement.position <= 10 ? `#${placement.position}` : 'Not in top 10'} for "${placement.sampleQuery}" (${placement.note})`;
   const negativesHtml = audit.negatives.slice(0, 3).map((n) => `<li>${n}</li>`).join('');
 

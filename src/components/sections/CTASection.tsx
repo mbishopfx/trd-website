@@ -91,10 +91,10 @@ export default function CTASection() {
           <div className="flex items-center space-x-2">
             <span className="font-medium">Email:</span>
             <a 
-              href="mailto:jon@truerankdigital.com"
+              href="mailto:info@truerankdigital.com"
               className="text-white font-semibold hover:text-white/80 transition-colors duration-200"
             >
-              jon@truerankdigital.com
+              info@truerankdigital.com
             </a>
           </div>
 

@@ -132,6 +132,7 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
           url: baseUrl,
           logo: siteIdentity.logoUrl,
           image: siteIdentity.imageUrl,
+          description: siteIdentity.description,
           email: siteIdentity.email,
           telephone: siteIdentity.telephone,
           priceRange: '$$-$$$',
@@ -147,10 +148,8 @@ export default function ComprehensiveSchema({ type, pageData, breadcrumbs }: Com
           },
           hasMap: siteIdentity.googleMapsCidUrl,
           sameAs: siteIdentity.sameAs,
-          areaServed: [
-            { '@type': 'AdministrativeArea', name: 'New Jersey' },
-            { '@type': 'Country', name: 'United States' },
-          ],
+          areaServed: siteIdentity.areaServed,
+          knowsAbout: siteIdentity.knowsAbout,
           contactPoint: [{ '@id': contactPointId }],
           potentialAction: [
             { '@type': 'CommunicateAction', target: `${baseUrl}/contact` },

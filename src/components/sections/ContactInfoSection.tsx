@@ -186,8 +186,18 @@ export default function ContactInfoSection() {
                   <div>
                     <div className="font-semibold text-brand-dark mb-2">288 Summerhill Rd, suite 3, East Brunswick, NJ 08816</div>
                     <div className="text-brand-dark/70 text-sm leading-relaxed mb-3">
-                      Located in the heart of the NY/NJ metropolitan area, serving clients worldwide with 
-                      enterprise-level digital marketing solutions.
+                      True Rank Digital is headquartered in the heart of Middlesex County and positioned to support businesses across East Brunswick, the Route 18 corridor, and Central Jersey.
+                    </div>
+                    <div className="text-brand-dark/80 text-sm space-y-2 mb-4">
+                      <p>
+                        <strong>Via Route 18 South:</strong> Coming from New Brunswick, Rutgers, or the NJ Turnpike (Exit 9), continue south past Brunswick Square Mall and take the Summerhill Road/Spotswood exit.
+                      </p>
+                      <p>
+                        <strong>Via Route 18 North:</strong> Coming from Old Bridge or Marlboro, head north on Route 18 and merge onto Summerhill Road for direct access.
+                      </p>
+                    </div>
+                    <div className="text-brand-dark/70 text-sm leading-relaxed mb-3">
+                      We help businesses throughout East Brunswick and Middlesex County improve local visibility with AI-driven SEO, GEO, Google Business Profile optimization, and Precision PPC.
                     </div>
                     <a
                       href="https://www.google.com/maps?cid=4662204553635539796"

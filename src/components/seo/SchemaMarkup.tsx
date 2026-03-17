@@ -19,12 +19,13 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
   const organizationSchema = {
     '@type': 'Organization',
     '@id': organizationId,
-    name: siteIdentity.legalName,
+    name: siteIdentity.brandName,
     legalName: siteIdentity.legalName,
-    alternateName: siteIdentity.brandName,
+    alternateName: siteIdentity.alternateNames,
     url: baseUrl,
     logo: siteIdentity.logoUrl,
     image: siteIdentity.imageUrl,
+    description: siteIdentity.description,
     email: siteIdentity.email,
     telephone: siteIdentity.telephone,
     foundingDate: siteIdentity.foundingYear,
@@ -46,18 +47,19 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
         url: `${baseUrl}/contact`,
       },
     ],
-    areaServed: { '@type': 'Country', name: 'United States' },
-    knowsAbout: ['Local SEO', 'Digital Marketing', 'Google Business Profile', 'Schema Markup', 'AI SEO'],
+    areaServed: siteIdentity.areaServed,
+    knowsAbout: siteIdentity.knowsAbout,
   };
 
   const founderSchema = {
     '@type': 'Person',
     '@id': founderId,
-    name: 'Jon J Korkowski',
-    jobTitle: 'CEO - Founder',
+    name: siteIdentity.founder.name,
+    alternateName: siteIdentity.founder.alternateName,
+    jobTitle: siteIdentity.founder.jobTitle,
     worksFor: { '@id': organizationId },
-    url: `${baseUrl}/staff`,
-    sameAs: ['https://www.linkedin.com/in/jonjkorkowski/'],
+    url: siteIdentity.founder.url,
+    sameAs: siteIdentity.founder.sameAs,
   };
 
   const contactPointSchema = {
@@ -79,6 +81,7 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
     url: baseUrl,
     image: siteIdentity.imageUrl,
     logo: siteIdentity.logoUrl,
+    description: siteIdentity.description,
     telephone: siteIdentity.telephone,
     email: siteIdentity.email,
     priceRange: '$$-$$$',
@@ -98,10 +101,7 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
     },
     hasMap: siteIdentity.googleMapsCidUrl,
     sameAs: siteIdentity.sameAs,
-    areaServed: [
-      { '@type': 'AdministrativeArea', name: 'New Jersey' },
-      { '@type': 'Country', name: 'United States' },
-    ],
+    areaServed: siteIdentity.areaServed,
     contactPoint: [
       {
         '@type': 'ContactPoint',

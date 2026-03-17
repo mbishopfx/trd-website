@@ -25,10 +25,13 @@ export const siteUrl =
 export const siteIdentity = {
   brandName: 'True Rank Digital',
   legalName: 'True Rank Digital LLC',
+  alternateNames: ['True Rankd Digital', 'TrueRank Digital', 'True Rankd'],
   foundingYear: '2020',
   url: siteUrl,
   telephone: '+1-732-475-0139',
   email: 'info@truerankdigital.com',
+  description:
+    'True Rank Digital is an elite performance marketing agency in East Brunswick, NJ, specializing in AI-driven SEO, Generative Engine Optimization (GEO), and Precision PPC.',
   address: {
     streetAddress: '288 Summerhill Rd, suite 3',
     addressLocality: 'East Brunswick',
@@ -42,6 +45,8 @@ export const siteIdentity = {
   sameAs: [
     'https://maps.google.com/?cid=4662204553635539796',
     'https://www.google.com/maps?cid=4662204553635539796',
+    'https://www.bbb.org/us/nj/east-brunswick/profile/internet-marketing-services/true-rank-digital-0221-90240783',
+    'https://clutch.co/profile/true-rank-digital',
     'https://www.linkedin.com/company/true-rank-digital',
     'https://www.facebook.com/truerankdigital',
     'https://www.linkedin.com/in/jonjkorkowski/',
@@ -52,6 +57,38 @@ export const siteIdentity = {
     'https://www.tiktok.com/@truerankdigital_',
     'https://www.pinterest.com/truerankdigital',
   ],
+  areaServed: [
+    {
+      '@type': 'City',
+      name: 'East Brunswick',
+      sameAs: 'https://en.wikipedia.org/wiki/East_Brunswick,_New_Jersey',
+    },
+    {
+      '@type': 'AdministrativeArea',
+      name: 'Middlesex County',
+      sameAs: 'https://en.wikipedia.org/wiki/Middlesex_County,_New_Jersey',
+    },
+    {
+      '@type': 'Place',
+      name: 'New Jersey Route 18',
+      sameAs: 'https://en.wikipedia.org/wiki/New_Jersey_Route_18',
+    },
+    { '@type': 'Country', name: 'United States' },
+  ],
+  knowsAbout: [
+    'Generative Engine Optimization (GEO)',
+    'Answer Engine Optimization (AEO)',
+    'Entity-Based SEO',
+    'Predictive Local Dominance',
+    'Google SGE Optimization',
+  ],
+  founder: {
+    name: 'Jon J Korkowski',
+    alternateName: ['Jon Karkowski'],
+    jobTitle: 'CEO',
+    url: 'https://www.jonjkorkowski.com/',
+    sameAs: ['https://www.linkedin.com/in/jonjkorkowski/'],
+  },
   team: [
     { name: 'Jon J Korkowski', jobTitle: 'CEO - Founder' },
     { name: 'Jesse Mathews', jobTitle: 'EVP of Business Development' },

@@ -141,7 +141,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         {/* Hero Section */}
-        <header className="bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900 text-white py-16">
+        <header className="bg-gradient-to-br from-blue-900 via-blue-900 to-gray-900 text-white py-16">
           <div className="max-w-4xl mx-auto px-4">
             {/* Meta Info */}
             <div className="flex flex-wrap items-center gap-4 text-sm text-gray-300 mb-6">
@@ -180,7 +180,7 @@ export default async function BlogPostPage({ params }: Props) {
                 {post.tags.map((tag, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 bg-white/10 backdrop-blur-lg rounded-full text-sm font-medium border border-white/20"
+                    className="px-3 py-1 bg-brand-obsidian/10 backdrop-blur-lg rounded-full text-sm font-medium border border-white/20"
                   >
                     {tag}
                   </span>
@@ -208,7 +208,7 @@ export default async function BlogPostPage({ params }: Props) {
           <BlogContent content={post.content} />
 
           {/* CTA Box */}
-          <div className="mt-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
+          <div className="mt-16 bg-gradient-to-br from-blue-600 to-blue-600 rounded-2xl p-8 text-white text-center">
             <h2 className="text-3xl font-bold mb-4">
               Ready to Optimize for AI Search?
             </h2>
@@ -217,7 +217,7 @@ export default async function BlogPostPage({ params }: Props) {
             </p>
             <Link
               href="/contact"
-              className="inline-block px-8 py-4 bg-white text-blue-600 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all shadow-xl"
+              className="inline-block px-8 py-4 bg-brand-obsidian text-blue-600 rounded-lg font-bold text-lg hover:bg-brand-obsidian-light transition-all shadow-xl"
             >
               Get Your Free AI Search Audit
             </Link>

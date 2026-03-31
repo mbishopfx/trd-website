@@ -1,27 +1,35 @@
 import type { Metadata } from 'next';
-import { Search, MapPin, TrendingUp, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
+import {
+  MapPin,
+  Search,
+  CheckCircle2,
+  ArrowRight,
+  BarChart3,
+  FileSearch,
+  Bot,
+  ShieldCheck,
+  TrendingUp,
+} from 'lucide-react';
 import GEOSchema from '@/components/seo/GEOSchema';
-import { generateServiceFAQs } from '@/components/seo/FAQSchema';
+import FAQSchema, { generateServiceFAQs } from '@/components/seo/FAQSchema';
+import ServiceSchema from '@/components/seo/ServiceSchema';
 
-// GEO-Optimized Metadata
 export const metadata: Metadata = {
-  title: 'Local Pack Domination Services | Grid Map Ranking Analysis | True Rank Digital',
-  description: 'True Rank Digital provides professional Google Business Optimization services with proprietary grid map ranking verification, competitor analysis platform, and local pack domination strategies.',
-  keywords: 'local pack domination, Google Business Optimization, True Rank Digital, grid map ranking, Google Maps optimization, hyperlocal marketing, Google Business Profile, East Brunswick NJ, competitor analysis tools',
+  title: 'Local SEO Services | True Rank Digital',
+  description:
+    'Local SEO services from True Rank Digital to improve map visibility, local rankings, and qualified lead flow with AI-ready content and technical signals.',
+  keywords:
+    'local SEO services, Google Maps SEO, local search optimization, service area SEO, Google Business Profile, local rankings',
   openGraph: {
-    title: 'Professional Local Pack Domination Services | True Rank Digital',
-    description: 'Dominate Google local pack with grid map ranking verification and competitor analysis.',
+    title: 'Local SEO Services | True Rank Digital',
+    description:
+      'Increase local visibility with practical execution across GBP, local pages, entity signals, and technical SEO.',
     url: 'https://truerankdigital.com/services/local-seo',
     type: 'website',
-    images: [{
-      url: 'https://truerankdigital.com/images/services/local-seo.jpg',
-      width: 1200,
-      height: 630,
-      alt: 'True Rank Digital Local SEO Services'
-    }]
   },
   alternates: {
-    canonical: 'https://truerankdigital.com/services/local-seo'
+    canonical: 'https://truerankdigital.com/services/local-seo',
   },
   robots: {
     index: true,
@@ -30,245 +38,252 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
-      'max-snippet': -1
-    }
-  }
+      'max-snippet': -1,
+    },
+  },
 };
 
-export default function LocalSEOPage() {
-  const benefits = [
-    'Grid map ranking verification dashboard access',
-    'Advanced local keyword search volume analysis', 
-    'Google knowledge graph consistency automation',
-    'Competitor intelligence monitoring platform',
-    'Local pack domination and positioning',
-    'Professional Google Business Profile optimization',
-    'Google Maps optimization with ranking tracking',
-    'Local citation building and management automation',
-    'Review response automation and monitoring',
-    'Hyperlocal content strategy with semantic optimization',
-    'Proven Google Business Optimization tactics implementation',
-    'Custom script integration for enhanced performance'
-  ];
+const deliveryAreas = [
+  {
+    icon: <MapPin className="w-6 h-6" />,
+    title: 'Local Visibility Architecture',
+    description:
+      'We align your service-area pages, GBP signals, and local intent targeting so your business is easier to discover in nearby markets.',
+    bullets: [
+      'Service-area keyword mapping',
+      'Location page clarity and structure',
+      'Entity consistency across local assets',
+    ],
+  },
+  {
+    icon: <BarChart3 className="w-6 h-6" />,
+    title: 'Map & Ranking Intelligence',
+    description:
+      'We track local performance and identify coverage gaps so optimization decisions are based on real market data.',
+    bullets: [
+      'Local ranking visibility tracking',
+      'Competitor coverage benchmarking',
+      'Priority opportunity zones by intent',
+    ],
+  },
+  {
+    icon: <FileSearch className="w-6 h-6" />,
+    title: 'On-Page + Schema Execution',
+    description:
+      'We implement on-page improvements and structured data that support both traditional search and AI-assisted discovery.',
+    bullets: [
+      'Local business schema alignment',
+      'On-page content and conversion updates',
+      'Internal linking for service + location pathways',
+    ],
+  },
+  {
+    icon: <Bot className="w-6 h-6" />,
+    title: 'AI-Ready Local Signals',
+    description:
+      'We make local pages easier for answer engines to parse by improving structure, context, and machine readability.',
+    bullets: [
+      'LLM-readable formatting patterns',
+      'Clear service-location relationships',
+      'Trust signal reinforcement for citation readiness',
+    ],
+  },
+];
 
-  // Service-specific FAQs
+const process = [
+  {
+    step: '01',
+    title: 'Local Audit',
+    text: 'We identify the technical, content, and entity gaps that are suppressing your local visibility.',
+  },
+  {
+    step: '02',
+    title: 'Priority Roadmap',
+    text: 'You get an action plan ranked by impact so your team can execute high-value changes first.',
+  },
+  {
+    step: '03',
+    title: 'Implementation',
+    text: 'We deploy page, schema, and GBP-related optimizations tied to ranking and lead quality improvements.',
+  },
+  {
+    step: '04',
+    title: 'Iteration',
+    text: 'We monitor outcomes and continue tightening your local signal architecture as search behavior evolves.',
+  },
+];
+
+export default function LocalSEOPage() {
   const faqs = generateServiceFAQs('localSEO', [
     {
-      question: "What is grid map ranking analysis?",
-      answer: "Grid map ranking analysis is True Rank Digital's proprietary technology that verifies your business's Google Maps ranking from multiple geographic locations. Our dashboard platform tracks your position in the local pack across a grid of coordinates around your service area, providing precise data on where customers can find your business on Google Maps."
+      question: 'What does your Local SEO service include?',
+      answer:
+        'Our Local SEO service includes local visibility audits, service-area page optimization, GBP alignment, structured data implementation, and ongoing performance improvements tied to lead outcomes.',
     },
     {
-      question: "Can True Rank Digital help my business rank for multiple locations?",
-      answer: "Yes, True Rank Digital specializes in multi-location Google Business Optimization strategies for businesses serving multiple cities or regions. Our grid map ranking verification works across all your service areas, and our proprietary platform monitors Google Business Profile performance for each location separately while maintaining brand consistency."
-    }
+      question: 'Can you support multi-location businesses?',
+      answer:
+        'Yes. We build location-specific frameworks that preserve brand consistency while improving local relevance for each market you serve.',
+    },
+    {
+      question: 'How is this different from basic directory submissions?',
+      answer:
+        'Directory listings alone are not enough. We focus on entity consistency, technical clarity, and service-location architecture so search systems can interpret and trust your business signals.',
+    },
+    {
+      question: 'Does Local SEO help with AI search visibility too?',
+      answer:
+        'Yes. The same local signal quality that supports map and organic rankings also improves how answer engines interpret your business context and recommend your services.',
+    },
   ]);
 
   return (
     <>
-      {/* Advanced GEO Schema */}
-      <GEOSchema 
+      <GEOSchema
         pageType="service"
         pageData={{
-          title: "Professional Local Pack Domination Services by True Rank Digital",
-          description: "Professional Google Business Optimization services with grid map ranking verification, Google Business Profile optimization, and automated knowledge graph consistency monitoring for maximum local pack visibility.",
-          url: "https://truerankdigital.com/services/local-seo",
-          keywords: ["local pack domination", "Google Maps optimization", "grid map ranking", "Google Business Profile", "hyperlocal marketing"],
-          category: "Google Business Optimization Services",
-          serviceType: "Local Pack Domination",
-          areaServed: ["United States", "New Jersey", "New York", "Pennsylvania"],
-          steps: [
-            {
-              name: "Technical Audit & Analysis",
-              text: "True Rank Digital scans your website with proprietary problem detection software to find issues other agencies miss at the code level."
-            },
-            {
-              name: "Custom Schema Markup Engineering",
-              text: "We create hand-crafted structured data schemas specifically for your business type to help search engines understand your content better than competitors."
-            },
-            {
-              name: "LLM.txt Creation & Optimization",
-              text: "We develop and optimize LLM.txt files designed for AI search engines like ChatGPT, Claude, and Perplexity to improve your AI search visibility."
-            },
-            {
-              name: "Custom Solution Implementation",
-              text: "We build and implement custom software solutions to fix identified problems and optimize your website's Google visibility."
-            },
-            {
-              name: "Ongoing Monitoring & Optimization",
-              text: "Our custom software continuously monitors and optimizes your website's performance, making real-time adjustments for maximum Google visibility."
-            }
-          ]
+          title: 'Local SEO Services by True Rank Digital',
+          description:
+            'Local SEO services focused on map visibility, local intent rankings, entity consistency, and AI-ready local search signals.',
+          url: 'https://truerankdigital.com/services/local-seo',
+          keywords: ['Local SEO', 'Google Maps SEO', 'Service Area SEO', 'Local Search Optimization'],
+          category: 'Local SEO Services',
+          serviceType: 'Local SEO',
+          areaServed: ['United States'],
         }}
         breadcrumbs={[
-          { name: "Home", url: "https://truerankdigital.com" },
-          { name: "Services", url: "https://truerankdigital.com/services" },
-          { name: "Local Pack Domination", url: "https://truerankdigital.com/services/local-seo" }
+          { name: 'Home', url: 'https://truerankdigital.com' },
+          { name: 'Services', url: 'https://truerankdigital.com/services' },
+          { name: 'Local SEO', url: 'https://truerankdigital.com/services/local-seo' },
         ]}
         entities={{
-          primary: ["True Rank Digital", "Local SEO Services", "Grid Map Ranking"],
-          secondary: ["Google Maps Optimization", "Google Business Profile", "East Brunswick NJ"],
-          mentions: [
-            {
-              type: "Organization",
-              name: "Google",
-              sameAs: "https://www.wikidata.org/wiki/Q95",
-              description: "Primary search engine platform"
-            },
-            {
-              type: "Product",
-              name: "Google Business Profile",
-              sameAs: "https://www.wikidata.org/wiki/Q17633166",
-              description: "Business listing platform"
-            },
-            {
-              type: "Product",
-              name: "Google Maps",
-              sameAs: "https://www.wikidata.org/wiki/Q12013",
-              description: "Mapping and local search platform"
-            },
-            {
-              type: "SoftwareApplication",
-              name: "Google Search Console",
-              sameAs: "https://www.wikidata.org/wiki/Q1503528",
-              description: "Search performance monitoring tool"
-            },
-            {
-              type: "Organization",
-              name: "Schema.org",
-              sameAs: "https://www.wikidata.org/wiki/Q845256",
-              description: "Structured data vocabulary"
-            }
-          ]
+          primary: ['True Rank Digital', 'Local SEO', 'Google Business Profile'],
+          secondary: ['Map Visibility', 'Service Area Rankings', 'Entity Signals'],
         }}
-        includeFAQ={true}
-        faqs={faqs}
       />
-      
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-green-50 to-white">
-        <section className="py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-green-100 rounded-full mb-6">
-              <Search className="w-5 h-5 text-green-600" />
-              <span className="text-green-600 font-semibold text-sm">Local SEO</span>
-            </div>
-          
-          {/* GEO-Optimized H1 with Subject-Predicate-Object */}
-          <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
-            <strong className="text-brand-primary">True Rank Digital</strong> Provides <strong>Local Pack Domination Services</strong> with Grid Map Ranking Analysis
-          </h1>
-          
-          <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-8">
-            <strong>True Rank Digital</strong> delivers <strong>Google Business Optimization</strong> with proven local pack domination tactics and proprietary dashboard platform. Our in-house technology solutions provide faster <strong>local pack positioning</strong> through advanced <strong>grid map ranking analysis</strong>, competitor intelligence monitoring, and automated <strong>Google knowledge graph</strong> consistency tracking.
-          </p>
 
-          <div className="max-w-4xl mx-auto mb-12">
-            <div className="glass-card p-6 lg:p-8 mb-8">
-              {/* Question-Based H2 */}
-              <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
-                How <strong className="text-brand-primary">True Rank Digital's</strong> Local Pack Domination Process Works
-              </h2>
-              <p className="text-brand-dark/70 leading-relaxed">
-                Every <strong>local pack domination</strong> client gains access to our exclusive <strong>digital marketing platform</strong> featuring real-time <strong>grid map ranking verification</strong>, comprehensive keyword search volume research tools, and automated <strong>competitor analysis monitoring</strong>. Our proven strategies combine Google Business Optimization tactics mastered by professionals with custom solution building frameworks that keep you ahead of algorithm changes.
-              </p>
-            </div>
-          </div>
+      <ServiceSchema
+        serviceName="Local SEO"
+        serviceUrl="https://truerankdigital.com/services/local-seo"
+        description="Local SEO service by True Rank Digital focused on local ranking growth, GBP alignment, structured data, and AI-ready service-area visibility signals."
+        serviceType="Local SEO"
+      />
 
-          {/* H2 for Benefits Section */}
-          <h2 className="text-3xl font-heading font-bold text-brand-dark mb-8">
-            What <strong className="text-brand-primary">Results</strong> You Get from Local Pack Domination Services
-          </h2>
+      <FAQSchema faqs={faqs} pageUrl="https://truerankdigital.com/services/local-seo" category="service" />
 
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3 glass-card p-4">
-                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                <span className="text-brand-dark font-medium">{benefit}</span>
+      <article className="pt-16 min-h-screen bg-brand-obsidian text-white">
+        <section className="py-16 border-b border-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-green-500/10 rounded-full mb-6 border border-green-400/30">
+                  <Search className="w-5 h-5 text-green-300" />
+                  <span className="text-green-300 font-semibold text-sm">Local SEO</span>
+                </div>
+                <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
+                  Win More Local Demand with <span className="text-brand-primary">AI-Ready Visibility Signals</span>
+                </h1>
+                <p className="text-xl text-gray-400 leading-relaxed mb-8">
+                  We help your business show up where local buying decisions happen by improving map visibility,
+                  local ranking coverage, and the technical trust signals behind your site.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-green-500 text-black font-semibold text-lg rounded-full hover:bg-green-400 transition-colors duration-300"
+                  >
+                    <TrendingUp className="w-5 h-5" />
+                    <span>Get Your Platform Audit</span>
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 border border-white/20 text-white font-semibold text-lg rounded-full hover:bg-white/5 transition-colors duration-300"
+                  >
+                    <span>Talk to the Team</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </div>
               </div>
-            ))}
-          </div>
 
-          {/* H2 for Process Steps */}
-          <h2 className="text-3xl font-heading font-bold text-brand-dark mb-8">
-            Your <strong className="text-brand-primary">Local Pack Domination</strong> Process in 5 Steps
-          </h2>
-
-          <div className="grid gap-6 mb-12 text-left">
-            <div className="glass-card p-6">
-              <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
-                Step 1: Technical Audit & Analysis with Proprietary Software
-              </h3>
-              <p className="text-brand-dark/70">
-                <strong>True Rank Digital</strong> scans your website with proprietary problem detection software to find issues other agencies miss at the code level.
-              </p>
-            </div>
-
-            <div className="glass-card p-6">
-              <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
-                Step 2: Custom Schema Markup Engineering
-              </h3>
-              <p className="text-brand-dark/70">
-                We create hand-crafted <strong>structured data schemas</strong> specifically for your business type to help search engines understand your content better than competitors.
-              </p>
-            </div>
-
-            <div className="glass-card p-6">
-              <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
-                Step 3: LLM.txt Creation & AI Optimization
-              </h3>
-              <p className="text-brand-dark/70">
-                We develop and optimize <strong>LLM.txt files</strong> designed for AI search engines like ChatGPT, Claude, and Perplexity to improve your AI search visibility.
-              </p>
-            </div>
-
-            <div className="glass-card p-6">
-              <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
-                Step 4: Custom Solution Implementation
-              </h3>
-              <p className="text-brand-dark/70">
-                We build and implement custom software solutions to fix identified problems and optimize your website's <strong>Google visibility</strong>.
-              </p>
-            </div>
-
-            <div className="glass-card p-6">
-              <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
-                Step 5: Ongoing Monitoring & Optimization
-              </h3>
-              <p className="text-brand-dark/70">
-                Our custom software continuously monitors and optimizes your website's performance with real-time <strong>grid map ranking</strong> tracking and competitor analysis.
-              </p>
+              <div className="glass-card p-8">
+                <h2 className="text-2xl font-heading font-bold text-white mb-6">What This Solves</h2>
+                <ul className="space-y-4">
+                  {[
+                    'Inconsistent visibility across key local markets',
+                    'Low map engagement from high-intent local searches',
+                    'Weak service-area page clarity and structure',
+                    'Technical and entity gaps limiting trust and ranking stability',
+                  ].map((item) => (
+                    <li key={item} className="flex items-start space-x-3">
+                      <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
+        </section>
 
-          {/* Final CTA Section */}
-          <div className="glass-card p-8 lg:p-10">
-            <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <MapPin className="w-10 h-10 text-white" />
-            </div>
-            <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
-              Why Businesses Choose <strong className="text-brand-primary">True Rank Digital</strong> for Local Pack Domination
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-10 text-center">
+              Core Delivery Areas
             </h2>
-            <p className="text-brand-dark/70 mb-6 leading-relaxed">
-              Start dominating <strong>Google&apos;s local pack</strong> with our proven Google Business Optimization tactics and exclusive client dashboard featuring <strong>grid map ranking analysis</strong>, keyword search volume research tools, and automated Google knowledge graph consistency monitoring. Our professional <strong>local pack domination strategies</strong> are built to improve your visibility and consistency across the areas you serve.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/free-audit"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-green-600 text-white font-semibold text-lg rounded-full hover:bg-green-700 transition-colors duration-300"
-              >
-                <TrendingUp className="w-5 h-5" />
-                <span>Get Free Local Pack Domination Demo</span>
-              </a>
-              <a
-                href="/contact"
-                className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-green-600 text-green-600 font-semibold text-lg rounded-full hover:bg-green-600 hover:text-white transition-all duration-300"
-              >
-                <MapPin className="w-5 h-5" />
-                <span>Start Local Pack Domination Strategy</span>
-              </a>
+            <div className="grid md:grid-cols-2 gap-8">
+              {deliveryAreas.map((area) => (
+                <div key={area.title} className="glass-card p-8">
+                  <div className="text-green-300 mb-4">{area.icon}</div>
+                  <h3 className="text-2xl font-heading font-bold text-white mb-3">{area.title}</h3>
+                  <p className="text-gray-400 mb-5">{area.description}</p>
+                  <ul className="space-y-2">
+                    {area.bullets.map((bullet) => (
+                      <li key={bullet} className="text-gray-300 text-sm flex items-start space-x-2">
+                        <span className="text-green-400 mt-0.5">•</span>
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <section className="py-16 border-y border-white/5 bg-white/2">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-10 text-center">
+              Implementation Model
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {process.map((item) => (
+                <div key={item.step} className="glass-card p-6">
+                  <div className="text-green-300 font-bold text-sm mb-2">STEP {item.step}</div>
+                  <h3 className="text-xl font-heading font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-gray-400">{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 border-t border-white/5">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">
+              Need More Coverage in the Markets You Serve?
+            </h2>
+            <p className="text-xl text-gray-400 mb-8">
+              We will show you exactly what is limiting local visibility and what to fix first.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center space-x-2 px-10 py-4 bg-green-500 text-black font-semibold text-lg rounded-full hover:bg-green-400 transition-colors duration-300"
+            >
+              <span>Get Your Platform Audit</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </section>
       </article>
     </>
   );

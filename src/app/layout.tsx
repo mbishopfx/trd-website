@@ -77,19 +77,6 @@ export default function RootLayout({
       </head>
       <body className="font-sans">
         <div className="min-h-screen flex flex-col animated-bg">
-          {/* Floating Background Elements */}
-          <div className="floating-elements">
-            <div className="floating-particle" style={{ left: '10%', animationDelay: '0s' }}></div>
-            <div className="floating-particle" style={{ left: '20%', animationDelay: '1s' }}></div>
-            <div className="floating-particle" style={{ left: '30%', animationDelay: '2s' }}></div>
-            <div className="floating-particle" style={{ left: '40%', animationDelay: '3s' }}></div>
-            <div className="floating-particle" style={{ left: '50%', animationDelay: '4s' }}></div>
-            <div className="floating-particle" style={{ left: '60%', animationDelay: '5s' }}></div>
-            <div className="floating-particle" style={{ left: '70%', animationDelay: '0.5s' }}></div>
-            <div className="floating-particle" style={{ left: '80%', animationDelay: '1.5s' }}></div>
-            <div className="floating-particle" style={{ left: '90%', animationDelay: '2.5s' }}></div>
-          </div>
-          
           <ConditionalLayout>
             {children}
           </ConditionalLayout>

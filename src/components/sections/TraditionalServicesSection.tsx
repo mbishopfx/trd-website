@@ -33,7 +33,7 @@ const services = [
 
 export default function TraditionalServicesSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-brand-obsidian">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header - GEO Optimized Question-Based H2 */}
@@ -44,10 +44,10 @@ export default function TraditionalServicesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
             How <strong className="text-brand-primary">True Rank Digital</strong> Helps Your Business Grow with Google Optimization
           </h2>
-          <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Our core <strong>Google Business Optimization services</strong> are designed specifically for <strong>small businesses</strong> who want real results without the complexity. <strong>True Rank Digital</strong> delivers proven <strong>local pack domination</strong>, <strong>Google Business Profile</strong> optimization, and <strong>website development</strong> services.
           </p>
         </motion.div>
@@ -66,13 +66,13 @@ export default function TraditionalServicesSection() {
               <div className="text-brand-primary mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-heading font-bold text-brand-dark mb-3 group-hover:text-brand-primary transition-colors duration-300">
+              <h3 className="text-xl font-heading font-bold text-white mb-3 group-hover:text-brand-primary transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="text-brand-dark/70 mb-4 leading-relaxed">
+              <p className="text-gray-400 mb-4 leading-relaxed">
                 {service.description}
               </p>
-              <ul className="text-sm text-brand-dark/60 space-y-1">
+              <ul className="text-sm text-gray-500 space-y-1">
                 {service.features.map((feature, idx) => (
                   <li key={idx}>• {feature}</li>
                 ))}

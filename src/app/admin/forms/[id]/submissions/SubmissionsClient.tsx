@@ -251,7 +251,7 @@ export default function SubmissionsClient({
                   <div className={`px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider ${
                     selectedSubmission.consent_marketing 
                       ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' 
-                      : 'bg-gray-500/20 text-gray-400 border border-gray-500/30'
+                      : 'bg-brand-obsidian0/20 text-gray-400 border border-gray-500/30'
                   }`}>
                     Marketing SMS: {selectedSubmission.consent_marketing ? 'Consented' : 'No Consent'}
                   </div>

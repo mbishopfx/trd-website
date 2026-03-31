@@ -100,7 +100,7 @@ export default function NewBrunswickPage() {
       />
       <FAQSchema faqs={faqs} pageUrl="https://truerankdigital.com/locations/new-brunswick" category="location" />
       
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-green-50 via-white to-green-50">
+      <article className="pt-16 min-h-screen bg-brand-obsidian text-white">
         {/* Hero Section */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
@@ -111,17 +111,17 @@ export default function NewBrunswickPage() {
                 <span className="text-sm font-semibold text-green-600">Serving New Brunswick, NJ - County Seat & Rutgers University</span>
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
                 Professional <strong className="text-brand-primary">SEO Services</strong> in <br />
                 <strong className="text-brand-primary">New Brunswick, New Jersey</strong>
               </h1>
               
-              <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-8 leading-relaxed">
+              <p className="text-xl text-gray-400 max-w-4xl mx-auto mb-8 leading-relaxed">
                 <strong>True Rank Digital</strong> helps New Brunswick businesses dominate local search results with specialized <strong>SEO strategies</strong> for the Rutgers University area, Robert Wood Johnson medical district, and downtown <strong>George Street corridor</strong>. Expert local SEO for New Brunswick's unique business environment.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <a href="/free-audit" className="inline-flex items-center space-x-2 px-8 py-4 bg-green-600 text-white font-semibold text-lg rounded-full hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <a href="/contact" className="inline-flex items-center space-x-2 px-8 py-4 bg-green-600 text-white font-semibold text-lg rounded-full hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                   <TrendingUp className="w-5 h-5" />
                   <span>Get Free New Brunswick SEO Audit</span>
                 </a>
@@ -135,19 +135,19 @@ export default function NewBrunswickPage() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Local</div>
-                  <div className="text-sm text-brand-dark/60">Market Knowledge</div>
+                  <div className="text-sm text-gray-500">Market Knowledge</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Rutgers</div>
-                  <div className="text-sm text-brand-dark/60">Campus Intent</div>
+                  <div className="text-sm text-gray-500">Campus Intent</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Grid</div>
-                  <div className="text-sm text-brand-dark/60">Visibility Tracking</div>
+                  <div className="text-sm text-gray-500">Visibility Tracking</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Strategy</div>
-                  <div className="text-sm text-brand-dark/60">Built to Convert</div>
+                  <div className="text-sm text-gray-500">Built to Convert</div>
                 </div>
               </div>
             </div>
@@ -155,9 +155,9 @@ export default function NewBrunswickPage() {
         </section>
 
         {/* Why New Brunswick Businesses Choose Us */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-12 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-12 text-center">
               Why <strong className="text-brand-primary">New Brunswick Businesses</strong> Choose True Rank Digital
             </h2>
 
@@ -166,10 +166,10 @@ export default function NewBrunswickPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6">
                   <GraduationCap className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Rutgers University</strong> Expertise
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   We understand the Rutgers ecosystem with 50,000+ students, faculty, and staff. Our SEO strategies target student demographics, academic calendar patterns, campus area foot traffic, and parent/visitor searches throughout the year for maximum local visibility.
                 </p>
               </div>
@@ -178,10 +178,10 @@ export default function NewBrunswickPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6">
                   <Building className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Downtown & Medical</strong> District Knowledge
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   From George Street's restaurant row to the Robert Wood Johnson medical campus, we know New Brunswick's key business districts. Our local expertise helps you capture searches from the diverse downtown corridor and medical tourism market.
                 </p>
               </div>
@@ -190,10 +190,10 @@ export default function NewBrunswickPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6">
                   <BarChart3 className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Multi-Neighborhood</strong> Targeting
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   Track rankings across all New Brunswick areas - College Avenue, George Street, Route 18 corridor, residential neighborhoods. Our grid ranking system shows exactly where you appear in local searches across different New Brunswick zip codes and districts.
                 </p>
               </div>
@@ -204,10 +204,10 @@ export default function NewBrunswickPage() {
         {/* Services for New Brunswick */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6 text-center">
               Complete <strong className="text-brand-primary">SEO Services</strong> for New Brunswick Businesses
             </h2>
-            <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-500 text-center mb-12 max-w-3xl mx-auto">
               Specialized local search optimization for New Brunswick's university town, medical hub, and county seat environment
             </p>
 
@@ -219,13 +219,13 @@ export default function NewBrunswickPage() {
                     <GraduationCap className="w-6 h-6 text-green-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Rutgers University Area Optimization
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Capture the massive Rutgers market with strategies targeting student searches, campus area foot traffic, parent/visitor queries, and academic calendar patterns. We optimize for College Avenue, George Street, Cook/Douglass, Busch, and Livingston campus areas with student-focused content and seasonal campaigns.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-green-600 mr-2">✓</span>
                         <span>Student demographic targeting (ages 18-24)</span>
@@ -254,13 +254,13 @@ export default function NewBrunswickPage() {
                     <Building className="w-6 h-6 text-green-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Medical District & Healthcare SEO
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Stand out in New Brunswick's competitive medical market around Robert Wood Johnson University Hospital. Healthcare-specific SEO including physician profiles, medical practice optimization, patient review management, and HIPAA-compliant content strategies that drive qualified patient searches.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-green-600 mr-2">✓</span>
                         <span>Medical practice Google Business Profile</span>
@@ -289,13 +289,13 @@ export default function NewBrunswickPage() {
                     <Target className="w-6 h-6 text-green-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Downtown & George Street Corridor SEO
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Maximize visibility for downtown New Brunswick businesses on George Street, Albany Street, and the cultural district. We optimize for foot traffic searches, 'near me' queries, event-based traffic (State Theatre, Stress Factory, Rutgers events), and the diverse dining scene.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-green-600 mr-2">✓</span>
                         <span>Restaurant & retail foot traffic optimization</span>
@@ -324,13 +324,13 @@ export default function NewBrunswickPage() {
                     <Award className="w-6 h-6 text-green-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       New Brunswick Citation & Content Marketing
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Build authority across New Brunswick and Middlesex County directories with consistent NAP data. Content featuring New Brunswick landmarks, Rutgers connections, and local events establishes your business as part of the New Brunswick community while capturing valuable local search terms.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-green-600 mr-2">✓</span>
                         <span>Middlesex County directories</span>
@@ -356,29 +356,29 @@ export default function NewBrunswickPage() {
         </section>
 
         {/* About New Brunswick Market */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+                <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
                   Understanding <strong className="text-brand-primary">New Brunswick's</strong> Dynamic Business Environment
                 </h2>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   New Brunswick is <strong>Middlesex County's seat</strong> and home to <strong>Rutgers University</strong> (50,000+ students, faculty, staff), creating a unique business environment. The combination of university community, <strong>Robert Wood Johnson University Hospital</strong> medical district, diverse downtown cultural corridor, and major transit hub presents both opportunities and intense competition.
                 </p>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   The <strong>George Street corridor</strong> features dozens of restaurants, bars, and retailers competing for student spending. The <strong>Route 18 commercial area</strong> serves commuters and residents. The medical district attracts patients from throughout Central Jersey. Each area requires different SEO strategies to capture the right local audience.
                 </p>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   Whether you're a restaurant on George Street, a medical practice near RWJUH, a service business in residential neighborhoods like Lincoln Park, or a retail shop downtown, we understand New Brunswick's market dynamics and competitive landscape to position your business for maximum local search visibility.
                 </p>
               </div>
 
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-6">
+                <h3 className="text-2xl font-heading font-bold text-white mb-6">
                   New Brunswick Areas We Serve
                 </h3>
-                <div className="grid grid-cols-2 gap-4 text-brand-dark/70">
+                <div className="grid grid-cols-2 gap-4 text-gray-400">
                   <div className="flex items-start space-x-2">
                     <MapPin className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
                     <span>George Street Downtown</span>
@@ -421,8 +421,8 @@ export default function NewBrunswickPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-gray-200">
-                  <h4 className="font-semibold text-brand-dark mb-4">Serving All New Brunswick Zip Codes:</h4>
+                <div className="mt-8 pt-8 border-t border-white/10">
+                  <h4 className="font-semibold text-white mb-4">Serving All New Brunswick Zip Codes:</h4>
                   <div className="flex flex-wrap gap-3">
                     <span className="px-4 py-2 bg-green-50 text-green-600 rounded-full text-sm font-medium">08901</span>
                     <span className="px-4 py-2 bg-green-50 text-green-600 rounded-full text-sm font-medium">08903</span>
@@ -437,10 +437,10 @@ export default function NewBrunswickPage() {
         {/* Process */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6 text-center">
               Our <strong className="text-brand-primary">New Brunswick SEO</strong> Process
             </h2>
-            <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-500 text-center mb-12 max-w-3xl mx-auto">
               Proven methodology focused on improving local visibility across campus, medical, and downtown searches
             </p>
 
@@ -456,8 +456,8 @@ export default function NewBrunswickPage() {
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
                     {item.step}
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{item.title}</h3>
-                  <p className="text-sm text-brand-dark/70 leading-relaxed">{item.desc}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -465,17 +465,17 @@ export default function NewBrunswickPage() {
         </section>
 
         {/* FAQs */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-12 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-12 text-center">
               Frequently Asked Questions About <strong className="text-brand-primary">New Brunswick SEO</strong>
             </h2>
 
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="glass-card p-6">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{faq.question}</h3>
-                  <p className="text-brand-dark/70 leading-relaxed">{faq.answer}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -494,17 +494,17 @@ export default function NewBrunswickPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/free-audit" className="inline-flex items-center space-x-2 px-10 py-5 bg-white text-green-600 font-bold text-lg rounded-full hover:bg-gray-100 transition-all duration-300 shadow-2xl">
+              <a href="/contact" className="inline-flex items-center space-x-2 px-10 py-5 bg-brand-obsidian text-green-600 font-bold text-lg rounded-full hover:bg-brand-obsidian-light transition-all duration-300 shadow-2xl">
                 <TrendingUp className="w-6 h-6" />
                 <span>Get Your Free New Brunswick SEO Audit</span>
               </a>
-              <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white/10 transition-all duration-300">
+              <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-brand-obsidian/10 transition-all duration-300">
                 <Phone className="w-6 h-6" />
                 <span>(732) 475-0139</span>
               </a>
             </div>
 
-            <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-white/80">
+            <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-gray-300">
               <div className="flex items-center space-x-2">
                 <Clock className="w-5 h-5" />
                 <span>Fast response</span>
@@ -522,13 +522,13 @@ export default function NewBrunswickPage() {
         </section>
 
         {/* Map Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">
                 Serving <span className="text-brand-primary">New Brunswick, NJ</span>
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 We provide SEO services to New Brunswick businesses from our East Brunswick headquarters
               </p>
             </div>

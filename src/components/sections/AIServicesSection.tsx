@@ -1,283 +1,256 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { 
-  Sparkles, 
-  Settings, 
-  CheckCircle, 
-  Bot, 
+import {
   Zap,
-  Brain,
+  Cpu,
+  Globe,
+  Search,
+  MapPin,
+  MessageSquare,
   Target,
-  Cpu
+  Users,
+  Briefcase,
+  Settings,
+  TrendingUp,
 } from 'lucide-react';
 
-interface AIServiceFeature {
-  icon: React.ReactNode;
-  text: string;
-}
-
-interface AIService {
+interface Service {
   title: string;
   badge: string;
-  badgeColor: string;
   icon: React.ReactNode;
-  iconBg: string;
   description: string;
-  features: AIServiceFeature[];
+  features: string[];
+  color: 'cyan' | 'blue';
 }
 
-const aiServices: AIService[] = [
+const services: Service[] = [
   {
-    title: 'Proprietary SEO Dashboard Platform',
-    badge: 'Custom Software Solution',
-    badgeColor: 'bg-brand-accent',
-    icon: <Sparkles className="w-8 h-8 text-white" />,
-    iconBg: 'bg-gradient-to-br from-brand-accent to-purple-600',
-    description: 'Access our exclusive client dashboard platform featuring advanced grid map ranking verification, comprehensive keyword search volume analysis tools, and real-time competitor intelligence monitoring. Our proprietary software automatically tracks Google knowledge graph consistency and website optimization metrics, ensuring your local search engine optimization maintains peak performance across all digital marketing channels.',
-    features: [
-      {
-        icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Grid map ranking analysis dashboard'
-      },
-      {
-        icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Keyword search volume research tools'
-      },
-      {
-        icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Competitor analysis intelligence platform'
-      },
-      {
-        icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Google knowledge graph consistency monitoring'
-      },
-      {
-        icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Website optimization tracking automation'
-      }
-    ]
+    title: 'AI Search Optimization',
+    badge: 'AI Visibility',
+    icon: <Zap className="w-8 h-8" />,
+    description:
+      'We structure your content and technical signals so answer engines can understand, trust, and surface your brand.',
+    features: ['Entity Signal Mapping', 'Schema + Content Alignment', 'AI Retrieval Readiness', 'Answer Engine Visibility'],
+    color: 'cyan',
   },
   {
-    title: 'Custom Algorithm Adaptation Scripts',
-    badge: 'In-House Technology Framework',
-    badgeColor: 'bg-brand-primary',
-    icon: <Settings className="w-8 h-8 text-white" />,
-    iconBg: 'bg-gradient-to-br from-brand-primary to-blue-600',
-    description: 'Our expert-developed custom scripts and solution building frameworks keep you ahead of Google algorithm changes with proven digital marketing tactics mastered by SEO professionals. These proprietary automation tools work 24/7 to maintain your search engine result page positioning, especially when combined with our custom web builds that allow deeper search algorithm manipulation and advanced local search engine optimization strategies.',
-    features: [
-      {
-        icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Algorithm-proof SEO automation scripts'
-      },
-      {
-        icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Custom web build optimization advantages'
-      },
-      {
-        icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Professional Google tactics implementation'
-      },
-      {
-        icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Advanced local search positioning tools'
-      },
-      {
-        icon: <CheckCircle className="w-5 h-5 text-green-500" />,
-        text: 'Solution framework technology advantage'
-      }
-    ]
-  }
+    title: 'Digital Marketing & Advertising',
+    badge: 'Growth',
+    icon: <TrendingUp className="w-8 h-8" />,
+    description:
+      'End-to-end campaign planning and execution to increase qualified traffic, leads, and measurable revenue outcomes.',
+    features: ['Channel Strategy', 'Campaign Execution', 'Creative + Messaging Alignment', 'Performance Reporting'],
+    color: 'blue',
+  },
+  {
+    title: 'Google Business Profile Optimization',
+    badge: 'Local Growth',
+    icon: <MapPin className="w-8 h-8" />,
+    description:
+      'Hands-on profile management that improves map visibility, trust signals, and inbound actions from local prospects.',
+    features: ['Profile Optimization', 'Post and Q&A Strategy', 'Category + Service Tuning', 'Local Action Optimization'],
+    color: 'blue',
+  },
+  {
+    title: 'Local SEO',
+    badge: 'Organic Local',
+    icon: <Search className="w-8 h-8" />,
+    description:
+      'Local intent strategy and technical execution built to improve rankings for your core markets and service areas.',
+    features: ['Local Intent Mapping', 'On-Page Optimization', 'Location Signal Strengthening', 'Authority Building'],
+    color: 'cyan',
+  },
+  {
+    title: 'PPC Campaigns',
+    badge: 'Paid Search',
+    icon: <Target className="w-8 h-8" />,
+    description:
+      'Paid search campaigns designed for efficient spend, stronger lead quality, and fast demand capture.',
+    features: ['Campaign Architecture', 'Ad + Landing Page Alignment', 'Bid + Budget Control', 'Conversion Optimization'],
+    color: 'blue',
+  },
+  {
+    title: 'SEO Tactics',
+    badge: 'Technical',
+    icon: <Settings className="w-8 h-8" />,
+    description:
+      'Technical and on-page SEO work focused on removing blockers and growing sustainable organic performance.',
+    features: ['Schema Implementation', 'Indexability Audits', 'Internal Link Optimization', 'Technical Issue Remediation'],
+    color: 'cyan',
+  },
+  {
+    title: 'Website Engineering',
+    badge: 'Web Build',
+    icon: <Globe className="w-8 h-8" />,
+    description:
+      'Website design and development that balances performance, clarity, conversion flow, and search accessibility.',
+    features: ['Custom Website Design', 'UX + Conversion Architecture', 'Technical Performance', 'SEO-Ready Structure'],
+    color: 'blue',
+  },
+  {
+    title: 'Social Media Management',
+    badge: 'Brand Presence',
+    icon: <Users className="w-8 h-8" />,
+    description:
+      'Content and platform management that keeps your brand active, consistent, and trusted across major channels.',
+    features: ['Cross-Platform Publishing', 'Content Planning', 'Audience Engagement', 'Brand Consistency'],
+    color: 'cyan',
+  },
+  {
+    title: 'CRM With AI Chat',
+    badge: 'Automation',
+    icon: <MessageSquare className="w-8 h-8" />,
+    description:
+      'Conversation workflows that improve response speed, lead routing, follow-up, and pipeline management.',
+    features: ['Lead Capture Automation', 'AI Chat Workflows', 'Follow-Up Sequences', 'Pipeline Visibility'],
+    color: 'blue',
+  },
+  {
+    title: 'Business Consulting',
+    badge: 'Strategy',
+    icon: <Briefcase className="w-8 h-8" />,
+    description:
+      'Strategic support to align your marketing systems, operations, and growth priorities into one execution plan.',
+    features: ['Growth Planning', 'Operational Alignment', 'Market Positioning', 'Execution Roadmaps'],
+    color: 'blue',
+  },
 ];
 
 const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.2
-    }
-  }
+      staggerChildren: 0.1,
+    },
+  },
 };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0 }
+  visible: { opacity: 1, y: 0 },
 };
 
 export default function AIServicesSection() {
   return (
-    <section className="py-20 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-brand-light/30 to-white"></div>
-      
-      {/* Animated Tech Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div 
-          className="w-full h-full"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 10 L90 50 L50 90 L10 50 Z' fill='none' stroke='%234F7FFF' stroke-width='0.5'/%3E%3Ccircle cx='50' cy='50' r='3' fill='%234F7FFF'/%3E%3C/svg%3E")`,
-          }}
-        />
+    <section className="py-24 relative overflow-hidden bg-brand-obsidian">
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-cyan/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-brand-blue/5 rounded-full blur-[120px]" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header - GEO Optimized Question-Based H2 */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-brand-primary/10 rounded-full mb-4">
-            <Bot className="w-5 h-5 text-brand-primary" />
-            <span className="text-brand-primary font-semibold text-sm">Powered by AI Technology</span>
-          </div>
-          
-          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
-            How <strong className="text-brand-primary">True Rank Digital's</strong> Proprietary SEO Dashboard Platform Works
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            className="inline-flex items-center space-x-2 px-4 py-2 glass-cyan rounded-full mb-6 border border-brand-cyan/20"
+          >
+            <Cpu className="w-5 h-5 text-brand-cyan" />
+            <span className="text-brand-cyan font-bold text-xs uppercase tracking-widest">Core Service Stack</span>
+          </motion.div>
+
+          <h2 className="text-4xl lg:text-6xl font-heading font-bold mb-8 tracking-tight">
+            Services Built for <span className="text-brand-cyan italic">AI-Era Visibility</span>
           </h2>
-          
-          <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-            <strong>True Rank Digital</strong> transforms your organic search traffic generation with our exclusive client dashboard platform and in-house technology solutions. Our proven <strong>Google optimization</strong> tactics and <strong>algorithm-proof digital marketing strategies</strong> deliver faster search engine result page positioning through advanced <strong>local search engine optimization</strong> techniques mastered by industry professionals.
+
+          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed font-light">
+            We combine technical execution, local authority systems, and performance marketing into one practical service stack built to grow qualified pipeline.
           </p>
         </motion.div>
 
-        {/* AI Services Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid lg:grid-cols-2 gap-8 lg:gap-12"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
-          {aiServices.map((service, index) => (
-            <motion.div
-              key={service.title}
-              variants={itemVariants}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="group"
-            >
-              <div className="glass-card p-8 lg:p-10 h-full hover:shadow-glass-lg transition-all duration-300 relative overflow-hidden">
-                
-                {/* Background Glow */}
-                <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-brand-primary/10 to-brand-accent/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                <div className="relative">
-                  {/* Service Badge */}
-                  <div className={`inline-flex items-center px-4 py-2 ${service.badgeColor} text-white text-sm font-semibold rounded-full mb-6`}>
-                    {service.badge}
-                  </div>
-
-                  {/* Service Icon */}
-                  <div className={`w-16 h-16 ${service.iconBg} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+          {services.map((service) => (
+            <motion.div key={service.title} variants={itemVariants} className="group">
+              <div
+                className={`h-full p-8 rounded-2xl glass transition-all duration-500 hover:-translate-y-2 border-l-4 ${
+                  service.color === 'cyan'
+                    ? 'border-brand-cyan hover:shadow-[0_0_30px_rgba(0,245,255,0.15)]'
+                    : 'border-brand-blue hover:shadow-[0_0_30px_rgba(79,127,255,0.15)]'
+                }`}
+              >
+                <div className="flex justify-between items-start mb-6">
+                  <div
+                    className={`p-3 rounded-xl ${
+                      service.color === 'cyan' ? 'bg-brand-cyan/10 text-brand-cyan' : 'bg-brand-blue/10 text-brand-blue'
+                    } group-hover:scale-110 transition-transform duration-500`}
+                  >
                     {service.icon}
                   </div>
-
-                  {/* Service Title - GEO Optimized H3 */}
-                  <h3 className="text-2xl lg:text-3xl font-heading font-bold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors duration-300">
-                    <strong className="text-brand-primary">True Rank Digital's</strong> {service.title}
-                  </h3>
-
-                  {/* Service Description */}
-                  <p className="text-brand-dark/70 leading-relaxed mb-8">
-                    {service.description}
-                  </p>
-
-                  {/* Features List */}
-                  <div className="space-y-4">
-                    {service.features.map((feature, featureIndex) => (
-                      <motion.div
-                        key={featureIndex}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: (index * 0.2) + (featureIndex * 0.1) }}
-                        viewport={{ once: true }}
-                        className="flex items-center space-x-3"
-                      >
-                        {feature.icon}
-                        <span className="text-brand-dark/80 font-medium">{feature.text}</span>
-                      </motion.div>
-                    ))}
-                  </div>
+                  <span
+                    className={`text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full ${
+                      service.color === 'cyan' ? 'bg-brand-cyan/10 text-brand-cyan' : 'bg-brand-blue/10 text-brand-blue'
+                    }`}
+                  >
+                    {service.badge}
+                  </span>
                 </div>
+
+                <h3 className="text-2xl font-heading font-bold text-white mb-4 leading-tight group-hover:text-brand-cyan transition-colors">
+                  {service.title}
+                </h3>
+
+                <p className="text-gray-400 mb-8 leading-relaxed font-light">{service.description}</p>
+
+                <ul className="space-y-3">
+                  {service.features.map((feature) => (
+                    <li key={feature} className="flex items-center text-sm text-gray-300 font-medium">
+                      <div
+                        className={`w-1.5 h-1.5 rounded-full mr-3 ${
+                          service.color === 'cyan'
+                            ? 'bg-brand-cyan shadow-[0_0_8px_#00F5FF]'
+                            : 'bg-brand-blue shadow-[0_0_8px_#4F7FFF]'
+                        }`}
+                      />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Technology Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-8"
+          className="mt-20 p-1 bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-cyan rounded-3xl"
         >
-          {[
-            { icon: <Brain className="w-6 h-6" />, value: 'Custom', label: 'In-House Tech' },
-            { icon: <Zap className="w-6 h-6" />, value: 'Schema', label: 'Markup Focus' },
-            { icon: <Target className="w-6 h-6" />, value: 'LLM.txt', label: 'Creation' },
-            { icon: <Cpu className="w-6 h-6" />, value: 'Solutions', label: 'We Build' }
-          ].map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="text-center p-6 glass-card hover:shadow-glass transition-all duration-300"
-            >
-              <div className="text-brand-primary mb-2 flex justify-center">
-                {stat.icon}
-              </div>
-              <div className="text-2xl font-bold text-brand-dark mb-1">{stat.value}</div>
-              <div className="text-brand-dark/60 text-sm font-medium">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Platform Access Information */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-16 glass-card p-8 lg:p-12"
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-heading font-bold text-brand-dark mb-4">
-              Why <strong className="text-brand-primary">True Rank Digital</strong> Clients Get Exclusive Platform Access
+          <div className="bg-brand-obsidian rounded-[calc(1.5rem-1px)] p-10 lg:p-16 text-center">
+            <h3 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-8">
+              Build the Signals That Make Your Brand <span className="text-brand-cyan italic">Unmissable</span>
             </h3>
-            <p className="text-lg text-brand-dark/70 max-w-4xl mx-auto leading-relaxed">
-              Every <strong>True Rank Digital</strong> client receives access to our exclusive <strong>digital marketing platform</strong> featuring <strong>grid map ranking analysis</strong>, keyword search volume research tools, and <strong>competitor intelligence monitoring</strong>. While our dashboard platform works with any website, clients who choose our custom web builds unlock advanced algorithm manipulation capabilities and deeper <strong>local search engine optimization</strong> control through our proprietary script integration.
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto mb-12 font-light">
+              We align entity signals, technical architecture, and conversion strategy so your business gets discovered, trusted, and selected.
             </p>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.a
-              href="/free-audit"
-              className="inline-flex items-center space-x-2 px-8 py-4 bg-brand-primary text-white font-semibold rounded-full hover:bg-brand-primary/90 transition-all duration-300 group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Bot className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-              <span>Access Free SEO Platform Demo</span>
-            </motion.a>
-            <motion.a
-              href="/learn-aio"
-              className="inline-flex items-center space-x-2 px-8 py-4 glass-button bg-brand-primary/10 hover:bg-brand-primary hover:text-white text-brand-primary font-semibold rounded-full transition-all duration-300 group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Target className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-              <span>Learn About Custom Web Builds</span>
-            </motion.a>
+            <Link href="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-12 py-5 bg-brand-cyan text-brand-obsidian font-black text-xl rounded-full shadow-glow hover:shadow-glow-lg transition-all inline-flex items-center space-x-2"
+              >
+                <Target className="w-5 h-5" />
+                <span>Get Your Platform Audit</span>
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

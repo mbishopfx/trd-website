@@ -10,7 +10,7 @@ export default function GDPRPage() {
       icon: <Shield className="w-8 h-8" />,
       title: 'Data Protection',
       description: 'We implement appropriate technical and organizational measures to protect personal data',
-      color: 'from-blue-500 to-indigo-500'
+      color: 'from-brand-obsidian0 to-blue-500'
     },
     {
       icon: <Lock className="w-8 h-8" />,
@@ -22,7 +22,7 @@ export default function GDPRPage() {
       icon: <Eye className="w-8 h-8" />,
       title: 'Transparency',
       description: 'We provide clear information about how we collect, use, and protect personal data',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-brand-obsidian0 to-blue-500'
     },
     {
       icon: <UserCheck className="w-8 h-8" />,
@@ -65,7 +65,7 @@ export default function GDPRPage() {
       </section>
 
       {/* GDPR Principles */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-brand-obsidian">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -74,10 +74,10 @@ export default function GDPRPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
               Our Data Protection Principles
             </h2>
-            <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               We are committed to protecting your personal data in accordance with GDPR requirements and best practices.
             </p>
           </motion.div>
@@ -97,10 +97,10 @@ export default function GDPRPage() {
                     {principle.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                <h3 className="text-xl font-heading font-bold text-white mb-3">
                   {principle.title}
                 </h3>
-                <p className="text-brand-dark/70 text-sm">
+                <p className="text-gray-400 text-sm">
                   {principle.description}
                 </p>
               </motion.div>
@@ -110,7 +110,7 @@ export default function GDPRPage() {
       </section>
 
       {/* Data Collection */}
-      <section className="py-20 bg-brand-light/20">
+      <section className="py-20 bg-brand-obsidian/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -119,14 +119,14 @@ export default function GDPRPage() {
             viewport={{ once: true }}
             className="glass-card p-8"
           >
-            <h2 className="text-3xl font-heading font-bold text-brand-dark mb-6">
+            <h2 className="text-3xl font-heading font-bold text-white mb-6">
               Data Collection and Use
             </h2>
             
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-semibold text-brand-dark mb-3">What Data We Collect</h3>
-                <ul className="space-y-2 text-brand-dark/70">
+                <h3 className="text-xl font-semibold text-white mb-3">What Data We Collect</h3>
+                <ul className="space-y-2 text-gray-400">
                   <li>• Contact information (name, email, phone number)</li>
                   <li>• Business information for service delivery</li>
                   <li>• Website analytics and performance data</li>
@@ -135,8 +135,8 @@ export default function GDPRPage() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-brand-dark mb-3">How We Use Data</h3>
-                <ul className="space-y-2 text-brand-dark/70">
+                <h3 className="text-xl font-semibold text-white mb-3">How We Use Data</h3>
+                <ul className="space-y-2 text-gray-400">
                   <li>• To provide and improve our digital marketing services</li>
                   <li>• To communicate about services and support</li>
                   <li>• To analyze and improve website performance</li>
@@ -145,8 +145,8 @@ export default function GDPRPage() {
               </div>
 
               <div>
-                <h3 className="text-xl font-semibold text-brand-dark mb-3">Legal Basis for Processing</h3>
-                <ul className="space-y-2 text-brand-dark/70">
+                <h3 className="text-xl font-semibold text-white mb-3">Legal Basis for Processing</h3>
+                <ul className="space-y-2 text-gray-400">
                   <li>• Contract performance and service delivery</li>
                   <li>• Legitimate business interests</li>
                   <li>• Legal compliance requirements</li>
@@ -159,7 +159,7 @@ export default function GDPRPage() {
       </section>
 
       {/* Your Rights */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-brand-obsidian">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -168,10 +168,10 @@ export default function GDPRPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-heading font-bold text-brand-dark mb-6">
+            <h2 className="text-4xl font-heading font-bold text-white mb-6">
               Your Data Protection Rights
             </h2>
-            <p className="text-xl text-brand-dark/70">
+            <p className="text-xl text-gray-400">
               Under GDPR, you have several rights regarding your personal data
             </p>
           </motion.div>
@@ -191,7 +191,7 @@ export default function GDPRPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-center text-brand-dark/70"
+                  className="flex items-center text-gray-400"
                 >
                   <UserCheck className="w-5 h-5 text-brand-primary mr-3 flex-shrink-0" />
                   {right}
@@ -219,7 +219,7 @@ export default function GDPRPage() {
               To exercise any of your data protection rights or ask questions about our data practices, contact us:
             </p>
             
-            <div className="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+            <div className="bg-brand-obsidian/10 rounded-xl p-6 backdrop-blur-sm">
               <div className="space-y-4">
                 <div className="flex items-center justify-center space-x-3">
                   <Mail className="w-5 h-5" />
@@ -230,13 +230,13 @@ export default function GDPRPage() {
                   <span>Include "GDPR Request" in your subject line</span>
                 </div>
               </div>
-              <p className="text-white/80 text-sm mt-4">
+              <p className="text-gray-300 text-sm mt-4">
                 We will respond to your request within 30 days as required by GDPR
               </p>
             </div>
 
-            <div className="mt-8 text-sm text-white/70">
-              <p>True Rank Digital LLC</p>
+            <div className="mt-8 text-sm text-gray-400">
+              <p>True Rank Digital</p>
               <p>288 Summerhill Rd, suite 3, East Brunswick, NJ 08816</p>
               <p>Last updated: January 2026</p>
             </div>

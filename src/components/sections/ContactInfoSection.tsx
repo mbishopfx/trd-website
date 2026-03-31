@@ -22,7 +22,7 @@ export default function ContactInfoSection() {
       icon: <Users className="w-8 h-8" />,
       title: 'Expert Team',
       subtitle: 'Experienced digital marketing team',
-      color: 'from-brand-accent to-purple-600'
+      color: 'from-brand-accent to-brand-blue'
     },
     {
       icon: <Zap className="w-8 h-8" />,
@@ -42,7 +42,7 @@ export default function ContactInfoSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-brand-obsidian">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -54,7 +54,7 @@ export default function ContactInfoSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-8">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-8">
               Why Choose True Rank Digital?
             </h2>
 
@@ -74,15 +74,15 @@ export default function ContactInfoSection() {
                       {detail.icon}
                     </div>
                   </div>
-                  <h3 className="font-heading font-bold text-brand-dark mb-2">{detail.title}</h3>
-                  <p className="text-brand-dark/70 text-sm">{detail.subtitle}</p>
+                  <h3 className="font-heading font-bold text-white mb-2">{detail.title}</h3>
+                  <p className="text-gray-400 text-sm">{detail.subtitle}</p>
                 </motion.div>
               ))}
             </div>
 
             {/* Service Highlights */}
             <div className="glass-card p-6">
-              <h3 className="font-heading font-bold text-brand-dark mb-4 flex items-center">
+              <h3 className="font-heading font-bold text-white mb-4 flex items-center">
                 <Star className="w-5 h-5 text-yellow-500 mr-2" />
                 What You Get
               </h3>
@@ -97,7 +97,7 @@ export default function ContactInfoSection() {
                     className="flex items-center space-x-3"
                   >
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-brand-dark/80">{highlight}</span>
+                    <span className="text-gray-300">{highlight}</span>
                   </motion.div>
                 ))}
               </div>
@@ -112,26 +112,26 @@ export default function ContactInfoSection() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-8">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-8">
               Contact Information
             </h2>
 
             {/* Primary Contact Card */}
             <div className="glass-card p-8">
-              <h3 className="text-2xl font-heading font-bold text-brand-dark mb-6">
+              <h3 className="text-2xl font-heading font-bold text-white mb-6">
                 Get Your Free Consultation
               </h3>
               
               <div className="space-y-6">
                 {/* Primary Phone */}
-                <div className="flex items-center space-x-4 p-4 bg-brand-primary/5 rounded-xl hover:bg-brand-primary/10 transition-colors duration-200">
+                <div className="flex items-center space-x-4 p-4 bg-brand-obsidian/5 rounded-xl hover:bg-brand-obsidian/10 transition-colors duration-200">
                   <div className="w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center">
                     <svg className="w-6 h-6 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold text-brand-dark">Primary Phone</div>
+                    <div className="font-semibold text-white">Primary Phone</div>
                     <a href="tel:+17324750139" className="text-brand-primary font-bold text-lg hover:text-brand-primary/80 transition-colors">
                       (732) 475-0139
                     </a>
@@ -140,14 +140,14 @@ export default function ContactInfoSection() {
 
 
                 {/* Email */}
-                <div className="flex items-center space-x-4 p-4 bg-brand-accent/5 rounded-xl hover:bg-brand-accent/10 transition-colors duration-200">
+                <div className="flex items-center space-x-4 p-4 bg-brand-obsidian/5 rounded-xl hover:bg-brand-obsidian/10 transition-colors duration-200">
                   <div className="w-12 h-12 bg-brand-accent/20 rounded-full flex items-center justify-center">
                     <svg className="w-6 h-6 text-brand-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold text-brand-dark">Email Us</div>
+                    <div className="font-semibold text-white">Email Us</div>
                     <a href="mailto:info@truerankdigital.com" className="text-brand-accent font-bold text-lg hover:text-brand-accent/80 transition-colors">
                       info@truerankdigital.com
                     </a>
@@ -155,16 +155,16 @@ export default function ContactInfoSection() {
                 </div>
 
                 {/* Business Hours */}
-                <div className="flex items-center space-x-4 p-4 bg-green-50 rounded-xl">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center space-x-4 p-4 bg-brand-obsidian/5 rounded-xl">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold text-brand-dark">Business Hours</div>
-                    <div className="text-green-600 font-bold">Contact for availability</div>
-                    <div className="text-sm text-brand-dark/60">Reach out to schedule a time that works</div>
+                    <div className="font-semibold text-white">Business Hours</div>
+                    <div className="text-green-400 font-bold">Contact for availability</div>
+                    <div className="text-sm text-gray-500">Reach out to schedule a time that works</div>
                   </div>
                 </div>
               </div>
@@ -172,7 +172,7 @@ export default function ContactInfoSection() {
 
             {/* Location Card */}
             <div className="glass-card p-8">
-              <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+              <h3 className="text-xl font-heading font-bold text-white mb-4">
                 Our Location
               </h3>
               <div className="space-y-4">
@@ -184,11 +184,11 @@ export default function ContactInfoSection() {
                     </svg>
                   </div>
                   <div>
-                    <div className="font-semibold text-brand-dark mb-2">288 Summerhill Rd, suite 3, East Brunswick, NJ 08816</div>
-                    <div className="text-brand-dark/70 text-sm leading-relaxed mb-3">
+                    <div className="font-semibold text-white mb-2">288 Summerhill Rd, suite 3, East Brunswick, NJ 08816</div>
+                    <div className="text-gray-400 text-sm leading-relaxed mb-3">
                       True Rank Digital is headquartered in the heart of Middlesex County and positioned to support businesses across East Brunswick, the Route 18 corridor, and Central Jersey.
                     </div>
-                    <div className="text-brand-dark/80 text-sm space-y-2 mb-4">
+                    <div className="text-gray-300 text-sm space-y-2 mb-4">
                       <p>
                         <strong>Via Route 18 South:</strong> Coming from New Brunswick, Rutgers, or the NJ Turnpike (Exit 9), continue south past Brunswick Square Mall and take the Summerhill Road/Spotswood exit.
                       </p>
@@ -196,7 +196,7 @@ export default function ContactInfoSection() {
                         <strong>Via Route 18 North:</strong> Coming from Old Bridge or Marlboro, head north on Route 18 and merge onto Summerhill Road for direct access.
                       </p>
                     </div>
-                    <div className="text-brand-dark/70 text-sm leading-relaxed mb-3">
+                    <div className="text-gray-400 text-sm leading-relaxed mb-3">
                       We help businesses throughout East Brunswick and Middlesex County improve local visibility with AI-driven SEO, GEO, Google Business Profile optimization, and Precision PPC.
                     </div>
                     <a

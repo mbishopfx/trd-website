@@ -7,7 +7,6 @@ import TestimonialsCarousel from '@/components/sections/TestimonialsCarousel';
 import CTASection from '@/components/sections/CTASection';
 import GEOSchema from '@/components/seo/GEOSchema';
 import GoogleMapComponent from '@/components/sections/GoogleMap';
-import ContactFormSection from '@/components/sections/ContactFormSection';
 import Script from 'next/script';
 
 // GEO-Optimized Metadata for Homepage
@@ -107,7 +106,7 @@ export default function Home() {
         faqs={homepageFAQs}
       />
       
-      <article className="pt-16">
+      <article>
         {/* Hero Section */}
         <section>
           <HeroSection />
@@ -138,10 +137,10 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-4">
-                Get Found on <span className="text-brand-primary">Google Local Pack</span>
+                Get Found <span className="text-brand-primary">EVERYWHERE</span>
               </h2>
               <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-                Enter your details below to receive a custom local domination strategy for your business.
+                Enter your details below to receive a custom visibility strategy built for search, AI answer engines, and modern discovery surfaces.
               </p>
             </div>
             <div className="max-w-3xl mx-auto glass-card p-4 overflow-hidden">

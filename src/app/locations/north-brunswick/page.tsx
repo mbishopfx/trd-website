@@ -100,32 +100,32 @@ export default function NorthBrunswickPage() {
       />
       <FAQSchema faqs={faqs} pageUrl="https://truerankdigital.com/locations/north-brunswick" category="location" />
       
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-purple-50 via-white to-purple-50">
+      <article className="pt-16 min-h-screen bg-brand-obsidian text-white">
         {/* Hero Section */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-purple-100 rounded-full mb-6">
-                <MapPin className="w-4 h-4 text-purple-600" />
-                <span className="text-sm font-semibold text-purple-600">Serving North Brunswick, NJ & Route 27 Corridor</span>
+              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-100 rounded-full mb-6">
+                <MapPin className="w-4 h-4 text-blue-600" />
+                <span className="text-sm font-semibold text-blue-600">Serving North Brunswick, NJ & Route 27 Corridor</span>
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
                 Professional <strong className="text-brand-primary">SEO Services</strong> in <br />
                 <strong className="text-brand-primary">North Brunswick, New Jersey</strong>
               </h1>
               
-              <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-8 leading-relaxed">
+              <p className="text-xl text-gray-400 max-w-4xl mx-auto mb-8 leading-relaxed">
                 <strong>True Rank Digital</strong> helps North Brunswick businesses dominate local search results with proven <strong>local SEO strategies</strong> for the <strong>Route 27 corridor</strong>, Renaissance area, and Adams Lane district. Expert Google Business Profile optimization and digital marketing for North Brunswick Township.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <a href="/free-audit" className="inline-flex items-center space-x-2 px-8 py-4 bg-purple-600 text-white font-semibold text-lg rounded-full hover:bg-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <a href="/contact" className="inline-flex items-center space-x-2 px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-full hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                   <TrendingUp className="w-5 h-5" />
                   <span>Get Free North Brunswick SEO Audit</span>
                 </a>
-                <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-purple-600 text-purple-600 font-semibold text-lg rounded-full hover:bg-purple-50 transition-all duration-300">
+                <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold text-lg rounded-full hover:bg-blue-50 transition-all duration-300">
                   <Phone className="w-5 h-5" />
                   <span>(732) 475-0139</span>
                 </a>
@@ -135,19 +135,19 @@ export default function NorthBrunswickPage() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Local</div>
-                  <div className="text-sm text-brand-dark/60">Market Knowledge</div>
+                  <div className="text-sm text-gray-500">Market Knowledge</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Route 27</div>
-                  <div className="text-sm text-brand-dark/60">Main Business Corridor</div>
+                  <div className="text-sm text-gray-500">Main Business Corridor</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Grid</div>
-                  <div className="text-sm text-brand-dark/60">Visibility Tracking</div>
+                  <div className="text-sm text-gray-500">Visibility Tracking</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Strategy</div>
-                  <div className="text-sm text-brand-dark/60">Built to Convert</div>
+                  <div className="text-sm text-gray-500">Built to Convert</div>
                 </div>
               </div>
             </div>
@@ -155,45 +155,45 @@ export default function NorthBrunswickPage() {
         </section>
 
         {/* Why North Brunswick Businesses Choose Us */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-12 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-12 text-center">
               Why <strong className="text-brand-primary">North Brunswick Businesses</strong> Choose True Rank Digital
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="glass-card p-8 hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-obsidian0 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Route 27 Corridor</strong> Expertise
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   We understand the competitive Route 27 business environment from the Renaissance development to Adams Lane. Our local knowledge helps you stand out among retail, dining, automotive, and professional services competing for North Brunswick customers and commuter traffic.
                 </p>
               </div>
 
               <div className="glass-card p-8 hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-obsidian0 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
                   <Building className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Renaissance Area</strong> Specialists
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   The Renaissance mixed-use development has transformed North Brunswick's commercial landscape. We optimize for this modern lifestyle center, targeting both residents and visitors with strategies that capture searches from this growing community and surrounding neighborhoods.
                 </p>
               </div>
 
               <div className="glass-card p-8 hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-obsidian0 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
                   <BarChart3 className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Neighborhood-Specific</strong> Rankings
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   Track your visibility across all North Brunswick areas - Route 27 corridor, Adams Lane, Renaissance, residential neighborhoods. Our grid ranking system shows exactly where you appear in local searches across different North Brunswick zip codes and business districts.
                 </p>
               </div>
@@ -204,10 +204,10 @@ export default function NorthBrunswickPage() {
         {/* Services for North Brunswick */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6 text-center">
               Complete <strong className="text-brand-primary">SEO Services</strong> for North Brunswick Businesses
             </h2>
-            <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-500 text-center mb-12 max-w-3xl mx-auto">
               Specialized local search optimization for North Brunswick's Route 27 corridor and growing residential communities
             </p>
 
@@ -215,31 +215,31 @@ export default function NorthBrunswickPage() {
               {/* Route 27 Optimization */}
               <div className="glass-card p-8">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <Target className="w-6 h-6 text-purple-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Target className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Route 27 Corridor Optimization
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Dominate searches along North Brunswick's main commercial artery. We optimize for Route 27-specific keywords, capture commuter traffic searches, target major landmarks (Renaissance, shopping centers), and differentiate your business from dense corridor competition. Essential for retail, restaurants, automotive, and service businesses.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>"Route 27" keyword optimization</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Commuter traffic targeting</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Renaissance area proximity marketing</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Shopping center visibility</span>
                       </li>
                     </ul>
@@ -250,31 +250,31 @@ export default function NorthBrunswickPage() {
               {/* Local Keyword Research */}
               <div className="glass-card p-8">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <ShoppingBag className="w-6 h-6 text-purple-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <ShoppingBag className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Renaissance & Adams Lane Targeting
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Capture searches from North Brunswick's key commercial districts. We target Renaissance mixed-use development residents and visitors, Adams Lane professional corridor searches, and neighborhood-specific keywords that your competitors miss. Ideal for businesses serving the growing North Brunswick residential market.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Renaissance resident targeting</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Adams Lane professional searches</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Neighborhood-specific keywords</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Shopping center proximity optimization</span>
                       </li>
                     </ul>
@@ -285,31 +285,31 @@ export default function NorthBrunswickPage() {
               {/* Citation Building */}
               <div className="glass-card p-8">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <Award className="w-6 h-6 text-purple-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Award className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       North Brunswick Citation Building
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Build authority in North Brunswick and Middlesex County directories with consistent NAP information. We ensure your business appears in township directories, shopping center listings, Renaissance area platforms, and industry-specific directories serving North Brunswick businesses and residents.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>North Brunswick Township directories</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Middlesex County business listings</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Renaissance community platforms</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Shopping center directories</span>
                       </li>
                     </ul>
@@ -320,31 +320,31 @@ export default function NorthBrunswickPage() {
               {/* Content Marketing */}
               <div className="glass-card p-8">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <Zap className="w-6 h-6 text-purple-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Zap className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       North Brunswick Content Creation
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Content that resonates with North Brunswick customers. We create blogs, service pages, and location content featuring North Brunswick landmarks (Community Park, Renaissance, Route 27), local events, and neighborhood guides. Establishes your business as part of the North Brunswick community while targeting valuable local search terms.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Neighborhood area guides</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Renaissance lifestyle content</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Route 27 corridor business spotlights</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-purple-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Local market insights</span>
                       </li>
                     </ul>
@@ -356,75 +356,75 @@ export default function NorthBrunswickPage() {
         </section>
 
         {/* About North Brunswick Market */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+                <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
                   Understanding <strong className="text-brand-primary">North Brunswick's</strong> Growing Market
                 </h2>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   North Brunswick Township (42,000+ residents) sits strategically between New Brunswick and East Brunswick, with <strong>Route 27</strong> as its main commercial corridor. The <strong>Renaissance mixed-use development</strong> has transformed the township, bringing modern residential, retail, and dining options that attract both residents and visitors from surrounding communities.
                 </p>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   The Route 27 corridor features diverse businesses from national retailers to local restaurants, automotive services, and professional offices. The <strong>Adams Lane</strong> area provides additional commercial space, while residential neighborhoods like Linwood and Franklin Park create strong local customer bases. Proximity to Rutgers University and major highways (Route 1, Route 18) brings additional commuter and student traffic.
                 </p>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   Whether you're a Renaissance tenant, Route 27 corridor business, Adams Lane professional service, or residential area contractor, we understand North Brunswick's competitive dynamics and help you capture local searches from this growing market.
                 </p>
               </div>
 
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-6">
+                <h3 className="text-2xl font-heading font-bold text-white mb-6">
                   North Brunswick Areas We Serve
                 </h3>
-                <div className="grid grid-cols-2 gap-4 text-brand-dark/70">
+                <div className="grid grid-cols-2 gap-4 text-gray-400">
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Route 27 Corridor</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Renaissance Development</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Adams Lane</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Linwood</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Franklin Park Area</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Constitution Boulevard</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Cozzens Lane</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Community Park Area</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Hermann Road</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Shopping Center Areas</span>
                   </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-gray-200">
-                  <h4 className="font-semibold text-brand-dark mb-4">Serving All North Brunswick Zip Codes:</h4>
+                <div className="mt-8 pt-8 border-t border-white/10">
+                  <h4 className="font-semibold text-white mb-4">Serving All North Brunswick Zip Codes:</h4>
                   <div className="flex flex-wrap gap-3">
-                    <span className="px-4 py-2 bg-purple-50 text-purple-600 rounded-full text-sm font-medium">08902</span>
+                    <span className="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">08902</span>
                   </div>
                 </div>
               </div>
@@ -435,10 +435,10 @@ export default function NorthBrunswickPage() {
         {/* Process */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6 text-center">
               Our <strong className="text-brand-primary">North Brunswick SEO</strong> Process
             </h2>
-            <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-500 text-center mb-12 max-w-3xl mx-auto">
               Proven 5-step methodology focused on improving local visibility and lead flow
             </p>
 
@@ -451,11 +451,11 @@ export default function NorthBrunswickPage() {
                 { step: "5", title: "Ongoing Optimization", desc: "Monthly tracking across North Brunswick neighborhoods, Route 27 corridor rankings, and competitor analysis. Adjust strategies based on performance." },
               ].map((item) => (
                 <div key={item.step} className="glass-card p-6 text-center hover:shadow-xl transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+                  <div className="w-16 h-16 bg-gradient-to-br from-brand-obsidian0 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
                     {item.step}
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{item.title}</h3>
-                  <p className="text-sm text-brand-dark/70 leading-relaxed">{item.desc}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -463,17 +463,17 @@ export default function NorthBrunswickPage() {
         </section>
 
         {/* FAQs */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-12 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-12 text-center">
               Frequently Asked Questions About <strong className="text-brand-primary">North Brunswick SEO</strong>
             </h2>
 
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="glass-card p-6">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{faq.question}</h3>
-                  <p className="text-brand-dark/70 leading-relaxed">{faq.answer}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -481,7 +481,7 @@ export default function NorthBrunswickPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-20 bg-gradient-to-br from-purple-600 via-purple-700 to-purple-600 relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-600 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10"></div>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
             <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6">
@@ -492,17 +492,17 @@ export default function NorthBrunswickPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/free-audit" className="inline-flex items-center space-x-2 px-10 py-5 bg-white text-purple-600 font-bold text-lg rounded-full hover:bg-gray-100 transition-all duration-300 shadow-2xl">
+              <a href="/contact" className="inline-flex items-center space-x-2 px-10 py-5 bg-brand-obsidian text-blue-600 font-bold text-lg rounded-full hover:bg-brand-obsidian-light transition-all duration-300 shadow-2xl">
                 <TrendingUp className="w-6 h-6" />
                 <span>Get Your Free North Brunswick SEO Audit</span>
               </a>
-              <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white/10 transition-all duration-300">
+              <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-brand-obsidian/10 transition-all duration-300">
                 <Phone className="w-6 h-6" />
                 <span>(732) 475-0139</span>
               </a>
             </div>
 
-            <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-white/80">
+            <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-gray-300">
               <div className="flex items-center space-x-2">
                 <Clock className="w-5 h-5" />
                 <span>Fast response</span>
@@ -520,13 +520,13 @@ export default function NorthBrunswickPage() {
         </section>
 
         {/* Map Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">
                 Serving <span className="text-brand-primary">North Brunswick, NJ</span>
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 We provide SEO services to North Brunswick businesses from our East Brunswick headquarters
               </p>
             </div>

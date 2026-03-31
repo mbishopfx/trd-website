@@ -4,12 +4,12 @@ import { Search, Globe, Code, Zap, TrendingUp, Users, Link2, FileText, Shield, B
 import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: 'Professional Digital Marketing Services | Proprietary Dashboard Platform | True Rank Digital',
-  description: 'Access our exclusive digital marketing services featuring proprietary dashboard platform with grid map ranking analysis, competitor intelligence monitoring, automated Google knowledge graph consistency tools, and proven Google optimization tactics for faster local pack domination.',
-  keywords: 'professional digital marketing services, proprietary dashboard platform, grid map ranking analysis, competitor intelligence monitoring, Google knowledge graph optimization, proven optimization strategies, local pack domination services, custom script integration, keyword search volume analysis tools, automated Google optimization tactics',
+  title: 'Digital Marketing Services | True Rank Digital',
+  description: 'Explore True Rank Digital services including AI Search Optimization, Local SEO, PPC, GBP optimization, website engineering, CRM automation, and business consulting.',
+  keywords: 'digital marketing services, AI search optimization, local SEO, PPC campaigns, Google Business Profile optimization, website engineering, CRM with AI chat, business consulting',
   openGraph: {
-    title: 'Professional Digital Marketing Services | True Rank Digital',
-    description: 'Comprehensive digital marketing services powered by proprietary SEO dashboard platform.',
+    title: 'Digital Marketing Services | True Rank Digital',
+    description: 'Service-based growth systems for local visibility, AI search readiness, and lead generation.',
     url: 'https://truerankdigital.com/services',
     type: 'website',
   },
@@ -26,7 +26,14 @@ export default function ServicesPage() {
       title: 'Digital Marketing and Advertising',
       description: 'True Rank Digital is a leading digital marketing agency specializing in SEO, PPC, Google Business Profile Optimization and content strategy to boost your online presence and drive growth.',
       link: '/services/digital-marketing',
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-brand-obsidian0 to-cyan-500'
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: 'AI Search Optimization',
+      description: 'Prepare your site for the way people search now. We structure your content and signals so AI-driven experiences can find and trust your business.',
+      link: '/services/ai-seo',
+      color: 'from-brand-obsidian0 to-cyan-500'
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -40,21 +47,21 @@ export default function ServicesPage() {
       title: 'Website Engineering',
       description: 'True Rank Digital offers comprehensive website engineering, including custom design, development, and UX optimization to enhance your online presence and user engagement.',
       link: '/services/website-development',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-blue-600 to-blue-400'
     },
     {
       icon: <Globe className="w-8 h-8" />,
       title: 'Social Media Multi-Platform Management',
       description: 'True Rank Digital uses high authority strategies to make your brand show ALIVE and trustworthy across all platforms. Strong presence that links back to Knowledge Graph and website schema is key.',
       link: '/services/social-media',
-      color: 'from-pink-500 to-rose-500'
+      color: 'from-brand-obsidian0 to-cyan-500'
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'CRM With AI Chat',
       description: 'True Rank Digital\'s AI-powered CRM streamlines customer interactions with an AI chatbot that sets appointments, handles follow-ups, and enhances customer engagement seamlessly.',
       link: '/services/crm-ai-chat',
-      color: 'from-indigo-500 to-purple-500'
+      color: 'from-blue-600 to-blue-400'
     },
     {
       icon: <Users className="w-8 h-8" />,
@@ -173,6 +180,18 @@ export default function ServicesPage() {
     },
     "itemListElement": [
       // Main Services (Advertising Agency)
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "AI Search Optimization",
+          "description": "Prepare your business for AI-assisted discovery with entity mapping, structured data, and machine-readable content architecture.",
+          "url": "https://truerankdigital.com/services/ai-seo",
+          "provider": { "@id": "https://truerankdigital.com/#organization" },
+          "areaServed": "United States",
+          "serviceType": "AI Search Optimization"
+        }
+      },
       {
         "@type": "Offer",
         "itemOffered": {
@@ -458,7 +477,7 @@ export default function ServicesPage() {
         }}
       />
 
-      <div className="pt-16 min-h-screen bg-gradient-to-b from-brand-light/20 to-white">
+      <div className="bg-brand-obsidian min-h-screen pt-16">
       
       {/* Hero Section */}
       <section className="py-20">
@@ -468,21 +487,21 @@ export default function ServicesPage() {
             <span className="text-brand-primary font-semibold text-sm">Our Services</span>
           </div>
           
-          <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
-            Digital Marketing Services That Drive Growth
+          <h1 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-6">
+            Services Built to Grow Visibility, Leads, and Revenue
           </h1>
           
-          <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-8">
-            True Rank Digital delivers comprehensive digital marketing solutions including Google Business Profile optimization, website engineering, AI-powered CRM, social media marketing, business consulting, and proven SEO strategies to help your business dominate online.
+          <p className="text-xl text-gray-400 max-w-4xl mx-auto mb-8">
+            We help businesses simplify growth with practical execution across AI search, local SEO, paid media, web performance, and conversion systems.
           </p>
 
           <div className="max-w-4xl mx-auto mb-12">
             <div className="glass-card p-6 lg:p-8">
-              <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
-                Our Process: Proprietary Platform + Proven Strategies
+              <h2 className="text-2xl font-heading font-bold text-white mb-4">
+                How We Work
               </h2>
-              <p className="text-brand-dark/70 leading-relaxed">
-                Every client receives access to our exclusive digital marketing platform featuring real-time performance tracking, keyword search volume analysis tools, and automated optimization scripts. Our in-house technology solutions and custom solution building frameworks deliver sustainable results that adapt to Google algorithm changes automatically. While our dashboard platform works with any website, clients choosing our custom web builds unlock enhanced capabilities through proprietary script integration.
+              <p className="text-gray-400 leading-relaxed">
+                We start by identifying the gaps blocking growth, then prioritize the changes that will move the needle fastest. You get a clear roadmap, execution support, and reporting focused on outcomes rather than vanity metrics.
               </p>
             </div>
           </div>
@@ -492,7 +511,7 @@ export default function ServicesPage() {
       {/* Main Services Grid */}
       <section className="pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-heading font-bold text-brand-dark mb-8 text-center">
+          <h2 className="text-3xl font-heading font-bold text-white mb-8 text-center">
             Core <span className="text-brand-primary">Services</span>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -504,11 +523,11 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors duration-300">
+                <h3 className="text-xl font-heading font-bold text-white mb-4 group-hover:text-brand-primary transition-colors duration-300">
                   {service.title}
                 </h3>
 
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   {service.description}
                 </p>
 
@@ -526,17 +545,17 @@ export default function ServicesPage() {
       </section>
 
       {/* Website Designer Services */}
-      <section className="py-16 bg-white/50">
+      <section className="py-16 bg-brand-obsidian/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-purple-100 rounded-full mb-4">
-              <Code className="w-5 h-5 text-purple-600" />
-              <span className="text-purple-600 font-semibold text-sm">Website Designer</span>
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-100 rounded-full mb-4">
+              <Code className="w-5 h-5 text-blue-600" />
+              <span className="text-blue-600 font-semibold text-sm">Website Designer</span>
             </div>
-            <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+            <h2 className="text-3xl font-heading font-bold text-white mb-4">
               Website Design & Development Services
             </h2>
-            <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Professional website design and development services to build your online presence.
             </p>
           </div>
@@ -544,13 +563,13 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {websiteDesignerServices.map((service) => (
               <Link key={service.title} href={service.link} className="glass-card p-6 hover:scale-105 transition-transform duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 text-white">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-400 rounded-xl flex items-center justify-center mb-4 text-white">
                   {service.icon}
                 </div>
-                <h3 className="text-lg font-heading font-bold text-brand-dark mb-2 group-hover:text-brand-primary transition-colors">
+                <h3 className="text-lg font-heading font-bold text-white mb-2 group-hover:text-brand-primary transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-brand-dark/70 text-sm">
+                <p className="text-gray-400 text-sm">
                   {service.description}
                 </p>
               </Link>
@@ -567,10 +586,10 @@ export default function ServicesPage() {
               <Globe className="w-5 h-5 text-emerald-600" />
               <span className="text-emerald-600 font-semibold text-sm">Internet Marketing Service</span>
             </div>
-            <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+            <h2 className="text-3xl font-heading font-bold text-white mb-4">
               Internet Marketing Services
             </h2>
-            <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Organic marketing strategies to build sustainable online visibility and authority.
             </p>
           </div>
@@ -581,10 +600,10 @@ export default function ServicesPage() {
                 <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center mb-4 text-white">
                   {service.icon}
                 </div>
-                <h3 className="text-lg font-heading font-bold text-brand-dark mb-2 group-hover:text-brand-primary transition-colors">
+                <h3 className="text-lg font-heading font-bold text-white mb-2 group-hover:text-brand-primary transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-brand-dark/70 text-sm">
+                <p className="text-gray-400 text-sm">
                   {service.description}
                 </p>
               </Link>
@@ -597,10 +616,10 @@ export default function ServicesPage() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="glass-card p-8 bg-gradient-to-br from-brand-primary/10 to-blue-500/10">
-            <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+            <h2 className="text-3xl font-heading font-bold text-white mb-4">
               Ready to Grow Your Business?
             </h2>
-            <p className="text-xl text-brand-dark/70 mb-8">
+            <p className="text-xl text-gray-400 mb-8">
               Contact True Rank Digital today for a free consultation and discover how our services can help you dominate your market.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

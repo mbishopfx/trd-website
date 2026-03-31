@@ -12,7 +12,7 @@ export default function SupportPage() {
       description: 'Speak directly with our team for immediate assistance',
       contact: '(732) 475-0139',
       availability: '24/7 Available',
-      color: 'from-blue-500 to-indigo-500'
+      color: 'from-brand-obsidian0 to-blue-500'
     },
     {
       icon: <Mail className="w-8 h-8" />,
@@ -28,7 +28,7 @@ export default function SupportPage() {
       description: 'Schedule a personalized consultation session',
       contact: 'Free 15-minute strategy call',
       availability: 'By appointment',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-brand-obsidian0 to-blue-500'
     }
   ];
 
@@ -73,7 +73,7 @@ export default function SupportPage() {
       </section>
 
       {/* Support Options */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-brand-obsidian">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -82,10 +82,10 @@ export default function SupportPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
               How We Can Help
             </h2>
-            <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Multiple ways to get the support and guidance you need for your digital marketing success.
             </p>
           </motion.div>
@@ -105,17 +105,17 @@ export default function SupportPage() {
                     {option.icon}
                   </div>
                 </div>
-                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-2xl font-heading font-bold text-white mb-4">
                   {option.title}
                 </h3>
-                <p className="text-brand-dark/70 mb-4">
+                <p className="text-gray-400 mb-4">
                   {option.description}
                 </p>
                 <div className="space-y-2">
                   <p className="text-brand-primary font-semibold">
                     {option.contact}
                   </p>
-                  <p className="text-brand-dark/60 text-sm">
+                  <p className="text-gray-500 text-sm">
                     {option.availability}
                   </p>
                 </div>
@@ -126,7 +126,7 @@ export default function SupportPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-brand-light/20">
+      <section className="py-20 bg-brand-obsidian/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -135,10 +135,10 @@ export default function SupportPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-brand-dark/70">
+            <p className="text-xl text-gray-400">
               Common questions about our services and approach
             </p>
           </motion.div>
@@ -153,11 +153,11 @@ export default function SupportPage() {
                 viewport={{ once: true }}
                 className="glass-card p-6"
               >
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3 flex items-center">
+                <h3 className="text-xl font-heading font-bold text-white mb-3 flex items-center">
                   <HelpCircle className="w-5 h-5 text-brand-primary mr-3 flex-shrink-0" />
                   {faq.question}
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed pl-8">
+                <p className="text-gray-400 leading-relaxed pl-8">
                   {faq.answer}
                 </p>
               </motion.div>
@@ -186,7 +186,7 @@ export default function SupportPage() {
                 href="tel:+17324750139"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-brand-primary font-semibold rounded-full hover:bg-gray-100 transition-all duration-300"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-brand-obsidian text-brand-primary font-semibold rounded-full hover:bg-brand-obsidian-light transition-all duration-300"
               >
                 <Phone className="w-5 h-5" />
                 <span>Call (732) 475-0139</span>
@@ -195,7 +195,7 @@ export default function SupportPage() {
                 href="mailto:info@truerankdigital.com"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-brand-primary transition-all duration-300"
+                className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-brand-obsidian hover:text-brand-primary transition-all duration-300"
               >
                 <Mail className="w-5 h-5" />
                 <span>Send Email</span>

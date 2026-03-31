@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords: 'website development, website engineering, custom web design, UX optimization, Next.js development, React websites, Google-optimized websites, True Rank Digital',
   openGraph: {
     title: 'Website Engineering & Development | True Rank Digital',
-    description: 'Custom website development with Google optimization and superior UX design.',
+    description: 'Custom website development with technical SEO foundations, AI-ready structure, and conversion-focused UX.',
     url: 'https://truerankdigital.com/services/website-development',
     type: 'website',
   },
@@ -34,7 +34,7 @@ export default function WebsiteDevelopmentPage() {
   const faqs = [
     {
       question: "What makes True Rank Digital's website development different?",
-      answer: "True Rank Digital builds websites with Google optimization as the foundation, not an afterthought. Our custom builds include proprietary script integration, advanced schema markup, Core Web Vitals optimization, and seamless integration with our SEO dashboard platform. We use modern frameworks like Next.js for superior performance and developer experience."
+      answer: "True Rank Digital builds websites with Google optimization as the foundation, not an afterthought. Our custom builds include advanced schema markup, Core Web Vitals optimization, and seamless integration with your marketing and analytics stack. We use modern frameworks like Next.js for superior performance and developer experience."
     },
     {
       question: "How long does it take to build a custom website?",
@@ -202,14 +202,14 @@ export default function WebsiteDevelopmentPage() {
         category="service"
       />
       
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-purple-50 to-white">
+      <article className="pt-16 min-h-screen bg-brand-obsidian text-white">
         {/* Breadcrumb Navigation */}
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <ol className="flex items-center space-x-2 text-sm">
-            <li><Link href="/" className="text-brand-dark/60 hover:text-brand-primary transition-colors">Home</Link></li>
-            <li className="text-brand-dark/40">/</li>
-            <li><Link href="/services" className="text-brand-dark/60 hover:text-brand-primary transition-colors">Services</Link></li>
-            <li className="text-brand-dark/40">/</li>
+            <li><Link href="/" className="text-gray-500 hover:text-brand-primary transition-colors">Home</Link></li>
+            <li className="text-white/40">/</li>
+            <li><Link href="/services" className="text-gray-500 hover:text-brand-primary transition-colors">Services</Link></li>
+            <li className="text-white/40">/</li>
             <li className="text-brand-primary font-medium">Website Engineering</li>
           </ol>
         </nav>
@@ -219,29 +219,29 @@ export default function WebsiteDevelopmentPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-purple-100 rounded-full mb-6">
-                  <Code className="w-5 h-5 text-purple-600" />
-                  <span className="text-purple-600 font-semibold text-sm">Website Engineering</span>
+                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-100 rounded-full mb-6">
+                  <Code className="w-5 h-5 text-blue-600" />
+                  <span className="text-blue-600 font-semibold text-sm">Website Engineering</span>
                 </div>
                 
-                <h1 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+                <h1 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
                   <strong className="text-brand-primary">Website Engineering</strong> That Drives Business Results
                 </h1>
                 
-                <p className="text-xl text-brand-dark/70 mb-8">
+                <p className="text-xl text-gray-400 mb-8">
                   <strong>True Rank Digital</strong> offers comprehensive <strong>website engineering</strong>, including custom design, development, and UX optimization to enhance your online presence and user engagement.
                 </p>
 
                 <div className="flex flex-wrap gap-4 mb-8">
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>Custom builds</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>Performance-focused</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>Mobile-first UX</span>
                   </div>
@@ -250,14 +250,14 @@ export default function WebsiteDevelopmentPage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-purple-600 text-white font-semibold text-lg rounded-full hover:bg-purple-700 transition-colors duration-300"
+                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-full hover:bg-blue-700 transition-colors duration-300"
                   >
                     <Rocket className="w-5 h-5" />
                     <span>Start Your Project</span>
                   </Link>
                   <a
                     href="tel:+17324750139"
-                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-purple-600 text-purple-600 font-semibold text-lg rounded-full hover:bg-purple-50 transition-colors duration-300"
+                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold text-lg rounded-full hover:bg-blue-50 transition-colors duration-300"
                   >
                     <Phone className="w-5 h-5" />
                     <span>(732) 475-0139</span>
@@ -269,9 +269,9 @@ export default function WebsiteDevelopmentPage() {
               <div className="grid grid-cols-2 gap-6">
                 {results.map((result, index) => (
                   <div key={index} className="glass-card p-6 text-center">
-                    <div className="text-3xl font-bold text-purple-600 mb-2">{result.metric}</div>
-                    <div className="text-lg font-semibold text-brand-dark mb-1">{result.label}</div>
-                    <div className="text-sm text-brand-dark/60">{result.description}</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-2">{result.metric}</div>
+                    <div className="text-lg font-semibold text-white mb-1">{result.label}</div>
+                    <div className="text-sm text-gray-500">{result.description}</div>
                   </div>
                 ))}
               </div>
@@ -280,32 +280,32 @@ export default function WebsiteDevelopmentPage() {
         </section>
 
         {/* Why Custom Websites Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Why <strong className="text-brand-primary">Custom Website Development</strong> Matters
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Your website is your most important digital asset. Here&apos;s why custom development delivers superior results:
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-purple-600 mb-4">Credibility</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Strong First Impression</h3>
-                <p className="text-brand-dark/70">A professional, custom website helps build trust and makes it easy for visitors to understand your value.</p>
+                <div className="text-4xl font-bold text-blue-600 mb-4">Credibility</div>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">Strong First Impression</h3>
+                <p className="text-gray-400">A professional, custom website helps build trust and makes it easy for visitors to understand your value.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-purple-600 mb-4">Speed</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Performance Matters</h3>
-                <p className="text-brand-dark/70">Fast, stable pages improve user experience and support stronger search performance.</p>
+                <div className="text-4xl font-bold text-blue-600 mb-4">Speed</div>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">Performance Matters</h3>
+                <p className="text-gray-400">Fast, stable pages improve user experience and support stronger search performance.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-purple-600 mb-4">Conversion</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Built to Convert</h3>
-                <p className="text-brand-dark/70">Clear structure, focused messaging, and thoughtful UX help turn visitors into leads.</p>
+                <div className="text-4xl font-bold text-blue-600 mb-4">Conversion</div>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">Built to Convert</h3>
+                <p className="text-gray-400">Clear structure, focused messaging, and thoughtful UX help turn visitors into leads.</p>
               </div>
             </div>
           </div>
@@ -315,10 +315,10 @@ export default function WebsiteDevelopmentPage() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Our <strong className="text-brand-primary">Website Engineering</strong> Services
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 End-to-end website development services from design to deployment and beyond.
               </p>
             </div>
@@ -326,14 +326,14 @@ export default function WebsiteDevelopmentPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <div key={index} className="glass-card p-6 hover:scale-105 transition-transform duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-4 text-white">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl flex items-center justify-center mb-4 text-white">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">{service.title}</h3>
-                  <p className="text-brand-dark/70 mb-4">{service.description}</p>
+                  <h3 className="text-xl font-heading font-bold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-400 mb-4">{service.description}</p>
                   <div className="space-y-2">
                     {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2 text-sm text-brand-dark/70">
+                      <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                         <span>{feature}</span>
                       </div>
@@ -346,20 +346,20 @@ export default function WebsiteDevelopmentPage() {
         </section>
 
         {/* Tech Stack Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Our <strong className="text-brand-primary">Technology Stack</strong>
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 We use modern, battle-tested technologies to build fast, secure, and scalable websites.
               </p>
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
               {techStack.map((tech, index) => (
-                <div key={index} className="px-6 py-3 bg-purple-100 rounded-full text-purple-700 font-medium">
+                <div key={index} className="px-6 py-3 bg-blue-100 rounded-full text-blue-700 font-medium">
                   {tech}
                 </div>
               ))}
@@ -371,10 +371,10 @@ export default function WebsiteDevelopmentPage() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Our <strong className="text-brand-primary">Development Process</strong>
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 A systematic approach to delivering exceptional websites on time and on budget.
               </p>
             </div>
@@ -383,15 +383,15 @@ export default function WebsiteDevelopmentPage() {
               {process.map((item, index) => (
                 <div key={index} className="glass-card p-8">
                   <div className="flex flex-col lg:flex-row lg:items-start gap-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
                       {item.step}
                     </div>
                     <div className="flex-grow">
-                      <h3 className="text-2xl font-heading font-bold text-brand-dark mb-3">{item.title}</h3>
-                      <p className="text-brand-dark/70 mb-4">{item.description}</p>
+                      <h3 className="text-2xl font-heading font-bold text-white mb-3">{item.title}</h3>
+                      <p className="text-gray-400 mb-4">{item.description}</p>
                       <div className="grid sm:grid-cols-2 gap-3">
                         {item.details.map((detail, idx) => (
-                          <div key={idx} className="flex items-center space-x-2 text-brand-dark/70">
+                          <div key={idx} className="flex items-center space-x-2 text-gray-400">
                             <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                             <span>{detail}</span>
                           </div>
@@ -406,66 +406,66 @@ export default function WebsiteDevelopmentPage() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-heading font-bold text-brand-dark mb-6">
+                <h2 className="text-3xl font-heading font-bold text-white mb-6">
                   Why Choose <strong className="text-brand-primary">True Rank Digital</strong>
                 </h2>
                 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Award className="w-6 h-6 text-purple-600" />
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Award className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Google-First Development</h3>
-                      <p className="text-brand-dark/70">Every website is built with SEO as the foundation. Schema markup, semantic HTML, and performance optimization are standard.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Google-First Development</h3>
+                      <p className="text-gray-400">Every website is built with SEO as the foundation. Schema markup, semantic HTML, and performance optimization are standard.</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Zap className="w-6 h-6 text-purple-600" />
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Zap className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Performance Obsessed</h3>
-                      <p className="text-brand-dark/70">We prioritize performance and Core Web Vitals because fast, stable sites rank better and convert more visitors.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Performance Obsessed</h3>
+                      <p className="text-gray-400">We prioritize performance and Core Web Vitals because fast, stable sites rank better and convert more visitors.</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Shield className="w-6 h-6 text-purple-600" />
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Shield className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Enterprise Security</h3>
-                      <p className="text-brand-dark/70">SSL certificates, security headers, and regular updates protect your site and your customers&apos; data.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Enterprise Security</h3>
+                      <p className="text-gray-400">SSL certificates, security headers, and regular updates protect your site and your customers&apos; data.</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-purple-600" />
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Ongoing Support</h3>
-                      <p className="text-brand-dark/70">We don&apos;t disappear after launch. Maintenance packages ensure your site stays fast, secure, and up-to-date.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Ongoing Support</h3>
+                      <p className="text-gray-400">We don&apos;t disappear after launch. Maintenance packages ensure your site stays fast, secure, and up-to-date.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-6 text-center">Website Types We Build</h3>
+                <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center">Website Types We Build</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     'Business Websites', 'E-commerce Stores', 'Landing Pages', 'Web Applications',
                     'Portfolio Sites', 'Membership Sites', 'Blogs & Publications', 'Multi-location Sites',
                     'Service Directories', 'Booking Systems', 'Client Portals', 'Custom Solutions'
                   ].map((type, index) => (
-                    <div key={index} className="flex items-center space-x-2 text-brand-dark/70">
+                    <div key={index} className="flex items-center space-x-2 text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-500" />
                       <span>{type}</span>
                     </div>
@@ -480,10 +480,10 @@ export default function WebsiteDevelopmentPage() {
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Frequently Asked Questions
               </h2>
-              <p className="text-xl text-brand-dark/70">
+              <p className="text-xl text-gray-400">
                 Common questions about our website development services.
               </p>
             </div>
@@ -491,8 +491,8 @@ export default function WebsiteDevelopmentPage() {
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="glass-card p-6">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{faq.question}</h3>
-                  <p className="text-brand-dark/70">{faq.answer}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-400">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -500,10 +500,10 @@ export default function WebsiteDevelopmentPage() {
         </section>
 
         {/* Related Services */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Related <strong className="text-brand-primary">Services</strong>
               </h2>
             </div>
@@ -511,8 +511,8 @@ export default function WebsiteDevelopmentPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedServices.map((service, index) => (
                 <Link key={index} href={service.href} className="glass-card p-6 hover:scale-105 transition-transform duration-300 group">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-2 group-hover:text-brand-primary transition-colors">{service.name}</h3>
-                  <p className="text-brand-dark/70 text-sm mb-4">{service.description}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-2 group-hover:text-brand-primary transition-colors">{service.name}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                   <div className="flex items-center text-brand-primary font-medium text-sm">
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -526,27 +526,27 @@ export default function WebsiteDevelopmentPage() {
         {/* CTA Section */}
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="glass-card p-8 bg-gradient-to-br from-purple-500/10 to-indigo-500/10">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div className="glass-card p-8 bg-gradient-to-br from-blue-600/10 to-blue-400/10">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Globe className="w-10 h-10 text-white" />
               </div>
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Ready to Build Your <strong className="text-brand-primary">Dream Website</strong>?
               </h2>
-              <p className="text-xl text-brand-dark/70 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
                 Get a free consultation and discover how a custom website can transform your online presence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-purple-600 text-white font-semibold text-lg rounded-full hover:bg-purple-700 transition-colors duration-300"
+                  className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-full hover:bg-blue-700 transition-colors duration-300"
                 >
                   <CheckCircle className="w-5 h-5" />
                   <span>Start Your Project</span>
                 </Link>
                 <a
                   href="tel:+17324750139"
-                  className="inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-purple-600 text-purple-600 font-semibold text-lg rounded-full hover:bg-purple-50 transition-colors duration-300"
+                  className="inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold text-lg rounded-full hover:bg-blue-50 transition-colors duration-300"
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (732) 475-0139</span>

@@ -23,12 +23,12 @@ export default function LocationHeroSection({
   isMainLocation = false
 }: LocationHeroSectionProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-obsidian">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-light via-white to-brand-light/50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-brand-obsidian via-brand-obsidian-light/50 to-brand-obsidian"></div>
       
       {/* Animated Grid Pattern */}
-      <div className="absolute inset-0 opacity-30">
+      <div className="absolute inset-0 opacity-10">
         <div 
           className="w-full h-full"
           style={{
@@ -102,11 +102,11 @@ export default function LocationHeroSection({
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold text-brand-dark mb-6 leading-tight"
+            className="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold text-white mb-6 leading-tight"
           >
             <span className="text-brand-primary">SEO Services in</span>
             <br />
-            <span className="text-brand-dark">{cityName}, {stateName}</span>
+            <span className="text-white">{cityName}, {stateName}</span>
           </motion.h1>
 
           {/* Location Details */}
@@ -114,7 +114,7 @@ export default function LocationHeroSection({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap items-center justify-center space-x-6 mb-8 text-brand-dark/70"
+            className="flex flex-wrap items-center justify-center space-x-6 mb-8 text-gray-400"
           >
             <div className="flex items-center space-x-2">
               <MapPin className="w-4 h-4 text-brand-primary" />
@@ -122,7 +122,7 @@ export default function LocationHeroSection({
             </div>
             {zipCodes && zipCodes.length > 0 && (
               <>
-                <div className="hidden sm:block w-px h-4 bg-brand-dark/20"></div>
+                <div className="hidden sm:block w-px h-4 bg-brand-obsidian/10"></div>
                 <div className="flex items-center space-x-2">
                   <span className="text-sm font-medium">Zip: {zipCodes.join(', ')}</span>
                 </div>
@@ -135,7 +135,7 @@ export default function LocationHeroSection({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-xl sm:text-2xl text-brand-dark/80 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
             {description}
           </motion.p>
@@ -167,7 +167,7 @@ export default function LocationHeroSection({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-brand-dark/70"
+            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-gray-400"
           >
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4 text-brand-primary" />
@@ -180,7 +180,7 @@ export default function LocationHeroSection({
               </a>
             </div>
             
-            <div className="hidden sm:block w-px h-4 bg-brand-dark/20"></div>
+            <div className="hidden sm:block w-px h-4 bg-brand-obsidian/10"></div>
             
             <div className="flex items-center space-x-2">
               <Clock className="w-4 h-4 text-brand-primary" />

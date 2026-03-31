@@ -60,7 +60,7 @@ export default function GoogleMapComponent({
 
   if (loadError) {
     return (
-      <div className="w-full bg-gray-100 rounded-lg flex items-center justify-center" style={{ height }}>
+      <div className="w-full bg-brand-obsidian-light rounded-lg flex items-center justify-center" style={{ height }}>
         <div className="text-center p-8">
           <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-4" />
           <p className="text-gray-600">Error loading map</p>
@@ -72,7 +72,7 @@ export default function GoogleMapComponent({
 
   if (!isLoaded) {
     return (
-      <div className="w-full bg-gray-100 rounded-lg flex items-center justify-center" style={{ height }}>
+      <div className="w-full bg-brand-obsidian-light rounded-lg flex items-center justify-center" style={{ height }}>
         <div className="text-center p-8">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand-primary mx-auto mb-4"></div>
           <p className="text-gray-600">Loading map...</p>

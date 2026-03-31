@@ -174,7 +174,7 @@ export default function DynamicForm({ form, onSuccess }: DynamicFormProps) {
         </p>
         <button
           onClick={() => setSubmitted(false)}
-          className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          className="px-6 py-2 bg-brand-blue text-white rounded-lg hover:bg-brand-blue/90 transition-colors"
         >
           Submit Another Response
         </button>
@@ -190,7 +190,7 @@ export default function DynamicForm({ form, onSuccess }: DynamicFormProps) {
         <button
           type="submit"
           disabled={submitting}
-          className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-lg font-bold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full py-4 bg-gradient-to-r from-brand-blue to-brand-cyan text-white text-lg font-bold rounded-lg hover:from-brand-blue hover:to-brand-cyan transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {submitting ? 'Submitting...' : 'Submit Form'}
         </button>

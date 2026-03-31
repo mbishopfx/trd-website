@@ -1,21 +1,34 @@
 import type { Metadata } from 'next';
-import { Brain, Zap, Target, TrendingUp } from 'lucide-react';
+import Link from 'next/link';
+import {
+  Brain,
+  Bot,
+  FileSearch,
+  Network,
+  CheckCircle2,
+  ArrowRight,
+  TrendingUp,
+  ShieldCheck,
+} from 'lucide-react';
 import GEOSchema from '@/components/seo/GEOSchema';
 import FAQSchema, { generateServiceFAQs } from '@/components/seo/FAQSchema';
 import ServiceSchema from '@/components/seo/ServiceSchema';
 
 export const metadata: Metadata = {
-  title: 'AI Search Optimization Services | LLM.txt Optimization | True Rank Digital',
-  description: 'True Rank Digital provides AI Search Optimization services with LLM.txt optimization, custom algorithm adaptation scripts, and AI search engine optimization for ChatGPT, Perplexity, and Google AI Overview.',
-  keywords: 'AI Search Optimization, LLM.txt optimization, AI search optimization, ChatGPT optimization, Perplexity optimization, Google AI Overview, True Rank Digital, algorithm adaptation, AI-enhanced optimization',
+  title: 'AI Search Optimization Services | True Rank Digital',
+  description:
+    'AI Search Optimization services from True Rank Digital: entity architecture, structured data, LLM-ready content systems, and technical fixes that improve discoverability across answer engines.',
+  keywords:
+    'AI search optimization, AI SEO, answer engine optimization, entity SEO, structured data, LLM optimization, ChatGPT visibility, Perplexity visibility',
   openGraph: {
-    title: 'AI Search Optimization Services & LLM.txt Optimization | True Rank Digital',
-    description: 'Optimize for AI search engines with True Rank Digital\'s AI Search Optimization services and LLM.txt creation.',
+    title: 'AI Search Optimization Services | True Rank Digital',
+    description:
+      'Strengthen AI-era visibility with entity mapping, schema architecture, and machine-readable content systems from True Rank Digital.',
     url: 'https://truerankdigital.com/services/ai-seo',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://truerankdigital.com/services/ai-seo'
+    canonical: 'https://truerankdigital.com/services/ai-seo',
   },
   robots: {
     index: true,
@@ -24,166 +37,257 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
-      'max-snippet': -1
-    }
-  }
+      'max-snippet': -1,
+    },
+  },
 };
+
+const deliveryAreas = [
+  {
+    icon: <Network className="w-6 h-6" />,
+    title: 'Entity Architecture',
+    description:
+      'We map your services, locations, and brand relationships so answer engines can identify your business as the authoritative source.',
+    bullets: [
+      'Service-to-location signal alignment',
+      'Entity consistency across key pages',
+      'Brand disambiguation for high-intent queries',
+    ],
+  },
+  {
+    icon: <FileSearch className="w-6 h-6" />,
+    title: 'Schema & Structured Data',
+    description:
+      'We implement structured data frameworks that improve how crawlers and AI systems parse and cite your business content.',
+    bullets: [
+      'Organization, Service, FAQ, and Local schema coverage',
+      'Schema validation and error remediation',
+      'Priority implementation roadmap for high-impact pages',
+    ],
+  },
+  {
+    icon: <Bot className="w-6 h-6" />,
+    title: 'AI Retrieval Readiness',
+    description:
+      'We shape your core pages so AI systems can consume, summarize, and reference your business accurately.',
+    bullets: [
+      'LLM-friendly content structure and formatting',
+      'Internal linking and crawl-flow cleanup',
+      'Page-level clarity improvements for answer extraction',
+    ],
+  },
+  {
+    icon: <ShieldCheck className="w-6 h-6" />,
+    title: 'Technical Foundations',
+    description:
+      'We remove blockers that suppress visibility and trust signals across both traditional and AI-assisted discovery.',
+    bullets: [
+      'Robots and indexability diagnostics',
+      'Thin/duplicate content and intent mismatch cleanup',
+      'Core trust signal reinforcement for conversion pages',
+    ],
+  },
+];
+
+const process = [
+  {
+    step: '01',
+    title: 'Baseline Audit',
+    text: 'We identify where your current site structure fails to communicate authority to search engines and AI systems.',
+  },
+  {
+    step: '02',
+    title: 'Signal Architecture',
+    text: 'We redesign content, schema, and entity relationships so your service footprint is unambiguous and machine-readable.',
+  },
+  {
+    step: '03',
+    title: 'Implementation',
+    text: 'We deploy prioritized technical and content fixes with execution-ready recommendations your team can run immediately.',
+  },
+  {
+    step: '04',
+    title: 'Visibility Iteration',
+    text: 'We track outcomes, close remaining gaps, and continuously adapt as answer engine behavior evolves.',
+  },
+];
 
 export default function AISEOPage() {
   const faqs = generateServiceFAQs('aiSEO', [
     {
-      question: "What AI search engines does True Rank Digital optimize for?",
-      answer: "True Rank Digital optimizes your content for all major AI search engines including ChatGPT, Perplexity, Claude, Google's AI Overview (SGE), Microsoft Copilot, and other LLM-powered search tools. Our LLM.txt files and structured data optimization ensure your business gets cited by AI systems when users ask relevant questions."
+      question: 'What does AI Search Optimization include?',
+      answer:
+        'AI Search Optimization includes entity mapping, structured data implementation, AI-readable page architecture, and technical remediation to improve discoverability in answer engines and modern search experiences.',
     },
     {
-      question: "How does AI Search Optimization differ from Google Business Optimization?",
-      answer: "Google Business Optimization focuses on ranking in Google's traditional search results and local pack, while AI Search Optimization optimizes for AI-powered answer engines. True Rank Digital provides both strategies - Google Business Optimization for Google rankings and AI Search Optimization for visibility in ChatGPT, Perplexity, and other AI tools. AI Search Optimization requires LLM.txt files, enhanced structured data, and content formatting that AI systems prefer."
-    }
+      question: 'Which platforms does this support?',
+      answer:
+        'This work supports discoverability across major AI-assisted and traditional search surfaces, including ChatGPT-driven browsing workflows, Perplexity, Google AI experiences, and standard organic search.',
+    },
+    {
+      question: 'How is this different from standard SEO?',
+      answer:
+        'Standard SEO often emphasizes rankings only. AI Search Optimization also prioritizes entity clarity, machine readability, and citation readiness so your business is selected as a source in generated answers.',
+    },
+    {
+      question: 'Who is this service best for?',
+      answer:
+        'This is best for businesses with strong offerings but fragmented site structure, weak schema, or inconsistent service and location signals that limit qualified visibility.',
+    },
   ]);
 
   return (
     <>
-      <GEOSchema 
+      <GEOSchema
         pageType="service"
         pageData={{
-          title: "AI Search Optimization Services & LLM.txt Optimization by True Rank Digital",
-          description: "True Rank Digital delivers AI Search Optimization services with LLM.txt optimization, custom algorithm adaptation scripts, and AI search engine optimization for ChatGPT, Perplexity, and Google AI Overview.",
-          url: "https://truerankdigital.com/services/ai-seo",
-          keywords: ["AI Search Optimization", "LLM.txt", "ChatGPT optimization", "Perplexity optimization", "AI search"],
-          category: "AI Search Optimization Services",
-          serviceType: "AI Search Optimization",
-          areaServed: ["United States"],
+          title: 'AI Search Optimization Services',
+          description:
+            'True Rank Digital delivers AI Search Optimization through entity mapping, schema architecture, technical SEO alignment, and LLM-ready content systems.',
+          url: 'https://truerankdigital.com/services/ai-seo',
+          keywords: ['AI Search Optimization', 'Entity SEO', 'Answer Engine Optimization', 'Structured Data'],
+          category: 'AI Search Optimization Services',
+          serviceType: 'AI Search Optimization',
+          areaServed: ['United States'],
         }}
         breadcrumbs={[
-          { name: "Home", url: "https://truerankdigital.com" },
-          { name: "Services", url: "https://truerankdigital.com/services" },
-          { name: "AI Search Optimization", url: "https://truerankdigital.com/services/ai-seo" }
+          { name: 'Home', url: 'https://truerankdigital.com' },
+          { name: 'Services', url: 'https://truerankdigital.com/services' },
+          { name: 'AI Search Optimization', url: 'https://truerankdigital.com/services/ai-seo' },
         ]}
         entities={{
-          primary: ["True Rank Digital", "AI Search Optimization", "LLM.txt Optimization"],
-          secondary: ["ChatGPT", "Perplexity", "Google AI Overview", "Algorithm Adaptation"]
+          primary: ['True Rank Digital', 'AI Search Optimization', 'Entity SEO'],
+          secondary: ['Structured Data', 'Answer Engine Visibility', 'Technical SEO'],
         }}
       />
-      
-      {/* Service Schema with Mentions */}
+
       <ServiceSchema
-        serviceName="AI Search Optimization with Algorithm Adaptation Scripts"
+        serviceName="AI Search Optimization"
         serviceUrl="https://truerankdigital.com/services/ai-seo"
-        description="Revolutionary custom algorithm adaptation scripts and proprietary solution building frameworks that automatically adjust to Google algorithm changes, maintaining peak Google visibility. Includes LLM.txt optimization for AI search engines."
+        description="AI Search Optimization service by True Rank Digital focused on entity architecture, schema implementation, technical SEO cleanup, and machine-readable content systems."
         serviceType="AI Search Optimization"
-        mentions={[
-          {
-            type: "Organization",
-            name: "OpenAI",
-            sameAs: "https://www.wikidata.org/wiki/Q21708200",
-            description: "Creator of ChatGPT"
-          },
-          {
-            type: "SoftwareApplication",
-            name: "ChatGPT",
-            sameAs: "https://www.wikidata.org/wiki/Q115564437",
-            description: "AI chatbot and search assistant"
-          },
-          {
-            type: "Organization",
-            name: "Anthropic",
-            sameAs: "https://www.wikidata.org/wiki/Q104834799",
-            description: "Creator of Claude AI"
-          },
-          {
-            type: "SoftwareApplication",
-            name: "Perplexity AI",
-            sameAs: "https://www.wikidata.org/wiki/Q123885700",
-            description: "AI-powered answer engine"
-          },
-          {
-            type: "Organization",
-            name: "Google",
-            sameAs: "https://www.wikidata.org/wiki/Q95",
-            description: "Search engine with AI Overview"
-          },
-          {
-            type: "Organization",
-            name: "Schema.org",
-            sameAs: "https://www.wikidata.org/wiki/Q845256",
-            description: "Structured data vocabulary"
-          }
-        ]}
+        alternateNames={['Answer Engine Optimization', 'AI Search Readiness']}
+        disambiguatingDescription="Provided by True Rank Digital in East Brunswick, NJ. Not affiliated with unrelated third-party software entities."
+        brand={{
+          name: 'True Rank Digital AI Search Framework',
+          alternateNames: ['AI Search Readiness System', 'TRD Entity Signal Framework'],
+          description: 'Proprietary AI search visibility methodology by True Rank Digital.',
+        }}
       />
-      
-      <FAQSchema 
-        faqs={faqs}
-        pageUrl="https://truerankdigital.com/services/ai-seo"
-        category="service"
-      />
-      
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-purple-50 to-white">
-        <section className="py-20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-purple-100 rounded-full mb-6">
-              <Brain className="w-5 h-5 text-purple-600" />
-              <span className="text-purple-600 font-semibold text-sm">AI Search Optimization</span>
-            </div>
-            
-            <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
-              <strong className="text-brand-primary">True Rank Digital</strong> Delivers AI Search Optimization Services with <strong>LLM.txt Optimization</strong>
-            </h1>
-            
-            <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-8">
-              <strong>True Rank Digital</strong> provides <strong>AI Search Optimization services</strong> featuring <strong>LLM.txt optimization</strong>, custom algorithm adaptation scripts, and <strong>AI search engine optimization</strong> for <strong>ChatGPT</strong>, <strong>Perplexity</strong>, and <strong>Google AI Overview</strong>. Our in-house technology ensures your business gets cited by AI-powered search engines.
-            </p>
 
-            <div className="max-w-4xl mx-auto mb-12">
-              <div className="glass-card p-6 lg:p-8 mb-8">
-                <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
-                  How <strong className="text-brand-primary">AI Search Optimization</strong> Works in 2026
-                </h2>
-                <p className="text-brand-dark/70 leading-relaxed">
-                  <strong>True Rank Digital's AI Search Optimization services</strong> combine advanced <strong>LLM.txt file creation</strong> with our proprietary dashboard platform to optimize your content for <strong>AI search engines</strong>. Every client receives custom <strong>algorithm adaptation scripts</strong> that ensure your business appears in AI-generated answers from ChatGPT, Perplexity, Claude, and Google's AI Overview.
+      <FAQSchema faqs={faqs} pageUrl="https://truerankdigital.com/services/ai-seo" category="service" />
+
+      <article className="pt-16 min-h-screen bg-brand-obsidian text-white">
+        <section className="py-16 border-b border-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-cyan-500/10 rounded-full mb-6 border border-cyan-400/30">
+                  <Brain className="w-5 h-5 text-cyan-300" />
+                  <span className="text-cyan-300 font-semibold text-sm">AI Search Optimization</span>
+                </div>
+                <h1 className="text-4xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
+                  Build Authority Signals That <span className="text-brand-primary">AI Systems Can Trust</span>
+                </h1>
+                <p className="text-xl text-gray-400 leading-relaxed mb-8">
+                  We engineer the technical and content foundation that helps your brand surface in modern
+                  answer-driven discovery, not just classic rankings.
                 </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-cyan-500 text-black font-semibold text-lg rounded-full hover:bg-cyan-400 transition-colors duration-300"
+                  >
+                    <TrendingUp className="w-5 h-5" />
+                    <span>Get Your Platform Audit</span>
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 border border-white/20 text-white font-semibold text-lg rounded-full hover:bg-white/5 transition-colors duration-300"
+                  >
+                    <span>Talk to the Team</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </div>
+              </div>
+
+              <div className="glass-card p-8">
+                <h2 className="text-2xl font-heading font-bold text-white mb-6">What This Service Solves</h2>
+                <ul className="space-y-4">
+                  {[
+                    'Low visibility in high-intent AI and search discovery paths',
+                    'Fragmented entity signals across your service pages',
+                    'Missing or weak schema support for key business information',
+                    'Technical blockers that prevent clear crawl and indexing behavior',
+                  ].map((item) => (
+                    <li key={item} className="flex items-start space-x-3">
+                      <CheckCircle2 className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
+                      <span className="text-gray-300">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
+          </div>
+        </section>
 
-            <h2 className="text-3xl font-heading font-bold text-brand-dark mb-8">
-              What <strong className="text-brand-primary">AI Search Optimization Services</strong> Include
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-10 text-center">
+              Core Delivery Areas
             </h2>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              <div className="glass-card p-6 hover:shadow-glass-lg transition-all duration-300">
-                <Brain className="w-8 h-8 text-purple-600 mx-auto mb-4" />
-                <h3 className="font-bold text-brand-dark mb-2">LLM.txt File Creation</h3>
-                <p className="text-brand-dark/70 text-sm">Specialized files optimized for AI search engines like ChatGPT and Perplexity</p>
-              </div>
-              <div className="glass-card p-6 hover:shadow-glass-lg transition-all duration-300">
-                <Target className="w-8 h-8 text-purple-600 mx-auto mb-4" />
-                <h3 className="font-bold text-brand-dark mb-2">Custom Algorithm Scripts</h3>
-                <p className="text-brand-dark/70 text-sm">Proprietary automation that adapts to AI search algorithm changes</p>
-              </div>
-              <div className="glass-card p-6 hover:shadow-glass-lg transition-all duration-300">
-                <Zap className="w-8 h-8 text-purple-600 mx-auto mb-4" />
-                <h3 className="font-bold text-brand-dark mb-2">AI Overview Optimization</h3>
-                <p className="text-brand-dark/70 text-sm">Structured content for Google AI Overview and SGE visibility</p>
-              </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {deliveryAreas.map((area) => (
+                <div key={area.title} className="glass-card p-8">
+                  <div className="text-cyan-300 mb-4">{area.icon}</div>
+                  <h3 className="text-2xl font-heading font-bold text-white mb-3">{area.title}</h3>
+                  <p className="text-gray-400 mb-5">{area.description}</p>
+                  <ul className="space-y-2">
+                    {area.bullets.map((bullet) => (
+                      <li key={bullet} className="text-gray-300 text-sm flex items-start space-x-2">
+                        <span className="text-cyan-400 mt-0.5">•</span>
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
+          </div>
+        </section>
 
-            <div className="glass-card p-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Brain className="w-10 h-10 text-white" />
-              </div>
-              <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
-                Why Choose <strong className="text-brand-primary">True Rank Digital</strong> for AI Search Optimization
-              </h2>
-              <p className="text-brand-dark/70 mb-6">
-                Get your business cited by <strong>AI search engines</strong> with our proven <strong>AI Search Optimization</strong> tactics and exclusive <strong>LLM.txt creation</strong> services. <strong>True Rank Digital</strong> delivers AI visibility for ChatGPT, Perplexity, and Google AI Overview.
-              </p>
-              <a
-                href="/free-audit"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-purple-600 text-white font-semibold text-lg rounded-full hover:bg-purple-700 transition-colors duration-300"
-              >
-                <TrendingUp className="w-5 h-5" />
-                <span>Get Free AI Search Optimization Consultation</span>
-              </a>
+        <section className="py-16 border-y border-white/5 bg-white/2">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-10 text-center">
+              Implementation Model
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {process.map((item) => (
+                <div key={item.step} className="glass-card p-6">
+                  <div className="text-cyan-300 font-bold text-sm mb-2">STEP {item.step}</div>
+                  <h3 className="text-xl font-heading font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-gray-400">{item.text}</p>
+                </div>
+              ))}
             </div>
+          </div>
+        </section>
+
+        <section className="py-16 border-t border-white/5">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">
+              Need Stronger Visibility Across Search and AI?
+            </h2>
+            <p className="text-xl text-gray-400 mb-8">
+              We will show you the exact entity, schema, and technical priorities to execute first.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center space-x-2 px-10 py-4 bg-cyan-500 text-black font-semibold text-lg rounded-full hover:bg-cyan-400 transition-colors duration-300"
+            >
+              <span>Get Your Platform Audit</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
         </section>
       </article>

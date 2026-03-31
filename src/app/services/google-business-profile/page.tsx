@@ -37,7 +37,7 @@ export default function GoogleBusinessProfilePage() {
     },
     {
       question: "What's included in True Rank Digital's GBP management service?",
-      answer: "Our comprehensive GBP management includes: complete profile optimization (categories, attributes, services, products), Google Posts creation, photo optimization and geotagging, review monitoring and response management, Q&A management, citation consistency auditing, competitor analysis, performance reporting, and access to our proprietary dashboard for tracking."
+      answer: "Our comprehensive GBP management includes: complete profile optimization (categories, attributes, services, products), Google Posts creation, photo optimization and geotagging, review monitoring and response management, Q&A management, citation consistency auditing, competitor analysis, performance reporting, and access to clear performance reporting."
     },
     {
       question: "How long does it take to see results from GBP optimization?",
@@ -57,7 +57,7 @@ export default function GoogleBusinessProfilePage() {
     {
       step: '01',
       title: 'Comprehensive Audit',
-      description: 'We analyze your current GBP status, competitor profiles, and local market opportunities using our proprietary audit framework.',
+      description: 'We analyze your current GBP status, competitor profiles, and local market opportunities using a structured local visibility audit framework.',
       details: ['Profile completeness score', 'Category optimization analysis', 'Competitor gap analysis', 'Citation consistency check']
     },
     {
@@ -81,7 +81,7 @@ export default function GoogleBusinessProfilePage() {
     {
       step: '05',
       title: 'Ongoing Monitoring',
-      description: 'Continuous tracking and optimization through our proprietary dashboard platform.',
+      description: 'Continuous tracking and optimization through a shared reporting dashboard.',
       details: ['Real-time performance tracking', 'Competitor monitoring', 'Algorithm update adaptation', 'Monthly strategy calls']
     }
   ];
@@ -179,14 +179,14 @@ export default function GoogleBusinessProfilePage() {
         faqs={faqs}
       />
       
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-blue-50 to-white">
+      <article className="pt-16 min-h-screen bg-brand-obsidian text-white">
         {/* Breadcrumb Navigation */}
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <ol className="flex items-center space-x-2 text-sm">
-            <li><Link href="/" className="text-brand-dark/60 hover:text-brand-primary transition-colors">Home</Link></li>
-            <li className="text-brand-dark/40">/</li>
-            <li><Link href="/services" className="text-brand-dark/60 hover:text-brand-primary transition-colors">Services</Link></li>
-            <li className="text-brand-dark/40">/</li>
+            <li><Link href="/" className="text-gray-500 hover:text-brand-primary transition-colors">Home</Link></li>
+            <li className="text-white/40">/</li>
+            <li><Link href="/services" className="text-gray-500 hover:text-brand-primary transition-colors">Services</Link></li>
+            <li className="text-white/40">/</li>
             <li className="text-brand-primary font-medium">Google Business Profile</li>
           </ol>
         </nav>
@@ -201,24 +201,24 @@ export default function GoogleBusinessProfilePage() {
                   <span className="text-blue-600 font-semibold text-sm">GBP Management Experts</span>
                 </div>
                 
-                <h1 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+                <h1 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
                   <strong className="text-brand-primary">Google Business Profile</strong> Management That Drives Real Results
                 </h1>
                 
-                <p className="text-xl text-brand-dark/70 mb-8">
+                <p className="text-xl text-gray-400 mb-8">
                   <strong>True Rank Digital</strong> helps businesses strengthen their Google Business Profile presence with execution-first optimization, review workflows, and performance tracking designed to improve local visibility and conversions.
                 </p>
 
                 <div className="flex flex-wrap gap-4 mb-8">
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>Execution-First Optimization</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>Local Visibility Coverage</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>Trust + Conversion Focus</span>
                   </div>
@@ -246,8 +246,8 @@ export default function GoogleBusinessProfilePage() {
               <div className="grid grid-cols-2 gap-6">
                 {results.map((result, index) => (
                   <div key={index} className="glass-card p-6 text-center">
-                    <div className="text-lg font-semibold text-brand-dark mb-2">{result.title}</div>
-                    <div className="text-sm text-brand-dark/70">{result.description}</div>
+                    <div className="text-lg font-semibold text-white mb-2">{result.title}</div>
+                    <div className="text-sm text-gray-400">{result.description}</div>
                   </div>
                 ))}
               </div>
@@ -256,29 +256,29 @@ export default function GoogleBusinessProfilePage() {
         </section>
 
         {/* Why GBP Matters Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Why <strong className="text-brand-primary">Google Business Profile</strong> Optimization Matters
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Your Google Business Profile is often the first impression customers have of your business. Here&apos;s why professional optimization is critical:
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="glass-card p-8">
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Local Intent Visibility</h3>
-                <p className="text-brand-dark/70">Many searches are local and map-driven. A well-optimized GBP helps you show up when customers are looking nearby.</p>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">Local Intent Visibility</h3>
+                <p className="text-gray-400">Many searches are local and map-driven. A well-optimized GBP helps you show up when customers are looking nearby.</p>
               </div>
               <div className="glass-card p-8">
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">High-Intent Actions</h3>
-                <p className="text-brand-dark/70">Your GBP is often the fastest path to calls, direction requests, and website visits from ready-to-buy searchers.</p>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">High-Intent Actions</h3>
+                <p className="text-gray-400">Your GBP is often the fastest path to calls, direction requests, and website visits from ready-to-buy searchers.</p>
               </div>
               <div className="glass-card p-8">
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Complete Profiles Win</h3>
-                <p className="text-brand-dark/70">Missing categories, services, photos, and responses can reduce visibility. We focus on completeness and consistency.</p>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">Complete Profiles Win</h3>
+                <p className="text-gray-400">Missing categories, services, photos, and responses can reduce visibility. We focus on completeness and consistency.</p>
               </div>
             </div>
           </div>
@@ -288,10 +288,10 @@ export default function GoogleBusinessProfilePage() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Comprehensive <strong className="text-brand-primary">GBP Management</strong> Services
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Our full-service Google Business Profile management covers every aspect of your local presence.
               </p>
             </div>
@@ -299,11 +299,11 @@ export default function GoogleBusinessProfilePage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="glass-card p-6 hover:scale-105 transition-transform duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-4 text-white">
+                  <div className="w-16 h-16 bg-gradient-to-br from-brand-obsidian0 to-cyan-500 rounded-2xl flex items-center justify-center mb-4 text-white">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">{feature.title}</h3>
-                  <p className="text-brand-dark/70">{feature.description}</p>
+                  <h3 className="text-xl font-heading font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-400">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -311,13 +311,13 @@ export default function GoogleBusinessProfilePage() {
         </section>
 
         {/* Our Process Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Our Proven <strong className="text-brand-primary">5-Step Optimization</strong> Process
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Our systematic approach is designed to improve profile quality, local visibility, and conversion signals over time.
               </p>
             </div>
@@ -326,15 +326,15 @@ export default function GoogleBusinessProfilePage() {
               {optimizationProcess.map((process, index) => (
                 <div key={index} className="glass-card p-8">
                   <div className="flex flex-col lg:flex-row lg:items-start gap-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-br from-brand-obsidian0 to-cyan-500 rounded-2xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
                       {process.step}
                     </div>
                     <div className="flex-grow">
-                      <h3 className="text-2xl font-heading font-bold text-brand-dark mb-3">{process.title}</h3>
-                      <p className="text-brand-dark/70 mb-4">{process.description}</p>
+                      <h3 className="text-2xl font-heading font-bold text-white mb-3">{process.title}</h3>
+                      <p className="text-gray-400 mb-4">{process.description}</p>
                       <div className="grid sm:grid-cols-2 gap-3">
                         {process.details.map((detail, idx) => (
-                          <div key={idx} className="flex items-center space-x-2 text-brand-dark/70">
+                          <div key={idx} className="flex items-center space-x-2 text-gray-400">
                             <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                             <span>{detail}</span>
                           </div>
@@ -353,7 +353,7 @@ export default function GoogleBusinessProfilePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-heading font-bold text-brand-dark mb-6">
+                <h2 className="text-3xl font-heading font-bold text-white mb-6">
                   Why Choose <strong className="text-brand-primary">True Rank Digital</strong> for GBP Management
                 </h2>
                 
@@ -363,8 +363,8 @@ export default function GoogleBusinessProfilePage() {
                       <Award className="w-6 h-6 text-blue-600" />
                     </div>
                   <div>
-                    <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Proven Track Record</h3>
-                      <p className="text-brand-dark/70">Repeatable GBP workflows focused on profile quality, trust signals, and measurable local visibility improvements over time.</p>
+                    <h3 className="text-lg font-heading font-bold text-white mb-2">Proven Track Record</h3>
+                      <p className="text-gray-400">Repeatable GBP workflows focused on profile quality, trust signals, and measurable local visibility improvements over time.</p>
                   </div>
                 </div>
                   
@@ -373,8 +373,8 @@ export default function GoogleBusinessProfilePage() {
                       <Zap className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Proprietary Technology</h3>
-                      <p className="text-brand-dark/70">Our dashboard platform provides real-time tracking, competitor monitoring, and automated optimization alerts.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Proprietary Technology</h3>
+                      <p className="text-gray-400">Our dashboard platform provides real-time tracking, competitor monitoring, and automated optimization alerts.</p>
                     </div>
                   </div>
                   
@@ -383,8 +383,8 @@ export default function GoogleBusinessProfilePage() {
                       <Users className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Dedicated GBP Specialists</h3>
-                      <p className="text-brand-dark/70">Our team focuses exclusively on local search optimization, staying current with every Google update and best practice.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Dedicated GBP Specialists</h3>
+                      <p className="text-gray-400">Our team focuses exclusively on local search optimization, staying current with every Google update and best practice.</p>
                     </div>
                   </div>
                   
@@ -393,22 +393,22 @@ export default function GoogleBusinessProfilePage() {
                       <Clock className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Rapid Response</h3>
-                      <p className="text-brand-dark/70">Fast response for profile issues, unauthorized edits, or negative reviews requiring immediate attention.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Rapid Response</h3>
+                      <p className="text-gray-400">Fast response for profile issues, unauthorized edits, or negative reviews requiring immediate attention.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-6 text-center">Industries We Serve</h3>
+                <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center">Industries We Serve</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     'Law Firms', 'Medical Practices', 'Dental Offices', 'Home Services',
                     'Real Estate', 'Restaurants', 'Auto Repair', 'Financial Services',
                     'Retail Stores', 'Professional Services', 'Healthcare', 'Multi-Location'
                   ].map((industry, index) => (
-                    <div key={index} className="flex items-center space-x-2 text-brand-dark/70">
+                    <div key={index} className="flex items-center space-x-2 text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-500" />
                       <span>{industry}</span>
                     </div>
@@ -420,13 +420,13 @@ export default function GoogleBusinessProfilePage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Frequently Asked Questions
               </h2>
-              <p className="text-xl text-brand-dark/70">
+              <p className="text-xl text-gray-400">
                 Common questions about our Google Business Profile management services.
               </p>
             </div>
@@ -434,8 +434,8 @@ export default function GoogleBusinessProfilePage() {
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="glass-card p-6">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{faq.question}</h3>
-                  <p className="text-brand-dark/70">{faq.answer}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-400">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -446,10 +446,10 @@ export default function GoogleBusinessProfilePage() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Related <strong className="text-brand-primary">Services</strong>
               </h2>
-              <p className="text-xl text-brand-dark/70">
+              <p className="text-xl text-gray-400">
                 Maximize your results with our complementary services.
               </p>
             </div>
@@ -457,8 +457,8 @@ export default function GoogleBusinessProfilePage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedServices.map((service, index) => (
                 <Link key={index} href={service.href} className="glass-card p-6 hover:scale-105 transition-transform duration-300 group">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-2 group-hover:text-brand-primary transition-colors">{service.name}</h3>
-                  <p className="text-brand-dark/70 text-sm mb-4">{service.description}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-2 group-hover:text-brand-primary transition-colors">{service.name}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                   <div className="flex items-center text-brand-primary font-medium text-sm">
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -472,14 +472,14 @@ export default function GoogleBusinessProfilePage() {
         {/* CTA Section */}
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="glass-card p-8 bg-gradient-to-br from-blue-500/10 to-cyan-500/10">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div className="glass-card p-8 bg-gradient-to-br from-brand-obsidian0/10 to-cyan-500/10">
+              <div className="w-20 h-20 bg-gradient-to-br from-brand-obsidian0 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <MapPin className="w-10 h-10 text-white" />
               </div>
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Ready to Dominate <strong className="text-brand-primary">Local Search</strong>?
               </h2>
-              <p className="text-xl text-brand-dark/70 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
                 Get a free Google Business Profile audit and discover how we can improve your local visibility. No obligation, just actionable insights.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

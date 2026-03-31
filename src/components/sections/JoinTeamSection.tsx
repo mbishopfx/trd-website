@@ -18,7 +18,7 @@ export default function JoinTeamSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 rounded-full mb-6">
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-brand-obsidian/10 rounded-full mb-6">
               <Users className="w-5 h-5 text-white" />
               <span className="text-white font-semibold text-sm">Join Our Team</span>
             </div>
@@ -49,7 +49,7 @@ export default function JoinTeamSection() {
                   viewport={{ once: true }}
                   className="flex items-center space-x-3"
                 >
-                  <Star className="w-5 h-5 text-white/80 flex-shrink-0" />
+                  <Star className="w-5 h-5 text-gray-300 flex-shrink-0" />
                   <span className="text-white/90">{benefit}</span>
                 </motion.div>
               ))}
@@ -64,7 +64,7 @@ export default function JoinTeamSection() {
             >
               <motion.a
                 href="mailto:careers@truerankdigital.com"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-brand-primary font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-brand-obsidian text-brand-primary font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -74,7 +74,7 @@ export default function JoinTeamSection() {
 
               <motion.a
                 href="/contact"
-                className="inline-flex items-center space-x-2 px-8 py-4 glass border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300 group"
+                className="inline-flex items-center space-x-2 px-8 py-4 glass border-white/30 text-white font-semibold rounded-full hover:bg-brand-obsidian/10 transition-all duration-300 group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -95,10 +95,10 @@ export default function JoinTeamSection() {
             <div className="glass p-8 relative overflow-hidden">
               
               {/* Background Glow */}
-              <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-brand-obsidian/10 rounded-full blur-2xl"></div>
               
               <div className="relative text-center">
-                <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-24 h-24 bg-brand-obsidian/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Users className="w-12 h-12 text-white" />
                 </div>
                 
@@ -120,7 +120,7 @@ export default function JoinTeamSection() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.3, delay: index * 0.1 + 0.5 }}
                       viewport={{ once: true }}
-                      className="p-3 bg-white/10 rounded-lg text-white/90 font-medium hover:bg-white/20 transition-colors duration-200 cursor-pointer"
+                      className="p-3 bg-brand-obsidian/10 rounded-lg text-white/90 font-medium hover:bg-brand-obsidian/20 transition-colors duration-200 cursor-pointer"
                     >
                       {position}
                     </motion.div>
@@ -128,7 +128,7 @@ export default function JoinTeamSection() {
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-white/20">
-                  <p className="text-white/80 text-sm">
+                  <p className="text-gray-300 text-sm">
                     Don't see your role? We're always open to exceptional talent.
                   </p>
                 </div>

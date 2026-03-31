@@ -10,7 +10,7 @@ export default function AIOFeaturesSection() {
       icon: <Brain className="w-8 h-8" />,
       title: 'Schema Markup Engineering',
       description: 'Custom structured data implementation for each business type. We build unique schema markup that helps search engines understand your content better than competitors.',
-      color: 'from-purple-500 to-indigo-500'
+      color: 'from-blue-600 to-blue-400'
     },
     {
       icon: <Search className="w-8 h-8" />,
@@ -34,13 +34,13 @@ export default function AIOFeaturesSection() {
       icon: <Globe className="w-8 h-8" />,
       title: 'Technical SEO Auditing',
       description: 'Deep technical analysis of site structure, page speed, mobile optimization, and crawlability issues using our custom-built auditing tools.',
-      color: 'from-red-500 to-pink-500'
+      color: 'from-blue-600 to-cyan-500'
     },
     {
       icon: <Target className="w-8 h-8" />,
       title: 'Semantic HTML Optimization',
       description: 'We optimize HTML structure and semantic markup to help search engines better understand your content context and relevance.',
-      color: 'from-indigo-500 to-purple-500'
+      color: 'from-blue-600 to-blue-400'
     },
     {
       icon: <Code className="w-8 h-8" />,
@@ -57,7 +57,7 @@ export default function AIOFeaturesSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-brand-obsidian">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -68,10 +68,10 @@ export default function AIOFeaturesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
             In-House Technology Platform
           </h2>
-          <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             We don't just implement SEO strategies—we BUILD the technology that powers them. Our proprietary software finds problems other agencies miss and creates custom solutions that give you a competitive edge.
           </p>
         </motion.div>
@@ -93,11 +93,11 @@ export default function AIOFeaturesSection() {
                 </div>
               </div>
 
-              <h3 className="text-lg font-heading font-bold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors duration-300">
+              <h3 className="text-lg font-heading font-bold text-white mb-4 group-hover:text-brand-primary transition-colors duration-300">
                 {feature.title}
               </h3>
 
-              <p className="text-brand-dark/70 text-sm leading-relaxed">
+              <p className="text-gray-400 text-sm leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>

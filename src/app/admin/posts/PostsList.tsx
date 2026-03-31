@@ -25,12 +25,12 @@ export default function PostsList({ posts }: { posts: Post[] }) {
       {posts.map((post) => (
         <div
           key={post.id}
-          className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors"
+          className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:bg-brand-obsidian/15 transition-colors"
         >
           <div className="flex items-start gap-6">
             {/* Featured Image */}
             {post.featured_image && (
-              <div className="flex-shrink-0 w-40 h-24 rounded-lg overflow-hidden bg-white/5">
+              <div className="flex-shrink-0 w-40 h-24 rounded-lg overflow-hidden bg-brand-obsidian/5">
                 <img
                   src={post.featured_image}
                   alt={post.title}
@@ -82,7 +82,7 @@ export default function PostsList({ posts }: { posts: Post[] }) {
               </Link>
               <button
                 onClick={() => copyLink(post.slug)}
-                className="px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors text-sm whitespace-nowrap"
+                className="px-4 py-2 bg-brand-obsidian/10 text-white rounded-lg hover:bg-brand-obsidian/20 transition-colors text-sm whitespace-nowrap"
               >
                 Copy Link
               </button>

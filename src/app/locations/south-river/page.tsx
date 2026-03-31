@@ -100,7 +100,7 @@ export default function SouthRiverPage() {
       />
       <FAQSchema faqs={faqs} pageUrl="https://truerankdigital.com/locations/south-river" category="location" />
       
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-teal-50 via-white to-teal-50">
+      <article className="pt-16 min-h-screen bg-brand-obsidian text-white">
         {/* Hero Section */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
@@ -111,17 +111,17 @@ export default function SouthRiverPage() {
                 <span className="text-sm font-semibold text-teal-600">Serving South River, NJ - Hometown SEO Specialists</span>
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
                 Professional <strong className="text-brand-primary">SEO Services</strong> in <br />
                 <strong className="text-brand-primary">South River, New Jersey</strong>
               </h1>
               
-              <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-8 leading-relaxed">
+              <p className="text-xl text-gray-400 max-w-4xl mx-auto mb-8 leading-relaxed">
                 <strong>True Rank Digital</strong> helps South River businesses dominate local search results with community-focused <strong>SEO strategies</strong> for <strong>Main Street shops</strong>, home service contractors, and local professionals. Expert Google Business Profile optimization and digital marketing for South River Borough's close-knit business community.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <a href="/free-audit" className="inline-flex items-center space-x-2 px-8 py-4 bg-teal-600 text-white font-semibold text-lg rounded-full hover:bg-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <a href="/contact" className="inline-flex items-center space-x-2 px-8 py-4 bg-teal-600 text-white font-semibold text-lg rounded-full hover:bg-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                   <TrendingUp className="w-5 h-5" />
                   <span>Get Free South River SEO Audit</span>
                 </a>
@@ -135,19 +135,19 @@ export default function SouthRiverPage() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Local</div>
-                  <div className="text-sm text-brand-dark/60">Community Focus</div>
+                  <div className="text-sm text-gray-500">Community Focus</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Main St</div>
-                  <div className="text-sm text-brand-dark/60">Local Commerce</div>
+                  <div className="text-sm text-gray-500">Local Commerce</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Grid</div>
-                  <div className="text-sm text-brand-dark/60">Visibility Tracking</div>
+                  <div className="text-sm text-gray-500">Visibility Tracking</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Strategy</div>
-                  <div className="text-sm text-brand-dark/60">Built to Convert</div>
+                  <div className="text-sm text-gray-500">Built to Convert</div>
                 </div>
               </div>
             </div>
@@ -155,9 +155,9 @@ export default function SouthRiverPage() {
         </section>
 
         {/* Why South River Businesses Choose Us */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-12 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-12 text-center">
               Why <strong className="text-brand-primary">South River Businesses</strong> Choose True Rank Digital
             </h2>
 
@@ -166,10 +166,10 @@ export default function SouthRiverPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                   <Heart className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Community-Focused</strong> Approach
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   We understand South River's small-town values and tight-knit community. Our SEO strategies emphasize local connections, hometown pride, and community involvement - values that resonate with South River residents who prefer supporting local businesses over big-box alternatives.
                 </p>
               </div>
@@ -178,10 +178,10 @@ export default function SouthRiverPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                   <Home className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Main Street</strong> Expertise
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   From Main Street shops to residential area contractors, we know how to help South River businesses compete against larger neighboring towns. Our hyperlocal strategies capture customers who value convenient, personal service from hometown businesses they can trust.
                 </p>
               </div>
@@ -190,10 +190,10 @@ export default function SouthRiverPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                   <BarChart3 className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Small Business</strong> Specialists
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   We specialize in SEO for small businesses like yours. Our strategies work within your budget, focus on high-ROI local keywords, and deliver measurable results. Track your South River rankings in real-time and see exactly how you're performing against local competitors.
                 </p>
               </div>
@@ -204,10 +204,10 @@ export default function SouthRiverPage() {
         {/* Services for South River */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6 text-center">
               Complete <strong className="text-brand-primary">SEO Services</strong> for South River Businesses
             </h2>
-            <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-500 text-center mb-12 max-w-3xl mx-auto">
               Specialized local search optimization for South River's small business community and Main Street shops
             </p>
 
@@ -219,13 +219,13 @@ export default function SouthRiverPage() {
                     <Target className="w-6 h-6 text-teal-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Main Street & Local Business Optimization
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Help South River residents find your Main Street business. We optimize for 'Main Street South River' searches, target local customer queries, emphasize convenient hometown location, showcase community connections, and position you as the local alternative to larger commercial areas. Perfect for retail shops, restaurants, and professional services.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-teal-600 mr-2">✓</span>
                         <span>"Main Street South River" keyword optimization</span>
@@ -254,13 +254,13 @@ export default function SouthRiverPage() {
                     <Home className="w-6 h-6 text-teal-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Home Services & Contractor SEO
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Dominate local searches for home services in South River. We target South River homeowners, emphasize quick local response times, showcase South River project portfolios, optimize for 'near me' emergency searches, and capture surrounding area customers (Sayreville, Old Bridge borders). Ideal for plumbers, electricians, HVAC, landscaping, and contractors.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-teal-600 mr-2">✓</span>
                         <span>South River homeowner targeting</span>
@@ -289,13 +289,13 @@ export default function SouthRiverPage() {
                     <Star className="w-6 h-6 text-teal-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Review Generation & Community Reputation
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       In South River's close-knit community, reputation is everything. We help you build strong online presence with systematic review generation, showcase community support and local loyalty, respond to reviews professionally, and leverage positive testimonials from South River customers. Strong reviews convince residents to choose local over chain alternatives.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-teal-600 mr-2">✓</span>
                         <span>Automated review requests</span>
@@ -324,13 +324,13 @@ export default function SouthRiverPage() {
                     <Zap className="w-6 h-6 text-teal-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       South River Community Content
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Content that connects with South River residents. We create blogs and service pages featuring South River landmarks, local events, community involvement, and neighborhood stories. Content that establishes your business as part of South River's fabric while targeting valuable local search terms that drive qualified traffic.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-teal-600 mr-2">✓</span>
                         <span>South River neighborhood content</span>
@@ -356,29 +356,29 @@ export default function SouthRiverPage() {
         </section>
 
         {/* About South River Market */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+                <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
                   Understanding <strong className="text-brand-primary">South River's</strong> Hometown Community
                 </h2>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   South River Borough (16,000 residents) is Middlesex County's tight-knit hometown community where <strong>Main Street businesses</strong> thrive on personal relationships and local loyalty. Unlike larger neighboring towns, South River maintains its small-town character where residents know their local business owners and prefer supporting hometown establishments.
                 </p>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   <strong>Main Street</strong> features local shops, restaurants, and professional services competing with larger commercial corridors in Sayreville, Old Bridge, and East Brunswick. South River's strength is its community-focused customer base - residents who value personal service, convenient location, and supporting neighbors' businesses over anonymous big-box alternatives.
                 </p>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   Whether you're a Main Street retailer, home service contractor, professional service provider, or local restaurant, we help you leverage South River's hometown advantage online. Our SEO strategies capture local searches, emphasize community connections, and position you as the trusted local choice for South River residents.
                 </p>
               </div>
 
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-6">
+                <h3 className="text-2xl font-heading font-bold text-white mb-6">
                   South River Areas We Serve
                 </h3>
-                <div className="grid grid-cols-2 gap-4 text-brand-dark/70">
+                <div className="grid grid-cols-2 gap-4 text-gray-400">
                   <div className="flex items-start space-x-2">
                     <MapPin className="w-5 h-5 text-teal-600 flex-shrink-0 mt-1" />
                     <span>Main Street</span>
@@ -421,8 +421,8 @@ export default function SouthRiverPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-gray-200">
-                  <h4 className="font-semibold text-brand-dark mb-4">Serving South River Zip Code:</h4>
+                <div className="mt-8 pt-8 border-t border-white/10">
+                  <h4 className="font-semibold text-white mb-4">Serving South River Zip Code:</h4>
                   <div className="flex flex-wrap gap-3">
                     <span className="px-4 py-2 bg-teal-50 text-teal-600 rounded-full text-sm font-medium">08882</span>
                   </div>
@@ -435,10 +435,10 @@ export default function SouthRiverPage() {
         {/* Process */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6 text-center">
               Our <strong className="text-brand-primary">South River SEO</strong> Process
             </h2>
-            <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-500 text-center mb-12 max-w-3xl mx-auto">
               Proven methodology designed for South River's small business community
             </p>
 
@@ -454,8 +454,8 @@ export default function SouthRiverPage() {
                   <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
                     {item.step}
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{item.title}</h3>
-                  <p className="text-sm text-brand-dark/70 leading-relaxed">{item.desc}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -463,17 +463,17 @@ export default function SouthRiverPage() {
         </section>
 
         {/* FAQs */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-12 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-12 text-center">
               Frequently Asked Questions About <strong className="text-brand-primary">South River SEO</strong>
             </h2>
 
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="glass-card p-6">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{faq.question}</h3>
-                  <p className="text-brand-dark/70 leading-relaxed">{faq.answer}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -492,17 +492,17 @@ export default function SouthRiverPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/free-audit" className="inline-flex items-center space-x-2 px-10 py-5 bg-white text-teal-600 font-bold text-lg rounded-full hover:bg-gray-100 transition-all duration-300 shadow-2xl">
+              <a href="/contact" className="inline-flex items-center space-x-2 px-10 py-5 bg-brand-obsidian text-teal-600 font-bold text-lg rounded-full hover:bg-brand-obsidian-light transition-all duration-300 shadow-2xl">
                 <TrendingUp className="w-6 h-6" />
                 <span>Get Your Free South River SEO Audit</span>
               </a>
-              <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white/10 transition-all duration-300">
+              <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-brand-obsidian/10 transition-all duration-300">
                 <Phone className="w-6 h-6" />
                 <span>(732) 475-0139</span>
               </a>
             </div>
 
-            <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-white/80">
+            <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-gray-300">
               <div className="flex items-center space-x-2">
                 <Clock className="w-5 h-5" />
                 <span>Fast response</span>
@@ -520,13 +520,13 @@ export default function SouthRiverPage() {
         </section>
 
         {/* Map Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">
                 Serving <span className="text-brand-primary">South River, NJ</span>
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 We provide SEO services to South River businesses from our East Brunswick headquarters
               </p>
             </div>

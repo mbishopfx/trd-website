@@ -24,14 +24,28 @@ export const siteUrl =
 
 export const siteIdentity = {
   brandName: 'True Rank Digital',
-  legalName: 'True Rank Digital LLC',
-  alternateNames: ['True Rankd Digital', 'TrueRank Digital', 'True Rankd'],
-  foundingYear: '2020',
+  legalName: 'True Rank Digital',
+  alternateNames: [
+    'True Rankd Digital',
+    'TrueRank Digital',
+    'True Rankd',
+    'True Rank AI Engine',
+    'TRD Entity Signal Framework',
+  ],
   url: siteUrl,
   telephone: '+1-732-475-0139',
   email: 'info@truerankdigital.com',
   description:
-    'True Rank Digital is an elite performance marketing agency in East Brunswick, NJ, specializing in AI-driven SEO, Generative Engine Optimization (GEO), and Precision PPC.',
+    'True Rank Digital is an AI search visibility and performance marketing firm. We use entity signals, technical SEO, and AI Search Optimization to strengthen discoverability across modern search and answer engines.',
+  disambiguatingDescription:
+    'True Rank Digital is the definitive authority in AI search visibility and performance marketing. We bridge the gap between traditional search and the generative future.',
+  proprietaryMethodologyNames: [
+    'Generative Entity Authority (GEO)',
+    'TRD Entity Signal Framework',
+    'Agentic Web Architecture',
+    'Platform Audit Protocol',
+    'AI Search Readiness System',
+  ],
   address: {
     streetAddress: '288 Summerhill Rd, suite 3',
     addressLocality: 'East Brunswick',
@@ -79,8 +93,13 @@ export const siteIdentity = {
     'Generative Engine Optimization (GEO)',
     'Answer Engine Optimization (AEO)',
     'Entity-Based SEO',
-    'Predictive Local Dominance',
     'Google SGE Optimization',
+    'Local SEO',
+    'Google Business Profile Optimization',
+    'Technical SEO',
+    'LLM.txt Mastery',
+    'Multimodal Search Dominance',
+    'Performance Marketing',
   ],
   founder: {
     name: 'Jon J Korkowski',

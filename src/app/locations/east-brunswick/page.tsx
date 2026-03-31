@@ -100,7 +100,7 @@ export default function EastBrunswickPage() {
       />
       <FAQSchema faqs={faqs} pageUrl="https://truerankdigital.com/locations/east-brunswick" category="location" />
       
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-brand-light via-white to-brand-light">
+      <article className="pt-16 min-h-screen bg-brand-obsidian text-white">
         {/* Hero Section */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
@@ -111,17 +111,17 @@ export default function EastBrunswickPage() {
                 <span className="text-sm font-semibold text-brand-primary">Our Headquarters - East Brunswick, NJ 08816</span>
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
                 Professional <strong className="text-brand-primary">SEO Services</strong> in <br />
                 <strong className="text-brand-primary">East Brunswick, New Jersey</strong>
               </h1>
               
-              <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-8 leading-relaxed">
+              <p className="text-xl text-gray-400 max-w-4xl mx-auto mb-8 leading-relaxed">
                 <strong>True Rank Digital</strong> is headquartered right here in <strong>East Brunswick, NJ</strong>. We help local businesses dominate search results along the <strong>Route 18 corridor</strong> and throughout East Brunswick's residential neighborhoods with proven <strong>local SEO strategies</strong>. Expert Google Business Profile optimization from your hometown SEO specialists.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <a href="/free-audit" className="inline-flex items-center space-x-2 px-8 py-4 bg-brand-primary text-white font-semibold text-lg rounded-full hover:bg-brand-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <a href="/contact" className="inline-flex items-center space-x-2 px-8 py-4 bg-brand-primary text-white font-semibold text-lg rounded-full hover:bg-brand-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl">
                   <TrendingUp className="w-5 h-5" />
                   <span>Get Free East Brunswick SEO Audit</span>
                 </a>
@@ -135,19 +135,19 @@ export default function EastBrunswickPage() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">HQ</div>
-                  <div className="text-sm text-brand-dark/60">East Brunswick Based</div>
+                  <div className="text-sm text-gray-500">East Brunswick Based</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Local</div>
-                  <div className="text-sm text-brand-dark/60">Market Knowledge</div>
+                  <div className="text-sm text-gray-500">Market Knowledge</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Grid</div>
-                  <div className="text-sm text-brand-dark/60">Visibility Tracking</div>
+                  <div className="text-sm text-gray-500">Visibility Tracking</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Strategy</div>
-                  <div className="text-sm text-brand-dark/60">Built to Convert</div>
+                  <div className="text-sm text-gray-500">Built to Convert</div>
                 </div>
               </div>
             </div>
@@ -155,9 +155,9 @@ export default function EastBrunswickPage() {
         </section>
 
         {/* Why East Brunswick Businesses Choose Us */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-12 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-12 text-center">
               Why <strong className="text-brand-primary">East Brunswick Businesses</strong> Choose True Rank Digital
             </h2>
 
@@ -166,10 +166,10 @@ export default function EastBrunswickPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-blue-500 rounded-2xl flex items-center justify-center mb-6">
                   <Home className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Headquartered</strong> in East Brunswick
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   We're not just another agency claiming to serve East Brunswick - we're based here at 08816. We shop local, know every shopping center along Route 18, understand Garden State Parkway traffic patterns, and have intimate knowledge of what works for East Brunswick businesses. Local presence means same-day consultations and strategies built by people who live here.
                 </p>
               </div>
@@ -178,10 +178,10 @@ export default function EastBrunswickPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-blue-500 rounded-2xl flex items-center justify-center mb-6">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Route 18 Corridor</strong> Expertise
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   Route 18 is one of Central Jersey's most competitive business corridors. We understand the challenges of competing with big-box retailers and national chains. Our strategies help local East Brunswick businesses stand out with hyperlocal optimization, community connections, and targeted campaigns that big chains can't match.
                 </p>
               </div>
@@ -190,10 +190,10 @@ export default function EastBrunswickPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-blue-500 rounded-2xl flex items-center justify-center mb-6">
                   <BarChart3 className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Proven Local</strong> Results
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   We practice what we preach. Our grid ranking system tracks visibility across East Brunswick neighborhoods, Route 18 searches, and residential areas. We focus on repeatable execution and transparent tracking so you can see progress and coverage improve over time.
                 </p>
               </div>
@@ -204,10 +204,10 @@ export default function EastBrunswickPage() {
         {/* Services for East Brunswick */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6 text-center">
               Complete <strong className="text-brand-primary">SEO Services</strong> for East Brunswick Businesses
             </h2>
-            <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-500 text-center mb-12 max-w-3xl mx-auto">
               Specialized local search optimization for East Brunswick's Route 18 corridor and residential communities
             </p>
 
@@ -219,13 +219,13 @@ export default function EastBrunswickPage() {
                     <Target className="w-6 h-6 text-brand-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Route 18 Corridor Optimization
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Dominate searches along East Brunswick's main commercial artery. We optimize for Route 18-specific keywords, capture commuter traffic from GSP and Turnpike, target major shopping centers and plazas, and help local businesses compete with national chains. Essential for retail, restaurants, automotive, and professional services along this competitive corridor.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-brand-primary mr-2">✓</span>
                         <span>"Route 18 East Brunswick" optimization</span>
@@ -254,13 +254,13 @@ export default function EastBrunswickPage() {
                     <Home className="w-6 h-6 text-brand-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Residential Neighborhood Targeting
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Capture searches from East Brunswick's 48,000 residents across residential neighborhoods. We optimize for hyperlocal 'near me' searches, target specific neighborhood keywords, emphasize convenient local service, and help home service contractors, medical practices, and local businesses dominate residential area searches.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-brand-primary mr-2">✓</span>
                         <span>Neighborhood-specific keyword targeting</span>
@@ -289,13 +289,13 @@ export default function EastBrunswickPage() {
                     <Star className="w-6 h-6 text-brand-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       East Brunswick GBP Optimization
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Complete Google Business Profile management with East Brunswick-specific optimization. We add photos featuring local landmarks, optimize for Route 18 and neighborhood searches, manage reviews emphasizing local service, and ensure your business appears in Google Maps searches from East Brunswick customers.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-brand-primary mr-2">✓</span>
                         <span>Local photo optimization (Route 18, landmarks)</span>
@@ -324,13 +324,13 @@ export default function EastBrunswickPage() {
                     <Award className="w-6 h-6 text-brand-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       East Brunswick Citations & Content
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Build authority in East Brunswick and Middlesex County directories with consistent NAP information. Content featuring East Brunswick landmarks (Tamarack Golf Course, Crystal Springs, Route 18 plazas) establishes your business as part of the local community while capturing valuable local search terms.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-brand-primary mr-2">✓</span>
                         <span>East Brunswick Township directories</span>
@@ -356,29 +356,29 @@ export default function EastBrunswickPage() {
         </section>
 
         {/* About East Brunswick Market */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+                <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
                   Understanding <strong className="text-brand-primary">East Brunswick's</strong> Competitive Business Environment
                 </h2>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   East Brunswick (48,000+ residents) is <strong>Middlesex County's</strong> retail and commercial hub with the <strong>Route 18 corridor</strong> featuring major shopping centers, national retailers, restaurants, automotive dealerships, and professional services. The <strong>Garden State Parkway</strong> (Exit 127, 127A) and <strong>New Jersey Turnpike</strong> (Exit 9) access brings significant commuter and traveler traffic.
                 </p>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   Beyond the commercial corridor, East Brunswick's residential neighborhoods create strong local customer bases seeking convenient hometown service. The combination of highway access, regional shopping destination status, and established residential communities presents both opportunities and intense competition.
                 </p>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   Whether you're competing on the <strong>Route 18 corridor</strong>, serving residential neighborhoods, or targeting commuter traffic near highway exits, we understand East Brunswick's market dynamics better than anyone because we're based here. Let us help you dominate local searches in your hometown.
                 </p>
               </div>
 
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-6">
+                <h3 className="text-2xl font-heading font-bold text-white mb-6">
                   East Brunswick Areas We Serve
                 </h3>
-                <div className="grid grid-cols-2 gap-4 text-brand-dark/70">
+                <div className="grid grid-cols-2 gap-4 text-gray-400">
                   <div className="flex items-start space-x-2">
                     <MapPin className="w-5 h-5 text-brand-primary flex-shrink-0 mt-1" />
                     <span>Route 18 Corridor</span>
@@ -421,8 +421,8 @@ export default function EastBrunswickPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-gray-200">
-                  <h4 className="font-semibold text-brand-dark mb-4">Serving All East Brunswick Zip Codes:</h4>
+                <div className="mt-8 pt-8 border-t border-white/10">
+                  <h4 className="font-semibold text-white mb-4">Serving All East Brunswick Zip Codes:</h4>
                   <div className="flex flex-wrap gap-3">
                     <span className="px-4 py-2 bg-brand-primary/10 text-brand-primary rounded-full text-sm font-medium">08816</span>
                   </div>
@@ -435,10 +435,10 @@ export default function EastBrunswickPage() {
         {/* Process */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6 text-center">
               Our <strong className="text-brand-primary">East Brunswick SEO</strong> Process
             </h2>
-            <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-500 text-center mb-12 max-w-3xl mx-auto">
               Proven 5-step methodology focused on improving local visibility and lead flow
             </p>
 
@@ -454,8 +454,8 @@ export default function EastBrunswickPage() {
                   <div className="w-16 h-16 bg-gradient-to-br from-brand-primary to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
                     {item.step}
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{item.title}</h3>
-                  <p className="text-sm text-brand-dark/70 leading-relaxed">{item.desc}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -463,17 +463,17 @@ export default function EastBrunswickPage() {
         </section>
 
         {/* FAQs */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-12 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-12 text-center">
               Frequently Asked Questions About <strong className="text-brand-primary">East Brunswick SEO</strong>
             </h2>
 
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="glass-card p-6">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{faq.question}</h3>
-                  <p className="text-brand-dark/70 leading-relaxed">{faq.answer}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -492,17 +492,17 @@ export default function EastBrunswickPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/free-audit" className="inline-flex items-center space-x-2 px-10 py-5 bg-white text-brand-primary font-bold text-lg rounded-full hover:bg-gray-100 transition-all duration-300 shadow-2xl">
+              <a href="/contact" className="inline-flex items-center space-x-2 px-10 py-5 bg-brand-obsidian text-brand-primary font-bold text-lg rounded-full hover:bg-brand-obsidian-light transition-all duration-300 shadow-2xl">
                 <TrendingUp className="w-6 h-6" />
                 <span>Get Your Free East Brunswick SEO Audit</span>
               </a>
-              <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white/10 transition-all duration-300">
+              <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-brand-obsidian/10 transition-all duration-300">
                 <Phone className="w-6 h-6" />
                 <span>(732) 475-0139</span>
               </a>
             </div>
 
-            <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-white/80">
+            <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-gray-300">
               <div className="flex items-center space-x-2">
                 <Home className="w-5 h-5" />
                 <span>Based in East Brunswick</span>
@@ -520,13 +520,13 @@ export default function EastBrunswickPage() {
         </section>
 
         {/* Map Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">
                 Find Us in <span className="text-brand-primary">East Brunswick</span>
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Visit our headquarters at 288 Summerhill Rd, suite 3, East Brunswick, NJ 08816
               </p>
             </div>

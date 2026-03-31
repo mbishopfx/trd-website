@@ -10,7 +10,7 @@ export default function TeamCultureSection() {
       icon: <Heart className="w-8 h-8" />,
       title: "Client-First Mindset",
       description: "Every decision we make puts our clients' success at the center",
-      color: "from-red-500 to-pink-500"
+      color: "from-brand-cyan to-brand-blue"
     },
     {
       icon: <Lightbulb className="w-8 h-8" />,
@@ -34,7 +34,7 @@ export default function TeamCultureSection() {
       icon: <Coffee className="w-8 h-8" />,
       title: "Work-Life Balance",
       description: "Happy team members create the best work for our clients",
-      color: "from-purple-500 to-indigo-500"
+      color: "from-brand-blue to-brand-cyan"
     },
     {
       icon: <Zap className="w-8 h-8" />,
@@ -45,7 +45,7 @@ export default function TeamCultureSection() {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-brand-light/20 via-white to-brand-light/20">
+    <section className="py-20 bg-brand-obsidian text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -56,10 +56,10 @@ export default function TeamCultureSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
             Our Team Culture
           </h2>
-          <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             The values and principles that guide our team in delivering exceptional results for every client.
           </p>
         </motion.div>
@@ -81,11 +81,11 @@ export default function TeamCultureSection() {
                 </div>
               </div>
 
-              <h3 className="text-xl font-heading font-bold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors duration-300">
+              <h3 className="text-xl font-heading font-bold text-white mb-4 group-hover:text-brand-primary transition-colors duration-300">
                 {value.title}
               </h3>
 
-              <p className="text-brand-dark/70 leading-relaxed">
+              <p className="text-gray-400 leading-relaxed">
                 {value.description}
               </p>
             </motion.div>
@@ -101,7 +101,7 @@ export default function TeamCultureSection() {
           className="mt-16 text-center"
         >
           <div className="glass-card p-8 lg:p-12 max-w-4xl mx-auto">
-            <blockquote className="text-2xl lg:text-3xl font-medium text-brand-dark/80 italic leading-relaxed mb-6">
+            <blockquote className="text-2xl lg:text-3xl font-medium text-gray-300 italic leading-relaxed mb-6">
               "We're not just a team—we're partners in your success. Every campaign we create, every strategy we implement, is built with the expertise and passion of professionals who genuinely care about your growth."
             </blockquote>
             <div className="text-brand-primary font-semibold text-lg">

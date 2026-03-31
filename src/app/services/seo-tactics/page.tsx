@@ -7,11 +7,11 @@ import ServiceSchema from '@/components/seo/ServiceSchema';
 
 export const metadata: Metadata = {
   title: 'SEO Tactics | Proven Search Optimization Strategies | True Rank Digital',
-  description: 'Master proven SEO tactics with True Rank Digital. Our strategic approach combines technical optimization, content strategy, and link building to boost your Google rankings.',
+  description: 'SEO strategy services from True Rank Digital combining technical optimization, content strategy, authority signals, and AI-ready structure to grow qualified organic visibility.',
   keywords: 'SEO tactics, search engine optimization, technical SEO, content strategy, link building, True Rank Digital, Google rankings, organic traffic',
   openGraph: {
     title: 'SEO Tactics | True Rank Digital',
-    description: 'Proven SEO strategies combining technical SEO, content strategy, and link building.',
+    description: 'SEO strategies combining technical SEO, content strategy, and AI-ready search architecture.',
     url: 'https://truerankdigital.com/services/seo-tactics',
     type: 'website',
   },
@@ -46,7 +46,7 @@ export default function SEOTacticsPage() {
     },
     {
       question: "How do you measure SEO success?",
-      answer: "We track multiple metrics including keyword rankings, organic traffic, click-through rates, bounce rates, time on site, and most importantly—conversions and revenue. Our proprietary dashboard provides real-time visibility into all metrics. We focus on business outcomes, not just vanity metrics like rankings alone."
+      answer: "We track multiple metrics including keyword rankings, organic traffic, click-through rates, bounce rates, time on site, and most importantly—conversions and revenue. Our reporting stack provides clear visibility into all key metrics. We focus on business outcomes, not just vanity metrics like rankings alone."
     },
     {
       question: "What's the difference between SEO and PPC?",
@@ -135,7 +135,7 @@ export default function SEOTacticsPage() {
   const results = [
     { title: 'Execution-First Strategy', description: 'Technical SEO, content, and authority-building built around your goals.' },
     { title: 'Transparent Reporting', description: 'Clear visibility into what we changed, what improved, and what we’re doing next.' },
-    { title: 'Sustainable Practices', description: 'White-hat tactics designed to build durable, algorithm-resistant growth.' },
+    { title: 'Sustainable Practices', description: 'White-hat tactics designed to build durable, long-term growth.' },
     { title: 'Conversion Focus', description: 'We optimize for business outcomes, not vanity metrics.' }
   ];
 
@@ -179,7 +179,7 @@ export default function SEOTacticsPage() {
       <ServiceSchema
         serviceName="SEO Tactics"
         serviceUrl="https://truerankdigital.com/services/seo-tactics"
-        description="Master proven SEO tactics with True Rank Digital. Our strategic approach combines technical optimization, content strategy, and link building to boost your Google rankings."
+        description="SEO strategy services from True Rank Digital combining technical optimization, content strategy, authority signals, and AI-ready structure to grow qualified organic visibility."
         serviceType="SEO Strategy"
         mentions={[
           {
@@ -215,14 +215,14 @@ export default function SEOTacticsPage() {
         category="service"
       />
       
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-emerald-50 to-white">
+      <article className="pt-16 min-h-screen bg-brand-obsidian text-white">
         {/* Breadcrumb Navigation */}
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <ol className="flex items-center space-x-2 text-sm">
-            <li><Link href="/" className="text-brand-dark/60 hover:text-brand-primary transition-colors">Home</Link></li>
-            <li className="text-brand-dark/40">/</li>
-            <li><Link href="/services" className="text-brand-dark/60 hover:text-brand-primary transition-colors">Services</Link></li>
-            <li className="text-brand-dark/40">/</li>
+            <li><Link href="/" className="text-gray-500 hover:text-brand-primary transition-colors">Home</Link></li>
+            <li className="text-white/40">/</li>
+            <li><Link href="/services" className="text-gray-500 hover:text-brand-primary transition-colors">Services</Link></li>
+            <li className="text-white/40">/</li>
             <li className="text-brand-primary font-medium">SEO Tactics</li>
           </ol>
         </nav>
@@ -237,24 +237,24 @@ export default function SEOTacticsPage() {
                   <span className="text-emerald-600 font-semibold text-sm">SEO Strategy</span>
                 </div>
                 
-                <h1 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+                <h1 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
                   Proven <strong className="text-brand-primary">SEO Tactics</strong> That Drive Organic Growth
                 </h1>
                 
-                <p className="text-xl text-brand-dark/70 mb-8">
-                  Master proven <strong>SEO tactics</strong> with <strong>True Rank Digital</strong>. Our strategic approach combines <strong>technical optimization</strong>, <strong>content strategy</strong>, and <strong>link building</strong> to boost your <strong>Google rankings</strong>.
+                <p className="text-xl text-gray-400 mb-8">
+                  Work with <strong>True Rank Digital</strong> on an SEO program that combines <strong>technical optimization</strong>, <strong>content strategy</strong>, and <strong>authority building</strong> to improve qualified organic traffic and conversions.
                 </p>
 
                 <div className="flex flex-wrap gap-4 mb-8">
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>Technical + Content + Authority</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>Transparent Progress Reporting</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>Built for Sustainable Growth</span>
                   </div>
@@ -282,8 +282,8 @@ export default function SEOTacticsPage() {
               <div className="grid grid-cols-2 gap-6">
                 {results.map((result, index) => (
                   <div key={index} className="glass-card p-6 text-center">
-                    <div className="text-lg font-semibold text-brand-dark mb-2">{result.title}</div>
-                    <div className="text-sm text-brand-dark/70">{result.description}</div>
+                    <div className="text-lg font-semibold text-white mb-2">{result.title}</div>
+                    <div className="text-sm text-gray-400">{result.description}</div>
                   </div>
                 ))}
               </div>
@@ -292,29 +292,29 @@ export default function SEOTacticsPage() {
         </section>
 
         {/* Why SEO Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Why <strong className="text-brand-primary">SEO</strong> Is Your Best Investment
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Organic search remains the highest-ROI marketing channel for sustainable growth.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="glass-card p-8">
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Compounding Visibility</h3>
-                <p className="text-brand-dark/70">Organic growth builds over time and can keep working even when you pause paid campaigns.</p>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">Compounding Visibility</h3>
+                <p className="text-gray-400">Organic growth builds over time and can keep working even when you pause paid campaigns.</p>
               </div>
               <div className="glass-card p-8">
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Cost Efficiency</h3>
-                <p className="text-brand-dark/70">You&apos;re not paying per click, so strong organic performance can reduce reliance on ads over time.</p>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">Cost Efficiency</h3>
+                <p className="text-gray-400">You&apos;re not paying per click, so strong organic performance can reduce reliance on ads over time.</p>
               </div>
               <div className="glass-card p-8">
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">High Intent Traffic</h3>
-                <p className="text-brand-dark/70">Searchers are actively looking for answers and providers, which can translate to stronger lead quality.</p>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">High Intent Traffic</h3>
+                <p className="text-gray-400">Searchers are actively looking for answers and providers, which can translate to stronger lead quality.</p>
               </div>
             </div>
           </div>
@@ -324,10 +324,10 @@ export default function SEOTacticsPage() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Our <strong className="text-brand-primary">SEO</strong> Services
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Comprehensive SEO services covering every aspect of search optimization.
               </p>
             </div>
@@ -338,11 +338,11 @@ export default function SEOTacticsPage() {
                   <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-500 rounded-2xl flex items-center justify-center mb-4 text-white">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-heading font-bold text-brand-dark mb-2">{service.title}</h3>
-                  <p className="text-brand-dark/70 mb-4">{service.description}</p>
+                  <h3 className="text-xl font-heading font-bold text-white mb-2">{service.title}</h3>
+                  <p className="text-gray-400 mb-4">{service.description}</p>
                   <div className="space-y-2">
                     {service.details.map((detail, idx) => (
-                      <div key={idx} className="flex items-center space-x-2 text-sm text-brand-dark/70">
+                      <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                         <span>{detail}</span>
                       </div>
@@ -355,13 +355,13 @@ export default function SEOTacticsPage() {
         </section>
 
         {/* Tactics Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 SEO <strong className="text-brand-primary">Tactics</strong> We Implement
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Proven tactics that deliver measurable results.
               </p>
             </div>
@@ -380,10 +380,10 @@ export default function SEOTacticsPage() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Our <strong className="text-brand-primary">SEO Process</strong>
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 A systematic approach to building sustainable organic growth.
               </p>
             </div>
@@ -396,11 +396,11 @@ export default function SEOTacticsPage() {
                       {item.step}
                     </div>
                     <div className="flex-grow">
-                      <h3 className="text-2xl font-heading font-bold text-brand-dark mb-3">{item.title}</h3>
-                      <p className="text-brand-dark/70 mb-4">{item.description}</p>
+                      <h3 className="text-2xl font-heading font-bold text-white mb-3">{item.title}</h3>
+                      <p className="text-gray-400 mb-4">{item.description}</p>
                       <div className="grid sm:grid-cols-2 gap-3">
                         {item.details.map((detail, idx) => (
-                          <div key={idx} className="flex items-center space-x-2 text-brand-dark/70">
+                          <div key={idx} className="flex items-center space-x-2 text-gray-400">
                             <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                             <span>{detail}</span>
                           </div>
@@ -415,11 +415,11 @@ export default function SEOTacticsPage() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-heading font-bold text-brand-dark mb-6">
+                <h2 className="text-3xl font-heading font-bold text-white mb-6">
                   Why Choose <strong className="text-brand-primary">True Rank Digital</strong> for SEO
                 </h2>
                 
@@ -429,8 +429,8 @@ export default function SEOTacticsPage() {
                       <Award className="w-6 h-6 text-emerald-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Proven Results</h3>
-                      <p className="text-brand-dark/70">Execution-first SEO focused on technical quality, strong content, and durable authority signals.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Proven Results</h3>
+                      <p className="text-gray-400">Execution-first SEO focused on technical quality, strong content, and durable authority signals.</p>
                     </div>
                   </div>
                   
@@ -439,8 +439,8 @@ export default function SEOTacticsPage() {
                       <Globe className="w-6 h-6 text-emerald-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">White Hat Only</h3>
-                      <p className="text-brand-dark/70">We only use ethical, Google-approved SEO tactics. No shortcuts that risk penalties.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">White Hat Only</h3>
+                      <p className="text-gray-400">We only use ethical, Google-approved SEO tactics. No shortcuts that risk penalties.</p>
                     </div>
                   </div>
                   
@@ -449,8 +449,8 @@ export default function SEOTacticsPage() {
                       <Zap className="w-6 h-6 text-emerald-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Proprietary Tools</h3>
-                      <p className="text-brand-dark/70">Our dashboard platform provides real-time tracking, competitor monitoring, and performance insights.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Proprietary Tools</h3>
+                      <p className="text-gray-400">Our dashboard platform provides real-time tracking, competitor monitoring, and performance insights.</p>
                     </div>
                   </div>
                   
@@ -459,22 +459,22 @@ export default function SEOTacticsPage() {
                       <Shield className="w-6 h-6 text-emerald-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Transparent Reporting</h3>
-                      <p className="text-brand-dark/70">Monthly reports with clear metrics, progress tracking, and strategic recommendations.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Transparent Reporting</h3>
+                      <p className="text-gray-400">Monthly reports with clear metrics, progress tracking, and strategic recommendations.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-6 text-center">Industries We Serve</h3>
+                <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center">Industries We Serve</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     'Professional Services', 'Healthcare', 'Legal', 'Home Services',
                     'Real Estate', 'E-commerce', 'Restaurants', 'Financial Services',
                     'Manufacturing', 'Technology', 'Education', 'Local Services'
                   ].map((industry, index) => (
-                    <div key={index} className="flex items-center space-x-2 text-brand-dark/70">
+                    <div key={index} className="flex items-center space-x-2 text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-500" />
                       <span>{industry}</span>
                     </div>
@@ -489,10 +489,10 @@ export default function SEOTacticsPage() {
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Frequently Asked Questions
               </h2>
-              <p className="text-xl text-brand-dark/70">
+              <p className="text-xl text-gray-400">
                 Common questions about our SEO services.
               </p>
             </div>
@@ -500,8 +500,8 @@ export default function SEOTacticsPage() {
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="glass-card p-6">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{faq.question}</h3>
-                  <p className="text-brand-dark/70">{faq.answer}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-400">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -509,10 +509,10 @@ export default function SEOTacticsPage() {
         </section>
 
         {/* Related Services */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Related <strong className="text-brand-primary">Services</strong>
               </h2>
             </div>
@@ -520,8 +520,8 @@ export default function SEOTacticsPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedServices.map((service, index) => (
                 <Link key={index} href={service.href} className="glass-card p-6 hover:scale-105 transition-transform duration-300 group">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-2 group-hover:text-brand-primary transition-colors">{service.name}</h3>
-                  <p className="text-brand-dark/70 text-sm mb-4">{service.description}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-2 group-hover:text-brand-primary transition-colors">{service.name}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                   <div className="flex items-center text-brand-primary font-medium text-sm">
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -539,10 +539,10 @@ export default function SEOTacticsPage() {
               <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-green-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <TrendingUp className="w-10 h-10 text-white" />
               </div>
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Ready to <strong className="text-brand-primary">Boost Your Rankings</strong>?
               </h2>
-              <p className="text-xl text-brand-dark/70 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
                 Get a free SEO audit and discover how proven SEO tactics can drive organic traffic and grow your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

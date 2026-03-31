@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 6,
-    quote: "True rank digital isn&apos;t a company it&apos;s a family they got my business back on track. Constant follow ups they treated me like family god bless y&apos;all",
+    quote: "True rank digital isn't a company it's a family they got my business back on track. Constant follow ups they treated me like family god bless y'all",
     author: "Jessica Perez",
     source: "Client review"
   },
@@ -56,8 +56,6 @@ const testimonials: Testimonial[] = [
   }
 ];
 
-// Duplicate testimonials for seamless infinite scroll
-// Note: Duplicates are aria-hidden to prevent search engine confusion
 const extendedTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
 interface TestimonialCardProps {
@@ -71,30 +69,30 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
       transition={{ type: "spring", stiffness: 300 }}
       className="flex-shrink-0 w-80 mx-4"
     >
-      <div className="glass-card p-6 h-full relative overflow-hidden group hover:shadow-glass-lg transition-all duration-300">
+      <div className="glass-card p-8 h-full relative overflow-hidden group hover:shadow-glow-blue transition-all duration-300">
         
         {/* Background Glow */}
-        <div className="absolute -top-10 -right-10 w-20 h-20 bg-gradient-to-br from-brand-primary/20 to-brand-accent/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute -top-10 -right-10 w-24 h-24 bg-brand-blue/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         
         <div className="relative">
           {/* Quote Icon */}
-          <div className="absolute -top-2 -left-2 text-brand-primary/20">
+          <div className="absolute -top-2 -left-2 text-brand-blue/20">
             <Quote className="w-12 h-12" />
           </div>
 
           {/* Testimonial Quote */}
-          <blockquote className="text-brand-dark/80 leading-relaxed mb-6 relative z-10 italic">
+          <blockquote className="text-gray-300 leading-relaxed mb-8 relative z-10 font-light italic">
             "{testimonial.quote}"
           </blockquote>
 
           {/* Author Info */}
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between border-t border-white/5 pt-6">
             <div>
-              <div className="font-semibold text-brand-dark">{testimonial.author}</div>
+              <div className="font-bold text-white tracking-tight">{testimonial.author}</div>
             </div>
             
             {testimonial.source ? (
-              <div className="text-xs px-2 py-1 bg-brand-primary/10 text-brand-primary rounded-full font-medium">
+              <div className="text-[10px] px-2 py-1 bg-brand-blue/10 text-brand-blue rounded-full font-black uppercase tracking-widest">
                 {testimonial.source}
               </div>
             ) : null}
@@ -109,7 +107,7 @@ export default function TestimonialsCarousel() {
   const [isPaused, setIsPaused] = useState(false);
 
   return (
-    <section className="py-20 bg-gradient-to-b from-brand-light/30 via-white to-brand-light/30 overflow-hidden">
+    <section className="py-24 bg-brand-obsidian overflow-hidden border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -118,20 +116,19 @@ export default function TestimonialsCarousel() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-yellow-100 rounded-full mb-4">
-            <Star className="w-5 h-5 text-yellow-600 fill-current" />
-            <span className="text-yellow-700 font-semibold text-sm">Client Success Stories</span>
+          <div className="inline-flex items-center space-x-2 px-4 py-2 glass-blue rounded-full mb-6">
+            <Star className="w-4 h-4 text-brand-blue fill-brand-blue" />
+            <span className="text-brand-blue font-black text-xs uppercase tracking-[0.2em]">Validated Authority</span>
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
-            What Our Clients Say
+          <h2 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-8">
+            Network <span className="text-brand-blue italic">Feedback</span>
           </h2>
           
-          <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-            Real testimonials from real small business owners who've experienced 
-            transformative growth with our AI-powered SEO solutions.
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
+            Direct evidence of brand dominance and entity consolidation across our client network.
           </p>
         </motion.div>
 
@@ -165,30 +162,29 @@ export default function TestimonialsCarousel() {
         </motion.div>
 
         {/* Gradient Overlays */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-brand-light/50 to-transparent pointer-events-none z-10"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-brand-light/50 to-transparent pointer-events-none z-10"></div>
+        <div className="absolute left-0 top-0 bottom-0 w-48 bg-gradient-to-r from-brand-obsidian to-transparent pointer-events-none z-10"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-48 bg-gradient-to-l from-brand-obsidian to-transparent pointer-events-none z-10"></div>
       </div>
 
-      {/* Stats Section */}
       {/* CTA Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-center mt-16"
+          className="text-center"
         >
-          <p className="text-lg text-brand-dark/70 mb-6">
-            Join businesses that trust True Rank Digital
+          <p className="text-lg text-gray-500 mb-8 font-medium tracking-wide uppercase text-xs">
+            Join the elite 1% of brands dictating AI answers
           </p>
           <motion.a
             href="/case-studies"
-            className="inline-flex items-center space-x-2 px-8 py-4 glass-button bg-brand-primary/10 hover:bg-brand-primary hover:text-white text-brand-primary font-semibold rounded-full transition-all duration-300 group"
+            className="inline-flex items-center space-x-3 px-10 py-5 glass-button-blue rounded-full transition-all duration-300 group"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span>View More Success Stories</span>
+            <span className="text-lg">Review Deployment Logs</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           </motion.a>
         </motion.div>

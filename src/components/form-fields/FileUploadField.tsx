@@ -71,7 +71,7 @@ export default function FileUploadField({ field, value, onChange, error }: FileU
           accept={field.accept || 'image/*,.pdf,.doc,.docx'}
           required={field.required && !value}
           disabled={uploading}
-          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
+          className="w-full px-4 py-3 bg-brand-obsidian/5 border border-white/10 rounded-lg text-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
         />
         {uploading && (
           <p className="text-blue-400 text-sm mt-1">Uploading {fileName}...</p>

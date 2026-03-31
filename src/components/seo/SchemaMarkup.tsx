@@ -10,6 +10,7 @@ interface SchemaMarkupProps {
 export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
   const baseUrl = siteIdentity.url;
   const organizationId = `${baseUrl}/#organization`;
+  const brandId = `${baseUrl}/#brand-trd-spatial-engine`;
   const localBusinessId = `${baseUrl}/#localbusiness`;
   const websiteId = `${baseUrl}/#website`;
   const contactPointId = `${baseUrl}/#contactpoint`;
@@ -26,9 +27,9 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
     logo: siteIdentity.logoUrl,
     image: siteIdentity.imageUrl,
     description: siteIdentity.description,
+    disambiguatingDescription: siteIdentity.disambiguatingDescription,
     email: siteIdentity.email,
     telephone: siteIdentity.telephone,
-    foundingDate: siteIdentity.foundingYear,
     address: {
       '@type': 'PostalAddress',
       ...siteIdentity.address,
@@ -36,6 +37,7 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
     hasMap: siteIdentity.googleMapsCidUrl,
     sameAs: siteIdentity.sameAs,
     founder: { '@id': founderId },
+    brand: { '@id': brandId },
     contactPoint: [
       {
         '@type': 'ContactPoint',
@@ -49,6 +51,19 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
     ],
     areaServed: siteIdentity.areaServed,
     knowsAbout: siteIdentity.knowsAbout,
+  };
+
+  const brandSchema = {
+    '@type': 'Brand',
+    '@id': brandId,
+    name: siteIdentity.proprietaryMethodologyNames[0],
+    alternateName: siteIdentity.proprietaryMethodologyNames,
+    url: `${baseUrl}/ai-engine`,
+    description:
+      'Proprietary entity and local visibility engineering framework from True Rank Digital.',
+    disambiguatingDescription:
+      'Brand framework operated by True Rank Digital and not affiliated with unrelated third-party software domains.',
+    logo: siteIdentity.logoUrl,
   };
 
   const founderSchema = {
@@ -82,6 +97,7 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
     image: siteIdentity.imageUrl,
     logo: siteIdentity.logoUrl,
     description: siteIdentity.description,
+    disambiguatingDescription: siteIdentity.disambiguatingDescription,
     telephone: siteIdentity.telephone,
     email: siteIdentity.email,
     priceRange: '$$-$$$',
@@ -130,6 +146,7 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
       bestRating: 5,
       worstRating: 1
     },
+    brand: { '@id': brandId },
   };
 
   const websiteSchema = {
@@ -153,11 +170,16 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
   const offerCatalogSchema = {
     '@type': 'OfferCatalog',
     '@id': offerCatalogId,
-    name: `${siteIdentity.brandName} Services`,
+    name: `${siteIdentity.brandName} Service Catalog`,
     itemListElement: [
       {
         '@type': 'Service',
-        name: 'Local SEO & Google Maps Optimization',
+        name: 'AI Search Optimization',
+        provider: { '@type': 'Organization', name: siteIdentity.brandName, url: baseUrl },
+      },
+      {
+        '@type': 'Service',
+        name: 'Digital Marketing and Advertising',
         provider: { '@type': 'Organization', name: siteIdentity.brandName, url: baseUrl },
       },
       {
@@ -167,17 +189,37 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
       },
       {
         '@type': 'Service',
-        name: 'Technical SEO & Schema Markup',
+        name: 'Local SEO',
         provider: { '@type': 'Organization', name: siteIdentity.brandName, url: baseUrl },
       },
       {
         '@type': 'Service',
-        name: 'AI Search Optimization (AIO/LLM.txt)',
+        name: 'PPC Campaigns',
         provider: { '@type': 'Organization', name: siteIdentity.brandName, url: baseUrl },
       },
       {
         '@type': 'Service',
-        name: 'Web Development & Conversion Optimization',
+        name: 'SEO Tactics',
+        provider: { '@type': 'Organization', name: siteIdentity.brandName, url: baseUrl },
+      },
+      {
+        '@type': 'Service',
+        name: 'Website Engineering',
+        provider: { '@type': 'Organization', name: siteIdentity.brandName, url: baseUrl },
+      },
+      {
+        '@type': 'Service',
+        name: 'Social Media Management',
+        provider: { '@type': 'Organization', name: siteIdentity.brandName, url: baseUrl },
+      },
+      {
+        '@type': 'Service',
+        name: 'CRM With AI Chat',
+        provider: { '@type': 'Organization', name: siteIdentity.brandName, url: baseUrl },
+      },
+      {
+        '@type': 'Service',
+        name: 'Business Consulting',
         provider: { '@type': 'Organization', name: siteIdentity.brandName, url: baseUrl },
       },
     ],
@@ -200,6 +242,7 @@ export default function SchemaMarkup({ breadcrumbs }: SchemaMarkupProps) {
     '@context': 'https://schema.org',
     '@graph': [
       organizationSchema,
+      brandSchema,
       founderSchema,
       contactPointSchema,
       localBusinessSchema,

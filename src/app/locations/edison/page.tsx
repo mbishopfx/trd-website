@@ -100,7 +100,7 @@ export default function EdisonPage() {
       />
       <FAQSchema faqs={faqs} pageUrl="https://truerankdigital.com/locations/edison" category="location" />
       
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-50">
+      <article className="pt-16 min-h-screen bg-brand-obsidian text-white">
         {/* Hero Section */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
@@ -111,17 +111,17 @@ export default function EdisonPage() {
                 <span className="text-sm font-semibold text-blue-600">Serving Edison, NJ & Middlesex County</span>
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
                 Professional <strong className="text-brand-primary">SEO Services</strong> in <br />
                 <strong className="text-brand-primary">Edison, New Jersey</strong>
               </h1>
               
-              <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-8 leading-relaxed">
+              <p className="text-xl text-gray-400 max-w-4xl mx-auto mb-8 leading-relaxed">
                 <strong>True Rank Digital</strong> helps Edison businesses dominate local search results with proven <strong>local SEO strategies</strong>, <strong>Google Business Profile optimization</strong>, and comprehensive digital marketing solutions. Serving all Edison neighborhoods from Oak Tree Road to Menlo Park Mall area.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <a href="/free-audit" className="inline-flex items-center space-x-2 px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-full hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <a href="/contact" className="inline-flex items-center space-x-2 px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-full hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                   <TrendingUp className="w-5 h-5" />
                   <span>Get Free Edison SEO Audit</span>
                 </a>
@@ -135,19 +135,19 @@ export default function EdisonPage() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Local</div>
-                  <div className="text-sm text-brand-dark/60">Middlesex Focus</div>
+                  <div className="text-sm text-gray-500">Middlesex Focus</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Grid</div>
-                  <div className="text-sm text-brand-dark/60">Visibility Tracking</div>
+                  <div className="text-sm text-gray-500">Visibility Tracking</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Fast</div>
-                  <div className="text-sm text-brand-dark/60">Response & Support</div>
+                  <div className="text-sm text-gray-500">Response & Support</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Strategy</div>
-                  <div className="text-sm text-brand-dark/60">Built to Convert</div>
+                  <div className="text-sm text-gray-500">Built to Convert</div>
                 </div>
               </div>
             </div>
@@ -155,45 +155,45 @@ export default function EdisonPage() {
         </section>
 
         {/* Why Edison Businesses Choose Us */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-12 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-12 text-center">
               Why <strong className="text-brand-primary">Edison Businesses</strong> Choose True Rank Digital
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="glass-card p-8 hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-obsidian0 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   Local <strong className="text-brand-primary">Edison Expertise</strong>
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   Based in neighboring East Brunswick, we understand Edison's unique market - from the diverse Oak Tree Road corridor to Menlo Park Mall competition. Our local knowledge gives your business a competitive edge in Edison's crowded digital landscape.
                 </p>
               </div>
 
               <div className="glass-card p-8 hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-obsidian0 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                   <Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Neighborhood-Specific</strong> Targeting
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   We optimize for specific Edison neighborhoods including Clara Barton, Oak Tree, Menlo Park, and South Edison areas. Our hyperlocal strategies ensure you appear in searches from customers in your exact service area within Edison Township.
                 </p>
               </div>
 
               <div className="glass-card p-8 hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-obsidian0 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                   <BarChart3 className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Proprietary</strong> Ranking Dashboard
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   Track your Edison rankings in real-time with our exclusive SEO dashboard. See exactly where you rank across different Edison zip codes (08817, 08820, 08837, 08899) and neighborhoods, with grid map visualization showing your local search footprint.
                 </p>
               </div>
@@ -204,10 +204,10 @@ export default function EdisonPage() {
         {/* Services for Edison */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6 text-center">
               Complete <strong className="text-brand-primary">SEO Services</strong> for Edison Businesses
             </h2>
-            <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-500 text-center mb-12 max-w-3xl mx-auto">
               Comprehensive local search optimization strategies designed specifically for Edison's competitive market environment
             </p>
 
@@ -219,13 +219,13 @@ export default function EdisonPage() {
                     <Star className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Google Business Profile Optimization
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Dominate Edison's local pack with fully optimized Google Business Profiles. We handle everything from profile setup and verification to ongoing optimization with Edison-specific keywords, posts, and photos. Essential for appearing in "near me" searches from Edison customers.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-blue-600 mr-2">✓</span>
                         <span>Edison neighborhood-specific content</span>
@@ -254,13 +254,13 @@ export default function EdisonPage() {
                     <Target className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Edison-Specific Keyword Targeting
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       We target high-value Edison search terms that your competitors miss. Our research identifies what Edison customers actually search for, including neighborhood names, landmarks, and Edison-specific phrases that drive qualified local traffic to your business.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-blue-600 mr-2">✓</span>
                         <span>"Near Edison" and "Edison NJ" modifiers</span>
@@ -289,13 +289,13 @@ export default function EdisonPage() {
                     <Award className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Edison Local Citation Building
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Build authoritative presence across Edison and Middlesex County business directories. We ensure consistent NAP (Name, Address, Phone) across 50+ citations including Edison Chamber of Commerce, local business associations, and industry-specific directories relevant to Edison businesses.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-blue-600 mr-2">✓</span>
                         <span>Edison Chamber of Commerce listings</span>
@@ -324,13 +324,13 @@ export default function EdisonPage() {
                     <Zap className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Edison-Focused Content Creation
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Engaging content that resonates with Edison customers. We create blog posts, service pages, and location pages featuring Edison landmarks, neighborhoods, and local events. Content that establishes your business as an Edison community authority while targeting valuable local search terms.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
                         <span className="text-blue-600 mr-2">✓</span>
                         <span>Edison neighborhood guides</span>
@@ -356,29 +356,29 @@ export default function EdisonPage() {
         </section>
 
         {/* About Edison Market */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+                <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
                   Understanding <strong className="text-brand-primary">Edison's</strong> Unique Business Landscape
                 </h2>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   Edison is one of <strong>New Jersey's largest townships</strong> with over 100,000 residents and a thriving business community. From the internationally recognized <strong>Oak Tree Road corridor</strong> (known as "Little India") to the bustling <strong>Menlo Park Mall</strong> area and the commercial businesses along <strong>Route 1</strong>, Edison presents unique SEO challenges and opportunities.
                 </p>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   The township's diverse demographics, multiple commercial districts, and proximity to major highways (Route 1, Garden State Parkway, NJ Turnpike) create intense competition for local search visibility. Our Edison-specific SEO strategies account for these factors to help your business stand out.
                 </p>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   Whether you're a retail shop on Oak Tree Road, a professional service near Edison Station, a restaurant in the Menlo Park area, or a contractor serving Edison neighborhoods, we understand your market dynamics and know how to position your business for maximum local search visibility.
                 </p>
               </div>
 
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-6">
+                <h3 className="text-2xl font-heading font-bold text-white mb-6">
                   Edison Areas We Serve
                 </h3>
-                <div className="grid grid-cols-2 gap-4 text-brand-dark/70">
+                <div className="grid grid-cols-2 gap-4 text-gray-400">
                   <div className="flex items-start space-x-2">
                     <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Oak Tree Road Corridor</span>
@@ -421,8 +421,8 @@ export default function EdisonPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-gray-200">
-                  <h4 className="font-semibold text-brand-dark mb-4">Serving All Edison Zip Codes:</h4>
+                <div className="mt-8 pt-8 border-t border-white/10">
+                  <h4 className="font-semibold text-white mb-4">Serving All Edison Zip Codes:</h4>
                   <div className="flex flex-wrap gap-3">
                     <span className="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">08817</span>
                     <span className="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">08820</span>
@@ -438,10 +438,10 @@ export default function EdisonPage() {
         {/* Process */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6 text-center">
               Our <strong className="text-brand-primary">Edison SEO</strong> Process
             </h2>
-            <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-500 text-center mb-12 max-w-3xl mx-auto">
               Proven 5-step methodology focused on improving local visibility and lead flow
             </p>
 
@@ -454,11 +454,11 @@ export default function EdisonPage() {
                 { step: "5", title: "Ongoing Optimization", desc: "Monthly tracking, reporting, and optimization based on Edison ranking data. We adjust strategies based on what's working in your specific market." },
               ].map((item) => (
                 <div key={item.step} className="glass-card p-6 text-center hover:shadow-xl transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+                  <div className="w-16 h-16 bg-gradient-to-br from-brand-obsidian0 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
                     {item.step}
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{item.title}</h3>
-                  <p className="text-sm text-brand-dark/70 leading-relaxed">{item.desc}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -466,17 +466,17 @@ export default function EdisonPage() {
         </section>
 
         {/* FAQs */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-12 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-12 text-center">
               Frequently Asked Questions About <strong className="text-brand-primary">Edison SEO</strong>
             </h2>
 
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="glass-card p-6">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{faq.question}</h3>
-                  <p className="text-brand-dark/70 leading-relaxed">{faq.answer}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -495,17 +495,17 @@ export default function EdisonPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/free-audit" className="inline-flex items-center space-x-2 px-10 py-5 bg-white text-blue-600 font-bold text-lg rounded-full hover:bg-gray-100 transition-all duration-300 shadow-2xl">
+              <a href="/contact" className="inline-flex items-center space-x-2 px-10 py-5 bg-brand-obsidian text-blue-600 font-bold text-lg rounded-full hover:bg-brand-obsidian-light transition-all duration-300 shadow-2xl">
                 <TrendingUp className="w-6 h-6" />
                 <span>Get Your Free Edison SEO Audit</span>
               </a>
-              <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white/10 transition-all duration-300">
+              <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-brand-obsidian/10 transition-all duration-300">
                 <Phone className="w-6 h-6" />
                 <span>(732) 475-0139</span>
               </a>
             </div>
 
-            <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-white/80">
+            <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-gray-300">
               <div className="flex items-center space-x-2">
                 <Clock className="w-5 h-5" />
                 <span>Fast response</span>
@@ -523,13 +523,13 @@ export default function EdisonPage() {
         </section>
 
         {/* Map Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">
                 Serving <span className="text-brand-primary">Edison, NJ</span>
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 We provide SEO services to Edison businesses from our East Brunswick headquarters
               </p>
             </div>

@@ -19,8 +19,8 @@ export default function HomepageSchema({ faqs = [] }: HomepageSchemaProps) {
   
   // NAP Data
   const napData = {
-    name: "True Rank Digital LLC",
-    legalName: "True Rank Digital LLC",
+    name: "True Rank Digital",
+    legalName: "True Rank Digital",
     address: {
       streetAddress: "288 Summerhill Rd, suite 3",
       addressLocality: "East Brunswick",

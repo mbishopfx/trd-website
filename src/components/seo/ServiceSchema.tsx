@@ -8,6 +8,13 @@ export interface ServiceSchemaProps {
   serviceUrl: string;
   description: string;
   serviceType: string;
+  alternateNames?: string[];
+  disambiguatingDescription?: string;
+  brand?: {
+    name: string;
+    alternateNames?: string[];
+    description?: string;
+  };
   mentions?: Array<{
     type: 'Organization' | 'Product' | 'SoftwareApplication' | 'Brand' | 'Thing' | 'Person';
     name: string;
@@ -21,15 +28,24 @@ export default function ServiceSchema({
   serviceUrl, 
   description, 
   serviceType,
+  alternateNames = [],
+  disambiguatingDescription,
+  brand,
   mentions = []
 }: ServiceSchemaProps) {
   
+  const brandId = `${serviceUrl}#brand`;
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": `${serviceUrl}#service`,
     name: serviceName,
+    ...(alternateNames.length > 0 && { alternateName: alternateNames }),
     description: description,
+    ...(disambiguatingDescription && {
+      disambiguatingDescription
+    }),
     serviceType: serviceType,
     url: serviceUrl,
     provider: {
@@ -48,7 +64,8 @@ export default function ServiceSchema({
         addressCountry: siteIdentity.address.addressCountry
       },
       hasMap: siteIdentity.googleMapsCidUrl,
-      sameAs: siteIdentity.sameAs
+      sameAs: siteIdentity.sameAs,
+      disambiguatingDescription: siteIdentity.disambiguatingDescription
     },
     areaServed: { "@type": "Country", name: "United States" },
     availableChannel: {
@@ -60,6 +77,18 @@ export default function ServiceSchema({
         name: "English"
       }
     },
+    ...(brand && {
+      brand: {
+        "@type": "Brand",
+        "@id": brandId,
+        name: brand.name,
+        ...(brand.alternateNames && brand.alternateNames.length > 0 && {
+          alternateName: brand.alternateNames
+        }),
+        ...(brand.description && { description: brand.description }),
+        url: serviceUrl
+      }
+    }),
     ...(mentions.length > 0 && {
       mentions: mentions.map(mention => ({
         "@type": mention.type,

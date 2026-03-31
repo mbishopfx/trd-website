@@ -52,7 +52,7 @@ export default function NotFound() {
   ];
 
   const quickLinks = [
-    { name: 'Free SEO Audit', href: '/free-audit', icon: <Search className="w-4 h-4" /> },
+    { name: 'Free SEO Audit', href: '/contact', icon: <Search className="w-4 h-4" /> },
     { name: 'Grid Ranking System', href: '/platform/grid-ranking', icon: <Map className="w-4 h-4" /> },
     { name: 'E-E-A-T Analysis', href: '/platform/eeat-analysis', icon: <Star className="w-4 h-4" /> },
     { name: 'AI Search Preparation', href: '/education/ai-search-preparation', icon: <BookOpen className="w-4 h-4" /> },
@@ -61,7 +61,7 @@ export default function NotFound() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-brand-light via-white to-brand-light/50 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
+    <div className="min-h-screen bg-brand-obsidian flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
       <div className="max-w-6xl w-full">
         {/* Main Content */}
         <div className="text-center mb-12">
@@ -86,10 +86,10 @@ export default function NotFound() {
               </div>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-4">
+            <h1 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-4">
               Oops! We've <span className="text-brand-primary">Updated!</span>
             </h1>
-            <p className="text-xl lg:text-2xl text-brand-dark/70 mb-6 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl lg:text-2xl text-gray-400 mb-6 max-w-3xl mx-auto leading-relaxed">
               The page you're looking for might have moved to a new location. We've recently restructured our site with exciting new features and tools!
             </p>
             <div className="flex items-center justify-center space-x-2 text-brand-accent mb-8">
@@ -133,7 +133,7 @@ export default function NotFound() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mb-12"
         >
-          <h2 className="text-2xl font-heading font-bold text-brand-dark text-center mb-8">
+          <h2 className="text-2xl font-heading font-bold text-white text-center mb-8">
             Popular Destinations
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -152,18 +152,18 @@ export default function NotFound() {
                       {page.icon}
                     </div>
                     <span className={`px-2 py-1 rounded-full text-xs font-bold ${
-                      page.badge === 'New!' ? 'bg-green-100 text-green-800' :
-                      page.badge === 'Updated' ? 'bg-blue-100 text-blue-800' :
-                      page.badge === 'Popular' ? 'bg-purple-100 text-purple-800' :
-                      'bg-brand-light text-brand-dark'
+                      page.badge === 'New!' ? 'bg-green-500/20 text-green-400' :
+                      page.badge === 'Updated' ? 'bg-blue-500/20 text-blue-400' :
+                      page.badge === 'Popular' ? 'bg-blue-500/20 text-blue-400' :
+                      'bg-brand-obsidian/10 text-gray-300'
                     }`}>
                       {page.badge}
                     </span>
                   </div>
-                  <h3 className="font-bold text-brand-dark mb-2 group-hover:text-brand-primary transition-colors duration-300">
+                  <h3 className="font-bold text-white mb-2 group-hover:text-brand-primary transition-colors duration-300">
                     {page.title}
                   </h3>
-                  <p className="text-brand-dark/70 text-sm mb-3">
+                  <p className="text-gray-400 text-sm mb-3">
                     {page.description}
                   </p>
                   <div className="flex items-center text-brand-primary text-sm font-semibold">
@@ -183,7 +183,7 @@ export default function NotFound() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="glass-card p-8"
         >
-          <h3 className="text-xl font-heading font-bold text-brand-dark text-center mb-6">
+          <h3 className="text-xl font-heading font-bold text-white text-center mb-6">
             Quick Navigation
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -195,12 +195,12 @@ export default function NotFound() {
               >
                 <Link
                   href={link.href}
-                  className="flex flex-col items-center space-y-2 p-4 rounded-lg hover:bg-white/50 transition-colors duration-300 group"
+                  className="flex flex-col items-center space-y-2 p-4 rounded-lg hover:bg-brand-obsidian/10 transition-colors duration-300 group"
                 >
                   <div className="w-10 h-10 bg-gradient-to-br from-brand-primary/20 to-brand-accent/20 rounded-lg flex items-center justify-center text-brand-primary group-hover:scale-110 transition-transform duration-300">
                     {link.icon}
                   </div>
-                  <span className="text-sm font-medium text-brand-dark text-center group-hover:text-brand-primary transition-colors duration-300">
+                  <span className="text-sm font-medium text-white text-center group-hover:text-brand-primary transition-colors duration-300">
                     {link.name}
                   </span>
                 </Link>
@@ -216,11 +216,11 @@ export default function NotFound() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center mt-12"
         >
-          <div className="bg-gradient-to-r from-brand-primary/5 to-brand-accent/5 rounded-2xl p-8">
-            <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+          <div className="bg-brand-obsidian/5 rounded-2xl p-8">
+            <h3 className="text-xl font-heading font-bold text-white mb-3">
               Still can't find what you're looking for?
             </h3>
-            <p className="text-brand-dark/70 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
               Our team is here to help! Get in touch and we'll point you in the right direction or provide personalized assistance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -235,7 +235,7 @@ export default function NotFound() {
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
-                  href="/free-audit"
+                  href="/contact"
                   className="inline-flex items-center space-x-2 border border-brand-primary text-brand-primary px-6 py-3 rounded-full font-semibold hover:bg-brand-primary hover:text-white transition-colors duration-300"
                 >
                   <Search className="w-4 h-4" />
@@ -251,7 +251,7 @@ export default function NotFound() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="text-center mt-8 text-brand-dark/50 text-sm"
+          className="text-center mt-8 text-gray-500 text-sm"
         >
           <p>
             True Rank Digital | Professional SEO & Digital Marketing Services

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords: 'AI CRM, AI chatbot, customer relationship management, automated appointments, follow-up automation, True Rank Digital, customer engagement, lead management',
   openGraph: {
     title: 'CRM With AI Chat | True Rank Digital',
-    description: 'AI-powered CRM with automated appointments, intelligent follow-ups, and 24/7 customer engagement.',
+    description: 'AI-powered CRM with automated scheduling, intelligent follow-up workflows, and always-on customer engagement.',
     url: 'https://truerankdigital.com/services/crm-ai-chat',
     type: 'website',
   },
@@ -38,11 +38,11 @@ export default function CRMAIChatPage() {
     },
     {
       question: "Can the AI CRM integrate with my existing systems?",
-      answer: "Yes, our AI CRM integrates with popular business tools including Google Calendar, Outlook, Salesforce, HubSpot, Zoho, and most scheduling platforms. We also support custom API integrations for proprietary systems. True Rank Digital handles the entire integration process to ensure seamless operation with your existing workflow."
+      answer: "Yes, our AI CRM integrates with popular business tools including Google Calendar, Outlook, Salesforce, HubSpot, Zoho, and most scheduling platforms. We also support custom API integrations for existing internal systems. True Rank Digital handles the entire integration process to ensure seamless operation with your existing workflow."
     },
     {
       question: "What types of businesses benefit most from AI CRM?",
-      answer: "Service-based businesses, healthcare practices, law firms, real estate agencies, home service companies, and any business with high customer interaction volume benefit significantly from AI CRM. True Rank Digital customizes the system to match your specific industry needs, compliance requirements, and customer communication patterns."
+      answer: "Service businesses, healthcare practices, real estate teams, home service companies, and any organization with high interaction volume benefit from AI CRM. True Rank Digital customizes workflows to your industry requirements, compliance needs, and customer communication patterns."
     },
     {
       question: "How secure is customer data in the AI CRM?",
@@ -202,14 +202,14 @@ export default function CRMAIChatPage() {
         category="service"
       />
       
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-indigo-50 to-white">
+      <article className="pt-16 min-h-screen bg-brand-obsidian text-white">
         {/* Breadcrumb Navigation */}
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <ol className="flex items-center space-x-2 text-sm">
-            <li><Link href="/" className="text-brand-dark/60 hover:text-brand-primary transition-colors">Home</Link></li>
-            <li className="text-brand-dark/40">/</li>
-            <li><Link href="/services" className="text-brand-dark/60 hover:text-brand-primary transition-colors">Services</Link></li>
-            <li className="text-brand-dark/40">/</li>
+            <li><Link href="/" className="text-gray-500 hover:text-brand-primary transition-colors">Home</Link></li>
+            <li className="text-white/40">/</li>
+            <li><Link href="/services" className="text-gray-500 hover:text-brand-primary transition-colors">Services</Link></li>
+            <li className="text-white/40">/</li>
             <li className="text-brand-primary font-medium">CRM With AI Chat</li>
           </ol>
         </nav>
@@ -219,29 +219,29 @@ export default function CRMAIChatPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-indigo-100 rounded-full mb-6">
-                  <Bot className="w-5 h-5 text-indigo-600" />
-                  <span className="text-indigo-600 font-semibold text-sm">AI-Powered CRM</span>
+                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-100 rounded-full mb-6">
+                  <Bot className="w-5 h-5 text-blue-600" />
+                  <span className="text-blue-600 font-semibold text-sm">AI-Powered CRM</span>
                 </div>
                 
-                <h1 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
-                  <strong className="text-brand-primary">CRM With AI Chat</strong> That Never Sleeps
+                <h1 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
+                  <strong className="text-brand-primary">CRM With AI Chat</strong> Built for Faster Follow-Up and More Booked Calls
                 </h1>
                 
-                <p className="text-xl text-brand-dark/70 mb-8">
+                <p className="text-xl text-gray-400 mb-8">
                   <strong>True Rank Digital&apos;s</strong> AI-powered <strong>CRM</strong> streamlines customer interactions with an intelligent <strong>AI chatbot</strong> that sets appointments, handles follow-ups, and enhances <strong>customer engagement</strong> 24/7.
                 </p>
 
                 <div className="flex flex-wrap gap-4 mb-8">
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>Faster Lead Response</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>More Booked Appointments</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>24/7 Availability</span>
                   </div>
@@ -250,14 +250,14 @@ export default function CRMAIChatPage() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-indigo-600 text-white font-semibold text-lg rounded-full hover:bg-indigo-700 transition-colors duration-300"
+                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-full hover:bg-blue-700 transition-colors duration-300"
                   >
                     <Bot className="w-5 h-5" />
-                    <span>Get AI CRM Demo</span>
+                    <span>Get AI CRM Audit</span>
                   </Link>
                   <a
                     href="tel:+17324750139"
-                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-indigo-600 text-indigo-600 font-semibold text-lg rounded-full hover:bg-indigo-50 transition-colors duration-300"
+                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold text-lg rounded-full hover:bg-blue-50 transition-colors duration-300"
                   >
                     <Phone className="w-5 h-5" />
                     <span>(732) 475-0139</span>
@@ -269,8 +269,8 @@ export default function CRMAIChatPage() {
               <div className="grid grid-cols-2 gap-6">
                 {results.map((result, index) => (
                   <div key={index} className="glass-card p-6 text-center">
-                    <div className="text-lg font-semibold text-brand-dark mb-2">{result.title}</div>
-                    <div className="text-sm text-brand-dark/70">{result.description}</div>
+                    <div className="text-lg font-semibold text-white mb-2">{result.title}</div>
+                    <div className="text-sm text-gray-400">{result.description}</div>
                   </div>
                 ))}
               </div>
@@ -279,29 +279,29 @@ export default function CRMAIChatPage() {
         </section>
 
         {/* Why AI CRM Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Why <strong className="text-brand-primary">AI-Powered CRM</strong> Changes Everything
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Traditional CRMs require constant manual input. Our AI CRM works for you around the clock.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="glass-card p-8">
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Speed Matters</h3>
-                <p className="text-brand-dark/70">Slow response times can cost deals. AI chat helps you respond quickly and keep conversations moving.</p>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">Speed Matters</h3>
+                <p className="text-gray-400">Slow response times can cost deals. AI chat helps you respond quickly and keep conversations moving.</p>
               </div>
               <div className="glass-card p-8">
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Self-Service Expectations</h3>
-                <p className="text-brand-dark/70">Customers want instant answers. AI chat provides self-service without wait times.</p>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">Self-Service Expectations</h3>
+                <p className="text-gray-400">Customers want instant answers. AI chat provides self-service without wait times.</p>
               </div>
               <div className="glass-card p-8">
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Operational Efficiency</h3>
-                <p className="text-brand-dark/70">AI handles routine inquiries, freeing your team to focus on high-value conversations.</p>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">Operational Efficiency</h3>
+                <p className="text-gray-400">AI handles routine inquiries, freeing your team to focus on high-value conversations.</p>
               </div>
             </div>
           </div>
@@ -311,10 +311,10 @@ export default function CRMAIChatPage() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Powerful <strong className="text-brand-primary">AI CRM</strong> Features
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Everything you need to automate customer engagement and grow your business.
               </p>
             </div>
@@ -322,14 +322,14 @@ export default function CRMAIChatPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="glass-card p-6 hover:scale-105 transition-transform duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mb-4 text-white">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl flex items-center justify-center mb-4 text-white">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-heading font-bold text-brand-dark mb-2">{feature.title}</h3>
-                  <p className="text-brand-dark/70 mb-4">{feature.description}</p>
+                  <h3 className="text-xl font-heading font-bold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-400 mb-4">{feature.description}</p>
                   <div className="space-y-2">
                     {feature.details.map((detail, idx) => (
-                      <div key={idx} className="flex items-center space-x-2 text-sm text-brand-dark/70">
+                      <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                         <span>{detail}</span>
                       </div>
@@ -342,20 +342,20 @@ export default function CRMAIChatPage() {
         </section>
 
         {/* Integrations Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Seamless <strong className="text-brand-primary">Integrations</strong>
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Connect with the tools you already use for a unified workflow.
               </p>
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
               {integrations.map((integration, index) => (
-                <div key={index} className="px-6 py-3 bg-indigo-100 rounded-full text-indigo-700 font-medium">
+                <div key={index} className="px-6 py-3 bg-blue-100 rounded-full text-blue-700 font-medium">
                   {integration}
                 </div>
               ))}
@@ -367,10 +367,10 @@ export default function CRMAIChatPage() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Our <strong className="text-brand-primary">Implementation</strong> Process
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 We handle everything from setup to optimization so you can focus on your business.
               </p>
             </div>
@@ -379,15 +379,15 @@ export default function CRMAIChatPage() {
               {process.map((item, index) => (
                 <div key={index} className="glass-card p-8">
                   <div className="flex flex-col lg:flex-row lg:items-start gap-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
                       {item.step}
                     </div>
                     <div className="flex-grow">
-                      <h3 className="text-2xl font-heading font-bold text-brand-dark mb-3">{item.title}</h3>
-                      <p className="text-brand-dark/70 mb-4">{item.description}</p>
+                      <h3 className="text-2xl font-heading font-bold text-white mb-3">{item.title}</h3>
+                      <p className="text-gray-400 mb-4">{item.description}</p>
                       <div className="grid sm:grid-cols-2 gap-3">
                         {item.details.map((detail, idx) => (
-                          <div key={idx} className="flex items-center space-x-2 text-brand-dark/70">
+                          <div key={idx} className="flex items-center space-x-2 text-gray-400">
                             <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                             <span>{detail}</span>
                           </div>
@@ -402,66 +402,66 @@ export default function CRMAIChatPage() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-heading font-bold text-brand-dark mb-6">
+                <h2 className="text-3xl font-heading font-bold text-white mb-6">
                   Why Choose <strong className="text-brand-primary">True Rank Digital</strong> for AI CRM
                 </h2>
                 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Brain className="w-6 h-6 text-indigo-600" />
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Brain className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Custom AI Training</h3>
-                      <p className="text-brand-dark/70">We train the AI specifically on your business, services, and communication style for authentic interactions.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Custom AI Training</h3>
+                      <p className="text-gray-400">We train the AI specifically on your business, services, and communication style for authentic interactions.</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Shield className="w-6 h-6 text-indigo-600" />
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Shield className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Enterprise Security</h3>
-                      <p className="text-brand-dark/70">SOC 2 compliant, HIPAA-ready infrastructure with encryption and access controls to protect customer data.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Enterprise Security</h3>
+                      <p className="text-gray-400">SOC 2 compliant, HIPAA-ready infrastructure with encryption and access controls to protect customer data.</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Target className="w-6 h-6 text-indigo-600" />
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Target className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Results-Focused</h3>
-                      <p className="text-brand-dark/70">We measure success by your business outcomes—more leads, faster response, higher conversions.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Results-Focused</h3>
+                      <p className="text-gray-400">We measure success by your business outcomes—more leads, faster response, higher conversions.</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Award className="w-6 h-6 text-indigo-600" />
+                    <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Award className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Ongoing Optimization</h3>
-                      <p className="text-brand-dark/70">We continuously improve AI responses based on interaction data and evolving business needs.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Ongoing Optimization</h3>
+                      <p className="text-gray-400">We continuously improve AI responses based on interaction data and evolving business needs.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-6 text-center">Industries We Serve</h3>
+                <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center">Industries We Serve</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     'Healthcare', 'Legal Services', 'Real Estate', 'Home Services',
                     'Financial Services', 'Professional Services', 'Dental Practices', 'Auto Dealers',
                     'Insurance', 'Education', 'Fitness Studios', 'Salons & Spas'
                   ].map((industry, index) => (
-                    <div key={index} className="flex items-center space-x-2 text-brand-dark/70">
+                    <div key={index} className="flex items-center space-x-2 text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-500" />
                       <span>{industry}</span>
                     </div>
@@ -476,10 +476,10 @@ export default function CRMAIChatPage() {
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Frequently Asked Questions
               </h2>
-              <p className="text-xl text-brand-dark/70">
+              <p className="text-xl text-gray-400">
                 Common questions about our AI CRM solution.
               </p>
             </div>
@@ -487,8 +487,8 @@ export default function CRMAIChatPage() {
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="glass-card p-6">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{faq.question}</h3>
-                  <p className="text-brand-dark/70">{faq.answer}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-400">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -496,10 +496,10 @@ export default function CRMAIChatPage() {
         </section>
 
         {/* Related Services */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Related <strong className="text-brand-primary">Services</strong>
               </h2>
             </div>
@@ -507,8 +507,8 @@ export default function CRMAIChatPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedServices.map((service, index) => (
                 <Link key={index} href={service.href} className="glass-card p-6 hover:scale-105 transition-transform duration-300 group">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-2 group-hover:text-brand-primary transition-colors">{service.name}</h3>
-                  <p className="text-brand-dark/70 text-sm mb-4">{service.description}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-2 group-hover:text-brand-primary transition-colors">{service.name}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                   <div className="flex items-center text-brand-primary font-medium text-sm">
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -522,27 +522,27 @@ export default function CRMAIChatPage() {
         {/* CTA Section */}
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="glass-card p-8 bg-gradient-to-br from-indigo-500/10 to-purple-500/10">
-              <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <div className="glass-card p-8 bg-gradient-to-br from-blue-600/10 to-blue-400/10">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-blue-400 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Users className="w-10 h-10 text-white" />
               </div>
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Ready to <strong className="text-brand-primary">Transform Customer Engagement</strong>?
               </h2>
-              <p className="text-xl text-brand-dark/70 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
                 Get a free demo and see how AI CRM can automate your customer interactions and grow your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-indigo-600 text-white font-semibold text-lg rounded-full hover:bg-indigo-700 transition-colors duration-300"
+                  className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-full hover:bg-blue-700 transition-colors duration-300"
                 >
                   <CheckCircle className="w-5 h-5" />
                   <span>Get Free Demo</span>
                 </Link>
                 <a
                   href="tel:+17324750139"
-                  className="inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-indigo-600 text-indigo-600 font-semibold text-lg rounded-full hover:bg-indigo-50 transition-colors duration-300"
+                  className="inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold text-lg rounded-full hover:bg-blue-50 transition-colors duration-300"
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (732) 475-0139</span>

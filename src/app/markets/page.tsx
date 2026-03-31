@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function MarketsPage() {
   return (
-    <div className="pt-16 min-h-screen bg-gradient-to-b from-brand-light/20 to-white">
+    <div className="bg-brand-obsidian min-h-screen pt-16">
       
       {/* Hero Section */}
       <section className="py-20">
@@ -19,11 +19,11 @@ export default function MarketsPage() {
             <span className="text-brand-primary font-semibold text-sm">Our Markets</span>
           </div>
           
-          <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
+          <h1 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-6">
             Markets We Serve
           </h1>
           
-          <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
             True Rank Digital provides SEO and digital marketing services to help businesses improve their online presence and reach their goals.
           </p>
 
@@ -46,7 +46,7 @@ export default function MarketsPage() {
                 icon: <TrendingUp className="w-8 h-8" />,
                 metric: 'Dedicated',
                 label: 'Client Service',
-                color: 'from-brand-accent to-purple-600'
+                color: 'from-brand-accent to-blue-600'
               }
             ].map((stat, index) => (
               <div key={index} className="glass-card p-8 text-center">
@@ -55,8 +55,8 @@ export default function MarketsPage() {
                     {stat.icon}
                   </div>
                 </div>
-                <div className="text-3xl font-bold text-brand-dark mb-2">{stat.metric}</div>
-                <div className="text-brand-dark/70 font-medium">{stat.label}</div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.metric}</div>
+                <div className="text-gray-400 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>

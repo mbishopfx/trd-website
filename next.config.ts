@@ -173,10 +173,20 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       
-      // Old AIO services page → learn-aio
+      // Old AIO services page → ai-engine
       {
         source: '/aio-services',
-        destination: '/learn-aio',
+        destination: '/ai-engine',
+        permanent: true,
+      },
+      {
+        source: '/learn-aio',
+        destination: '/ai-engine',
+        permanent: true,
+      },
+      {
+        source: '/ai-seo-technology',
+        destination: '/ai-engine',
         permanent: true,
       },
       
@@ -250,10 +260,10 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       
-      // Old AIO services pages → learn-aio
+      // Old AIO services pages → ai-engine
       {
         source: '/aio-services/:path*',
-        destination: '/learn-aio',
+        destination: '/ai-engine',
         permanent: true,
       },
       

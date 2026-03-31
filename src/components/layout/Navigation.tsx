@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -9,8 +9,6 @@ import {
   X, 
   ChevronDown,
   Rocket,
-  Bot,
-  TrendingUp,
   Users,
   Phone,
   MapPin,
@@ -19,12 +17,12 @@ import {
   Building,
   Settings,
   BarChart3,
-  Shield,
   Database,
   Network,
   MessageSquare,
   Target,
   Zap,
+  TrendingUp,
   Store,
   ShoppingBag,
   Wrench,
@@ -37,7 +35,10 @@ import {
   DollarSign,
   Hammer,
   Car,
-  Bug
+  Bug,
+  Activity,
+  Binary,
+  Cpu
 } from 'lucide-react';
 
 interface NavItem {
@@ -56,155 +57,96 @@ const navigationItems: NavItem[] = [
     icon: <Building className="w-4 h-4" />,
   },
   {
-    name: 'Who We Serve',
-    href: '/services',
-    icon: <Target className="w-4 h-4" />,
-    items: [
-      {
-        name: 'Lawyers & Legal Services',
-        href: '/services?icp=lawyers',
-        icon: <Scale className="w-4 h-4" />,
-        description: 'Law firms and attorneys needing local pack domination and Google Business Profile optimization'
-      },
-      {
-        name: 'Medical & Dental Practices',
-        href: '/services?icp=medical',
-        icon: <Heart className="w-4 h-4" />,
-        description: 'Healthcare providers seeking Google visibility and patient acquisition through local search'
-      },
-      {
-        name: 'Home Services Contractors',
-        href: '/services?icp=home-services',
-        icon: <Hammer className="w-4 h-4" />,
-        description: 'Plumbing, HVAC, roofing, and home improvement contractors needing local pack results'
-      },
-      {
-        name: 'Real Estate Agents',
-        href: '/services?icp=real-estate',
-        icon: <Home className="w-4 h-4" />,
-        description: 'Real estate professionals requiring Google Business Profile optimization for listings visibility'
-      },
-      {
-        name: 'Financial Advisors & Accountants',
-        href: '/services?icp=financial',
-        icon: <DollarSign className="w-4 h-4" />,
-        description: 'Financial professionals needing local search optimization for client acquisition'
-      },
-      {
-        name: 'Auto Repair & Dealerships',
-        href: '/services?icp=automotive',
-        icon: <Car className="w-4 h-4" />,
-        description: 'Auto repair shops and dealerships seeking local pack domination'
-      },
-      {
-        name: 'Pest Control & Lawn Care',
-        href: '/services?icp=pest-control',
-        icon: <Bug className="w-4 h-4" />,
-        description: 'Service-based businesses needing hyperlocal Google optimization'
-      }
-    ]
-  },
-  {
     name: 'Services',
     href: '/services',
-    icon: <Settings className="w-4 h-4" />,
+    icon: <Cpu className="w-4 h-4" />,
     items: [
       {
-        name: 'Digital Marketing',
-        href: '/services/digital-marketing',
-        icon: <TrendingUp className="w-4 h-4" />,
-        description: 'Comprehensive digital marketing and advertising services'
+        name: 'AI Search Optimization',
+        href: '/services/ai-seo',
+        icon: <Zap className="w-4 h-4" />,
+        description: 'Improve visibility across AI-assisted and answer-driven discovery.'
       },
       {
-        name: 'Google Business Profile',
+        name: 'Digital Marketing & Advertising',
+        href: '/services/digital-marketing',
+        icon: <TrendingUp className="w-4 h-4" />,
+        description: 'Full-funnel strategy to drive qualified traffic and conversions.'
+      },
+      {
+        name: 'Google Business Profile Optimization',
         href: '/services/google-business-profile',
+        icon: <MapPin className="w-4 h-4" />,
+        description: 'Increase local map visibility, actions, and lead volume from GBP.'
+      },
+      {
+        name: 'Local SEO',
+        href: '/services/local-seo',
         icon: <Search className="w-4 h-4" />,
-        description: 'Optimize your Google Business Profile for maximum visibility'
+        description: 'Rank in the markets that matter with stronger local intent coverage.'
+      },
+      {
+        name: 'PPC Campaigns',
+        href: '/services/ppc-campaigns',
+        icon: <Target className="w-4 h-4" />,
+        description: 'Capture high-intent demand immediately with paid search campaigns.'
+      },
+      {
+        name: 'SEO Tactics',
+        href: '/services/seo-tactics',
+        icon: <Activity className="w-4 h-4" />,
+        description: 'Technical and on-page SEO execution tied to growth outcomes.'
       },
       {
         name: 'Website Engineering',
         href: '/services/website-development',
         icon: <Globe className="w-4 h-4" />,
-        description: 'Custom website design, development, and UX optimization'
+        description: 'Build or rebuild your site for speed, clarity, and conversion.'
       },
       {
-        name: 'Social Media Multi-Platform Management',
+        name: 'Social Media Management',
         href: '/services/social-media',
         icon: <Users className="w-4 h-4" />,
-        description: 'High authority strategies that link back to Knowledge Graph and website schema'
+        description: 'Strengthen your authority across channels with consistent messaging.'
       },
       {
         name: 'CRM With AI Chat',
         href: '/services/crm-ai-chat',
-        icon: <Bot className="w-4 h-4" />,
-        description: 'AI-powered CRM with automated customer interactions'
+        icon: <MessageSquare className="w-4 h-4" />,
+        description: 'Automate response and follow-up while improving lead handling.'
       },
       {
         name: 'Business Consulting',
         href: '/services/business-consulting',
-        icon: <Building className="w-4 h-4" />,
-        description: 'Strategic guidance for digital growth and optimization'
-      },
-      {
-        name: 'Local SEO',
-        href: '/services/local-seo',
-        icon: <MapPin className="w-4 h-4" />,
-        description: 'Dominate local search and Google Maps results'
-      },
-      {
-        name: 'PPC Campaigns',
-        href: '/services/ppc-campaigns',
-        icon: <TrendingUp className="w-4 h-4" />,
-        description: 'Targeted Google Ads campaigns for immediate results'
-      },
-      {
-        name: 'SEO Tactics',
-        href: '/services/seo-tactics',
-        icon: <Search className="w-4 h-4" />,
-        description: 'Proven SEO strategies to boost your Google rankings'
+        icon: <Briefcase className="w-4 h-4" />,
+        description: 'Strategic guidance to align marketing execution with business goals.'
       },
     ]
   },
   {
-    name: 'Staff',
-    href: '/staff',
+    name: 'GET YOUR PLATFORM AUDIT',
+    href: '/contact',
+    icon: <Search className="w-4 h-4" />,
+  },
+  {
+    name: 'EXECUTIVE TEAM',
+    href: '/meet-the-staff',
     icon: <Users className="w-4 h-4" />,
   },
   {
     name: 'Contact',
     href: '/contact',
     icon: <Phone className="w-4 h-4" />,
-  },
-  {
-    name: 'AIO',
-    href: '/learn-aio',
-    icon: <Bot className="w-4 h-4" />,
-    badge: 'AI',
-    description: 'Discover our AI-powered optimization technology'
   }
 ];
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     setActiveDropdown(null);
-  };
-
-  const handleDropdownToggle = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
 
   return (
@@ -212,13 +154,9 @@ export default function Navigation() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/90 backdrop-blur-md shadow-glass border-b border-white/20' 
-          : 'bg-transparent'
-      }`}
+      className="fixed top-8 left-0 right-0 z-50 bg-brand-obsidian/80 backdrop-blur-xl border-b border-white/5 py-2 transition-all duration-300"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[92rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
           {/* Logo */}
@@ -227,18 +165,19 @@ export default function Navigation() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="w-12 h-12 flex items-center justify-center">
+            <Link href="/" className="flex items-center space-x-3 group">
+              <div className="w-12 h-12 flex items-center justify-center relative">
+                <div className="absolute inset-0 bg-brand-cyan/20 blur-lg rounded-full group-hover:bg-brand-cyan/40 transition-all"></div>
                 <Image
                   src="/images/logos/trd-logo1.avif"
                   alt="True Rank Digital"
                   width={48}
                   height={48}
-                  className="w-full h-full object-contain"
+                  className="relative z-10 w-full h-full object-contain"
                 />
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-xl font-heading font-bold text-brand-dark">
+                <h1 className="text-xl font-heading font-black text-white tracking-tighter uppercase italic">
                   True Rank Digital
                 </h1>
               </div>
@@ -246,9 +185,9 @@ export default function Navigation() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-0.5">
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2 flex-nowrap">
             {navigationItems.map((item) => (
-              <div key={item.name} className="relative group">
+              <div key={item.name} className="relative">
                 {item.items ? (
                   // Dropdown Menu Item
                   <div
@@ -256,15 +195,10 @@ export default function Navigation() {
                     onMouseEnter={() => setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    <button className="flex items-center space-x-1.5 px-3 py-2 text-brand-dark hover:text-brand-primary transition-colors duration-200 font-medium text-sm">
+                    <button className="flex items-center space-x-1.5 px-2.5 xl:px-3 py-2 text-gray-300 hover:text-brand-cyan transition-all duration-200 font-bold text-[10px] xl:text-[11px] uppercase tracking-[0.16em] whitespace-nowrap">
                       {item.icon}
-                      <span>{item.name}</span>
-                      {item.badge && (
-                        <span className="ml-1 px-2 py-0.5 text-xs font-semibold bg-brand-accent text-white rounded-full">
-                          {item.badge}
-                        </span>
-                      )}
-                      <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+                      <span className="whitespace-nowrap leading-none">{item.name}</span>
+                      <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
                     </button>
 
                     {/* Dropdown Menu */}
@@ -275,25 +209,25 @@ export default function Navigation() {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-96 bg-white/95 backdrop-blur-md border border-white/30 rounded-xl shadow-xl overflow-hidden"
+                          className="absolute top-full left-0 mt-2 w-80 bg-brand-obsidian-light border border-white/10 rounded-2xl shadow-2xl overflow-hidden"
                         >
-                          <div className="p-2 max-h-[80vh] overflow-y-auto custom-scrollbar">
-                            <div className="grid grid-cols-2 gap-1">
+                          <div className="p-3">
+                            <div className="grid grid-cols-1 gap-1">
                               {item.items.map((subItem) => (
                                 <Link
                                   key={subItem.name}
                                   href={subItem.href}
-                                  className="flex items-start space-x-2 p-2 rounded-lg hover:bg-white/25 transition-colors duration-200 group/item"
+                                  className="flex items-start space-x-3 p-3 rounded-xl hover:bg-brand-obsidian/5 transition-all duration-200 group/item"
                                 >
-                                  <div className="flex-shrink-0 mt-0.5 text-brand-primary group-hover/item:text-brand-accent transition-colors duration-200">
+                                  <div className="flex-shrink-0 mt-0.5 text-brand-cyan group-hover/item:scale-110 transition-transform duration-200">
                                     {subItem.icon}
                                   </div>
                                   <div className="flex-grow">
-                                    <h4 className="font-semibold text-brand-dark group-hover/item:text-brand-primary transition-colors duration-200">
+                                    <h4 className="font-bold text-sm text-white group-hover/item:text-brand-cyan transition-colors duration-200">
                                       {subItem.name}
                                     </h4>
                                   {subItem.description && (
-                                    <p className="text-sm text-brand-dark/70 mt-1">
+                                    <p className="text-[11px] text-gray-500 mt-1 font-medium leading-relaxed">
                                       {subItem.description}
                                     </p>
                                   )}
@@ -310,16 +244,11 @@ export default function Navigation() {
                   // Regular Menu Item
                   <Link
                     href={item.href}
-                    className="flex items-center space-x-1.5 px-3 py-2 text-brand-dark hover:text-brand-primary transition-colors duration-200 font-medium text-sm relative group"
+                    className="flex items-center space-x-1.5 px-2.5 xl:px-3 py-2 text-gray-300 hover:text-brand-cyan transition-all duration-200 font-bold text-[10px] xl:text-[11px] uppercase tracking-[0.16em] whitespace-nowrap relative group"
                   >
                     {item.icon}
-                    <span>{item.name}</span>
-                    {item.badge && (
-                      <span className="ml-1 px-2 py-0.5 text-xs font-semibold bg-brand-accent text-white rounded-full">
-                        {item.badge}
-                      </span>
-                    )}
-                    <div className="absolute bottom-0 left-4 right-4 h-0.5 bg-brand-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></div>
+                    <span className="whitespace-nowrap leading-none">{item.name}</span>
+                    <div className="absolute bottom-0 left-4 right-4 h-0.5 bg-brand-cyan scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></div>
                   </Link>
                 )}
               </div>
@@ -333,11 +262,11 @@ export default function Navigation() {
               whileTap={{ scale: 0.95 }}
             >
               <Link
-                href="/free-audit"
-                className="glass-button px-4 py-2.5 bg-brand-primary text-white font-semibold rounded-full flex items-center space-x-1.5 hover:bg-brand-primary/90 transition-all duration-300 text-sm whitespace-nowrap"
+                href="/contact"
+                className="px-5 xl:px-6 py-2.5 bg-brand-cyan text-brand-obsidian font-black rounded-full flex items-center space-x-2 shadow-[0_0_20px_rgba(0,245,255,0.3)] hover:shadow-[0_0_30px_rgba(0,245,255,0.5)] transition-all duration-300 text-[10px] xl:text-xs uppercase tracking-[0.16em] whitespace-nowrap"
               >
-                <Rocket className="w-3.5 h-3.5" />
-                <span>Custom Playbook</span>
+                <Zap className="w-3.5 h-3.5 animate-pulse" />
+                <span className="whitespace-nowrap leading-none">Run Audit</span>
               </Link>
             </motion.div>
           </div>
@@ -345,7 +274,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="lg:hidden p-2 rounded-lg glass-button text-brand-dark hover:text-brand-primary transition-colors duration-200"
+            className="lg:hidden p-2 rounded-xl glass-cyan text-brand-cyan"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -356,95 +285,52 @@ export default function Navigation() {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white/98 backdrop-blur-md border-t border-white/30 shadow-xl"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="lg:hidden absolute top-full left-0 right-0 bg-brand-obsidian border-b border-white/10 shadow-2xl overflow-hidden"
           >
-            <div className="max-w-7xl mx-auto px-4 py-4 space-y-2">
+            <div className="px-4 py-6 space-y-4">
               {navigationItems.map((item) => (
-                <div key={item.name}>
+                <div key={item.name} className="space-y-2">
+                  <div className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500 mb-2 px-2">
+                    {item.name}
+                  </div>
                   {item.items ? (
-                    // Mobile Dropdown Item
-                    <div>
-                      <button
-                        onClick={() => handleDropdownToggle(item.name)}
-                        className="w-full flex items-center justify-between p-3 text-left text-brand-dark hover:text-brand-primary transition-colors duration-200 font-medium rounded-lg hover:bg-white/20"
-                      >
-                        <div className="flex items-center space-x-2">
-                          {item.icon}
-                          <span>{item.name}</span>
-                          {item.badge && (
-                            <span className="ml-1 px-2 py-0.5 text-xs font-semibold bg-brand-accent text-white rounded-full">
-                              {item.badge}
-                            </span>
-                          )}
-                        </div>
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === item.name ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-                      
-                      <AnimatePresence>
-                        {activeDropdown === item.name && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="ml-6 mt-2 space-y-1"
-                          >
-                            {item.items.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                href={subItem.href}
-                                onClick={() => setIsMenuOpen(false)}
-                                className="flex items-start space-x-3 p-3 rounded-lg hover:bg-white/25 transition-colors duration-200"
-                              >
-                                <div className="flex-shrink-0 mt-0.5 text-brand-primary">
-                                  {subItem.icon}
-                                </div>
-                                <div>
-                                  <h4 className="font-semibold text-brand-dark">{subItem.name}</h4>
-                                  {subItem.description && (
-                                    <p className="text-sm text-brand-dark/70 mt-1">{subItem.description}</p>
-                                  )}
-                                </div>
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                    <div className="grid grid-cols-1 gap-2">
+                      {item.items.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="flex items-center space-x-3 p-3 rounded-xl bg-brand-obsidian/5 text-white"
+                        >
+                          <div className="text-brand-cyan">{subItem.icon}</div>
+                          <span className="font-bold text-sm">{subItem.name}</span>
+                        </Link>
+                      ))}
                     </div>
                   ) : (
-                    // Mobile Regular Item
                     <Link
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="flex items-center space-x-2 p-3 text-brand-dark hover:text-brand-primary transition-colors duration-200 font-medium rounded-lg hover:bg-white/20"
+                      className="flex items-center space-x-3 p-3 rounded-xl bg-brand-obsidian/5 text-white"
                     >
-                      {item.icon}
-                      <span>{item.name}</span>
-                      {item.badge && (
-                        <span className="ml-1 px-2 py-0.5 text-xs font-semibold bg-brand-accent text-white rounded-full">
-                          {item.badge}
-                        </span>
-                      )}
+                      <div className="text-brand-cyan">{item.icon}</div>
+                      <span className="font-bold text-sm">{item.name}</span>
                     </Link>
                   )}
                 </div>
               ))}
               
-              {/* Mobile CTA Button */}
-              <div className="pt-4 border-t border-white/20">
+              <div className="pt-4">
                 <Link
-                  href="/free-audit"
+                  href="/contact"
                   onClick={() => setIsMenuOpen(false)}
-                  className="w-full glass-button px-4 py-2.5 bg-brand-primary text-white font-semibold rounded-full flex items-center justify-center space-x-1.5 hover:bg-brand-primary/90 transition-all duration-300 text-sm"
+                  className="w-full px-6 py-4 bg-brand-cyan text-brand-obsidian font-black rounded-xl flex items-center justify-center space-x-2 text-sm uppercase tracking-widest"
                 >
-                  <Rocket className="w-3.5 h-3.5" />
-                  <span>Custom Playbook</span>
+                  <Zap className="w-4 h-4" />
+                  <span>Run Search Ability Audit</span>
                 </Link>
               </div>
             </div>

@@ -23,7 +23,7 @@ export default function DateField({ field, value, onChange, error }: DateFieldPr
         value={value || ''}
         onChange={(e) => onChange(e.target.value)}
         required={field.required}
-        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full px-4 py-3 bg-brand-obsidian/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
       {error && <p className="text-red-400 text-sm mt-1">{error}</p>}
     </div>

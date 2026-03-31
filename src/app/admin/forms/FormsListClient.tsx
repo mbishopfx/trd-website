@@ -77,7 +77,7 @@ export default function FormsListClient({ initialForms }: { initialForms: Form[]
         <p className="text-gray-400 mb-6">Create your first lead capture form to get started</p>
         <Link
           href="/admin/forms/builder"
-          className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all"
+          className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-600 text-white font-bold rounded-lg hover:from-blue-700 hover:to-blue-700 transition-all"
         >
           Create Your First Form
         </Link>
@@ -96,7 +96,7 @@ export default function FormsListClient({ initialForms }: { initialForms: Form[]
             {/* QR Code Thumbnail */}
             {form.qr_code_url && (
               <div className="flex-shrink-0">
-                <div className="w-24 h-24 bg-white rounded-lg p-2 relative">
+                <div className="w-24 h-24 bg-brand-obsidian rounded-lg p-2 relative">
                   <Image
                     src={form.qr_code_url}
                     alt={`QR code for ${form.title}`}
@@ -123,7 +123,7 @@ export default function FormsListClient({ initialForms }: { initialForms: Form[]
                       className={`px-2 py-1 rounded text-xs font-semibold ${
                         form.is_active
                           ? 'bg-green-500/20 text-green-400'
-                          : 'bg-gray-500/20 text-gray-400'
+                          : 'bg-brand-obsidian0/20 text-gray-400'
                       }`}
                     >
                       {form.is_active ? 'Active' : 'Inactive'}

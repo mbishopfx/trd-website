@@ -39,7 +39,7 @@ export function GenerateSingleButton() {
     <button
       onClick={handleGenerate}
       disabled={loading}
-      className="w-full bg-gradient-to-br from-orange-600 to-pink-600 rounded-xl p-6 hover:shadow-2xl transition-all duration-200 group text-left disabled:opacity-50 disabled:cursor-not-allowed"
+      className="w-full bg-gradient-to-br from-orange-600 to-blue-600 rounded-xl p-6 hover:shadow-2xl transition-all duration-200 group text-left disabled:opacity-50 disabled:cursor-not-allowed"
     >
       <div className="flex items-center gap-4 mb-3">
         <span className="text-4xl">{loading ? '⏳' : '🚀'}</span>
@@ -99,7 +99,7 @@ export function GenerateBulkButton() {
     <button
       onClick={handleBulkGenerate}
       disabled={loading}
-      className="w-full bg-gradient-to-br from-purple-600 to-indigo-600 rounded-xl p-6 hover:shadow-2xl transition-all duration-200 group text-left disabled:opacity-50 disabled:cursor-not-allowed"
+      className="w-full bg-gradient-to-br from-blue-600 to-blue-600 rounded-xl p-6 hover:shadow-2xl transition-all duration-200 group text-left disabled:opacity-50 disabled:cursor-not-allowed"
     >
       <div className="flex items-center gap-4 mb-3">
         <span className="text-4xl">{loading ? '⏳' : '⚡'}</span>
@@ -107,7 +107,7 @@ export function GenerateBulkButton() {
           {loading ? 'Generating...' : 'Generate 10 Posts'}
         </h3>
       </div>
-      <p className="text-purple-100 text-sm">
+      <p className="text-blue-100 text-sm">
         {loading ? progress || 'Creating 10 comprehensive articles...' : 'Bulk generate 10 AI blog posts at once'}
       </p>
       <div className="mt-4 text-white font-semibold group-hover:translate-x-2 transition-transform">

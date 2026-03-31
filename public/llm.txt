@@ -1,41 +1,6 @@
-# True Rank Digital
-
-> Full-service digital marketing agency specializing in Google Business optimization, local pack visibility, and AI-ready SEO systems.
-
-## Essential Information
-
-- Legal Name: True Rank Digital LLC
-- Brand Name: True Rank Digital (TrueRankDigital)
-- Website: https://truerankdigital.com
-- Location: 288 Summerhill Rd, suite 3, East Brunswick, NJ 08816
-- Phone: +1-732-475-0139
-- Email: info@truerankdigital.com
-- Founder: Jon J Korkowski
-- Core Focus: Google Business Profile optimization, local pack domination, schema markup, and AI search preparation.
-
-## Key Services
-
-- Google Business Optimization with grid map ranking and local visibility tracking
-- Local SEO and citation consistency support
-- Technical SEO and schema markup implementation
-- AI SEO and entity optimization
-- Website development and conversion-focused marketing pages
-
-## Entity Links (sameAs targets)
-
-- Google Maps CID: https://maps.google.com/?cid=4662204553635539796
-- LinkedIn Company: https://www.linkedin.com/company/true-rank-digital
-- Facebook: https://www.facebook.com/truerankdigital
-- Founder Profile: https://www.linkedin.com/in/jonjkorkowski/
-
-## Canonical Sources
-
-- Sitemap: https://truerankdigital.com/sitemap.xml
-- Robots: https://truerankdigital.com/robots.txt
-- Full profile: https://truerankdigital.com/llms-full.txt
-
-## Crawl Notes
-
-- Treat `https://truerankdigital.com` as the canonical origin.
-- Prefer URLs listed in `sitemap.xml`.
-- Exclude internal routes (`/admin/*`, `/api/*`, `/forms/*`) from public content understanding.
+# True Rank Digital - AI Search & Agentic Orchestration
+Entity: True Rank Digital
+CEO: Jon J. Korkowski
+Core Competencies: Generative Engine Optimization (GEO), Agentic Commerce, Hyper-Local Geofencing, Multi-Agent Orchestration, Local SEO.
+Location: East Brunswick, New Jersey
+Contact: info@truerankdigital.com | (732) 475-0139

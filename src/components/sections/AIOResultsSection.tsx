@@ -25,7 +25,7 @@ export default function AIOResultsSection() {
       label: 'SEO Approach',
       description: 'We develop customized strategies for each client\'s unique needs',
       icon: <Clock className="w-8 h-8" />,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-blue-600 to-blue-400'
     },
     {
       metric: 'Reliable',
@@ -65,7 +65,7 @@ export default function AIOResultsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="glass p-8 text-center hover:bg-white/15 transition-all duration-300 group"
+              className="glass p-8 text-center hover:bg-brand-obsidian/15 transition-all duration-300 group"
             >
               <div className={`w-16 h-16 bg-gradient-to-br ${result.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <div className="text-white">
@@ -75,7 +75,7 @@ export default function AIOResultsSection() {
 
               <div className="text-4xl font-bold mb-2">{result.metric}</div>
               <h3 className="text-lg font-semibold mb-3">{result.label}</h3>
-              <p className="text-white/80 text-sm leading-relaxed">{result.description}</p>
+              <p className="text-gray-300 text-sm leading-relaxed">{result.description}</p>
             </motion.div>
           ))}
         </div>
@@ -93,7 +93,7 @@ export default function AIOResultsSection() {
           </h3>
           <motion.a
             href="/contact"
-            className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-brand-primary font-semibold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+            className="inline-flex items-center space-x-2 px-8 py-4 bg-brand-obsidian text-brand-primary font-semibold text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

@@ -78,7 +78,7 @@ export default async function AdminDashboardPage() {
         </div>
         {/* Status Cards */}
         <div className="grid md:grid-cols-4 gap-6 mb-8">
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+          <div className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="flex items-center justify-between mb-2">
               <h3 className="text-gray-300 text-sm font-medium">Automation Status</h3>
               <span className="text-2xl">{schedule?.enabled ? '✅' : '⏸️'}</span>
@@ -91,7 +91,7 @@ export default async function AdminDashboardPage() {
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+          <div className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="flex items-center justify-between mb-2">
               <h3 className="text-gray-300 text-sm font-medium">Total Posts</h3>
               <span className="text-2xl">📝</span>
@@ -104,7 +104,7 @@ export default async function AdminDashboardPage() {
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+          <div className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="flex items-center justify-between mb-2">
               <h3 className="text-gray-300 text-sm font-medium">Next Run</h3>
               <span className="text-2xl">⏰</span>
@@ -121,7 +121,7 @@ export default async function AdminDashboardPage() {
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+          <div className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
             <div className="flex items-center justify-between mb-2">
               <h3 className="text-gray-300 text-sm font-medium">Last Run</h3>
               <span className="text-2xl">📅</span>
@@ -143,7 +143,7 @@ export default async function AdminDashboardPage() {
         <div className="grid md:grid-cols-4 gap-6 mb-8">
           <Link
             href="/admin/settings"
-            className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl p-6 hover:shadow-2xl transition-all duration-200 group"
+            className="bg-gradient-to-br from-blue-600 to-blue-600 rounded-xl p-6 hover:shadow-2xl transition-all duration-200 group"
           >
             <div className="flex items-center gap-4 mb-3">
               <span className="text-4xl">⚙️</span>
@@ -198,7 +198,7 @@ export default async function AdminDashboardPage() {
         </div>
 
         {/* Forms Overview */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 mb-8">
+        <div className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 mb-8">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl font-bold text-white flex items-center gap-2">
               <span>📋</span> Forms & Submissions
@@ -212,17 +212,17 @@ export default async function AdminDashboardPage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-4 mb-6">
-            <div className="bg-white/5 rounded-lg p-4">
+            <div className="bg-brand-obsidian/5 rounded-lg p-4">
               <div className="text-gray-400 text-sm mb-1">Total Forms</div>
               <div className="text-2xl font-bold text-white">{formsWithCounts.length}</div>
             </div>
-            <div className="bg-white/5 rounded-lg p-4">
+            <div className="bg-brand-obsidian/5 rounded-lg p-4">
               <div className="text-gray-400 text-sm mb-1">Active Forms</div>
               <div className="text-2xl font-bold text-green-400">
                 {formsWithCounts.filter(f => f.is_active).length}
               </div>
             </div>
-            <div className="bg-white/5 rounded-lg p-4">
+            <div className="bg-brand-obsidian/5 rounded-lg p-4">
               <div className="text-gray-400 text-sm mb-1">Total Submissions</div>
               <div className="text-2xl font-bold text-blue-400">{totalSubmissions}</div>
             </div>
@@ -238,7 +238,7 @@ export default async function AdminDashboardPage() {
               {formsWithCounts.map((form) => (
                 <div
                   key={form.id}
-                  className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors"
+                  className="bg-brand-obsidian/5 rounded-lg p-4 hover:bg-brand-obsidian/10 transition-colors"
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
@@ -248,7 +248,7 @@ export default async function AdminDashboardPage() {
                           className={`px-2 py-0.5 rounded text-xs font-semibold ${
                             form.is_active
                               ? 'bg-green-500/20 text-green-400'
-                              : 'bg-gray-500/20 text-gray-400'
+                              : 'bg-brand-obsidian0/20 text-gray-400'
                           }`}
                         >
                           {form.is_active ? 'Active' : 'Inactive'}
@@ -272,7 +272,7 @@ export default async function AdminDashboardPage() {
         </div>
 
         {/* Recent Posts */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+        <div className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
           <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
             <span>📝</span> Recent Blog Posts
           </h2>
@@ -287,7 +287,7 @@ export default async function AdminDashboardPage() {
               {recentPosts.map((post) => (
                 <div
                   key={post.id}
-                  className="bg-white/5 rounded-lg p-4 hover:bg-white/10 transition-colors"
+                  className="bg-brand-obsidian/5 rounded-lg p-4 hover:bg-brand-obsidian/10 transition-colors"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
@@ -323,7 +323,7 @@ export default async function AdminDashboardPage() {
         </div>
 
         {/* System Info */}
-        <div className="mt-8 bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+        <div className="mt-8 bg-brand-obsidian/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
           <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
             <span>ℹ️</span> System Information
           </h3>

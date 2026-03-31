@@ -133,13 +133,13 @@ export default function ReferralPage() {
       icon: <QrCode className="w-8 h-8" />,
       title: 'Easy Sharing Tools',
       description: 'Get custom QR codes and referral links for effortless sharing across all platforms',
-      color: 'from-blue-500 to-indigo-500'
+      color: 'from-brand-obsidian0 to-blue-500'
     },
     {
       icon: <Target className="w-8 h-8" />,
       title: 'High Success Rate',
       description: 'Our proven SEO results make referrals easier to convert with strong client satisfaction',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-brand-obsidian0 to-blue-500'
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
@@ -201,7 +201,7 @@ export default function ReferralPage() {
 
       <div className="pt-16">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-brand-light via-white to-brand-primary/10 relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-br from-brand-light via-brand-obsidian to-brand-primary/10 relative overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0 opacity-5">
             <div className="absolute top-20 left-10 w-64 h-64 bg-brand-primary rounded-full blur-3xl"></div>
@@ -220,11 +220,11 @@ export default function ReferralPage() {
                   <Gift className="w-4 h-4" />
                   <span>Earn $500 Per Referral</span>
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6">
                   Join Our
                   <span className="block text-brand-primary">Referral Program</span>
                 </h1>
-                <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
                   Partner with True Rank Digital and earn <strong className="text-green-600">$500 for every successful client referral</strong>. 
                   Get custom tracking tools, QR codes, and unlimited earning potential.
                 </p>
@@ -238,15 +238,15 @@ export default function ReferralPage() {
               >
                 <div className="glass-card px-6 py-3 flex items-center space-x-2">
                   <DollarSign className="w-5 h-5 text-green-600" />
-                  <span className="font-semibold text-brand-dark">$500 Bonus</span>
+                  <span className="font-semibold text-white">$500 Bonus</span>
                 </div>
                 <div className="glass-card px-6 py-3 flex items-center space-x-2">
                   <Users className="w-5 h-5 text-blue-600" />
-                  <span className="font-semibold text-brand-dark">No Limits</span>
+                  <span className="font-semibold text-white">No Limits</span>
                 </div>
                 <div className="glass-card px-6 py-3 flex items-center space-x-2">
-                  <Clock className="w-5 h-5 text-purple-600" />
-                  <span className="font-semibold text-brand-dark">Quick Approval</span>
+                  <Clock className="w-5 h-5 text-blue-600" />
+                  <span className="font-semibold text-white">Quick Approval</span>
                 </div>
               </motion.div>
             </div>
@@ -254,7 +254,7 @@ export default function ReferralPage() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -263,10 +263,10 @@ export default function ReferralPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
                 Why Join Our Referral Program?
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Partner with industry leaders and earn substantial rewards for sharing our proven SEO solutions.
               </p>
             </motion.div>
@@ -286,10 +286,10 @@ export default function ReferralPage() {
                       {benefit.icon}
                     </div>
                   </div>
-                  <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                  <h3 className="text-xl font-heading font-bold text-white mb-3">
                     {benefit.title}
                   </h3>
-                  <p className="text-brand-dark/70 leading-relaxed">
+                  <p className="text-gray-400 leading-relaxed">
                     {benefit.description}
                   </p>
                 </motion.div>
@@ -299,7 +299,7 @@ export default function ReferralPage() {
         </section>
 
         {/* Process Section */}
-        <section className="py-20 bg-gradient-to-b from-brand-light/20 to-white">
+        <section className="py-20 bg-brand-obsidian text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -308,10 +308,10 @@ export default function ReferralPage() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
                 How It Works
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Getting started is simple. Follow these four easy steps to begin earning referral rewards.
               </p>
             </motion.div>
@@ -343,10 +343,10 @@ export default function ReferralPage() {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                  <h3 className="text-xl font-heading font-bold text-white mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-brand-dark/70">
+                  <p className="text-gray-400">
                     {step.description}
                   </p>
                 </motion.div>
@@ -356,7 +356,7 @@ export default function ReferralPage() {
         </section>
 
         {/* Application Form Section */}
-        <section className="py-20 bg-white" id="apply">
+        <section className="py-20 bg-brand-obsidian" id="apply">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -365,10 +365,10 @@ export default function ReferralPage() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
                 Apply for Referral Partnership
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
                 Fill out the form below to join our referral program. You'll hear back from us with your referral materials.
               </p>
             </motion.div>
@@ -385,21 +385,21 @@ export default function ReferralPage() {
                   <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="w-10 h-10 text-green-600" />
                   </div>
-                  <h3 className="text-2xl font-heading font-bold text-brand-dark mb-4">
+                  <h3 className="text-2xl font-heading font-bold text-white mb-4">
                     Application Submitted Successfully!
                   </h3>
-                  <p className="text-brand-dark/70 mb-6">
+                  <p className="text-gray-400 mb-6">
                     {submitMessage}
                   </p>
                   
-                  <div className="bg-brand-light/50 rounded-lg p-6 mb-6">
-                    <h4 className="font-semibold text-brand-dark mb-4">Your Temporary Referral Code:</h4>
-                    <div className="bg-white p-4 rounded-lg border-2 border-dashed border-brand-primary/30 mb-4">
+                  <div className="bg-brand-obsidian/50 rounded-lg p-6 mb-6">
+                    <h4 className="font-semibold text-white mb-4">Your Temporary Referral Code:</h4>
+                    <div className="bg-brand-obsidian p-4 rounded-lg border-2 border-dashed border-brand-primary/30 mb-4">
                       <code className="text-lg font-mono text-brand-primary font-bold">
                         {referralData.code}
                       </code>
                     </div>
-                    <p className="text-sm text-brand-dark/60">
+                    <p className="text-sm text-gray-500">
                       This code will be activated once your application is approved. Check your email for complete details.
                     </p>
                   </div>
@@ -419,11 +419,11 @@ export default function ReferralPage() {
                   {/* Basic Information */}
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-semibold text-brand-dark mb-2">
+                      <label htmlFor="name" className="block text-sm font-semibold text-white mb-2">
                         Full Name *
                       </label>
                       <div className="relative">
-                        <User className="absolute left-3 top-3 w-5 h-5 text-brand-dark/40" />
+                        <User className="absolute left-3 top-3 w-5 h-5 text-white/40" />
                         <input
                           type="text"
                           id="name"
@@ -438,11 +438,11 @@ export default function ReferralPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-sm font-semibold text-brand-dark mb-2">
+                      <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">
                         Email Address *
                       </label>
                       <div className="relative">
-                        <Mail className="absolute left-3 top-3 w-5 h-5 text-brand-dark/40" />
+                        <Mail className="absolute left-3 top-3 w-5 h-5 text-white/40" />
                         <input
                           type="email"
                           id="email"
@@ -459,11 +459,11 @@ export default function ReferralPage() {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-semibold text-brand-dark mb-2">
+                      <label htmlFor="phone" className="block text-sm font-semibold text-white mb-2">
                         Phone Number
                       </label>
                       <div className="relative">
-                        <Phone className="absolute left-3 top-3 w-5 h-5 text-brand-dark/40" />
+                        <Phone className="absolute left-3 top-3 w-5 h-5 text-white/40" />
                         <input
                           type="tel"
                           id="phone"
@@ -477,11 +477,11 @@ export default function ReferralPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="company" className="block text-sm font-semibold text-brand-dark mb-2">
+                      <label htmlFor="company" className="block text-sm font-semibold text-white mb-2">
                         Company/Organization
                       </label>
                       <div className="relative">
-                        <Building className="absolute left-3 top-3 w-5 h-5 text-brand-dark/40" />
+                        <Building className="absolute left-3 top-3 w-5 h-5 text-white/40" />
                         <input
                           type="text"
                           id="company"
@@ -497,7 +497,7 @@ export default function ReferralPage() {
 
                   {/* Referral Type */}
                   <div>
-                    <label htmlFor="referralType" className="block text-sm font-semibold text-brand-dark mb-2">
+                    <label htmlFor="referralType" className="block text-sm font-semibold text-white mb-2">
                       Referral Partnership Type *
                     </label>
                     <select
@@ -506,7 +506,7 @@ export default function ReferralPage() {
                       value={formData.referralType}
                       onChange={handleInputChange}
                       required
-                      className="form-input text-brand-dark font-medium"
+                      className="form-input text-white font-medium"
                     >
                       <option value="">Select partnership type</option>
                       {referralTypes.map((type) => (
@@ -527,18 +527,18 @@ export default function ReferralPage() {
                       onChange={handleInputChange}
                       className="w-5 h-5 text-brand-primary border-gray-300 rounded focus:ring-brand-primary"
                     />
-                    <label htmlFor="currentClient" className="text-brand-dark">
+                    <label htmlFor="currentClient" className="text-white">
                       I am currently a True Rank Digital client
                     </label>
                   </div>
 
                   {/* Additional Message */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-brand-dark mb-2">
+                    <label htmlFor="message" className="block text-sm font-semibold text-white mb-2">
                       Additional Information
                     </label>
                     <div className="relative">
-                      <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-brand-dark/40" />
+                      <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-white/40" />
                       <textarea
                         id="message"
                         name="message"
@@ -612,7 +612,7 @@ export default function ReferralPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-20 bg-gradient-to-b from-brand-light/20 to-white">
+        <section className="py-20 bg-brand-obsidian text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -621,7 +621,7 @@ export default function ReferralPage() {
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
                 Frequently Asked Questions
               </h2>
             </motion.div>
@@ -661,10 +661,10 @@ export default function ReferralPage() {
                   viewport={{ once: true }}
                   className="glass-card p-6"
                 >
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">
                     {faq.question}
                   </h3>
-                  <p className="text-brand-dark/70 leading-relaxed">
+                  <p className="text-gray-400 leading-relaxed">
                     {faq.answer}
                   </p>
                 </motion.div>
@@ -717,7 +717,7 @@ export default function ReferralPage() {
                 </motion.a>
               </div>
 
-              <div className="mt-8 flex items-center justify-center space-x-8 text-white/80">
+              <div className="mt-8 flex items-center justify-center space-x-8 text-gray-300">
                 <div className="flex items-center space-x-2">
                   <Shield className="w-5 h-5" />
                   <span className="text-sm">Secure & Trusted</span>

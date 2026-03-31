@@ -97,7 +97,7 @@ export default function PageSpecificSchema({
       {
         "@type": "Organization",
         "@id": `${baseUrl}/#organization`,
-        name: "True Rank Digital LLC",
+        name: "True Rank Digital",
         url: baseUrl,
         email: "info@truerankdigital.com",
         telephone: "+1-732-475-0139",
@@ -107,7 +107,7 @@ export default function PageSpecificSchema({
         "@type": ["LocalBusiness", "ProfessionalService"],
         "@id": `${baseUrl}/#localbusiness`,
         name: "True Rank Digital",
-        legalName: "True Rank Digital LLC",
+        legalName: "True Rank Digital",
         url: baseUrl,
         image: `${baseUrl}/images/logos/trdlogoblue.webp`,
         logo: `${baseUrl}/images/logos/trd-logo1.avif`,
@@ -283,7 +283,7 @@ export default function PageSpecificSchema({
       },
       {
         "@type": "ConsumeAction",
-        target: `${baseUrl}/free-audit`,
+        target: `${baseUrl}/contact`,
         actionStatus: "https://schema.org/PotentialActionStatus"
       }
     ],
@@ -407,7 +407,7 @@ export default function PageSpecificSchema({
         "@type": "OrderAction", 
         target: {
           "@type": "EntryPoint",
-          urlTemplate: `${baseUrl}/free-audit`,
+          urlTemplate: `${baseUrl}/contact`,
           actionPlatform: ["https://schema.org/DesktopWebPlatform", "https://schema.org/MobileWebPlatform"]
         },
         result: {

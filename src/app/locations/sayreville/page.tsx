@@ -100,32 +100,32 @@ export default function SayrevillePage() {
       />
       <FAQSchema faqs={faqs} pageUrl="https://truerankdigital.com/locations/sayreville" category="location" />
       
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-indigo-50 via-white to-indigo-50">
+      <article className="pt-16 min-h-screen bg-brand-obsidian text-white">
         {/* Hero Section */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-indigo-100 rounded-full mb-6">
-                <MapPin className="w-4 h-4 text-indigo-600" />
-                <span className="text-sm font-semibold text-indigo-600">Serving Sayreville, Parlin, Morgan & Route 9 Corridor</span>
+              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-100 rounded-full mb-6">
+                <MapPin className="w-4 h-4 text-blue-600" />
+                <span className="text-sm font-semibold text-blue-600">Serving Sayreville, Parlin, Morgan & Route 9 Corridor</span>
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6 leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
                 Professional <strong className="text-brand-primary">SEO Services</strong> in <br />
                 <strong className="text-brand-primary">Sayreville, New Jersey</strong>
               </h1>
               
-              <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-8 leading-relaxed">
+              <p className="text-xl text-gray-400 max-w-4xl mx-auto mb-8 leading-relaxed">
                 <strong>True Rank Digital</strong> helps Sayreville businesses dominate local search results with specialized <strong>SEO strategies</strong> for the <strong>Route 9 corridor</strong>, Parlin commercial area, Morgan waterfront, and Garden State Parkway access areas. Expert local SEO for Sayreville Borough's diverse business community.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-                <a href="/free-audit" className="inline-flex items-center space-x-2 px-8 py-4 bg-indigo-600 text-white font-semibold text-lg rounded-full hover:bg-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                <a href="/contact" className="inline-flex items-center space-x-2 px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-full hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                   <TrendingUp className="w-5 h-5" />
                   <span>Get Free Sayreville SEO Audit</span>
                 </a>
-                <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-indigo-600 text-indigo-600 font-semibold text-lg rounded-full hover:bg-indigo-50 transition-all duration-300">
+                <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold text-lg rounded-full hover:bg-blue-50 transition-all duration-300">
                   <Phone className="w-5 h-5" />
                   <span>(732) 475-0139</span>
                 </a>
@@ -135,19 +135,19 @@ export default function SayrevillePage() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Local</div>
-                  <div className="text-sm text-brand-dark/60">Market Knowledge</div>
+                  <div className="text-sm text-gray-500">Market Knowledge</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">GSP</div>
-                  <div className="text-sm text-brand-dark/60">Parkway Access</div>
+                  <div className="text-sm text-gray-500">Parkway Access</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Grid</div>
-                  <div className="text-sm text-brand-dark/60">Visibility Tracking</div>
+                  <div className="text-sm text-gray-500">Visibility Tracking</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-brand-primary mb-1">Strategy</div>
-                  <div className="text-sm text-brand-dark/60">Built to Convert</div>
+                  <div className="text-sm text-gray-500">Built to Convert</div>
                 </div>
               </div>
             </div>
@@ -155,46 +155,46 @@ export default function SayrevillePage() {
         </section>
 
         {/* Why Sayreville Businesses Choose Us */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-12 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-12 text-center">
               Why <strong className="text-brand-primary">Sayreville Businesses</strong> Choose True Rank Digital
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="glass-card p-8 hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-obsidian0 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Route 9 & Parkway</strong> Expertise
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   We understand Sayreville's strategic location along Route 9 and Garden State Parkway (exits 123, 124, 125). Our SEO strategies capture both local resident searches and commuter/traveler traffic, maximizing visibility for Sayreville businesses serving diverse customer bases.
                 </p>
               </div>
 
               <div className="glass-card p-8 hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-obsidian0 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
                   <Anchor className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Waterfront & Industrial</strong> Knowledge
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   From Raritan River waterfront development to industrial zones, we know Sayreville's varied business landscape. Whether you serve residential, commercial, or industrial markets, we optimize for your specific Sayreville customer segment.
                 </p>
               </div>
 
               <div className="glass-card p-8 hover:shadow-xl transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-brand-obsidian0 to-blue-500 rounded-2xl flex items-center justify-center mb-6">
                   <BarChart3 className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-xl font-heading font-bold text-white mb-4">
                   <strong className="text-brand-primary">Multi-Community</strong> Targeting
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed">
-                  Track rankings across Sayreville proper, Parlin, Morgan, and Melrose communities. Our grid ranking system shows your visibility across different Sayreville zip codes and neighborhoods, helping you dominate all local search areas.
+                <p className="text-gray-400 leading-relaxed">
+                  Track rankings across Sayreville proper, Parlin, Morgan, and Melblue communities. Our grid ranking system shows your visibility across different Sayreville zip codes and neighborhoods, helping you dominate all local search areas.
                 </p>
               </div>
             </div>
@@ -204,10 +204,10 @@ export default function SayrevillePage() {
         {/* Services for Sayreville */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6 text-center">
               Complete <strong className="text-brand-primary">SEO Services</strong> for Sayreville Businesses
             </h2>
-            <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-500 text-center mb-12 max-w-3xl mx-auto">
               Specialized local search optimization for Sayreville's Route 9 corridor, industrial areas, and waterfront communities
             </p>
 
@@ -215,31 +215,31 @@ export default function SayrevillePage() {
               {/* Route 9 Optimization */}
               <div className="glass-card p-8">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
-                    <Target className="w-6 h-6 text-indigo-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Target className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Route 9 Corridor Optimization
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Maximize visibility along Sayreville's main commercial highway. We target Route 9-specific searches, optimize for commuter traffic from Old Bridge and South Amboy, capture 'near me' queries from travelers, and position your business against corridor competition. Critical for retail, dining, automotive, and service businesses on Route 9.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>"Route 9 Sayreville" keyword optimization</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Commuter and traveler targeting</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Parlin area proximity marketing</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Shopping center visibility</span>
                       </li>
                     </ul>
@@ -250,31 +250,31 @@ export default function SayrevillePage() {
               {/* Parkway Exit Marketing */}
               <div className="glass-card p-8">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
-                    <Building className="w-6 h-6 text-indigo-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Building className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Garden State Parkway Exit Marketing
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Capture high-traffic searches near Parkway exits 123, 124, and 125. We optimize for exit-specific keywords, traveler and commuter searches, 'near Garden State Parkway' queries, and differentiate your business from surrounding exit competition. Ideal for hospitality, dining, gas stations, and retail serving Parkway traffic.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>GSP exit-specific targeting</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Traveler convenience searches</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Highway access optimization</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Commuter traffic capture</span>
                       </li>
                     </ul>
@@ -285,31 +285,31 @@ export default function SayrevillePage() {
               {/* Local Community SEO */}
               <div className="glass-card p-8">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
-                    <Users className="w-6 h-6 text-indigo-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Users className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Parlin, Morgan & Community Targeting
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Optimize for Sayreville's distinct communities. We target Parlin's commercial presence, Morgan's waterfront residential area, and Sayreville proper with neighborhood-specific strategies. Content and citations featuring local community names, landmarks, and area-specific search patterns help you dominate hyperlocal searches.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Parlin area business targeting</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Morgan waterfront marketing</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
-                        <span>Melrose neighborhood optimization</span>
+                        <span className="text-blue-600 mr-2">✓</span>
+                        <span>Melblue neighborhood optimization</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Community-specific keywords</span>
                       </li>
                     </ul>
@@ -320,31 +320,31 @@ export default function SayrevillePage() {
               {/* Industrial & B2B */}
               <div className="glass-card p-8">
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
-                    <Award className="w-6 h-6 text-indigo-600" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Award className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       Industrial & B2B SEO
                     </h3>
-                    <p className="text-brand-dark/70 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                       Specialized strategies for Sayreville's industrial businesses. B2B keyword targeting, supplier/vendor search optimization, industry directory listings, and content that captures business-to-business searches. We understand Sayreville's industrial presence and help you reach commercial customers searching for Sayreville-based services.
                     </p>
-                    <ul className="space-y-2 text-sm text-brand-dark/70">
+                    <ul className="space-y-2 text-sm text-gray-400">
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Industrial keyword targeting</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>B2B directory optimization</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Supplier/vendor search capture</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-indigo-600 mr-2">✓</span>
+                        <span className="text-blue-600 mr-2">✓</span>
                         <span>Regional business targeting</span>
                       </li>
                     </ul>
@@ -356,76 +356,76 @@ export default function SayrevillePage() {
         </section>
 
         {/* About Sayreville Market */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+                <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
                   Understanding <strong className="text-brand-primary">Sayreville's</strong> Diverse Business Environment
                 </h2>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
-                  Sayreville Borough (45,000+ residents) offers a unique business environment with <strong>Route 9</strong> as its commercial spine, <strong>Garden State Parkway</strong> access via three exits (123, 124, 125), waterfront development along the <strong>Raritan River</strong>, and distinct communities including Parlin, Morgan, Melrose, and Sayreville proper.
+                <p className="text-gray-400 leading-relaxed mb-6">
+                  Sayreville Borough (45,000+ residents) offers a unique business environment with <strong>Route 9</strong> as its commercial spine, <strong>Garden State Parkway</strong> access via three exits (123, 124, 125), waterfront development along the <strong>Raritan River</strong>, and distinct communities including Parlin, Morgan, Melblue, and Sayreville proper.
                 </p>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   The <strong>Route 9 corridor</strong> features retail centers, restaurants, automotive services, and professional businesses competing for both local residents and pass-through traffic. <strong>Parlin</strong> offers additional commercial presence, while <strong>Morgan</strong>'s waterfront creates unique residential and recreational opportunities. Industrial areas provide significant B2B search potential.
                 </p>
-                <p className="text-brand-dark/70 leading-relaxed mb-6">
+                <p className="text-gray-400 leading-relaxed mb-6">
                   Whether you're a Route 9 business capturing commuter traffic, a Parlin retailer serving local residents, an industrial company targeting B2B searches, or a service provider for Sayreville's growing residential communities, we understand your market dynamics and help you dominate relevant local searches.
                 </p>
               </div>
 
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-6">
+                <h3 className="text-2xl font-heading font-bold text-white mb-6">
                   Sayreville Areas We Serve
                 </h3>
-                <div className="grid grid-cols-2 gap-4 text-brand-dark/70">
+                <div className="grid grid-cols-2 gap-4 text-gray-400">
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Route 9 Corridor</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Parlin</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Morgan</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
-                    <span>Melrose</span>
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                    <span>Melblue</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Sayreville Proper</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Waterfront District</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>Industrial Areas</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>GSP Exit 123 Area</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>GSP Exit 124 Area</span>
                   </div>
                   <div className="flex items-start space-x-2">
-                    <MapPin className="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1" />
+                    <MapPin className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
                     <span>GSP Exit 125 Area</span>
                   </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-gray-200">
-                  <h4 className="font-semibold text-brand-dark mb-4">Serving All Sayreville Zip Codes:</h4>
+                <div className="mt-8 pt-8 border-t border-white/10">
+                  <h4 className="font-semibold text-white mb-4">Serving All Sayreville Zip Codes:</h4>
                   <div className="flex flex-wrap gap-3">
-                    <span className="px-4 py-2 bg-indigo-50 text-indigo-600 rounded-full text-sm font-medium">08872</span>
-                    <span className="px-4 py-2 bg-indigo-50 text-indigo-600 rounded-full text-sm font-medium">08871</span>
+                    <span className="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">08872</span>
+                    <span className="px-4 py-2 bg-blue-50 text-blue-600 rounded-full text-sm font-medium">08871</span>
                   </div>
                 </div>
               </div>
@@ -436,10 +436,10 @@ export default function SayrevillePage() {
         {/* Process */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-6 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6 text-center">
               Our <strong className="text-brand-primary">Sayreville SEO</strong> Process
             </h2>
-            <p className="text-xl text-brand-dark/60 text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-500 text-center mb-12 max-w-3xl mx-auto">
               Proven methodology focused on improving local visibility across Route 9, Parkway access, and community searches
             </p>
 
@@ -452,11 +452,11 @@ export default function SayrevillePage() {
                 { step: "5", title: "Ongoing Optimization", desc: "Monthly tracking across Sayreville communities, Route 9 rankings, Parkway exit searches, and competitor analysis. Adjust based on data." },
               ].map((item) => (
                 <div key={item.step} className="glass-card p-6 text-center hover:shadow-xl transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
+                  <div className="w-16 h-16 bg-gradient-to-br from-brand-obsidian0 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold">
                     {item.step}
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{item.title}</h3>
-                  <p className="text-sm text-brand-dark/70 leading-relaxed">{item.desc}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{item.title}</h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -464,17 +464,17 @@ export default function SayrevillePage() {
         </section>
 
         {/* FAQs */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-brand-dark mb-12 text-center">
+            <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-12 text-center">
               Frequently Asked Questions About <strong className="text-brand-primary">Sayreville SEO</strong>
             </h2>
 
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="glass-card p-6">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{faq.question}</h3>
-                  <p className="text-brand-dark/70 leading-relaxed">{faq.answer}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -482,7 +482,7 @@ export default function SayrevillePage() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-20 bg-gradient-to-br from-indigo-600 via-indigo-700 to-indigo-600 relative overflow-hidden">
+        <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-600 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10"></div>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
             <h2 className="text-3xl lg:text-5xl font-heading font-bold text-white mb-6">
@@ -493,17 +493,17 @@ export default function SayrevillePage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/free-audit" className="inline-flex items-center space-x-2 px-10 py-5 bg-white text-indigo-600 font-bold text-lg rounded-full hover:bg-gray-100 transition-all duration-300 shadow-2xl">
+              <a href="/contact" className="inline-flex items-center space-x-2 px-10 py-5 bg-brand-obsidian text-blue-600 font-bold text-lg rounded-full hover:bg-brand-obsidian-light transition-all duration-300 shadow-2xl">
                 <TrendingUp className="w-6 h-6" />
                 <span>Get Your Free Sayreville SEO Audit</span>
               </a>
-              <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-white/10 transition-all duration-300">
+              <a href="tel:+17324750139" className="inline-flex items-center space-x-2 px-10 py-5 border-2 border-white text-white font-bold text-lg rounded-full hover:bg-brand-obsidian/10 transition-all duration-300">
                 <Phone className="w-6 h-6" />
                 <span>(732) 475-0139</span>
               </a>
             </div>
 
-            <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-white/80">
+            <div className="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-center gap-8 text-gray-300">
               <div className="flex items-center space-x-2">
                 <Clock className="w-5 h-5" />
                 <span>Fast response</span>
@@ -521,13 +521,13 @@ export default function SayrevillePage() {
         </section>
 
         {/* Map Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-4">
                 Serving <span className="text-brand-primary">Sayreville, NJ</span>
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 We provide SEO services to Sayreville businesses from our East Brunswick headquarters
               </p>
             </div>

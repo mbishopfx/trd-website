@@ -10,8 +10,8 @@ export default function ContactHeroSection() {
       
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-10"></div>
-      <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-white/5 rounded-full blur-3xl"></div>
+      <div className="absolute -top-20 -right-20 w-40 h-40 bg-brand-obsidian/10 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-brand-obsidian/5 rounded-full blur-3xl"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -21,7 +21,7 @@ export default function ContactHeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 rounded-full mb-6">
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-brand-obsidian/10 rounded-full mb-6">
               <MessageSquare className="w-5 h-5 text-white" />
               <span className="text-white font-semibold text-sm">Get In Touch</span>
             </div>
@@ -78,15 +78,15 @@ export default function ContactHeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 + 0.5 }}
-              className="glass p-6 text-center hover:bg-white/15 transition-all duration-300 group cursor-pointer"
+              className="glass p-6 text-center hover:bg-brand-obsidian/15 transition-all duration-300 group cursor-pointer"
               onClick={() => contact.action.startsWith('#') ? null : window.open(contact.action)}
             >
-              <div className="text-white/80 group-hover:text-white mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="text-gray-300 group-hover:text-white mb-3 flex justify-center group-hover:scale-110 transition-transform duration-300">
                 {contact.icon}
               </div>
               <h3 className="font-semibold text-white mb-2">{contact.title}</h3>
               <div className="text-white/90 font-medium text-sm">{contact.primary}</div>
-              <div className="text-white/70 text-xs mt-1">{contact.secondary}</div>
+              <div className="text-gray-400 text-xs mt-1">{contact.secondary}</div>
             </motion.div>
           ))}
         </motion.div>

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords: 'business consulting, strategic guidance, digital marketing consulting, process optimization, market expansion, True Rank Digital, growth strategy, business advisor',
   openGraph: {
     title: 'Business Consulting Services | True Rank Digital',
-    description: 'Strategic business consulting for sustainable growth, digital transformation, and market expansion.',
+    description: 'Strategic business consulting for sustainable growth, AI-era market adaptation, and digital transformation.',
     url: 'https://truerankdigital.com/services/business-consulting',
     type: 'website',
   },
@@ -38,7 +38,7 @@ export default function BusinessConsultingPage() {
     },
     {
       question: "How is business consulting different from marketing services?",
-      answer: "While marketing services focus on specific campaigns and tactics, business consulting takes a holistic view of your organization. True Rank Digital's consulting addresses overall strategy, process optimization, market positioning, competitive analysis, and long-term growth planning. We look at your entire business ecosystem to identify opportunities and remove bottlenecks."
+      answer: "While marketing services focus on specific campaigns and tactics, business consulting takes a holistic view of your organization. True Rank Digital's consulting addresses overall strategy, process optimization, market positioning, competitive analysis, and long-term growth planning. We look at your full business ecosystem to identify opportunities, remove bottlenecks, and prioritize AI-era growth decisions."
     },
     {
       question: "What does a typical consulting engagement look like?",
@@ -167,7 +167,7 @@ export default function BusinessConsultingPage() {
       <ServiceSchema
         serviceName="Business Consulting"
         serviceUrl="https://truerankdigital.com/services/business-consulting"
-        description="Achieve sustainable growth with True Rank Digital's business consulting. We offer strategic guidance on digital marketing, process optimization, and market expansion."
+        description="Business consulting from True Rank Digital focused on strategic planning, operational efficiency, and AI-era growth alignment."
         serviceType="Business Consulting"
         mentions={[
           {
@@ -197,14 +197,14 @@ export default function BusinessConsultingPage() {
         category="service"
       />
       
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-orange-50 to-white">
+      <article className="pt-16 min-h-screen bg-brand-obsidian text-white">
         {/* Breadcrumb Navigation */}
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <ol className="flex items-center space-x-2 text-sm">
-            <li><Link href="/" className="text-brand-dark/60 hover:text-brand-primary transition-colors">Home</Link></li>
-            <li className="text-brand-dark/40">/</li>
-            <li><Link href="/services" className="text-brand-dark/60 hover:text-brand-primary transition-colors">Services</Link></li>
-            <li className="text-brand-dark/40">/</li>
+            <li><Link href="/" className="text-gray-500 hover:text-brand-primary transition-colors">Home</Link></li>
+            <li className="text-white/40">/</li>
+            <li><Link href="/services" className="text-gray-500 hover:text-brand-primary transition-colors">Services</Link></li>
+            <li className="text-white/40">/</li>
             <li className="text-brand-primary font-medium">Business Consulting</li>
           </ol>
         </nav>
@@ -219,24 +219,24 @@ export default function BusinessConsultingPage() {
                   <span className="text-orange-600 font-semibold text-sm">Business Consulting</span>
                 </div>
                 
-                <h1 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+                <h1 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
                   <strong className="text-brand-primary">Business Consulting</strong> for Sustainable Growth
                 </h1>
                 
-                <p className="text-xl text-brand-dark/70 mb-8">
+                <p className="text-xl text-gray-400 mb-8">
                   Achieve sustainable growth with <strong>True Rank Digital&apos;s</strong> <strong>business consulting</strong>. We offer <strong>strategic guidance</strong> on digital marketing, <strong>process optimization</strong>, and <strong>market expansion</strong>.
                 </p>
 
                 <div className="flex flex-wrap gap-4 mb-8">
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>Strategy-first guidance</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>Execution roadmaps</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>KPI-driven decisions</span>
                   </div>
@@ -265,8 +265,8 @@ export default function BusinessConsultingPage() {
                 {results.map((result, index) => (
                   <div key={index} className="glass-card p-6 text-center">
                     <div className="text-3xl font-bold text-orange-600 mb-2">{result.metric}</div>
-                    <div className="text-lg font-semibold text-brand-dark mb-1">{result.label}</div>
-                    <div className="text-sm text-brand-dark/60">{result.description}</div>
+                    <div className="text-lg font-semibold text-white mb-1">{result.label}</div>
+                    <div className="text-sm text-gray-500">{result.description}</div>
                   </div>
                 ))}
               </div>
@@ -275,13 +275,13 @@ export default function BusinessConsultingPage() {
         </section>
 
         {/* Why Consulting Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Why <strong className="text-brand-primary">Business Consulting</strong> Accelerates Growth
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 An outside perspective combined with proven frameworks can transform your business trajectory.
               </p>
             </div>
@@ -289,18 +289,18 @@ export default function BusinessConsultingPage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="glass-card p-8">
                 <div className="text-4xl font-bold text-orange-600 mb-4">Clarity</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Better Prioritization</h3>
-                <p className="text-brand-dark/70">Remove guesswork by turning goals into clear priorities, timelines, and ownership across your team.</p>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">Better Prioritization</h3>
+                <p className="text-gray-400">Remove guesswork by turning goals into clear priorities, timelines, and ownership across your team.</p>
               </div>
               <div className="glass-card p-8">
                 <div className="text-4xl font-bold text-orange-600 mb-4">Alignment</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Teams Move Together</h3>
-                <p className="text-brand-dark/70">Align leadership, marketing, and operations around the same targets so execution stays consistent.</p>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">Teams Move Together</h3>
+                <p className="text-gray-400">Align leadership, marketing, and operations around the same targets so execution stays consistent.</p>
               </div>
               <div className="glass-card p-8">
                 <div className="text-4xl font-bold text-orange-600 mb-4">Accountability</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Execute the Plan</h3>
-                <p className="text-brand-dark/70">Use milestones, KPIs, and feedback loops to keep initiatives moving and adjust based on real outcomes.</p>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">Execute the Plan</h3>
+                <p className="text-gray-400">Use milestones, KPIs, and feedback loops to keep initiatives moving and adjust based on real outcomes.</p>
               </div>
             </div>
           </div>
@@ -310,10 +310,10 @@ export default function BusinessConsultingPage() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Our <strong className="text-brand-primary">Consulting</strong> Services
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Comprehensive business advisory services tailored to your specific challenges and goals.
               </p>
             </div>
@@ -324,11 +324,11 @@ export default function BusinessConsultingPage() {
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-4 text-white">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-heading font-bold text-brand-dark mb-2">{service.title}</h3>
-                  <p className="text-brand-dark/70 mb-4">{service.description}</p>
+                  <h3 className="text-xl font-heading font-bold text-white mb-2">{service.title}</h3>
+                  <p className="text-gray-400 mb-4">{service.description}</p>
                   <div className="space-y-2">
                     {service.details.map((detail, idx) => (
-                      <div key={idx} className="flex items-center space-x-2 text-sm text-brand-dark/70">
+                      <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                         <span>{detail}</span>
                       </div>
@@ -341,13 +341,13 @@ export default function BusinessConsultingPage() {
         </section>
 
         {/* Process Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Our <strong className="text-brand-primary">Consulting Process</strong>
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 A systematic approach to understanding your business and delivering actionable strategies.
               </p>
             </div>
@@ -360,11 +360,11 @@ export default function BusinessConsultingPage() {
                       {item.step}
                     </div>
                     <div className="flex-grow">
-                      <h3 className="text-2xl font-heading font-bold text-brand-dark mb-3">{item.title}</h3>
-                      <p className="text-brand-dark/70 mb-4">{item.description}</p>
+                      <h3 className="text-2xl font-heading font-bold text-white mb-3">{item.title}</h3>
+                      <p className="text-gray-400 mb-4">{item.description}</p>
                       <div className="grid sm:grid-cols-2 gap-3">
                         {item.details.map((detail, idx) => (
-                          <div key={idx} className="flex items-center space-x-2 text-brand-dark/70">
+                          <div key={idx} className="flex items-center space-x-2 text-gray-400">
                             <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                             <span>{detail}</span>
                           </div>
@@ -383,7 +383,7 @@ export default function BusinessConsultingPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-heading font-bold text-brand-dark mb-6">
+                <h2 className="text-3xl font-heading font-bold text-white mb-6">
                   Why Choose <strong className="text-brand-primary">True Rank Digital</strong>
                 </h2>
                 
@@ -393,8 +393,8 @@ export default function BusinessConsultingPage() {
                       <Award className="w-6 h-6 text-orange-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Practical Experience</h3>
-                      <p className="text-brand-dark/70">Our consultants have real-world experience building and scaling businesses, not just academic knowledge.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Practical Experience</h3>
+                      <p className="text-gray-400">Our consultants have real-world experience building and scaling businesses, not just academic knowledge.</p>
                     </div>
                   </div>
                   
@@ -403,8 +403,8 @@ export default function BusinessConsultingPage() {
                       <Rocket className="w-6 h-6 text-orange-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Action-Oriented</h3>
-                      <p className="text-brand-dark/70">We focus on actionable strategies that can be implemented immediately, not theoretical frameworks that gather dust.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Action-Oriented</h3>
+                      <p className="text-gray-400">We focus on actionable strategies that can be implemented immediately, not theoretical frameworks that gather dust.</p>
                     </div>
                   </div>
                   
@@ -413,8 +413,8 @@ export default function BusinessConsultingPage() {
                       <Briefcase className="w-6 h-6 text-orange-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Full-Service Support</h3>
-                      <p className="text-brand-dark/70">Beyond strategy, we can help implement through our digital marketing, website, and technology services.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Full-Service Support</h3>
+                      <p className="text-gray-400">Beyond strategy, we can help implement through our digital marketing, website, and technology services.</p>
                     </div>
                   </div>
                   
@@ -423,22 +423,22 @@ export default function BusinessConsultingPage() {
                       <Clock className="w-6 h-6 text-orange-600" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Flexible Engagement</h3>
-                      <p className="text-brand-dark/70">From one-time strategy sessions to ongoing advisory relationships, we adapt to your needs and budget.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Flexible Engagement</h3>
+                      <p className="text-gray-400">From one-time strategy sessions to ongoing advisory relationships, we adapt to your needs and budget.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-6 text-center">Industries We Serve</h3>
+                <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center">Industries We Serve</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     'Professional Services', 'Healthcare', 'Legal', 'Home Services',
                     'Real Estate', 'Retail', 'Restaurants', 'Financial Services',
                     'Manufacturing', 'Technology', 'Construction', 'Non-Profit'
                   ].map((industry, index) => (
-                    <div key={index} className="flex items-center space-x-2 text-brand-dark/70">
+                    <div key={index} className="flex items-center space-x-2 text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-500" />
                       <span>{industry}</span>
                     </div>
@@ -450,13 +450,13 @@ export default function BusinessConsultingPage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Frequently Asked Questions
               </h2>
-              <p className="text-xl text-brand-dark/70">
+              <p className="text-xl text-gray-400">
                 Common questions about our business consulting services.
               </p>
             </div>
@@ -464,8 +464,8 @@ export default function BusinessConsultingPage() {
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="glass-card p-6">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{faq.question}</h3>
-                  <p className="text-brand-dark/70">{faq.answer}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-400">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -476,7 +476,7 @@ export default function BusinessConsultingPage() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Related <strong className="text-brand-primary">Services</strong>
               </h2>
             </div>
@@ -484,8 +484,8 @@ export default function BusinessConsultingPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedServices.map((service, index) => (
                 <Link key={index} href={service.href} className="glass-card p-6 hover:scale-105 transition-transform duration-300 group">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-2 group-hover:text-brand-primary transition-colors">{service.name}</h3>
-                  <p className="text-brand-dark/70 text-sm mb-4">{service.description}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-2 group-hover:text-brand-primary transition-colors">{service.name}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                   <div className="flex items-center text-brand-primary font-medium text-sm">
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -503,10 +503,10 @@ export default function BusinessConsultingPage() {
               <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <TrendingUp className="w-10 h-10 text-white" />
               </div>
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Ready for <strong className="text-brand-primary">Strategic Growth</strong>?
               </h2>
-              <p className="text-xl text-brand-dark/70 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
                 Schedule a free consultation to discuss your business challenges and discover how we can help you achieve your goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

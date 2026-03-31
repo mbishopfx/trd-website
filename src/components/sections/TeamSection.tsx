@@ -52,7 +52,7 @@ const itemVariants = {
 
 export default function TeamSection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-white via-brand-light/20 to-white relative overflow-hidden">
+    <section className="py-20 bg-brand-obsidian relative overflow-hidden">
       
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -79,11 +79,11 @@ export default function TeamSection() {
             <span className="text-brand-secondary font-semibold text-sm">Leadership Team</span>
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
             Meet Our Leadership
           </h2>
           
-          <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Our experienced leadership team drives innovation and delivers exceptional results 
             for businesses worldwide through strategic vision and hands-on expertise.
           </p>
@@ -132,7 +132,7 @@ export default function TeamSection() {
 
                 <div className={`relative ${index === 0 ? 'lg:flex-grow lg:text-left' : 'text-center'}`}>
                   {/* Name */}
-                  <h3 className={`font-heading font-bold text-brand-dark mb-2 group-hover:text-brand-primary transition-colors duration-300 ${
+                  <h3 className={`font-heading font-bold text-white mb-2 group-hover:text-brand-primary transition-colors duration-300 ${
                     index === 0 ? 'text-2xl lg:text-3xl' : 'text-xl lg:text-2xl'
                   }`}>
                     {member.name}
@@ -146,7 +146,7 @@ export default function TeamSection() {
                   )}
 
                   {/* Description */}
-                  <p className={`text-brand-dark/70 leading-relaxed mb-4 ${
+                  <p className={`text-gray-400 leading-relaxed mb-4 ${
                     index === 0 ? 'text-base lg:text-lg' : 'text-sm lg:text-base'
                   }`}>
                     {member.description}
@@ -159,7 +159,7 @@ export default function TeamSection() {
                       whileInView={{ opacity: 1 }}
                       transition={{ duration: 0.6, delay: 0.3 }}
                       viewport={{ once: true }}
-                      className="relative p-6 bg-brand-primary/5 rounded-xl border-l-4 border-brand-primary mb-6 italic text-brand-dark/80"
+                      className="relative p-6 bg-brand-obsidian/5 rounded-xl border-l-4 border-brand-primary mb-6 italic text-gray-300"
                     >
                       <div className="absolute top-2 left-2 text-brand-primary/30">
                         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 32 32">
@@ -235,9 +235,9 @@ export default function TeamSection() {
               <div className="text-brand-primary mb-3 flex justify-center">
                 {stat.icon}
               </div>
-              <div className="text-3xl font-bold text-brand-dark mb-2">{stat.value}</div>
-              <div className="text-brand-dark font-semibold mb-2">{stat.label}</div>
-              <div className="text-brand-dark/60 text-sm">{stat.description}</div>
+              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-gray-300 font-semibold mb-2">{stat.label}</div>
+              <div className="text-gray-500 text-sm">{stat.description}</div>
             </motion.div>
           ))}
         </motion.div>
@@ -250,7 +250,7 @@ export default function TeamSection() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <p className="text-lg text-brand-dark/70 mb-6">
+          <p className="text-lg text-gray-400 mb-6">
             Ready to work with a team that delivers real results?
           </p>
           <motion.a

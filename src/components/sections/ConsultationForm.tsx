@@ -108,10 +108,10 @@ export default function ConsultationForm({
     <div className="glass-card p-8">
       {showTitle && (
         <div className="text-center mb-8">
-          <h3 className="text-2xl lg:text-3xl font-heading font-bold text-brand-dark mb-3">
+          <h3 className="text-2xl lg:text-3xl font-heading font-bold text-white mb-3">
             {title}
           </h3>
-          <p className="text-brand-dark/70">
+          <p className="text-gray-400">
             {description}
           </p>
         </div>
@@ -126,10 +126,10 @@ export default function ConsultationForm({
           <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-green-600" />
           </div>
-          <h4 className="text-xl font-heading font-bold text-brand-dark mb-3">
+          <h4 className="text-xl font-heading font-bold text-white mb-3">
             Request Submitted Successfully!
           </h4>
-          <p className="text-brand-dark/70 mb-6">
+          <p className="text-gray-400 mb-6">
             {submitMessage}
           </p>
           <button
@@ -144,11 +144,11 @@ export default function ConsultationForm({
           {/* Name and Email */}
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-semibold text-brand-dark mb-2">
+              <label htmlFor="name" className="block text-sm font-semibold text-white mb-2">
                 Full Name *
               </label>
               <div className="relative">
-                <User className="absolute left-3 top-3 w-5 h-5 text-brand-dark/40" />
+                <User className="absolute left-3 top-3 w-5 h-5 text-white/40" />
                 <input
                   type="text"
                   id="name"
@@ -163,11 +163,11 @@ export default function ConsultationForm({
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-brand-dark mb-2">
+              <label htmlFor="email" className="block text-sm font-semibold text-white mb-2">
                 Email Address *
               </label>
               <div className="relative">
-                <Mail className="absolute left-3 top-3 w-5 h-5 text-brand-dark/40" />
+                <Mail className="absolute left-3 top-3 w-5 h-5 text-white/40" />
                 <input
                   type="email"
                   id="email"
@@ -185,11 +185,11 @@ export default function ConsultationForm({
           {/* Phone and Company */}
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="phone" className="block text-sm font-semibold text-brand-dark mb-2">
+              <label htmlFor="phone" className="block text-sm font-semibold text-white mb-2">
                 Phone Number *
               </label>
               <div className="relative">
-                <Phone className="absolute left-3 top-3 w-5 h-5 text-brand-dark/40" />
+                <Phone className="absolute left-3 top-3 w-5 h-5 text-white/40" />
                 <input
                   type="tel"
                   id="phone"
@@ -204,11 +204,11 @@ export default function ConsultationForm({
             </div>
 
             <div>
-              <label htmlFor="company" className="block text-sm font-semibold text-brand-dark mb-2">
+              <label htmlFor="company" className="block text-sm font-semibold text-white mb-2">
                 Company/LLC Name
               </label>
               <div className="relative">
-                <Building className="absolute left-3 top-3 w-5 h-5 text-brand-dark/40" />
+                <Building className="absolute left-3 top-3 w-5 h-5 text-white/40" />
                 <input
                   type="text"
                   id="company"
@@ -224,11 +224,11 @@ export default function ConsultationForm({
 
           {/* Message */}
           <div>
-            <label htmlFor="message" className="block text-sm font-semibold text-brand-dark mb-2">
+            <label htmlFor="message" className="block text-sm font-semibold text-white mb-2">
               Tell Us About Your Business Goals
             </label>
             <div className="relative">
-              <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-brand-dark/40" />
+              <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-white/40" />
               <textarea
                 id="message"
                 name="message"
@@ -290,7 +290,7 @@ export default function ConsultationForm({
               </motion.a>
             </div>
             
-            <p className="text-sm text-brand-dark/60">
+            <p className="text-sm text-gray-500">
               <a href="tel:7324750139" className="text-brand-primary hover:underline font-semibold">(732) 475-0139</a>
             </p>
           </div>

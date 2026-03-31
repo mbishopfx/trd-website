@@ -101,7 +101,7 @@ export default function EcommerceOptimizationPage() {
         category="service"
       />
       
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-orange-50 to-white">
+      <article className="pt-16 min-h-screen bg-brand-obsidian text-white">
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-orange-100 rounded-full mb-6">
@@ -109,20 +109,20 @@ export default function EcommerceOptimizationPage() {
               <span className="text-orange-600 font-semibold text-sm">E-commerce SEO</span>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
+            <h1 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-6">
               <strong className="text-brand-primary">True Rank Digital</strong> Delivers <strong>E-commerce SEO Optimization</strong> Services
             </h1>
             
-            <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto mb-12">
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto mb-12">
               <strong>True Rank Digital</strong> provides <strong>e-commerce SEO optimization</strong> with product schema markup, competitor analysis platform, and conversion optimization for online stores nationwide.
             </p>
 
-            <h2 className="text-3xl font-heading font-bold text-brand-dark mb-8">
+            <h2 className="text-3xl font-heading font-bold text-white mb-8">
               How <strong className="text-brand-primary">E-commerce Optimization</strong> Increases Sales
             </h2>
 
             <div className="glass-card p-8 mb-12">
-              <p className="text-brand-dark/70 leading-relaxed">
+              <p className="text-gray-400 leading-relaxed">
                 <strong>True Rank Digital's e-commerce SEO</strong> services optimize product pages, category pages, and technical performance to increase organic traffic and sales.
               </p>
             </div>
@@ -131,7 +131,7 @@ export default function EcommerceOptimizationPage() {
               <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Target className="w-10 h-10 text-white" />
               </div>
-              <h2 className="text-2xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-2xl font-heading font-bold text-white mb-4">
                 Scale Your <strong className="text-brand-primary">Online Store</strong> with E-commerce SEO
               </h2>
               <a

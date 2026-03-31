@@ -102,7 +102,7 @@ export default function ContactFormSection({
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-brand-light/20 via-white to-brand-light/20">
+    <section className="py-20 bg-brand-obsidian">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -118,11 +118,11 @@ export default function ContactFormSection({
             <span className="text-brand-primary font-semibold text-sm">Send Us a Message</span>
           </div>
           
-          <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+          <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
             {title}
           </h2>
           
-          <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             {description}
           </p>
         </motion.div>
@@ -140,7 +140,7 @@ export default function ContactFormSection({
             {/* Name and Email Row */}
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="flex items-center space-x-2 text-brand-dark font-semibold mb-2">
+                <label htmlFor="name" className="flex items-center space-x-2 text-white font-semibold mb-2">
                   <User className="w-4 h-4 text-brand-primary" />
                   <span>Full Name *</span>
                 </label>
@@ -151,13 +151,13 @@ export default function ContactFormSection({
                   required
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 border border-white/10 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-brand-obsidian/5 backdrop-blur-sm text-white placeholder-gray-500"
                   placeholder="Enter your full name"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="flex items-center space-x-2 text-brand-dark font-semibold mb-2">
+                <label htmlFor="email" className="flex items-center space-x-2 text-white font-semibold mb-2">
                   <Mail className="w-4 h-4 text-brand-primary" />
                   <span>Email Address *</span>
                 </label>
@@ -168,7 +168,7 @@ export default function ContactFormSection({
                   required
                   value={formData.email}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 border border-white/10 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-brand-obsidian/5 backdrop-blur-sm text-white placeholder-gray-500"
                   placeholder="Enter your email address"
                 />
               </div>
@@ -177,7 +177,7 @@ export default function ContactFormSection({
             {/* Company and Phone Row */}
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="company" className="flex items-center space-x-2 text-brand-dark font-semibold mb-2">
+                <label htmlFor="company" className="flex items-center space-x-2 text-white font-semibold mb-2">
                   <Building className="w-4 h-4 text-brand-primary" />
                   <span>Company Name</span>
                 </label>
@@ -187,13 +187,13 @@ export default function ContactFormSection({
                   name="company"
                   value={formData.company}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 border border-white/10 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-brand-obsidian/5 backdrop-blur-sm text-white placeholder-gray-500"
                   placeholder="Your business name"
                 />
               </div>
               
               <div>
-                <label htmlFor="phone" className="flex items-center space-x-2 text-brand-dark font-semibold mb-2">
+                <label htmlFor="phone" className="flex items-center space-x-2 text-white font-semibold mb-2">
                   <svg className="w-4 h-4 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
@@ -205,7 +205,7 @@ export default function ContactFormSection({
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm text-gray-900 placeholder-gray-500"
+                  className="w-full px-4 py-3 border border-white/10 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-brand-obsidian/5 backdrop-blur-sm text-white placeholder-gray-500"
                   placeholder="(555) 123-4567"
                 />
               </div>
@@ -213,7 +213,7 @@ export default function ContactFormSection({
 
             {/* Service Interest */}
             <div>
-              <label htmlFor="service" className="flex items-center space-x-2 text-brand-dark font-semibold mb-2">
+              <label htmlFor="service" className="flex items-center space-x-2 text-white font-semibold mb-2">
                 <Rocket className="w-4 h-4 text-brand-primary" />
                 <span>Service Interest</span>
               </label>
@@ -222,18 +222,18 @@ export default function ContactFormSection({
                 name="service"
                 value={formData.service}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm text-gray-900 placeholder-gray-500"
+                className="w-full px-4 py-3 border border-white/10 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-brand-obsidian/5 backdrop-blur-sm text-white placeholder-gray-500"
               >
-                <option value="">Select a service</option>
+                <option value="" className="bg-brand-obsidian">Select a service</option>
                 {serviceOptions.map((service) => (
-                  <option key={service} value={service}>{service}</option>
+                  <option key={service} value={service} className="bg-brand-obsidian">{service}</option>
                 ))}
               </select>
             </div>
 
             {/* Message */}
             <div>
-              <label htmlFor="message" className="flex items-center space-x-2 text-brand-dark font-semibold mb-2">
+              <label htmlFor="message" className="flex items-center space-x-2 text-white font-semibold mb-2">
                 <MessageSquare className="w-4 h-4 text-brand-primary" />
                 <span>Message *</span>
               </label>
@@ -244,7 +244,7 @@ export default function ContactFormSection({
                 rows={5}
                 value={formData.message}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-brand-dark/20 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-white/80 backdrop-blur-sm text-gray-900 placeholder-gray-500 resize-none"
+                className="w-full px-4 py-3 border border-white/10 rounded-xl focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all duration-200 bg-brand-obsidian/5 backdrop-blur-sm text-white placeholder-gray-500 resize-none"
                 placeholder="Tell us about your business goals and how we can help you achieve them..."
               />
             </div>
@@ -259,10 +259,10 @@ export default function ContactFormSection({
                     name="consentTransactional"
                     checked={formData.consentTransactional}
                     onChange={handleInputChange}
-                    className="w-5 h-5 bg-white border-brand-dark/20 rounded text-brand-primary focus:ring-brand-primary transition-all cursor-pointer"
+                    className="w-5 h-5 bg-brand-obsidian/5 border-white/10 rounded text-brand-primary focus:ring-brand-primary transition-all cursor-pointer"
                   />
                 </div>
-                <span className="text-xs text-brand-dark/60 leading-tight">
+                <span className="text-xs text-gray-500 leading-tight">
                   I consent to receive transactional messages (e.g., appointment reminders, support) from <strong>True Rank Digital</strong> at the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out. Carriers are not responsible for delayed or undelivered messages. By opting in, I verify that I am 18 years of age or older.
                 </span>
               </label>
@@ -275,18 +275,18 @@ export default function ContactFormSection({
                     name="consentMarketing"
                     checked={formData.consentMarketing}
                     onChange={handleInputChange}
-                    className="w-5 h-5 bg-white border-brand-dark/20 rounded text-brand-primary focus:ring-brand-primary transition-all cursor-pointer"
+                    className="w-5 h-5 bg-brand-obsidian/5 border-white/10 rounded text-brand-primary focus:ring-brand-primary transition-all cursor-pointer"
                   />
                 </div>
-                <span className="text-xs text-brand-dark/60 leading-tight">
+                <span className="text-xs text-gray-500 leading-tight">
                   I consent to receive marketing and promotional messages from <strong>True Rank Digital</strong> at the phone number provided. Message frequency may vary. Message & Data rates may apply. Reply HELP for help or STOP to opt-out. Carriers are not responsible for delayed or undelivered messages.
                 </span>
               </label>
             </div>
 
             {/* A2P 10DLC & Privacy Disclosure Block */}
-            <div className="pt-4 pb-2 border-t border-brand-dark/10">
-              <p className="text-[10px] text-brand-dark/50 leading-relaxed text-center">
+            <div className="pt-4 pb-2 border-t border-white/10">
+              <p className="text-[10px] text-gray-500 leading-relaxed text-center">
                 By submitting this form and providing your phone number, you agree to our <a href="/privacy-policy" className="underline hover:text-brand-primary">Privacy Policy</a> and <a href="/terms" className="underline hover:text-brand-primary">Terms of Service</a>. 
                 <strong> SMS Disclosure:</strong> You may receive transactional or marketing text messages (e.g., appointment reminders, service updates, and promotional offers). Message frequency varies. <strong>Message and data rates may apply.</strong> 
                 You can unsubscribe at any time by replying <strong>STOP</strong> to any message, or reply <strong>HELP</strong> for assistance. 
@@ -323,7 +323,7 @@ export default function ContactFormSection({
               </motion.button>
               
               {submitStatus === 'idle' && (
-                <p className="text-brand-dark/60 text-sm mt-4">
+                <p className="text-gray-500 text-sm mt-4">
                       We&apos;ll respond soon with a customized strategy for your business.
                 </p>
               )}
@@ -336,14 +336,14 @@ export default function ContactFormSection({
                 animate={{ opacity: 1, y: 0 }}
                 className={`mt-6 p-4 rounded-xl flex items-center space-x-3 ${
                   submitStatus === 'success' 
-                    ? 'bg-green-50 border border-green-200 text-green-800' 
-                    : 'bg-red-50 border border-red-200 text-red-800'
+                    ? 'bg-green-500/20 border border-green-500/30 text-green-400' 
+                    : 'bg-red-500/20 border border-red-500/30 text-red-400'
                 }`}
               >
                 {submitStatus === 'success' ? (
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 ) : (
-                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
+                  <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0" />
                 )}
                 <p className="text-sm">{submitMessage}</p>
               </motion.div>
@@ -360,7 +360,7 @@ export default function ContactFormSection({
           viewport={{ once: true }}
           className="mt-12 text-center"
         >
-          <p className="text-brand-dark/70 mb-6">
+          <p className="text-gray-400 mb-6">
                     Prefer to talk directly? We&apos;re here to help!
           </p>
           
@@ -393,3 +393,4 @@ export default function ContactFormSection({
     </section>
   );
 }
+

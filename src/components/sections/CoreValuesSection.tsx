@@ -22,18 +22,18 @@ export default function CoreValuesSection() {
       icon: <BarChart3 className="w-8 h-8" />,
       title: 'Data-Driven',
       description: 'Our strategies are backed by analytics and real-world performance metrics.',
-      color: 'from-brand-accent to-purple-600'
+      color: 'from-brand-accent to-brand-blue'
     },
     {
       icon: <Heart className="w-8 h-8" />,
       title: 'Passion',
       description: 'We are passionate about helping businesses grow through digital excellence.',
-      color: 'from-pink-500 to-brand-primary'
+      color: 'from-brand-blue to-brand-primary'
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-brand-light/20 via-white to-brand-light/20">
+    <section className="py-20 bg-brand-obsidian text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -44,10 +44,10 @@ export default function CoreValuesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
             Our Core Values
           </h2>
-          <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             These fundamental principles guide everything we do and shape how we serve our clients.
           </p>
         </motion.div>
@@ -77,12 +77,12 @@ export default function CoreValuesSection() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-heading font-bold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors duration-300">
+                  <h3 className="text-xl font-heading font-bold text-white mb-4 group-hover:text-brand-primary transition-colors duration-300">
                     {value.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-brand-dark/70 leading-relaxed">
+                  <p className="text-gray-400 leading-relaxed">
                     {value.description}
                   </p>
                 </div>
@@ -99,7 +99,7 @@ export default function CoreValuesSection() {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <p className="text-lg text-brand-dark/70 mb-6">
+          <p className="text-lg text-gray-400 mb-6">
             Ready to experience our values in action?
           </p>
           <motion.a

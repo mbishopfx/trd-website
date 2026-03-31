@@ -81,21 +81,21 @@ export default function GBPProGridRankingPage() {
   return (
     <div className="pt-20">
       {/* Navigation Breadcrumb */}
-      <div className="bg-brand-light/20 py-4">
+      <div className="bg-brand-obsidian/20 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center space-x-2 text-sm">
             <Link href="/" className="text-brand-primary hover:text-brand-primary/80 flex items-center space-x-1">
               <ArrowLeft className="w-4 h-4" />
               <span>Home</span>
             </Link>
-            <span className="text-brand-dark/50">/</span>
-            <span className="text-brand-dark">GBP Pro Search Grid Ranking</span>
+            <span className="text-gray-500">/</span>
+            <span className="text-white">GBP Pro Search Grid Ranking</span>
           </nav>
         </div>
       </div>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-brand-obsidian to-cyan-50 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
@@ -115,18 +115,18 @@ export default function GBPProGridRankingPage() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center space-x-2 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-brand-obsidian0 to-cyan-500 rounded-2xl flex items-center justify-center">
                   <BarChart3 className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h1 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-2">
+                  <h1 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-2">
                     GBP Pro Search Grid Ranking System
                   </h1>
                   <p className="text-brand-primary font-semibold">Geographic Search Intelligence Platform</p>
                 </div>
               </div>
               
-              <p className="text-xl text-brand-dark/70 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                 Revolutionary precision marketing through location intelligence. Our proprietary grid system analyzes search rankings across a broad set of geographic coordinates, providing actionable insights into local market positioning and competitive dynamics.
               </p>
               
@@ -154,15 +154,15 @@ export default function GBPProGridRankingPage() {
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div>
                   <div className="text-2xl font-bold text-blue-600">Broad</div>
-                  <div className="text-sm text-brand-dark/60">Coverage</div>
+                  <div className="text-sm text-gray-500">Coverage</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-blue-600">Frequent</div>
-                  <div className="text-sm text-brand-dark/60">Updates</div>
+                  <div className="text-sm text-gray-500">Updates</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-blue-600">Actionable</div>
-                  <div className="text-sm text-brand-dark/60">Insights</div>
+                  <div className="text-sm text-gray-500">Insights</div>
                 </div>
               </div>
             </motion.div>
@@ -174,8 +174,8 @@ export default function GBPProGridRankingPage() {
               className="group"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
-                <div className="relative bg-white rounded-3xl p-2 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-obsidian0 to-cyan-500 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
+                <div className="relative bg-brand-obsidian rounded-3xl p-2 shadow-2xl">
                   <Image
                     src="/platform/gridmapsnap.png"
                     alt="Grid Ranking System Interface"
@@ -194,7 +194,7 @@ export default function GBPProGridRankingPage() {
       </section>
 
       {/* Key Features */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-brand-obsidian">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -203,10 +203,10 @@ export default function GBPProGridRankingPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
               Advanced Geographic Intelligence Features
             </h2>
-            <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our grid ranking system provides unprecedented visibility into local search performance across every geographic area that matters to your business.
             </p>
           </motion.div>
@@ -222,14 +222,14 @@ export default function GBPProGridRankingPage() {
                 className="glass-card p-8 hover:shadow-glass-lg transition-all duration-300"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-br from-brand-obsidian0 to-cyan-500 rounded-xl flex items-center justify-center text-white flex-shrink-0">
                     {feature.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       {feature.title}
                     </h3>
-                    <p className="text-brand-dark/70 mb-4 leading-relaxed">
+                    <p className="text-gray-400 mb-4 leading-relaxed">
                       {feature.description}
                     </p>
                     <div className="bg-green-50 border border-green-200 rounded-lg p-3">
@@ -247,7 +247,7 @@ export default function GBPProGridRankingPage() {
       </section>
 
       {/* Application Scenarios */}
-      <section className="py-20 bg-brand-light/20">
+      <section className="py-20 bg-brand-obsidian/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -256,10 +256,10 @@ export default function GBPProGridRankingPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
               Strategic Applications Across Business Types
             </h2>
-            <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our grid ranking intelligence adapts to your specific business model and geographic requirements.
             </p>
           </motion.div>
@@ -275,13 +275,13 @@ export default function GBPProGridRankingPage() {
                 className="glass-card p-8 hover:shadow-glass-lg transition-all duration-300"
               >
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-brand-obsidian0 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <MapPin className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                  <h3 className="text-xl font-heading font-bold text-white mb-3">
                     {scenario.title}
                   </h3>
-                  <p className="text-brand-dark/70 leading-relaxed mb-6">
+                  <p className="text-gray-400 leading-relaxed mb-6">
                     {scenario.description}
                   </p>
                 </div>
@@ -290,7 +290,7 @@ export default function GBPProGridRankingPage() {
                   {scenario.applications.map((application, appIndex) => (
                     <li key={appIndex} className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-brand-dark/70 text-sm">{application}</span>
+                      <span className="text-gray-400 text-sm">{application}</span>
                     </li>
                   ))}
                 </ul>
@@ -301,7 +301,7 @@ export default function GBPProGridRankingPage() {
       </section>
 
       {/* Technical Advantages */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-brand-obsidian">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -310,10 +310,10 @@ export default function GBPProGridRankingPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
                 Why Grid-Based Intelligence Outperforms Traditional Methods
               </h2>
-              <p className="text-xl text-brand-dark/70 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                 Most businesses rely on basic rank tracking that provides limited geographic insight. Our advanced grid system delivers comprehensive market intelligence that transforms how you approach local optimization.
               </p>
               
@@ -329,8 +329,8 @@ export default function GBPProGridRankingPage() {
                   >
                     <CheckCircle className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-bold text-brand-dark mb-1">{advantage.feature}</h4>
-                      <p className="text-brand-dark/70 text-sm">{advantage.description}</p>
+                      <h4 className="font-bold text-white mb-1">{advantage.feature}</h4>
+                      <p className="text-gray-400 text-sm">{advantage.description}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -345,8 +345,8 @@ export default function GBPProGridRankingPage() {
               className="group"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl transform -rotate-3 group-hover:-rotate-6 transition-transform duration-300"></div>
-                <div className="relative bg-white rounded-3xl p-2 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-obsidian0 to-cyan-500 rounded-3xl transform -rotate-3 group-hover:-rotate-6 transition-transform duration-300"></div>
+                <div className="relative bg-brand-obsidian rounded-3xl p-2 shadow-2xl">
                   <Image
                     src="/platform/gridmapdemo.png"
                     alt="Grid Ranking Demo Interface"
@@ -383,7 +383,7 @@ export default function GBPProGridRankingPage() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center space-x-2 bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition-colors duration-300"
+                  className="inline-flex items-center space-x-2 bg-brand-obsidian text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition-colors duration-300"
                 >
                   <Zap className="w-5 h-5" />
                   <span>Schedule Demo</span>
@@ -392,7 +392,7 @@ export default function GBPProGridRankingPage() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/platform"
-                  className="inline-flex items-center space-x-2 border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300"
+                  className="inline-flex items-center space-x-2 border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-brand-obsidian hover:text-blue-600 transition-colors duration-300"
                 >
                   <ArrowRight className="w-5 h-5" />
                   <span>Explore Full Platform</span>
@@ -404,7 +404,7 @@ export default function GBPProGridRankingPage() {
       </section>
 
       {/* Additional CTA Cards */}
-      <section className="py-16 bg-brand-light/20">
+      <section className="py-16 bg-brand-obsidian/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
@@ -415,10 +415,10 @@ export default function GBPProGridRankingPage() {
               className="glass-card p-8 text-center hover:shadow-glass-lg transition-all duration-300"
             >
               <TrendingUp className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-heading font-bold text-brand-dark mb-4">
+              <h3 className="text-xl font-heading font-bold text-white mb-4">
                 Free Platform Demo
               </h3>
-              <p className="text-brand-dark/70 mb-6">
+              <p className="text-gray-400 mb-6">
                 See the grid ranking system in action with your business data
               </p>
               <Link href="/contact" className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold">
@@ -435,10 +435,10 @@ export default function GBPProGridRankingPage() {
               className="glass-card p-8 text-center hover:shadow-glass-lg transition-all duration-300"
             >
               <Layers className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h4 className="text-xl font-heading font-bold text-brand-dark mb-4">
+              <h4 className="text-xl font-heading font-bold text-white mb-4">
                 Complete platform overview
               </h4>
-              <p className="text-brand-dark/70 text-sm">
+              <p className="text-gray-400 text-sm">
                 Explore all seven AI-powered tools in our comprehensive platform
               </p>
               <Link href="/platform" className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold text-sm mt-4">

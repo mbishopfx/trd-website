@@ -48,7 +48,7 @@ export const ServiceFAQTemplates = {
   aiSEO: [
     {
       question: "What is AI SEO and how does it differ from traditional SEO?",
-      answer: "AI SEO (AI Optimization) focuses on optimizing content for AI-powered search engines and AI-assisted search experiences. True Rank Digital specializes in creating LLM.txt files, structured data optimization, and content formatting that AI systems can interpret clearly. This complements traditional SEO, which targets Google's standard ranking systems."
+      answer: "AI SEO focuses on optimizing content for AI-assisted discovery while traditional SEO focuses on classic ranking factors. True Rank Digital applies the TRD Spatial Engine framework with LLM.txt, structured data architecture, and retrieval-friendly formatting so answer engines can interpret and cite your business more reliably."
     },
     {
       question: "What is an LLM.txt file and why does my business need one?",

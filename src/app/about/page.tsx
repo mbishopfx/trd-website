@@ -1,46 +1,36 @@
+'use client';
+
+import React from 'react';
 import type { Metadata } from 'next';
-import { Building2, MapPin, Users, Award, Target, Briefcase } from 'lucide-react';
+import { Building2, MapPin, Users, Award, Target, Briefcase, Zap, Bot, Network, Globe, Cpu, Activity } from 'lucide-react';
 import FAQSchema from '@/components/seo/FAQSchema';
 import ServiceSchema from '@/components/seo/ServiceSchema';
 
-// Entity-Dense Metadata
-export const metadata: Metadata = {
-  title: 'About True Rank Digital LLC | Professional SEO Company in East Brunswick, NJ',
-  description: 'True Rank Digital LLC is a professional SEO and digital marketing company located in East Brunswick, New Jersey. Founded by Jon Korkowski, we serve businesses throughout New Jersey and beyond with proprietary SEO technology and custom optimization solutions.',
-  keywords: 'True Rank Digital LLC, East Brunswick SEO company, New Jersey digital marketing, Jon Korkowski, professional SEO services, East Brunswick NJ 08816',
-  openGraph: {
-    title: 'About True Rank Digital LLC - Professional SEO Company in East Brunswick, NJ',
-    description: 'Learn about True Rank Digital LLC, a professional SEO company serving East Brunswick and surrounding areas.',
-    url: 'https://truerankdigital.com/about',
-    type: 'website',
-  },
-};
-
-// FAQ Data for Entity Recognition
+// FAQ Data for Entity Recognition - Updated with 2026 nomenclature
 const aboutFAQs = [
   {
     question: "Who is True Rank Digital?",
-    answer: "True Rank Digital LLC is a professional SEO and digital marketing company located in East Brunswick, New Jersey. Founded by Jon Korkowski, True Rank Digital specializes in custom SEO technology, Google Business Profile optimization, and proprietary dashboard platforms. The company serves businesses throughout New Jersey and beyond."
+    answer: "True Rank Digital is an elite AI Search and Agentic Orchestration firm located in East Brunswick, New Jersey. Founded by Jon Korkowski, we specialize in Generative Engine Optimization (GEO), agentic business systems, and hyper-local entity signaling."
   },
   {
     question: "Where is True Rank Digital located?",
-    answer: "True Rank Digital LLC is located at 288 Summerhill Rd, suite 3, East Brunswick, New Jersey 08816. We serve clients in East Brunswick and surrounding areas, and our services are available beyond New Jersey for businesses seeking professional SEO solutions."
+    answer: "True Rank Digital is headquartered at 288 Summerhill Rd, suite 3, East Brunswick, New Jersey 08816. We operate a global agentic network, serving clients across the United States with a focus on Middlesex County and the tri-state area."
   },
   {
     question: "What services does True Rank Digital provide?",
-    answer: "True Rank Digital provides professional Google Business Optimization services including local pack domination and Google Maps optimization, Google Business Profile management, AI Search Optimization with LLM.txt optimization, custom web development, comprehensive digital marketing, review management, and organic search optimization. We specialize in proprietary technology solutions including grid map ranking analysis, competitor intelligence monitoring, and custom schema markup engineering."
+    answer: "We provide the definitive Agentic Service Suite, including Generative Entity Authority (GEO), Spatial AI Knowledge Graph Overwatch, Agentic Web Architecture, Hyper-Local Geofencing Intelligence, and Autonomous Business Orchestration."
   },
   {
-    question: "How much do True Rank Digital's services cost?",
-    answer: "Pricing varies based on business needs, market competition, and service scope. Contact us at (732) 475-0139 or info@truerankdigital.com for a custom quote and consultation."
+    question: "How does True Rank Digital dominate AI search?",
+    answer: "We use hyper-local entity signals and AI Search Optimization as the foundational training data to force Large Language Models (LLMs) like ChatGPT, Gemini, and Perplexity to recommend your brand."
   },
   {
-    question: "Why choose True Rank Digital over other SEO companies?",
-    answer: "True Rank Digital stands out by building custom software solutions in-house, including proprietary schema markup engineering, LLM.txt optimization files, and problem detection systems. We provide clients with exclusive dashboard platform access featuring grid map ranking verification, competitor analysis tools, and automated Google knowledge graph consistency monitoring."
+    question: "Why choose True Rank Digital over traditional SEO agencies?",
+    answer: "Archaic search marketing is dead. We build for the AI-first web, utilizing LLM.txt mastery, semantic entity mapping, and autonomous agent workflows that operate 24/7."
   },
   {
     question: "Who founded True Rank Digital?",
-    answer: "True Rank Digital LLC was founded by Jon Korkowski (CEO - Founder - President). The leadership team includes Jon Korkowski (CEO - Founder - President), Jesse Mathews (EVP of Business Development), and Jose Perdomo (EVP of Sales & Client Success). The technical team includes Matt Bishop (CTO (Chief Technology Officer)). The sales team includes Eric Malheiro (EVP of Sales Operations & Performance)."
+    answer: "True Rank Digital was founded by Jon J. Korkowski (CEO). The leadership team includes Jon J. Korkowski, Jesse Mathews (EVP of Business Development), Jose Perdomo (EVP of Sales & Client Success), Eric Malheiro (EVP of Sales Operations), and Matt Bishop (CTO)."
   }
 ];
 
@@ -56,355 +46,249 @@ export default function AboutPage() {
 
       {/* Service Schema with Entity Mentions */}
       <ServiceSchema
-        serviceName="Professional SEO & Digital Marketing Services"
+        serviceName="AI Search Domination & Agentic Orchestration"
         serviceUrl="https://truerankdigital.com/about"
-        description="True Rank Digital LLC provides professional SEO and digital marketing services from East Brunswick, New Jersey, serving businesses throughout New Jersey, New York, Pennsylvania, and nationwide."
-        serviceType="Professional SEO Services"
+        description="True Rank Digital provides elite AI Search and Agentic Orchestration services from East Brunswick, New Jersey, serving a global client base."
+        serviceType="AI Search Optimization Firm"
         mentions={[
+          {
+            type: "Organization",
+            name: "OpenAI",
+            sameAs: "https://www.wikidata.org/wiki/Q21708200",
+            description: "AI research and deployment company"
+          },
           {
             type: "Organization",
             name: "Google",
             sameAs: "https://www.wikidata.org/wiki/Q95",
-            description: "Search engine platform"
-          },
-          {
-            type: "Organization",
-            name: "Schema.org",
-            sameAs: "https://www.wikidata.org/wiki/Q845256",
-            description: "Structured data vocabulary"
+            description: "Search and AI platform"
           }
         ]}
       />
 
-      <article className="pt-20 bg-gradient-to-b from-white to-brand-light/30">
-        {/* Entity-Dense Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-brand-light via-white to-brand-light/50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-brand-primary/10 rounded-full mb-6">
-                <Building2 className="w-5 h-5 text-brand-primary" />
-                <span className="text-brand-primary font-semibold text-sm">About Our Company</span>
-              </div>
-              
-              {/* WHO - The Entity */}
-              <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
-                About <strong className="text-brand-primary">True Rank Digital LLC</strong>
-              </h1>
-              
-              <div className="max-w-4xl mx-auto space-y-4 text-lg text-brand-dark/80 leading-relaxed">
-                <p>
-                  <strong>True Rank Digital LLC</strong> is a professional <strong>SEO and digital marketing company</strong> founded in <strong>2020</strong> by <strong>Jon Korkowski</strong>. We specialize in custom SEO technology, proprietary dashboard platforms, and advanced optimization solutions that other agencies cannot provide.
-                </p>
+      <div className="min-h-screen bg-brand-obsidian">
+        <article className="pt-24 bg-brand-obsidian text-white">
+          
+          {/* Hero Section */}
+          <section className="py-20 relative overflow-hidden">
+            {/* Background Grid */}
+            <div className="absolute inset-0 bg-grid opacity-10" />
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-cyan/5 rounded-full blur-[120px]" />
+            
+            <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-16">
+                <div className="inline-flex items-center space-x-2 px-4 py-2 glass-cyan rounded-full mb-8">
+                  <Building2 className="w-5 h-5 text-brand-cyan" />
+                  <span className="text-brand-cyan font-black text-xs uppercase tracking-widest">The Visionary Firm</span>
+                </div>
                 
-                <p>
-                  <strong>True Rank Digital</strong> builds in-house software solutions including <strong>schema markup engineering</strong>, <strong>LLM.txt optimization</strong>, grid map ranking verification, and automated <strong>Google knowledge graph</strong> consistency monitoring. Our proprietary technology gives clients a competitive advantage in search rankings.
-                </p>
-              </div>
-            </div>
-
-            {/* WHERE - Service Area with Precise Location */}
-            <div className="glass-card p-8 mb-12">
-              <div className="flex items-center space-x-3 mb-6">
-                <MapPin className="w-8 h-8 text-brand-primary" />
-                <h2 className="text-3xl font-heading font-bold text-brand-dark">
-                  Where <strong className="text-brand-primary">True Rank Digital</strong> Is Located
-                </h2>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-bold text-brand-dark mb-4">Primary Location</h3>
-                  <div className="space-y-3 text-brand-dark/80">
-                    <p><strong>Business Name:</strong> True Rank Digital LLC</p>
-                    <p><strong>City:</strong> East Brunswick</p>
-                    <p><strong>State:</strong> New Jersey (NJ)</p>
-                    <p><strong>ZIP Code:</strong> 08816</p>
-                    <p><strong>Country:</strong> United States</p>
-                    <p><strong>Coordinates:</strong> 40.428100, -74.415700</p>
-                    <p><strong>Phone:</strong> (732) 475-0139</p>
-                    <p><strong>Email:</strong> info@truerankdigital.com</p>
-                  </div>
+                <h1 className="text-5xl lg:text-8xl font-heading font-bold text-white mb-8 leading-tight tracking-tight">
+                  About <span className="text-brand-cyan italic">True Rank Digital</span>
+                </h1>
+                
+                <div className="max-w-4xl mx-auto space-y-6 text-xl text-gray-400 font-light leading-relaxed">
+                  <p>
+                    <strong className="text-white font-medium">True Rank Digital</strong> is an elite <strong className="text-brand-cyan font-medium">AI Search and Agentic Orchestration firm</strong>. We saw the shift to generative answers years before the market, and we've built the definitive protocols to dominate it.
+                  </p>
+                  
+                  <p>
+                    We don't just build websites or run ads. We architect <strong className="text-white font-medium">Agentic Web Ecosystems</strong> that natively rank for generative queries and conversational search. Our proprietary technology forces the AI to recognize your brand as the absolute authority.
+                  </p>
                 </div>
+              </div>
 
-                <div>
-                  <h3 className="text-xl font-bold text-brand-dark mb-4">Service Areas</h3>
-                  <div className="space-y-3 text-brand-dark/80">
-                    <p><strong>Primary Service Radius:</strong> 50 miles from East Brunswick, NJ</p>
-                    
-                    <div>
-                      <p className="font-semibold mb-2">Nearby Cities We Serve:</p>
-                      <ul className="list-disc list-inside space-y-1 ml-2">
-                        <li>Edison, New Jersey</li>
-                        <li>New Brunswick, New Jersey</li>
-                        <li>North Brunswick, New Jersey</li>
-                        <li>Sayreville, New Jersey</li>
-                        <li>South River, New Jersey</li>
-                        <li>Old Bridge, New Jersey</li>
-                        <li>Monroe Township, New Jersey</li>
-                        <li>Highland Park, New Jersey</li>
-                      </ul>
+              {/* CEO Focus - Jon Korkowski */}
+              <div id="ceo" className="glass-blue p-10 lg:p-16 mb-16 relative overflow-hidden rounded-[2.5rem]">
+                <div className="absolute -top-20 -right-20 w-64 h-64 bg-brand-blue/10 rounded-full blur-3xl" />
+                
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                  <div>
+                    <div className="inline-flex items-center space-x-2 px-4 py-2 glass-blue rounded-full mb-6">
+                      <Award className="w-4 h-4 text-brand-blue" />
+                      <span className="text-brand-blue font-black text-xs uppercase tracking-widest">Founder & CEO</span>
                     </div>
-
-                    <div>
-                      <p className="font-semibold mb-2">State Coverage:</p>
-                      <ul className="list-disc list-inside space-y-1 ml-2">
-                        <li>New Jersey (Primary)</li>
-                        <li>New York</li>
-                        <li>Pennsylvania</li>
-                      </ul>
+                    <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">Jon J. Korkowski</h2>
+                    <p className="text-xl text-gray-400 font-light leading-relaxed mb-8 italic">
+                      "The era of chasing clicks is over. We are now in the era of <span className="text-brand-blue font-medium">calculating authority</span>. If you aren't feeding the models the right signals today, your business won't exist in the AI-first search results of tomorrow."
+                    </p>
+                    <p className="text-gray-500 font-light leading-relaxed">
+                      Jon founded True Rank Digital with a singular mission: to bridge the gap between traditional entity-based SEO and the generative future. His vision has transformed TRD from a performance agency into the definitive authority on AI search domination.
+                    </p>
+                  </div>
+                  <div className="relative">
+                    <div className="aspect-square rounded-3xl bg-gradient-to-br from-brand-blue to-brand-cyan p-0.5">
+                      <div className="w-full h-full bg-brand-obsidian rounded-[calc(1.5rem-0.5px)] overflow-hidden flex items-center justify-center">
+                        <div className="text-brand-blue font-black text-6xl">JK</div>
+                      </div>
                     </div>
-
-                    <p><strong>National Services:</strong> Available throughout the United States</p>
+                    {/* Floating Stat */}
+                    <div className="absolute -bottom-6 -left-6 glass-cyan p-6 rounded-2xl border border-brand-cyan/30">
+                      <div className="text-brand-cyan font-black text-3xl mb-1">AI-First</div>
+                      <div className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Built For Generative Search</div>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Google Maps CID Link */}
-              <div className="mt-8 pt-8 border-t border-brand-primary/20">
-                <p className="text-center text-brand-dark/70">
-                  <strong>Find Us on Google Maps:</strong>{' '}
+              {/* Where / Command Center */}
+              <div className="grid lg:grid-cols-3 gap-8 mb-16">
+                <div className="lg:col-span-2 glass-card p-10">
+                  <div className="flex items-center space-x-3 mb-8">
+                    <MapPin className="w-8 h-8 text-brand-cyan" />
+                    <h2 className="text-3xl font-heading font-bold text-white">The <span className="text-brand-cyan">Command Center</span></h2>
+                  </div>
+                  
+                  <div className="grid md:grid-cols-2 gap-12">
+                    <div>
+                      <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500 mb-4">Coordinates</h3>
+                      <div className="space-y-4 text-gray-300 font-light">
+                        <p><strong className="text-white font-medium">Entity:</strong> True Rank Digital</p>
+                        <p><strong className="text-white font-medium">Hub:</strong> East Brunswick, NJ 08816</p>
+                        <p><strong className="text-white font-medium">Spatial:</strong> 40.428100, -74.415700</p>
+                        <p><strong className="text-white font-medium">Uplink:</strong> (732) 475-0139</p>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500 mb-4">Service Radius</h3>
+                      <p className="text-gray-400 font-light leading-relaxed mb-4">
+                        Hyper-local dominance across the tri-state area, amplified by a global agentic network.
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {['East Brunswick', 'New Brunswick', 'Edison', 'Sayreville', 'South River', 'Old Bridge'].map(city => (
+                          <span key={city} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-bold text-gray-400">
+                            {city}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="glass-cyan p-10 flex flex-col justify-center text-center">
+                  <div className="w-16 h-16 bg-brand-cyan/10 rounded-2xl flex items-center justify-center text-brand-cyan mx-auto mb-6">
+                    <Activity className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">Live Monitoring</h3>
+                  <p className="text-gray-400 font-light text-sm leading-relaxed mb-8">
+                    Our agentic systems maintain 24/7 surveillance of your brand entity authority.
+                  </p>
                   <a 
                     href="https://www.google.com/maps?cid=4662204553635539796"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-brand-primary hover:underline font-semibold"
+                    className="text-brand-cyan font-bold text-xs uppercase tracking-widest hover:underline"
                   >
-                    View True Rank Digital on Google Maps
+                    View Knowledge Graph Hub
                   </a>
-                </p>
-              </div>
-            </div>
-
-            {/* WHAT - Topical Authority & Services */}
-            <div className="glass-card p-8 mb-12">
-              <div className="flex items-center space-x-3 mb-6">
-                <Target className="w-8 h-8 text-brand-primary" />
-                <h2 className="text-3xl font-heading font-bold text-brand-dark">
-                  What <strong className="text-brand-primary">True Rank Digital</strong> Does
-                </h2>
+                </div>
               </div>
 
-              <div className="space-y-6">
-                <p className="text-lg text-brand-dark/80 leading-relaxed">
-                  <strong>True Rank Digital LLC</strong> provides professional <strong>SEO services</strong> and <strong>digital marketing solutions</strong> with proprietary technology that other agencies cannot offer. Our core competencies include:
-                </p>
+              {/* What / Service Suite */}
+              <div className="glass-card p-10 lg:p-16 mb-16">
+                <div className="flex items-center space-x-3 mb-12">
+                  <Cpu className="w-8 h-8 text-brand-blue" />
+                  <h2 className="text-3xl font-heading font-bold text-white">The <span className="text-brand-blue">Agentic Service Suite</span></h2>
+                </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {[
                     {
-                      title: "Local SEO & Google Maps Optimization",
-                      description: "Grid map ranking verification, Google Business Profile optimization, local pack positioning, and geographic targeting for businesses in East Brunswick, NJ and surrounding areas."
+                      title: "Generative Entity Authority (GEO)",
+                      icon: <Zap className="w-5 h-5" />,
+                      description: "Forcing LLMs like ChatGPT, Gemini, and Perplexity to recommend your brand."
                     },
                     {
-                      title: "Google Business Profile Management",
-                      description: "Complete GBP optimization, review management, listing consistency, photo optimization, and automated monitoring for businesses throughout New Jersey."
+                      title: "Spatial AI Overwatch",
+                      icon: <Network className="w-5 h-5" />,
+                      description: "Mapping physical entity footprints directly into AI training sets."
                     },
                     {
-                      title: "AI-Enhanced SEO & LLM.txt Optimization",
-                      description: "Custom algorithm adaptation scripts, LLM.txt file creation for ChatGPT and Perplexity, AI search engine optimization, and proprietary solution building frameworks."
+                      title: "Agentic Web Architecture",
+                      icon: <Globe className="w-5 h-5" />,
+                      description: "Native LLM.txt mastery ensuring data is parsed and prioritized by AI agents."
                     },
                     {
-                      title: "Custom Web Development",
-                      description: "SEO-optimized websites with proprietary script integration, enhanced algorithm manipulation capabilities, Core Web Vitals optimization, and conversion-focused design."
+                      title: "Hyper-Local Geofencing",
+                      icon: <Target className="w-5 h-5" />,
+                      description: "Weaponized marketing triggering real-time conversions based on location."
                     },
                     {
-                      title: "Schema Markup Engineering",
-                      description: "Hand-crafted structured data schemas, LocalBusiness markup, Service schemas, FAQ schemas, breadcrumb navigation, and custom entity relationship mapping."
+                      title: "Business Orchestration",
+                      icon: <Bot className="w-5 h-5" />,
+                      description: "24/7 autonomous agents running acquisition, operations, and fulfillment."
                     },
                     {
-                      title: "Proprietary SEO Dashboard Platform",
-                      description: "Exclusive client dashboard featuring grid map ranking analysis, competitor intelligence monitoring, keyword search volume research, and automated Google knowledge graph consistency tracking."
-                    },
-                    {
-                      title: "Comprehensive Digital Marketing",
-                      description: "Strategic campaign management, Google Analytics integration, Google Ads management, social media marketing, content strategy, and performance tracking."
+                      title: "Predictive AI Modeling",
+                      icon: <Activity className="w-5 h-5" />,
+                      description: "Anticipating competitor moves and dominating markets before they act."
                     }
                   ].map((service, index) => (
-                    <div key={index} className="bg-white/50 p-6 rounded-lg border border-brand-primary/10">
-                      <h3 className="text-lg font-bold text-brand-dark mb-3">{service.title}</h3>
-                      <p className="text-brand-dark/70 text-sm leading-relaxed">{service.description}</p>
+                    <div key={index} className="p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-brand-blue/30 transition-all group">
+                      <div className="text-brand-blue mb-6 group-hover:scale-110 transition-transform">{service.icon}</div>
+                      <h3 className="text-lg font-bold text-white mb-3">{service.title}</h3>
+                      <p className="text-gray-500 text-xs leading-relaxed font-light">{service.description}</p>
                     </div>
                   ))}
                 </div>
               </div>
-            </div>
 
-            {/* WHO - Leadership Team */}
-            <div className="glass-card p-8 mb-12">
-              <div className="flex items-center space-x-3 mb-6">
-                <Users className="w-8 h-8 text-brand-primary" />
-                <h2 className="text-3xl font-heading font-bold text-brand-dark">
-                  Who Leads <strong className="text-brand-primary">True Rank Digital</strong>
-                </h2>
-              </div>
+              {/* Who / Strategic Staff */}
+              <div className="glass-card p-10 lg:p-16 mb-16">
+                <div className="flex items-center space-x-3 mb-12">
+                  <Users className="w-8 h-8 text-brand-cyan" />
+                  <h2 className="text-3xl font-heading font-bold text-white">Strategic <span className="text-brand-cyan">Command Staff</span></h2>
+                </div>
 
-              <div className="space-y-6">
-                <p className="text-lg text-brand-dark/80 leading-relaxed mb-8">
-                  <strong>True Rank Digital LLC</strong> was founded in <strong>2020</strong> by <strong>Jon Korkowski</strong>. Our leadership team brings decades of combined experience in <strong>SEO</strong>, <strong>digital marketing</strong>, <strong>web development</strong>, and <strong>business development</strong>.
-                </p>
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {[
-                    {
-                      name: "Jon Korkowski",
-                      title: "CEO - Founder - President",
-                      role: "Business Strategy, Client Relations, SEO Leadership",
-                      description: "Founded True Rank Digital in 2020 with a vision to build custom SEO technology that gives clients a competitive advantage.",
-                      email: "info@truerankdigital.com"
-                    },
-                    {
-                      name: "Jesse Mathews",
-                      title: "EVP of Business Development",
-                      role: "Business Development, Sales Strategy, Operations Leadership",
-                      description: "Drives business development strategy and sales pipeline growth across True Rank Digital initiatives.",
-                      email: "jesse@truerankdigital.com"
-                    },
-                    {
-                      name: "Jose Perdomo",
-                      title: "EVP of Sales & Client Success",
-                      role: "Sales Leadership, Client Success, Revenue Growth",
-                      description: "Leads sales execution and client success strategy to improve retention and long-term account growth.",
-                      email: "jose@truerankdigital.com"
-                    },
-                    {
-                      name: "Matt Bishop",
-                      title: "CTO (Chief Technology Officer)",
-                      role: "Technology Strategy, Software Architecture, Custom Software",
-                      description: "Owns technical architecture, platform development, and engineering execution across company initiatives.",
-                      email: "bishop@truerankdigital.com"
-                    },
-                    {
-                      name: "Eric Malheiro",
-                      title: "EVP of Sales Operations & Performance",
-                      role: "Sales Operations, Performance Management, Strategic Partnerships",
-                      description: "Leads sales operations and performance systems to increase efficiency, visibility, and forecasting accuracy.",
-                      email: "eric@truerankdigital.com"
-                    }
+                    { name: "Jon J. Korkowski", title: "CEO & Founder", email: "info@truerankdigital.com" },
+                    { name: "Jesse Mathews", title: "EVP Business Development", email: "jesse@truerankdigital.com" },
+                    { name: "Jose Perdomo", title: "EVP Sales & Success", email: "jose@truerankdigital.com" },
+                    { name: "Matt Bishop", title: "CTO", email: "bishop@truerankdigital.com" },
+                    { name: "Eric Malheiro", title: "EVP Sales Operations", email: "eric@truerankdigital.com" }
                   ].map((member, index) => (
-                    <div key={index} className="bg-white/50 p-6 rounded-lg border border-brand-primary/10">
-                      <h3 className="text-xl font-bold text-brand-dark mb-1">{member.name}</h3>
-                      <p className="text-brand-primary font-semibold mb-2">{member.title}</p>
-                      <p className="text-sm text-brand-dark/60 mb-3">{member.role}</p>
-                      <p className="text-sm text-brand-dark/70 leading-relaxed mb-3">{member.description}</p>
-                      <a href={`mailto:${member.email}`} className="text-xs text-brand-primary hover:underline">
+                    <div key={index} className="p-6 rounded-xl border border-white/5 hover:bg-white/5 transition-all">
+                      <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
+                      <p className="text-brand-cyan font-bold text-[10px] uppercase tracking-widest mb-4">{member.title}</p>
+                      <a href={`mailto:${member.email}`} className="text-[10px] text-gray-500 hover:text-brand-cyan transition-colors">
                         {member.email}
                       </a>
                     </div>
                   ))}
                 </div>
               </div>
+
             </div>
+          </section>
 
-            {/* Company Credentials & Authority Signals */}
-            <div className="glass-card p-8">
-              <div className="flex items-center space-x-3 mb-6">
-                <Award className="w-8 h-8 text-brand-primary" />
-                <h2 className="text-3xl font-heading font-bold text-brand-dark">
-                  Why <strong className="text-brand-primary">True Rank Digital</strong> Is Trusted
-                </h2>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-bold text-brand-dark mb-4">Company Information</h3>
-                  <div className="space-y-3 text-brand-dark/80">
-                    <p><strong>Legal Name:</strong> True Rank Digital LLC</p>
-                    <p><strong>Founded:</strong> 2020</p>
-                    <p><strong>Founder:</strong> Jon Korkowski</p>
-                    <p><strong>Headquarters:</strong> 288 Summerhill Rd, suite 3, East Brunswick, New Jersey 08816</p>
-                    <p><strong>Industry:</strong> Professional SEO Services & Digital Marketing</p>
-                    <p><strong>NAICS Code:</strong> 541613 (Marketing Consulting Services)</p>
-                    <p><strong>Price Range:</strong> $$-$$$ (Mid to upper-mid professional services)</p>
-                    <p><strong>Service Availability:</strong> 24/7 Digital Services Available</p>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-bold text-brand-dark mb-4">Technology & Platforms</h3>
-                  <div className="space-y-3 text-brand-dark/80">
-                    <p><strong>Proprietary Technology:</strong></p>
-                    <ul className="list-disc list-inside space-y-1 ml-2">
-                      <li>Custom SEO Dashboard Platform</li>
-                      <li>Grid Map Ranking Verification System</li>
-                      <li>Competitor Intelligence Monitoring Tools</li>
-                      <li>Schema Markup Engineering Software</li>
-                      <li>LLM.txt Optimization Tools</li>
-                      <li>Problem Detection Systems</li>
-                    </ul>
-
-                    <p className="mt-4"><strong>Platform Expertise:</strong></p>
-                    <ul className="list-disc list-inside space-y-1 ml-2">
-                      <li>Google (Search, Maps, Business Profile, Analytics, Search Console)</li>
-                      <li>AI Platforms (ChatGPT, Perplexity AI, Claude)</li>
-                      <li>Development (Next.js, Vercel)</li>
-                      <li>Marketing (HubSpot, Meta)</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8 pt-8 border-t border-brand-primary/20">
-                <h3 className="text-xl font-bold text-brand-dark mb-4">Verified Business Profiles</h3>
-                <div className="flex flex-wrap gap-4">
-                  <a 
-                    href="https://www.google.com/maps?cid=4662204553635539796"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 px-4 py-2 bg-white border border-brand-primary/20 rounded-full hover:border-brand-primary hover:shadow-md transition-all"
-                  >
-                    <MapPin className="w-4 h-4 text-brand-primary" />
-                    <span className="text-sm font-semibold">Google Business Profile</span>
-                  </a>
-                  <a 
-                    href="https://www.wikidata.org/wiki/Q130284854"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 px-4 py-2 bg-white border border-brand-primary/20 rounded-full hover:border-brand-primary hover:shadow-md transition-all"
-                  >
-                    <Briefcase className="w-4 h-4 text-brand-primary" />
-                    <span className="text-sm font-semibold">Wikidata Entity</span>
-                  </a>
-                  <a 
-                    href="https://www.linkedin.com/company/true-rank-digital"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 px-4 py-2 bg-white border border-brand-primary/20 rounded-full hover:border-brand-primary hover:shadow-md transition-all"
-                  >
-                    <Users className="w-4 h-4 text-brand-primary" />
-                    <span className="text-sm font-semibold">LinkedIn Company</span>
-                  </a>
-                </div>
+          {/* Final CTA Section */}
+          <section className="py-24 bg-brand-obsidian relative overflow-hidden border-t border-white/5">
+            <div className="absolute inset-0 bg-grid opacity-5" />
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+              <h2 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-8">
+                Ready to Secure Your <span className="text-brand-cyan italic">Entity?</span>
+              </h2>
+              <p className="text-xl text-gray-400 mb-12 font-light leading-relaxed">
+                Stop being an option. Become the definitive answer. Join the elite brands leveraging Agentic Orchestration today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <a
+                  href="/contact"
+                  className="px-10 py-5 bg-brand-cyan text-brand-obsidian font-black rounded-full shadow-[0_0_30px_rgba(0,245,255,0.3)] hover:shadow-[0_0_50px_rgba(0,245,255,0.5)] transition-all uppercase tracking-widest text-xs"
+                >
+                  Initiate Strategic Protocol
+                </a>
+                <a
+                  href="tel:7324750139"
+                  className="px-10 py-5 glass-button-blue text-white font-bold rounded-full transition-all uppercase tracking-widest text-xs"
+                >
+                  Voice Uplink: (732) 475-0139
+                </a>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-br from-brand-primary to-brand-dark text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold mb-6">
-              Ready to Work with True Rank Digital?
-            </h2>
-            <p className="text-xl mb-8 text-white/90">
-              Contact True Rank Digital LLC today for a free consultation. Located in East Brunswick, NJ, serving businesses throughout New Jersey, New York, Pennsylvania, and nationwide.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-white text-brand-primary font-semibold text-lg rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg"
-              >
-                <span>Contact Us Today</span>
-              </a>
-              <a
-                href="tel:7324750139"
-                className="inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-white text-white font-semibold text-lg rounded-full hover:bg-white hover:text-brand-primary transition-all duration-300"
-              >
-                <span>Call (732) 475-0139</span>
-              </a>
-            </div>
-          </div>
-        </section>
-      </article>
+          </section>
+        </article>
+      </div>
     </>
   );
 }

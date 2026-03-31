@@ -15,8 +15,8 @@ export default function StarterPackBanner() {
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-64 h-64 bg-brand-obsidian rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-brand-obsidian rounded-full blur-3xl"></div>
       </div>
 
       {/* Animated Shimmer Effect */}
@@ -48,7 +48,7 @@ export default function StarterPackBanner() {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center"
+                className="w-10 h-10 bg-brand-obsidian/20 backdrop-blur-sm rounded-full flex items-center justify-center"
               >
                 <Rocket className="w-5 h-5 text-white" />
               </motion.div>
@@ -80,7 +80,7 @@ export default function StarterPackBanner() {
           {/* Right Side - CTA */}
           <Link
             href="/llc"
-            className="flex-shrink-0 inline-flex items-center space-x-2 px-6 py-3 bg-white text-brand-primary font-bold rounded-full hover:bg-white/90 transition-all duration-300 hover:scale-105 shadow-xl group"
+            className="flex-shrink-0 inline-flex items-center space-x-2 px-6 py-3 bg-brand-obsidian text-brand-primary font-bold rounded-full hover:bg-brand-obsidian/90 transition-all duration-300 hover:scale-105 shadow-xl group"
           >
             <span>Get Started Now</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

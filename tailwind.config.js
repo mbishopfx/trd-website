@@ -10,17 +10,22 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        // True Rank Digital Brand Colors
+        // True Rank Digital 2026 Cyber-Premium Colors
         brand: {
-          primary: "#4F7FFF",
-          secondary: "#6B9AFF", 
-          accent: "#A855F7",
-          dark: "#1E293B",
-          light: "#F8FAFC",
+          primary: "#00F5FF", // Neon Cyan
+          secondary: "#4F7FFF", // Royal Blue
+          accent: "#FFFFFF", // White Alt
+          dark: "#050505", // Obsidian
+          obsidian: "#050505",
+          "obsidian-light": "#0D0D0D",
+          cyan: "#00F5FF",
+          blue: "#4F7FFF",
         },
         glass: {
           white: "rgba(255, 255, 255, 0.1)",
           border: "rgba(255, 255, 255, 0.2)",
+          cyan: "rgba(0, 245, 255, 0.2)",
+          blue: "rgba(79, 127, 255, 0.2)",
         }
       },
       backdropBlur: {
@@ -37,7 +42,8 @@ module.exports = {
         'slide-up': 'slideUp 0.6s ease-out',
         'scale-in': 'scaleIn 0.4s ease-out',
         'float': 'float 3s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
+        'glow-cyan': 'glowCyan 2s ease-in-out infinite alternate',
+        'glow-blue': 'glowBlue 2s ease-in-out infinite alternate',
         'shimmer': 'shimmer 2.5s linear infinite',
         'scroll': 'scroll 20s linear infinite',
         'gradient': 'gradient 15s ease infinite',
@@ -59,7 +65,11 @@ module.exports = {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-10px)' },
         },
-        glow: {
+        glowCyan: {
+          '0%': { boxShadow: '0 0 5px rgba(0, 245, 255, 0.5)' },
+          '100%': { boxShadow: '0 0 20px rgba(0, 245, 255, 0.8)' },
+        },
+        glowBlue: {
           '0%': { boxShadow: '0 0 5px rgba(79, 127, 255, 0.5)' },
           '100%': { boxShadow: '0 0 20px rgba(79, 127, 255, 0.8)' },
         },
@@ -82,10 +92,12 @@ module.exports = {
         heading: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
-        'glass-lg': '0 25px 50px -12px rgba(31, 38, 135, 0.5)',
-        'glow': '0 0 20px rgba(79, 127, 255, 0.3)',
-        'glow-lg': '0 0 40px rgba(79, 127, 255, 0.4)',
+        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.8)',
+        'glass-lg': '0 25px 50px -12px rgba(0, 0, 0, 0.9)',
+        'glow-cyan': '0 0 20px rgba(0, 245, 255, 0.3)',
+        'glow-blue': '0 0 20px rgba(79, 127, 255, 0.3)',
+        'glow-cyan-lg': '0 0 40px rgba(0, 245, 255, 0.4)',
+        'glow-blue-lg': '0 0 40px rgba(79, 127, 255, 0.4)',
       },
     },
   },

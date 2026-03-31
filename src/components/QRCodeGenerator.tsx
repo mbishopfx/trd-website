@@ -143,7 +143,7 @@ export default function QRCodeGenerator() {
   return (
     <div className="space-y-6">
       {/* Generator Section */}
-      <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+      <div className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
         <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
           📱 QR Code Generator
         </h2>
@@ -154,8 +154,8 @@ export default function QRCodeGenerator() {
             onClick={() => setMode('dropdown')}
             className={`px-6 py-3 rounded-lg font-semibold transition-all ${
               mode === 'dropdown'
-                ? 'bg-blue-600 text-white'
-                : 'bg-white/5 text-gray-400 hover:bg-white/10'
+                ? 'bg-brand-blue text-white'
+                : 'bg-brand-obsidian/5 text-gray-400 hover:bg-brand-obsidian/10'
             }`}
           >
             📋 Select Page
@@ -164,8 +164,8 @@ export default function QRCodeGenerator() {
             onClick={() => setMode('manual')}
             className={`px-6 py-3 rounded-lg font-semibold transition-all ${
               mode === 'manual'
-                ? 'bg-blue-600 text-white'
-                : 'bg-white/5 text-gray-400 hover:bg-white/10'
+                ? 'bg-brand-blue text-white'
+                : 'bg-brand-obsidian/5 text-gray-400 hover:bg-brand-obsidian/10'
             }`}
           >
             ✏️ Manual Entry
@@ -182,7 +182,7 @@ export default function QRCodeGenerator() {
               <select
                 value={selectedPage}
                 onChange={(e) => setSelectedPage(e.target.value)}
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 bg-brand-obsidian/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-brand-blue"
               >
                 <option value="">Choose a page...</option>
                 <optgroup label="Pages">
@@ -216,7 +216,7 @@ export default function QRCodeGenerator() {
                 value={manualTitle}
                 onChange={(e) => setManualTitle(e.target.value)}
                 placeholder="e.g., Special Offer Page"
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 bg-brand-obsidian/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-blue"
               />
             </div>
             <div>
@@ -228,7 +228,7 @@ export default function QRCodeGenerator() {
                 value={manualUrl}
                 onChange={(e) => setManualUrl(e.target.value)}
                 placeholder="https://example.com/page"
-                className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 bg-brand-obsidian/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-brand-blue"
               />
             </div>
           </div>
@@ -238,21 +238,21 @@ export default function QRCodeGenerator() {
         <button
           onClick={handleGenerate}
           disabled={loading}
-          className="mt-6 w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+          className="mt-6 w-full px-6 py-4 bg-gradient-to-r from-brand-blue to-brand-cyan text-white rounded-lg font-semibold hover:from-brand-blue hover:to-brand-cyan transition-all shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? '⏳ Generating...' : '🔲 Generate QR Code'}
         </button>
       </div>
 
       {/* Generated QR Codes */}
-      <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+      <div className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold text-white flex items-center gap-2">
             📦 Generated QR Codes ({qrCodes.length})
           </h2>
           <button
             onClick={() => setShowGenerated(!showGenerated)}
-            className="text-blue-400 hover:text-blue-300 font-semibold"
+            className="text-brand-cyan hover:text-brand-cyan/80 font-semibold"
           >
             {showGenerated ? '▼ Hide' : '▶ Show'}
           </button>
@@ -269,9 +269,9 @@ export default function QRCodeGenerator() {
               qrCodes.map((qr) => (
                 <div
                   key={qr.id}
-                  className="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-blue-500 transition-all"
+                  className="bg-brand-obsidian/5 rounded-lg p-4 border border-white/10 hover:border-brand-blue transition-all"
                 >
-                  <div className="aspect-square w-full bg-white rounded-lg p-4 mb-4">
+                  <div className="aspect-square w-full bg-brand-obsidian rounded-lg p-4 mb-4">
                     <img
                       src={qr.qrCodeUrl}
                       alt={qr.title}
@@ -284,7 +284,7 @@ export default function QRCodeGenerator() {
                   <p className="text-sm text-gray-400 mb-2 truncate">
                     {qr.url}
                   </p>
-                  <span className="inline-block text-xs px-2 py-1 bg-blue-500/20 text-blue-400 rounded-full mb-3">
+                  <span className="inline-block text-xs px-2 py-1 bg-brand-blue/20 text-brand-cyan rounded-full mb-3">
                     {qr.pageType}
                   </span>
                   <div className="flex gap-2">

@@ -67,11 +67,11 @@ export default function ServiceAreasPage() {
         pageDescription="True Rank Digital provides expert SEO and digital marketing services across Central New Jersey including East Brunswick, Edison, New Brunswick, and surrounding areas."
       />
       
-      <div className="pt-20 min-h-screen bg-gradient-to-br from-brand-light via-white to-brand-light/50">
+      <div className="pt-20 min-h-screen bg-brand-obsidian">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-30">
+          <div className="absolute inset-0 opacity-10">
             <div 
               className="w-full h-full"
               style={{
@@ -86,13 +86,13 @@ export default function ServiceAreasPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-brand-dark mb-6 leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
                 <span className="text-brand-primary">Central New Jersey</span>
                 <br />
-                <span className="text-brand-dark">SEO Service Areas</span>
+                <span className="text-white">SEO Service Areas</span>
               </h1>
               
-              <p className="text-xl text-brand-dark/80 mb-12 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
                 Professional SEO and digital marketing services across Middlesex County and surrounding areas. 
                 Get your local business found on Google with our proven strategies.
               </p>
@@ -121,10 +121,10 @@ export default function ServiceAreasPage() {
                         <MapPin className="w-6 h-6 text-brand-primary" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-heading font-bold text-brand-dark">
+                        <h3 className="text-xl font-heading font-bold text-white">
                           {area.name}
                         </h3>
-                        <p className="text-sm text-brand-dark/60">{area.county}</p>
+                        <p className="text-sm text-gray-500">{area.county}</p>
                       </div>
                     </div>
                     {area.featured && (
@@ -134,7 +134,7 @@ export default function ServiceAreasPage() {
                     )}
                   </div>
                   
-                  <p className="text-brand-dark/80 mb-6 leading-relaxed">
+                  <p className="text-gray-400 mb-6 leading-relaxed">
                     {area.description}
                   </p>
                   
@@ -152,7 +152,7 @@ export default function ServiceAreasPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-brand-dark/5">
+        <section className="py-20 bg-brand-obsidian/5">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -160,11 +160,11 @@ export default function ServiceAreasPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-brand-dark mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 Ready to Dominate Your Local Market?
               </h2>
               
-              <p className="text-xl text-brand-dark/80 mb-8">
+              <p className="text-xl text-gray-400 mb-8">
                 Don't see your city listed? We serve the entire Central New Jersey region. 
                 Contact us to discuss how we can help your business get found on Google.
               </p>

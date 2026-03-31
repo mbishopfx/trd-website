@@ -21,7 +21,7 @@ export default function CheckboxField({ field, value, onChange, error }: Checkbo
             checked={value || false}
             onChange={(e) => onChange(e.target.checked)}
             required={field.required}
-            className="w-5 h-5 bg-white/5 border border-white/10 rounded text-blue-600 focus:ring-2 focus:ring-blue-500 cursor-pointer"
+            className="w-5 h-5 bg-brand-obsidian/5 border border-white/10 rounded text-blue-600 focus:ring-2 focus:ring-blue-500 cursor-pointer"
           />
         </div>
         <span className="text-sm text-gray-300 leading-tight">

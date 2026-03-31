@@ -19,7 +19,7 @@ interface TeamMember {
 }
 
 export default function FullTeamSection() {
-  const leadership: TeamMember[] = [
+  const leaders: TeamMember[] = [
     {
       name: "Jon J Korkowski",
       role: "CEO - Founder - President",
@@ -28,37 +28,10 @@ export default function FullTeamSection() {
       specialties: ["Business Strategy", "Client Relations", "SEO Leadership"],
       icon: <Award className="w-8 h-8" />,
       color: "from-brand-primary to-brand-secondary",
-      experience: "Leadership",
+      experience: "Executive Leadership",
       email: "info@truerankdigital.com",
       linkedin: "https://www.linkedin.com/in/jonjkorkowski/"
     },
-    {
-      name: "Jose Perdomo",
-      role: "EVP of Sales & Client Success",
-      department: "Leadership",
-      bio: "Executive Vice President leading sales execution and client success for sustained growth.",
-      specialties: ["Sales Leadership", "Client Success", "Revenue Growth"],
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-brand-accent to-purple-600",
-      experience: "Leadership",
-      email: "jose@truerankdigital.com",
-      linkedin: "https://www.linkedin.com/in/jose-perdomo-2ab14a22a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-    },
-    {
-      name: "Eric Malheiro",
-      role: "EVP of Sales Operations & Performance",
-      department: "Leadership",
-      bio: "Executive Vice President focused on sales operations, performance management, and strategic partnerships.",
-      specialties: ["Sales Operations", "Performance Management", "Strategic Partnerships", "Revenue Operations"],
-      icon: <Users className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500",
-      experience: "Leadership",
-      email: "eric@truerankdigital.com",
-      phone: "18482056899"
-    },
-  ];
-
-  const technicalTeam: TeamMember[] = [
     {
       name: "Jesse Mathews",
       role: "EVP of Business Development",
@@ -69,7 +42,31 @@ export default function FullTeamSection() {
       color: "from-brand-secondary to-brand-accent",
       experience: "Executive Leadership",
       email: "jesse@truerankdigital.com",
-      linkedin: "https://www.linkedin.com/in/JMathewsTRD"
+      linkedin: "https://www.linkedin.com/in/jmathewstrd/"
+    },
+    {
+      name: "Jose Perdomo",
+      role: "EVP of Sales & Client Success",
+      department: "Leadership",
+      bio: "Executive Vice President leading sales execution and client success for sustained growth.",
+      specialties: ["Sales Leadership", "Client Success", "Revenue Growth"],
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-brand-accent to-brand-blue",
+      experience: "Executive Leadership",
+      email: "jose@truerankdigital.com",
+      linkedin: "https://www.linkedin.com/in/jose-perdomo-2ab14a22a/"
+    },
+    {
+      name: "Eric Malheiro",
+      role: "EVP of Sales Operations & Performance",
+      department: "Leadership",
+      bio: "Executive Vice President focused on sales operations, performance management, and strategic partnerships.",
+      specialties: ["Sales Operations", "Performance Management", "Strategic Partnerships", "Revenue Operations"],
+      icon: <Users className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      experience: "Executive Leadership",
+      email: "eric@truerankdigital.com",
+      linkedin: "https://www.linkedin.com/in/eric-malheiro/"
     },
     {
       name: "Matt Bishop",
@@ -78,10 +75,10 @@ export default function FullTeamSection() {
       bio: "Chief Technology Officer responsible for architecture, development, and technical execution across client and internal platforms.",
       specialties: ["Technology Strategy", "Software Architecture", "Web Development"],
       icon: <Code className="w-8 h-8" />,
-      color: "from-blue-500 to-indigo-500",
-      experience: "Technology Leadership",
+      color: "from-blue-600 to-blue-400",
+      experience: "Executive Leadership",
       email: "bishop@truerankdigital.com",
-      linkedin: "https://www.linkedin.com/in/mattbishopTRD"
+      linkedin: "https://www.linkedin.com/in/mattbishoptrd/"
     }
   ];
 
@@ -93,7 +90,7 @@ export default function FullTeamSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay }}
         viewport={{ once: true }}
-        className="text-3xl font-heading font-bold text-brand-dark mb-8 text-center"
+        className="text-3xl font-heading font-bold text-white mb-8 text-center"
       >
         {title}
       </motion.h3>
@@ -115,21 +112,21 @@ export default function FullTeamSection() {
                   {member.icon}
                 </div>
               </div>
-              <h4 className="text-xl font-heading font-bold text-brand-dark mb-1">{member.name}</h4>
+              <h4 className="text-xl font-heading font-bold text-white mb-1">{member.name}</h4>
               <p className="text-brand-primary font-semibold mb-2">{member.role}</p>
-              <span className="inline-block px-3 py-1 bg-brand-light rounded-full text-brand-dark text-sm font-medium">
+              <span className="inline-block px-3 py-1 bg-brand-obsidian rounded-full text-white text-sm font-medium">
                 {member.experience}
               </span>
             </div>
 
             {/* Bio */}
-            <p className="text-brand-dark/70 text-sm leading-relaxed mb-4">
+            <p className="text-gray-400 text-sm leading-relaxed mb-4">
               {member.bio}
             </p>
 
             {/* Specialties */}
             <div className="mb-4">
-              <h5 className="text-brand-dark font-semibold text-sm mb-2">Specialties</h5>
+              <h5 className="text-white font-semibold text-sm mb-2">Specialties</h5>
               <div className="flex flex-wrap gap-1">
                 {member.specialties.map((specialty, i) => (
                   <span
@@ -179,7 +176,7 @@ export default function FullTeamSection() {
   );
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-brand-obsidian">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -190,19 +187,15 @@ export default function FullTeamSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
-            Our Complete Team
+          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
+            Our Leaders
           </h2>
-          <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-            Meet the True Rank Digital team. Each team member is committed to providing quality service and working toward your business success.
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            Meet the executive team leading True Rank Digital strategy, delivery, and growth.
           </p>
         </motion.div>
 
-        {/* Leadership Team */}
-        <TeamGrid title="Leadership Team" members={leadership} delay={0.2} />
-
-        {/* Technical Team */}
-        <TeamGrid title="Team Members" members={technicalTeam} delay={0.4} />
+        <TeamGrid title="Our Leaders" members={leaders} delay={0.2} />
 
       </div>
     </section>

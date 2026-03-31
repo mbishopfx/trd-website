@@ -143,7 +143,7 @@ export default function StaffPage() {
         }}
       />
 
-      <div className="pt-16">
+      <div className="bg-brand-obsidian min-h-screen pt-16">
         {/* Staff Hero Section */}
         <StaffHeroSection />
         

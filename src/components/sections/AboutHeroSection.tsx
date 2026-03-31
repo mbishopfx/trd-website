@@ -32,11 +32,11 @@ export default function AboutHeroSection() {
               <span className="text-brand-primary font-semibold text-sm">About Our Company</span>
             </div>
             
-            <h1 className="text-4xl lg:text-6xl font-heading font-bold text-brand-dark mb-6">
+            <h1 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-6">
               About True Rank Digital
             </h1>
             
-            <p className="text-xl lg:text-2xl text-brand-dark/70 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl lg:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               We are a team of digital marketing experts dedicated to helping businesses thrive in the online world 
               through enterprise-level solutions and proprietary technology.
             </p>
@@ -86,9 +86,9 @@ export default function AboutHeroSection() {
               <div className="text-brand-primary mb-3 flex justify-center">
                 {stat.icon}
               </div>
-              <div className="text-3xl font-bold text-brand-dark mb-2">{stat.value}</div>
-              <div className="text-brand-dark font-semibold mb-1">{stat.label}</div>
-              <div className="text-brand-dark/60 text-sm">{stat.description}</div>
+              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-white font-semibold mb-1">{stat.label}</div>
+              <div className="text-gray-500 text-sm">{stat.description}</div>
             </motion.div>
           ))}
         </motion.div>

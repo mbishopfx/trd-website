@@ -6,7 +6,7 @@ import { Brain, Cpu, Database, Network } from 'lucide-react';
 
 export default function AIOTechnologySection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-brand-light/20 via-white to-brand-light/20">
+    <section className="py-20 bg-brand-obsidian text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -17,10 +17,10 @@ export default function AIOTechnologySection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
             Custom Software Development
           </h2>
-          <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             While other agencies use generic tools, we build custom software solutions. Our development team creates proprietary technology that gives our clients advantages no one else can offer.
           </p>
         </motion.div>
@@ -50,13 +50,13 @@ export default function AIOTechnologySection() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
                     viewport={{ once: true }}
-                    className="text-center p-4 bg-white/50 rounded-xl"
+                    className="text-center p-4 bg-brand-obsidian/50 rounded-xl"
                   >
                     <div className="text-brand-primary mb-2 flex justify-center">
                       {tech.icon}
                     </div>
-                    <h4 className="font-bold text-brand-dark text-sm mb-1">{tech.title}</h4>
-                    <p className="text-brand-dark/60 text-xs">{tech.desc}</p>
+                    <h4 className="font-bold text-white text-sm mb-1">{tech.title}</h4>
+                    <p className="text-gray-500 text-xs">{tech.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -70,28 +70,28 @@ export default function AIOTechnologySection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-3xl font-heading font-bold text-brand-dark mb-6">
+            <h3 className="text-3xl font-heading font-bold text-white mb-6">
               We BUILD What Others Can&apos;t
             </h3>
             
             <div className="space-y-6">
               <div>
                 <h4 className="text-xl font-semibold text-brand-primary mb-3">Schema Markup Engineering</h4>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   We create custom structured data schemas for each business type, helping search engines understand your content better than any competitor. Our schema markup is hand-crafted for maximum ranking impact.
                 </p>
               </div>
               
               <div>
                 <h4 className="text-xl font-semibold text-brand-primary mb-3">LLM.txt Creation & Optimization</h4>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   We develop and optimize LLM.txt files specifically designed for AI search engines like ChatGPT, Claude, and Perplexity. This cutting-edge technique helps your content rank in AI-powered search results.
                 </p>
               </div>
               
               <div>
                 <h4 className="text-xl font-semibold text-brand-primary mb-3">Custom Problem Detection</h4>
-                <p className="text-brand-dark/70 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed">
                   Our proprietary software scans websites at the code level to find SEO issues other agencies completely miss. When we identify problems, we build custom solutions to fix them—not generic band-aids.
                 </p>
               </div>

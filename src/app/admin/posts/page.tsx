@@ -46,7 +46,7 @@ export default async function AdminPostsPage() {
           <GenerateButton />
         </div>
         {posts.length === 0 ? (
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-12 border border-white/20 text-center">
+          <div className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-12 border border-white/20 text-center">
             <div className="text-6xl mb-4">📝</div>
             <h2 className="text-2xl font-bold text-white mb-2">No Posts Yet</h2>
             <p className="text-gray-300 mb-6">
@@ -61,17 +61,17 @@ export default async function AdminPostsPage() {
         {/* Post Stats */}
         {posts.length > 0 && (
           <div className="mt-8 grid md:grid-cols-3 gap-6">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+            <div className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <h3 className="text-gray-300 text-sm font-medium mb-2">Total Posts</h3>
               <p className="text-3xl font-bold text-white">{posts.length}</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+            <div className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <h3 className="text-gray-300 text-sm font-medium mb-2">Total Views</h3>
               <p className="text-3xl font-bold text-white">
                 {posts.reduce((sum, post) => sum + (post.views || 0), 0)}
               </p>
             </div>
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+            <div className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <h3 className="text-gray-300 text-sm font-medium mb-2">Published to Sanity</h3>
               <p className="text-3xl font-bold text-white">
                 {posts.filter((post) => post.sanity_id).length}

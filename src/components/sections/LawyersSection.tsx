@@ -2,46 +2,46 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Scale, TrendingUp, Target, BarChart3, Shield, Zap, ArrowRight, Phone } from 'lucide-react';
+import { Building2, TrendingUp, Target, BarChart3, Shield, Zap, ArrowRight, Phone } from 'lucide-react';
 import Link from 'next/link';
 
 export default function LawyersSection() {
   const features = [
     {
-      icon: <Scale className="w-6 h-6" />,
-      title: 'Local Pack Domination',
-      description: 'Improve visibility in Google local results when potential clients search for "lawyer near me" or "attorney in [your city]". Our proprietary grid map ranking system tracks your position across multiple locations.',
+      icon: <Building2 className="w-6 h-6" />,
+      title: 'Local Pack Coverage',
+      description: 'Increase visibility in Google local results when buyers search for services and solutions near them. Our grid ranking system tracks your footprint across your target territory.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: 'Practice Area Targeting',
-      description: 'Dominate searches for your specific practice areas - personal injury, family law, criminal defense, DUI, bankruptcy, and more. We optimize for high-value keywords that drive qualified client inquiries.',
-      color: 'from-purple-500 to-pink-500'
+      title: 'Service & Intent Targeting',
+      description: 'Win searches for your core services, products, and high-intent buyer phrases. We optimize for the terms that generate qualified pipeline, calls, and form submissions.',
+      color: 'from-brand-cyan to-brand-blue'
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: 'Review Management & Generation',
-      description: 'Build and manage your Google reviews to establish trust and credibility. Positive reviews are critical for law firms - we help you generate authentic reviews while managing your online reputation.',
+      title: 'Review & Reputation Momentum',
+      description: 'Build trust with a structured review and reputation workflow. We help you generate more high-quality reviews and improve how your brand appears across local and AI-assisted search experiences.',
       color: 'from-green-500 to-teal-500'
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: 'Google Business Profile Optimization',
-      description: 'Fully optimized Google Business Profile with practice area descriptions, attorney credentials, office locations, hours, and posts. Essential for appearing in local search results and Google Maps.',
+      description: 'Fully optimized Google Business Profile with service descriptions, categories, location data, hours, and posts. Essential for appearing in Maps and local results.',
       color: 'from-orange-500 to-red-500'
     },
     {
       icon: <Zap className="w-6 h-6" />,
       title: 'Competitive Analysis',
-      description: 'Understand exactly where you rank vs. competitors. Our dashboard shows your position across different practice areas and locations, identifying opportunities to outrank competing firms.',
-      color: 'from-indigo-500 to-purple-500'
+      description: 'Understand exactly where you rank versus competitors. Our dashboard maps competitor gaps by query and location so you know where to push next.',
+      color: 'from-blue-600 to-blue-400'
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: 'Case Study Tracking',
-      description: 'Track which practice areas and locations generate the most client inquiries. Make data-driven decisions about where to focus your marketing efforts and which keywords drive the best leads.',
-      color: 'from-pink-500 to-rose-500'
+      title: 'Revenue Signal Tracking',
+      description: 'Track which services and locations generate the best inbound demand. Make data-driven decisions on where to focus spend and execution for measurable growth.',
+      color: 'from-brand-blue to-brand-cyan'
     }
   ];
 
@@ -61,7 +61,7 @@ export default function LawyersSection() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-[#0a0f17] via-[#121722] to-[#0a0f17] relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
       
@@ -74,20 +74,20 @@ export default function LawyersSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-100 rounded-full mb-6">
-            <Scale className="w-5 h-5 text-blue-600" />
-            <span className="text-blue-600 font-semibold text-sm">For Law Firms & Attorneys</span>
+          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-6">
+            <Building2 className="w-5 h-5 text-brand-cyan" />
+            <span className="text-brand-cyan font-semibold text-sm">Built for Growth-Focused Teams</span>
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
             <strong className="text-brand-primary">Google Business Optimization</strong> for <br />
-            <strong className="text-brand-primary">Law Firms & Attorneys</strong>
+            <strong className="text-brand-primary">Multi-Industry Brands</strong>
           </h2>
           
-          <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto leading-relaxed">
-            Dominate local search results and dominate the Google local pack when potential clients search for legal services. 
-            <strong> True Rank Digital</strong> specializes in helping law firms and attorneys improve visibility in Google local results
-            for high-value practice area keywords, driving more qualified client inquiries and cases.
+          <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+            Dominate search and AI discovery when buyers look for the services you provide.
+            <strong> True Rank Digital</strong> helps businesses improve visibility across modern search surfaces,
+            so you capture more qualified demand across your core markets.
           </p>
         </motion.div>
 
@@ -120,12 +120,12 @@ export default function LawyersSection() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-heading font-bold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors duration-300">
+                  <h3 className="text-xl font-heading font-bold text-white mb-4 group-hover:text-brand-primary transition-colors duration-300">
                     {feature.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-brand-dark/70 leading-relaxed">
+                  <p className="text-gray-400 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -134,7 +134,7 @@ export default function LawyersSection() {
           ))}
         </motion.div>
 
-        {/* Why Lawyers Choose Us */}
+        {/* Why Teams Choose Us */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -142,54 +142,54 @@ export default function LawyersSection() {
           viewport={{ once: true }}
           className="glass-card p-8 lg:p-12 mb-16 relative overflow-hidden"
         >
-          <div className="absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
           
           <div className="relative grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
-                Why <strong className="text-brand-primary">Law Firms</strong> Choose True Rank Digital
+              <h3 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
+                Why <strong className="text-brand-primary">Growth Teams</strong> Choose True Rank Digital
               </h3>
-              <p className="text-lg text-brand-dark/70 leading-relaxed mb-6">
-                Legal marketing is highly competitive, and appearing in Google's local pack can make or break your 
-                firm's ability to attract new clients. Unlike traditional SEO agencies, we focus specifically on <strong>local pack domination</strong> 
-                and <strong>Google Business Profile optimization</strong> - the two most critical factors for law firm client acquisition.
+              <p className="text-lg text-gray-400 leading-relaxed mb-6">
+                Visibility is crowded, and showing up consistently in search and AI experiences can make or break customer acquisition.
+                Unlike generic agencies, we focus on <strong>entity authority</strong>, <strong>technical discoverability</strong>, and <strong>conversion-ready presence</strong>
+                tied to your business outcomes.
               </p>
-              <p className="text-lg text-brand-dark/70 leading-relaxed mb-6">
-                Our proprietary grid map ranking system shows you exactly where you rank across different practice areas and locations, 
-                giving you actionable insights into which keywords drive the best results. We understand the legal industry's unique needs 
-                - from bar association compliance to practice area specialization - and optimize accordingly.
+              <p className="text-lg text-gray-400 leading-relaxed mb-6">
+                Our proprietary grid map ranking system shows exactly where you rank across services and locations,
+                giving you actionable insight into the terms that create the best inbound opportunities.
+                Whether you are single-location, multi-location, or regional, we optimize for how buyers actually search.
               </p>
-              <ul className="space-y-4 text-brand-dark/70">
+              <ul className="space-y-4 text-gray-400">
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-3 mt-1">✓</span>
-                  <span className="text-lg">Track rankings for multiple practice areas (personal injury, family law, DUI, etc.)</span>
+                  <span className="text-lg">Track rankings across multiple services, categories, and locations</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-3 mt-1">✓</span>
-                  <span className="text-lg">Optimize for high-value keywords that drive case inquiries</span>
+                  <span className="text-lg">Prioritize high-intent queries that drive pipeline and revenue</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-3 mt-1">✓</span>
-                  <span className="text-lg">Multi-location optimization for firms with multiple offices</span>
+                  <span className="text-lg">Scale multi-location optimization for brands with multiple offices or service zones</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-3 mt-1">✓</span>
-                  <span className="text-lg">Review generation and reputation management for trust building</span>
+                  <span className="text-lg">Strengthen trust with review generation and reputation workflows</span>
                 </li>
               </ul>
             </div>
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-6 border border-blue-100">
+              <div className="bg-gradient-to-br from-slate-700/65 to-zinc-800/80 rounded-2xl p-6 border border-white/10">
                 <div className="text-xl font-bold text-brand-primary mb-2">Visibility</div>
-                <div className="text-brand-dark/70">Local pack placement can drive high-intent calls and consultation requests.</div>
+                <div className="text-gray-300">Discovery coverage across search, maps, and AI answers drives more qualified opportunities.</div>
               </div>
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100">
+              <div className="bg-gradient-to-br from-zinc-700/65 to-slate-800/80 rounded-2xl p-6 border border-white/10">
                 <div className="text-xl font-bold text-brand-primary mb-2">Intent</div>
-                <div className="text-brand-dark/70">Local searches often signal urgency, especially for practice-area keywords.</div>
+                <div className="text-gray-300">High-intent queries signal urgency and buying readiness across industries and service types.</div>
               </div>
-              <div className="bg-gradient-to-br from-pink-50 to-orange-50 rounded-2xl p-6 border border-pink-100">
+              <div className="bg-gradient-to-br from-slate-800/80 to-zinc-700/65 rounded-2xl p-6 border border-white/10">
                 <div className="text-xl font-bold text-brand-primary mb-2">Coverage</div>
-                <div className="text-brand-dark/70">We map visibility by location to strengthen coverage across your service area.</div>
+                <div className="text-gray-300">We map visibility by market and topic to strengthen discoverability everywhere prospects search.</div>
               </div>
             </div>
           </div>
@@ -205,11 +205,11 @@ export default function LawyersSection() {
         >
           <div className="inline-flex flex-col sm:flex-row items-center gap-4">
             <Link
-              href="/free-audit"
+              href="/contact"
               className="inline-flex items-center space-x-2 px-8 py-4 bg-brand-primary text-white font-semibold text-lg rounded-full hover:bg-brand-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl group"
             >
               <TrendingUp className="w-5 h-5" />
-              <span>Get Free Law Firm Audit</span>
+              <span>Get Free Visibility Audit</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
@@ -220,7 +220,7 @@ export default function LawyersSection() {
               <span>(732) 475-0139</span>
             </a>
           </div>
-          <p className="text-brand-dark/60 mt-4 text-sm">
+          <p className="text-gray-500 mt-4 text-sm">
             See exactly where you rank vs. competitors • No obligations • Fast turnaround
           </p>
         </motion.div>

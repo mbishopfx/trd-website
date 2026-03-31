@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   keywords: 'PPC campaigns, Google Ads management, pay per click, paid advertising, lead generation, True Rank Digital, advertising ROI, SEM',
   openGraph: {
     title: 'PPC Campaigns | True Rank Digital',
-    description: 'Targeted Google Ads campaigns focused on quality leads, efficient spend, and clear reporting.',
+    description: 'Performance-focused paid campaigns designed for qualified leads, efficient spend, and clear reporting.',
     url: 'https://truerankdigital.com/services/ppc-campaigns',
     type: 'website',
   },
@@ -208,14 +208,14 @@ export default function PPCCampaignsPage() {
         category="service"
       />
       
-      <article className="pt-16 min-h-screen bg-gradient-to-b from-yellow-50 to-white">
+      <article className="pt-16 min-h-screen bg-brand-obsidian text-white">
         {/* Breadcrumb Navigation */}
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <ol className="flex items-center space-x-2 text-sm">
-            <li><Link href="/" className="text-brand-dark/60 hover:text-brand-primary transition-colors">Home</Link></li>
-            <li className="text-brand-dark/40">/</li>
-            <li><Link href="/services" className="text-brand-dark/60 hover:text-brand-primary transition-colors">Services</Link></li>
-            <li className="text-brand-dark/40">/</li>
+            <li><Link href="/" className="text-gray-500 hover:text-brand-primary transition-colors">Home</Link></li>
+            <li className="text-gray-600">/</li>
+            <li><Link href="/services" className="text-gray-500 hover:text-brand-primary transition-colors">Services</Link></li>
+            <li className="text-gray-600">/</li>
             <li className="text-brand-primary font-medium">PPC Campaigns</li>
           </ol>
         </nav>
@@ -225,29 +225,29 @@ export default function PPCCampaignsPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-yellow-100 rounded-full mb-6">
-                  <TrendingUp className="w-5 h-5 text-yellow-600" />
-                  <span className="text-yellow-600 font-semibold text-sm">PPC Advertising</span>
+                <div className="inline-flex items-center space-x-2 px-4 py-2 bg-yellow-500/20 rounded-full mb-6">
+                  <TrendingUp className="w-5 h-5 text-yellow-400" />
+                  <span className="text-yellow-400 font-semibold text-sm">PPC Advertising</span>
                 </div>
                 
-                <h1 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+                <h1 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
                   <strong className="text-brand-primary">PPC Campaigns</strong> That Deliver Immediate Results
                 </h1>
                 
-                <p className="text-xl text-brand-dark/70 mb-8">
-                  Drive immediate results with <strong>True Rank Digital&apos;s</strong> <strong>PPC campaigns</strong>. We create targeted <strong>Google Ads</strong> that generate <strong>quality leads</strong> and maximize your <strong>advertising ROI</strong>.
+                <p className="text-xl text-gray-400 mb-8">
+                  Drive faster pipeline growth with <strong>True Rank Digital&apos;s</strong> <strong>PPC campaigns</strong>. We build and optimize paid search campaigns to generate <strong>qualified leads</strong> and improve <strong>return on ad spend</strong>.
                 </p>
 
                 <div className="flex flex-wrap gap-4 mb-8">
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>Transparent reporting</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>Active optimization</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-brand-dark/70">
+                  <div className="flex items-center space-x-2 text-gray-400">
                     <CheckCircle className="w-5 h-5 text-green-500" />
                     <span>Lead-quality focus</span>
                   </div>
@@ -263,7 +263,7 @@ export default function PPCCampaignsPage() {
                   </Link>
                   <a
                     href="tel:+17324750139"
-                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-yellow-600 text-yellow-700 font-semibold text-lg rounded-full hover:bg-yellow-50 transition-colors duration-300"
+                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-yellow-600 text-yellow-400 font-semibold text-lg rounded-full hover:bg-yellow-500/10 transition-colors duration-300"
                   >
                     <Phone className="w-5 h-5" />
                     <span>(732) 475-0139</span>
@@ -275,9 +275,9 @@ export default function PPCCampaignsPage() {
               <div className="grid grid-cols-2 gap-6">
                 {results.map((result, index) => (
                   <div key={index} className="glass-card p-6 text-center">
-                    <div className="text-3xl font-bold text-yellow-600 mb-2">{result.metric}</div>
-                    <div className="text-lg font-semibold text-brand-dark mb-1">{result.label}</div>
-                    <div className="text-sm text-brand-dark/60">{result.description}</div>
+                    <div className="text-3xl font-bold text-yellow-400 mb-2">{result.metric}</div>
+                    <div className="text-lg font-semibold text-white mb-1">{result.label}</div>
+                    <div className="text-sm text-gray-500">{result.description}</div>
                   </div>
                 ))}
               </div>
@@ -286,32 +286,32 @@ export default function PPCCampaignsPage() {
         </section>
 
         {/* Why PPC Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Why <strong className="text-brand-primary">PPC Advertising</strong> Is Essential
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 PPC delivers what organic marketing can&apos;t: immediate visibility and predictable lead flow.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-yellow-600 mb-4">Intent</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Capture Demand</h3>
-                <p className="text-brand-dark/70">Show up when customers are actively searching for what you offer and are ready to take action.</p>
+                <div className="text-4xl font-bold text-yellow-400 mb-4">Intent</div>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">Capture Demand</h3>
+                <p className="text-gray-400">Show up when customers are actively searching for what you offer and are ready to take action.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-yellow-600 mb-4">Measurable</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">See What Works</h3>
-                <p className="text-brand-dark/70">Track spend, clicks, and conversions so you can make smarter decisions and improve efficiency over time.</p>
+                <div className="text-4xl font-bold text-yellow-400 mb-4">Measurable</div>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">See What Works</h3>
+                <p className="text-gray-400">Track spend, clicks, and conversions so you can make smarter decisions and improve efficiency over time.</p>
               </div>
               <div className="glass-card p-8">
-                <div className="text-4xl font-bold text-yellow-600 mb-4">Targeted</div>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">Reach the Right People</h3>
-                <p className="text-brand-dark/70">Use location, keywords, and audience signals to focus your budget on the customers most likely to convert.</p>
+                <div className="text-4xl font-bold text-yellow-400 mb-4">Targeted</div>
+                <h3 className="text-xl font-heading font-bold text-white mb-3">Reach the Right People</h3>
+                <p className="text-gray-400">Use location, keywords, and audience signals to focus your budget on the customers most likely to convert.</p>
               </div>
             </div>
           </div>
@@ -321,10 +321,10 @@ export default function PPCCampaignsPage() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Our <strong className="text-brand-primary">PPC</strong> Services
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Comprehensive paid advertising management across all major platforms.
               </p>
             </div>
@@ -335,11 +335,11 @@ export default function PPCCampaignsPage() {
                   <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mb-4 text-white">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-heading font-bold text-brand-dark mb-2">{service.title}</h3>
-                  <p className="text-brand-dark/70 mb-4">{service.description}</p>
+                  <h3 className="text-xl font-heading font-bold text-white mb-2">{service.title}</h3>
+                  <p className="text-gray-400 mb-4">{service.description}</p>
                   <div className="space-y-2">
                     {service.details.map((detail, idx) => (
-                      <div key={idx} className="flex items-center space-x-2 text-sm text-brand-dark/70">
+                      <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                         <span>{detail}</span>
                       </div>
@@ -352,20 +352,20 @@ export default function PPCCampaignsPage() {
         </section>
 
         {/* Platforms Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Platforms We <strong className="text-brand-primary">Manage</strong>
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Expert management across all major advertising platforms.
               </p>
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
               {platforms.map((platform, index) => (
-                <div key={index} className="px-6 py-3 bg-yellow-100 rounded-full text-yellow-700 font-medium">
+                <div key={index} className="px-6 py-3 bg-yellow-500/20 rounded-full text-yellow-400 font-medium">
                   {platform}
                 </div>
               ))}
@@ -377,10 +377,10 @@ export default function PPCCampaignsPage() {
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Our <strong className="text-brand-primary">PPC Campaign</strong> Process
               </h2>
-              <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 A systematic approach to building and optimizing high-performing campaigns.
               </p>
             </div>
@@ -393,11 +393,11 @@ export default function PPCCampaignsPage() {
                       {item.step}
                     </div>
                     <div className="flex-grow">
-                      <h3 className="text-2xl font-heading font-bold text-brand-dark mb-3">{item.title}</h3>
-                      <p className="text-brand-dark/70 mb-4">{item.description}</p>
+                      <h3 className="text-2xl font-heading font-bold text-white mb-3">{item.title}</h3>
+                      <p className="text-gray-400 mb-4">{item.description}</p>
                       <div className="grid sm:grid-cols-2 gap-3">
                         {item.details.map((detail, idx) => (
-                          <div key={idx} className="flex items-center space-x-2 text-brand-dark/70">
+                          <div key={idx} className="flex items-center space-x-2 text-gray-400 flex-shrink-0">
                             <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                             <span>{detail}</span>
                           </div>
@@ -412,66 +412,66 @@ export default function PPCCampaignsPage() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-heading font-bold text-brand-dark mb-6">
+                <h2 className="text-3xl font-heading font-bold text-white mb-6">
                   Why Choose <strong className="text-brand-primary">True Rank Digital</strong> for PPC
                 </h2>
                 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Award className="w-6 h-6 text-yellow-600" />
+                    <div className="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Award className="w-6 h-6 text-yellow-400" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Proven Track Record</h3>
-                      <p className="text-brand-dark/70">Experienced campaign management across diverse industries, with a focus on lead quality and efficient spend.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Proven Track Record</h3>
+                      <p className="text-gray-400">Experienced campaign management across diverse industries, with a focus on lead quality and efficient spend.</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Settings className="w-6 h-6 text-yellow-600" />
+                    <div className="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Settings className="w-6 h-6 text-yellow-400" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Active Management</h3>
-                      <p className="text-brand-dark/70">We actively manage campaigns, not set-and-forget. Continuous optimization drives better results.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Active Management</h3>
+                      <p className="text-gray-400">We actively manage campaigns, not set-and-forget. Continuous optimization drives better results.</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Shield className="w-6 h-6 text-yellow-600" />
+                    <div className="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Shield className="w-6 h-6 text-yellow-400" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Transparent Reporting</h3>
-                      <p className="text-brand-dark/70">Real-time dashboard access with clear reporting on spend, results, and ROI. No hidden fees.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Transparent Reporting</h3>
+                      <p className="text-gray-400">Real-time dashboard access with clear reporting on spend, results, and ROI. No hidden fees.</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Zap className="w-6 h-6 text-yellow-600" />
+                    <div className="w-12 h-12 bg-yellow-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Zap className="w-6 h-6 text-yellow-400" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-heading font-bold text-brand-dark mb-2">Integrated Strategy</h3>
-                      <p className="text-brand-dark/70">PPC integrated with SEO, GBP, and website optimization for maximum impact across all channels.</p>
+                      <h3 className="text-lg font-heading font-bold text-white mb-2">Integrated Strategy</h3>
+                      <p className="text-gray-400">PPC integrated with SEO, GBP, and website optimization for maximum impact across all channels.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="glass-card p-8">
-                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-6 text-center">Industries We Serve</h3>
+                <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center">Industries We Serve</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     'Home Services', 'Healthcare', 'Legal', 'Real Estate',
                     'E-commerce', 'Professional Services', 'Restaurants', 'Auto Dealers',
                     'Financial Services', 'Education', 'SaaS', 'Local Services'
                   ].map((industry, index) => (
-                    <div key={index} className="flex items-center space-x-2 text-brand-dark/70">
+                    <div key={index} className="flex items-center space-x-2 text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-500" />
                       <span>{industry}</span>
                     </div>
@@ -486,10 +486,10 @@ export default function PPCCampaignsPage() {
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Frequently Asked Questions
               </h2>
-              <p className="text-xl text-brand-dark/70">
+              <p className="text-xl text-gray-400">
                 Common questions about our PPC management services.
               </p>
             </div>
@@ -497,8 +497,8 @@ export default function PPCCampaignsPage() {
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="glass-card p-6">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-3">{faq.question}</h3>
-                  <p className="text-brand-dark/70">{faq.answer}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-400">{faq.answer}</p>
                 </div>
               ))}
             </div>
@@ -506,10 +506,10 @@ export default function PPCCampaignsPage() {
         </section>
 
         {/* Related Services */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-brand-obsidian/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Related <strong className="text-brand-primary">Services</strong>
               </h2>
             </div>
@@ -517,8 +517,8 @@ export default function PPCCampaignsPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedServices.map((service, index) => (
                 <Link key={index} href={service.href} className="glass-card p-6 hover:scale-105 transition-transform duration-300 group">
-                  <h3 className="text-lg font-heading font-bold text-brand-dark mb-2 group-hover:text-brand-primary transition-colors">{service.name}</h3>
-                  <p className="text-brand-dark/70 text-sm mb-4">{service.description}</p>
+                  <h3 className="text-lg font-heading font-bold text-white mb-2 group-hover:text-brand-primary transition-colors">{service.name}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                   <div className="flex items-center text-brand-primary font-medium text-sm">
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -536,10 +536,10 @@ export default function PPCCampaignsPage() {
               <div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <MousePointerClick className="w-10 h-10 text-white" />
               </div>
-              <h2 className="text-3xl font-heading font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl font-heading font-bold text-white mb-4">
                 Ready for <strong className="text-brand-primary">Immediate Results</strong>?
               </h2>
-              <p className="text-xl text-brand-dark/70 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
                 Get a free PPC audit and discover how we can generate more leads and maximize your advertising ROI.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -552,7 +552,7 @@ export default function PPCCampaignsPage() {
                 </Link>
                 <a
                   href="tel:+17324750139"
-                  className="inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-yellow-600 text-yellow-700 font-semibold text-lg rounded-full hover:bg-yellow-50 transition-colors duration-300"
+                  className="inline-flex items-center justify-center space-x-2 px-8 py-4 border-2 border-yellow-600 text-white font-semibold text-lg rounded-full hover:bg-yellow-700 transition-colors duration-300"
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (732) 475-0139</span>

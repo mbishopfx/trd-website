@@ -13,7 +13,7 @@ export default function MissionSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-brand-obsidian">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -30,11 +30,11 @@ export default function MissionSection() {
               <span className="text-brand-primary font-semibold text-sm">Our Mission</span>
             </div>
             
-            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
               Our Mission
             </h2>
             
-            <div className="space-y-4 text-brand-dark/70 text-lg leading-relaxed mb-8">
+            <div className="space-y-4 text-gray-400 text-lg leading-relaxed mb-8">
               <p>
                 At True Rank Digital, our mission is to empower businesses with innovative digital solutions 
                 that drive real growth. We combine industry expertise with cutting-edge technology to deliver 
@@ -48,7 +48,7 @@ export default function MissionSection() {
 
             {/* Why Choose Us */}
             <div>
-              <h3 className="text-2xl font-heading font-semibold text-brand-dark mb-6">
+              <h3 className="text-2xl font-heading font-semibold text-white mb-6">
                 Why Choose Us?
               </h3>
               <div className="space-y-4">
@@ -62,7 +62,7 @@ export default function MissionSection() {
                     className="flex items-center space-x-3"
                   >
                     <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
-                    <span className="text-brand-dark/80 font-medium">{item}</span>
+                    <span className="text-gray-300 font-medium">{item}</span>
                   </motion.div>
                 ))}
               </div>
@@ -87,7 +87,7 @@ export default function MissionSection() {
                   <Target className="w-12 h-12 text-white" />
                 </div>
                 
-                <blockquote className="text-xl font-medium text-brand-dark/80 italic leading-relaxed">
+                <blockquote className="text-xl font-medium text-gray-300 italic leading-relaxed">
                   "Our mission is to empower businesses with innovative digital solutions that drive real growth."
                 </blockquote>
                 
@@ -95,11 +95,11 @@ export default function MissionSection() {
                   <div className="grid grid-cols-2 gap-6 text-center">
                     <div>
                       <div className="text-2xl font-bold text-brand-primary">Quality</div>
-                      <div className="text-sm text-brand-dark/60">Service Focus</div>
+                      <div className="text-sm text-gray-500">Service Focus</div>
                     </div>
                     <div>
                       <div className="text-2xl font-bold text-brand-primary">Professional</div>
-                      <div className="text-sm text-brand-dark/60">Approach</div>
+                      <div className="text-sm text-gray-500">Approach</div>
                     </div>
                   </div>
                 </div>

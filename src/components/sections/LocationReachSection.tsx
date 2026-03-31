@@ -6,7 +6,7 @@ import { MapPin, Globe, Building2, Users, ArrowRight } from 'lucide-react';
 
 export default function LocationReachSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-brand-obsidian">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -23,11 +23,11 @@ export default function LocationReachSection() {
               <span className="text-brand-secondary font-semibold text-sm">Our Location & Reach</span>
             </div>
             
-            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
               Our Location & Reach
             </h2>
             
-            <div className="space-y-4 text-brand-dark/70 text-lg leading-relaxed mb-8">
+            <div className="space-y-4 text-gray-400 text-lg leading-relaxed mb-8">
               <p>
                 Based in the heart of the New Jersey/New York metropolitan area, True Rank Digital serves as your 
                 premier digital marketing partner. Our strategic location in one of the world's most dynamic business 
@@ -79,35 +79,35 @@ export default function LocationReachSection() {
                   <div className="w-20 h-20 bg-gradient-to-br from-brand-secondary to-brand-primary rounded-full flex items-center justify-center mx-auto mb-4">
                     <MapPin className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-2xl font-heading font-bold text-brand-dark mb-2">
+                  <h3 className="text-2xl font-heading font-bold text-white mb-2">
                     East Brunswick, NJ
                   </h3>
-                  <p className="text-brand-dark/60">
+                  <p className="text-gray-500">
                     Heart of NY/NJ Metro Area
                   </p>
                 </div>
 
                 {/* Service Areas */}
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center p-4 bg-white/50 rounded-xl">
+                  <div className="text-center p-4 bg-brand-obsidian/50 rounded-xl">
                     <Building2 className="w-6 h-6 text-brand-primary mx-auto mb-2" />
-                    <div className="text-sm font-semibold text-brand-dark">Local</div>
-                    <div className="text-xs text-brand-dark/60">NJ/NY Metro</div>
+                    <div className="text-sm font-semibold text-white">Local</div>
+                    <div className="text-xs text-gray-500">NJ/NY Metro</div>
                   </div>
-                  <div className="text-center p-4 bg-white/50 rounded-xl">
+                  <div className="text-center p-4 bg-brand-obsidian/50 rounded-xl">
                     <Users className="w-6 h-6 text-brand-secondary mx-auto mb-2" />
-                    <div className="text-sm font-semibold text-brand-dark">National</div>
-                    <div className="text-xs text-brand-dark/60">Across USA</div>
+                    <div className="text-sm font-semibold text-white">National</div>
+                    <div className="text-xs text-gray-500">Across USA</div>
                   </div>
-                  <div className="text-center p-4 bg-white/50 rounded-xl">
+                  <div className="text-center p-4 bg-brand-obsidian/50 rounded-xl">
                     <Globe className="w-6 h-6 text-brand-accent mx-auto mb-2" />
-                    <div className="text-sm font-semibold text-brand-dark">Global</div>
-                    <div className="text-xs text-brand-dark/60">Worldwide</div>
+                    <div className="text-sm font-semibold text-white">Global</div>
+                    <div className="text-xs text-gray-500">Worldwide</div>
                   </div>
-                  <div className="text-center p-4 bg-white/50 rounded-xl">
+                  <div className="text-center p-4 bg-brand-obsidian/50 rounded-xl">
                     <MapPin className="w-6 h-6 text-green-500 mx-auto mb-2" />
-                    <div className="text-sm font-semibold text-brand-dark">Remote</div>
-                    <div className="text-xs text-brand-dark/60">Flexible support</div>
+                    <div className="text-sm font-semibold text-white">Remote</div>
+                    <div className="text-xs text-gray-500">Flexible support</div>
                   </div>
                 </div>
 
@@ -116,15 +116,15 @@ export default function LocationReachSection() {
                   <div className="grid grid-cols-3 gap-4 text-center">
                     <div>
                       <div className="text-xl font-bold text-brand-primary">Nationwide</div>
-                      <div className="text-xs text-brand-dark/60">Coverage</div>
+                      <div className="text-xs text-gray-500">Coverage</div>
                     </div>
                     <div>
                       <div className="text-xl font-bold text-brand-secondary">International</div>
-                      <div className="text-xs text-brand-dark/60">Support</div>
+                      <div className="text-xs text-gray-500">Support</div>
                     </div>
                     <div>
                       <div className="text-xl font-bold text-brand-accent">Remote</div>
-                      <div className="text-xs text-brand-dark/60">Friendly</div>
+                      <div className="text-xs text-gray-500">Friendly</div>
                     </div>
                   </div>
                 </div>

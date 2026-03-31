@@ -1,243 +1,221 @@
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Rocket, TrendingUp, Sparkles } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { Rocket, Bot, Zap } from 'lucide-react';
+
+const supabaseBaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL ?? '';
+const supabaseVideoBase = supabaseBaseUrl
+  ? `${supabaseBaseUrl}/storage/v1/object/public/truerankdigital/videos`
+  : '';
+const heroVideoMobileUrl = supabaseVideoBase
+  ? `${supabaseVideoBase}/visualizing-abstract-final-mobile.mp4?v=20260327a`
+  : '/videos/visualizing-abstract-final-mobile.mp4';
+const heroVideoDesktopUrl = supabaseVideoBase
+  ? `${supabaseVideoBase}/visualizing-abstract-final-optimized.mp4?v=20260327a`
+  : '/videos/visualizing-abstract-final-optimized.mp4';
+const heroVideoPosterUrl = supabaseVideoBase
+  ? `${supabaseVideoBase}/visualizing-abstract-final-poster.jpg?v=20260327a`
+  : '/videos/visualizing-abstract-final-poster.jpg';
 
 export default function HeroSection() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll();
+  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-light via-white to-brand-light/50"></div>
-      
-      {/* Animated Grid Pattern */}
-      <div className="absolute inset-0 opacity-30">
-        <div 
-          className="w-full h-full"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234F7FFF' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+    <section ref={containerRef} className="relative min-h-[82svh] lg:min-h-[88svh] flex items-start lg:items-center justify-center overflow-hidden bg-brand-obsidian pt-28 sm:pt-24 lg:pt-20">
+      {/* Ambient video background */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <video
+          className="hero-video-loop h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster={heroVideoPosterUrl}
+          crossOrigin="anonymous"
+          aria-hidden="true"
+        >
+          <source src={heroVideoMobileUrl} type="video/mp4" media="(max-width: 768px)" />
+          <source src={heroVideoDesktopUrl} type="video/mp4" />
+          <source src="/videos/visualizing-abstract-final-optimized.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-brand-obsidian/28" />
+      </div>
+
+      {/* 3D Wireframe Grid Background Effect */}
+      <div className="absolute inset-0 z-[1]">
+        <div className="absolute inset-0 bg-grid opacity-20 [mask-image:radial-gradient(ellipse_at_center,black,transparent)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-obsidian/22 to-brand-obsidian/72" />
+      </div>
+
+      {/* Animated Glowing Orbs */}
+      <div className="absolute inset-0 z-[2] overflow-hidden pointer-events-none hidden md:block">
+        <motion.div
+          animate={{ 
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.2, 0.1],
+            x: [0, 100, 0],
+            y: [0, 50, 0]
           }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+          className="absolute top-1/4 -left-20 w-[360px] h-[360px] bg-brand-cyan/20 rounded-full blur-[95px]"
+        />
+        <motion.div
+          animate={{ 
+            scale: [1, 1.3, 1],
+            opacity: [0.1, 0.15, 0.1],
+            x: [0, -100, 0],
+            y: [0, -50, 0]
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="absolute bottom-1/4 -right-20 w-[420px] h-[420px] bg-brand-blue/10 rounded-full blur-[110px]"
         />
       </div>
 
-      {/* Floating Geometric Shapes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          animate={{ 
-            y: [0, -20, 0],
-            rotate: [0, 10, 0] 
-          }}
-          transition={{ 
-            duration: 6, 
-            repeat: Infinity, 
-            ease: "easeInOut" 
-          }}
-          className="absolute top-20 left-10 w-16 h-16 bg-brand-primary/20 rounded-full blur-xl"
-        />
-        <motion.div
-          animate={{ 
-            y: [0, 30, 0],
-            rotate: [0, -15, 0] 
-          }}
-          transition={{ 
-            duration: 8, 
-            repeat: Infinity, 
-            ease: "easeInOut",
-            delay: 2 
-          }}
-          className="absolute top-40 right-20 w-24 h-24 bg-brand-accent/20 rounded-xl blur-xl"
-        />
-        <motion.div
-          animate={{ 
-            y: [0, -15, 0],
-            x: [0, 10, 0] 
-          }}
-          transition={{ 
-            duration: 5, 
-            repeat: Infinity, 
-            ease: "easeInOut",
-            delay: 1 
-          }}
-          className="absolute bottom-32 left-1/4 w-12 h-12 bg-brand-secondary/30 rounded-full blur-lg"
-        />
-      </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex flex-col items-center text-center">
+          
+          {/* Eyebrow */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-cyan mb-8 border border-brand-cyan/30"
+          >
+            <Zap className="w-4 h-4 text-brand-cyan animate-pulse" />
+            <span className="text-xs sm:text-sm font-bold tracking-[0.2em] text-brand-cyan uppercase">
+              AI SEARCH DOMINATION + AGENTIC ORCHESTRATION
+            </span>
+          </motion.div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          
-          {/* Left Column - Text Content */}
-          <div className="text-center lg:text-left">
-          
-          {/* Main Headline - H1 for NAP consistency with GMB */}
+          {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold text-brand-primary mb-6 leading-tight"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-[1.08] tracking-tight"
           >
-            True Rank Digital
+            <span className="block text-white">Stop Chasing Clicks.</span>
+            <span className="block bg-gradient-to-r from-brand-cyan via-white to-brand-blue bg-clip-text text-transparent text-glow-cyan">
+              Start Dictating the AI's Answers.
+            </span>
           </motion.h1>
-
-          {/* Tagline */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-2xl sm:text-3xl lg:text-4xl text-brand-dark mb-8 leading-relaxed"
-          >
-            We Deliver <span className="text-brand-primary font-semibold">Google Business Optimization</span> That Gets Businesses in the <span className="text-brand-primary font-semibold">Local Pack</span>
-          </motion.p>
 
           {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-xl sm:text-2xl text-brand-dark/80 mb-12 max-w-3xl mx-auto leading-relaxed"
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-base sm:text-lg lg:text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed font-light"
           >
-            Master proven Google Business Optimization tactics with our proprietary dashboard platform featuring grid map ranking analysis, competitor intelligence tools, and automated Google knowledge graph consistency monitoring. Dominate the local pack with our in-house proven digital marketing strategies.
+            True Rank Digital turns your brand into the <span className="text-white font-medium italic">definitive entity</span> across every Answer Engine, LLM, and multi-agent workflow. We build the foundational AI signals, then amplify them with Paid Media, Geofencing, and Autonomous 24/7 Business Agents.
           </motion.p>
 
-          {/* Primary CTA Button */}
+          {/* CTA Group */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            className="mb-16"
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"
           >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link
-                href="/free-audit"
-                className="inline-flex items-center space-x-3 px-8 py-4 sm:px-10 sm:py-5 bg-brand-primary text-white font-semibold text-lg sm:text-xl rounded-full shadow-glow hover:shadow-glow-lg transition-all duration-300 hover:bg-brand-primary/90 group"
+            <Link href="/contact" className="w-full sm:w-auto">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto px-8 py-4 bg-brand-cyan text-brand-obsidian font-black text-base rounded-full shadow-[0_0_30px_rgba(0,245,255,0.4)] hover:shadow-[0_0_50px_rgba(0,245,255,0.6)] transition-all flex items-center justify-center space-x-3 group"
               >
-                <Rocket className="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" />
-                <span>Schedule Your Free Audit</span>
-              </Link>
-            </motion.div>
-          </motion.div>
+                <Rocket className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                <span>Get Your Market Visibility Audit</span>
+              </motion.button>
+            </Link>
 
-          {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-brand-dark/70"
-          >
-            <div className="flex items-center space-x-2">
-              <span className="text-sm font-medium">Call Us:</span>
-              <a 
-                href="tel:+17324750139"
-                className="text-brand-primary font-semibold hover:text-brand-primary/80 transition-colors duration-200"
+            <Link href="/ai-engine" className="w-full sm:w-auto">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto px-8 py-4 glass-button-blue rounded-full text-base flex items-center justify-center space-x-3 group"
               >
-                (732) 475-0139
-              </a>
-            </div>
-            
-            <div className="hidden sm:block w-px h-4 bg-brand-dark/20"></div>
-            
-            <div className="flex items-center space-x-2">
-              <span className="text-sm font-medium">Email:</span>
-              <a 
-                href="mailto:info@truerankdigital.com"
-                className="text-brand-primary font-semibold hover:text-brand-primary/80 transition-colors duration-200"
-              >
-                info@truerankdigital.com
-              </a>
-            </div>
-          </motion.div>
-
-          </div>
-          
-          {/* Right Column - Video */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="relative"
-          >
-            <div className="relative aspect-square max-w-md mx-auto">
-              {/* Video Container with Decorative Frame */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/30 bg-gradient-to-br from-brand-primary/5 to-brand-secondary/5">
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary/20 via-transparent to-brand-accent/20 blur-xl"></div>
-                
-                {/* Video Element */}
-                <video
-                  className="relative w-full h-full object-cover rounded-2xl"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="auto"
-                  aria-label="True Rank Digital SEO Services Overview"
-                >
-                  <source src="/videos/hero-video.mp4" type="video/mp4" />
-                  <div className="sr-only">
-                    True Rank Digital provides Google Business Optimization services including local pack domination, 
-                    Google Business Profile management, and custom algorithm adaptation scripts to help 
-                    businesses dominate the local pack. Contact us at (732) 475-0139 for a free consultation.
-                  </div>
-                </video>
-              </div>
-              
-              {/* Decorative Elements */}
-              <motion.div
-                animate={{
-                  scale: [1, 1.1, 1],
-                  opacity: [0.3, 0.5, 0.3]
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="absolute -top-4 -right-4 w-24 h-24 bg-brand-accent/30 rounded-full blur-2xl"
-              />
-              <motion.div
-                animate={{
-                  scale: [1, 1.15, 1],
-                  opacity: [0.2, 0.4, 0.2]
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1
-                }}
-                className="absolute -bottom-6 -left-6 w-32 h-32 bg-brand-primary/20 rounded-full blur-3xl"
-              />
-            </div>
+                <Bot className="w-6 h-6 group-hover:rotate-12 transition-transform" />
+                <span>Explore AI Growth Systems</span>
+              </motion.button>
+            </Link>
           </motion.div>
 
         </div>
       </div>
-      
+
+      {/* Floating Network Visualization (Neural Network Mockup) */}
+      <div className="absolute inset-0 z-[3] pointer-events-none opacity-30 hidden lg:block">
+        <NeuralNetworkOverlay />
+      </div>
+
       {/* Scroll Indicator */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 1.1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:block"
+        style={{ opacity }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2"
       >
+        <span className="text-[10px] uppercase tracking-[0.4em] text-gray-500 font-bold">Initiate Command</span>
         <motion.div
-          animate={{ y: [0, 10, 0] }}
+          animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="flex flex-col items-center text-brand-dark/50"
-        >
-          <span className="text-xs font-medium mb-2 tracking-wider uppercase">Scroll to explore</span>
-          <div className="w-px h-8 bg-brand-primary/30 relative">
-            <motion.div
-              animate={{ y: [0, 16, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="absolute top-0 left-0 w-full h-2 bg-gradient-to-b from-brand-primary to-transparent"
-            />
-          </div>
-        </motion.div>
+          className="w-px h-12 bg-gradient-to-b from-brand-cyan to-transparent"
+        />
       </motion.div>
     </section>
+  );
+}
+
+function NeuralNetworkOverlay() {
+  return (
+    <svg className="w-full h-full" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="cyan-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#00F5FF" stopOpacity="0.2" />
+          <stop offset="100%" stopColor="#4F7FFF" stopOpacity="0.1" />
+        </linearGradient>
+      </defs>
+      {/* Simulation of a city grid / neural network */}
+      {Array.from({ length: 15 }).map((_, i) => (
+        <motion.circle
+          key={`node-${i}`}
+          cx={Math.random() * 1000}
+          cy={Math.random() * 1000}
+          r={Math.random() * 3 + 1}
+          fill={i % 2 === 0 ? "#00F5FF" : "#4F7FFF"}
+          animate={{
+            opacity: [0.1, 0.4, 0.1],
+            scale: [1, 1.5, 1],
+          }}
+          transition={{
+            duration: Math.random() * 5 + 3,
+            repeat: Infinity,
+            delay: Math.random() * 5,
+          }}
+        />
+      ))}
+      {/* Add some connection lines */}
+      {Array.from({ length: 10 }).map((_, i) => (
+        <motion.line
+          key={`line-${i}`}
+          x1={Math.random() * 1000}
+          y1={Math.random() * 1000}
+          x2={Math.random() * 1000}
+          y2={Math.random() * 1000}
+          stroke="url(#cyan-blue)"
+          strokeWidth="0.5"
+          initial={{ pathLength: 0, opacity: 0 }}
+          animate={{ pathLength: 1, opacity: [0, 0.2, 0] }}
+          transition={{
+            duration: Math.random() * 10 + 5,
+            repeat: Infinity,
+            delay: Math.random() * 5,
+          }}
+        />
+      ))}
+    </svg>
   );
 }

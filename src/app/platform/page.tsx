@@ -36,10 +36,10 @@ export default function PlatformPage() {
         'Multi-point precision analysis across a broad set of coordinates',
         'Heat map visualization of competitive strengths by location', 
         'Real-time competitive intelligence monitoring',
-        'Predictive market modeling for opportunity zones'
+        'Opportunity zone mapping for local expansion'
       ],
       icon: <BarChart3 className="w-8 h-8" />,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-brand-obsidian0 to-cyan-500',
       imageUrl: '/platform/gridmapdemo.png',
       videoUrl: null,
       href: '/platform/grid-ranking',
@@ -57,7 +57,7 @@ export default function PlatformPage() {
         'Algorithm-resistant authority building strategies'
       ],
       icon: <Target className="w-8 h-8" />,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-brand-obsidian0 to-blue-500',
       imageUrl: '/platform/eeat.png',
       videoUrl: '/platform/eeatvideo.mp4',
       href: '/platform/eeat-analysis',
@@ -100,21 +100,21 @@ export default function PlatformPage() {
       badge: 'Semantic SEO'
     },
     {
-      id: 'overwatch',
-      name: 'Digital Overwatch System',
+      id: 'monitoring',
+      name: 'Digital Monitoring System',
       tagline: '24/7 Intelligent Protection',
-      description: 'Comprehensive digital asset protection with predictive intelligence and automated threat response.',
+      description: 'Comprehensive digital asset monitoring with automated alerts and rapid response workflows.',
       features: [
         'Comprehensive asset surveillance and monitoring',
-        'Predictive intelligence engine for threat forecasting',
+        'Anomaly detection for ranking and traffic volatility',
         'Automated response systems and self-healing protocols',
         'Strategic intelligence reporting and business insights'
       ],
       icon: <Shield className="w-8 h-8" />,
-      color: 'from-indigo-500 to-purple-500',
+      color: 'from-brand-obsidian0 to-blue-500',
       imageUrl: '/platform/verticlescroll.jpeg',
       videoUrl: null,
-      href: '/platform/overwatch',
+      href: '/contact',
       badge: 'Security'
     },
     {
@@ -125,11 +125,11 @@ export default function PlatformPage() {
       features: [
         'Autonomous competitor discovery and threat identification',
         'Strategic forensic analysis of competitor methodologies',
-        'Predictive competitive modeling and market forecasting',
+        'Competitive gap analysis and market trend tracking',
         'Market gap identification and opportunity spotting'
       ],
       icon: <Users className="w-8 h-8" />,
-      color: 'from-rose-500 to-pink-500',
+      color: 'from-brand-obsidian0 to-blue-500',
       imageUrl: '/platform/maprankdash.png',
       videoUrl: null,
       href: '/platform/competitor-analysis',
@@ -138,12 +138,12 @@ export default function PlatformPage() {
     {
       id: 'lead-generation',
       name: 'Lead Generation Intelligence',
-      tagline: 'Predict Markets Before They Emerge',
+      tagline: 'Capture Demand as It Forms',
       description: 'Revolutionary lead generation that identifies businesses about to need your services.',
       features: [
-        'Market prediction algorithms and opportunity identification',
+        'Market signal analysis and opportunity identification',
         'Intent signal aggregation across multiple channels',
-        'Business lifecycle analysis and predictive timing',
+        'Business lifecycle analysis and timing intelligence',
         'Organic opportunity discovery through proprietary methods'
       ],
       icon: <TrendingUp className="w-8 h-8" />,
@@ -151,7 +151,7 @@ export default function PlatformPage() {
       imageUrl: '/platform/gridmapsnap.png',
       videoUrl: null,
       href: '/platform/lead-generation',
-      badge: 'Predictive'
+      badge: 'Insights'
     }
   ];
 
@@ -208,7 +208,7 @@ export default function PlatformPage() {
               repeat: Infinity, 
               ease: "easeInOut" 
             }}
-            className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-2xl blur-xl"
+            className="absolute top-20 left-10 w-20 h-20 bg-brand-obsidian/10 rounded-2xl blur-xl"
           />
           <motion.div
             animate={{ 
@@ -222,7 +222,7 @@ export default function PlatformPage() {
               ease: "easeInOut",
               delay: 3
             }}
-            className="absolute top-40 right-20 w-32 h-32 bg-white/5 rounded-full blur-2xl"
+            className="absolute top-40 right-20 w-32 h-32 bg-brand-obsidian/5 rounded-full blur-2xl"
           />
           <motion.div
             animate={{ 
@@ -236,7 +236,7 @@ export default function PlatformPage() {
               ease: "easeInOut",
               delay: 1.5
             }}
-            className="absolute bottom-32 left-1/4 w-16 h-16 bg-white/20 rounded-xl blur-lg"
+            className="absolute bottom-32 left-1/4 w-16 h-16 bg-brand-obsidian/20 rounded-xl blur-lg"
           />
         </div>
 
@@ -247,7 +247,7 @@ export default function PlatformPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 rounded-full mb-6">
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-brand-obsidian/20 rounded-full mb-6">
               <Zap className="w-5 h-5 text-white" />
               <span className="text-white font-semibold text-sm">Exclusive Client Platform</span>
             </div>
@@ -268,13 +268,13 @@ export default function PlatformPage() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="text-center p-4 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20"
+                  className="text-center p-4 bg-brand-obsidian/10 rounded-xl backdrop-blur-sm border border-white/20"
                 >
                   <div className="text-white mb-2 flex justify-center">
                     {stat.icon}
                   </div>
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-white/80 text-sm font-medium">{stat.label}</div>
+                  <div className="text-gray-300 text-sm font-medium">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -287,20 +287,20 @@ export default function PlatformPage() {
             >
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
-                  href="/free-audit"
-                  className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-brand-primary font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-xl"
+                  href="/contact"
+                  className="inline-flex items-center space-x-2 px-8 py-4 bg-brand-obsidian text-brand-primary font-semibold rounded-full hover:bg-brand-obsidian-light transition-all duration-300 shadow-xl"
                 >
                   <Rocket className="w-5 h-5" />
-                  <span>Access Platform Demo</span>
+                  <span>Get Platform Audit</span>
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-brand-primary transition-all duration-300"
+                  className="inline-flex items-center space-x-2 px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-brand-obsidian hover:text-brand-primary transition-all duration-300"
                 >
                   <MessageSquare className="w-5 h-5" />
-                  <span>Schedule Platform Tour</span>
+                  <span>Talk to an Audit Specialist</span>
                 </Link>
               </motion.div>
             </motion.div>
@@ -309,7 +309,7 @@ export default function PlatformPage() {
       </section>
 
       {/* Platform Overview */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-brand-obsidian">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -318,23 +318,23 @@ export default function PlatformPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
               Revolutionary AI-Powered Intelligence Platform
             </h2>
-            <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Beyond traditional digital marketing tools—our integrated ecosystem creates synergistic advantages where each component amplifies the effectiveness of others, resulting in exponential rather than incremental improvements. This ever-expanding platform continuously evolves with new features and capabilities.
             </p>
           </motion.div>
 
-          <div className="glass-card p-8 lg:p-12 bg-gradient-to-br from-brand-light/30 to-white border-l-4 border-brand-primary mb-16">
+          <div className="glass-card p-8 lg:p-12 bg-gradient-to-br from-brand-light/30 to-brand-obsidian border-l-4 border-brand-primary mb-16">
             <div className="flex items-start space-x-4">
               <Sparkles className="w-8 h-8 text-brand-accent mt-1 flex-shrink-0" />
               <div>
-                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-4">
+                <h3 className="text-2xl font-heading font-bold text-white mb-4">
                   Ever-Expanding Innovation Framework
                 </h3>
-                <p className="text-brand-dark/70 leading-relaxed mb-4">
-                  Our platform represents a living, breathing technology ecosystem that continuously evolves. Unlike static tools, our solution building frameworks adapt and expand with emerging technologies, algorithm changes, and market evolution. New intelligent features, predictive capabilities, and automation tools are regularly integrated to maintain competitive advantages.
+                <p className="text-gray-400 leading-relaxed mb-4">
+                  Our platform represents a living, breathing technology ecosystem that continuously evolves. Unlike static tools, our solution building frameworks adapt and expand with emerging technologies, algorithm changes, and market evolution. New intelligence and automation capabilities are regularly integrated to keep your visibility systems current and effective.
                 </p>
                 <div className="flex items-center space-x-2 text-brand-primary">
                   <Clock className="w-5 h-5" />
@@ -347,7 +347,7 @@ export default function PlatformPage() {
       </section>
 
       {/* Platform Tools Grid */}
-      <section className="py-20 bg-brand-light/20">
+      <section className="py-20 bg-brand-obsidian/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -356,11 +356,11 @@ export default function PlatformPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
               Advanced Intelligence Systems
             </h2>
-            <p className="text-xl text-brand-dark/70 max-w-3xl mx-auto">
-              Seven sophisticated AI-powered platforms working in perfect harmony to create unprecedented competitive advantages.
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Seven integrated systems working together to strengthen visibility, authority signals, and qualified lead flow.
             </p>
           </motion.div>
 
@@ -394,7 +394,7 @@ export default function PlatformPage() {
                         <div className={`inline-block px-3 py-1 bg-gradient-to-r ${tool.color} text-white text-sm font-semibold rounded-full mb-2`}>
                           {tool.badge}
                         </div>
-                        <h3 className="text-2xl lg:text-3xl font-heading font-bold text-brand-dark group-hover:text-brand-primary transition-colors duration-300">
+                        <h3 className="text-2xl lg:text-3xl font-heading font-bold text-white group-hover:text-brand-primary transition-colors duration-300">
                           {tool.name}
                         </h3>
                         <p className="text-brand-primary font-semibold text-lg">
@@ -404,18 +404,18 @@ export default function PlatformPage() {
                     </div>
 
                     {/* Tool Description */}
-                    <p className="text-brand-dark/70 leading-relaxed mb-6 text-lg">
+                    <p className="text-gray-400 leading-relaxed mb-6 text-lg">
                       {tool.description}
                     </p>
 
                     {/* Key Features */}
                     <div className="mb-8">
-                      <h4 className="font-semibold text-brand-dark mb-4">Key Capabilities:</h4>
+                      <h4 className="font-semibold text-white mb-4">Key Capabilities:</h4>
                       <ul className="space-y-3">
                         {tool.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-start space-x-3">
                             <ChevronRight className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
-                            <span className="text-brand-dark/80 text-sm">{feature}</span>
+                            <span className="text-gray-300 text-sm">{feature}</span>
                           </li>
                         ))}
                       </ul>
@@ -468,7 +468,7 @@ export default function PlatformPage() {
                           
                           {/* Play Indicator */}
                           <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm rounded-full p-2">
-                            <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
+                            <div className="w-3 h-3 bg-brand-obsidian rounded-full animate-pulse"></div>
                           </div>
                         </div>
                       ) : (
@@ -489,7 +489,7 @@ export default function PlatformPage() {
                           <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/20 via-transparent to-brand-accent/10 opacity-0 group-hover/image:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                           
                           {/* Perspective Grid Effect */}
-                          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-white/10 opacity-0 group-hover/image:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-brand-obsidian/5 to-brand-obsidian/10 opacity-0 group-hover/image:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                         </div>
                       )}
                       
@@ -511,7 +511,7 @@ export default function PlatformPage() {
       </section>
 
       {/* Platform Integration Benefits */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-brand-obsidian">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -520,10 +520,10 @@ export default function PlatformPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-6">
+            <h2 className="text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
               Synergistic Platform Integration
             </h2>
-            <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto">
               The true power emerges through unified intelligence systems where each component amplifies others, creating exponential improvements and sustainable competitive advantages.
             </p>
           </motion.div>
@@ -549,8 +549,8 @@ export default function PlatformPage() {
                   },
                   {
                     icon: <Brain className="w-6 h-6" />,
-                    title: 'Predictive Intelligence',
-                    description: 'Combined AI systems predict market changes, algorithm updates, and competitive threats before they impact your business.'
+                    title: 'Strategic Intelligence',
+                    description: 'Connected systems surface market changes, algorithm shifts, and competitive threats early so your team can respond faster.'
                   },
                   {
                     icon: <Rocket className="w-6 h-6" />,
@@ -570,10 +570,10 @@ export default function PlatformPage() {
                       {benefit.icon}
                     </div>
                     <div>
-                      <h3 className="text-xl font-heading font-bold text-brand-dark mb-2">
+                      <h3 className="text-xl font-heading font-bold text-white mb-2">
                         {benefit.title}
                       </h3>
-                      <p className="text-brand-dark/70 leading-relaxed">
+                      <p className="text-gray-400 leading-relaxed">
                         {benefit.description}
                       </p>
                     </div>
@@ -592,7 +592,7 @@ export default function PlatformPage() {
               {/* Platform Integration Visualization */}
               <div className="relative">
                 <div className="glass-card p-8 bg-gradient-to-br from-brand-primary/10 to-brand-accent/10">
-                  <h3 className="text-2xl font-heading font-bold text-brand-dark mb-6 text-center">
+                  <h3 className="text-2xl font-heading font-bold text-white mb-6 text-center">
                     Platform Ecosystem
                   </h3>
                   
@@ -607,13 +607,13 @@ export default function PlatformPage() {
                   {/* Orbiting Elements */}
                   <div className="relative">
                     {[
-                      { icon: <BarChart3 className="w-4 h-4" />, color: 'from-blue-500 to-cyan-500', delay: 0 },
-                      { icon: <Target className="w-4 h-4" />, color: 'from-purple-500 to-pink-500', delay: 1 },
+                      { icon: <BarChart3 className="w-4 h-4" />, color: 'from-brand-obsidian0 to-cyan-500', delay: 0 },
+                      { icon: <Target className="w-4 h-4" />, color: 'from-brand-obsidian0 to-blue-500', delay: 1 },
                       { icon: <Search className="w-4 h-4" />, color: 'from-green-500 to-teal-500', delay: 2 },
                       { icon: <Network className="w-4 h-4" />, color: 'from-orange-500 to-red-500', delay: 3 },
-                      { icon: <Shield className="w-4 h-4" />, color: 'from-indigo-500 to-purple-500', delay: 4 },
-                      { icon: <MessageSquare className="w-4 h-4" />, color: 'from-violet-500 to-purple-500', delay: 5 },
-                      { icon: <Users className="w-4 h-4" />, color: 'from-rose-500 to-pink-500', delay: 6 },
+                      { icon: <Shield className="w-4 h-4" />, color: 'from-brand-obsidian0 to-blue-500', delay: 4 },
+                      { icon: <MessageSquare className="w-4 h-4" />, color: 'from-brand-obsidian0 to-blue-500', delay: 5 },
+                      { icon: <Users className="w-4 h-4" />, color: 'from-brand-obsidian0 to-blue-500', delay: 6 },
                       { icon: <TrendingUp className="w-4 h-4" />, color: 'from-emerald-500 to-teal-500', delay: 7 }
                     ].map((item, index) => (
                       <motion.div
@@ -657,7 +657,7 @@ export default function PlatformPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl lg:text-5xl font-heading font-bold mb-6">
-              Ready to Access the Platform?
+              Ready to See Your Growth Gaps Clearly?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
               Transform your business from market participant to market leader. Experience the power of unified intelligence systems that create sustainable competitive advantages through ever-expanding technological innovation.
@@ -665,20 +665,20 @@ export default function PlatformPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
-                  href="/free-audit"
-                  className="inline-flex items-center space-x-2 px-10 py-5 bg-white text-brand-primary font-semibold text-lg rounded-full hover:bg-gray-100 transition-all duration-300 shadow-xl"
+                  href="/contact"
+                  className="inline-flex items-center space-x-2 px-10 py-5 bg-brand-obsidian text-brand-primary font-semibold text-lg rounded-full hover:bg-brand-obsidian-light transition-all duration-300 shadow-xl"
                 >
                   <Rocket className="w-6 h-6" />
-                  <span>Schedule Platform Demo</span>
+                  <span>Book Your Platform Audit</span>
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center space-x-2 px-10 py-5 border-2 border-white text-white font-semibold text-lg rounded-full hover:bg-white hover:text-brand-primary transition-all duration-300"
+                  className="inline-flex items-center space-x-2 px-10 py-5 border-2 border-white text-white font-semibold text-lg rounded-full hover:bg-brand-obsidian hover:text-brand-primary transition-all duration-300"
                 >
                   <MessageSquare className="w-6 h-6" />
-                  <span>Contact Platform Specialists</span>
+                  <span>Contact the Audit Team</span>
                 </Link>
               </motion.div>
             </div>

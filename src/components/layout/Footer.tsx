@@ -15,10 +15,17 @@ import {
   Youtube,
   Twitter,
   ExternalLink,
-  TrendingUp
+  TrendingUp,
+  Zap,
+  Bot,
+  Network,
+  Target,
+  Shield,
+  Activity,
+  Globe,
+  Cpu
 } from 'lucide-react';
 
-// Import TikTok and Pinterest icons (using external icons or custom SVGs)
 const TikTokIcon = () => (
   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
     <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
@@ -44,71 +51,47 @@ interface FooterSection {
 
 const footerSections: FooterSection[] = [
   {
-    title: 'Services',
+    title: 'Core Services',
     links: [
-      { name: 'Local SEO & Google Maps', href: '/services/local-seo' },
-      { name: 'Google Business Profile', href: '/services/google-business-profile' },
-      { name: 'AI-Enhanced SEO', href: '/services/ai-seo' },
-      { name: 'Website Development', href: '/services/website-development' },
+      { name: 'AI Search Optimization', href: '/services/ai-seo' },
+      { name: 'Digital Marketing & Advertising', href: '/services/digital-marketing' },
+      { name: 'Google Business Profile Optimization', href: '/services/google-business-profile' },
+      { name: 'Local SEO', href: '/services/local-seo' },
+      { name: 'PPC Campaigns', href: '/services/ppc-campaigns' },
+      { name: 'SEO Tactics', href: '/services/seo-tactics' },
+      { name: 'Website Engineering', href: '/services/website-development' },
+      { name: 'Social Media Management', href: '/services/social-media' },
+      { name: 'CRM With AI Chat', href: '/services/crm-ai-chat' },
+      { name: 'Business Consulting', href: '/services/business-consulting' },
     ]
   },
   {
-    title: 'Service Areas',
+    title: 'Platform',
     links: [
-      { name: 'East Brunswick, NJ', href: '/locations/east-brunswick' },
-      { name: 'Edison, NJ', href: '/locations/edison' },
-      { name: 'New Brunswick, NJ', href: '/locations/new-brunswick' },
-      { name: 'North Brunswick, NJ', href: '/locations/north-brunswick' },
-      { name: 'Sayreville, NJ', href: '/locations/sayreville' },
-      { name: 'South River, NJ', href: '/locations/south-river' },
-      { name: 'View All Areas', href: '/locations' }
+      { name: 'Platform Audit', href: '/contact' },
+      { name: 'Entity Gap Analysis', href: '/contact' },
+      { name: 'Schema Gap Analysis', href: '/contact' },
+      { name: 'Technical SEO Review', href: '/services/seo-tactics' },
+      { name: 'AI Search Readiness Review', href: '/services/ai-seo' }
     ]
   },
   {
     title: 'Company',
     links: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/staff' },
-      { name: 'Learn About AIO', href: '/learn-aio' },
-      { name: 'SEO Platform', href: '/platform' },
-      { name: 'Contact Us', href: '/contact' }
+      { name: 'About the Vision', href: '/about' },
+      { name: 'Platform Audit', href: '/contact' },
+      { name: 'Agentic Ecosystem', href: '/ai-engine' },
+      { name: 'Command Center', href: '/contact' }
     ]
   },
   {
-    title: 'Platform Tools',
+    title: 'Knowledge Base',
     links: [
-      { name: 'Grid Ranking System', href: '/platform/grid-ranking' },
-      { name: 'E-E-A-T Analysis', href: '/platform/eeat-analysis' },
-      { name: 'Indexability Analysis', href: '/platform/indexability' },
-      { name: 'Knowledge Graph', href: '/platform/knowledge-graph' },
-      { name: 'Overwatch System', href: '/platform/overwatch' }
-    ]
-  },
-  {
-    title: 'Resources',
-    links: [
-      { name: 'Free Custom Playbook', href: '/free-audit' },
-      { name: 'AI Technology', href: '/learn-aio' },
-      { name: 'Referral Program', href: '/referral' }
-    ]
-  },
-  {
-    title: 'Education',
-    links: [
-      { name: 'AI Search Preparation', href: '/education/ai-search-preparation' },
-      { name: 'Algorithm Adaptation', href: '/education/algorithm-adaptation' },
-      { name: 'Custom vs Cookie-Cutter', href: '/education/custom-vs-cookie-cutter' },
-      { name: 'Future-Proofing SEO', href: '/education/future-proofing-seo' },
-      { name: 'All Education Guides', href: '/education' }
-    ]
-  },
-  {
-    title: 'Legal',
-    links: [
-      { name: 'Privacy Policy', href: '/privacy-policy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-      { name: 'GDPR Compliance', href: '/gdpr' }
+      { name: 'LLM.txt Mastery', href: '/education/ai-search-preparation' },
+      { name: 'Answer Engine Optimization', href: '/education/algorithm-adaptation' },
+      { name: 'Agentic Commerce', href: '/education/future-proofing-seo' },
+      { name: 'Zero-Click Conversion', href: '/education/custom-vs-cookie-cutter' },
+      { name: 'View All Protocols', href: '/education' }
     ]
   }
 ];
@@ -118,19 +101,19 @@ const socialLinks = [
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/company/true-rank-digital',
     icon: <Linkedin className="w-5 h-5" />,
-    color: 'hover:text-blue-600'
+    color: 'hover:text-brand-cyan'
   },
   {
     name: 'Facebook', 
     href: 'https://www.facebook.com/truerankdigital',
     icon: <Facebook className="w-5 h-5" />,
-    color: 'hover:text-blue-600'
+    color: 'hover:text-brand-cyan'
   },
   {
     name: 'Instagram',
     href: 'https://www.instagram.com/truerankdigital_/?hl=en', 
     icon: <Instagram className="w-5 h-5" />,
-    color: 'hover:text-pink-500'
+    color: 'hover:text-brand-blue'
   },
   {
     name: 'YouTube',
@@ -142,13 +125,7 @@ const socialLinks = [
     name: 'TikTok',
     href: 'https://www.tiktok.com/@truerankdigital_',
     icon: <TikTokIcon />,
-    color: 'hover:text-black'
-  },
-  {
-    name: 'Pinterest',
-    href: 'https://www.pinterest.com/truerankdigital',
-    icon: <PinterestIcon />,
-    color: 'hover:text-red-600'
+    color: 'hover:text-brand-cyan'
   }
 ];
 
@@ -156,24 +133,20 @@ const contactInfo = {
   address: '288 Summerhill Rd, suite 3, East Brunswick, NJ 08816',
   phone: '(732) 475-0139',
   email: 'info@truerankdigital.com',
-  hours: '24/7 Available'
+  hours: '24/7 Agentic Monitoring'
 };
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-brand-dark text-white overflow-hidden">
+    <footer className="relative bg-brand-obsidian text-white overflow-hidden border-t border-white/5">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-      </div>
+      <div className="absolute inset-0 bg-grid opacity-5" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 xl:grid-cols-8 gap-8">
+        <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-12 lg:gap-8">
           
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -184,61 +157,53 @@ export default function Footer() {
               viewport={{ once: true }}
             >
               {/* Logo */}
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 flex items-center justify-center">
+              <div className="flex items-center space-x-3 mb-8">
+                <div className="w-12 h-12 flex items-center justify-center relative">
+                  <div className="absolute inset-0 bg-brand-cyan/20 blur-lg rounded-full" />
                   <Image
                     src="/images/logos/trd-logo1.avif"
                     alt="True Rank Digital"
                     width={48}
                     height={48}
-                    className="w-full h-full object-contain"
+                    className="relative z-10 w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-heading font-bold">True Rank Digital</h3>
+                <h3 className="text-xl font-heading font-black tracking-tighter uppercase italic">
+                  True Rank <span className="text-brand-cyan">Digital</span>
+                </h3>
               </div>
               
-              <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                Professional digital marketing services featuring proprietary SEO dashboard platform with grid map ranking analysis, competitor intelligence monitoring, and algorithm-proof optimization strategies. Master proven Google tactics with our in-house technology solutions and advanced educational resources.
+              <p className="text-gray-400 text-sm leading-relaxed mb-8 font-light max-w-sm">
+                The definitive authority in <span className="text-white font-medium">AI Search Visibility & Performance Marketing</span>. We engineer entity signals and growth systems that turn visibility into qualified demand.
               </p>
 
               {/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 flex-shrink-0 text-brand-primary" />
-                  <span className="text-sm">{contactInfo.address}</span>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-3 text-gray-400">
+                  <MapPin className="w-4 h-4 flex-shrink-0 text-brand-cyan mt-1" />
+                  <span className="text-sm font-medium leading-relaxed">{contactInfo.address}</span>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 flex-shrink-0 text-brand-primary" />
-                  <a
-                    href="https://www.google.com/maps?cid=4662204553635539796"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm hover:text-brand-primary transition-colors duration-200 underline"
-                  >
-                    View on Google Maps
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-4 h-4 flex-shrink-0 text-brand-primary" />
+                <div className="flex items-center space-x-3 text-gray-400">
+                  <Phone className="w-4 h-4 flex-shrink-0 text-brand-cyan" />
                   <a
                     href={`tel:${contactInfo.phone}`}
-                    className="text-sm hover:text-brand-primary transition-colors duration-200"
+                    className="text-sm font-bold text-white hover:text-brand-cyan transition-colors"
                   >
                     {contactInfo.phone}
                   </a>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-4 h-4 flex-shrink-0 text-brand-primary" />
+                <div className="flex items-center space-x-3 text-gray-400">
+                  <Mail className="w-4 h-4 flex-shrink-0 text-brand-cyan" />
                   <a 
                     href={`mailto:${contactInfo.email}`}
-                    className="text-sm hover:text-brand-primary transition-colors duration-200"
+                    className="text-sm font-bold text-white hover:text-brand-cyan transition-colors"
                   >
                     {contactInfo.email}
                   </a>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Clock className="w-4 h-4 flex-shrink-0 text-brand-primary" />
-                  <span className="text-sm">{contactInfo.hours}</span>
+                <div className="flex items-center space-x-3 text-gray-400">
+                  <Clock className="w-4 h-4 flex-shrink-0 text-brand-cyan" />
+                  <span className="text-xs font-black uppercase tracking-widest">{contactInfo.hours}</span>
                 </div>
               </div>
             </motion.div>
@@ -252,22 +217,20 @@ export default function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="space-y-4"
+              className="space-y-6"
             >
-              <h4 className="text-lg font-semibold font-heading text-white">
+              <h4 className="text-xs font-black uppercase tracking-[0.3em] text-gray-500">
                 {section.title}
               </h4>
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-300 hover:text-brand-primary transition-colors duration-200 text-sm flex items-center space-x-1 group"
+                      className="text-gray-400 hover:text-brand-cyan transition-all duration-200 text-sm font-medium group flex items-center"
                     >
+                      <div className="w-0 group-hover:w-2 h-px bg-brand-cyan mr-0 group-hover:mr-2 transition-all duration-300" />
                       <span>{link.name}</span>
-                      {link.external && (
-                        <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                      )}
                     </Link>
                   </li>
                 ))}
@@ -277,83 +240,38 @@ export default function Footer() {
         </div>
 
         {/* Social Media & Bottom Bar */}
-        <div className="border-t border-gray-700 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+        <div className="border-t border-white/10 py-10">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
             
             {/* Social Media Links */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="flex items-center space-x-1"
-            >
-              <span className="text-gray-400 text-sm mr-4">Follow us:</span>
+            <div className="flex items-center space-x-2">
+              <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600 mr-4">Uplink Protocols:</span>
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-3 rounded-full bg-gray-800 text-gray-400 transition-all duration-200 ${social.color} hover:bg-gray-700 hover:scale-110`}
-                  whileHover={{ y: -2 }}
+                  className={`p-3 rounded-xl bg-brand-obsidian/5 text-gray-400 transition-all duration-300 ${social.color} hover:bg-brand-obsidian/10`}
+                  whileHover={{ y: -4, scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                  title={`Follow us on ${social.name}`}
                 >
                   {social.icon}
                 </motion.a>
               ))}
-            </motion.div>
+            </div>
 
             {/* Copyright */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-gray-400 text-sm text-center md:text-right"
-            >
-              <p>&copy; {currentYear} True Rank Digital. All rights reserved.</p>
-              <p className="mt-1">
-                Built by True Rank Digital
+            <div className="text-right">
+              <p className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600 mb-1">
+                &copy; {currentYear} True Rank Digital &bull; East Brunswick, NJ
               </p>
-            </motion.div>
+              <p className="text-[10px] font-bold text-gray-500 tracking-widest uppercase">
+                Definitive AI Search Authority
+              </p>
+            </div>
           </div>
         </div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="border-t border-gray-700 py-8"
-        >
-          <div className="text-center">
-            <h4 className="text-xl font-heading font-semibold mb-2">
-              Ready to Dominate Your Market?
-            </h4>
-            <p className="text-gray-400 mb-6">
-              Get your free custom playbook and discover how our AI technology can transform your business.
-            </p>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link
-                href="/free-audit"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-brand-primary text-white font-semibold rounded-full hover:bg-brand-primary/90 transition-all duration-300 shadow-glow hover:shadow-glow-lg"
-              >
-                <span>Get Your Free Custom Playbook</span>
-                <ExternalLink className="w-4 h-4" />
-              </Link>
-            </motion.div>
-          </div>
-        </motion.div>
       </div>
     </footer>
   );

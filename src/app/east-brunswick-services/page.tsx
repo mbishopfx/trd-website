@@ -119,8 +119,8 @@ export default function EastBrunswickServicesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
-                  href="/free-audit"
-                  className="inline-flex items-center space-x-2 bg-white text-brand-primary px-8 py-4 rounded-full font-semibold hover:bg-brand-light transition-colors duration-300"
+                  href="/contact"
+                  className="inline-flex items-center space-x-2 bg-brand-obsidian text-brand-primary px-8 py-4 rounded-full font-semibold hover:bg-brand-obsidian transition-colors duration-300"
                 >
                   <Search className="w-5 h-5" />
                   <span>Free East Brunswick Custom Playbook</span>
@@ -129,7 +129,7 @@ export default function EastBrunswickServicesPage() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center space-x-2 border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-primary transition-colors duration-300"
+                  className="inline-flex items-center space-x-2 border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-brand-obsidian hover:text-brand-primary transition-colors duration-300"
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (732) 475-0139</span>
@@ -141,7 +141,7 @@ export default function EastBrunswickServicesPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-brand-light/20">
+      <section className="py-20 bg-brand-obsidian/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -150,10 +150,10 @@ export default function EastBrunswickServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
               Digital Marketing Services for East Brunswick Businesses
             </h2>
-            <p className="text-xl text-brand-dark/70 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Comprehensive digital marketing solutions tailored specifically for the East Brunswick market and Middlesex County business landscape.
             </p>
           </motion.div>
@@ -175,15 +175,15 @@ export default function EastBrunswickServicesPage() {
                     </div>
                   </div>
                   <div className="flex-grow">
-                    <h3 className="text-xl font-heading font-bold text-brand-dark mb-3">
+                    <h3 className="text-xl font-heading font-bold text-white mb-3">
                       {service.title}
                     </h3>
-                    <p className="text-brand-dark/70 mb-4 leading-relaxed">
+                    <p className="text-gray-400 mb-4 leading-relaxed">
                       {service.description}
                     </p>
                     <ul className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center space-x-2 text-sm text-brand-dark/70">
+                        <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-brand-primary flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
@@ -206,7 +206,7 @@ export default function EastBrunswickServicesPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-brand-obsidian">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -215,10 +215,10 @@ export default function EastBrunswickServicesPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-brand-dark mb-6">
+              <h2 className="text-3xl lg:text-4xl font-heading font-bold text-white mb-6">
                 Why East Brunswick Businesses Choose True Rank Digital
               </h2>
-              <p className="text-xl text-brand-dark/70 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                 As your local digital marketing partner, we understand the unique challenges and opportunities in the East Brunswick market.
               </p>
               <ul className="space-y-4">
@@ -232,7 +232,7 @@ export default function EastBrunswickServicesPage() {
                     className="flex items-center space-x-3"
                   >
                     <CheckCircle className="w-6 h-6 text-brand-primary flex-shrink-0" />
-                    <span className="text-brand-dark">{reason}</span>
+                    <span className="text-white">{reason}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -247,14 +247,14 @@ export default function EastBrunswickServicesPage() {
             >
               <div className="text-center mb-8">
                 <Award className="w-16 h-16 text-brand-primary mx-auto mb-4" />
-                <h3 className="text-2xl font-heading font-bold text-brand-dark mb-2">
+                <h3 className="text-2xl font-heading font-bold text-white mb-2">
                   Built for Local Search
                 </h3>
-                <p className="text-brand-dark/70">
+                <p className="text-gray-400">
                   A practical, execution-first approach to visibility and lead flow.
                 </p>
               </div>
-              <ul className="space-y-4 text-brand-dark/80">
+              <ul className="space-y-4 text-gray-300">
                 <li className="flex items-start space-x-3">
                   <CheckCircle className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
                   <span>Local intent mapping: service + neighborhood + proximity queries.</span>
@@ -295,8 +295,8 @@ export default function EastBrunswickServicesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
-                  href="/free-audit"
-                  className="inline-flex items-center space-x-2 bg-white text-brand-primary px-8 py-4 rounded-full font-semibold hover:bg-brand-light transition-colors duration-300"
+                  href="/contact"
+                  className="inline-flex items-center space-x-2 bg-brand-obsidian text-brand-primary px-8 py-4 rounded-full font-semibold hover:bg-brand-obsidian transition-colors duration-300"
                 >
                   <Search className="w-5 h-5" />
                   <span>Get Free Custom Playbook</span>
@@ -305,7 +305,7 @@ export default function EastBrunswickServicesPage() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center space-x-2 border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brand-primary transition-colors duration-300"
+                  className="inline-flex items-center space-x-2 border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-brand-obsidian hover:text-brand-primary transition-colors duration-300"
                 >
                   <Phone className="w-5 h-5" />
                   <span>Schedule Consultation</span>

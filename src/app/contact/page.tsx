@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import ContactHeroSection from '@/components/sections/ContactHeroSection';
 import ContactInfoSection from '@/components/sections/ContactInfoSection';
 import ContactFormSection from '@/components/sections/ContactFormSection';
 import ComprehensiveSchema from '@/components/seo/ComprehensiveSchema';
@@ -48,10 +47,7 @@ export default function ContactPage() {
         ]}
       />
       
-      <div className="pt-20">
-        {/* Contact Hero Section */}
-        <ContactHeroSection />
-        
+      <div className="bg-brand-obsidian min-h-screen pt-20">
         {/* Contact Info Section */}
         <ContactInfoSection />
         

@@ -77,7 +77,7 @@ export default async function FormPage({ params }: PageProps) {
 
       <div className="min-h-screen bg-black pt-20">
         {/* Hero Section */}
-        <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-gray-900 text-white py-16">
+        <div className="bg-gradient-to-br from-blue-900 via-blue-900 to-gray-900 text-white py-16">
           <div className="max-w-4xl mx-auto px-4">
             <Link
               href="/"
@@ -115,7 +115,7 @@ export default async function FormPage({ params }: PageProps) {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 mt-16">
+        <div className="bg-gradient-to-r from-blue-600 to-blue-600 text-white py-16 mt-16">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">
               Need Help Growing Your Business?
@@ -125,7 +125,7 @@ export default async function FormPage({ params }: PageProps) {
             </p>
             <Link
               href="/#contact"
-              className="inline-block px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors"
+              className="inline-block px-8 py-4 bg-brand-obsidian text-blue-600 font-bold rounded-lg hover:bg-brand-obsidian-light transition-colors"
             >
               Get a Free Consultation
             </Link>

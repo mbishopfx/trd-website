@@ -144,17 +144,17 @@ export default async function FlywheelPage({
   const contactTarget = getContactTarget(page);
 
   return (
-    <main className="min-h-screen bg-slate-50 py-14">
-      <article className="mx-auto max-w-4xl rounded-2xl border border-slate-200 bg-white px-6 py-10 shadow-sm md:px-10">
-        <header className="mb-10 border-b border-slate-200 pb-8">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">
+    <main className="min-h-screen bg-brand-obsidian py-14">
+      <article className="mx-auto max-w-4xl rounded-2xl border border-white/10 bg-brand-obsidian px-6 py-10 shadow-sm md:px-10">
+        <header className="mb-10 border-b border-white/10 pb-8">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-brand-cyan">
             {toReadable(page.citySlug)} · {toReadable(page.serviceSlug)}
           </p>
-          <h1 className="text-balance text-3xl font-bold tracking-tight text-slate-900 md:text-4xl">
+          <h1 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
             {page.h1}
           </h1>
-          <p className="mt-5 text-lg leading-8 text-slate-700">{page.metaDescription}</p>
-          <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-slate-500">
+          <p className="mt-5 text-lg leading-8 text-gray-400">{page.metaDescription}</p>
+          <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-gray-500">
             <span>{page.content.wordCount} words</span>
             <span>•</span>
             <span>Audience: {page.segmentName}</span>
@@ -162,60 +162,60 @@ export default async function FlywheelPage({
         </header>
 
         <section className="space-y-5" aria-label="Introduction">
-          <p className="text-base leading-8 text-slate-700">{page.intro}</p>
+          <p className="text-base leading-8 text-gray-300">{page.intro}</p>
         </section>
 
         <div className="mt-12 space-y-12">
           {page.content.sections.map((section, sectionIndex) => (
             <section key={`section-${sectionIndex}`} className="space-y-4" aria-label={section.heading}>
-              <h2 className="text-2xl font-semibold text-slate-900">{section.heading}</h2>
-              <p className="text-base leading-8 text-slate-700">{section.body}</p>
+              <h2 className="text-2xl font-semibold text-white">{section.heading}</h2>
+              <p className="text-base leading-8 text-gray-400">{section.body}</p>
 
               {(section.subsections ?? []).map((subSection, subSectionIndex) => (
-                <div key={`section-${sectionIndex}-sub-${subSectionIndex}`} className="rounded-xl bg-slate-100 p-5">
-                  <h3 className="mb-3 text-xl font-semibold text-slate-900">{subSection.heading}</h3>
-                  <p className="text-base leading-8 text-slate-700">{subSection.body}</p>
+                <div key={`section-${sectionIndex}-sub-${subSectionIndex}`} className="rounded-xl bg-brand-obsidian-light p-5 border border-white/5">
+                  <h3 className="mb-3 text-xl font-semibold text-white">{subSection.heading}</h3>
+                  <p className="text-base leading-8 text-gray-400">{subSection.body}</p>
                 </div>
               ))}
             </section>
           ))}
         </div>
 
-        <section className="mt-12 rounded-2xl border border-slate-200 bg-slate-50 p-6" aria-label="FAQs">
-          <h2 className="text-2xl font-semibold text-slate-900">Frequently Asked Questions</h2>
+        <section className="mt-12 rounded-2xl border border-white/10 bg-brand-obsidian-light p-6" aria-label="FAQs">
+          <h2 className="text-2xl font-semibold text-white">Frequently Asked Questions</h2>
           <div className="mt-5 space-y-5">
             {page.content.faqs.map((faq, faqIndex) => (
               <div key={`faq-${faqIndex}`}>
-                <h3 className="text-lg font-semibold text-slate-900">{faq.question}</h3>
-                <p className="mt-2 text-base leading-7 text-slate-700">{faq.answer}</p>
+                <h3 className="text-lg font-semibold text-white">{faq.question}</h3>
+                <p className="mt-2 text-base leading-7 text-gray-400">{faq.answer}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="mt-12 border-t border-slate-200 pt-8" aria-label="Next Step">
-          <h2 className="text-2xl font-semibold text-slate-900">Next Step</h2>
-          <p className="mt-4 text-base leading-8 text-slate-700">
+        <section className="mt-12 border-t border-white/10 pt-8" aria-label="Next Step">
+          <h2 className="text-2xl font-semibold text-white">Next Step</h2>
+          <p className="mt-4 text-base leading-8 text-gray-400">
             {page.cta}
           </p>
 
           {contactTarget ? (
             <a
               href={contactTarget}
-              className="mt-6 inline-flex items-center rounded-md bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-700"
+              className="mt-6 inline-flex items-center rounded-full bg-brand-cyan px-8 py-3 text-sm font-black uppercase tracking-widest text-brand-obsidian transition hover:bg-brand-obsidian"
             >
               {page.cta}
             </a>
           ) : null}
         </section>
 
-        <section className="mt-12 rounded-xl border border-sky-100 bg-sky-50 p-6" aria-label="Author">
-          <h2 className="text-xl font-semibold text-slate-900">Reviewed By</h2>
-          <p className="mt-3 text-base font-medium text-slate-900">{page.content.author.name}</p>
-          <p className="text-sm text-slate-600">{page.content.author.title}</p>
-          <p className="mt-3 text-sm leading-7 text-slate-700">{page.content.author.bio}</p>
+        <section className="mt-12 rounded-xl border border-brand-blue/20 bg-brand-blue/5 p-6" aria-label="Author">
+          <h2 className="text-xl font-semibold text-white">Reviewed By</h2>
+          <p className="mt-3 text-base font-medium text-brand-cyan">{page.content.author.name}</p>
+          <p className="text-sm text-gray-400">{page.content.author.title}</p>
+          <p className="mt-3 text-sm leading-7 text-gray-300">{page.content.author.bio}</p>
           {page.content.author.reviewedBy ? (
-            <p className="mt-2 text-sm leading-7 text-slate-700">Reviewed by {page.content.author.reviewedBy}</p>
+            <p className="mt-2 text-sm leading-7 text-gray-400 italic">Reviewed by {page.content.author.reviewedBy}</p>
           ) : null}
         </section>
 

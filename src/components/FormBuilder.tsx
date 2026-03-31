@@ -179,7 +179,7 @@ export default function FormBuilder() {
                     onClick={() => setSelectedFieldIndex(index)}
                     className={`p-4 rounded-lg cursor-pointer transition-all ${
                       selectedFieldIndex === index
-                        ? 'bg-blue-500/20 border-2 border-blue-500'
+                        ? 'bg-brand-blue/20 border-2 border-brand-blue'
                         : 'bg-gray-800 border-2 border-transparent hover:border-gray-700'
                     }`}
                   >
@@ -240,7 +240,7 @@ export default function FormBuilder() {
             <button
               onClick={handleSave}
               disabled={saving}
-              className="flex-1 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all disabled:opacity-50"
+              className="flex-1 py-4 bg-gradient-to-r from-brand-blue to-brand-cyan text-white font-bold rounded-lg hover:from-brand-blue hover:to-brand-cyan transition-all disabled:opacity-50"
             >
               {saving ? 'Saving...' : 'Save Form'}
             </button>

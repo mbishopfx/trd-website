@@ -92,7 +92,7 @@ export default async function AdminSettingsPage() {
           </p>
         </div>
         {/* Schedule Configuration */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+        <div className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
           <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
             <span>📅</span> Schedule Configuration
           </h2>
@@ -104,7 +104,7 @@ export default async function AdminSettingsPage() {
                 id="enabled"
                 name="enabled"
                 defaultChecked={schedule?.enabled}
-                className="w-5 h-5 rounded bg-white/10 border-white/20"
+                className="w-5 h-5 rounded bg-brand-obsidian/10 border-white/20"
               />
               <label htmlFor="enabled" className="text-white font-medium">
                 Enable Automation
@@ -120,7 +120,7 @@ export default async function AdminSettingsPage() {
                 name="themes"
                 rows={3}
                 defaultValue={schedule?.themes}
-                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 rounded-lg bg-brand-obsidian/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="AI Search, SEO Evolution, AIO..."
               />
             </div>
@@ -134,7 +134,7 @@ export default async function AdminSettingsPage() {
                   id="frequency"
                   name="frequency"
                   defaultValue={schedule?.frequency}
-                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-lg bg-brand-obsidian/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="hourly">Hourly</option>
                   <option value="daily">Daily</option>
@@ -153,7 +153,7 @@ export default async function AdminSettingsPage() {
                   min="1"
                   max="5"
                   defaultValue={schedule?.posts_per_run}
-                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-lg bg-brand-obsidian/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             </div>
@@ -164,7 +164,7 @@ export default async function AdminSettingsPage() {
                 id="auto_publish"
                 name="auto_publish"
                 defaultChecked={schedule?.auto_publish}
-                className="w-5 h-5 rounded bg-white/10 border-white/20"
+                className="w-5 h-5 rounded bg-brand-obsidian/10 border-white/20"
               />
               <label htmlFor="auto_publish" className="text-white font-medium">
                 Auto-publish to Sanity CMS
@@ -173,7 +173,7 @@ export default async function AdminSettingsPage() {
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all"
+              className="w-full bg-gradient-to-r from-blue-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-700 transition-all"
             >
               Save Schedule Settings
             </button>
@@ -181,7 +181,7 @@ export default async function AdminSettingsPage() {
         </div>
 
         {/* AI Model Settings */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+        <div className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
           <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
             <span>🤖</span> AI Model Configuration
           </h2>
@@ -196,7 +196,7 @@ export default async function AdminSettingsPage() {
                   id="gpt_model"
                   name="gpt_model"
                   defaultValue={settings?.gpt_model}
-                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-lg bg-brand-obsidian/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="gpt-4o">GPT-4o (Recommended)</option>
                   <option value="gpt-4o-mini">GPT-4o Mini (Cheaper)</option>
@@ -216,7 +216,7 @@ export default async function AdminSettingsPage() {
                   min="0"
                   max="1"
                   defaultValue={settings?.gpt_temperature}
-                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-lg bg-brand-obsidian/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
@@ -228,7 +228,7 @@ export default async function AdminSettingsPage() {
                   id="dalle_model"
                   name="dalle_model"
                   defaultValue={settings?.dalle_model}
-                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-lg bg-brand-obsidian/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="dall-e-3">DALL-E 3</option>
                   <option value="dall-e-2">DALL-E 2</option>
@@ -243,7 +243,7 @@ export default async function AdminSettingsPage() {
                   id="dalle_size"
                   name="dalle_size"
                   defaultValue={settings?.dalle_size}
-                  className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-lg bg-brand-obsidian/5 border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="1792x1024">1792x1024 (Wide)</option>
                   <option value="1024x1792">1024x1792 (Tall)</option>
@@ -262,7 +262,7 @@ export default async function AdminSettingsPage() {
         </div>
 
         {/* AI Prompts */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+        <div className="bg-brand-obsidian/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
           <h2 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
             <span>✍️</span> AI Prompts
           </h2>
@@ -277,7 +277,7 @@ export default async function AdminSettingsPage() {
                 name="gpt_system_message"
                 rows={4}
                 defaultValue={settings?.gpt_system_message}
-                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono text-sm"
+                className="w-full px-4 py-3 rounded-lg bg-brand-obsidian/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono text-sm"
               />
             </div>
 
@@ -290,7 +290,7 @@ export default async function AdminSettingsPage() {
                 name="gpt_user_prompt_template"
                 rows={6}
                 defaultValue={settings?.gpt_user_prompt_template}
-                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono text-sm"
+                className="w-full px-4 py-3 rounded-lg bg-brand-obsidian/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono text-sm"
               />
             </div>
 
@@ -303,13 +303,13 @@ export default async function AdminSettingsPage() {
                 name="dalle_prompt_template"
                 rows={3}
                 defaultValue={settings?.dalle_prompt_template}
-                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono text-sm"
+                className="w-full px-4 py-3 rounded-lg bg-brand-obsidian/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono text-sm"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-orange-600 to-pink-600 text-white py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-pink-700 transition-all"
+              className="w-full bg-gradient-to-r from-orange-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-blue-700 transition-all"
             >
               Save Prompt Settings
             </button>

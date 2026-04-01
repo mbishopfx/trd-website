@@ -104,6 +104,12 @@ const socialLinks = [
     color: 'hover:text-brand-cyan'
   },
   {
+    name: 'X',
+    href: 'https://x.com/TRUERANKDIGITAL',
+    icon: <Twitter className="w-5 h-5" />,
+    color: 'hover:text-white'
+  },
+  {
     name: 'Facebook', 
     href: 'https://www.facebook.com/truerankdigital',
     icon: <Facebook className="w-5 h-5" />,
@@ -241,7 +247,7 @@ export default function Footer() {
 
         {/* Social Media & Bottom Bar */}
         <div className="border-t border-white/10 py-10">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-6">
             
             {/* Social Media Links */}
             <div className="flex items-center space-x-2">
@@ -261,8 +267,27 @@ export default function Footer() {
               ))}
             </div>
 
+            {/* BBB Seal */}
+            <div className="flex-shrink-0">
+              <a
+                href="https://www.bbb.org/us/nj/east-brunswick/profile/internet-marketing-services/true-rank-digital-0221-90240783/#sealclick"
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                aria-label="True Rank Digital BBB Business Review"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://seal-newjersey.bbb.org/seals/blue-seal-280-80-bbb-90240783.png"
+                  alt="True Rank Digital BBB Business Review"
+                  width={280}
+                  height={80}
+                  className="h-auto w-[220px] sm:w-[260px] border-0"
+                />
+              </a>
+            </div>
+
             {/* Copyright */}
-            <div className="text-right">
+            <div className="text-center md:text-right">
               <p className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600 mb-1">
                 &copy; {currentYear} True Rank Digital &bull; East Brunswick, NJ
               </p>

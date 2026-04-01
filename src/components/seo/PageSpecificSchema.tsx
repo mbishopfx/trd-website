@@ -133,10 +133,11 @@ export default function PageSpecificSchema({
         hasMap: "https://www.google.com/maps?cid=4662204553635539796",
         sameAs: [
           "https://www.google.com/maps?cid=4662204553635539796",
+          "https://www.bbb.org/us/nj/east-brunswick/profile/internet-marketing-services/true-rank-digital-0221-90240783",
           "https://www.facebook.com/truerankdigital",
           "https://www.linkedin.com/company/true-rank-digital",
           "https://www.wikidata.org/wiki/Q130284854",
-          "https://twitter.com/truerankdigital",
+          "https://x.com/TRUERANKDIGITAL",
           "https://www.instagram.com/truerankdigital_/?hl=en",
           "https://www.youtube.com/channel/UC9wb8G1oROv_iUIDRL7JIWA",
           "https://www.tiktok.com/@truerankdigital_",

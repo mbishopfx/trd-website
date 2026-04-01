@@ -65,7 +65,7 @@ export const siteIdentity = {
     'https://www.facebook.com/truerankdigital',
     'https://www.linkedin.com/in/jonjkorkowski/',
     'https://www.wikidata.org/wiki/Q130284854',
-    'https://twitter.com/truerankdigital',
+    'https://x.com/TRUERANKDIGITAL',
     'https://www.instagram.com/truerankdigital_/?hl=en',
     'https://www.youtube.com/channel/UC9wb8G1oROv_iUIDRL7JIWA',
     'https://www.tiktok.com/@truerankdigital_',

@@ -224,7 +224,7 @@ export default async function EventDetailPage({ params }: PageProps) {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative space-y-6">
               <div className="absolute -left-6 -top-6 h-28 w-28 rounded-full bg-[#ff9d3d]/25 blur-3xl" />
               <div className="absolute -bottom-8 -right-6 h-32 w-32 rounded-full bg-brand-cyan/20 blur-3xl" />
               <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black/30 shadow-[0_35px_90px_rgba(0,0,0,0.4)]">
@@ -237,12 +237,20 @@ export default async function EventDetailPage({ params }: PageProps) {
                   priority
                 />
               </div>
+              <div id="event-rsvp" className="relative">
+                <EventRSVPForm
+                  eventSlug={event.slug}
+                  eventTitle={event.title}
+                  giveawayTitle={event.giveaway.title}
+                  legalLine={event.giveaway.legalLine}
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        <section id="event-rsvp" className="px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <section className="px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8">
               <p className="text-xs font-black uppercase tracking-[0.3em] text-[#ffcf99]">
                 One hour. Real signal.
@@ -274,13 +282,6 @@ export default async function EventDetailPage({ params }: PageProps) {
                 </div>
               </div>
             </div>
-
-            <EventRSVPForm
-              eventSlug={event.slug}
-              eventTitle={event.title}
-              giveawayTitle={event.giveaway.title}
-              legalLine={event.giveaway.legalLine}
-            />
           </div>
         </section>
 

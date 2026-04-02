@@ -101,7 +101,7 @@ export default function HeroSection() {
           >
             <span className="block text-white">Stop Chasing Clicks.</span>
             <span className="block bg-gradient-to-r from-brand-cyan via-white to-brand-blue bg-clip-text text-transparent text-glow-cyan">
-              Start Dictating the AI's Answers.
+              Start Dictating the AI&apos;s Answers.
             </span>
           </motion.h1>
 
@@ -156,7 +156,7 @@ export default function HeroSection() {
       {/* Scroll Indicator */}
       <motion.div
         style={{ opacity }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2"
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center space-y-2"
       >
         <span className="text-[10px] uppercase tracking-[0.4em] text-gray-500 font-bold">Initiate Command</span>
         <motion.div

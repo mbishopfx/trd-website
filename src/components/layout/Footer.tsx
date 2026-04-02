@@ -12,18 +12,7 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  Youtube,
-  Twitter,
-  ExternalLink,
-  TrendingUp,
-  Zap,
-  Bot,
-  Network,
-  Target,
-  Shield,
-  Activity,
-  Globe,
-  Cpu
+  Youtube
 } from 'lucide-react';
 
 const TikTokIcon = () => (
@@ -32,9 +21,9 @@ const TikTokIcon = () => (
   </svg>
 );
 
-const PinterestIcon = () => (
-  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12.14.5C5.86.5 2.7 5 2.7 8.75c0 2.27.86 4.3 2.7 5.05.3.12.57 0 .66-.33l.27-1.06c.1-.32.06-.44-.2-.72-.6-.84-.98-1.94-.98-3.49 0-4.49 3.36-8.53 8.76-8.53 4.78 0 7.41 2.92 7.41 6.82 0 5.13-2.27 9.44-5.65 9.44-1.86 0-3.25-1.53-2.8-3.41.53-2.25 1.56-4.68 1.56-6.3 0-1.45-.78-2.67-2.39-2.67-1.9 0-3.42 1.96-3.42 4.58 0 1.67.57 2.8.57 2.8l-2.28 9.65c-.68 2.87-.1 6.38-.05 6.73.03.19.27.24.38.09.15-.2 2.07-2.56 2.84-5.34l1.05-4.1c.52.99 2.04 1.86 3.65 1.86 4.8 0 8.06-4.37 8.06-10.22C21.28 4.11 17.28.5 12.14.5z"/>
+const XIcon = () => (
+  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.64 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932L18.901 1.153zm-1.291 19.49h2.039L6.486 3.24H4.298L17.61 20.643z" />
   </svg>
 );
 
@@ -42,6 +31,7 @@ interface FooterLink {
   name: string;
   href: string;
   external?: boolean;
+  description?: string;
 }
 
 interface FooterSection {
@@ -76,12 +66,28 @@ const footerSections: FooterSection[] = [
     ]
   },
   {
-    title: 'Company',
+    title: 'Case Studies',
     links: [
-      { name: 'About the Vision', href: '/about' },
-      { name: 'Platform Audit', href: '/contact' },
-      { name: 'Agentic Ecosystem', href: '/ai-engine' },
-      { name: 'Command Center', href: '/contact' }
+      {
+        name: 'Multi-location dental visibility rebuild',
+        href: '/contact',
+        description: 'Unified entity signals, GBP governance, and location-page architecture for a practice group losing map share to aggregators.'
+      },
+      {
+        name: 'Personal injury intake acceleration',
+        href: '/contact',
+        description: 'Search-to-call funnel cleanup, AI answer-surface positioning, and high-intent paid routing for a firm chasing stronger case quality.'
+      },
+      {
+        name: 'Home services service-area domination',
+        href: '/contact',
+        description: 'Radius-based local SEO, review velocity systems, and service-page expansion for an HVAC operator fighting saturated suburban SERPs.'
+      },
+      {
+        name: 'E-commerce brand authority recovery',
+        href: '/contact',
+        description: 'Technical trust repair, structured data coverage, and content re-framing for a catalog brand hit by AI-driven discovery dropoff.'
+      }
     ]
   },
   {
@@ -106,7 +112,7 @@ const socialLinks = [
   {
     name: 'X',
     href: 'https://x.com/TRUERANKDIGITAL',
-    icon: <Twitter className="w-5 h-5" />,
+    icon: <XIcon />,
     color: 'hover:text-white'
   },
   {
@@ -233,10 +239,17 @@ export default function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-400 hover:text-brand-cyan transition-all duration-200 text-sm font-medium group flex items-center"
+                      className="text-gray-400 hover:text-brand-cyan transition-all duration-200 text-sm font-medium group flex items-start"
                     >
-                      <div className="w-0 group-hover:w-2 h-px bg-brand-cyan mr-0 group-hover:mr-2 transition-all duration-300" />
-                      <span>{link.name}</span>
+                      <div className="w-0 group-hover:w-2 h-px bg-brand-cyan mr-0 group-hover:mr-2 mt-2 transition-all duration-300 flex-shrink-0" />
+                      <div>
+                        <span className="block">{link.name}</span>
+                        {link.description ? (
+                          <span className="mt-1 block text-[11px] leading-relaxed text-gray-500 group-hover:text-gray-400 transition-colors duration-200">
+                            {link.description}
+                          </span>
+                        ) : null}
+                      </div>
                     </Link>
                   </li>
                 ))}
@@ -252,7 +265,7 @@ export default function Footer() {
             {/* Social Media Links */}
             <div className="flex items-center space-x-2">
               <span className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600 mr-4">Uplink Protocols:</span>
-              {socialLinks.map((social, index) => (
+              {socialLinks.map((social) => (
                 <motion.a
                   key={social.name}
                   href={social.href}

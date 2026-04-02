@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import path from 'path';
 import { promises as fs } from 'fs';
+import { events } from '@/data/events';
 import { siteUrl } from '@/lib/seo/siteIdentity';
 
 type PageEntry = {
@@ -108,6 +109,10 @@ async function collectFlywheelEntries(): Promise<PageEntry[]> {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticEntries = await collectStaticRoutesFromAppDir();
   const flywheelEntries = await collectFlywheelEntries();
+  const eventEntries: PageEntry[] = events.map((event) => ({
+    url: `${siteUrl}/events/${event.slug}`,
+    lastModified: '2026-04-02T00:00:00.000Z',
+  }));
 
   const blogEntries: PageEntry[] = [];
   try {
@@ -124,7 +129,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // If DB credentials are unavailable at build/runtime, ship a sitemap for the static site only.
   }
 
-  const allEntries = [...staticEntries, ...blogEntries, ...flywheelEntries];
+  const allEntries = [...staticEntries, ...eventEntries, ...blogEntries, ...flywheelEntries];
   const uniqueByUrl = new Map<string, PageEntry>();
   for (const entry of allEntries) uniqueByUrl.set(entry.url, entry);
 

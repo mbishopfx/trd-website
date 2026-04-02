@@ -8,15 +8,19 @@ import {
   CalendarDays,
   Clock3,
   Coffee,
+  Gem,
   Gift,
   MapPin,
   Mic2,
-  Phone,
+  Rocket,
   Sparkles,
   Target,
+  Ticket,
+  Trophy,
 } from 'lucide-react';
 import { events, getEventBySlug } from '@/data/events';
 import { siteIdentity } from '@/lib/seo/siteIdentity';
+import EventRSVPForm from '@/components/events/EventRSVPForm';
 
 type PageProps = {
   params: Promise<{
@@ -106,8 +110,10 @@ export default async function EventDetailPage({ params }: PageProps) {
       name: event.venue,
       address: {
         '@type': 'PostalAddress',
+        streetAddress: event.streetAddress,
         addressLocality: event.city,
         addressRegion: event.state,
+        postalCode: event.postalCode,
         addressCountry: 'US',
       },
     },
@@ -156,6 +162,9 @@ export default async function EventDetailPage({ params }: PageProps) {
               <p className="mt-6 max-w-3xl text-lg leading-8 text-white/74 sm:text-xl">
                 {event.teaser}
               </p>
+              <p className="mt-5 max-w-3xl text-base leading-8 text-[#ffcf99]">
+                {event.urgencyLine}
+              </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 <div className="rounded-[1.6rem] border border-white/10 bg-black/20 p-5 backdrop-blur-sm">
@@ -180,17 +189,29 @@ export default async function EventDetailPage({ params }: PageProps) {
                   <p className="mt-2 text-base font-bold text-white">
                     {event.venue}, {event.city}
                   </p>
+                  <p className="mt-1 text-sm text-white/58">
+                    {event.streetAddress}, {event.city}, {event.state} {event.postalCode}
+                  </p>
                 </div>
               </div>
 
+              <div className="mt-8 flex flex-wrap gap-3">
+                <span className="rounded-full border border-[#ffb76b]/25 bg-[#ff9d3d]/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.22em] text-[#ffcf99]">
+                  {event.giveaway.title}
+                </span>
+                <span className="rounded-full border border-brand-cyan/20 bg-brand-cyan/10 px-4 py-2 text-[11px] font-black uppercase tracking-[0.22em] text-brand-cyan">
+                  {event.giveaway.legalLine}
+                </span>
+              </div>
+
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href="tel:+17324750139"
+                <Link
+                  href="#event-rsvp"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-cyan px-8 py-4 text-sm font-black uppercase tracking-[0.22em] text-brand-obsidian shadow-[0_0_28px_rgba(0,245,255,0.28)] transition hover:-translate-y-0.5 hover:shadow-[0_0_38px_rgba(0,245,255,0.42)]"
                 >
-                  <Phone className="h-4 w-4" />
-                  Call to Reserve Your Seat
-                </a>
+                  <Target className="h-4 w-4" />
+                  RSVP + Enter Raffle
+                </Link>
                 <a
                   href={event.mapUrl}
                   target="_blank"
@@ -200,17 +221,6 @@ export default async function EventDetailPage({ params }: PageProps) {
                   <MapPin className="h-4 w-4" />
                   Get Directions
                 </a>
-              </div>
-
-              <div className="mt-8 flex flex-wrap gap-3">
-                {event.perks.map((perk) => (
-                  <span
-                    key={perk}
-                    className="rounded-full border border-white/10 bg-black/25 px-4 py-2 text-[11px] font-black uppercase tracking-[0.22em] text-white/86"
-                  >
-                    {perk}
-                  </span>
-                ))}
               </div>
             </div>
 
@@ -231,7 +241,50 @@ export default async function EventDetailPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <section id="event-rsvp" className="px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8">
+              <p className="text-xs font-black uppercase tracking-[0.3em] text-[#ffcf99]">
+                One hour. Real signal.
+              </p>
+              <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                RSVP now, then walk in already ahead of the businesses that wait too long.
+              </h2>
+              <div className="mt-6 grid gap-4 sm:grid-cols-3">
+                <div className="rounded-[1.4rem] border border-white/10 bg-black/20 p-5">
+                  <Ticket className="h-5 w-5 text-brand-cyan" />
+                  <p className="mt-3 text-sm font-black uppercase tracking-[0.18em] text-white/54">
+                    Cost
+                  </p>
+                  <p className="mt-2 text-lg font-bold text-white">Free to attend</p>
+                </div>
+                <div className="rounded-[1.4rem] border border-white/10 bg-black/20 p-5">
+                  <Trophy className="h-5 w-5 text-[#ffb76b]" />
+                  <p className="mt-3 text-sm font-black uppercase tracking-[0.18em] text-white/54">
+                    Giveaway
+                  </p>
+                  <p className="mt-2 text-lg font-bold text-white">Mac Mini raffle</p>
+                </div>
+                <div className="rounded-[1.4rem] border border-white/10 bg-black/20 p-5">
+                  <Coffee className="h-5 w-5 text-[#ffb76b]" />
+                  <p className="mt-3 text-sm font-black uppercase tracking-[0.18em] text-white/54">
+                    Bonus
+                  </p>
+                  <p className="mt-2 text-lg font-bold text-white">Free coffee</p>
+                </div>
+              </div>
+            </div>
+
+            <EventRSVPForm
+              eventSlug={event.slug}
+              eventTitle={event.title}
+              giveawayTitle={event.giveaway.title}
+              legalLine={event.giveaway.legalLine}
+            />
+          </div>
+        </section>
+
+        <section className="px-4 pb-16 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-8">
               <p className="text-xs font-black uppercase tracking-[0.3em] text-brand-cyan">
@@ -262,6 +315,41 @@ export default async function EventDetailPage({ params }: PageProps) {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="px-4 pb-16 sm:px-6 lg:px-8">
+          <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-3">
+            <div className="rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(0,245,255,0.08),rgba(255,255,255,0.03))] p-7">
+              <Rocket className="h-6 w-6 text-brand-cyan" />
+              <h3 className="mt-5 font-heading text-2xl font-bold text-white">
+                Practical, not padded
+              </h3>
+              <p className="mt-3 text-base leading-7 text-white/68">
+                No vague AI buzzwords. No fluffy keynote pacing. This session is built for owners
+                who want specific moves they can act on immediately.
+              </p>
+            </div>
+            <div className="rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,157,61,0.12),rgba(255,255,255,0.03))] p-7">
+              <Gem className="h-6 w-6 text-[#ffb76b]" />
+              <h3 className="mt-5 font-heading text-2xl font-bold text-white">
+                Real room, real operators
+              </h3>
+              <p className="mt-3 text-base leading-7 text-white/68">
+                The best value is not just the stage. It is being in a room with owners who know
+                the market is changing and are willing to move before that change punishes them.
+              </p>
+            </div>
+            <div className="rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))] p-7">
+              <Gift className="h-6 w-6 text-brand-cyan" />
+              <h3 className="mt-5 font-heading text-2xl font-bold text-white">
+                Worth showing up for
+              </h3>
+              <p className="mt-3 text-base leading-7 text-white/68">
+                Free coffee gets you in the door. The Mac Mini raffle raises the stakes. The
+                strategy you leave with is the part that can keep paying long after the hour ends.
+              </p>
             </div>
           </div>
         </section>
@@ -349,34 +437,28 @@ export default async function EventDetailPage({ params }: PageProps) {
                 </h2>
                 <p className="mt-5 max-w-3xl text-base leading-8 text-white/72">
                   Join us in Woodbridge on April 28, 2026 for a high-value conversation on
-                  AI-powered local visibility, then leave with free coffee, live giveaways, and
-                  a sharper plan than the businesses still treating this shift like a rumor.
+                  AI-powered local visibility, then leave with free coffee, live giveaways, a
+                  free Mac Mini raffle entry, and a sharper plan than the businesses still
+                  treating this shift like a rumor.
                 </p>
               </div>
 
               <div className="grid gap-3 sm:min-w-[18rem]">
                 <a
-                  href="tel:+17324750139"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-black uppercase tracking-[0.22em] text-brand-obsidian transition hover:-translate-y-0.5"
-                >
-                  <Target className="h-4 w-4" />
-                  Reserve by Phone
-                </a>
-                <a
                   href={event.mapUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-black/20 px-8 py-4 text-sm font-black uppercase tracking-[0.22em] text-white transition hover:border-white/40"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-black uppercase tracking-[0.22em] text-brand-obsidian transition hover:-translate-y-0.5"
                 >
                   <MapPin className="h-4 w-4" />
-                  Open Venue Map
+                  Get Directions
                 </a>
                 <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-transparent px-8 py-4 text-sm font-black uppercase tracking-[0.22em] text-white/82 transition hover:border-brand-cyan/45 hover:text-brand-cyan"
+                  href="#event-rsvp"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-black/20 px-8 py-4 text-sm font-black uppercase tracking-[0.22em] text-white transition hover:border-white/40"
                 >
-                  <Sparkles className="h-4 w-4" />
-                  Contact True Rank Digital
+                  <Target className="h-4 w-4" />
+                  RSVP + Enter Raffle
                 </Link>
               </div>
             </div>
@@ -389,6 +471,10 @@ export default async function EventDetailPage({ params }: PageProps) {
               <span className="flex items-center gap-2">
                 <Gift className="h-4 w-4 text-brand-cyan" />
                 Massive giveaways
+              </span>
+              <span className="flex items-center gap-2">
+                <Sparkles className="h-4 w-4 text-brand-cyan" />
+                No cost to join
               </span>
               <span className="flex items-center gap-2">
                 <CalendarDays className="h-4 w-4 text-brand-cyan" />

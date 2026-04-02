@@ -11,8 +11,10 @@ export type EventRecord = {
   teaser: string;
   description: string;
   venue: string;
+  streetAddress: string;
   city: string;
   state: string;
+  postalCode: string;
   startDateIso: string;
   endDateIso: string;
   displayDate: string;
@@ -30,6 +32,12 @@ export type EventRecord = {
   }>;
   speakers: EventSpeaker[];
   mapUrl: string;
+  urgencyLine: string;
+  giveaway: {
+    title: string;
+    description: string;
+    legalLine: string;
+  };
 };
 
 export const brewingWithSuccessEvent: EventRecord = {
@@ -42,8 +50,10 @@ export const brewingWithSuccessEvent: EventRecord = {
   description:
     'On Tuesday, April 28, 2026, Jon J Korkowski and Eric LeGrand are bringing local business owners together in Woodbridge for a direct session on how AI is changing local search, customer discovery, and competitive visibility. This is not a theory-heavy talk. It is a practical breakdown of the strategies businesses need right now to protect market share, earn more local attention, and stay ahead of slower competitors.',
   venue: 'LeGrand Coffee House',
+  streetAddress: '10 Green Street',
   city: 'Woodbridge',
   state: 'NJ',
+  postalCode: '07095',
   startDateIso: '2026-04-28T14:00:00-04:00',
   endDateIso: '2026-04-28T15:00:00-04:00',
   displayDate: 'Tuesday, April 28, 2026',
@@ -105,7 +115,15 @@ export const brewingWithSuccessEvent: EventRecord = {
     },
   ],
   mapUrl:
-    'https://www.google.com/maps/search/?api=1&query=LeGrand+Coffee+House+Woodbridge+NJ',
+    'https://www.google.com/maps/search/?api=1&query=10+Green+Street+Woodbridge+NJ+07095',
+  urgencyLine:
+    'The businesses that understand AI-assisted local search first will collect more attention, more trust, and more market share while everyone else is still reacting.',
+  giveaway: {
+    title: 'Free Mac Mini raffle entry with RSVP',
+    description:
+      'RSVP for the event and you are entered for a free Mac Mini raffle while spots last. Show up, learn something sharp, and leave with a legitimate shot at a serious giveaway.',
+    legalLine: 'No cost to attend. No purchase required to RSVP or enter the raffle.',
+  },
 };
 
 export const events = [brewingWithSuccessEvent];

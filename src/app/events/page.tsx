@@ -75,6 +75,9 @@ export default function EventsPage() {
                       {event.title}
                     </h2>
                     <p className="mt-4 text-base leading-7 text-white/70">{event.teaser}</p>
+                    <p className="mt-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#ffcf99]">
+                      {event.giveaway.title}. {event.giveaway.legalLine}
+                    </p>
 
                     <div className="mt-8 grid gap-4 sm:grid-cols-2">
                       <div className="rounded-2xl border border-white/10 bg-black/20 p-4">

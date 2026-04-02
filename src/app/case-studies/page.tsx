@@ -1,30 +1,115 @@
 import type { Metadata } from 'next';
-import { Award, TrendingUp } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, Award, Building2 } from 'lucide-react';
 import GEOSchema from '@/components/seo/GEOSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
+import { caseStudies } from '@/data/caseStudies';
 
 export const metadata: Metadata = {
-  title: 'SEO Case Studies & Success Stories | True Rank Digital',
-  description: 'Explore True Rank Digital\'s SEO case studies and success stories showcasing real results for businesses across industries.',
-  keywords: 'SEO case studies, success stories, True Rank Digital, SEO results, client testimonials',
+  title: 'Case Studies | True Rank Digital',
+  description:
+    'Explore a real True Rank Digital case study showing how Entity Signal Mapping and GBP optimization scaled patient lead volume for a local physical therapy practice.',
   alternates: { canonical: 'https://truerankdigital.com/case-studies' },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } }
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  },
 };
 
 export default function CaseStudiesPage() {
   const faqs = [
     {
-      question: "What results does True Rank Digital achieve?",
+      question: 'What does this case study show?',
       answer:
-        "Results vary by market and starting point. True Rank Digital focuses on measurable improvements in organic visibility, Google Maps presence, lead quality, and conversion outcomes. Our case studies highlight the work performed, the strategy used, and the business impact over time."
-    }
+        'This case study shows how True Rank Digital used Entity Signal Mapping, GBP optimization, review momentum, and AI search positioning to grow local patient acquisition for a physical therapy practice.',
+    },
   ];
 
   return (
     <>
-      <GEOSchema pageType="webpage" pageData={{ title: "True Rank Digital SEO Case Studies and Success Stories", description: "Explore case studies showing real SEO results for businesses.", url: "https://truerankdigital.com/case-studies", keywords: ["SEO case studies", "success stories"], category: "Case Studies" }} breadcrumbs={[{ name: "Home", url: "https://truerankdigital.com" }, { name: "Case Studies", url: "https://truerankdigital.com/case-studies" }]} entities={{ primary: ["True Rank Digital", "Case Studies", "SEO Results"] }} />
+      <GEOSchema
+        pageType="webpage"
+        pageData={{
+          title: 'True Rank Digital Case Studies',
+          description:
+            'A real case study showing how True Rank Digital solves visibility, authority, and lead-flow problems for local healthcare providers.',
+          url: 'https://truerankdigital.com/case-studies',
+          keywords: ['case studies', 'SEO case studies', 'local SEO results', 'AI search visibility'],
+          category: 'Case Studies',
+        }}
+        breadcrumbs={[
+          { name: 'Home', url: 'https://truerankdigital.com' },
+          { name: 'Case Studies', url: 'https://truerankdigital.com/case-studies' },
+        ]}
+        entities={{
+          primary: ['True Rank Digital', 'Case Studies', 'Search Visibility'],
+          secondary: ['ICP Strategy', 'Local Authority', 'Performance Marketing'],
+        }}
+      />
+
       <FAQSchema faqs={faqs} pageUrl="https://truerankdigital.com/case-studies" category="general" />
-      <article className="pt-16 min-h-screen bg-brand-obsidian text-white"><section className="py-20"><div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><h1 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-6"><strong className="text-brand-primary">True Rank Digital</strong> SEO Case Studies and Success Stories</h1><p className="text-xl text-gray-400 max-w-4xl mx-auto mb-12">Explore <strong>True Rank Digital's</strong> proven track record with <strong>SEO case studies</strong> and success stories showcasing real results for businesses.</p><div className="glass-card p-8"><div className="w-20 h-20 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6"><Award className="w-10 h-10 text-white" /></div><h2 className="text-2xl font-heading font-bold text-white mb-4">See Our <strong className="text-brand-primary">Success</strong> Stories</h2><a href="/contact" className="inline-flex items-center space-x-2 px-8 py-4 bg-yellow-600 text-white font-semibold text-lg rounded-full hover:bg-yellow-700 transition-colors duration-300"><TrendingUp className="w-5 h-5" /><span>Get Similar Results</span></a></div></div></section></article>
+
+      <article className="min-h-screen bg-brand-obsidian pt-16 text-white">
+        <section className="border-b border-white/5 py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-brand-cyan">
+                  <Award className="h-4 w-4" />
+                  Case Studies
+                </div>
+                <h1 className="mt-6 text-4xl font-heading font-bold leading-tight text-white lg:text-6xl">
+                  A real local growth brief, built from actual performance data.
+                </h1>
+                <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-300">
+                  This case study breaks down how True Rank Digital used entity authority, GBP
+                  optimization, and local-intent execution to turn a physical therapy clinic from
+                  low visibility into a stronger patient-acquisition presence within a single quarter.
+                </p>
+              </div>
+
+              <div className="glass-card p-8">
+                <h2 className="text-2xl font-heading font-bold text-white">
+                  What this page demonstrates
+                </h2>
+                <ul className="mt-6 space-y-4 text-sm leading-7 text-gray-300">
+                  <li>How Entity Signal Mapping improves local trust and discoverability</li>
+                  <li>How GBP optimization can increase patient calls without increasing ad spend</li>
+                  <li>How local search and AI-driven recommendation surfaces reinforce each other</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-6">
+              {caseStudies.map((study) => (
+                <Link
+                  key={study.slug}
+                  href={`/case-studies/${study.slug}`}
+                  className="group rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-cyan/35 hover:bg-white/[0.05]"
+                >
+                  <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/20 px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.22em] text-brand-cyan">
+                    <Building2 className="h-3.5 w-3.5" />
+                    {study.industry}
+                  </div>
+                  <h2 className="mt-5 text-3xl font-heading font-bold text-white group-hover:text-brand-cyan transition-colors duration-200">
+                    {study.title}
+                  </h2>
+                  <p className="mt-4 text-base leading-8 text-gray-300">{study.description}</p>
+                  <p className="mt-5 text-sm leading-7 text-[#ffcf99]">{study.challenge}</p>
+                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-black uppercase tracking-[0.2em] text-brand-cyan">
+                    View case study <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      </article>
     </>
   );
 }

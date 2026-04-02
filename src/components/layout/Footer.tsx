@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { caseStudies } from '@/data/caseStudies';
 import { 
   MapPin, 
   Phone, 
@@ -63,31 +64,6 @@ const footerSections: FooterSection[] = [
       { name: 'Schema Gap Analysis', href: '/contact' },
       { name: 'Technical SEO Review', href: '/services/seo-tactics' },
       { name: 'AI Search Readiness Review', href: '/services/ai-seo' }
-    ]
-  },
-  {
-    title: 'Case Studies',
-    links: [
-      {
-        name: 'Multi-location dental visibility rebuild',
-        href: '/contact',
-        description: 'Unified entity signals, GBP governance, and location-page architecture for a practice group losing map share to aggregators.'
-      },
-      {
-        name: 'Personal injury intake acceleration',
-        href: '/contact',
-        description: 'Search-to-call funnel cleanup, AI answer-surface positioning, and high-intent paid routing for a firm chasing stronger case quality.'
-      },
-      {
-        name: 'Home services service-area domination',
-        href: '/contact',
-        description: 'Radius-based local SEO, review velocity systems, and service-page expansion for an HVAC operator fighting saturated suburban SERPs.'
-      },
-      {
-        name: 'E-commerce brand authority recovery',
-        href: '/contact',
-        description: 'Technical trust repair, structured data coverage, and content re-framing for a catalog brand hit by AI-driven discovery dropoff.'
-      }
     ]
   },
   {
@@ -158,7 +134,7 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-12 lg:gap-8">
+        <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-12 lg:gap-8">
           
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -256,6 +232,53 @@ export default function Footer() {
               </ul>
             </motion.div>
           ))}
+        </div>
+
+        <div className="border-t border-white/10 py-14">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="max-w-3xl">
+              <h4 className="text-xs font-black uppercase tracking-[0.3em] text-gray-500">
+                Case Studies
+              </h4>
+              <p className="mt-4 text-sm leading-relaxed text-gray-400">
+                A real performance brief showing how we solve category-specific visibility problems when local operators need stronger authority, more qualified demand, and clearer market ownership.
+              </p>
+            </div>
+
+            <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+              {caseStudies.map((study, index) => (
+                <motion.div
+                  key={study.slug}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                  viewport={{ once: true }}
+                >
+                  <Link
+                    href={`/case-studies/${study.slug}`}
+                    className="group block h-full rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-brand-cyan/35 hover:bg-white/[0.05]"
+                  >
+                    <div className="text-[10px] font-black uppercase tracking-[0.24em] text-brand-cyan/80">
+                      Case Study
+                    </div>
+                    <h5 className="mt-4 text-base font-bold leading-snug text-white group-hover:text-brand-cyan transition-colors duration-200">
+                      {study.title}
+                    </h5>
+                    {study.footerDescription ? (
+                      <p className="mt-3 text-[13px] leading-relaxed text-gray-400 group-hover:text-gray-300 transition-colors duration-200">
+                        {study.footerDescription}
+                      </p>
+                    ) : null}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
 
         {/* Social Media & Bottom Bar */}

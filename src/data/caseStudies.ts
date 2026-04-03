@@ -73,6 +73,58 @@ export const caseStudies: CaseStudyRecord[] = [
       },
     ],
   },
+  {
+    slug: 'personal-injury-lead-volume-growth',
+    title: 'How True Rank Digital Scaled Personal Injury Lead Volume by 180% in 6 Months',
+    shortTitle: 'Personal Injury Lead Growth',
+    industry: 'Personal Injury Law',
+    specialty: 'LegalService',
+    icp: 'Personal injury law firm operating in a dense legal market where local-pack dominance, reputation velocity, and high-intent “near me” visibility directly influenced case acquisition.',
+    description:
+      'A personal injury firm was competing in a market where PPC clicks could exceed $200, but the stronger problem was discoverability. The practice had legal expertise and case value, yet remained easy to miss in the local pack when nearby claimants were actively searching for representation.',
+    challenge:
+      'The firm was sitting outside the top local positions for core injury-intent searches, generating only 41 inbound calls per month, and building reviews too slowly to create real authority. In a category where digital trust compounds quickly, that meant stronger competitors kept intercepting higher-value case demand.',
+    strategySummary:
+      'True Rank Digital deployed a local authority system designed for legal-intent search. The mandate was to increase visibility where urgency is highest, reinforce market trust with stronger entity signals, and convert search demand into qualified inbound case opportunities without relying on escalating paid acquisition costs.',
+    solutionBullets: [
+      'Rebuilt Google Business Profile category, service, and relevance signals around high-intent personal injury queries to improve local-pack competitiveness',
+      'Aligned website entity data and schema markup so search systems could recognize the firm as a stronger local legal authority',
+      'Implemented review acquisition workflows that increased trust velocity and improved conversion readiness across map and branded search surfaces',
+      'Strengthened local intent mapping to capture nearby claimants searching for immediate representation instead of leaking demand to larger competitors',
+    ],
+    outcomes: [
+      'Monthly inbound calls increased from 41 to 115 in 180 days, delivering a 180% lift in phone-driven lead volume',
+      'Monthly search appearances jumped from 3,500 to 16,000, creating a major expansion in local market visibility',
+      'Core local rankings improved by 5 positions, pushing the firm into the high-value 3-Pack for priority injury-intent terms',
+      'Website click requests increased by 300%, showing stronger engagement from prospects moving deeper into the funnel',
+    ],
+    momentum: [
+      'Review velocity accelerated from 1 per month to 7 per month',
+      'Stronger local-pack authority in a category with extreme CPC pressure',
+      'Higher trust signals across both search and conversion surfaces for urgent legal demand',
+    ],
+    footerDescription:
+      'GBP authority tuning, entity alignment, and review velocity that lifted personal injury calls by 180% in six months.',
+    accent: 'from-amber-500/20 to-red-500/20',
+    publishedDate: '2024-04-01',
+    metrics: [
+      {
+        label: 'Monthly search appearances',
+        value: '3,500 to 16,000',
+        context: '+357% visibility growth',
+      },
+      {
+        label: 'Monthly inbound calls',
+        value: '41 to 115',
+        context: '+180% phone lead growth',
+      },
+      {
+        label: 'Review velocity',
+        value: '1 to 7 / month',
+        context: 'Stronger trust and conversion momentum',
+      },
+    ],
+  },
 ];
 
 export function getCaseStudyBySlug(slug: string) {

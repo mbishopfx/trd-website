@@ -8,7 +8,7 @@ import { caseStudies } from '@/data/caseStudies';
 export const metadata: Metadata = {
   title: 'Case Studies | True Rank Digital',
   description:
-    'Explore a real True Rank Digital case study showing how Entity Signal Mapping and GBP optimization scaled patient lead volume for a local physical therapy practice.',
+    'Explore real True Rank Digital case studies showing how entity authority, GBP optimization, and local-intent execution drive lead growth in competitive local markets.',
   alternates: { canonical: 'https://truerankdigital.com/case-studies' },
   robots: {
     index: true,
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   const faqs = [
     {
-      question: 'What does this case study show?',
+      question: 'What do these case studies show?',
       answer:
-        'This case study shows how True Rank Digital used Entity Signal Mapping, GBP optimization, review momentum, and AI search positioning to grow local patient acquisition for a physical therapy practice.',
+        'These case studies show how True Rank Digital uses Entity Signal Mapping, GBP optimization, review momentum, and local authority systems to grow qualified lead flow in categories where visibility and trust directly affect revenue.',
     },
   ];
 
@@ -33,7 +33,7 @@ export default function CaseStudiesPage() {
         pageData={{
           title: 'True Rank Digital Case Studies',
           description:
-            'A real case study showing how True Rank Digital solves visibility, authority, and lead-flow problems for local healthcare providers.',
+            'Real case studies showing how True Rank Digital solves visibility, authority, and lead-flow problems for competitive local service businesses.',
           url: 'https://truerankdigital.com/case-studies',
           keywords: ['case studies', 'SEO case studies', 'local SEO results', 'AI search visibility'],
           category: 'Case Studies',
@@ -60,12 +60,12 @@ export default function CaseStudiesPage() {
                   Case Studies
                 </div>
                 <h1 className="mt-6 text-4xl font-heading font-bold leading-tight text-white lg:text-6xl">
-                  A real local growth brief, built from actual performance data.
+                  Real local growth briefs, built from actual performance data.
                 </h1>
                 <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-300">
-                  This case study breaks down how True Rank Digital used entity authority, GBP
-                  optimization, and local-intent execution to turn a physical therapy clinic from
-                  low visibility into a stronger patient-acquisition presence within a single quarter.
+                  These case studies break down how True Rank Digital uses entity authority, GBP
+                  optimization, review momentum, and local-intent execution to turn underperforming
+                  local operators into stronger demand-capture engines in their market.
                 </p>
               </div>
 
@@ -75,7 +75,8 @@ export default function CaseStudiesPage() {
                 </h2>
                 <ul className="mt-6 space-y-4 text-sm leading-7 text-gray-300">
                   <li>How Entity Signal Mapping improves local trust and discoverability</li>
-                  <li>How GBP optimization can increase patient calls without increasing ad spend</li>
+                  <li>How GBP optimization can grow inbound demand without leaning harder on paid traffic</li>
+                  <li>How review velocity and local intent signals increase conversion readiness</li>
                   <li>How local search and AI-driven recommendation surfaces reinforce each other</li>
                 </ul>
               </div>

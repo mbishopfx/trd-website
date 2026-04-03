@@ -246,7 +246,7 @@ export default function Footer() {
                 Case Studies
               </h4>
               <p className="mt-4 text-sm leading-relaxed text-gray-400">
-                A real performance brief showing how we solve category-specific visibility problems when local operators need stronger authority, more qualified demand, and clearer market ownership.
+                Real performance briefs showing how we solve category-specific visibility problems when local operators need stronger authority, more qualified demand, and clearer market ownership.
               </p>
             </div>
 

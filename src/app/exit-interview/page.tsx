@@ -127,8 +127,8 @@ export default function ExitInterviewPage() {
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-neon-cyan/10 border-2 border-neon-cyan mb-8">
             <CheckCircle2 className="w-10 h-10 text-neon-cyan" />
           </div>
-          <h1 className="text-4xl font-bold text-glow-cyan mb-4">Feedback Received</h1>
-          <p className="text-brand-dark/70 text-lg mb-8">
+          <h1 className="text-4xl font-bold text-glow-cyan mb-4 text-white">Feedback Received</h1>
+          <p className="text-white/80 text-lg mb-8">
             Thank you for your time and for trusting True Rank Digital with your marketing. 
             We wish you continued success and growth in the future.
           </p>
@@ -144,13 +144,13 @@ export default function ExitInterviewPage() {
   }
 
   return (
-    <div className="min-h-screen bg-obsidian text-foreground bg-grid py-20 px-6">
+    <div className="min-h-screen bg-obsidian text-white bg-grid py-20 px-6">
       <div className="max-w-4xl mx-auto">
         <header className="mb-12 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl font-extrabold text-glow-cyan mb-4 tracking-tight"
+            className="text-5xl font-extrabold text-glow-cyan mb-4 tracking-tight text-white"
           >
             Client Exit Interview
           </motion.h1>
@@ -158,7 +158,7 @@ export default function ExitInterviewPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-brand-dark/60 text-lg"
+            className="text-white/70 text-lg"
           >
             To help us improve, we'd appreciate your honest feedback on our partnership.
           </motion.p>
@@ -173,7 +173,7 @@ export default function ExitInterviewPage() {
                 <input 
                   type="text" 
                   required
-                  className="w-full bg-white/5 border border-white/10 rounded-lg p-3 focus:border-neon-cyan outline-none transition-colors"
+                  className="w-full bg-white/5 border border-white/10 rounded-lg p-3 focus:border-neon-cyan outline-none transition-colors text-white placeholder:text-white/30"
                   placeholder="Company Name"
                   value={formData.clientName}
                   onChange={e => setFormData({...formData, clientName: e.target.value})}
@@ -184,7 +184,7 @@ export default function ExitInterviewPage() {
                 <input 
                   type="text" 
                   required
-                  className="w-full bg-white/5 border border-white/10 rounded-lg p-3 focus:border-neon-cyan outline-none transition-colors"
+                  className="w-full bg-white/5 border border-white/10 rounded-lg p-3 focus:border-neon-cyan outline-none transition-colors text-white placeholder:text-white/30"
                   placeholder="Your Name"
                   value={formData.completedBy}
                   onChange={e => setFormData({...formData, completedBy: e.target.value})}
@@ -194,7 +194,7 @@ export default function ExitInterviewPage() {
                 <label className="text-sm font-semibold text-neon-cyan uppercase tracking-wider">TRD Account Manager</label>
                 <input 
                   type="text" 
-                  className="w-full bg-white/5 border border-white/10 rounded-lg p-3 focus:border-neon-cyan outline-none transition-colors"
+                  className="w-full bg-white/5 border border-white/10 rounded-lg p-3 focus:border-neon-cyan outline-none transition-colors text-white placeholder:text-white/30"
                   placeholder="Account Manager Name"
                   value={formData.accountManager}
                   onChange={e => setFormData({...formData, accountManager: e.target.value})}
@@ -205,12 +205,12 @@ export default function ExitInterviewPage() {
 
           {/* Section 1: Reasons */}
           <section className="glass p-8">
-            <h2 className="text-2xl font-bold text-glow-blue flex items-center gap-3 mb-8">
+            <h2 className="text-2xl font-bold text-glow-blue flex items-center gap-3 mb-8 text-white">
               <TrendingDown className="text-royal-blue" />
               1. Primary Reason for Departure
             </h2>
             <div className="space-y-4 mb-8">
-              <p className="text-brand-dark/70">What are the main factors behind your decision? (Check all that apply)</p>
+              <p className="text-white/80">What are the main factors behind your decision? (Check all that apply)</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {REASONS.map(reason => (
                   <label key={reason} className="flex items-center gap-3 p-4 rounded-lg bg-white/5 border border-white/10 cursor-pointer hover:bg-white/10 transition-colors group">
@@ -220,7 +220,7 @@ export default function ExitInterviewPage() {
                       checked={formData.reasons.includes(reason)}
                       onChange={() => handleReasonToggle(reason)}
                     />
-                    <span className="text-brand-dark/80 group-hover:text-white transition-colors">{reason}</span>
+                    <span className="text-white/80 group-hover:text-white transition-colors">{reason}</span>
                   </label>
                 ))}
               </div>
@@ -234,7 +234,7 @@ export default function ExitInterviewPage() {
                   >
                     <input 
                       type="text"
-                      className="w-full bg-white/5 border border-white/10 rounded-lg p-3 focus:border-neon-cyan outline-none transition-colors"
+                      className="w-full bg-white/5 border border-white/10 rounded-lg p-3 focus:border-neon-cyan outline-none transition-colors text-white placeholder:text-white/30"
                       placeholder="Please specify other reason..."
                       value={formData.otherReason}
                       onChange={e => setFormData({...formData, otherReason: e.target.value})}
@@ -244,9 +244,9 @@ export default function ExitInterviewPage() {
               </AnimatePresence>
             </div>
             <div className="space-y-4">
-              <label className="text-brand-dark/70 block">Was there a specific event, campaign, or turning point that influenced this?</label>
+              <label className="text-white/80 block">Was there a specific event, campaign, or turning point that influenced this?</label>
               <textarea 
-                className="w-full h-32 bg-white/5 border border-white/10 rounded-lg p-4 focus:border-neon-cyan outline-none transition-colors resize-none"
+                className="w-full h-32 bg-white/5 border border-white/10 rounded-lg p-4 focus:border-neon-cyan outline-none transition-colors resize-none text-white placeholder:text-white/30"
                 placeholder="Share your thoughts here..."
                 value={formData.eventTurningPoint}
                 onChange={e => setFormData({...formData, eventTurningPoint: e.target.value})}
@@ -256,14 +256,14 @@ export default function ExitInterviewPage() {
 
           {/* Section 2: Performance */}
           <section className="glass p-8">
-            <h2 className="text-2xl font-bold text-glow-cyan flex items-center gap-3 mb-8">
+            <h2 className="text-2xl font-bold text-glow-cyan flex items-center gap-3 mb-8 text-white">
               <ClipboardList className="text-neon-cyan" />
               2. Performance & Strategy Evaluation
             </h2>
             
             <div className="space-y-8">
               <div className="space-y-4">
-                <label className="text-brand-dark/70 block">How satisfied were you with the volume of leads generated?</label>
+                <label className="text-white/80 block">How satisfied were you with the volume of leads generated?</label>
                 <div className="flex flex-wrap gap-3">
                   {SATISFACTION_LEVELS.map(level => (
                     <button
@@ -273,7 +273,7 @@ export default function ExitInterviewPage() {
                       className={`px-4 py-2 rounded-full border text-sm transition-all ${
                         formData.volumeSatisfaction === level 
                         ? 'bg-neon-cyan/20 border-neon-cyan text-neon-cyan shadow-[0_0_15px_rgba(0,245,255,0.3)]' 
-                        : 'bg-white/5 border-white/10 text-brand-dark/60 hover:border-white/30'
+                        : 'bg-white/5 border-white/10 text-white/60 hover:border-white/30'
                       }`}
                     >
                       {level}
@@ -283,7 +283,7 @@ export default function ExitInterviewPage() {
               </div>
 
               <div className="space-y-4">
-                <label className="text-brand-dark/70 block">How satisfied were you with the quality of leads generated?</label>
+                <label className="text-white/80 block">How satisfied were you with the quality of leads generated?</label>
                 <div className="flex flex-wrap gap-3">
                   {SATISFACTION_LEVELS.map(level => (
                     <button
@@ -293,7 +293,7 @@ export default function ExitInterviewPage() {
                       className={`px-4 py-2 rounded-full border text-sm transition-all ${
                         formData.qualitySatisfaction === level 
                         ? 'bg-royal-blue/20 border-royal-blue text-royal-blue shadow-[0_0_15px_rgba(79,127,255,0.3)]' 
-                        : 'bg-white/5 border-white/10 text-brand-dark/60 hover:border-white/30'
+                        : 'bg-white/5 border-white/10 text-white/60 hover:border-white/30'
                       }`}
                     >
                       {level}
@@ -303,7 +303,7 @@ export default function ExitInterviewPage() {
               </div>
 
               <div className="space-y-4">
-                <label className="text-brand-dark/70 block">Did our marketing strategy align with your business's seasonal demands?</label>
+                <label className="text-white/80 block">Did our marketing strategy align with your business's seasonal demands?</label>
                 <div className="flex flex-wrap gap-3">
                   {SEASONALITY_OPTIONS.map(opt => (
                     <button
@@ -313,7 +313,7 @@ export default function ExitInterviewPage() {
                       className={`px-4 py-2 rounded-full border text-sm transition-all ${
                         formData.seasonalityAlignment === opt 
                         ? 'bg-neon-cyan/20 border-neon-cyan text-neon-cyan shadow-[0_0_15px_rgba(0,245,255,0.3)]' 
-                        : 'bg-white/5 border-white/10 text-brand-dark/60 hover:border-white/30'
+                        : 'bg-white/5 border-white/10 text-white/60 hover:border-white/30'
                       }`}
                     >
                       {opt}
@@ -323,9 +323,9 @@ export default function ExitInterviewPage() {
               </div>
 
               <div className="space-y-4">
-                <label className="text-brand-dark/70 block">Comments on seasonality:</label>
+                <label className="text-white/80 block">Comments on seasonality:</label>
                 <textarea 
-                  className="w-full h-24 bg-white/5 border border-white/10 rounded-lg p-4 focus:border-neon-cyan outline-none transition-colors resize-none"
+                  className="w-full h-24 bg-white/5 border border-white/10 rounded-lg p-4 focus:border-neon-cyan outline-none transition-colors resize-none text-white placeholder:text-white/30"
                   value={formData.seasonalityComments}
                   onChange={e => setFormData({...formData, seasonalityComments: e.target.value})}
                 />
@@ -335,13 +335,13 @@ export default function ExitInterviewPage() {
 
           {/* Section 3: Communication */}
           <section className="glass p-8">
-            <h2 className="text-2xl font-bold text-glow-blue flex items-center gap-3 mb-8">
+            <h2 className="text-2xl font-bold text-glow-blue flex items-center gap-3 mb-8 text-white">
               <Users className="text-royal-blue" />
               3. Communication & Account Management
             </h2>
             
             <div className="space-y-8">
-              <p className="text-brand-dark/70">Please rate the following (1 being poor, 5 being excellent):</p>
+              <p className="text-white/80">Please rate the following (1 being poor, 5 being excellent):</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                 {[
@@ -351,7 +351,7 @@ export default function ExitInterviewPage() {
                   { label: 'Transparency on Challenges', key: 'transparency' }
                 ].map(item => (
                   <div key={item.key} className="space-y-3">
-                    <label className="text-sm font-semibold text-brand-dark/80">{item.label}</label>
+                    <label className="text-sm font-semibold text-white/80">{item.label}</label>
                     <div className="flex items-center gap-2">
                       {[1, 2, 3, 4, 5].map(star => (
                         <button
@@ -375,9 +375,9 @@ export default function ExitInterviewPage() {
               </div>
 
               <div className="space-y-4">
-                <label className="text-brand-dark/70 block">Did you have a clear understanding of what TRD was working on month-to-month?</label>
+                <label className="text-white/80 block">Did you have a clear understanding of what TRD was working on month-to-month?</label>
                 <textarea 
-                  className="w-full h-24 bg-white/5 border border-white/10 rounded-lg p-4 focus:border-neon-cyan outline-none transition-colors resize-none"
+                  className="w-full h-24 bg-white/5 border border-white/10 rounded-lg p-4 focus:border-neon-cyan outline-none transition-colors resize-none text-white placeholder:text-white/30"
                   value={formData.clearUnderstanding}
                   onChange={e => setFormData({...formData, clearUnderstanding: e.target.value})}
                 />
@@ -387,32 +387,32 @@ export default function ExitInterviewPage() {
 
           {/* Section 4: Looking Forward */}
           <section className="glass p-8">
-            <h2 className="text-2xl font-bold text-glow-cyan flex items-center gap-3 mb-8">
+            <h2 className="text-2xl font-bold text-glow-cyan flex items-center gap-3 mb-8 text-white">
               <MessageSquare className="text-neon-cyan" />
               4. Looking Forward & Final Thoughts
             </h2>
             
             <div className="space-y-8">
               <div className="space-y-4">
-                <label className="text-brand-dark/70 block">What are you hoping for from your new provider (or in-house) that we didn't provide?</label>
+                <label className="text-white/80 block">What are you hoping for from your new provider (or in-house) that we didn't provide?</label>
                 <textarea 
-                  className="w-full h-24 bg-white/5 border border-white/10 rounded-lg p-4 focus:border-neon-cyan outline-none transition-colors resize-none"
+                  className="w-full h-24 bg-white/5 border border-white/10 rounded-lg p-4 focus:border-neon-cyan outline-none transition-colors resize-none text-white placeholder:text-white/30"
                   value={formData.hopesForFuture}
                   onChange={e => setFormData({...formData, hopesForFuture: e.target.value})}
                 />
               </div>
 
               <div className="space-y-4">
-                <label className="text-brand-dark/70 block">What is one thing we could have done differently to keep you as a client?</label>
+                <label className="text-white/80 block">What is one thing we could have done differently to keep you as a client?</label>
                 <textarea 
-                  className="w-full h-24 bg-white/5 border border-white/10 rounded-lg p-4 focus:border-neon-cyan outline-none transition-colors resize-none"
+                  className="w-full h-24 bg-white/5 border border-white/10 rounded-lg p-4 focus:border-neon-cyan outline-none transition-colors resize-none text-white placeholder:text-white/30"
                   value={formData.differentActions}
                   onChange={e => setFormData({...formData, differentActions: e.target.value})}
                 />
               </div>
 
               <div className="space-y-4">
-                <label className="text-brand-dark/70 block">How likely are you to recommend TRD to a colleague? (1-10)</label>
+                <label className="text-white/80 block">How likely are you to recommend TRD to a colleague? (1-10)</label>
                 <div className="flex flex-col gap-4">
                   <input 
                     type="range" 
@@ -423,7 +423,7 @@ export default function ExitInterviewPage() {
                     value={formData.recommendationLikelihood}
                     onChange={e => setFormData({...formData, recommendationLikelihood: parseInt(e.target.value)})}
                   />
-                  <div className="flex justify-between text-xs text-brand-dark/40 font-mono">
+                  <div className="flex justify-between text-xs text-white/40 font-mono">
                     <span>1 (Unlikely)</span>
                     <span className="text-lg font-bold text-neon-cyan">{formData.recommendationLikelihood}</span>
                     <span>10 (Very Likely)</span>
@@ -432,9 +432,9 @@ export default function ExitInterviewPage() {
               </div>
 
               <div className="space-y-4">
-                <label className="text-brand-dark/70 block">Additional feedback for our leadership team?</label>
+                <label className="text-white/80 block">Additional feedback for our leadership team?</label>
                 <textarea 
-                  className="w-full h-32 bg-white/5 border border-white/10 rounded-lg p-4 focus:border-neon-cyan outline-none transition-colors resize-none"
+                  className="w-full h-32 bg-white/5 border border-white/10 rounded-lg p-4 focus:border-neon-cyan outline-none transition-colors resize-none text-white placeholder:text-white/30"
                   value={formData.additionalFeedback}
                   onChange={e => setFormData({...formData, additionalFeedback: e.target.value})}
                 />
@@ -468,7 +468,7 @@ export default function ExitInterviewPage() {
         </form>
 
         <footer className="mt-20 text-center pb-20">
-          <p className="text-brand-dark/40 text-sm italic">
+          <p className="text-white/40 text-sm italic">
             Thank you for your partnership and for helping us grow.
           </p>
         </footer>

@@ -16,7 +16,7 @@ type FlywheelPage = {
   lastmod?: string;
 };
 
-const SKIP_DIRS = new Set(['api', 'admin', 'forms']);
+const SKIP_DIRS = new Set(['api', 'admin', 'forms', 'exit-interview']);
 
 function isRouteGroup(segment: string) {
   return segment.startsWith('(') && segment.endsWith(')');

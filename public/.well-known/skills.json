@@ -1,0 +1,20 @@
+{
+  "site": "truerankdigital.com",
+  "version": "1.0.0",
+  "skills": [
+    {
+      "name": "truerankdigital-site",
+      "description": "Operate the True Rank Digital website to answer site questions, navigate service pages, and complete lead-capture flows such as the contact form or visibility-audit request.",
+      "path": "/skills/truerankdigital-site/SKILLS.md",
+      "install_url_template": "https://raw.githubusercontent.com/<OWNER>/<REPO>/<BRANCH>/skills/truerankdigital-site/SKILLS.md",
+      "homepage": "https://truerankdigital.com/",
+      "actions": [
+        "answer_site_questions",
+        "navigate_pages",
+        "complete_contact_form",
+        "collect_missing_inputs",
+        "verify_submission"
+      ]
+    }
+  ]
+}
